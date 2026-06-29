@@ -581,6 +581,7 @@ main {
 .classification-badge.aa { color: var(--teal); }
 .classification-badge.aap { color: #0077a8; }
 .classification-badge.client { color: #10b981; font-size: 11px; padding: 3px 8px; background: rgba(16,185,129,0.1); border-radius: 4px; }
+.classification-badge.lead { color: #b45309; font-size: 11px; padding: 3px 8px; background: rgba(245,158,11,0.12); border-radius: 4px; }
 .print-btn {
   background: none;
   border: 1px solid rgba(255,255,255,0.2);
@@ -1098,13 +1099,13 @@ main {
   <div class="home-stats-row">
     <div class="stat-box">
       <div class="stat-label">Total Accounts</div>
-      <div class="stat-value">22</div>
-      <div class="stat-sub">7 LEAD · 15 CLIENT active</div>
+      <div class="stat-value">23</div>
+      <div class="stat-sub">8 LEAD · 15 CLIENT active</div>
     </div>
     <div class="stat-box">
       <div class="stat-label">AAA Accounts</div>
-      <div class="stat-value red">9</div>
-      <div class="stat-sub">Liebherr · SMP · Sanfer · Laerdal · Del Monte · DOGA · Techniplas · Mekra Lang · Busman PI</div>
+      <div class="stat-value red">10</div>
+      <div class="stat-sub">Liebherr · SMP · Sanfer · Saint-Gobain · Laerdal · Del Monte · DOGA · Techniplas · Mekra Lang · Busman PI</div>
     </div>
     <div class="stat-box">
       <div class="stat-label">AA / AA+ Accounts</div>
@@ -1274,6 +1275,29 @@ main {
         <span class="acct-tag">Air regulado</span>
         <span class="acct-tag">Biotech</span>
         <span class="acct-tag">ILM ecosistema</span>
+      </div>
+    </div>
+
+    <!-- Saint-Gobain México -->
+    <div class="account-card aaa" onclick="showViewById('view-saintgobain')">
+      <div class="account-card-header">
+        <div>
+          <div class="account-name">Saint-Gobain México</div>
+          <div class="account-industry">Materiales de Construcción · Vidrio · Soluciones de Alto Rendimiento</div>
+        </div>
+        <span class="account-cls-badge aaa">AAA</span>
+      </div>
+      <div class="account-metrics">
+        <div class="acct-metric"><div class="acct-metric-val">14,990</div><div class="acct-metric-lbl">Shipments</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">5</div><div class="acct-metric-lbl">Modes</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">$799M</div><div class="acct-metric-lbl">Visible</div></div>
+      </div>
+      <div class="account-tags">
+        <span class="acct-tag" style="background:rgba(245,158,11,0.12);color:#b45309;border-color:rgba(245,158,11,0.3);">LEAD</span>
+        <span class="acct-tag">Multimodal</span>
+        <span class="acct-tag">Reynosa · Laredo</span>
+        <span class="acct-tag">LATAM export</span>
+        <span class="acct-tag">ILM / Control Tower</span>
       </div>
     </div>
 
@@ -2472,7 +2496,7 @@ main {
       <div class="page-header-sub">Cross-account analysis · Lane overlap · Strategic prioritization</div>
     </div>
     <div class="page-header-meta">
-      <div style="font-size:11px;color:rgba(255,255,255,0.5);">21 ACCOUNTS</div>
+      <div style="font-size:11px;color:rgba(255,255,255,0.5);">22 ACCOUNTS</div>
     </div>
   </div>
   <div class="content-body">
@@ -2514,6 +2538,16 @@ main {
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot"></div></div></td>
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
               <td style="color:var(--red);font-weight:700;font-size:11px;">★ #2</td>
+            </tr>
+            <tr>
+              <td><strong>Saint-Gobain México</strong> <span style="font-size:10px;font-weight:600;color:#b45309;background:rgba(245,158,11,0.12);padding:1px 5px;border-radius:3px;margin-left:4px;">LEAD</span></td>
+              <td><span class="cls-pill aaa">AAA</span></td>
+              <td style="color:var(--text-muted);">Construction / Glass</td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot"></div></div></td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot"></div></div></td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td style="color:#b45309;font-weight:700;font-size:11px;">★ LEAD</td>
             </tr>
             <tr>
               <td><strong>Motherson / MSSL</strong></td>
@@ -5823,6 +5857,465 @@ main {
             <ul class="phase-items">
               <li>Coordinación 6 entidades</li>
               <li>Visibilidad centralizada grupo</li>
+              <li>Ownership operacional pleno</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══ SAINT-GOBAIN MÉXICO VIEW ══ -->
+<div id="view-saintgobain" class="view">
+  <div class="page-header">
+    <div class="page-header-left">
+      <div class="page-header-eyebrow">Cuenta Objetivo · Análisis Pre-Comercial · Inteligencia Panjiva</div>
+      <div class="page-header-title">Saint-Gobain México</div>
+      <div class="page-header-sub">Materiales de Construcción · Vidrio · Yeso · Abrasivos · Soluciones de Alto Rendimiento · Operación Multimodal Import/Export</div>
+    </div>
+    <div class="page-header-meta">
+      <span class="classification-badge lead">LEAD</span>
+      <span class="classification-badge aaa">AAA</span>
+      <button class="print-btn" onclick="printView('view-saintgobain')">⬇ Exportar PDF</button>
+    </div>
+  </div>
+  <div class="content-body">
+
+    <!-- LEAD source banner -->
+    <div class="card">
+      <div class="card-body" style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+        <span class="classification-badge lead">LEAD</span>
+        <span style="font-size:12px;color:var(--text-muted);line-height:1.6;">
+          <strong style="color:var(--navy);">Relación: LEAD pre-comercial.</strong> Cuenta no operada por Akzent. Todo el análisis se construye exclusivamente sobre <strong>Panjiva Import &amp; Export</strong> como fuente de verdad. La clasificación <strong>AIOS AAA</strong> indica fit estratégico y complejidad operativa — es independiente del badge de relación LEAD.
+        </span>
+      </div>
+    </div>
+
+    <!-- Executive Summary -->
+    <div class="card">
+      <div class="card-header"><span class="accent">01</span> Resumen Ejecutivo — Inteligencia Panjiva</div>
+      <div class="card-body">
+        <p style="font-size:13px;line-height:1.7;">Saint-Gobain México opera una de las cadenas de suministro <strong>bidireccionales y multimodales más complejas</strong> visibles en el portafolio de análisis. Los registros Panjiva muestran una operación de importación masiva — <strong>18,338 embarques visibles</strong> alimentando manufactura local desde China, USA, Europa y Asia — combinada con una <strong>plataforma de exportación regional</strong> de 4,990 embarques que distribuye a Norteamérica y toda Centroamérica. La operación cruza simultáneamente <strong>cinco modos de transporte</strong> (terrestre, marítimo, aéreo, ferroviario y double-stack rail) y más de una decena de puntos aduanales activos. Esta combinación de escala, dispersión geográfica de proveedores y coordinación multimodal define un perfil de <strong>alta complejidad operativa</strong> donde la visibilidad consolidada y la coordinación de control tower son el dolor estructural más probable.</p>
+        <div style="background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 6px 6px 0;padding:12px 16px;margin-top:12px;">
+          <strong style="font-size:11px;color:#b45309;text-transform:uppercase;letter-spacing:1px;">⚡ Señal de Complejidad — Fuente: Panjiva</strong>
+          <p style="font-size:12px;color:var(--text);line-height:1.6;margin-top:4px;">USD 799.3M de valor comercial visible analizado, repartido entre importación multimodal de 8+ países de origen y exportación a 8+ destinos. La fragmentación entre modos (60.7% de las importaciones bajo modo "Unknown" en los registros) y la dispersión entre Reynosa, Nuevo Laredo, Veracruz, AICM y AIFA sugiere coordinación distribuida sin una capa única de visibilidad — el espacio natural para un partner de ILM / Control Tower.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Panjiva Visibility Metrics -->
+    <div class="grid-4">
+      <div class="stat-box"><div class="stat-label">Import Shipments Analizados</div><div class="stat-value">10,000</div><div class="stat-sub">de 18,338 visibles · Panjiva</div></div>
+      <div class="stat-box"><div class="stat-label">Export Shipments</div><div class="stat-value teal">4,990</div><div class="stat-sub">de 4,990 · cobertura completa</div></div>
+      <div class="stat-box"><div class="stat-label">Valor Importado Analizado</div><div class="stat-value" style="font-size:18px;">$188.1M</div><div class="stat-sub">USD · embarques de importación</div></div>
+      <div class="stat-box"><div class="stat-label">Valor Exportado</div><div class="stat-value" style="font-size:18px;">$611.1M</div><div class="stat-sub">USD · embarques de exportación</div></div>
+    </div>
+
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+        <div>
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);">Valor Comercial Total Visible Analizado</div>
+          <div style="font-size:26px;font-weight:800;color:var(--navy);">USD 799.3M</div>
+        </div>
+        <div style="font-size:11px;color:var(--text-muted);max-width:420px;line-height:1.6;">
+          14,990 shipments analizados entre importación y exportación · 5 modos de transporte · 8+ orígenes de importación · 8+ destinos de exportación. Datos derivados de Panjiva Import &amp; Export.
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Mix Import + Export -->
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header"><span class="accent">02</span> Mix Modal — Importación</div>
+        <div class="card-body">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;">10,000 import shipments analizados</div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Unknown ❔</strong><span>6,068 · 60.7%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:100%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Terrestre 🛣</strong><span>1,362 · 13.6%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:22%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Aéreo ✈</strong><span>1,361 · 13.6%</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:22%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Marítimo 🚢</strong><span>850 · 8.5%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:14%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Ferroviario 🚆</strong><span>358 · 3.6%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:6%"></div></div></div>
+          <div style="margin-top:12px;padding:10px;background:rgba(245,158,11,0.05);border-radius:5px;border:1px solid rgba(245,158,11,0.15);">
+            <strong style="font-size:11px;color:#b45309;">Insight:</strong>
+            <span style="font-size:11px;color:var(--text-muted);"> El 60.7% de las importaciones figura sin modo clasificado en Panjiva. La presencia simultánea de terrestre, aéreo, marítimo y ferroviario en proporciones relevantes confirma una operación genuinamente multimodal — difícil de coordinar sin una capa de visibilidad unificada.</span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><span class="accent">03</span> Mix Modal — Exportación</div>
+        <div class="card-body">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;">4,990 export shipments</div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Terrestre 🛣</strong><span>3,350 · 67.1%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:100%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Marítimo 🚢</strong><span>1,064 · 21.3%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:32%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Aéreo ✈</strong><span>287 · 5.8%</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:9%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Unknown ❔</strong><span>146 · 2.9%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:5%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Double Stack Rail 🚆</strong><span>141 · 2.8%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:5%"></div></div></div>
+          <div style="margin-top:12px;padding:10px;background:rgba(13,43,94,0.04);border-radius:5px;border:1px solid var(--border);">
+            <strong style="font-size:11px;color:var(--navy);">Insight:</strong>
+            <span style="font-size:11px;color:var(--text-muted);"> La exportación es terrestre-dominante (67.1%) hacia USA/Canadá, con un componente marítimo relevante hacia Centroamérica y Europa. El double-stack rail añade complejidad de coordinación intermodal poco común.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Origins + Destinations -->
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header"><span class="accent">04</span> Orígenes de Importación — Red de Proveedores</div>
+        <div class="card-body">
+          <div class="modal-bar"><div class="modal-bar-label"><strong>🇨🇳 China</strong><span>Origen principal</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:100%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>🇺🇸 Estados Unidos</strong><span>Cross-border intensivo</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:88%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>🇲🇽 México</strong><span>Intragrupo / doméstico</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:70%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>🇩🇪 Alemania</strong><span>Equipo / insumos técnicos</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:58%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>🇸🇰 Eslovaquia</strong><span>Europa central</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:44%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>🇫🇷 Francia</strong><span>Casa matriz / tecnología</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:36%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>🇯🇵 Japón</strong><span>Componentes especializados</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:28%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>🇮🇹 Italia</strong><span>Insumos industriales</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:22%"></div></div></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><span class="accent">05</span> Destinos de Exportación — Distribución Regional</div>
+        <div class="card-body">
+          <div class="modal-bar"><div class="modal-bar-label"><strong>🇺🇸 Estados Unidos</strong><span>Destino dominante</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:100%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>🇨🇦 Canadá</strong><span>Corredor norte</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:52%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>🇬🇹 Guatemala</strong><span>Hub Centroamérica</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:40%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>🇭🇳 Honduras</strong><span>Corredor sur</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:34%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>🇸🇻 El Salvador</strong><span>Centroamérica</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:30%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>🇨🇷 Costa Rica</strong><span>Centroamérica</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:26%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>🇩🇪 Alemania</strong><span>Reexport intragrupo</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:20%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>🇧🇪 Bélgica</strong><span>Europa</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:16%"></div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Import Hub Intelligence -->
+    <div class="card">
+      <div class="card-header"><span class="accent">06</span> Hub Intelligence — Puntos Aduanales de Importación</div>
+      <div class="card-body">
+        <table class="hub-table">
+          <thead>
+            <tr><th>Punto Aduanal / Puerto</th><th>Dirección</th><th>Perfil Modal</th><th>Señal Operativa</th></tr>
+          </thead>
+          <tbody>
+            <tr style="background:rgba(245,158,11,0.03);">
+              <td><strong>Reynosa</strong></td>
+              <td>Import</td>
+              <td><span class="hub-tag border">Terrestre</span></td>
+              <td>Punto de entrada cross-border principal. Alta concentración de import terrestre desde USA — corredor crítico de coordinación.</td>
+            </tr>
+            <tr>
+              <td><strong>Nuevo Laredo</strong></td>
+              <td>Import + Export</td>
+              <td><span class="hub-tag border">Terrestre</span></td>
+              <td>Corredor Laredo — territorio operativo de mayor densidad. Cruza importación y exportación simultáneamente.</td>
+            </tr>
+            <tr>
+              <td><strong>AICM — Aeropuerto CDMX</strong></td>
+              <td>Import</td>
+              <td><span class="hub-tag air">Aéreo</span></td>
+              <td>Hub aéreo primario. Insumos urgentes / alto valor desde Europa y Asia. Coordinación time-critical.</td>
+            </tr>
+            <tr>
+              <td><strong>Veracruz</strong></td>
+              <td>Import</td>
+              <td><span class="hub-tag ocean">Marítimo</span></td>
+              <td>Puerto marítimo principal del Golfo. Volumen contenedorizado desde Europa y Asia.</td>
+            </tr>
+            <tr>
+              <td><strong>AIFA — Felipe Ángeles</strong></td>
+              <td>Import</td>
+              <td><span class="hub-tag air">Aéreo</span></td>
+              <td>Segundo hub aéreo. Dual-airport CDMX (AICM + AIFA) implica coordinación dividida y visibilidad parcial.</td>
+            </tr>
+            <tr>
+              <td><strong>Manzanillo</strong></td>
+              <td>Import</td>
+              <td><span class="hub-tag ocean">Marítimo</span></td>
+              <td>Puerto Pacífico para flujo asiático (China). Lead times largos y planeación de inventario.</td>
+            </tr>
+            <tr>
+              <td><strong>Ciudad Juárez</strong></td>
+              <td>Import</td>
+              <td><span class="hub-tag border">Terrestre</span></td>
+              <td>Tercer corredor fronterizo terrestre. Cross-border secundario desde USA.</td>
+            </tr>
+            <tr>
+              <td><strong>MTY Airport — Monterrey</strong></td>
+              <td>Import</td>
+              <td><span class="hub-tag air">Aéreo</span></td>
+              <td>Hub aéreo industrial del norte. Insumos para manufactura regional.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Export Hub Intelligence -->
+    <div class="card">
+      <div class="card-header"><span class="accent">07</span> Hub Intelligence — Puntos Aduanales de Exportación</div>
+      <div class="card-body">
+        <table class="hub-table">
+          <thead>
+            <tr><th>Punto Aduanal / Puerto</th><th>Dirección</th><th>Perfil Modal</th><th>Señal Operativa</th></tr>
+          </thead>
+          <tbody>
+            <tr style="background:rgba(13,43,94,0.02);">
+              <td><strong>Nuevo Laredo</strong></td>
+              <td>Export</td>
+              <td><span class="hub-tag border">Terrestre</span></td>
+              <td>Salida principal hacia USA/Canadá. El corredor terrestre dominante de exportación (67.1% modal).</td>
+            </tr>
+            <tr>
+              <td><strong>Veracruz</strong></td>
+              <td>Export</td>
+              <td><span class="hub-tag ocean">Marítimo</span></td>
+              <td>Salida marítima hacia Europa y Centroamérica (Bélgica, Alemania, Costa Rica).</td>
+            </tr>
+            <tr>
+              <td><strong>Ciudad Hidalgo, Chiapas</strong></td>
+              <td>Export</td>
+              <td><span class="hub-tag border">Terrestre</span></td>
+              <td>Corredor sur hacia Centroamérica — Guatemala, Honduras, El Salvador. Distribución regional terrestre.</td>
+            </tr>
+            <tr>
+              <td><strong>Reynosa</strong></td>
+              <td>Export</td>
+              <td><span class="hub-tag border">Terrestre</span></td>
+              <td>Segunda salida cross-border norte. Cruza con flujo de importación — doble dirección en mismo punto.</td>
+            </tr>
+            <tr>
+              <td><strong>Colombia NL</strong></td>
+              <td>Export</td>
+              <td><span class="hub-tag border">Terrestre</span></td>
+              <td>Cruce frontera norte (Nuevo León). Territorio operativo Akzent de alta densidad.</td>
+            </tr>
+            <tr>
+              <td><strong>Piedras Negras</strong></td>
+              <td>Export</td>
+              <td><span class="hub-tag border">Terrestre · Rail</span></td>
+              <td>Cruce ferroviario / terrestre. Punto natural para double-stack rail hacia USA.</td>
+            </tr>
+            <tr>
+              <td><strong>AICM — Aeropuerto CDMX</strong></td>
+              <td>Export</td>
+              <td><span class="hub-tag air">Aéreo</span></td>
+              <td>Exportación aérea de alto valor / urgencia. Componente menor pero time-critical.</td>
+            </tr>
+            <tr>
+              <td><strong>Altamira</strong></td>
+              <td>Export</td>
+              <td><span class="hub-tag ocean">Marítimo</span></td>
+              <td>Segundo puerto del Golfo. Salida marítima complementaria a Veracruz.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Operational Signals -->
+    <div class="card">
+      <div class="card-header"><span class="accent">08</span> Señales Operativas → Mapeo de Complejidad</div>
+      <div class="card-body">
+        <div class="signal-grid">
+          <div class="signal-item high">
+            <div class="signal-title">Operación Genuinamente Multimodal — 5 Modos Activos</div>
+            <div class="signal-prob high">ALTA probabilidad</div>
+            <div class="signal-desc">Terrestre, marítimo, aéreo, ferroviario y double-stack rail operan simultáneamente en importación y exportación. Coordinar cinco modos sin una capa única de visibilidad genera handoffs reactivos y planeación fragmentada.</div>
+          </div>
+          <div class="signal-item high">
+            <div class="signal-title">60.7% de Importaciones sin Modo Clasificado</div>
+            <div class="signal-prob high">ALTA probabilidad</div>
+            <div class="signal-desc">6,068 de 10,000 import shipments figuran como "Unknown" en Panjiva. La falta de clasificación modal consistente sugiere data dispersa entre múltiples agentes y ausencia de una fuente única de verdad operativa.</div>
+          </div>
+          <div class="signal-item high">
+            <div class="signal-title">Dual Hub Aéreo AICM + AIFA + MTY</div>
+            <div class="signal-prob high">ALTA probabilidad</div>
+            <div class="signal-desc">Importación aérea repartida entre AICM, AIFA y Monterrey. Tres aeropuertos implican triple coordinación, múltiples agentes y visibilidad parcial sobre embarques aéreos activos.</div>
+          </div>
+          <div class="signal-item">
+            <div class="signal-title">Red de Proveedores Dispersa — 8+ Países</div>
+            <div class="signal-prob medium-high">MEDIA-ALTA</div>
+            <div class="signal-desc">China, USA, Alemania, Eslovaquia, Francia, Japón e Italia abastecen simultáneamente. Lead times heterogéneos y rutas mixtas (Pacífico vía Manzanillo, Golfo vía Veracruz, terrestre vía Reynosa) presionan la planeación de inventario.</div>
+          </div>
+          <div class="signal-item">
+            <div class="signal-title">Distribución Centroamérica Terrestre + Marítima</div>
+            <div class="signal-prob medium-high">MEDIA-ALTA</div>
+            <div class="signal-desc">Exportación a Guatemala, Honduras, El Salvador y Costa Rica vía corredor sur (Cd. Hidalgo) y marítimo (Manzanillo/Veracruz). Requerimientos documentales distintos por país elevan la carga operativa por embarque.</div>
+          </div>
+          <div class="signal-item">
+            <div class="signal-title">Cross-Border Bidireccional en Mismos Puntos</div>
+            <div class="signal-prob medium-high">MEDIA-ALTA</div>
+            <div class="signal-desc">Reynosa y Nuevo Laredo cruzan importación y exportación simultáneamente. Gestionar ambos sentidos en el mismo punto aduanal sin coordinación integrada multiplica la complejidad de documentación y timing.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Akzent Fit Scoring -->
+    <div class="card">
+      <div class="card-header"><span class="accent">09</span> Puntuación de Ajuste Akzent — Por Capacidad</div>
+      <div class="card-body">
+        <div class="fit-score-grid">
+          <div class="fit-score-item"><div class="fit-score-name">Partner de Complejidad Operativa</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:96%"></div></div><div class="fit-score-pct">CRÍTICO</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Coordinación Multimodal (5 modos)</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:94%"></div></div><div class="fit-score-pct">MUY ALTO</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Soporte Aduanal &amp; Visibilidad</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:92%"></div></div><div class="fit-score-pct">MUY ALTO</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">ILM / Control Tower</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:97%"></div></div><div class="fit-score-pct">CRÍTICO</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Cross-Border Terrestre (Laredo/Reynosa)</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:85%"></div></div><div class="fit-score-pct">ALTO</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Distribución Export LATAM</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:80%"></div></div><div class="fit-score-pct">ALTO</div></div></div>
+        </div>
+        <div style="margin-top:14px;padding:12px;background:rgba(13,43,94,0.04);border-radius:6px;border:1px solid var(--border);">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:4px;">Justificación Clasificación AIOS AAA</div>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.5;">AAA por: escala de operación (14,990 shipments analizados · USD 799.3M visibles), complejidad multimodal genuina con cinco modos activos, red de proveedores dispersa en 8+ países, operación bidireccional cross-border en los mismos puntos aduanales, distribución regional a Norteamérica y Centroamérica, y potencial de ILM / Control Tower de nivel corporativo. La clasificación AIOS es independiente del estatus de relación LEAD.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Commercial Positioning -->
+    <div class="card">
+      <div class="card-header"><span class="accent">10</span> Posicionamiento Comercial</div>
+      <div class="card-body">
+        <div class="positioning-box">
+          <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,0.6);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;">Ángulo de Entrada</div>
+          <p style="font-size:13px;line-height:1.6;color:#fff;">Entrar como <strong style="color:var(--teal);">partner de complejidad operativa y coordinación multimodal</strong>. Una operación que cruza cinco modos, 8+ orígenes y una decena de puntos aduanales — con el 60.7% de las importaciones sin modo clasificado — opera casi con certeza con visibilidad fragmentada y coordinación distribuida. Akzent puede aportar la capa de control tower / ILM que consolida esa operación.</p>
+          <div class="positioning-example">"Una operación que importa desde China, Europa y USA por aire, mar, tierra y ferrocarril simultáneamente — y exporta a Norteamérica y toda Centroamérica — normalmente opera con visibilidad parcial, múltiples agentes y coordinación reactiva entre modos. Akzent puede unificar esa capa operacional con soporte aduanal y un control tower multimodal."</div>
+          <div class="capability-tags">
+            <span class="cap-tag">Complejidad Operativa</span>
+            <span class="cap-tag">Coordinación Multimodal</span>
+            <span class="cap-tag">Soporte Aduanal</span>
+            <span class="cap-tag">Visibilidad Unificada</span>
+            <span class="cap-tag">ILM / Control Tower</span>
+            <span class="cap-tag">Cross-Border</span>
+          </div>
+        </div>
+
+        <div class="flags-grid" style="margin-top:16px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#10b981;margin-bottom:8px;">✓ Green Flags</div>
+            <ul class="flag-list">
+              <li><span class="flag-icon">🟢</span>14,990 shipments analizados · USD 799.3M visibles — escala estructural de alta complejidad</li>
+              <li><span class="flag-icon">🟢</span>Cinco modos de transporte activos — necesidad clara de coordinación multimodal</li>
+              <li><span class="flag-icon">🟢</span>60.7% de importaciones sin modo clasificado — señal de visibilidad fragmentada</li>
+              <li><span class="flag-icon">🟢</span>Triple hub aéreo (AICM · AIFA · MTY) — coordinación dividida que un control tower resuelve</li>
+              <li><span class="flag-icon">🟢</span>Operación bidireccional en Reynosa y Nuevo Laredo — territorio Akzent de alta densidad</li>
+              <li><span class="flag-icon">🟢</span>Distribución a 8+ destinos incl. Centroamérica — fit estructural de ILM regional</li>
+            </ul>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--red);margin-bottom:8px;">⚠ Consideraciones</div>
+            <ul class="flag-list">
+              <li><span class="flag-icon">🔴</span>Corporativo global — probable estructura de procurement y logística centralizada en casa matriz</li>
+              <li><span class="flag-icon">🔴</span>Escala implica proveedores logísticos incumbentes ya establecidos — validar entrada por punta operativa</li>
+              <li><span class="flag-icon">🟡</span>El modo "Unknown" debe validarse en discovery — confirmar si es gap de data o de coordinación</li>
+              <li><span class="flag-icon">🟡</span>Múltiples entidades / plantas posibles — mapear quién decide logística por modo y región</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Discovery Questions -->
+    <div class="card">
+      <div class="card-header"><span class="accent">11</span> Motor de Preguntas de Descubrimiento</div>
+      <div class="card-body">
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)">
+            <span>Coordinación Multimodal (Entrada Principal)</span>
+            <span class="outreach-step-toggle">+</span>
+          </div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>¿Cómo está estructurada hoy la coordinación entre los distintos modos — terrestre, marítimo, aéreo y ferroviario tienen equipos / agentes separados o existe una coordinación integrada?</li>
+              <li>¿Tienen visibilidad en tiempo real de todos los shipments activos simultáneamente, independientemente del modo y del punto de entrada?</li>
+              <li>¿Quién consolida la información cuando un mismo flujo combina más de un modo de transporte?</li>
+              <li>¿Cómo manejan los handoffs entre el tramo internacional y el tramo doméstico de cada shipment?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)">
+            <span>Importación &amp; Red de Proveedores Global</span>
+            <span class="outreach-step-toggle">+</span>
+          </div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>Con orígenes en China, Europa y USA simultáneamente, ¿cómo balancean lead times tan distintos en la planeación de inventario?</li>
+              <li>¿La importación aérea se concentra en un solo aeropuerto o se reparte entre AICM, AIFA y Monterrey según urgencia?</li>
+              <li>¿Tienen una fuente única de verdad sobre el estatus de cada importación o la información vive en distintos sistemas / agentes?</li>
+              <li>¿Qué tan predecible es el tránsito marítimo desde Asia vía Manzanillo frente al flujo europeo vía Veracruz?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)">
+            <span>Exportación &amp; Distribución Regional</span>
+            <span class="outreach-step-toggle">+</span>
+          </div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>La exportación a Centroamérica combina corredor sur terrestre y salida marítima — ¿cómo deciden el modo por destino?</li>
+              <li>¿Los requerimientos documentales distintos por país (Guatemala, Honduras, El Salvador, Costa Rica) generan carga operativa o retrabajos?</li>
+              <li>¿El cruce bidireccional en Reynosa y Nuevo Laredo se gestiona de forma integrada o import y export operan en silos?</li>
+              <li>¿Utilizan double-stack rail de forma programada o es una opción puntual según capacidad?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)">
+            <span>Visibilidad &amp; Control Tower — ILM Oportunidad</span>
+            <span class="outreach-step-toggle">+</span>
+          </div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>¿Existe hoy una capa única de visibilidad que abarque importación, exportación y todos los modos, o cada área reporta por separado?</li>
+              <li>¿Han evaluado consolidar la coordinación operativa bajo un único partner de control tower?</li>
+              <li>¿Qué tanto de la operación se gestiona de forma reactiva por falta de información anticipada?</li>
+              <li>¿Cómo medirían el valor de una capa de ILM que unifique la coordinación multimodal y el soporte aduanal?</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Expansion Phases -->
+    <div class="card">
+      <div class="card-header"><span class="accent">12</span> Trayectoria de Engagement Propuesta</div>
+      <div class="card-body">
+        <div class="phase-grid">
+          <div class="phase-card">
+            <div class="phase-num">Fase 1</div>
+            <div class="phase-title">Entrada Operativa</div>
+            <ul class="phase-items">
+              <li>Cross-border Laredo / Reynosa</li>
+              <li>Soporte aduanal puntual</li>
+              <li>Validar gap de visibilidad</li>
+              <li>Prueba en un corredor</li>
+            </ul>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">Fase 2</div>
+            <div class="phase-title">Coordinación Multimodal</div>
+            <ul class="phase-items">
+              <li>Integrar aéreo + marítimo</li>
+              <li>Unificar hubs CDMX + MTY</li>
+              <li>Visibilidad import consolidada</li>
+            </ul>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">Fase 3</div>
+            <div class="phase-title">Distribución Export</div>
+            <ul class="phase-items">
+              <li>Corredor sur Centroamérica</li>
+              <li>Salida marítima Europa</li>
+              <li>Documentación por país</li>
+            </ul>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">Fase 4</div>
+            <div class="phase-title">ILM / Control Tower</div>
+            <ul class="phase-items">
+              <li>Visibilidad unificada total</li>
+              <li>Coordinación 5 modos</li>
               <li>Ownership operacional pleno</li>
             </ul>
           </div>
@@ -12395,6 +12888,7 @@ const ACCOUNTS = [
   { id:'view-liebherr',  name:'Liebherr Monterrey',       sub:'Industrial Machinery / Heavy Equipment',         rel:'LEAD',   cls:'AAA',  clsPill:'aaa' },
   { id:'view-smp',       name:'SMP Automotive Systems',   sub:'Tier 1 Automotive Supplier',                    rel:'LEAD',   cls:'AAA',  clsPill:'aaa' },
   { id:'view-sanfer',    name:'Sanfer Group',              sub:'Pharma · Biotech · Packaging · LATAM',          rel:'LEAD',   cls:'AAA',  clsPill:'aaa' },
+  { id:'view-saintgobain', name:'Saint-Gobain México',    sub:'Construction Materials · Glass · High-Performance Solutions · Multimodal LEAD', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
   { id:'view-panelrey',  name:'Panel Rey',                 sub:'Construction Materials / Drywall',              rel:'LEAD',   cls:'AA',   clsPill:'aa'  },
   { id:'view-motherson', name:'Motherson / MSSL',          sub:'Tier 1 Automotive — Wire Harness',              rel:'LEAD',   cls:'AA',   clsPill:'aa'  },
   { id:'view-alfagomma', name:'Alfagomma de México',       sub:'Industrial — Hydraulic Hoses & Fittings',       rel:'LEAD',   cls:'AA',   clsPill:'aa'  },
