@@ -880,6 +880,141 @@ main {
   font-size: 10px;
 }
 
+/* ── RELATIONSHIP CATEGORY SELECTOR ── */
+.rel-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding: 20px 32px 0;
+}
+.rel-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 9px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.rel-tab:hover { border-color: var(--teal); color: var(--navy); }
+.rel-tab.active {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+}
+.rel-tab-count {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0;
+  padding: 2px 7px;
+  border-radius: 10px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+.rel-tab.active .rel-tab-count {
+  background: rgba(255,255,255,0.14);
+  border-color: rgba(255,255,255,0.22);
+  color: #fff;
+}
+
+/* ── ACCOUNT RELATIONSHIP SECTIONS ── */
+.acct-section-head { padding: 22px 32px 12px; }
+.acct-section-title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+.acct-section-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+.acct-section-dot { width: 8px; height: 8px; border-radius: 2px; flex: 0 0 auto; }
+.acct-section-dot.current { background: #10b981; }
+.acct-section-dot.new     { background: var(--teal); }
+.acct-section-dot.lead    { background: #f59e0b; }
+.acct-section-n {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0;
+  color: var(--text-muted);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 2px 7px;
+}
+.acct-section-note {
+  padding: 0 32px 14px;
+  font-size: 10px;
+  line-height: 1.5;
+  color: var(--text-light);
+}
+.acct-section-note strong { color: var(--text-muted); font-weight: 700; }
+.acct-empty {
+  padding: 0 32px 28px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ── RELATIONSHIP TAG ON CARDS ── */
+.acct-tag.rel-current { background: rgba(16,185,129,0.15); color: #10b981;       border-color: rgba(16,185,129,0.3);  font-weight: 700; }
+.acct-tag.rel-new     { background: rgba(0,180,216,0.14);  color: var(--teal-dim); border-color: rgba(0,180,216,0.32); font-weight: 700; }
+.acct-tag.rel-lead    { background: rgba(245,158,11,0.12); color: #b45309;       border-color: rgba(245,158,11,0.3);  font-weight: 700; }
+
+/* ── KICK-OFF LEADS (engagement starting) ── */
+.account-card.kickoff {
+  border-color: rgba(13,43,94,0.45);
+  background: linear-gradient(180deg, rgba(13,43,94,0.04) 0%, var(--surface) 72px);
+  box-shadow: 0 4px 14px rgba(13,43,94,0.10);
+}
+.account-card.kickoff::before { background: linear-gradient(90deg, var(--navy) 0%, var(--teal) 100%); }
+.account-card.kickoff:hover { border-color: var(--teal); box-shadow: 0 4px 16px rgba(0,180,216,0.16); }
+.acct-tag.rel-kickoff {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+.acct-section-note.kickoff { color: var(--text-muted); }
+.acct-section-note.kickoff strong { color: var(--navy); }
+.cmd-pill.kick { background: var(--navy); color: #fff; }
+
+/* ── PALETTE CATEGORY SCOPE ── */
+#cmd-scope {
+  display: none;
+  flex-shrink: 0;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--teal-dim);
+  background: rgba(0,180,216,0.1);
+  border: 1px solid rgba(0,180,216,0.25);
+  border-radius: 4px;
+  padding: 3px 7px;
+}
+#cmd-scope.on { display: inline-block; }
+.cmd-pill.newclient { background: rgba(0,180,216,0.12); color: var(--teal-dim); }
+.cmd-dot.newclient  { background: var(--teal); }
+
 /* ── NETWORK VIEW ── */
 .network-table { width: 100%; border-collapse: collapse; font-size: 12px; }
 .network-table th {
@@ -1011,6 +1146,7 @@ main {
   .view { display: none !important; }
   .view.print-target { display: block !important; }
   .print-btn { display: none !important; }
+  .rel-tabs { display: none !important; }
   .outreach-step-body { display: block !important; }
   .page-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .card-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
@@ -1088,7 +1224,7 @@ main {
     <div class="page-header-left">
       <div class="page-header-eyebrow">Akzent Intelligence OS</div>
       <div class="page-header-title">Strategic Account Command Center</div>
-      <div class="page-header-sub">Pre-commercial intelligence · 35 accounts under analysis</div>
+      <div class="page-header-sub" id="home-header-sub">Pre-commercial intelligence · 35 accounts under analysis</div>
     </div>
     <div class="page-header-meta">
       <div style="font-size:11px;color:rgba(255,255,255,0.5);">SYSTEM STATUS</div>
@@ -1096,35 +1232,45 @@ main {
     </div>
   </div>
 
+  <div class="rel-tabs" id="rel-tabs" role="tablist" aria-label="Relationship category">
+    <button type="button" class="rel-tab active" role="tab" aria-selected="true"  data-cat="all"            onclick="setCategory('all')">All Accounts <span class="rel-tab-count" id="cnt-all">0</span></button>
+    <button type="button" class="rel-tab"        role="tab" aria-selected="false" data-cat="current_client" onclick="setCategory('current_client')">Current Clients <span class="rel-tab-count" id="cnt-current_client">0</span></button>
+    <button type="button" class="rel-tab"        role="tab" aria-selected="false" data-cat="new_client"     onclick="setCategory('new_client')">New Clients <span class="rel-tab-count" id="cnt-new_client">0</span></button>
+    <button type="button" class="rel-tab"        role="tab" aria-selected="false" data-cat="lead"           onclick="setCategory('lead')">Leads <span class="rel-tab-count" id="cnt-lead">0</span></button>
+  </div>
+
   <div class="home-stats-row">
     <div class="stat-box">
-      <div class="stat-label">Total Accounts</div>
-      <div class="stat-value">35</div>
-      <div class="stat-sub">20 LEAD · 15 CLIENT active</div>
+      <div class="stat-label" id="stat-total-label">Total Accounts</div>
+      <div class="stat-value" id="stat-total-val">35</div>
+      <div class="stat-sub" id="stat-total-sub">20 LEAD · 15 CLIENT active</div>
     </div>
     <div class="stat-box">
       <div class="stat-label">AAA Accounts</div>
-      <div class="stat-value red">15</div>
-      <div class="stat-sub">Liebherr · Lincoln Electric · Johnson Controls · Dal-Tile Mexico · SMP · Sanfer · Saint-Gobain · Bendix · Laerdal · Del Monte · DOGA · Techniplas · Mekra Lang · Busman PI · WBTM</div>
+      <div class="stat-value red" id="stat-aaa-val">15</div>
+      <div class="stat-sub" id="stat-aaa-sub">Liebherr · Lincoln Electric · Johnson Controls · Dal-Tile Mexico · SMP · Sanfer · Saint-Gobain · Bendix · Laerdal · Del Monte · DOGA · Techniplas · Mekra Lang · Busman PI · WBTM</div>
     </div>
     <div class="stat-box">
       <div class="stat-label">AA / AA+ Accounts</div>
-      <div class="stat-value teal">20</div>
-      <div class="stat-sub">Panel Rey · Motherson · Alfagomma · Palmex · Star Del Norte · Termolita · Brahm · Servicios Agregados · Metalistik · La Capital de Selladas · Euro Water · Equipo Hidráulico · SKX · Plásticos Sahagún · Proveedora Bombas · VAMASA · INX International Mexico · Corporación Pipsa · Industrias Automotrices Lodi · Organización Industrial Vega</div>
+      <div class="stat-value teal" id="stat-aa-val">20</div>
+      <div class="stat-sub" id="stat-aa-sub">Panel Rey · Motherson · Alfagomma · Palmex · Star Del Norte · Termolita · Brahm · Servicios Agregados · Metalistik · La Capital de Selladas · Euro Water · Equipo Hidráulico · SKX · Plásticos Sahagún · Proveedora Bombas · VAMASA · INX International Mexico · Corporación Pipsa · Industrias Automotrices Lodi · Organización Industrial Vega</div>
     </div>
     <div class="stat-box">
       <div class="stat-label">ILM Candidates</div>
       <div class="stat-value">13</div>
-      <div class="stat-sub">High-potential accounts</div>
+      <div class="stat-sub">High-potential accounts · portfolio-wide</div>
     </div>
     <div class="stat-box">
       <div class="stat-label">Industries</div>
-      <div class="stat-value">5</div>
-      <div class="stat-sub">Auto · Industrial · Food · Pharma · Medical</div>
+      <div class="stat-value" id="stat-ind-val">5</div>
+      <div class="stat-sub" id="stat-ind-sub">Auto · Industrial · Food · Pharma · Medical</div>
     </div>
   </div>
 
-  <div class="account-grid">
+  <!-- Relationship sections are built here at runtime from #account-grid-source -->
+  <div id="acct-sections"></div>
+
+  <div class="account-grid" id="account-grid-source">
     <!-- Liebherr -->
     <div class="account-card aaa" onclick="showViewById('view-liebherr')">
       <div class="account-card-header">
@@ -20690,6 +20836,162 @@ const MODULES = [
   { id:'view-outreach',    name:'Outreach Library',     sub:'Commercial positioning & messaging'    },
 ];
 
+/* ═══════════════════════════════════════════════════════════════
+   RELATIONSHIP MODEL
+   Every account resolves to exactly one normalized status:
+   "current_client" | "new_client" | "lead"
+   Mandated overrides are applied BEFORE any existing rel value.
+   Status is never inferred from tier, imports, exports, revenue,
+   tags, company name or card position.
+═══════════════════════════════════════════════════════════════ */
+
+/* Name normalization: accent-stripped, lowercased, legal-suffix and
+   country-qualifier free. Used only to MATCH aliases to one canonical
+   account — display names are never rewritten. */
+function normName(s) {
+  return String(s)
+    .replace(/&amp;/g, '&')
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .replace(/\b(s a de c v|sa de cv|s de r l de c v|de r l de c v|sapi|s a|sa|inc|llc|ltd|lp|co)\b/g, ' ')
+    .replace(/\b(de mexico|mexico|mex|group|grupo|logistics)\b/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+/* alias (normalized) -> canonical account key */
+var NAME_ALIASES = {
+  /* current clients */
+  'lx pantos': 'lx pantos',
+  /* new clients */
+  'skx': 'skx', 'sk express': 'skx',
+  'mekra lang': 'mekra lang',
+  'plasticos automotrices de sahagun': 'plasticos sahagun',
+  'plasticos automotrices sahagun': 'plasticos sahagun',
+  'plasticos sahagun': 'plasticos sahagun',
+  'aceros titan': 'aceros titan',
+  'holdin': 'holdin', 'holdin gains': 'holdin',
+  'technoherramental': 'technoherramental', 'tecnoherramental': 'technoherramental',
+  'corporacion pipsa': 'corporacion pipsa', 'pipsa': 'corporacion pipsa',
+  'vistamex': 'vistamex', 'vista mex': 'vistamex',
+  'lincoln electric': 'lincoln electric',
+  'sanfer': 'sanfer',
+  /* kick-off leads */
+  'alfagomma': 'alfagomma',
+  'motherson': 'motherson', 'motherson mssl': 'motherson', 'mssl': 'motherson'
+};
+
+/* Leads where the engagement is about to start — highlighted, but still leads. */
+var KICKOFF_LEADS = { 'alfagomma': true, 'motherson': true };
+
+function canonicalKey(name) {
+  var n = normName(name);
+  return NAME_ALIASES[n] || n;
+}
+
+/* Mandated classification — approved by the account owner, applied first. */
+var RELATIONSHIP_OVERRIDES = {
+  'lx pantos':         'current_client',
+  /* Reclassified from current_client at the account owner's direction. */
+  'skx':               'new_client',
+  'mekra lang':        'new_client',
+  'plasticos sahagun': 'new_client',
+  'aceros titan':      'new_client',
+  'holdin':            'new_client',
+  'technoherramental': 'new_client',
+  'corporacion pipsa': 'new_client',
+  'vistamex':          'new_client',
+  'lincoln electric':  'new_client',
+  'sanfer':            'new_client'
+};
+
+/* Display labels for mandated accounts, used when reporting gaps. */
+var MANDATE_LABELS = {
+  'skx':'SKX', 'mekra lang':'Mekra Lang', 'lx pantos':'LX Pantos',
+  'plasticos sahagun':'Plásticos Automotrices de Sahagún',
+  'aceros titan':'Aceros Titán', 'holdin':'Holdin',
+  'technoherramental':'Technoherramental', 'corporacion pipsa':'Corporación PIPSA',
+  'vistamex':'VistaMex', 'lincoln electric':'Lincoln Electric', 'sanfer':'Sanfer'
+};
+
+/* Industry bucket per account id — read from each account's own industry
+   label on its card; used only for the Industries aggregate. */
+var INDUSTRY_BY_ID = {
+  'view-liebherr':'Industrial', 'view-lincoln-electric':'Industrial', 'view-daltile':'Industrial',
+  'view-johnson':'Auto', 'view-smp':'Auto', 'view-panelrey':'Industrial',
+  'view-motherson':'Auto', 'view-alfagomma':'Industrial', 'view-bendix':'Auto',
+  'view-inx':'Industrial', 'view-pipsa':'Industrial', 'view-lodi':'Auto',
+  'view-organizacion-industrial-vega':'Industrial', 'view-wbtm':'Auto', 'view-vamasa':'Medical',
+  'view-palmex':'Food', 'view-star':'Food', 'view-termolita':'Industrial',
+  'view-sanfer':'Pharma', 'view-saintgobain':'Industrial', 'view-brahm':'Industrial',
+  'view-skx':'Industrial', 'view-laerdal':'Medical', 'view-delmonte':'Food',
+  'view-doga':'Auto', 'view-techniplas':'Auto', 'view-saen':'Industrial',
+  'view-mekra':'Auto', 'view-capital':'Industrial', 'view-metalistik':'Industrial',
+  'view-eurowater':'Industrial', 'view-equipo':'Industrial', 'view-plasticos':'Auto',
+  'view-bombas':'Industrial', 'view-busman':'Medical'
+};
+
+var UNRESOLVED_ACCOUNTS = [];
+
+function resolveRelationship(acc) {
+  var key = canonicalKey(acc.name);
+  if (RELATIONSHIP_OVERRIDES[key]) return RELATIONSHIP_OVERRIDES[key];
+  if (acc.rel === 'CLIENT') return 'current_client';
+  if (acc.rel === 'LEAD')   return 'lead';
+  UNRESOLVED_ACCOUNTS.push(acc.name);
+  return null;
+}
+
+/* Stamp every account with its canonical key + relationshipStatus. */
+(function classifyAccounts() {
+  var seen = {};
+  ACCOUNTS.forEach(function(a) {
+    a.key = canonicalKey(a.name);
+    a.relationshipStatus = resolveRelationship(a);
+    a.industry = INDUSTRY_BY_ID[a.id] || null;
+    a.kickoff = !!KICKOFF_LEADS[a.key];
+    if (seen[a.key]) {
+      console.warn('[AIOS] Alias collision — two records share canonical key "' + a.key +
+                   '": ' + seen[a.key] + ' / ' + a.name + '. Kept as separate records.');
+    } else {
+      seen[a.key] = a.name;
+    }
+  });
+  if (UNRESOLVED_ACCOUNTS.length) {
+    console.warn('[AIOS] Unconfirmed relationship status (left unclassified, not shown in any ' +
+                 'category): ' + UNRESOLVED_ACCOUNTS.join(', '));
+  }
+})();
+
+/* Mandated accounts that have no analysis record in this dashboard. */
+var MISSING_MANDATED = Object.keys(RELATIONSHIP_OVERRIDES).filter(function(k) {
+  return !ACCOUNTS.some(function(a) { return a.key === k; });
+});
+
+var CATEGORIES = [
+  { key:'current_client', label:'Current Clients',   short:'Current Clients', dot:'current', tag:'CLIENT',     tagCls:'rel-current' },
+  { key:'new_client',     label:'New Clients',       short:'New Clients',     dot:'new',     tag:'NEW CLIENT', tagCls:'rel-new'     },
+  { key:'lead',           label:'Leads / Prospects', short:'Leads',           dot:'lead',    tag:'LEAD',       tagCls:'rel-lead'    }
+];
+
+function catMeta(key) {
+  for (var i = 0; i < CATEGORIES.length; i++) if (CATEGORIES[i].key === key) return CATEGORIES[i];
+  return null;
+}
+/* Alphabetical by display name — accent- and case-insensitive (es). */
+function byName(a, b) {
+  return String(a.name).localeCompare(String(b.name), 'es', { sensitivity:'base', numeric:true });
+}
+
+function accountsIn(cat) {
+  return ACCOUNTS.filter(function(a) {
+    return cat === 'all' ? !!a.relationshipStatus : a.relationshipStatus === cat;
+  }).sort(byName);
+}
+
+var activeCategory = 'all';
+
 /* ── RECENTS ── (in-memory, max 5, accounts only) */
 var recentIds = [];
 var MAX_RECENTS = 5;
@@ -20723,6 +21025,205 @@ function renderRecents(activeId) {
   container.innerHTML = html;
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   HOME — CATEGORY SECTIONS, FILTERING & AGGREGATES
+═══════════════════════════════════════════════════════════════ */
+
+function accountFromCard(card) {
+  var oc = card.getAttribute('onclick') || '';
+  var m  = oc.match(/showViewById\('([^']+)'\)/);
+  if (!m) return null;
+  return ACCOUNTS.find(function(a) { return a.id === m[1]; }) || null;
+}
+
+/* Replace any hard-coded LEAD / CLIENT tag with the normalized
+   relationship tag so no card can contradict its category. */
+function stampCardRelationship(card, acc) {
+  var meta = catMeta(acc.relationshipStatus);
+  if (!meta) return;
+  card.setAttribute('data-rel', acc.relationshipStatus);
+  card.setAttribute('data-account', acc.id);
+  card.setAttribute('data-search', (acc.name + ' ' + acc.sub + ' ' + acc.cls + ' ' + meta.label).toLowerCase());
+
+  var tags = card.querySelector('.account-tags');
+  if (!tags) return;
+  Array.prototype.slice.call(tags.querySelectorAll('.acct-tag')).forEach(function(t) {
+    var txt = (t.textContent || '').trim().toUpperCase();
+    if (txt === 'LEAD' || txt === 'CLIENT' || txt === 'CLIENTE' || txt === 'NEW CLIENT') t.remove();
+  });
+  var pill = document.createElement('span');
+  pill.className = 'acct-tag ' + meta.tagCls;
+  pill.textContent = meta.tag;
+  tags.insertBefore(pill, tags.firstChild);
+
+  if (acc.kickoff) {
+    card.classList.add('kickoff');
+    var kick = document.createElement('span');
+    kick.className = 'acct-tag rel-kickoff';
+    kick.textContent = '★ KICK-OFF';
+    tags.insertBefore(kick, pill.nextSibling);
+  }
+}
+
+/* Move the existing cards out of the flat grid into three labeled
+   sections. The source grid stays in the DOM as a no-JS fallback. */
+function buildAccountSections() {
+  var src  = document.getElementById('account-grid-source');
+  var host = document.getElementById('acct-sections');
+  if (!src || !host) return;
+
+  var cards = {};
+  Array.prototype.slice.call(src.querySelectorAll('.account-card')).forEach(function(card) {
+    var acc = accountFromCard(card);
+    if (!acc || !acc.relationshipStatus) return;
+    stampCardRelationship(card, acc);
+    (cards[acc.relationshipStatus] = cards[acc.relationshipStatus] || []).push({ card:card, acc:acc });
+  });
+  /* Cards are laid out alphabetically by display name within each section. */
+  Object.keys(cards).forEach(function(k) {
+    cards[k].sort(function(x, y) { return byName(x.acc, y.acc); });
+  });
+
+  CATEGORIES.forEach(function(c) {
+    var section = document.createElement('div');
+    section.className = 'acct-section';
+    section.setAttribute('data-cat', c.key);
+
+    var head = document.createElement('div');
+    head.className = 'acct-section-head';
+    head.innerHTML = '<div class="acct-section-title">' +
+                     '<span class="acct-section-dot ' + c.dot + '"></span>' + c.label +
+                     '<span class="acct-section-n" data-count-for="' + c.key + '">0</span></div>';
+    section.appendChild(head);
+
+    var missing = MISSING_MANDATED.filter(function(k) { return RELATIONSHIP_OVERRIDES[k] === c.key; });
+    if (missing.length) {
+      var note = document.createElement('div');
+      note.className = 'acct-section-note';
+      note.innerHTML = '<strong>No analysis record yet:</strong> ' +
+        missing.map(function(k) { return MANDATE_LABELS[k]; }).join(' · ') +
+        ' — confirmed ' + c.label.toLowerCase() + ', not present in this dashboard.';
+      section.appendChild(note);
+    }
+
+    var kick = (cards[c.key] || []).filter(function(e) { return e.acc.kickoff; });
+    if (kick.length) {
+      var kn = document.createElement('div');
+      kn.className = 'acct-section-note kickoff';
+      kn.innerHTML = '<strong>★ Kick-off:</strong> ' +
+        kick.map(function(e) { return e.acc.name; }).join(' · ') +
+        ' — engagement starting, highlighted below.';
+      section.appendChild(kn);
+    }
+
+    var grid = document.createElement('div');
+    grid.className = 'account-grid';
+    (cards[c.key] || []).forEach(function(e) { grid.appendChild(e.card); });
+    section.appendChild(grid);
+
+    var empty = document.createElement('div');
+    empty.className = 'acct-empty';
+    empty.style.display = 'none';
+    empty.textContent = 'No accounts in this category.';
+    section.appendChild(empty);
+
+    host.appendChild(section);
+  });
+
+  src.style.display = 'none';
+}
+
+function fmtList(names) {
+  return names.length ? names.join(' · ') : '—';
+}
+
+function renderCategoryStats(cat) {
+  var list = accountsIn(cat);
+
+  var counts = { current_client:0, new_client:0, lead:0 };
+  list.forEach(function(a) { counts[a.relationshipStatus]++; });
+
+  var parts = [];
+  if (counts.current_client) parts.push(counts.current_client + ' Current');
+  if (counts.new_client)     parts.push(counts.new_client + ' New');
+  if (counts.lead)           parts.push(counts.lead + ' Leads');
+
+  var aaa = list.filter(function(a) { return a.cls === 'AAA'; });
+  var aa  = list.filter(function(a) { return a.cls === 'AA' || a.cls === 'AA+'; });
+  var inds = [];
+  list.forEach(function(a) { if (a.industry && inds.indexOf(a.industry) < 0) inds.push(a.industry); });
+
+  document.getElementById('stat-total-val').textContent = list.length;
+  document.getElementById('stat-total-sub').textContent = parts.length ? parts.join(' · ') : 'No accounts';
+  document.getElementById('stat-aaa-val').textContent   = aaa.length;
+  document.getElementById('stat-aaa-sub').textContent   = fmtList(aaa.map(function(a) { return a.name; }));
+  document.getElementById('stat-aa-val').textContent    = aa.length;
+  document.getElementById('stat-aa-sub').textContent    = fmtList(aa.map(function(a) { return a.name; }));
+  document.getElementById('stat-ind-val').textContent   = inds.length;
+  document.getElementById('stat-ind-sub').textContent   = fmtList(inds);
+
+  var meta = catMeta(cat);
+  document.getElementById('home-header-sub').textContent = 'Pre-commercial intelligence · ' +
+    (meta ? meta.label + ' · ' : '') + list.length + ' account' + (list.length === 1 ? '' : 's') +
+    (meta ? '' : ' under analysis');
+}
+
+function renderCategoryCounts() {
+  document.getElementById('cnt-all').textContent = accountsIn('all').length;
+  CATEGORIES.forEach(function(c) {
+    var n = accountsIn(c.key).length;
+    var tab = document.getElementById('cnt-' + c.key);
+    if (tab) tab.textContent = n;
+  });
+}
+
+/* Shows only the sections in scope for the active category. */
+function applyAccountFilter() {
+  document.querySelectorAll('#acct-sections .acct-section').forEach(function(section) {
+    var cat     = section.getAttribute('data-cat');
+    var inScope = activeCategory === 'all' || activeCategory === cat;
+    var head    = section.querySelector('.acct-section-head');
+    var empty   = section.querySelector('.acct-empty');
+    var shown   = section.querySelectorAll('.account-card').length;
+
+    var countEl = section.querySelector('[data-count-for]');
+    if (countEl) countEl.textContent = shown;
+
+    section.style.display = inScope ? '' : 'none';
+    /* Section labels belong to the "All Accounts" overview; a single-category
+       view is already labeled by the active tab. */
+    if (head)  head.style.display  = (inScope && activeCategory === 'all') ? '' : 'none';
+    if (empty) empty.style.display = (inScope && shown === 0) ? '' : 'none';
+  });
+}
+
+function setCategory(cat) {
+  activeCategory = cat;
+
+  document.querySelectorAll('#rel-tabs .rel-tab').forEach(function(t) {
+    var on = t.getAttribute('data-cat') === cat;
+    t.classList.toggle('active', on);
+    t.setAttribute('aria-selected', on ? 'true' : 'false');
+  });
+
+  applyAccountFilter();
+  renderCategoryStats(cat);
+  updatePaletteScope();
+
+  var overlay = document.getElementById('cmd-overlay');
+  if (overlay && overlay.classList.contains('open')) {
+    renderPalette(document.getElementById('cmd-input').value);
+  }
+}
+
+function updatePaletteScope() {
+  var chip = document.getElementById('cmd-scope');
+  if (!chip) return;
+  var meta = catMeta(activeCategory);
+  chip.textContent = meta ? meta.short : '';
+  chip.classList.toggle('on', !!meta);
+}
+
 /* ── PALETTE ── */
 var selectedIdx = 0;
 var filteredItems = [];
@@ -20743,14 +21244,19 @@ function closePalette() {
 function renderPalette(query) {
   var q = query.toLowerCase().trim();
 
+  /* Search is scoped to the active relationship category. */
+  var scoped = accountsIn(activeCategory);
+
   var matchedAccounts = q
-    ? ACCOUNTS.filter(function(a) {
+    ? scoped.filter(function(a) {
+        var relLabel = (catMeta(a.relationshipStatus) || {}).label || '';
         return a.name.toLowerCase().includes(q) ||
                a.sub.toLowerCase().includes(q) ||
                a.rel.toLowerCase().includes(q) ||
-               a.cls.toLowerCase().includes(q);
+               a.cls.toLowerCase().includes(q) ||
+               relLabel.toLowerCase().includes(q);
       })
-    : ACCOUNTS;
+    : scoped;
 
   var matchedModules = q
     ? MODULES.filter(function(m) {
@@ -20773,16 +21279,22 @@ function renderPalette(query) {
   }
   empty.style.display = 'none';
 
+  var PILL = {
+    current_client: { pill:'<span class="cmd-pill client">CLIENT</span>',        dot:'client'    },
+    new_client:     { pill:'<span class="cmd-pill newclient">NEW CLIENT</span>', dot:'newclient' },
+    lead:           { pill:'<span class="cmd-pill lead">LEAD</span>',            dot:'lead'      }
+  };
+
   var html = '';
   if (matchedAccounts.length > 0) {
-    html += '<div class="cmd-group-label">Accounts</div>';
+    var groupLabel = catMeta(activeCategory) ? catMeta(activeCategory).label : 'Accounts';
+    html += '<div class="cmd-group-label">' + groupLabel + '</div>';
     matchedAccounts.forEach(function(a, i) {
       var sel = i === 0 ? ' selected' : '';
-      var relPill = a.rel === 'CLIENT'
-        ? '<span class="cmd-pill client">CLIENT</span>'
-        : '';
+      var rp  = PILL[a.relationshipStatus] || { pill:'', dot:'lead' };
+      var relPill = (a.kickoff ? '<span class="cmd-pill kick">★ KICK-OFF</span>' : '') + rp.pill;
       var clsPill = '<span class="cmd-pill ' + a.clsPill + '">' + a.cls + '</span>';
-      var dotCls  = a.rel === 'CLIENT' ? 'client' : 'lead';
+      var dotCls  = rp.dot;
       html += '<div class="cmd-item' + sel + '" data-view="' + a.id + '" onclick="paletteGo(\'' + a.id + '\')">' +
               '<div class="cmd-dot ' + dotCls + '"></div>' +
               '<div class="cmd-item-body">' +
@@ -20881,6 +21393,10 @@ function printView(viewId) {
 
 /* ── EVENT LISTENERS ── */
 document.addEventListener('DOMContentLoaded', function() {
+  buildAccountSections();
+  renderCategoryCounts();
+  setCategory('all');
+
   document.getElementById('cmd-input').addEventListener('input', function(e) {
     renderPalette(e.target.value);
   });
@@ -20919,6 +21435,7 @@ document.addEventListener('keydown', function(e) {
   <div id="cmd-box">
     <div id="cmd-input-row">
       <span id="cmd-search-icon">⌕</span>
+      <span id="cmd-scope"></span>
       <input id="cmd-input" type="text" placeholder="Search accounts, modules..." autocomplete="off" spellcheck="false" />
       <span id="cmd-esc-hint">ESC</span>
     </div>
