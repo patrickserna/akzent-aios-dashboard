@@ -1255,27 +1255,22 @@ main {
     <div class="stat-box">
       <div class="stat-label" id="stat-total-label">Total Accounts</div>
       <div class="stat-value" id="stat-total-val">37</div>
-      <div class="stat-sub" id="stat-total-sub">12 Current · 8 New · 17 Leads</div>
     </div>
     <div class="stat-box">
       <div class="stat-label">AAA Accounts</div>
       <div class="stat-value red" id="stat-aaa-val">17</div>
-      <div class="stat-sub" id="stat-aaa-sub">Liebherr · Lincoln Electric · Johnson Controls · Dal-Tile Mexico · SMP · Sanfer · Saint-Gobain · Bendix · Laerdal · Del Monte · DOGA · Techniplas · Mekra Lang · Busman PI · WBTM · Servicios Vistamex</div>
     </div>
     <div class="stat-box">
       <div class="stat-label">AA / AA+ Accounts</div>
       <div class="stat-value teal" id="stat-aa-val">20</div>
-      <div class="stat-sub" id="stat-aa-sub">Panel Rey · Motherson · Alfagomma · Palmex · Star Del Norte · Termolita · Brahm · Servicios Agregados · Metalistik · La Capital de Selladas · Euro Water · Equipo Hidráulico · SKX · Plásticos Sahagún · Proveedora Bombas · VAMASA · INX International Mexico · Corporación Pipsa · Industrias Automotrices Lodi · Organización Industrial Vega</div>
     </div>
     <div class="stat-box">
       <div class="stat-label">ILM Candidates</div>
       <div class="stat-value">13</div>
-      <div class="stat-sub">High-potential accounts · portfolio-wide</div>
     </div>
     <div class="stat-box">
       <div class="stat-label">Industries</div>
       <div class="stat-value" id="stat-ind-val">5</div>
-      <div class="stat-sub" id="stat-ind-sub">Auto · Industrial · Food · Pharma · Medical</div>
     </div>
   </div>
 
@@ -22479,20 +22474,8 @@ function buildAccountSections() {
   src.style.display = 'none';
 }
 
-function fmtList(names) {
-  return names.length ? names.join(' · ') : '—';
-}
-
 function renderCategoryStats(cat) {
   var list = accountsIn(cat);
-
-  var counts = { current_client:0, new_client:0, lead:0 };
-  list.forEach(function(a) { counts[a.relationshipStatus]++; });
-
-  var parts = [];
-  if (counts.current_client) parts.push(counts.current_client + ' Current');
-  if (counts.new_client)     parts.push(counts.new_client + ' New');
-  if (counts.lead)           parts.push(counts.lead + ' Leads');
 
   var aaa = list.filter(function(a) { return a.cls === 'AAA'; });
   var aa  = list.filter(function(a) { return a.cls === 'AA' || a.cls === 'AA+'; });
@@ -22500,13 +22483,9 @@ function renderCategoryStats(cat) {
   list.forEach(function(a) { if (a.industry && inds.indexOf(a.industry) < 0) inds.push(a.industry); });
 
   document.getElementById('stat-total-val').textContent = list.length;
-  document.getElementById('stat-total-sub').textContent = parts.length ? parts.join(' · ') : 'No accounts';
   document.getElementById('stat-aaa-val').textContent   = aaa.length;
-  document.getElementById('stat-aaa-sub').textContent   = fmtList(aaa.map(function(a) { return a.name; }));
   document.getElementById('stat-aa-val').textContent    = aa.length;
-  document.getElementById('stat-aa-sub').textContent    = fmtList(aa.map(function(a) { return a.name; }));
   document.getElementById('stat-ind-val').textContent   = inds.length;
-  document.getElementById('stat-ind-sub').textContent   = fmtList(inds);
 
   var meta = catMeta(cat);
   document.getElementById('home-header-sub').textContent = 'Pre-commercial intelligence · ' +
