@@ -1205,6 +1205,10 @@ main {
       <span>◆</span> <span style="flex:1;">Ludvig Svensson</span>
       <span class="recent-cls aa">AA</span>
     </div>
+    <div class="nav-item" onclick="showView('view-sanfer-salud-animal', this)">
+      <span>◆</span> <span style="flex:1;">Sanfer Salud Animal</span>
+      <span class="recent-cls aaa">AAA</span>
+    </div>
   </div>
 
   <div class="nav-divider"></div>
@@ -1811,25 +1815,26 @@ main {
       </div>
     </div>
 
-    <!-- Sanfer Group -->
-    <div class="account-card aaa" onclick="showViewById('view-sanfer')">
+    <!-- Sanfer Salud Animal -->
+    <div class="account-card aaa" onclick="showViewById('view-sanfer-salud-animal')">
       <div class="account-card-header">
         <div>
-          <div class="account-name">Sanfer Group</div>
-          <div class="account-industry">Pharma · Biotech · Packaging · Distribución LATAM</div>
+          <div class="account-name">Sanfer Salud Animal</div>
+          <div class="account-industry">Animal Health · Veterinary Pharma</div>
         </div>
         <span class="account-cls-badge aaa">AAA</span>
       </div>
       <div class="account-metrics">
-        <div class="acct-metric"><div class="acct-metric-val">381</div><div class="acct-metric-lbl">Embarques</div></div>
-        <div class="acct-metric"><div class="acct-metric-val">6</div><div class="acct-metric-lbl">Entidades</div></div>
-        <div class="acct-metric"><div class="acct-metric-val">$46M</div><div class="acct-metric-lbl">Valor</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">227</div><div class="acct-metric-lbl">Shipments</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">83%</div><div class="acct-metric-lbl">Export YTD</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">31%</div><div class="acct-metric-lbl">Air YTD</div></div>
       </div>
       <div class="account-tags">
-        <span class="acct-tag">Grimann $34.5M</span>
-        <span class="acct-tag">Air regulado</span>
-        <span class="acct-tag">Biotech</span>
-        <span class="acct-tag">ILM ecosistema</span>
+        <span class="acct-tag rel-new">NEW CLIENT</span>
+        <span class="acct-tag">Nuevo Laredo</span>
+        <span class="acct-tag">Air regulated</span>
+        <span class="acct-tag">Veterinary pharma</span>
+        <span class="acct-tag">Control Tower fit</span>
       </div>
     </div>
 
@@ -10796,6 +10801,23 @@ main {
               </td>
             </tr>
             <tr style="background:rgba(0,180,216,0.04);">
+              <td><strong>Sanfer Salud Animal</strong> <span style="font-size:10px;font-weight:600;color:#10b981;background:rgba(16,185,129,0.1);padding:1px 5px;border-radius:3px;margin-left:4px;white-space:nowrap;">CLIENT</span> <span style="font-size:10px;font-weight:600;color:var(--teal-dim);background:rgba(0,180,216,0.14);padding:1px 5px;border-radius:3px;margin-left:4px;white-space:nowrap;">NEW CLIENT</span></td>
+              <td><span class="cls-pill aaa">AAA</span></td>
+              <td style="color:var(--text-muted);">Animal Health / Veterinary Pharma</td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td><div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div></div></td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td style="color:var(--teal-dim);font-weight:700;font-size:11px;">★ NEW SALES</td>
+            </tr>
+            <tr>
+              <td colspan="8" style="background:rgba(0,180,216,0.04);padding:8px 12px;font-size:11px;color:var(--text-muted);line-height:1.6;">
+                <strong style="color:var(--navy);">Sanfer Salud Animal — NEW CLIENT (New Sales):</strong>
+                Relationship Status <strong>NEW CLIENT</strong> · AIOS Classification <strong>AAA</strong> · Industry <strong>Animal Health / Veterinary Pharma</strong>.
+                227 Shipments (185 exports · 42 imports) · Primary Hub <strong>Nuevo Laredo</strong> · Key Modes Truck / Air / Maritime · ILM Potential <strong>Very High</strong>. Sin Akzent shipment data aún — foco en validación de wallet vs universo Panjiva.
+              </td>
+            </tr>
+            <tr style="background:rgba(0,180,216,0.04);">
               <td><strong>Servicios Vistamex</strong> <span style="font-size:10px;font-weight:600;color:#10b981;background:rgba(16,185,129,0.1);padding:1px 5px;border-radius:3px;margin-left:4px;white-space:nowrap;">CLIENT</span> <span style="font-size:10px;font-weight:600;color:var(--teal-dim);background:rgba(0,180,216,0.14);padding:1px 5px;border-radius:3px;margin-left:4px;white-space:nowrap;">NEW CLIENT</span></td>
               <td><span class="cls-pill aaa">AAA</span></td>
               <td style="color:var(--text-muted);">Automotive plastics / IMMEX</td>
@@ -11081,7 +11103,6 @@ main {
 </div>
 
 
-<!-- ══ SANFER GROUP VIEW ══ -->
 <!-- ══ BRAHM PRECISION PRODUCTS VIEW ══ -->
 <div id="view-brahm" class="view">
   <div class="page-header">
@@ -13321,605 +13342,517 @@ main {
   </div>
 </div>
 
-<!-- ══ SANFER VIEW ══ -->
-<div id="view-sanfer" class="view">
+<!-- ══ SANFER SALUD ANIMAL VIEW ══ -->
+<div id="view-sanfer-salud-animal" class="view">
   <div class="page-header">
     <div class="page-header-left">
-      <div class="page-header-eyebrow">Cuenta Objetivo · Análisis Pre-Comercial · Ecosistema Farmacéutico</div>
-      <div class="page-header-title">Sanfer Group</div>
-      <div class="page-header-sub">Manufactura Farmacéutica · Biotech · Packaging · Distribución LATAM · 6 entidades operativas</div>
+      <div class="page-header-eyebrow">New Sales · Cliente Nuevo · NEW CLIENT · Fuente Panjiva</div>
+      <div class="page-header-title">Sanfer Salud Animal</div>
+      <div class="page-header-sub">Animal Health · Veterinary Pharma · Nutrition Additives · Fuente: Panjiva Mexico Imports &amp; Exports</div>
     </div>
     <div class="page-header-meta">
+      <span class="classification-badge newclient">NEW CLIENT</span>
       <span class="classification-badge aaa">AAA</span>
-      <button class="print-btn" onclick="printView('view-sanfer')">⬇ Exportar PDF</button>
+      <button class="print-btn" onclick="printView('view-sanfer-salud-animal')">⬇ Exportar PDF</button>
     </div>
   </div>
   <div class="content-body">
 
-    <!-- Executive Summary -->
+    <!-- 01 Executive Intelligence Summary -->
     <div class="card">
-      <div class="card-header"><span class="accent">01</span> Resumen Ejecutivo del Ecosistema</div>
+      <div class="card-header"><span class="accent">01</span> Executive Intelligence Summary</div>
       <div class="card-body">
-        <p style="font-size:13px;line-height:1.7;">El Grupo Sanfer no es una empresa farmacéutica simple — es un <strong>ecosistema operativo integrado de 6 entidades especializadas</strong> con una cadena de suministro bidireccional de alta complejidad. Importa insumos regulados, principios activos, materiales de empaque y reactivos biotecnológicos desde 12+ países; fabrica en México; y distribuye medicamentos, snacks y productos de consumo a toda LATAM. La entidad central de importación es <strong>Grimann</strong> (~$34.5M en importaciones), que abastece al grupo con medicamentos terminados y principios activos principalmente desde Europa vía aéreo. <strong>Probiomed</strong> opera una planta de biotech de alta complejidad con insumos de biorreactor desde USA/Suecia. <strong>La exposición regulatoria, la dependencia de proveedores especializados únicos y la distribución LATAM activa hacen de este grupo uno de los perfiles de mayor fit estratégico en el portafolio Akzent.</strong></p>
-        <div style="background:rgba(232,0,45,0.04);border-left:3px solid var(--red);border-radius:0 6px 6px 0;padding:12px 16px;margin-top:12px;">
-          <strong style="font-size:11px;color:var(--red);text-transform:uppercase;letter-spacing:1px;">⚡ Señal Crítica de Oportunidad</strong>
-          <p style="font-size:12px;color:var(--text);line-height:1.6;margin-top:4px;">Grimann importa <strong>$28.6M en air freight</strong> de un portafolio de medicamentos de 12+ proveedores europeos y americanos. Menarini (~$10.7M), Servier (~$6.9M) y Medac (~$5.0M) dominan. Esta concentración de air freight regulado es la mayor oportunidad comercial inmediata del grupo — y muy probablemente no está bien coordinada ni centralizada.</p>
+        <p style="font-size:13px;line-height:1.7;">Sanfer Salud Animal presenta una operación regulada de <strong>salud animal / veterinaria</strong> con fuerte orientación exportadora, ejecución cross-border recurrente y comportamiento multimodal relevante. Panjiva muestra <strong>227 Shipments totales</strong> entre importaciones y exportaciones, con el 2026 YTD fuertemente inclinado hacia exportaciones y un corredor dominante hacia <strong>Estados Unidos vía Nuevo Laredo</strong>. La operación combina aditivos de nutrición animal, vacunas veterinarias, medicamentos y productos regulados relacionados con farma. Esta no es una oportunidad transaccional de flete: es una oportunidad de <strong>coordinación operativa, visibilidad aduanal y Control Tower</strong> para Akzent.</p>
+        <div style="background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 6px 6px 0;padding:12px 16px;margin-top:12px;">
+          <strong style="font-size:11px;color:#b45309;text-transform:uppercase;letter-spacing:1px;">⚡ Señal de Oportunidad</strong>
+          <p style="font-size:12px;color:var(--text);line-height:1.6;margin-top:4px;">Exportador veterinario regulado con concentración cross-border creciente: la participación de exportación sube de <strong>80.7% en 2025</strong> a <strong>83.1% en 2026 YTD</strong>, con el aéreo aún estratégico (31.2% del total YTD y 61.5% de las importaciones YTD). Como <strong>NEW CLIENT (New Sales)</strong>, el objetivo comercial inmediato es validar el universo capturado por Akzent contra el universo visible Panjiva y estructurar la expansión de wallet operativo.</p>
         </div>
       </div>
     </div>
 
-    <!-- Ecosystem Map -->
+    <!-- 02 Relationship Status + AIOS Classification -->
     <div class="card">
-      <div class="card-header"><span class="accent">02</span> Mapa del Ecosistema — 6 Entidades Operativas</div>
+      <div class="card-header"><span class="accent">02</span> Relationship Status &amp; AIOS Classification</div>
       <div class="card-body">
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
-
-          <div style="background:var(--navy);border-radius:8px;padding:16px;color:#fff;">
-            <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);margin-bottom:6px;">CORE PHARMA</div>
-            <div style="font-size:14px;font-weight:700;margin-bottom:4px;">Laboratorios Sanfer</div>
-            <div style="font-size:11px;color:rgba(255,255,255,0.6);margin-bottom:10px;">HQ · Distribución LATAM</div>
-            <div style="display:flex;flex-direction:column;gap:4px;">
-              <div style="font-size:11px;color:rgba(255,255,255,0.8);">📤 34 exports · $1.66M</div>
-              <div style="font-size:11px;color:rgba(255,255,255,0.8);">📥 4 imports · $28K</div>
-              <div style="font-size:11px;color:var(--teal);margin-top:4px;">✈ 79% air · Panamá hub</div>
-            </div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;">
+          <div style="background:rgba(0,180,216,0.05);border:1px solid rgba(0,180,216,0.25);border-radius:8px;padding:16px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">Relationship Status</div>
+            <span class="classification-badge newclient" style="font-size:14px;padding:5px 14px;">NEW CLIENT</span>
+            <p style="font-size:11px;color:var(--text-muted);line-height:1.5;margin-top:10px;">Cliente nuevo (New Sales). No se proporcionó Akzent shipment data; el perfil se construye 100% con inteligencia de Panjiva. El foco de onboarding es validar wallet capturado vs universo visible.</p>
           </div>
-
-          <div style="background:rgba(232,0,45,0.05);border:2px solid rgba(232,0,45,0.2);border-radius:8px;padding:16px;">
-            <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--red);margin-bottom:6px;">IMPORTADOR MAESTRO</div>
-            <div style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:4px;">Grimann</div>
-            <div style="font-size:11px;color:var(--text-muted);margin-bottom:10px;">Importación farmacéutica · Insumos grupo</div>
-            <div style="display:flex;flex-direction:column;gap:4px;">
-              <div style="font-size:11px;color:var(--text);">📥 146 imports · <strong style="color:var(--red);">$34.45M</strong></div>
-              <div style="font-size:11px;color:var(--text);">✈ 103 air · $28.6M</div>
-              <div style="font-size:11px;color:var(--text-muted);margin-top:4px;">Menarini · Servier · Medac</div>
-            </div>
+          <div style="background:rgba(232,0,45,0.04);border:1px solid rgba(232,0,45,0.2);border-radius:8px;padding:16px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">AIOS Classification</div>
+            <span class="classification-badge aaa" style="font-size:14px;padding:5px 14px;">AAA</span>
+            <p style="font-size:11px;color:var(--text-muted);line-height:1.5;margin-top:10px;">Fit estratégico AAA por complejidad operativa alta, diversidad modal, exposición cross-border y muy alta sensibilidad aduanal.</p>
           </div>
-
-          <div style="background:rgba(0,180,216,0.04);border:1px solid rgba(0,180,216,0.2);border-radius:8px;padding:16px;">
-            <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);margin-bottom:6px;">BIOTECH</div>
-            <div style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:4px;">Probiomed</div>
-            <div style="font-size:11px;color:var(--text-muted);margin-bottom:10px;">Biológicos · Biorreactor · Biofarma</div>
-            <div style="display:flex;flex-direction:column;gap:4px;">
-              <div style="font-size:11px;color:var(--text);">📤 27 exports · $1.76M</div>
-              <div style="font-size:11px;color:var(--text);">📥 34 imports · $4.19M</div>
-              <div style="font-size:11px;color:var(--teal);margin-top:4px;">Life Technologies · Schott · Cytiva</div>
-            </div>
-          </div>
-
-          <div style="background:rgba(0,180,216,0.04);border:1px solid rgba(0,180,216,0.2);border-radius:8px;padding:16px;">
-            <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);margin-bottom:6px;">PACKAGING</div>
-            <div style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:4px;">Litogrimann</div>
-            <div style="font-size:11px;color:var(--text-muted);margin-bottom:10px;">Cartón farmacéutico · Impresión</div>
-            <div style="display:flex;flex-direction:column;gap:4px;">
-              <div style="font-size:11px;color:var(--text);">📤 16 exports · $715K</div>
-              <div style="font-size:11px;color:var(--text);">📥 42 imports · $1.72M</div>
-              <div style="font-size:11px;color:var(--teal);margin-top:4px;">🇸🇪 Intermat Suecia → Veracruz</div>
-            </div>
-          </div>
-
-          <div style="background:rgba(0,180,216,0.04);border:1px solid rgba(0,180,216,0.2);border-radius:8px;padding:16px;">
-            <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);margin-bottom:6px;">DISTRIBUCIÓN REGIONAL</div>
-            <div style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:4px;">Aerobal</div>
-            <div style="font-size:11px;color:var(--text-muted);margin-bottom:10px;">Export consumo · Centroamérica</div>
-            <div style="display:flex;flex-direction:column;gap:4px;">
-              <div style="font-size:11px;color:var(--text);">📤 70 exports · $321K</div>
-              <div style="font-size:11px;color:var(--text);">🛣 Cd. Hidalgo + Manzanillo</div>
-              <div style="font-size:11px;color:var(--text-muted);margin-top:4px;">Walmart CA · Corp. Sup. Unidos</div>
-            </div>
-          </div>
-
-          <div style="background:rgba(0,180,216,0.04);border:1px solid rgba(0,180,216,0.2);border-radius:8px;padding:16px;">
-            <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);margin-bottom:6px;">PRINCIPIOS ACTIVOS</div>
-            <div style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:4px;">Dinafarma</div>
-            <div style="font-size:11px;color:var(--text-muted);margin-bottom:10px;">Materias primas farmacéuticas</div>
-            <div style="display:flex;flex-direction:column;gap:4px;">
-              <div style="font-size:11px;color:var(--text);">📥 8 imports · $1.2M</div>
-              <div style="font-size:11px;color:var(--text);">✈ 4 air · 🚢 2 mar · 🛣 2 truck</div>
-              <div style="font-size:11px;color:var(--text-muted);margin-top:4px;">Talco · Metadoxina · API</div>
-            </div>
-          </div>
-
+        </div>
+        <div style="margin-top:12px;padding:10px 14px;background:rgba(13,43,94,0.04);border-radius:5px;border:1px solid var(--border);">
+          <strong style="font-size:11px;color:var(--navy);">Fuente de Datos:</strong>
+          <span style="font-size:12px;color:var(--text-muted);"> Panjiva Mexico Imports y Panjiva Mexico Exports únicamente. Los Shipments reflejan actividad visible de comercio; los conteos por HS Code representan presencia operativa, no valores capturados por Akzent.</span>
         </div>
       </div>
     </div>
 
-    <!-- Consolidated Metrics -->
+    <!-- 03 Shipment Intelligence by Period -->
     <div class="grid-4">
-      <div class="stat-box"><div class="stat-label">Total Embarques Grupo</div><div class="stat-value">381</div><div class="stat-sub">147 exports · 234 imports</div></div>
-      <div class="stat-box"><div class="stat-label">Valor Total Ecosistema</div><div class="stat-value" style="font-size:18px;">$46.0M</div><div class="stat-sub">$4.4M export · $41.6M import</div></div>
-      <div class="stat-box"><div class="stat-label">Air Freight (Grupo)</div><div class="stat-value red">143</div><div class="stat-sub">37.5% del total · $28.6M+ valor</div></div>
-      <div class="stat-box"><div class="stat-label">Países de Origen</div><div class="stat-value teal">12+</div><div class="stat-sub">USA · Alemania · Suecia · Italia · India</div></div>
+      <div class="stat-box"><div class="stat-label">Total Shipments (Panjiva)</div><div class="stat-value">227</div><div class="stat-sub">185 export · 42 import</div></div>
+      <div class="stat-box"><div class="stat-label">Export Shipments</div><div class="stat-value teal">185</div><div class="stat-sub">Cuenta export-led</div></div>
+      <div class="stat-box"><div class="stat-label">Import Shipments</div><div class="stat-value navy">42</div><div class="stat-sub">Insumos regulados</div></div>
+      <div class="stat-box"><div class="stat-label">Períodos Visibles</div><div class="stat-value teal" style="font-size:18px;">2025 FY · 2026 YTD</div><div class="stat-sub">2026 con datos a mayo</div></div>
     </div>
 
-    <!-- Modal Mix Consolidated -->
+    <div class="card">
+      <div class="card-header"><span class="accent">03</span> Shipment Intelligence by Period</div>
+      <div class="card-body">
+        <div class="grid-2">
+          <div style="background:rgba(13,43,94,0.03);border:1px solid var(--border);border-radius:8px;padding:16px;">
+            <div style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:12px;">2025 Full Year</div>
+            <table class="hub-table" style="margin:0;">
+              <tbody>
+                <tr><td>Total Shipments</td><td style="text-align:right;font-weight:700;">150</td></tr>
+                <tr><td>Export Shipments</td><td style="text-align:right;font-weight:700;">121 · 80.7%</td></tr>
+                <tr><td>Import Shipments</td><td style="text-align:right;font-weight:700;">29 · 19.3%</td></tr>
+                <tr><td>USD Value</td><td style="text-align:right;font-weight:700;color:var(--navy);">USD 6.07M</td></tr>
+                <tr><td>Gross Weight</td><td style="text-align:right;">1,432,067.6 kg</td></tr>
+                <tr><td>TEU</td><td style="text-align:right;">126.04</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div style="background:rgba(0,180,216,0.03);border:1px solid rgba(0,180,216,0.2);border-radius:8px;padding:16px;">
+            <div style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:12px;">2026 YTD · a mayo 2026</div>
+            <table class="hub-table" style="margin:0;">
+              <tbody>
+                <tr><td>Total Shipments</td><td style="text-align:right;font-weight:700;">77</td></tr>
+                <tr><td>Export Shipments</td><td style="text-align:right;font-weight:700;">64 · 83.1%</td></tr>
+                <tr><td>Import Shipments</td><td style="text-align:right;font-weight:700;">13 · 16.9%</td></tr>
+                <tr><td>USD Value</td><td style="text-align:right;font-weight:700;color:var(--navy);">USD 3.79M</td></tr>
+                <tr><td>Gross Weight</td><td style="text-align:right;">1,053,535.03 kg</td></tr>
+                <tr><td>TEU</td><td style="text-align:right;">94.04</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 Trend Intelligence -->
+    <div class="card">
+      <div class="card-header"><span class="accent">04</span> Trend Intelligence</div>
+      <div class="card-body">
+        <div class="signal-grid">
+          <div class="signal-item">
+            <div class="signal-title">Volumen — Continuidad Confirmada</div>
+            <div class="signal-prob medium-high">CONTINUIDAD</div>
+            <div class="signal-desc">2026 YTD confirma continuidad con 77 Shipments visibles a mayo 2026 versus 150 en 2025 Full Year. Ritmo operativo sostenido.</div>
+          </div>
+          <div class="signal-item high">
+            <div class="signal-title">Mix Import/Export — Export-Led Creciente</div>
+            <div class="signal-prob high">EXPORT 83.1%</div>
+            <div class="signal-desc">La cuenta permanece fuertemente orientada a exportación, subiendo de 80.7% de export share en 2025 a 83.1% en 2026 YTD.</div>
+          </div>
+          <div class="signal-item">
+            <div class="signal-title">Mix Modal — Desplazamiento hacia Truck</div>
+            <div class="signal-prob medium-high">CROSS-BORDER</div>
+            <div class="signal-desc">2026 YTD se desplaza hacia Truck (55.8%), principalmente porque la actividad de exportación Nuevo Laredo / Estados Unidos se vuelve más dominante.</div>
+          </div>
+          <div class="signal-item high">
+            <div class="signal-title">Air Freight — Estratégicamente Relevante</div>
+            <div class="signal-prob high">31.2% YTD</div>
+            <div class="signal-desc">El aéreo sigue siendo relevante con 31.2% del total de Shipments YTD y 61.5% de los Shipments de importación YTD. Producto regulado y urgencia.</div>
+          </div>
+          <div class="signal-item">
+            <div class="signal-title">Geografía — Estados Unidos Dominante</div>
+            <div class="signal-prob medium-high">USA #1 EXPORT</div>
+            <div class="signal-desc">Estados Unidos se vuelve el destino de exportación dominante en 2026 YTD, mientras LATAM y países de ultramar permanecen parte de la red.</div>
+          </div>
+          <div class="signal-item">
+            <div class="signal-title">Aduanas / Puertos — Nuevo Laredo Domina</div>
+            <div class="signal-prob medium-high">MULTINODO</div>
+            <div class="signal-desc">Nuevo Laredo domina la exportación; AICM/AIFA permanecen relevantes para operaciones aéreas reguladas; Veracruz y Manzanillo mantienen relevancia marítima.</div>
+          </div>
+        </div>
+        <div style="margin-top:12px;padding:10px 14px;background:rgba(13,43,94,0.04);border-radius:5px;border:1px solid var(--border);">
+          <strong style="font-size:11px;color:var(--navy);">Interpretación Operativa:</strong>
+          <span style="font-size:12px;color:var(--text-muted);"> Sanfer Salud Animal se comporta como un exportador veterinario regulado con concentración cross-border y soporte multimodal.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 05 Top 5 HS Codes by Period + Portfolio Trend -->
+    <div class="card">
+      <div class="card-header"><span class="accent">05</span> Top 5 HS Codes by Period + Portfolio Trend</div>
+      <div class="card-body">
+        <div class="grid-2">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:10px;">2025 Full Year</div>
+            <table class="hub-table">
+              <thead><tr><th>HS Code</th><th>Presencia</th><th>Interpretación AIOS</th></tr></thead>
+              <tbody>
+                <tr><td><strong>2309909999</strong><div style="font-size:10px;color:var(--text-muted);">Aditivos / suplementos / preparaciones nutrición animal</div></td><td style="font-weight:700;color:var(--red);">65 · 43.3%</td><td style="font-size:11px;">Producto de exportación de alto volumen; requiere control documental, ejecución recurrente y coordinación con cliente.</td></tr>
+                <tr><td><strong>3002420199</strong><div style="font-size:10px;color:var(--text-muted);">Vacunas veterinarias / productos inmunológicos</div></td><td style="font-weight:700;">41 · 27.3%</td><td style="font-size:11px;">Alta sensibilidad regulatoria; requiere visibilidad, control documental y ejecución time-sensitive.</td></tr>
+                <tr><td><strong>3004909999</strong><div style="font-size:10px;color:var(--text-muted);">Medicamentos veterinarios diversos</div></td><td style="font-weight:700;">11 · 7.3%</td><td style="font-size:11px;">Portafolio farma regulado; sensible a clasificación aduanal y compliance.</td></tr>
+                <tr><td><strong>3004109900</strong><div style="font-size:10px;color:var(--text-muted);">Antibióticos / preparaciones farma veterinaria</div></td><td style="font-weight:700;">8 · 5.3%</td><td style="font-size:11px;">Alta sensibilidad documental y exposición regulatoria.</td></tr>
+                <tr><td><strong>3004209900</strong><div style="font-size:10px;color:var(--text-muted);">Medicamentos veterinarios con antibióticos / tratamientos</div></td><td style="font-weight:700;">7 · 4.7%</td><td style="font-size:11px;">Confirma la complejidad de farma veterinaria regulada.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:10px;">2026 YTD</div>
+            <table class="hub-table">
+              <thead><tr><th>HS Code</th><th>Presencia</th><th>Interpretación AIOS</th></tr></thead>
+              <tbody>
+                <tr><td><strong>2309909999</strong><div style="font-size:10px;color:var(--text-muted);">Aditivos / suplementos / preparaciones nutrición animal</div></td><td style="font-weight:700;color:var(--red);">48 · 62.3%</td><td style="font-size:11px;">Portafolio YTD fuertemente concentrado en exportación de nutrición animal, ligado a ejecución cross-border recurrente.</td></tr>
+                <tr><td><strong>3002420199</strong><div style="font-size:10px;color:var(--text-muted);">Vacunas veterinarias / productos inmunológicos</div></td><td style="font-weight:700;">13 · 16.9%</td><td style="font-size:11px;">Producto regulado estratégico, aún importante pese a menor share YTD.</td></tr>
+                <tr><td><strong>3004909999</strong><div style="font-size:10px;color:var(--text-muted);">Medicamentos veterinarios diversos</div></td><td style="font-weight:700;">4 · 5.2%</td><td style="font-size:11px;">Mantiene la complejidad regulatoria farma.</td></tr>
+                <tr><td><strong>3004209900</strong><div style="font-size:10px;color:var(--text-muted);">Medicamentos veterinarios con antibióticos / tratamientos</div></td><td style="font-weight:700;">3 · 3.9%</td><td style="font-size:11px;">Bajo volumen pero alta sensibilidad documental.</td></tr>
+                <tr><td><strong>3004399999</strong><div style="font-size:10px;color:var(--text-muted);">Producto veterinario hormonal / especializado</div></td><td style="font-weight:700;">1 · 1.3%</td><td style="font-size:11px;">Baja frecuencia pero producto especializado, no commodity.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div style="margin-top:14px;padding:12px;background:rgba(13,43,94,0.04);border-radius:6px;border:1px solid var(--border);">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:4px;">Portfolio Trend</div>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.5;">El portafolio 2026 YTD está más concentrado en HS 2309909999, indicando mayor peso de exportaciones de nutrición animal / aditivos. Sin embargo, HS 3002420199, 3004909999 y 3004209900 preservan el perfil de farma veterinaria regulada. La cuenta combina volumen recurrente con categorías de producto sensibles.</p>
+          <p style="font-size:11px;color:var(--text-muted);line-height:1.5;margin-top:6px;"><strong>Nota HS:</strong> si un Shipment contiene múltiples HS Codes, los conteos representan presencia operativa y no son aditivos.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 06 Import / Export Breakdown -->
+    <div class="card">
+      <div class="card-header"><span class="accent">06</span> Import / Export Breakdown</div>
+      <div class="card-body">
+        <div class="grid-2">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:10px;">2025 Full Year · 150 Shipments</div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Export</strong><span>121 · 80.7% · USD 5.22M</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:80.7%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Import</strong><span>29 · 19.3% · USD 844,841.98</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:19.3%"></div></div></div>
+            <div style="font-size:11px;color:var(--text-muted);margin-top:8px;">Export GW 1,420,560.56 kg · Import GW 11,507.04 kg</div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:10px;">2026 YTD · 77 Shipments</div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Export</strong><span>64 · 83.1% · USD 3.30M</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:83.1%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Import</strong><span>13 · 16.9% · USD 492,833.36</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:16.9%"></div></div></div>
+            <div style="font-size:11px;color:var(--text-muted);margin-top:8px;">Export GW 1,045,469.43 kg · Import GW 8,065.60 kg</div>
+          </div>
+        </div>
+        <div style="margin-top:12px;padding:10px;background:rgba(0,180,216,0.04);border-radius:5px;border:1px solid rgba(0,180,216,0.12);">
+          <strong style="font-size:11px;color:var(--teal-dim);">Insight:</strong>
+          <span style="font-size:11px;color:var(--text-muted);"> El peso de valor y peso bruto está claramente en la exportación. La importación es de bajo peso pero alta sensibilidad (insumos regulados, alto uso aéreo).</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 07 Modal Mix -->
     <div class="grid-2">
       <div class="card">
-        <div class="card-header"><span class="accent">03</span> Mix Modal Consolidado — Grupo Completo</div>
+        <div class="card-header"><span class="accent">07</span> Modal Mix — 2025 Full Year</div>
         <div class="card-body">
-          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;">381 embarques totales</div>
-          <div class="modal-bar"><div class="modal-bar-label"><strong>Aéreo ✈</strong><span>143 · 37.5% · mayor valor</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:37.5%"></div></div></div>
-          <div class="modal-bar"><div class="modal-bar-label"><strong>Marítimo 🚢</strong><span>99 · 26.0%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:26%"></div></div></div>
-          <div class="modal-bar"><div class="modal-bar-label"><strong>Terrestre 🛣</strong><span>60 · 15.7%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:15.7%"></div></div></div>
-          <div style="margin-top:12px;padding:10px;background:rgba(232,0,45,0.04);border-radius:5px;border:1px solid rgba(232,0,45,0.12);">
-            <strong style="font-size:11px;color:var(--red);">Insight:</strong>
-            <span style="font-size:11px;color:var(--text-muted);"> El air freight es el modo dominante <em>por valor</em>. Grimann solo ($28.6M air) supera el valor marítimo de todo el grupo. La coordinación de air farmacéutico regulado es la mayor oportunidad comercial.</span>
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;">150 Shipments totales</div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Aéreo ✈</strong><span>70 · 46.7%</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:46.7%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Terrestre 🛣</strong><span>61 · 40.7%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:40.7%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Marítimo 🚢</strong><span>19 · 12.7%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:12.7%"></div></div></div>
+          <div style="margin-top:12px;padding:10px;background:rgba(13,43,94,0.03);border-radius:5px;border:1px solid var(--border);">
+            <div style="font-size:10px;font-weight:700;color:var(--navy);margin-bottom:4px;">Imports 2025 · 29 Shipments</div>
+            <span style="font-size:11px;color:var(--text-muted);">Aéreo 17 · 58.6% · Terrestre 6 · 20.7% · Marítimo 6 · 20.7%</span>
+            <div style="font-size:10px;font-weight:700;color:var(--navy);margin:8px 0 4px;">Exports 2025 · 121 Shipments</div>
+            <span style="font-size:11px;color:var(--text-muted);">Terrestre 55 · 45.5% · Aéreo 53 · 43.8% · Marítimo 13 · 10.7%</span>
           </div>
         </div>
       </div>
       <div class="card">
-        <div class="card-header"><span class="accent">04</span> Orígenes de Importación — Red de Proveedores</div>
+        <div class="card-header"><span class="accent">07</span> Modal Mix — 2026 YTD</div>
         <div class="card-body">
-          <div class="modal-bar"><div class="modal-bar-label"><strong>🇺🇸 USA</strong><span>50 · principal biotech/API</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:65%"></div></div></div>
-          <div class="modal-bar"><div class="modal-bar-label"><strong>🇸🇪 Suecia</strong><span>43 · Intermat (packaging) + Cytiva</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:55%"></div></div></div>
-          <div class="modal-bar"><div class="modal-bar-label"><strong>🇩🇪 Alemania</strong><span>33 · $11.0M · Menarini LATAM</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:43%"></div></div></div>
-          <div class="modal-bar"><div class="modal-bar-label"><strong>🇮🇹 Italia</strong><span>20 · API · insumos</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:26%"></div></div></div>
-          <div class="modal-bar"><div class="modal-bar-label"><strong>🇮🇳 India</strong><span>19 · Schott viales · API</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:24%"></div></div></div>
-          <div class="modal-bar"><div class="modal-bar-label"><strong>🇫🇷 Francia</strong><span>7 · Servier · $7.0M</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:20%"></div></div></div>
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;">77 Shipments totales</div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Terrestre 🛣</strong><span>43 · 55.8%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:55.8%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Aéreo ✈</strong><span>24 · 31.2%</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:31.2%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Marítimo 🚢</strong><span>10 · 13.0%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:13%"></div></div></div>
+          <div style="margin-top:12px;padding:10px;background:rgba(232,0,45,0.03);border-radius:5px;border:1px solid rgba(232,0,45,0.12);">
+            <div style="font-size:10px;font-weight:700;color:var(--red);margin-bottom:4px;">Imports YTD · 13 Shipments</div>
+            <span style="font-size:11px;color:var(--text-muted);">Aéreo 8 · 61.5% · Marítimo 3 · 23.1% · Terrestre 2 · 15.4%</span>
+            <div style="font-size:10px;font-weight:700;color:var(--navy);margin:8px 0 4px;">Exports YTD · 64 Shipments</div>
+            <span style="font-size:11px;color:var(--text-muted);">Terrestre 41 · 64.1% · Aéreo 16 · 25.0% · Marítimo 7 · 10.9%</span>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Supplier Network Intelligence -->
+    <!-- 08 Geographic Intelligence -->
     <div class="card">
-      <div class="card-header"><span class="accent">05</span> Red de Proveedores Críticos — Inteligencia de Supply Chain</div>
+      <div class="card-header"><span class="accent">08</span> Geographic Intelligence</div>
       <div class="card-body">
-        <table class="hub-table">
-          <thead>
-            <tr><th>Proveedor</th><th>País</th><th>Entidad Receptora</th><th>Producto</th><th>Valor Aprox.</th><th>Modo</th><th>Riesgo</th></tr>
-          </thead>
-          <tbody>
-            <tr style="background:rgba(232,0,45,0.02);">
-              <td><strong>A. Menarini Latin America SLU</strong></td>
-              <td>🇩🇪 Alemania</td>
-              <td>Grimann</td>
-              <td style="font-size:11px;">Medicamentos (Diosmina, Dexketoprofeno, Nebivolol)</td>
-              <td style="font-weight:700;color:var(--red);">$10.7M</td>
-              <td><span class="hub-tag air">Aéreo ×39</span></td>
-              <td style="font-size:11px;color:var(--red);font-weight:600;">CRÍTICO</td>
-            </tr>
-            <tr>
-              <td><strong>Les Laboratoires Servier</strong></td>
-              <td>🇫🇷 Francia</td>
-              <td>Grimann</td>
-              <td style="font-size:11px;">Medicamentos de prescripción</td>
-              <td style="font-weight:700;">$6.9M</td>
-              <td><span class="hub-tag air">Aéreo ×6</span></td>
-              <td style="font-size:11px;color:var(--red);font-weight:600;">ALTO</td>
-            </tr>
-            <tr>
-              <td><strong>Medac GmbH</strong></td>
-              <td>🇩🇪 Alemania</td>
-              <td>Grimann</td>
-              <td style="font-size:11px;">Oncología / especialidades</td>
-              <td style="font-weight:700;">$5.0M</td>
-              <td><span class="hub-tag air">Aéreo</span></td>
-              <td style="font-size:11px;color:var(--red);font-weight:600;">ALTO</td>
-            </tr>
-            <tr>
-              <td><strong>Life Technologies / Thermo</strong></td>
-              <td>🇺🇸 USA</td>
-              <td>Probiomed</td>
-              <td style="font-size:11px;">Medios de cultivo · Bolsas biorreactor</td>
-              <td style="font-weight:700;">~$1.1M</td>
-              <td><span class="hub-tag air">Aéreo + Truck</span></td>
-              <td style="font-size:11px;color:#f59e0b;font-weight:600;">ALTO</td>
-            </tr>
-            <tr>
-              <td><strong>Global Life Sciences (Cytiva)</strong></td>
-              <td>🇺🇸 USA / 🇸🇪</td>
-              <td>Probiomed</td>
-              <td style="font-size:11px;">Resinas cromatografía · Medios cultivo CDM4</td>
-              <td style="font-weight:700;">~$2.3M</td>
-              <td><span class="hub-tag air">Aéreo ×10</span></td>
-              <td style="font-size:11px;color:var(--red);font-weight:600;">CRÍTICO</td>
-            </tr>
-            <tr>
-              <td><strong>Intermat Trading Corp.</strong></td>
-              <td>🇸🇪 Suecia</td>
-              <td>Litogrimann</td>
-              <td style="font-size:11px;">Cartón estucado en bobinas (packaging farmacéutico)</td>
-              <td style="font-weight:700;">$1.72M</td>
-              <td><span class="hub-tag ocean">Marítimo ×40 · Veracruz</span></td>
-              <td style="font-size:11px;color:#f59e0b;font-weight:600;">MEDIO</td>
-            </tr>
-            <tr>
-              <td><strong>Schott Poonawalla</strong></td>
-              <td>🇮🇳 India</td>
-              <td>Probiomed</td>
-              <td style="font-size:11px;">Viales Schott 50mL (liofilización)</td>
-              <td style="font-weight:700;">~$386K</td>
-              <td><span class="hub-tag air">Aéreo + Mar.</span></td>
-              <td style="font-size:11px;color:#f59e0b;font-weight:600;">ALTO</td>
-            </tr>
-            <tr>
-              <td><strong>Blistex Inc.</strong></td>
-              <td>🇺🇸 USA</td>
-              <td>Grimann</td>
-              <td style="font-size:11px;">Medicamento Kank-A (benzocaína)</td>
-              <td style="font-weight:700;">$2.25M</td>
-              <td><span class="hub-tag air">Aéreo ×10</span></td>
-              <td style="font-size:11px;color:#f59e0b;font-weight:600;">ALTO</td>
-            </tr>
-            <tr>
-              <td><strong>Recordati Ireland Ltd.</strong></td>
-              <td>🇮🇪 Irlanda</td>
-              <td>Grimann</td>
-              <td style="font-size:11px;">Especialidades farmacéuticas</td>
-              <td style="font-weight:700;">$2.0M</td>
-              <td><span class="hub-tag air">Aéreo ×5</span></td>
-              <td style="font-size:11px;color:#f59e0b;font-weight:600;">ALTO</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="grid-2">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:10px;">Top Export Destinations</div>
+            <table class="hub-table">
+              <thead><tr><th>Destino</th><th>2025 FY</th><th>2026 YTD</th></tr></thead>
+              <tbody>
+                <tr><td><strong>🇺🇸 Estados Unidos</strong></td><td style="font-weight:700;color:var(--red);">52</td><td style="font-weight:700;color:var(--red);">41</td></tr>
+                <tr><td>🇩🇴 República Dominicana</td><td>10</td><td>—</td></tr>
+                <tr><td>🇨🇴 Colombia</td><td>8</td><td>2</td></tr>
+                <tr><td>🇻🇳 Vietnam</td><td>7</td><td>3</td></tr>
+                <tr><td>🇬🇹 Guatemala</td><td>7</td><td>—</td></tr>
+                <tr><td>🇵🇪 Perú</td><td>5</td><td>4</td></tr>
+                <tr><td>🇸🇻 El Salvador</td><td>5</td><td>2</td></tr>
+                <tr><td>🇭🇳 Honduras</td><td>4</td><td>—</td></tr>
+                <tr><td>🇵🇭 Filipinas</td><td>4</td><td>1</td></tr>
+                <tr><td>🇮🇱 Israel</td><td>3</td><td>—</td></tr>
+                <tr><td>🇷🇺 Rusia · 🇵🇰 Pakistán · 🇨🇷 Costa Rica · 🇺🇿 Uzbekistán</td><td>—</td><td>3 · 1 · 1 · 1</td></tr>
+              </tbody>
+            </table>
+            <div style="margin-top:8px;font-size:11px;color:var(--text-muted);"><strong>Puertos export:</strong> Nuevo Laredo · Ciudad de México · San Felipe / AIFA · Veracruz · Manzanillo · Ciudad Hidalgo</div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:10px;">Top Import Origins</div>
+            <table class="hub-table">
+              <thead><tr><th>Origen</th><th>2025 FY</th><th>2026 YTD</th></tr></thead>
+              <tbody>
+                <tr><td><strong>🇨🇳 China</strong></td><td style="font-weight:700;">9</td><td>3</td></tr>
+                <tr><td>🇺🇸 Estados Unidos</td><td>8</td><td>2</td></tr>
+                <tr><td>🇦🇷 Argentina</td><td>6</td><td style="font-weight:700;">4</td></tr>
+                <tr><td>🇮🇳 India</td><td>3</td><td>2</td></tr>
+                <tr><td>🇨🇿 República Checa</td><td>2</td><td>1</td></tr>
+              </tbody>
+            </table>
+            <div style="margin-top:8px;font-size:11px;color:var(--text-muted);"><strong>Aduanas import:</strong> AICM · Veracruz · Colombia NL · AIFA · Nuevo Laredo · Manzanillo</div>
+            <div style="margin-top:12px;padding:10px;background:rgba(232,0,45,0.04);border-radius:5px;border:1px solid rgba(232,0,45,0.12);">
+              <strong style="font-size:11px;color:var(--red);">Corredor Dominante:</strong>
+              <span style="font-size:11px;color:var(--text-muted);"> Nuevo Laredo → Estados Unidos concentra la exportación 2026 YTD. Red de destinos abarca LATAM, Asia, Medio Oriente y Europa/Eurasia.</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- Hub Intelligence -->
+    <!-- 09 Supplier / Customer / Counterparty Intelligence -->
     <div class="card">
-      <div class="card-header"><span class="accent">06</span> Hub Intelligence — Puntos Aduanales del Ecosistema</div>
+      <div class="card-header"><span class="accent">09</span> Supplier / Customer / Counterparty Intelligence</div>
       <div class="card-body">
+        <p style="font-size:12px;color:var(--text-muted);line-height:1.6;margin-bottom:12px;">Panjiva expone las contrapartes de Sanfer Salud Animal principalmente por geografía comercial y punto aduanal. El siguiente mapa de contrapartes resume la red de counterparties por rol y corredor operativo.</p>
         <table class="hub-table">
           <thead>
-            <tr><th>Hub</th><th>Dirección</th><th>Embarques</th><th>Entidades</th><th>Señal Operativa</th></tr>
+            <tr><th>Rol de Contraparte</th><th>Geografías Clave</th><th>Perfil Operativo</th><th>Modo Dominante</th><th>Sensibilidad</th></tr>
           </thead>
           <tbody>
-            <tr>
-              <td><strong>AICM — Aeropuerto CDMX</strong></td>
-              <td>Import</td>
-              <td style="font-weight:700;color:var(--red);">90+</td>
-              <td style="font-size:11px;">Grimann · Dinafarma · Sanfer</td>
-              <td>Hub aéreo primario del grupo. 90 importaciones Grimann solo. Mayor concentración de riesgo operativo único.</td>
+            <tr style="background:rgba(0,180,216,0.02);">
+              <td><strong>Clientes de Exportación</strong></td>
+              <td style="font-size:11px;">Estados Unidos · Perú · Vietnam · Colombia · El Salvador · Rep. Dominicana · Guatemala</td>
+              <td style="font-size:11px;">Nutrición animal + farma veterinaria; ventanas de entrega y documentación por país</td>
+              <td><span class="hub-tag truck">Truck</span> <span class="hub-tag air">Air</span></td>
+              <td style="font-size:11px;color:var(--red);font-weight:600;">ALTA</td>
             </tr>
             <tr>
-              <td><strong>AIFA — Felipe Ángeles</strong></td>
-              <td>Import + Export</td>
-              <td>31</td>
-              <td style="font-size:11px;">Grimann · Sanfer · Probiomed</td>
-              <td>Hub aéreo secundario creciente. Sanfer usa AIFA para distribución LATAM (20 shipments).</td>
+              <td><strong>Proveedores de Importación</strong></td>
+              <td style="font-size:11px;">China · Estados Unidos · Argentina · India · Rep. Checa</td>
+              <td style="font-size:11px;">Insumos y productos regulados; alto uso aéreo en importación</td>
+              <td><span class="hub-tag air">Air</span> <span class="hub-tag ocean">Maritime</span></td>
+              <td style="font-size:11px;color:var(--red);font-weight:600;">MUY ALTA</td>
             </tr>
             <tr>
-              <td><strong>Veracruz</strong></td>
-              <td>Import</td>
-              <td>58</td>
-              <td style="font-size:11px;">Litogrimann · Grimann · Dinafarma</td>
-              <td>Puerto marítimo principal. Litogrimann: 40 shipments packaging Suecia. Grimann: 16 medicamentos marítimo.</td>
-            </tr>
-            <tr>
-              <td><strong>Ciudad Hidalgo, Chiapas</strong></td>
-              <td>Export</td>
-              <td>36</td>
-              <td style="font-size:11px;">Aerobal · Litogrimann</td>
-              <td>Corredor sur terrestre. Aerobal: distribución Walmart CA. Litogrimann: cajas cartón Costa Rica.</td>
-            </tr>
-            <tr>
-              <td><strong>Manzanillo</strong></td>
-              <td>Export</td>
-              <td>37</td>
-              <td style="font-size:11px;">Aerobal</td>
-              <td>Distribución marítima Centroamérica. Aerobal: detergente + Microdacyn a Costa Rica/Perú.</td>
-            </tr>
-            <tr>
-              <td><strong>Nuevo Laredo</strong></td>
-              <td>Export + Import</td>
-              <td>21</td>
-              <td style="font-size:11px;">Grimann · Sanfer · Dinafarma</td>
-              <td>Corredor USA. Sanfer: 6 exports. Grimann: 14 imports (Blistex Kank-A, Tecoland).</td>
-            </tr>
-            <tr>
-              <td><strong>Colombia NL</strong></td>
-              <td>Import</td>
-              <td>9</td>
-              <td style="font-size:11px;">Grimann</td>
-              <td>Medicamentos Pharmetique Colombia. Corredor frontera norte secundario.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- LATAM Distribution -->
-    <div class="card">
-      <div class="card-header"><span class="accent">07</span> Mapa de Distribución LATAM — Exportaciones del Grupo</div>
-      <div class="card-body">
-        <table class="hub-table">
-          <thead>
-            <tr><th>País</th><th>Embarques</th><th>Entidad(es)</th><th>Producto</th><th>Corredor</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>🇨🇷 Costa Rica</strong></td>
-              <td style="font-weight:700;">35</td>
-              <td style="font-size:11px;">Aerobal (26) · Litogrimann (9)</td>
-              <td style="font-size:11px;">Detergente · Cajas cartón farmacéutico</td>
-              <td><span class="hub-tag ocean">Manzanillo</span> <span class="hub-tag border">Cd. Hidalgo</span></td>
-            </tr>
-            <tr>
-              <td><strong>🇵🇦 Panamá</strong></td>
-              <td style="font-weight:700;">17</td>
-              <td style="font-size:11px;">Sanfer (16) · Aerobal (1)</td>
-              <td style="font-size:11px;">Medicamentos (Sanfer CA y Caribe S.A.)</td>
-              <td><span class="hub-tag air">AIFA Aéreo</span></td>
-            </tr>
-            <tr>
-              <td><strong>🇬🇹 Guatemala</strong></td>
-              <td style="font-weight:700;">20</td>
-              <td style="font-size:11px;">Probiomed (6) · Aerobal (14)</td>
-              <td style="font-size:11px;">Bioyetin · Filatil · Detergente (Operadora Tiendas)</td>
-              <td><span class="hub-tag air">Aéreo</span> <span class="hub-tag border">Cd. Hidalgo</span></td>
-            </tr>
-            <tr>
-              <td><strong>🇭🇳 Honduras</strong></td>
-              <td style="font-weight:700;">13</td>
-              <td style="font-size:11px;">Probiomed (5) · Aerobal (7) · Sanfer (1)</td>
-              <td style="font-size:11px;">Biológicos · Microdacyn · Detergente</td>
-              <td><span class="hub-tag air">Aéreo</span> <span class="hub-tag border">Cd. Hidalgo</span></td>
-            </tr>
-            <tr>
-              <td><strong>🇸🇻 El Salvador</strong></td>
-              <td style="font-weight:700;">12</td>
-              <td style="font-size:11px;">Probiomed (4) · Aerobal (8)</td>
-              <td style="font-size:11px;">Biológicos · Detergente</td>
-              <td><span class="hub-tag air">Aéreo</span> <span class="hub-tag border">Cd. Hidalgo</span></td>
-            </tr>
-            <tr>
-              <td><strong>🇨🇴 Colombia</strong></td>
-              <td style="font-weight:700;">8</td>
-              <td style="font-size:11px;">Sanfer (7) · Probiomed (1)</td>
-              <td style="font-size:11px;">Medicamentos · Lab. Bussie S.A.</td>
-              <td><span class="hub-tag air">Aéreo AICM</span></td>
-            </tr>
-            <tr>
-              <td><strong>🇺🇸 USA · 🇪🇨 Ecuador · 🇧🇴 Bolivia · Otros</strong></td>
-              <td style="font-weight:700;">22</td>
-              <td style="font-size:11px;">Sanfer · Probiomed</td>
-              <td style="font-size:11px;">Medicamentos · Biológicos (Filgrastim)</td>
-              <td><span class="hub-tag air">Aéreo</span> <span class="hub-tag truck">Laredo</span></td>
+              <td><strong>Nodos Aduanales / Puertos</strong></td>
+              <td style="font-size:11px;">Nuevo Laredo · AICM · AIFA · Veracruz · Manzanillo · Colombia NL · Ciudad Hidalgo</td>
+              <td style="font-size:11px;">Multi-nodo; concentración cross-border en Nuevo Laredo</td>
+              <td><span class="hub-tag border">Cross-Border</span></td>
+              <td style="font-size:11px;color:#f59e0b;font-weight:600;">ALTA</td>
             </tr>
           </tbody>
         </table>
         <div style="margin-top:12px;padding:10px 14px;background:rgba(13,43,94,0.04);border-radius:5px;border:1px solid var(--border);">
-          <strong style="font-size:11px;color:var(--navy);">Insight Distribución:</strong>
-          <span style="font-size:12px;color:var(--text-muted);"> La distribución farmacéutica LATAM (Sanfer + Probiomed) opera 100% aéreo con Panamá como hub regional (Sanfer Centroamérica y Caribe S.A.). Aerobal usa corredores terrestres/marítimos para productos de consumo (detergente, Microdacyn antiséptico) a cadenas de supermercados Walmart-affiliated en Centroamérica.</span>
+          <strong style="font-size:11px;color:var(--navy);">Nota:</strong>
+          <span style="font-size:12px;color:var(--text-muted);"> El detalle de contrapartes nominales por Shipment está disponible en Panjiva para calificación posterior. Este perfil se construye a nivel de geografía y corredor, consistente con la fuente Panjiva-only.</span>
         </div>
       </div>
     </div>
 
-    <!-- Operational Signals -->
+    <!-- 10 Operational Complexity -->
     <div class="card">
-      <div class="card-header"><span class="accent">08</span> Señales Operativas → Mapeo de Dolor del Ecosistema</div>
+      <div class="card-header"><span class="accent">10</span> Operational Complexity</div>
       <div class="card-body">
-        <div class="signal-grid">
-          <div class="signal-item high">
-            <div class="signal-title">Concentración Air Freight Regulado — Grimann</div>
-            <div class="signal-prob high">CRÍTICO · $28.6M</div>
-            <div class="signal-desc">103 de 146 importaciones Grimann son aéreas. A. Menarini domina con 39 envíos. Alta probabilidad de fragmentación de agente aduanal y falta de coordinación central entre proveedores farmacéuticos europeos.</div>
+        <p style="font-size:13px;line-height:1.7;">La cuenta muestra <strong>alta complejidad operativa</strong> porque combina productos veterinarios regulados, múltiples familias HS, ejecución Aéreo / Terrestre / Marítimo, exportaciones recurrentes, orígenes de importación sensibles y múltiples nodos aduanales / de puerto. El alto uso de Aéreo en importaciones sugiere urgencia o sensibilidad de tiempo, mientras que la creciente participación de Truck en 2026 YTD apunta a un ritmo operativo cross-border más fuerte.</p>
+        <div class="fit-score-grid" style="margin-top:14px;">
+          <div class="fit-score-item"><div class="fit-score-name">Familias HS Múltiples (nutrición + farma)</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:88%"></div></div><div class="fit-score-pct">ALTO</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Ejecución Multimodal (Air / Truck / Sea)</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:85%"></div></div><div class="fit-score-pct">ALTO</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Multi-nodo Aduanal</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:82%"></div></div><div class="fit-score-pct">ALTO</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Urgencia Aérea (import 61.5%)</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:80%"></div></div><div class="fit-score-pct">ALTO</div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 11 Pain Mapping -->
+    <div class="card">
+      <div class="card-header"><span class="accent">11</span> Pain Mapping</div>
+      <div class="card-body">
+        <table class="hub-table">
+          <thead>
+            <tr><th>Dolor Probable</th><th>Evidencia (Panjiva)</th><th>Oportunidad Akzent</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Fragmentación multimodal</strong></td><td style="font-size:11px;">Truck + Air + Maritime en ambos períodos</td><td style="font-size:11px;">Coordinación multimodal centralizada</td></tr>
+            <tr><td><strong>Sensibilidad regulatoria y aduanal</strong></td><td style="font-size:11px;">Vacunas, medicamentos veterinarios, antibióticos y HS relacionados con farma</td><td style="font-size:11px;">Documentación aduanal y visibilidad de compliance</td></tr>
+            <tr><td><strong>Dependencia cross-border</strong></td><td style="font-size:11px;">Nuevo Laredo domina las exportaciones 2026 YTD</td><td style="font-size:11px;">Control cross-border, visibilidad y gestión de excepciones</td></tr>
+            <tr><td><strong>Urgencia de carga aérea</strong></td><td style="font-size:11px;">Aéreo = 31.2% del total YTD y 61.5% de import YTD</td><td style="font-size:11px;">Desk de air freight y soporte de escalación</td></tr>
+            <tr><td><strong>Complejidad por país destino</strong></td><td style="font-size:11px;">Exportaciones a EE.UU., LATAM, Asia, Medio Oriente y Europa/Eurasia</td><td style="font-size:11px;">Control de documentación de exportación por destino</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 12 Multimodal Opportunity -->
+    <div class="card">
+      <div class="card-header"><span class="accent">12</span> Multimodal Opportunity</div>
+      <div class="card-body">
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+          <div style="background:rgba(232,0,45,0.04);border:1px solid rgba(232,0,45,0.2);border-radius:8px;padding:16px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--red);margin-bottom:6px;">Cross-Border</div>
+            <div style="font-size:16px;font-weight:700;color:var(--navy);margin-bottom:6px;">VERY HIGH</div>
+            <p style="font-size:11px;color:var(--text-muted);line-height:1.5;">Nuevo Laredo es el hub de exportación dominante en 2026 YTD y Estados Unidos es el destino #1.</p>
           </div>
-          <div class="signal-item high">
-            <div class="signal-title">Insumos Biotech de Proveedor Único — Probiomed</div>
-            <div class="signal-prob high">ALTA probabilidad</div>
-            <div class="signal-desc">Life Technologies + Global Life Sciences (ambos Thermo Fisher) proveen medios de cultivo críticos para biorreactor. Proveedor único de facto con 24 de 34 importaciones. Ruptura = paro de línea biológica.</div>
+          <div style="background:rgba(232,0,45,0.03);border:1px solid rgba(232,0,45,0.15);border-radius:8px;padding:16px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--red);margin-bottom:6px;">Air Freight</div>
+            <div style="font-size:16px;font-weight:700;color:var(--navy);margin-bottom:6px;">HIGH</div>
+            <p style="font-size:11px;color:var(--text-muted);line-height:1.5;">El aéreo sigue crítico, especialmente para importaciones y flujos de producto regulado.</p>
           </div>
-          <div class="signal-item high">
-            <div class="signal-title">Dual Hub Aéreo AICM + AIFA — Fragmentación</div>
-            <div class="signal-prob high">ALTA probabilidad</div>
-            <div class="signal-desc">Grimann usa AICM (90 imports) y AIFA (11 imports). Sanfer usa AIFA (20 exports). Gestión split entre dos aeropuertos de CDMX implica doble agencia, doble coordinación, visibilidad parcial.</div>
-          </div>
-          <div class="signal-item high">
-            <div class="signal-title">Packaging Farmacéutico Proveedor Único — Litogrimann</div>
-            <div class="signal-prob high">ALTA probabilidad</div>
-            <div class="signal-desc">Intermat Trading (Suecia) provee 40 de 42 importaciones de cartón en bobinas vía Veracruz. Proveedor único de packaging crítico con cadena larga Suecia→Veracruz = vulnerabilidad operativa alta.</div>
-          </div>
-          <div class="signal-item">
-            <div class="signal-title">Distribución LATAM Farmacéutica 100% Aérea</div>
-            <div class="signal-prob medium-high">MEDIA-ALTA</div>
-            <div class="signal-desc">Sanfer exporta 27 de 34 por aire (Panamá hub). Probiomed 22 de 27 aéreo. Coordinación de exportaciones reguladas sin visibilidad cruzada entre entidades = doble gestión innecesaria.</div>
-          </div>
-          <div class="signal-item">
-            <div class="signal-title">Exportación Biológicos — Múltiples Países Simultáneos</div>
-            <div class="signal-prob medium-high">MEDIA-ALTA</div>
-            <div class="signal-desc">Probiomed exporta Filgrastim y Somatropina a Guatemala, Honduras, El Salvador, Bolivia, Pakistán, Alemania y USA. Requerimientos regulatorios distintos por país = alta carga documental por embarque.</div>
+          <div style="background:rgba(0,180,216,0.04);border:1px solid rgba(0,180,216,0.2);border-radius:8px;padding:16px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:6px;">Ocean</div>
+            <div style="font-size:16px;font-weight:700;color:var(--navy);margin-bottom:6px;">MEDIUM-HIGH</div>
+            <p style="font-size:11px;color:var(--text-muted);line-height:1.5;">Veracruz y Manzanillo mantienen relevancia para Shipments más pesados o marítimos.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Pharma Risk Exposure -->
+    <!-- 13 ILM / Control Tower Opportunity -->
     <div class="card">
-      <div class="card-header"><span class="accent">09</span> Exposición de Riesgo Farmacéutico — Análisis por Entidad</div>
+      <div class="card-header"><span class="accent">13</span> ILM / Control Tower Opportunity</div>
       <div class="card-body">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
+          <span style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);">Potencial ILM / Control Tower</span>
+          <span class="classification-badge" style="background:rgba(232,0,45,0.12);color:var(--red);font-size:12px;padding:4px 12px;border-radius:4px;font-weight:700;">VERY HIGH</span>
+        </div>
+        <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:10px;">Módulos Control Tower Recomendados</div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;">
+          <div style="padding:10px 12px;background:rgba(13,43,94,0.03);border-radius:5px;border:1px solid var(--border);font-size:12px;">📡 Visibilidad de Shipments por modo, país, punto aduanal y cliente</div>
+          <div style="padding:10px 12px;background:rgba(13,43,94,0.03);border-radius:5px;border:1px solid var(--border);font-size:12px;">🛃 Coordinación aduanal</div>
+          <div style="padding:10px 12px;background:rgba(13,43,94,0.03);border-radius:5px;border:1px solid var(--border);font-size:12px;">✈ Gestión de urgencia de air freight</div>
+          <div style="padding:10px 12px;background:rgba(13,43,94,0.03);border-radius:5px;border:1px solid var(--border);font-size:12px;">🚚 Control cross-border</div>
+          <div style="padding:10px 12px;background:rgba(13,43,94,0.03);border-radius:5px;border:1px solid var(--border);font-size:12px;">📄 Gestión de documentación de exportación</div>
+          <div style="padding:10px 12px;background:rgba(13,43,94,0.03);border-radius:5px;border:1px solid var(--border);font-size:12px;">🤝 Coordinación de proveedores</div>
+          <div style="padding:10px 12px;background:rgba(13,43,94,0.03);border-radius:5px;border:1px solid var(--border);font-size:12px;">⚠ Gestión de excepciones</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 14 AIOS Classification -->
+    <div class="card">
+      <div class="card-header"><span class="accent">14</span> AIOS Classification</div>
+      <div class="card-body">
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;">
+          <span class="classification-badge newclient" style="font-size:13px;padding:4px 12px;">Relationship Status · NEW CLIENT</span>
+          <span class="classification-badge aaa" style="font-size:13px;padding:4px 12px;">AIOS Classification · AAA</span>
+          <span class="classification-badge" style="background:rgba(232,0,45,0.12);color:var(--red);font-size:13px;padding:4px 12px;border-radius:4px;font-weight:700;">Account Priority · PRIORITY ONBOARDING &amp; EXPANSION</span>
+        </div>
         <div class="fit-score-grid">
-          <div class="fit-score-item">
-            <div class="fit-score-name">Grimann — Riesgo Air Regulado</div>
-            <div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:97%"></div></div><div class="fit-score-pct">CRÍTICO</div></div>
-          </div>
-          <div class="fit-score-item">
-            <div class="fit-score-name">Probiomed — Riesgo Insumo Biotech</div>
-            <div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:92%"></div></div><div class="fit-score-pct">MUY ALTO</div></div>
-          </div>
-          <div class="fit-score-item">
-            <div class="fit-score-name">Litogrimann — Riesgo Packaging Único</div>
-            <div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:80%"></div></div><div class="fit-score-pct">ALTO</div></div>
-          </div>
-          <div class="fit-score-item">
-            <div class="fit-score-name">Sanfer — Riesgo Distribución LATAM</div>
-            <div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:72%"></div></div><div class="fit-score-pct">ALTO</div></div>
-          </div>
-          <div class="fit-score-item">
-            <div class="fit-score-name">Dinafarma — Riesgo API Regulado</div>
-            <div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:68%"></div></div><div class="fit-score-pct">ALTO</div></div>
-          </div>
-          <div class="fit-score-item">
-            <div class="fit-score-name">Aerobal — Riesgo Corredor Sur</div>
-            <div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:45%"></div></div><div class="fit-score-pct">MEDIO</div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Akzent Fit Scoring -->
-    <div class="card">
-      <div class="card-header"><span class="accent">10</span> Puntuación de Ajuste Akzent — Por Servicio</div>
-      <div class="card-body">
-        <div class="fit-score-grid">
-          <div class="fit-score-item"><div class="fit-score-name">Air Freight Regulado (Grimann)</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:95%"></div></div><div class="fit-score-pct">MUY ALTO</div></div></div>
-          <div class="fit-score-item"><div class="fit-score-name">Aduana Especializada Farma</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:92%"></div></div><div class="fit-score-pct">MUY ALTO</div></div></div>
-          <div class="fit-score-item"><div class="fit-score-name">Coordinación Proveedor Único (Biotech)</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:90%"></div></div><div class="fit-score-pct">MUY ALTO</div></div></div>
-          <div class="fit-score-item"><div class="fit-score-name">ILM / 4PL Ecosistema Grupo</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:97%"></div></div><div class="fit-score-pct">CRÍTICO</div></div></div>
-          <div class="fit-score-item"><div class="fit-score-name">Ocean (Litogrimann / Aerobal)</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:75%"></div></div><div class="fit-score-pct">ALTO</div></div></div>
-          <div class="fit-score-item"><div class="fit-score-name">Distribución LATAM Export</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:78%"></div></div><div class="fit-score-pct">ALTO</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Strategic Fit</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:95%"></div></div><div class="fit-score-pct">AAA</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Operational Complexity</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:85%"></div></div><div class="fit-score-pct">HIGH</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Modal Diversity</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:85%"></div></div><div class="fit-score-pct">HIGH</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Cross-Border Exposure</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:88%"></div></div><div class="fit-score-pct">HIGH</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Air Exposure</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:82%"></div></div><div class="fit-score-pct">HIGH</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Ocean Exposure</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:55%"></div></div><div class="fit-score-pct">MEDIUM</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Customs Sensitivity</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:97%"></div></div><div class="fit-score-pct">VERY HIGH</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">ILM / Control Tower Potential</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:96%"></div></div><div class="fit-score-pct">VERY HIGH</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Commercial Attractiveness</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:85%"></div></div><div class="fit-score-pct">HIGH</div></div></div>
         </div>
         <div style="margin-top:14px;padding:12px;background:rgba(13,43,94,0.04);border-radius:6px;border:1px solid var(--border);">
           <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:4px;">Justificación Clasificación AAA</div>
-          <p style="font-size:12px;color:var(--text-muted);line-height:1.5;">AAA por: ecosistema multi-entidad con complejidad operativa cruzada, $28.6M en air freight regulado concentrado en Grimann, dependencias de proveedor único en tres entidades (Menarini/Grimann, Life Tech/Probiomed, Intermat/Litogrimann), operación biotech de alta especialización, distribución LATAM farmacéutica activa, y potencial ILM de nivel ecosistema que no existe en cuentas de entidad única.</p>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.5;">AAA por: exportador veterinario regulado con complejidad operativa alta, diversidad modal, exposición cross-border, muy alta sensibilidad aduanal y potencial ILM / Control Tower muy alto. Relationship Status NEW CLIENT (New Sales) — cliente nuevo; sin Akzent shipment data disponible aún, el fit es de coordinación operativa, visibilidad, Control Tower y expansión de wallet.</p>
         </div>
       </div>
     </div>
 
-    <!-- Commercial Positioning -->
+    <!-- 15 Commercial Positioning -->
     <div class="card">
-      <div class="card-header"><span class="accent">11</span> Posicionamiento Comercial</div>
+      <div class="card-header"><span class="accent">15</span> Commercial Positioning</div>
       <div class="card-body">
         <div class="positioning-box">
-          <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,0.6);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;">Ángulo de Entrada</div>
-          <p style="font-size:13px;line-height:1.6;color:#fff;">Entrar por <strong style="color:var(--teal);">Grimann — coordinación de air freight farmacéutico regulado</strong>. Con $28.6M en importaciones aéreas de 12+ proveedores europeos, la probabilidad de fragmentación de agencia, inconsistencia documental y falta de visibilidad centralizada es muy alta. Ese es el dolor más concreto y el mayor en valor.</p>
-          <div class="positioning-example">"Un ecosistema que importa medicamentos regulados desde Alemania, Francia, Irlanda e India simultáneamente — vía 12+ proveedores distintos y dos aeropuertos — normalmente opera con visibilidad fragmentada, múltiples agentes aduanales y coordinación reactiva. Akzent puede centralizar esa capa operacional."</div>
+          <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,0.6);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;">Posicionar a Akzent como</div>
+          <p style="font-size:13px;line-height:1.6;color:#fff;">Partner de <strong style="color:var(--teal);">complejidad operativa, coordinación multimodal, aduanas &amp; visibilidad, e ILM / Control Tower</strong> — no como proveedor transaccional de flete.</p>
+          <div class="positioning-example">"Vemos una operación con exportaciones recurrentes, uso importante de carga aérea, corredor cross-border fuerte hacia Estados Unidos y productos veterinarios con alta sensibilidad documental. En operaciones así, el riesgo normalmente no está solo en el costo del flete, sino en la coordinación entre proveedor, aduana, transporte, documentación y visibilidad. Ahí es donde Akzent puede apoyar como partner operativo y Control Tower."</div>
           <div class="capability-tags">
-            <span class="cap-tag">Air Regulado</span>
-            <span class="cap-tag">Aduana Farma</span>
-            <span class="cap-tag">Coordinación Biotech</span>
-            <span class="cap-tag">ILM Ecosistema</span>
-            <span class="cap-tag">Ocean Veracruz</span>
-            <span class="cap-tag">LATAM Export</span>
-          </div>
-        </div>
-
-        <div class="flags-grid" style="margin-top:16px;">
-          <div>
-            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#10b981;margin-bottom:8px;">✓ Green Flags</div>
-            <ul class="flag-list">
-              <li><span class="flag-icon">🟢</span>$34.5M en importaciones Grimann — mayor cuenta de importación del portafolio Akzent</li>
-              <li><span class="flag-icon">🟢</span>103 air shipments anuales regulados — coordinación compleja garantizada</li>
-              <li><span class="flag-icon">🟢</span>6 entidades = 6 puntos de entrada independientes al ecosistema</li>
-              <li><span class="flag-icon">🟢</span>Probiomed biotech = nicho de alta especialización y stickiness muy alta</li>
-              <li><span class="flag-icon">🟢</span>Litogrimann packaging = corredor marítimo recurrente y predecible</li>
-              <li><span class="flag-icon">🟢</span>Potencial ILM de ecosistema completo = account más grande potencial del portafolio</li>
-            </ul>
-          </div>
-          <div>
-            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--red);margin-bottom:8px;">⚠ Consideraciones</div>
-            <ul class="flag-list">
-              <li><span class="flag-icon">🔴</span>Requiere especialización en regulación sanitaria / COFEPRIS para diferenciarse</li>
-              <li><span class="flag-icon">🔴</span>Ciclo de venta largo — farma no cambia de proveedor sin auditoría previa</li>
-              <li><span class="flag-icon">🟡</span>Grimann puede tener agente aduanal dedicado consolidado — validar antes</li>
-              <li><span class="flag-icon">🟡</span>Probiomed biotech requiere cadena de frío y manejo especializado</li>
-            </ul>
+            <span class="cap-tag">Operational Complexity Partner</span>
+            <span class="cap-tag">Multimodal Coordination Partner</span>
+            <span class="cap-tag">Customs &amp; Visibility Partner</span>
+            <span class="cap-tag">ILM / Control Tower Partner</span>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Discovery Questions -->
+    <!-- 16 Discovery Questions -->
     <div class="card">
-      <div class="card-header"><span class="accent">12</span> Motor de Preguntas de Descubrimiento</div>
+      <div class="card-header"><span class="accent">16</span> Discovery Questions</div>
       <div class="card-body">
         <div class="outreach-step">
           <div class="outreach-step-header" onclick="toggleAccordion(this)">
-            <span>Grimann — Air Freight Regulado (Entrada Principal)</span>
+            <span>1 · Export Operations</span>
             <span class="outreach-step-toggle">+</span>
           </div>
           <div class="outreach-step-body">
             <ul class="q-list">
-              <li>¿Cómo está estructurada actualmente la coordinación de importaciones aéreas farmacéuticas — tienen un agente aduanal único para todos los proveedores o trabajan con múltiples?</li>
-              <li>¿El seguimiento de importaciones desde Menarini, Servier y los otros proveedores europeos está centralizado en un equipo o cada proveedor tiene su propio coordinador interno?</li>
-              <li>¿Tienen visibilidad en tiempo real de todos los embarques aéreos activos simultáneamente?</li>
-              <li>¿Cómo manejan las diferencias de timing entre AICM y AIFA para shipments del mismo proveedor?</li>
+              <li>¿Qué países destino generan la mayor presión documental?</li>
+              <li>¿Qué clientes requieren la mayor visibilidad o las ventanas de entrega más estrictas?</li>
+              <li>¿Cómo se maneja hoy la coordinación entre ventas, calidad, aduanas y logística?</li>
             </ul>
           </div>
         </div>
         <div class="outreach-step">
           <div class="outreach-step-header" onclick="toggleAccordion(this)">
-            <span>Probiomed — Insumos Biotech y Biorreactor</span>
+            <span>2 · Cross-Border</span>
             <span class="outreach-step-toggle">+</span>
           </div>
           <div class="outreach-step-body">
             <ul class="q-list">
-              <li>¿Los medios de cultivo y resinas de cromatografía de Life Technologies tienen un lead time predecible o hay variabilidad que genera presión de inventario?</li>
-              <li>¿Han tenido disrupciones en el abasto de medios de cultivo que hayan impactado la producción biológica?</li>
-              <li>¿Qué pasa operativamente cuando un vial Schott llega con daño o defecto — tienen proceso de urgencia para reposición desde India?</li>
-              <li>¿El manejo de temperatura para los medios de cultivo y biológicos está certificado en todos los puntos de la cadena?</li>
+              <li>¿Dónde crea más fricción el corredor Nuevo Laredo?</li>
+              <li>¿Qué tan sensible es la operación a los retrasos en frontera?</li>
+              <li>¿La visibilidad en frontera es proactiva o reactiva hoy?</li>
             </ul>
           </div>
         </div>
         <div class="outreach-step">
           <div class="outreach-step-header" onclick="toggleAccordion(this)">
-            <span>Litogrimann — Packaging y Cadena de Cartón</span>
+            <span>3 · Air Freight</span>
             <span class="outreach-step-toggle">+</span>
           </div>
           <div class="outreach-step-body">
             <ul class="q-list">
-              <li>¿El cartón de Suecia llega bajo un programa de entregas predefinido o es pedido contra demanda?</li>
-              <li>¿Veracruz es el único punto de entrada o han considerado diversificar el puerto de recepción?</li>
-              <li>¿Tienen contingencia si Intermat no puede entregar en tiempo — hay un proveedor alternativo de cartón calificado?</li>
+              <li>¿Qué situaciones disparan Shipments aéreos?</li>
+              <li>¿El aéreo se usa principalmente para planeación, urgencia o recuperación?</li>
+              <li>¿Quién centraliza las decisiones cuando un Shipment se vuelve crítico?</li>
             </ul>
           </div>
         </div>
         <div class="outreach-step">
           <div class="outreach-step-header" onclick="toggleAccordion(this)">
-            <span>Coordinación de Ecosistema — ILM Oportunidad</span>
+            <span>4 · Customs / Compliance</span>
             <span class="outreach-step-toggle">+</span>
           </div>
           <div class="outreach-step-body">
             <ul class="q-list">
-              <li>¿Existe coordinación logística centralizada entre las entidades del grupo o cada empresa maneja su supply chain de forma independiente?</li>
-              <li>¿Han evaluado consolidar la coordinación de proveedores europeos (Menarini, Servier, Intermat) bajo un solo operador logístico?</li>
-              <li>¿Hay visibilidad cruzada entre Grimann, Probiomed y Litogrimann sobre embarques activos o cada área opera en silo?</li>
+              <li>¿Dónde se concentra la mayor carga de trabajo documental?</li>
+              <li>¿Qué tan estandarizado está el expediente de exportación por país destino?</li>
+              <li>¿Cuáles son los retrasos aduanales o problemas de documentación más frecuentes?</li>
             </ul>
           </div>
         </div>
-      </div>
-    </div>
-
-    <!-- Expansion Phases -->
-    <div class="card">
-      <div class="card-header"><span class="accent">13</span> Trayectoria de Expansión Estratégica</div>
-      <div class="card-body">
-        <div class="phase-grid">
-          <div class="phase-card">
-            <div class="phase-num">Fase 1</div>
-            <div class="phase-title">Entrada Grimann</div>
-            <ul class="phase-items">
-              <li>Air pharma regulado</li>
-              <li>Menarini / Servier</li>
-              <li>Coordinación AICM + AIFA</li>
-              <li>Agente aduanal integrado</li>
-            </ul>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)">
+            <span>5 · Control Tower / ILM</span>
+            <span class="outreach-step-toggle">+</span>
           </div>
-          <div class="phase-card">
-            <div class="phase-num">Fase 2</div>
-            <div class="phase-title">Probiomed + Litogrimann</div>
-            <ul class="phase-items">
-              <li>Biotech supply (Life Tech)</li>
-              <li>Packaging Suecia → Veracruz</li>
-              <li>Coordinación de contingencia</li>
-            </ul>
-          </div>
-          <div class="phase-card">
-            <div class="phase-num">Fase 3</div>
-            <div class="phase-title">Distribución LATAM</div>
-            <ul class="phase-items">
-              <li>Export pharma Sanfer</li>
-              <li>Biológicos Probiomed</li>
-              <li>Aerobal corredor sur</li>
-            </ul>
-          </div>
-          <div class="phase-card">
-            <div class="phase-num">Fase 4</div>
-            <div class="phase-title">ILM Ecosistema</div>
-            <ul class="phase-items">
-              <li>Coordinación 6 entidades</li>
-              <li>Visibilidad centralizada grupo</li>
-              <li>Ownership operacional pleno</li>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>¿Existe una vista centralizada única de todos los Shipments por modo y país?</li>
+              <li>¿Qué equipo es dueño de la gestión de excepciones?</li>
+              <li>¿Qué KPIs operativos se revisan semanalmente?</li>
             </ul>
           </div>
         </div>
@@ -23985,7 +23918,7 @@ const ACCOUNTS = [
   { id:'view-johnson',   name:'Johnson Controls Enterprises Mexico', sub:'Automotive / Battery Manufacturing / Energy Storage · Cross-Border &amp; Multimodal Operations', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
   { id:'view-daltile',   name:'Dal-Tile Mexico',           sub:'Ceramic Manufacturing / Building Materials / Household Durables · Nuevo León, MX', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
   { id:'view-smp',       name:'SMP Automotive Systems',   sub:'Tier 1 Automotive Supplier',                    rel:'LEAD',   cls:'AAA',  clsPill:'aaa' },
-  { id:'view-sanfer',    name:'Sanfer Group',              sub:'Pharma · Biotech · Packaging · LATAM',          rel:'LEAD',   cls:'AAA',  clsPill:'aaa' },
+  { id:'view-sanfer-salud-animal', name:'Sanfer Salud Animal', sub:'Animal Health · Veterinary Pharma · Nutrition Additives · NEW CLIENT / New Sales', rel:'CLIENT', cls:'AAA', clsPill:'aaa' },
   { id:'view-saintgobain', name:'Saint-Gobain México',    sub:'Construction Materials · Glass · High-Performance Solutions · Multimodal LEAD', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
   { id:'view-panelrey',  name:'Panel Rey',                 sub:'Construction Materials / Drywall',              rel:'LEAD',   cls:'AA',   clsPill:'aa'  },
   { id:'view-alfagomma', name:'Alfagomma de México',       sub:'Industrial — Hydraulic Hoses & Fittings',       rel:'LEAD',   cls:'AAA',  clsPill:'aaa' },
@@ -24060,7 +23993,7 @@ var NAME_ALIASES = {
   'corporacion pipsa': 'corporacion pipsa', 'pipsa': 'corporacion pipsa',
   'vistamex': 'vistamex', 'vista mex': 'vistamex', 'servicios vistamex': 'vistamex',
   'lincoln electric': 'lincoln electric',
-  'sanfer': 'sanfer',
+  'sanfer salud animal': 'sanfer salud animal', 'sanfer': 'sanfer salud animal',
   /* kick-off leads */
   'alfagomma': 'alfagomma'
 };
@@ -24086,7 +24019,7 @@ var RELATIONSHIP_OVERRIDES = {
   'corporacion pipsa': 'new_client',
   'vistamex':          'new_client',
   'lincoln electric':  'new_client',
-  'sanfer':            'new_client'
+  'sanfer salud animal': 'new_client'
 };
 
 /* Display labels for mandated accounts, used when reporting gaps. */
@@ -24095,7 +24028,8 @@ var MANDATE_LABELS = {
   'plasticos sahagun':'Plásticos Automotrices de Sahagún',
   'aceros titan':'Aceros Titán', 'holdin':'Holdin',
   'technoherramental':'Technoherramental', 'corporacion pipsa':'Corporación PIPSA',
-  'vistamex':'VistaMex', 'lincoln electric':'Lincoln Electric', 'sanfer':'Sanfer'
+  'vistamex':'VistaMex', 'lincoln electric':'Lincoln Electric',
+  'sanfer salud animal':'Sanfer Salud Animal'
 };
 
 /* Industry bucket per account id — read from each account's own industry
@@ -24107,7 +24041,7 @@ var INDUSTRY_BY_ID = {
   'view-inx':'Industrial', 'view-pipsa':'Industrial', 'view-lodi':'Auto',
   'view-organizacion-industrial-vega':'Industrial', 'view-wbtm':'Auto', 'view-vamasa':'Medical',
   'view-palmex':'Food', 'view-star':'Food', 'view-termolita':'Industrial',
-  'view-sanfer':'Pharma', 'view-saintgobain':'Industrial', 'view-brahm':'Industrial',
+  'view-sanfer-salud-animal':'Animal Health', 'view-saintgobain':'Industrial', 'view-brahm':'Industrial',
   'view-skx':'Industrial', 'view-laerdal':'Medical', 'view-delmonte':'Food',
   'view-doga':'Auto', 'view-techniplas':'Auto', 'view-saen':'Industrial',
   'view-mekra':'Auto', 'view-capital':'Industrial', 'view-metalistik':'Industrial',
