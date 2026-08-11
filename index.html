@@ -1257,6 +1257,10 @@ main {
       <span>◆</span> <span style="flex:1;">McKinley Paper</span>
       <span class="recent-cls aa">AA</span>
     </div>
+    <div class="nav-item" onclick="showView('view-grupo-sanfer', this)">
+      <span>◆</span> <span style="flex:1;">Grupo Sanfer</span>
+      <span class="recent-cls aaa">AAA</span>
+    </div>
   </div>
 
   <div class="nav-divider"></div>
@@ -1981,6 +1985,30 @@ main {
         <span class="acct-tag">Bio Pappel</span>
         <span class="acct-tag">Truck + Rail</span>
         <span class="acct-tag">Recycled paper</span>
+        <span class="acct-tag">Control Tower fit</span>
+      </div>
+    </div>
+
+    <!-- Grupo Sanfer -->
+    <div class="account-card aaa" onclick="showViewById('view-grupo-sanfer')">
+      <div class="account-card-header">
+        <div>
+          <div class="account-name">Grupo Sanfer</div>
+          <div class="account-industry">Pharma · Biotech · Packaging · Regulated Products</div>
+        </div>
+        <span class="account-cls-badge aaa">AAA</span>
+      </div>
+      <div class="account-metrics">
+        <div class="acct-metric"><div class="acct-metric-val">301</div><div class="acct-metric-lbl">Shipments YTD</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">USD 27.6M</div><div class="acct-metric-lbl">Value YTD</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">12</div><div class="acct-metric-lbl">Entities</div></div>
+      </div>
+      <div class="account-tags">
+        <span class="acct-tag" style="background:rgba(245,158,11,0.12);color:#b45309;border-color:rgba(245,158,11,0.3);">LEAD</span>
+        <span class="acct-tag">Multi-entity</span>
+        <span class="acct-tag">Air-dominant</span>
+        <span class="acct-tag">LATAM exports</span>
+        <span class="acct-tag">Customs visibility</span>
         <span class="acct-tag">Control Tower fit</span>
       </div>
     </div>
@@ -12696,6 +12724,16 @@ main {
               <td><div class="dots"><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div></td>
               <td><div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></td>
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot"></div></div></td>
+              <td style="color:#b45309;font-weight:700;font-size:11px;">★ TARGET</td>
+            </tr>
+            <tr>
+              <td><strong>Grupo Sanfer</strong> <span style="font-size:10px;font-weight:600;color:#b45309;background:rgba(245,158,11,0.12);padding:1px 5px;border-radius:3px;margin-left:4px;">LEAD</span></td>
+              <td><span class="cls-pill aaa">AAA</span></td>
+              <td style="color:var(--text-muted);">Pharma / Biotech / Packaging / Regulated Products</td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot"></div></div></td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot"></div></div></td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
               <td style="color:#b45309;font-weight:700;font-size:11px;">★ TARGET</td>
             </tr>
           </tbody>
@@ -30272,6 +30310,510 @@ main {
   </div>
 </div>
 
+<!-- ══ GRUPO SANFER VIEW ══ -->
+<div id="view-grupo-sanfer" class="view">
+  <div class="page-header">
+    <div class="page-header-left">
+      <div class="page-header-eyebrow">Target Account · LEAD Analysis</div>
+      <div class="page-header-title">Grupo Sanfer</div>
+      <div class="page-header-sub">Pharma · Biotech · Packaging · Regulated Products · Multi-Entity Group</div>
+    </div>
+    <div class="page-header-meta">
+      <span class="classification-badge lead">LEAD</span>
+      <span class="classification-badge aaa">AAA</span>
+      <button class="print-btn" onclick="printView('view-grupo-sanfer')">⬇ Export PDF</button>
+    </div>
+  </div>
+  <div class="content-body">
+
+    <!-- LEAD source banner -->
+    <div class="card">
+      <div class="card-body" style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+        <span class="classification-badge lead">LEAD</span>
+        <span class="classification-badge aaa">AAA</span>
+        <span style="font-size:12px;color:var(--text-muted);line-height:1.6;">
+          <strong style="color:var(--navy);">Relationship Status: LEAD (pre-commercial).</strong> Grupo Sanfer is treated as a <strong>Master Account</strong> across a multi-entity ecosystem. All analysis is built exclusively on <strong>Panjiva Mexico Imports &amp; Exports</strong> as the visible universe — no Akzent shipment data is included, and no Account Intelligence Snapshot, revenue, gross profit, margin, wallet, penetration or coverage metrics are shown. The <strong>AIOS Classification AAA</strong> reflects strategic fit and operational complexity and is shown separately from — and independent of — the LEAD relationship badge.
+        </span>
+      </div>
+    </div>
+
+    <!-- Panjiva Visibility Metrics -->
+    <div class="grid-4">
+      <div class="stat-box"><div class="stat-label">Visible Shipments (2026 YTD)</div><div class="stat-value">301</div><div class="stat-sub">147 imports · 154 exports</div></div>
+      <div class="stat-box"><div class="stat-label">USD Value CIF Visible</div><div class="stat-value" style="font-size:18px;">USD 27.61M</div><div class="stat-sub">2026 YTD · declared</div></div>
+      <div class="stat-box"><div class="stat-label">Gross Weight (2026 YTD)</div><div class="stat-value teal" style="font-size:20px;">1.24M kg</div><div class="stat-sub">1,240,792.2 kg</div></div>
+      <div class="stat-box"><div class="stat-label">Visible Entities</div><div class="stat-value" style="font-size:22px;">12</div><div class="stat-sub">Multi-entity group</div></div>
+    </div>
+
+    <!-- 01 Executive Intelligence Summary -->
+    <div class="card">
+      <div class="card-header"><span class="accent">01</span> Executive Intelligence Summary</div>
+      <div class="card-body">
+        <p style="font-size:13px;line-height:1.7;">Grupo Sanfer shows a <strong>multi-entity regulated product ecosystem</strong>, not a simple single-company freight account. The visible Panjiva pattern includes pharma exports, biological and animal-health activity, biotech injectable product signals, packaging and printed materials, air-heavy import and export execution, and regional LATAM distribution through multiple legal entities.</p>
+        <p style="font-size:13px;line-height:1.7;margin-top:10px;">The current YTD period is the primary basis for interpretation. In <strong>2026 YTD, the group shows 301 Shipments</strong>, almost evenly split between <strong>147 imports and 154 exports</strong>. Air is the dominant mode with <strong>202 Shipments</strong>, supported by maritime (50) and truck (43). Current YTD visible value is <strong>USD 27.61M</strong> across <strong>12 visible entities</strong>. The previous full calendar year (2025) provides context: 641 Shipments, 338 imports, 303 exports and USD 57.22M.</p>
+        <div style="background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 6px 6px 0;padding:12px 16px;margin-top:12px;">
+          <strong style="font-size:11px;color:#b45309;text-transform:uppercase;letter-spacing:1px;">⚡ Complexity Signal — Source: Panjiva</strong>
+          <p style="font-size:12px;color:var(--text);line-height:1.6;margin-top:4px;">AIOS classifies Grupo Sanfer as an <strong>AAA Strategic Operational Complexity Target</strong> because current YTD activity combines multi-entity structure, regulated pharma / biotech / animal-health / packaging signals, air-dominant execution, LATAM export exposure, customs / port diversity and high HS Code breadth. Akzent should position as an <strong>Operational Complexity Partner, Multimodal Coordination Partner, Customs &amp; Visibility Partner and ILM / Control Tower Partner</strong> — not as a transactional freight provider.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 Source Scope & Period Coverage -->
+    <div class="card">
+      <div class="card-header"><span class="accent">02</span> Source Scope &amp; Period Coverage</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:12px;">
+          <div style="padding:14px 16px;background:rgba(245,158,11,0.05);border-radius:6px;border:1px solid var(--border);">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;">Relationship Status</div>
+            <span class="classification-badge lead" style="font-size:14px;">LEAD</span>
+            <p style="font-size:11px;color:var(--text-muted);line-height:1.6;margin-top:8px;">Pre-commercial. Master Account not operated by Akzent. No Account Intelligence Snapshot.</p>
+          </div>
+          <div style="padding:14px 16px;background:rgba(232,0,45,0.04);border-radius:6px;border:1px solid var(--border);">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;">AIOS Classification</div>
+            <span class="classification-badge aaa" style="font-size:14px;">AAA</span>
+            <p style="font-size:11px;color:var(--text-muted);line-height:1.6;margin-top:8px;">Strategic fit &amp; operational complexity — independent of the LEAD badge.</p>
+          </div>
+        </div>
+        <table class="hub-table" style="margin-top:14px;">
+          <tbody>
+            <tr><td><strong>Source</strong></td><td style="text-align:right;">Panjiva Mexico Imports + Exports (multi-entity)</td></tr>
+            <tr><td><strong>Source Coverage</strong></td><td style="text-align:right;">958 total Panjiva Shipment rows · 2016-10-26 to 2026-06-30</td></tr>
+            <tr><td><strong>Primary Periods</strong></td><td style="text-align:right;">2025 full year · 2026 YTD</td></tr>
+            <tr><td><strong>Legacy Records</strong></td><td style="text-align:right;color:var(--text-muted);">2016–2021 (16 export Shipments · historical only)</td></tr>
+            <tr><td><strong>Akzent Data</strong></td><td style="text-align:right;color:var(--text-muted);">Not provided</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:12px;padding:12px 16px;background:rgba(245,158,11,0.05);border-radius:6px;border:1px solid var(--border);">
+          <strong style="font-size:11px;color:#b45309;">Note:</strong>
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> Periods are analyzed separately and are not aggregated. The 958-row coverage total is source coverage only, not a blended operating period.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 Shipment Intelligence by Period -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">03</span> Shipment Intelligence by Period</div>
+      <div class="card-body">
+        <p style="font-size:12px;color:var(--text-muted);line-height:1.6;margin-bottom:4px;">Periods are analyzed separately. <strong>Previous Full Calendar Year: 2025</strong> · <strong>Current YTD: 2026</strong> is the primary executive basis.</p>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header" style="background:rgba(13,43,94,0.03);">Previous Full Calendar Year — 2025</div>
+        <div class="card-body">
+          <div class="grid-2" style="gap:10px;">
+            <div class="stat-box"><div class="stat-label">Total Shipments</div><div class="stat-value" style="font-size:22px;">641</div><div class="stat-sub">338 imports · 303 exports</div></div>
+            <div class="stat-box"><div class="stat-label">USD Value CIF</div><div class="stat-value" style="font-size:22px;">USD 57.22M</div><div class="stat-sub">Declared</div></div>
+          </div>
+          <table class="hub-table" style="margin-top:12px;">
+            <tbody>
+              <tr><td><strong>Imports</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">338 · 52.7%</td></tr>
+              <tr><td><strong>Exports</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">303 · 47.3%</td></tr>
+              <tr><td><strong>Gross Weight</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">4,254,702.4 kg</td></tr>
+              <tr><td><strong>TEU</strong></td><td style="text-align:right;">344.84</td></tr>
+              <tr><td><strong>Modal Mix</strong></td><td style="text-align:right;">Air 401 · Maritime 144 · Truck 84 · Unknown 12</td></tr>
+              <tr><td><strong>Top Countries</strong></td><td style="text-align:right;">US 88 · Spain 66 · Costa Rica 51 · Sweden 49</td></tr>
+              <tr><td><strong>Top Customs Node</strong></td><td style="text-align:right;">AICM (340)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" style="background:rgba(0,180,216,0.05);">Current YTD — 2026</div>
+        <div class="card-body">
+          <div class="grid-2" style="gap:10px;">
+            <div class="stat-box"><div class="stat-label">Total Shipments</div><div class="stat-value teal" style="font-size:22px;">301</div><div class="stat-sub">147 imports · 154 exports</div></div>
+            <div class="stat-box"><div class="stat-label">USD Value CIF</div><div class="stat-value" style="font-size:22px;">USD 27.61M</div><div class="stat-sub">Declared</div></div>
+          </div>
+          <table class="hub-table" style="margin-top:12px;">
+            <tbody>
+              <tr><td><strong>Imports</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">147 · 48.8%</td></tr>
+              <tr><td><strong>Exports</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">154 · 51.2%</td></tr>
+              <tr><td><strong>Gross Weight</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">1,240,792.2 kg</td></tr>
+              <tr><td><strong>TEU</strong></td><td style="text-align:right;">89.41</td></tr>
+              <tr><td><strong>Modal Mix</strong></td><td style="text-align:right;">Air 202 · Maritime 50 · Truck 43 · Unknown 6</td></tr>
+              <tr><td><strong>Top Countries</strong></td><td style="text-align:right;">Spain 49 · US 36 · Italy 35 · Germany 19</td></tr>
+              <tr><td><strong>Top Customs Node</strong></td><td style="text-align:right;">AICM (174)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 Trend Intelligence -->
+    <div class="card">
+      <div class="card-header"><span class="accent">04</span> Trend Intelligence</div>
+      <div class="card-body">
+        <div class="signal-grid">
+          <div class="signal-item"><div class="signal-title">Volume — Incomplete Year</div><div class="signal-prob medium-high">CONTINUITY</div><div class="signal-desc">641 Shipments in 2025 vs 301 in 2026 YTD. Lower absolute 2026 volume is expected because the year is incomplete; activity remains significant.</div></div>
+          <div class="signal-item high"><div class="signal-title">Import / Export Mix — Balanced</div><div class="signal-prob high">48.8% / 51.2%</div><div class="signal-desc">2026 YTD (147 imports / 154 exports) is more balanced than 2025, raising the relevance of both import and export Control Tower models.</div></div>
+          <div class="signal-item high"><div class="signal-title">Modal — Air Dominant</div><div class="signal-prob high">AIR 67.1%</div><div class="signal-desc">Air rises to 67.1% of 2026 YTD Shipments; maritime and truck continue to create multimodal coordination requirements.</div></div>
+          <div class="signal-item"><div class="signal-title">Geography — Europe + LATAM</div><div class="signal-prob medium-high">SPAIN #1</div><div class="signal-desc">Spain, US, Italy and Germany lead sourcing / counterparty geographies, alongside active LATAM export destinations.</div></div>
+          <div class="signal-item"><div class="signal-title">Customs — AICM Central</div><div class="signal-prob medium-high">MULTINODE</div><div class="signal-desc">AICM remains the central customs point, with AIFA, Manzanillo, Ciudad Hidalgo, Nuevo Laredo and Veracruz as important control points.</div></div>
+          <div class="signal-item high"><div class="signal-title">HS Portfolio — Regulated Continuity</div><div class="signal-prob high">ACTIVE</div><div class="signal-desc">SPF biological inputs, pharma medicaments, packaging, biotech injectables and regulated products persist across both periods.</div></div>
+        </div>
+        <div style="margin-top:12px;padding:10px 14px;background:rgba(13,43,94,0.04);border-radius:5px;border:1px solid var(--border);">
+          <strong style="font-size:11px;color:var(--navy);">Operational interpretation:</strong>
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> 2026 YTD confirms active complexity, not merely legacy activity. Akzent should enter through visibility diagnostic, air + customs coordination and entity-level Control Tower design — not spot pricing.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 05 Modal Mix -->
+    <div class="card">
+      <div class="card-header"><span class="accent">05</span> Modal Mix — 2026 YTD</div>
+      <div class="card-body">
+        <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;">301 total shipments</div>
+        <div class="modal-bar"><div class="modal-bar-label"><strong>Air ✈</strong><span>202 · 67.1%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:100%"></div></div></div>
+        <div class="modal-bar"><div class="modal-bar-label"><strong>Maritime 🚢</strong><span>50 · 16.6%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:25%"></div></div></div>
+        <div class="modal-bar"><div class="modal-bar-label"><strong>Truck 🛣</strong><span>43 · 14.3%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:21%"></div></div></div>
+        <div class="modal-bar"><div class="modal-bar-label"><strong>Unknown</strong><span>6 · 2.0%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:3%"></div></div></div>
+        <div style="margin-top:12px;padding:10px;background:rgba(0,180,216,0.05);border-radius:5px;border:1px solid rgba(0,180,216,0.15);"><strong style="font-size:11px;color:var(--navy);">Interpretation:</strong><span style="font-size:11px;color:var(--text-muted);"> Air freight is the dominant operational signature. In a pharma / biotech / regulated environment, air usage often correlates with urgency, sensitivity, documentation pressure and high-value continuity. Ocean and truck remain relevant for multimodal control.</span></div>
+      </div>
+    </div>
+
+    <!-- 06 Customs / Port Intelligence -->
+    <div class="card">
+      <div class="card-header"><span class="accent">06</span> Customs / Port Intelligence — 2026 YTD</div>
+      <div class="card-body">
+        <table class="hub-table">
+          <thead><tr><th>Hub</th><th>Shipments</th><th>Mode</th><th>Operational Signal</th></tr></thead>
+          <tbody>
+            <tr><td><strong>AICM — Ciudad de México</strong></td><td>174</td><td>Air</td><td style="color:var(--text-muted);">Central control node</td></tr>
+            <tr><td><strong>AIFA — Santa Lucía</strong></td><td>34</td><td>Air</td><td style="color:var(--text-muted);">Secondary air gateway</td></tr>
+            <tr><td><strong>Manzanillo, Colima</strong></td><td>34</td><td>Maritime</td><td style="color:var(--text-muted);">Primary Pacific port</td></tr>
+            <tr><td><strong>Ciudad Hidalgo, Chiapas</strong></td><td>24</td><td>Truck</td><td style="color:var(--text-muted);">Southern border crossing</td></tr>
+            <tr><td><strong>Nuevo Laredo, Tamaulipas</strong></td><td>16</td><td>Truck</td><td style="color:var(--text-muted);">Northern cross-border corridor</td></tr>
+            <tr><td><strong>Veracruz, Veracruz</strong></td><td>12</td><td>Maritime</td><td style="color:var(--text-muted);">Atlantic port exposure</td></tr>
+            <tr><td><strong>Progreso, Yucatán</strong></td><td>4</td><td>Maritime</td><td style="color:var(--text-muted);">Secondary ocean node</td></tr>
+            <tr><td><strong>Guadalajara, Jalisco</strong></td><td>1</td><td>Air</td><td style="color:var(--text-muted);">Minor node</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:12px;padding:10px;background:rgba(0,180,216,0.05);border-radius:5px;border:1px solid rgba(0,180,216,0.15);"><strong style="font-size:11px;color:var(--navy);">Interpretation:</strong><span style="font-size:11px;color:var(--text-muted);"> AICM is the dominant control node in both periods. AIFA, Manzanillo, Veracruz, Nuevo Laredo, Ciudad Hidalgo and Progreso create a multi-customs operating model that supports an Akzent customs visibility and exception-management angle.</span></div>
+      </div>
+    </div>
+
+    <!-- 07 Geographic Intelligence -->
+    <div class="card">
+      <div class="card-header"><span class="accent">07</span> Geographic Intelligence — 2026 YTD</div>
+      <div class="card-body">
+        <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;">Top Origin / Destination Countries</div>
+        <div class="modal-bar"><div class="modal-bar-label"><strong>🇪🇸 Spain</strong><span>49</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:100%"></div></div></div>
+        <div class="modal-bar"><div class="modal-bar-label"><strong>🇺🇸 United States</strong><span>36</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:73%"></div></div></div>
+        <div class="modal-bar"><div class="modal-bar-label"><strong>🇮🇹 Italy</strong><span>35</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:71%"></div></div></div>
+        <div class="modal-bar"><div class="modal-bar-label"><strong>🇩🇪 Germany</strong><span>19</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:39%"></div></div></div>
+        <div class="modal-bar"><div class="modal-bar-label"><strong>🇨🇷 Costa Rica</strong><span>18</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:37%"></div></div></div>
+        <div class="modal-bar"><div class="modal-bar-label"><strong>🇮🇳 India · 🇨🇳 China</strong><span>16 · 16</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:33%"></div></div></div>
+        <div class="modal-bar"><div class="modal-bar-label"><strong>🇬🇹 Guatemala · 🇭🇺 Hungary</strong><span>12 · 12</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:24%"></div></div></div>
+        <div style="margin-top:12px;padding:10px;background:rgba(0,180,216,0.05);border-radius:5px;border:1px solid rgba(0,180,216,0.15);"><strong style="font-size:11px;color:var(--navy);">Interpretation:</strong><span style="font-size:11px;color:var(--text-muted);"> A two-sided network: specialized sourcing and counterparty relationships in Europe / United States / India / China, plus LATAM export and regional customer flows. This increases documentation, customs, exception-management and customer-visibility needs.</span></div>
+      </div>
+    </div>
+
+    <!-- 08 Supplier / Customer Intelligence -->
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header"><span class="accent">08</span> Suppliers — 2026 YTD</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <thead><tr><th>Supplier</th><th>Shipments</th></tr></thead>
+            <tbody>
+              <tr><td><strong>A. Menarini Latin America Slu</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">30</td></tr>
+              <tr><td><strong>Shanghai Sunwise Chemical Co., Ltd.</strong></td><td style="text-align:right;">8</td></tr>
+              <tr><td><strong>M.P.I Pharmaceutica Gmb H</strong></td><td style="text-align:right;">6</td></tr>
+              <tr><td><strong>Life Technologies Corporation</strong></td><td style="text-align:right;">6</td></tr>
+              <tr><td><strong>Global Life Sciences Solutions Usa Llc.</strong></td><td style="text-align:right;">6</td></tr>
+              <tr><td><strong>Able Laboratory Inc.</strong></td><td style="text-align:right;">4</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><span class="accent">08</span> Customers — 2026 YTD</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <thead><tr><th>Customer</th><th>Shipments</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Merck Sharp And Dohme Animal Health Sl</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">33</td></tr>
+              <tr><td><strong>Corporacion De Supermercados Unidos Srl</strong></td><td style="text-align:right;">15</td></tr>
+              <tr><td><strong>Fatro Sp A</strong></td><td style="text-align:right;">14</td></tr>
+              <tr><td><strong>Ceva Phylaxia Co., Ltd.</strong></td><td style="text-align:right;">11</td></tr>
+              <tr><td><strong>Operadora De Tiendas S.A.</strong></td><td style="text-align:right;">10</td></tr>
+              <tr><td><strong>Sanfer Centroamerica Y Caribe S.A.</strong></td><td style="text-align:right;">7</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:12px 16px;background:rgba(0,180,216,0.05);">
+        <strong style="font-size:11px;color:var(--navy);">Interpretation:</strong>
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> The counterparty base includes specialized pharma, biotech, animal-health, consumer-health and packaging relationships. This creates supplier / customer fragmentation that can be addressed through centralized communication, readiness control, milestone tracking and documentation governance.</span>
+      </div>
+    </div>
+
+    <!-- 09 Top 5 HS Codes -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">09</span> Top 5 HS Codes — Consolidated Group</div>
+      <div class="card-body" style="padding:12px 16px;background:rgba(245,158,11,0.05);">
+        <strong style="font-size:11px;color:#b45309;">Note:</strong>
+        <span style="font-size:11px;color:var(--text-muted);"> HS Codes are measured by operational presence. Some Shipments contain multiple HS Codes, so HS counts are not additive against total Shipments.</span>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body">
+        <table class="hub-table">
+          <thead><tr><th>HS Code</th><th>Operational Presence</th><th>% of Shipments</th><th>Product Interpretation</th><th>AIOS Interpretation</th></tr></thead>
+          <tbody>
+            <tr><td><strong>0407210299</strong></td><td>161</td><td>16.8%</td><td>SPF fertile eggs / pathogen-free avian biological inputs</td><td style="color:var(--text-muted);">Sensitive biological / animal-health signal; supports air-control, biosecurity documentation and tight exception coordination.</td></tr>
+            <tr><td><strong>3004909999</strong></td><td>152</td><td>15.9%</td><td>Finished / prepared pharmaceutical medicaments</td><td style="color:var(--text-muted);">Regulated pharma signal; requires documentation control, customs precision and continuity management.</td></tr>
+            <tr><td><strong>3402509900</strong></td><td>136</td><td>14.2%</td><td>Cleaning / detergent / regulated consumer hygiene lines</td><td style="color:var(--text-muted);">Regulated chemical / hygiene signal; customs and compliance coordination with regional distribution complexity.</td></tr>
+            <tr><td><strong>4810920100</strong></td><td>36</td><td>3.8%</td><td>Coated / multilayer paperboard for packaging</td><td style="color:var(--text-muted);">Packaging signal; ties logistics performance to production continuity and supplier synchronization.</td></tr>
+            <tr><td><strong>4819200299</strong></td><td>33</td><td>3.4%</td><td>Folding cartons / printed packaging boxes</td><td style="color:var(--text-muted);">Packaging continuity signal; print/pack availability affects production and commercial continuity.</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:12px;padding:10px 14px;background:rgba(13,43,94,0.03);border-radius:5px;border:1px solid var(--border);"><strong style="font-size:11px;color:var(--navy);">Portfolio Trend:</strong><span style="font-size:11px;color:var(--text-muted);"> The portfolio combines biological inputs, pharma medicaments, biotech / injectable products, packaging continuity, regulated cleaning / hygiene products and production support items — a natural fit for customs reliability, documentation control and multimodal coordination.</span></div>
+      </div>
+    </div>
+
+    <!-- 10 Operational Complexity -->
+    <div class="card">
+      <div class="card-header"><span class="accent">10</span> Operational Complexity</div>
+      <div class="card-body">
+        <div class="fit-score-grid">
+          <div class="fit-score-item"><div class="fit-score-name">Volume Intensity</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:85%"></div></div><div class="fit-score-pct">HIGH</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Modal Diversity</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:80%"></div></div><div class="fit-score-pct">HIGH</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Air Freight Dependency</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:95%"></div></div><div class="fit-score-pct">VERY HIGH</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Cross-Border Exposure</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:78%"></div></div><div class="fit-score-pct">HIGH</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Ocean Exposure</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:65%"></div></div><div class="fit-score-pct">MEDIUM-HIGH</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Customs Sensitivity</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:97%"></div></div><div class="fit-score-pct">VERY HIGH</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Multi-Entity Structure</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:90%"></div></div><div class="fit-score-pct">HIGH</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Supplier / Customer Fragmentation</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:72%"></div></div><div class="fit-score-pct">MEDIUM-HIGH</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">HS Portfolio Complexity</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:88%"></div></div><div class="fit-score-pct">HIGH</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">ILM / Control Tower Potential</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:92%"></div></div><div class="fit-score-pct">HIGH</div></div></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:14px;">
+          <span style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);">Complexity Level</span>
+          <span class="classification-badge aaa" style="font-size:14px;">High / AAA</span>
+        </div>
+        <div style="margin-top:12px;padding:10px;background:rgba(13,43,94,0.03);border-radius:5px;border:1px solid var(--border);"><strong style="font-size:11px;color:var(--navy);">Interpretation:</strong><span style="font-size:11px;color:var(--text-muted);"> Complexity comes from regulated products, air dependency, multi-entity structure, customs / port diversity, LATAM export network and HS Code breadth — active in the current YTD period, not only historical.</span></div>
+      </div>
+    </div>
+
+    <!-- 11 Pain Mapping -->
+    <div class="card">
+      <div class="card-header"><span class="accent">11</span> Operational Signal → Pain Mapping</div>
+      <div class="card-body">
+        <div style="padding:10px 14px;background:rgba(245,158,11,0.05);border-radius:5px;border:1px solid var(--border);margin-bottom:12px;"><span style="font-size:11px;color:var(--text-muted);line-height:1.6;">These pains are <strong>probable</strong>, not confirmed. They are inferred from visible Panjiva patterns.</span></div>
+        <div class="signal-grid">
+          <div class="signal-item high"><div class="signal-title">Fragmented visibility across entities</div><div class="signal-prob high">HIGH PROBABILITY</div><div class="signal-desc">12 visible entities with different import/export profiles. Akzent angle: entity-level and group-level performance dashboards.</div></div>
+          <div class="signal-item high"><div class="signal-title">Air shipment exception pressure</div><div class="signal-prob high">HIGH PROBABILITY</div><div class="signal-desc">202 air Shipments in 2026 YTD. Akzent angle: air exception management, proactive milestones and escalation governance.</div></div>
+          <div class="signal-item high"><div class="signal-title">Customs documentation complexity</div><div class="signal-prob high">HIGH PROBABILITY</div><div class="signal-desc">Regulated pharma / biotech / biological / packaging HS Codes across multiple customs / ports. Akzent angle: customs &amp; documentation checkpoints.</div></div>
+          <div class="signal-item"><div class="signal-title">LATAM export coordination pressure</div><div class="signal-prob medium-high">MEDIUM-HIGH</div><div class="signal-desc">Costa Rica, Guatemala, Honduras, Colombia, Panama, Nicaragua and El Salvador visible. Akzent angle: regional LATAM Control Tower.</div></div>
+          <div class="signal-item"><div class="signal-title">Supplier / counterparty fragmentation</div><div class="signal-prob medium-high">MEDIUM-HIGH</div><div class="signal-desc">Specialized suppliers and customers across pharma, biotech and animal-health. Akzent angle: readiness control and centralized communication.</div></div>
+          <div class="signal-item high"><div class="signal-title">Biological / animal-health sensitivity</div><div class="signal-prob high">HIGH PROBABILITY</div><div class="signal-desc">SPF egg / biological HS Codes and air-only biological flows. Akzent angle: documentation control and bio-sensitive exception management.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12 Multimodal Opportunity -->
+    <div class="card">
+      <div class="card-header"><span class="accent">12</span> Multimodal Opportunity</div>
+      <div class="card-body">
+        <table class="hub-table">
+          <thead><tr><th>Mode</th><th>Opportunity</th><th>Reason</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Air Freight</strong></td><td><span class="classification-badge" style="font-size:11px;color:#b45309;background:rgba(245,158,11,0.12);border-radius:4px;padding:2px 7px;">HIGH</span></td><td style="color:var(--text-muted);">Air-dominant current YTD across AICM / AIFA and entities such as Aves Libres de Patógenos, Grimann and Probiomed.</td></tr>
+            <tr><td><strong>Customs</strong></td><td><span class="classification-badge" style="font-size:11px;color:#b45309;background:rgba(245,158,11,0.12);border-radius:4px;padding:2px 7px;">VERY HIGH</span></td><td style="color:var(--text-muted);">Pharmaceuticals, biological inputs, packaging, APIs, cleaning / hygiene and equipment support classification and documentation governance.</td></tr>
+            <tr><td><strong>Regional LATAM</strong></td><td><span class="classification-badge" style="font-size:11px;color:#b45309;background:rgba(245,158,11,0.12);border-radius:4px;padding:2px 7px;">HIGH</span></td><td style="color:var(--text-muted);">Costa Rica, Guatemala, Honduras, Colombia, Panama, Nicaragua and El Salvador support a regional coordination model.</td></tr>
+            <tr><td><strong>Ocean</strong></td><td><span class="classification-badge aa" style="font-size:11px;">MEDIUM-HIGH</span></td><td style="color:var(--text-muted);">Manzanillo, Veracruz and Progreso appear across packaging, import sourcing and regulated product flows.</td></tr>
+            <tr><td><strong>Cross-Border</strong></td><td><span class="classification-badge aa" style="font-size:11px;">MEDIUM-HIGH</span></td><td style="color:var(--text-muted);">Truck Shipments and Nuevo Laredo / Ciudad Hidalgo indicate cross-border and regional land execution requirements.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 13 ILM / Control Tower Opportunity -->
+    <div class="card">
+      <div class="card-header"><span class="accent">13</span> ILM / Control Tower Opportunity</div>
+      <div class="card-body">
+        <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px;">
+          <span style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);">ILM Potential</span>
+          <span class="classification-badge aaa" style="font-size:14px;">High</span>
+        </div>
+        <ul class="q-list">
+          <li>Export Control Tower — group-level export cockpit by entity, destination, customer, customs / port, mode and HS portfolio</li>
+          <li>Import Control Tower — import visibility by supplier, origin, customs / port, HS Code, mode and release status</li>
+          <li>Pharma documentation control — standardized document-readiness checkpoints for regulated flows</li>
+          <li>Air exception management — proactive process around AICM and AIFA with milestone ownership and escalation cadence</li>
+          <li>Customs visibility — performance tracking by AICM, AIFA, Manzanillo, Veracruz, Ciudad Hidalgo, Nuevo Laredo and Progreso</li>
+          <li>Regional LATAM coordination — common status language and exception escalation across LATAM destinations</li>
+          <li>Supplier / counterparty coordination — readiness and document control with specialized counterparties</li>
+          <li>Performance dashboard by entity, destination, customs / port, mode and HS portfolio</li>
+        </ul>
+        <div style="margin-top:12px;padding:10px 14px;background:rgba(0,180,216,0.05);border-radius:5px;border:1px solid rgba(0,180,216,0.15);">
+          <strong style="font-size:11px;color:var(--navy);">Position Akzent as:</strong>
+          <span style="font-size:11px;color:var(--text-muted);"> Operational Complexity Partner · Multimodal Coordination Partner · Customs &amp; Visibility Partner · ILM / Control Tower Partner. Do not position Akzent as a transactional freight provider.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 14 AIOS Classification -->
+    <div class="card">
+      <div class="card-header"><span class="accent">14</span> AIOS Classification</div>
+      <div class="card-body">
+        <table class="hub-table">
+          <tbody>
+            <tr><td><strong>Relationship Status</strong></td><td style="text-align:right;"><span class="classification-badge lead" style="font-size:11px;">LEAD</span></td></tr>
+            <tr><td><strong>AIOS Classification</strong></td><td style="text-align:right;"><span class="classification-badge aaa" style="font-size:11px;">AAA</span></td></tr>
+            <tr><td><strong>Strategic Fit</strong></td><td style="text-align:right;">AAA</td></tr>
+            <tr><td><strong>Operational Complexity</strong></td><td style="text-align:right;">AAA</td></tr>
+            <tr><td><strong>Modal Diversity</strong></td><td style="text-align:right;">AA</td></tr>
+            <tr><td><strong>Air Freight Opportunity</strong></td><td style="text-align:right;">AAA</td></tr>
+            <tr><td><strong>Ocean Opportunity</strong></td><td style="text-align:right;">AA</td></tr>
+            <tr><td><strong>Cross-Border / LATAM Opportunity</strong></td><td style="text-align:right;">AA</td></tr>
+            <tr><td><strong>Customs Sensitivity</strong></td><td style="text-align:right;">AAA</td></tr>
+            <tr><td><strong>ILM / Control Tower Potential</strong></td><td style="text-align:right;">AAA</td></tr>
+            <tr><td><strong>Account Priority</strong></td><td style="text-align:right;font-weight:700;color:#b45309;">PRIORITY TARGET</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:12px;padding:12px 16px;background:rgba(13,43,94,0.03);border-radius:6px;border:1px solid var(--border);">
+          <strong style="font-size:11px;color:var(--navy);">Final verdict:</strong>
+          <span style="font-size:12px;color:var(--text-muted);line-height:1.6;"> Grupo Sanfer is an AAA LEAD. The 2026 YTD universe shows enough active complexity — 301 Shipments, nearly balanced import/export activity, dominant air execution, multiple regulated product families, multi-entity operations, LATAM export exposure and customs / port diversity — to justify strategic prioritization. The highest-value path is operational control across regulated logistics, multimodal execution, customs reliability, documentation discipline and ILM / Control Tower visibility.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 15 Commercial Positioning -->
+    <div class="card">
+      <div class="card-header"><span class="accent">15</span> Commercial Positioning</div>
+      <div class="card-body">
+        <div class="positioning-box">
+          <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,0.6);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;">Positioning Statement</div>
+          <div class="positioning-example">"Grupo Sanfer appears to operate a multi-entity regulated product supply chain where pharma, biotech, animal-health, packaging and regional LATAM distribution flows intersect. Akzent's value is not to quote freight; it is to help create operational control across air, ocean, cross-border, customs, documentation, counterparties and entity-level visibility — especially where regulated product continuity and exception management matter."</div>
+          <div class="grid-2" style="gap:12px;margin-top:14px;">
+            <div>
+              <div style="font-size:11px;font-weight:700;color:var(--teal);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;">What to sell first</div>
+              <ul class="q-list" style="color:#fff;">
+                <li>Operational control &amp; multimodal visibility</li>
+                <li>Customs coordination &amp; documentation compliance</li>
+                <li>Air freight exception management</li>
+                <li>Cross-border &amp; LATAM coordination</li>
+                <li>Entity-level Control Tower</li>
+                <li>ILM / Control Tower orchestration</li>
+              </ul>
+            </div>
+            <div>
+              <div style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.6);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;">What not to sell first</div>
+              <ul class="q-list" style="color:rgba(255,255,255,0.75);">
+                <li>Spot freight</li>
+                <li>Isolated rates</li>
+                <li>"We are another forwarder"</li>
+                <li>Transactional transportation</li>
+              </ul>
+            </div>
+          </div>
+          <div class="capability-tags">
+            <span class="cap-tag">Operational Complexity</span>
+            <span class="cap-tag">Multimodal Coordination</span>
+            <span class="cap-tag">Customs &amp; Visibility</span>
+            <span class="cap-tag">Air Exception Management</span>
+            <span class="cap-tag">LATAM Coordination</span>
+            <span class="cap-tag">ILM / Control Tower</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 16 Discovery Questions -->
+    <div class="card">
+      <div class="card-header"><span class="accent">16</span> Discovery Question Engine</div>
+      <div class="card-body">
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Group Supply Chain Structure</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>How is logistics governance divided across Sanfer group entities?</li>
+              <li>Which entities own import sourcing versus export distribution?</li>
+              <li>Which entity manages group-level customs policy and broker coordination?</li>
+              <li>Are decisions centralized or managed independently by each entity?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Export Control &amp; LATAM Distribution</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>Which LATAM destinations create the most operational pressure?</li>
+              <li>Are export updates proactive or mainly reactive?</li>
+              <li>Which customers require the most documentation or delivery visibility?</li>
+              <li>Are export customers given standardized milestone visibility?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Import Sourcing</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>Which suppliers are most critical to production continuity?</li>
+              <li>Are supplier readiness and document checks centralized?</li>
+              <li>Which origins create the longest lead-time or exception exposure?</li>
+              <li>Are imported pharma inputs tracked by risk level?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Pharma / Regulated Documentation</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>Which product families require the strictest documentation control?</li>
+              <li>Where do document corrections most often occur?</li>
+              <li>Are HS classifications and product descriptions centrally governed?</li>
+              <li>Which Shipments require additional regulatory or quality release coordination?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Air Freight Urgency &amp; Cross-Border</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>What typically triggers air Shipments — sensitivity or urgency?</li>
+              <li>Are air exceptions tracked through a standard escalation process?</li>
+              <li>How are Nuevo Laredo, Ciudad Hidalgo and other border points monitored?</li>
+              <li>Where would proactive border visibility reduce internal workload?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Customs Performance &amp; ILM / Control Tower</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>Which customs / ports create the most release variability?</li>
+              <li>Are customs issues tracked by cause, entity and HS Code?</li>
+              <li>What would a group-level logistics dashboard need to show?</li>
+              <li>Which entities should enter a Control Tower model first?</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 17 Strategic Expansion Trajectory -->
+    <div class="card">
+      <div class="card-header"><span class="accent">17</span> Strategic Expansion Trajectory</div>
+      <div class="card-body">
+        <div class="phase-grid">
+          <div class="phase-card"><div class="phase-num">Phase 1</div><div class="phase-title">Visibility &amp; Diagnostic Entry</div><ul class="phase-items"><li>Map Shipments by entity, mode, customs / port and HS portfolio</li><li>Build trust without selling freight</li><li>Validate the operational map with Sanfer</li></ul></div>
+          <div class="phase-card"><div class="phase-num">Phase 2</div><div class="phase-title">Air + Customs Coordination</div><ul class="phase-items"><li>AICM / AIFA air visibility</li><li>Customs milestones &amp; document readiness</li><li>Exception alerts &amp; escalation</li></ul></div>
+          <div class="phase-card"><div class="phase-num">Phase 3</div><div class="phase-title">Cross-Border / LATAM Lane Control</div><ul class="phase-items"><li>Ciudad Hidalgo &amp; Nuevo Laredo lanes</li><li>LATAM destination coordination</li><li>Export milestone model</li></ul></div>
+          <div class="phase-card"><div class="phase-num">Phase 4</div><div class="phase-title">Entity-Level Consolidation</div><ul class="phase-items"><li>Entity dashboards for Grimann, Aves Libres, Aerobal, Probiomed</li><li>Connect sub-accounts into one operating model</li><li>Common operating cadence</li></ul></div>
+          <div class="phase-card"><div class="phase-num">Phase 5</div><div class="phase-title">Group ILM / Control Tower</div><ul class="phase-items"><li>Group dashboard &amp; customs governance</li><li>Supplier / customer coordination</li><li>Akzent as the operating control layer</li></ul></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 </main>
 
 <script>
@@ -30328,6 +30870,7 @@ const ACCOUNTS = [
   { id:'view-bio-pappel', name:'Bio Pappel SA de CV', sub:'Paper &amp; Packaging Manufacturing · Cross-Border · Rail · Maritime · Customs Complexity · Panjiva Imports + Exports', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
   { id:'view-metalicas-titan', name:'Manufacturas Metálicas Titan', sub:'Industrial Manufacturing · Metal Components · Lighting Parts · Cuautitlán Izcalli, MX · Panjiva Mexico Exports', rel:'LEAD', cls:'AA', clsPill:'aa' },
   { id:'view-mckinley', name:'McKinley Paper Company', sub:'Paper / Packaging / Recycled Fiber &amp; Corrugated Supply Chain · Mexico Inbound · Cross-Border · Truck + Rail · Panjiva Mexico Imports', rel:'LEAD', cls:'AA', clsPill:'aa' },
+  { id:'view-grupo-sanfer', name:'Grupo Sanfer', sub:'Pharma · Biotech · Packaging · Regulated Products · Multi-Entity Group · Air-Dominant · LATAM Exports · Customs Complexity · Panjiva Mexico Imports + Exports', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
 ];
 const MODULES = [
   { id:'view-network',     name:'Network Intelligence', sub:'Cross-account analysis · Lane overlap' },
@@ -30377,7 +30920,7 @@ var NAME_ALIASES = {
   'corporacion pipsa': 'corporacion pipsa', 'pipsa': 'corporacion pipsa',
   'vistamex': 'vistamex', 'vista mex': 'vistamex', 'servicios vistamex': 'vistamex',
   'lincoln electric': 'lincoln electric',
-  'sanfer salud animal': 'sanfer salud animal', 'sanfer': 'sanfer salud animal',
+  'sanfer salud animal': 'sanfer salud animal', 'sanfer': 'grupo sanfer',
   /* kick-off leads */
   'alfagomma': 'alfagomma',
   'marquardt': 'marquardt'
@@ -30438,7 +30981,7 @@ var INDUSTRY_BY_ID = {
   'view-fabrica-mermeladas':'Food', 'view-se-bordnetze':'Auto',
   'view-sumitomo-hardmetal':'Industrial', 'view-tecnoglobal-ph7':'Cosmetics',
   'view-veritiv':'Packaging', 'view-bio-pappel':'Paper', 'view-metalicas-titan':'Industrial',
-  'view-mckinley':'Paper'
+  'view-mckinley':'Paper', 'view-grupo-sanfer':'Pharma'
 };
 
 var UNRESOLVED_ACCOUNTS = [];
