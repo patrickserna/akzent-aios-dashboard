@@ -1253,6 +1253,10 @@ main {
       <span>◆</span> <span style="flex:1;">Manufacturas Metálicas Titan</span>
       <span class="recent-cls aa">AA</span>
     </div>
+    <div class="nav-item" onclick="showView('view-mckinley', this)">
+      <span>◆</span> <span style="flex:1;">McKinley Paper</span>
+      <span class="recent-cls aa">AA</span>
+    </div>
   </div>
 
   <div class="nav-divider"></div>
@@ -1314,7 +1318,7 @@ main {
   <div class="home-stats-row">
     <div class="stat-box">
       <div class="stat-label" id="stat-total-label">Total Accounts</div>
-      <div class="stat-value" id="stat-total-val">49</div>
+      <div class="stat-value" id="stat-total-val">51</div>
     </div>
     <div class="stat-box">
       <div class="stat-label">AAA Accounts</div>
@@ -1322,7 +1326,7 @@ main {
     </div>
     <div class="stat-box">
       <div class="stat-label">AA / AA+ Accounts</div>
-      <div class="stat-value teal" id="stat-aa-val">27</div>
+      <div class="stat-value teal" id="stat-aa-val">29</div>
     </div>
     <div class="stat-box">
       <div class="stat-label">ILM Candidates</div>
@@ -1954,6 +1958,30 @@ main {
         <span class="acct-tag">Lighting Parts</span>
         <span class="acct-tag">Customs Control</span>
         <span class="acct-tag">ILM fit</span>
+      </div>
+    </div>
+
+    <!-- McKinley Paper Company -->
+    <div class="account-card aa" onclick="showViewById('view-mckinley')">
+      <div class="account-card-header">
+        <div>
+          <div class="account-name">McKinley Paper Company</div>
+          <div class="account-industry">Paper / Packaging / Recycled Fiber</div>
+        </div>
+        <span class="account-cls-badge aa">AA</span>
+      </div>
+      <div class="account-metrics">
+        <div class="acct-metric"><div class="acct-metric-val">2,319</div><div class="acct-metric-lbl">Shipments</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">USD 22.9M</div><div class="acct-metric-lbl">Value</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">3</div><div class="acct-metric-lbl">Modes</div></div>
+      </div>
+      <div class="account-tags">
+        <span class="acct-tag" style="background:rgba(245,158,11,0.12);color:#b45309;border-color:rgba(245,158,11,0.3);">LEAD</span>
+        <span class="acct-tag">Cross-border</span>
+        <span class="acct-tag">Bio Pappel</span>
+        <span class="acct-tag">Truck + Rail</span>
+        <span class="acct-tag">Recycled paper</span>
+        <span class="acct-tag">Control Tower fit</span>
       </div>
     </div>
 
@@ -12658,6 +12686,16 @@ main {
               <td><div class="dots"><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div></td>
               <td><div class="dots"><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div></td>
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td style="color:#b45309;font-weight:700;font-size:11px;">★ TARGET</td>
+            </tr>
+            <tr>
+              <td><strong>McKinley Paper Company</strong> <span style="font-size:10px;font-weight:600;color:#b45309;background:rgba(245,158,11,0.12);padding:1px 5px;border-radius:3px;margin-left:4px;">LEAD</span></td>
+              <td><span class="cls-pill aa">AA</span></td>
+              <td style="color:var(--text-muted);">Paper / Packaging / Recycled Fiber</td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td><div class="dots"><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div></td>
+              <td><div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot"></div></div></td>
               <td style="color:#b45309;font-weight:700;font-size:11px;">★ TARGET</td>
             </tr>
           </tbody>
@@ -29748,6 +29786,492 @@ main {
   </div>
 </div>
 
+<!-- ══ McKINLEY PAPER COMPANY VIEW ══ -->
+<div id="view-mckinley" class="view">
+  <div class="page-header">
+    <div class="page-header-left">
+      <div class="page-header-eyebrow">Target Account · LEAD Analysis</div>
+      <div class="page-header-title">McKinley Paper Company</div>
+      <div class="page-header-sub">Paper / Packaging / Recycled Fiber · Mexico Inbound Supply Chain</div>
+    </div>
+    <div class="page-header-meta">
+      <span class="classification-badge lead">LEAD</span>
+      <span class="classification-badge aa">AA</span>
+      <button class="print-btn" onclick="printView('view-mckinley')">⬇ Export PDF</button>
+    </div>
+  </div>
+  <div class="content-body">
+
+    <!-- LEAD source banner -->
+    <div class="card">
+      <div class="card-body" style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+        <span class="classification-badge lead">LEAD</span>
+        <span class="classification-badge aa">AA</span>
+        <span style="font-size:12px;color:var(--text-muted);line-height:1.6;">
+          <strong style="color:var(--navy);">Relationship Status: LEAD (pre-commercial).</strong> Account not operated by Akzent. All analysis is built exclusively on the <strong>Panjiva Mexico Imports</strong> file as the visible universe — no Akzent shipment data is included, and no export records were present in the source file. The <strong>AIOS Classification AA</strong> reflects strategic fit and operational complexity and is shown separately from — and is independent of — the LEAD relationship badge.
+        </span>
+      </div>
+    </div>
+
+    <!-- Panjiva Visibility Metrics -->
+    <div class="grid-4">
+      <div class="stat-box"><div class="stat-label">Visible Shipments</div><div class="stat-value">2,319</div><div class="stat-sub">Panjiva Mexico Imports · 2025 only</div></div>
+      <div class="stat-box"><div class="stat-label">USD Value CIF Visible</div><div class="stat-value" style="font-size:18px;">USD 22.92M</div><div class="stat-sub">Declared · 2025</div></div>
+      <div class="stat-box"><div class="stat-label">Total Gross Weight</div><div class="stat-value teal" style="font-size:20px;">53.88M kg</div><div class="stat-sub">2025 visible universe</div></div>
+      <div class="stat-box"><div class="stat-label">Estimated TEU</div><div class="stat-value" style="font-size:20px;">4,915.5</div><div class="stat-sub">Estimated from visible volume</div></div>
+    </div>
+
+    <!-- 01 Executive Intelligence Summary -->
+    <div class="card">
+      <div class="card-header"><span class="accent">01</span> Executive Intelligence Summary</div>
+      <div class="card-body">
+        <p style="font-size:13px;line-height:1.7;">McKinley Paper Company shows a high-volume Mexico inbound supply chain profile focused on recycled paper, paperboard, medium paper, testliner and kraft liner flows. The Panjiva universe analyzed contains <strong>2,319 Shipments, all in 2025</strong>. No 2026 YTD records and no export records were included in the source file. This account must therefore be displayed as a LEAD analysis based only on Panjiva Mexico imports.</p>
+        <p style="font-size:13px;line-height:1.7;margin-top:10px;">Operationally, the account is highly concentrated in cross-border truck activity, with rail as a secondary mode and limited maritime activity through Veracruz. The visible consignee universe is heavily concentrated in Bio Pappel Sa De Cv.</p>
+        <div style="background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 6px 6px 0;padding:12px 16px;margin-top:12px;">
+          <strong style="font-size:11px;color:#b45309;text-transform:uppercase;letter-spacing:1px;">⚡ Complexity Signal — Source: Panjiva</strong>
+          <p style="font-size:12px;color:var(--text);line-height:1.6;margin-top:4px;">AIOS classifies McKinley Paper Company as an <strong>AA Strategic Target</strong> because the account combines high Shipment volume, strong cross-border exposure, recurring industrial supply flows, customs dependency and clear opportunity for visibility/control. The opportunity is not transactional freight; it is operational coordination, customs visibility, cross-border control and ILM / Control Tower discipline.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 Source Scope & Period Coverage -->
+    <div class="card">
+      <div class="card-header"><span class="accent">02</span> Source Scope &amp; Period Coverage</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:12px;">
+          <div style="padding:14px 16px;background:rgba(245,158,11,0.05);border-radius:6px;border:1px solid var(--border);">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;">Relationship Status</div>
+            <span class="classification-badge lead" style="font-size:14px;">LEAD</span>
+            <p style="font-size:11px;color:var(--text-muted);line-height:1.6;margin-top:8px;">Pre-commercial. Account not yet operated by Akzent.</p>
+          </div>
+          <div style="padding:14px 16px;background:rgba(0,180,216,0.04);border-radius:6px;border:1px solid var(--border);">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;">AIOS Classification</div>
+            <span class="classification-badge aa" style="font-size:14px;">AA</span>
+            <p style="font-size:11px;color:var(--text-muted);line-height:1.6;margin-top:8px;">Strategic fit &amp; operational complexity — independent of the LEAD badge.</p>
+          </div>
+        </div>
+        <table class="hub-table" style="margin-top:14px;">
+          <tbody>
+            <tr><td><strong>Source</strong></td><td style="text-align:right;">Panjiva Mexico Imports</td></tr>
+            <tr><td><strong>Period Available</strong></td><td style="text-align:right;">2025 only</td></tr>
+            <tr><td><strong>2026 YTD</strong></td><td style="text-align:right;color:var(--text-muted);">Not available</td></tr>
+            <tr><td><strong>Exports</strong></td><td style="text-align:right;color:var(--text-muted);">Not provided</td></tr>
+            <tr><td><strong>Akzent Data</strong></td><td style="text-align:right;color:var(--text-muted);">Not provided</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:12px;padding:12px 16px;background:rgba(245,158,11,0.05);border-radius:6px;border:1px solid var(--border);">
+          <strong style="font-size:11px;color:#b45309;">Note:</strong>
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> 2026 YTD was not present in the uploaded Panjiva file. No projections or estimates were created.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 Shipment Intelligence by Period -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">03</span> Shipment Intelligence by Period</div>
+      <div class="card-body">
+        <p style="font-size:12px;color:var(--text-muted);line-height:1.6;margin-bottom:4px;">Periods are analyzed separately and are not aggregated. <strong>Previous Full Calendar Year: 2025</strong> · <strong>Current YTD: 2026 not available in source file</strong>.</p>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header" style="background:rgba(13,43,94,0.03);">Previous Full Calendar Year — 2025</div>
+        <div class="card-body">
+          <div class="grid-2" style="gap:10px;">
+            <div class="stat-box"><div class="stat-label">Total Shipments</div><div class="stat-value" style="font-size:22px;">2,319</div><div class="stat-sub">Imports 2,319 · Exports N/A</div></div>
+            <div class="stat-box"><div class="stat-label">USD Value CIF</div><div class="stat-value" style="font-size:22px;">USD 22.92M</div><div class="stat-sub">Declared</div></div>
+          </div>
+          <table class="hub-table" style="margin-top:12px;">
+            <tbody>
+              <tr><td><strong>Imports</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">2,319</td></tr>
+              <tr><td><strong>Exports</strong></td><td style="text-align:right;color:var(--text-muted);">Not provided</td></tr>
+              <tr><td><strong>USD Value CIF</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">USD 22.92M</td></tr>
+              <tr><td><strong>Gross Weight</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">53.88M kg</td></tr>
+              <tr><td><strong>Estimated TEU</strong></td><td style="text-align:right;">4,915.5</td></tr>
+              <tr><td><strong>Main Mode</strong></td><td style="text-align:right;">Truck</td></tr>
+              <tr><td><strong>Main Origin</strong></td><td style="text-align:right;">United States</td></tr>
+              <tr><td><strong>Main Consignee</strong></td><td style="text-align:right;">Bio Pappel Sa De Cv</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" style="background:rgba(245,158,11,0.05);">Current YTD — 2026 (Not Available)</div>
+        <div class="card-body">
+          <div style="padding:10px 14px;background:rgba(245,158,11,0.05);border-radius:6px;border:1px solid var(--border);margin-bottom:12px;">
+            <span style="font-size:11px;color:var(--text-muted);line-height:1.6;">No 2026 YTD records were present in the uploaded Panjiva file. The fields below are reported as <strong>Not available</strong> and are not inferred or projected.</span>
+          </div>
+          <table class="hub-table">
+            <tbody>
+              <tr><td><strong>Shipments</strong></td><td style="text-align:right;color:var(--text-muted);">Not available</td></tr>
+              <tr><td><strong>USD Value</strong></td><td style="text-align:right;color:var(--text-muted);">Not available</td></tr>
+              <tr><td><strong>Gross Weight</strong></td><td style="text-align:right;color:var(--text-muted);">Not available</td></tr>
+              <tr><td><strong>Modal Mix</strong></td><td style="text-align:right;color:var(--text-muted);">Not available</td></tr>
+              <tr><td><strong>Countries</strong></td><td style="text-align:right;color:var(--text-muted);">Not available</td></tr>
+              <tr><td><strong>Customs / Ports</strong></td><td style="text-align:right;color:var(--text-muted);">Not available</td></tr>
+              <tr><td><strong>HS Codes</strong></td><td style="text-align:right;color:var(--text-muted);">Not available</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 Trend Intelligence -->
+    <div class="card">
+      <div class="card-header"><span class="accent">04</span> Trend Intelligence</div>
+      <div class="card-body">
+        <div style="padding:12px 16px;background:rgba(245,158,11,0.05);border-radius:6px;border:1px solid var(--border);margin-bottom:14px;">
+          <span style="font-size:12px;color:var(--text);line-height:1.6;"><strong>Trend comparison cannot be calculated because only 2025 records were available.</strong></span>
+        </div>
+        <div style="margin-bottom:14px;padding:10px 14px;background:rgba(0,180,216,0.05);border-radius:5px;border:1px solid rgba(0,180,216,0.15);">
+          <strong style="font-size:11px;color:var(--navy);">Operational interpretation:</strong>
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> Within 2025, activity is heavily concentrated in Q1, with <strong>1,717 Shipments in January and February</strong>. This suggests potential inventory cycle, contract concentration, capacity event or sourcing cadence that should be validated in discovery.</span>
+        </div>
+        <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;">Monthly Shipments — 2025</div>
+        <div class="modal-bar"><div class="modal-bar-label"><strong>January</strong><span>979</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:100%"></div></div></div>
+        <div class="modal-bar"><div class="modal-bar-label"><strong>February</strong><span>738</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:75%"></div></div></div>
+        <div class="modal-bar"><div class="modal-bar-label"><strong>March</strong><span>77</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:8%"></div></div></div>
+        <div class="modal-bar"><div class="modal-bar-label"><strong>April</strong><span>41</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:4%"></div></div></div>
+        <div class="modal-bar"><div class="modal-bar-label"><strong>May</strong><span>29</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:3%"></div></div></div>
+        <div class="modal-bar"><div class="modal-bar-label"><strong>June</strong><span>65</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:7%"></div></div></div>
+        <div class="modal-bar"><div class="modal-bar-label"><strong>July</strong><span>168</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:17%"></div></div></div>
+        <div class="modal-bar"><div class="modal-bar-label"><strong>August</strong><span>87</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:9%"></div></div></div>
+        <div class="modal-bar"><div class="modal-bar-label"><strong>September</strong><span>117</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:12%"></div></div></div>
+        <div class="modal-bar"><div class="modal-bar-label"><strong>October</strong><span>15</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:2%"></div></div></div>
+        <div class="modal-bar"><div class="modal-bar-label"><strong>November</strong><span>2</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:1%"></div></div></div>
+        <div class="modal-bar"><div class="modal-bar-label"><strong>December</strong><span>1</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:1%"></div></div></div>
+      </div>
+    </div>
+
+    <!-- 05 Modal Mix -->
+    <div class="card">
+      <div class="card-header"><span class="accent">05</span> Modal Mix — 2025</div>
+      <div class="card-body">
+        <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;">2,319 total shipments</div>
+        <div class="modal-bar"><div class="modal-bar-label"><strong>Truck 🛣</strong><span>2,079 · 89.7% · USD 14.78M · 37.35M kg</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:100%"></div></div></div>
+        <div class="modal-bar"><div class="modal-bar-label"><strong>Rail 🚆</strong><span>205 · 8.8% · USD 7.41M · 14.17M kg</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:10%"></div></div></div>
+        <div class="modal-bar"><div class="modal-bar-label"><strong>Maritime 🚢</strong><span>35 · 1.5% · USD 0.72M · 2.36M kg</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:2%"></div></div></div>
+        <div style="margin-top:12px;padding:10px;background:rgba(0,180,216,0.05);border-radius:5px;border:1px solid rgba(0,180,216,0.15);"><strong style="font-size:11px;color:var(--navy);">Interpretation:</strong><span style="font-size:11px;color:var(--text-muted);"> The account is primarily a cross-border truck operation with meaningful rail exposure. Maritime is limited and should be treated as secondary.</span></div>
+      </div>
+    </div>
+
+    <!-- 06 Customs / Port Intelligence -->
+    <div class="card">
+      <div class="card-header"><span class="accent">06</span> Customs / Port Intelligence</div>
+      <div class="card-body">
+        <table class="hub-table">
+          <thead><tr><th>Hub</th><th>Shipments</th><th>Mode</th><th>Operational Signal</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Ciudad Camargo, Tamaulipas</strong></td><td>1,024</td><td>Truck</td><td style="color:var(--text-muted);">Main border dependency</td></tr>
+            <tr><td><strong>Ciudad Juárez, Chihuahua</strong></td><td>551</td><td>Truck + Rail</td><td style="color:var(--text-muted);">Core northern corridor</td></tr>
+            <tr><td><strong>Puente Internacional Zaragoza-Isleta, Ciudad Juárez</strong></td><td>364</td><td>Truck</td><td style="color:var(--text-muted);">Border flow concentration</td></tr>
+            <tr><td><strong>Mexicali, Baja California</strong></td><td>254</td><td>Truck</td><td style="color:var(--text-muted);">Western border corridor</td></tr>
+            <tr><td><strong>Piedras Negras, Coahuila</strong></td><td>53</td><td>Rail</td><td style="color:var(--text-muted);">Rail exposure</td></tr>
+            <tr><td><strong>Veracruz, Veracruz</strong></td><td>35</td><td>Maritime</td><td style="color:var(--text-muted);">Limited ocean activity</td></tr>
+            <tr><td><strong>Tijuana, Baja California</strong></td><td>21</td><td>Truck</td><td style="color:var(--text-muted);">Minor border activity</td></tr>
+            <tr><td><strong>Colombia, Nuevo León</strong></td><td>17</td><td>Truck</td><td style="color:var(--text-muted);">Minor border activity</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:12px;padding:10px;background:rgba(0,180,216,0.05);border-radius:5px;border:1px solid rgba(0,180,216,0.15);"><strong style="font-size:11px;color:var(--navy);">Interpretation:</strong><span style="font-size:11px;color:var(--text-muted);"> The operation depends heavily on northern Mexico border corridors. Ciudad Camargo and Ciudad Juárez represent the most important operational pressure points.</span></div>
+      </div>
+    </div>
+
+    <!-- 07 Geographic Intelligence -->
+    <div class="card">
+      <div class="card-header"><span class="accent">07</span> Geographic Intelligence</div>
+      <div class="card-body">
+        <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;">Shipment Origin</div>
+        <div class="modal-bar"><div class="modal-bar-label"><strong>🇺🇸 United States</strong><span>2,302 · 99.3%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:100%"></div></div></div>
+        <div class="modal-bar"><div class="modal-bar-label"><strong>🇨🇦 Canada</strong><span>17 · 0.7%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:1%"></div></div></div>
+        <div style="margin-top:12px;padding:10px;background:rgba(0,180,216,0.05);border-radius:5px;border:1px solid rgba(0,180,216,0.15);"><strong style="font-size:11px;color:var(--navy);">Interpretation:</strong><span style="font-size:11px;color:var(--text-muted);"> This is a North America supply chain. Complexity is driven less by global origin diversity and more by cross-border execution, customs coordination, Shipment recurrence and capacity planning.</span></div>
+      </div>
+    </div>
+
+    <!-- 08 Supplier / Customer / Counterparty Intelligence -->
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header"><span class="accent">08</span> Shippers</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <thead><tr><th>Shipper</th><th>Shipments</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Mckinley Paper Co.</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">2,298</td></tr>
+              <tr><td><strong>Mckinley Paper Co. Lockbox</strong></td><td style="text-align:right;">21</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><span class="accent">08</span> Consignees</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <thead><tr><th>Consignee</th><th>Shipments</th><th>%</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Bio Pappel Sa De Cv</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">2,298</td><td style="text-align:right;">99.1%</td></tr>
+              <tr><td><strong>V Nor S De Rl De Cv</strong></td><td style="text-align:right;">19</td><td style="text-align:right;">0.8%</td></tr>
+              <tr><td><strong>Smartco De Mexico S. De R.L. De C.V.</strong></td><td style="text-align:right;">2</td><td style="text-align:right;">0.1%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:12px 16px;background:rgba(0,180,216,0.05);">
+        <strong style="font-size:11px;color:var(--navy);">Interpretation:</strong>
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> The visible customer universe is highly concentrated in Bio Pappel. This likely creates strong continuity-of-supply requirements and makes visibility, customs execution and predictable cross-border performance commercially relevant.</span>
+      </div>
+    </div>
+
+    <!-- 09 Top 5 HS Codes -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">09</span> Top 5 HS Codes</div>
+      <div class="card-body" style="padding:12px 16px;background:rgba(245,158,11,0.05);">
+        <strong style="font-size:11px;color:#b45309;">Note:</strong>
+        <span style="font-size:11px;color:var(--text-muted);"> HS Codes are measured by operational presence. Some Shipments contain multiple HS Codes, so HS counts are not additive.</span>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body">
+        <table class="hub-table">
+          <thead><tr><th>HS Code</th><th>Operational Presence</th><th>% of Shipments</th><th>Product Interpretation</th><th>AIOS Interpretation</th></tr></thead>
+          <tbody>
+            <tr><td><strong>4707100100</strong></td><td>1,372</td><td>59.2%</td><td>Desperdicio de papel y cartón, including corrugated paper/cardboard</td><td style="color:var(--text-muted);">Core recycled fiber supply. High repetition, heavy cross-border dependency, documentation sensitivity and continuity-of-supply importance.</td></tr>
+            <tr><td><strong>4805199900</strong></td><td>287</td><td>12.4%</td><td>Recycled medium paper in rolls</td><td style="color:var(--text-muted);">Industrial paper input for packaging/corrugated production. Requires consistent delivery and production coordination.</td></tr>
+            <tr><td><strong>4805250299</strong></td><td>262</td><td>11.3%</td><td>Recycled testliner paper in rolls</td><td style="color:var(--text-muted);">Roll-based paper flow with weight, handling and delivery timing sensitivity.</td></tr>
+            <tr><td><strong>4804110100</strong></td><td>199</td><td>8.6%</td><td>Kraft liner paper rolls</td><td style="color:var(--text-muted);">Higher-value paper input for packaging/corrugated applications, linked to industrial continuity and customs accuracy.</td></tr>
+            <tr><td><strong>4707209100</strong></td><td>163</td><td>7.0%</td><td>White paper or cardboard waste</td><td style="color:var(--text-muted);">Complements recycled fiber supply base and increases classification/documentation sensitivity.</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:12px;padding:10px 14px;background:rgba(13,43,94,0.03);border-radius:5px;border:1px solid var(--border);"><strong style="font-size:11px;color:var(--navy);">Portfolio Trend:</strong><span style="font-size:11px;color:var(--text-muted);"> Not calculable because only 2025 data was available.</span></div>
+      </div>
+    </div>
+
+    <!-- 10 Operational Complexity -->
+    <div class="card">
+      <div class="card-header"><span class="accent">10</span> Operational Complexity</div>
+      <div class="card-body">
+        <div class="fit-score-grid">
+          <div class="fit-score-item"><div class="fit-score-name">Volume Intensity</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:85%"></div></div><div class="fit-score-pct">HIGH</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Modal Diversity</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:55%"></div></div><div class="fit-score-pct">MEDIUM</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Cross-Border Exposure</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:97%"></div></div><div class="fit-score-pct">VERY HIGH</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Rail Exposure</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:55%"></div></div><div class="fit-score-pct">MEDIUM</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Ocean Exposure</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:25%"></div></div><div class="fit-score-pct">LOW</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Customs Sensitivity</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:85%"></div></div><div class="fit-score-pct">HIGH</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Supplier Diversity</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:25%"></div></div><div class="fit-score-pct">LOW</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Customer Concentration</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:97%"></div></div><div class="fit-score-pct">VERY HIGH</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">HS Portfolio Complexity</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:55%"></div></div><div class="fit-score-pct">MEDIUM</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">ILM / Control Tower Potential</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:78%"></div></div><div class="fit-score-pct">MEDIUM-HIGH</div></div></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:14px;">
+          <span style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);">Complexity Level</span>
+          <span class="classification-badge" style="font-size:14px;color:#f59e0b;background:rgba(245,158,11,0.12);border-radius:4px;padding:3px 8px;">Medium-High</span>
+        </div>
+        <div style="margin-top:12px;padding:10px;background:rgba(13,43,94,0.03);border-radius:5px;border:1px solid var(--border);"><strong style="font-size:11px;color:var(--navy);">Interpretation:</strong><span style="font-size:11px;color:var(--text-muted);"> Complexity comes from volume, recurrence, cross-border concentration, picos mensuales, customs dependency and customer concentration, not from broad global diversification.</span></div>
+      </div>
+    </div>
+
+    <!-- 11 Pain Mapping -->
+    <div class="card">
+      <div class="card-header"><span class="accent">11</span> Operational Signal → Pain Mapping</div>
+      <div class="card-body">
+        <div class="signal-grid">
+          <div class="signal-item high"><div class="signal-title">Cross-border visibility gaps</div><div class="signal-prob high">HIGH PROBABILITY</div><div class="signal-desc">2,246 Shipments through northern border corridors excluding Veracruz. Akzent angle: Control Tower by border/corridor.</div></div>
+          <div class="signal-item high"><div class="signal-title">Truck capacity dependency</div><div class="signal-prob high">HIGH PROBABILITY</div><div class="signal-desc">89.7% truck. Akzent angle: Carrier planning, capacity management and proactive tracking.</div></div>
+          <div class="signal-item"><div class="signal-title">Rail + truck coordination</div><div class="signal-prob medium-high">MEDIUM-HIGH</div><div class="signal-desc">205 rail Shipments. Akzent angle: Multimodal coordination and exception handling.</div></div>
+          <div class="signal-item high"><div class="signal-title">Customs / documentation sensitivity</div><div class="signal-prob high">HIGH PROBABILITY</div><div class="signal-desc">Multiple customs points and recurring HS Codes. Akzent angle: Customs &amp; documentation control.</div></div>
+          <div class="signal-item high"><div class="signal-title">Customer continuity pressure</div><div class="signal-prob high">HIGH PROBABILITY</div><div class="signal-desc">Bio Pappel concentration at 99.1%. Akzent angle: Supply continuity reporting and escalation management.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12 Multimodal Opportunity -->
+    <div class="card">
+      <div class="card-header"><span class="accent">12</span> Multimodal Opportunity</div>
+      <div class="card-body">
+        <table class="hub-table">
+          <thead><tr><th>Mode</th><th>Opportunity</th><th>Reason</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Cross-Border</strong></td><td><span class="classification-badge" style="font-size:11px;color:#b45309;background:rgba(245,158,11,0.12);border-radius:4px;padding:2px 7px;">HIGH</span></td><td style="color:var(--text-muted);">Dominant truck activity, recurring northern border flows, strong concentration in Ciudad Camargo and Ciudad Juárez.</td></tr>
+            <tr><td><strong>Rail</strong></td><td><span class="classification-badge aa" style="font-size:11px;">MEDIUM-HIGH</span></td><td style="color:var(--text-muted);">Rail is secondary by Shipment count but significant by weight/value.</td></tr>
+            <tr><td><strong>Ocean</strong></td><td><span class="classification-badge" style="font-size:11px;color:var(--teal);background:rgba(0,180,216,0.1);border-radius:4px;padding:2px 7px;">LOW-MEDIUM</span></td><td style="color:var(--text-muted);">Only 35 maritime Shipments through Veracruz.</td></tr>
+            <tr><td><strong>Air Freight</strong></td><td><span class="classification-badge" style="font-size:11px;color:var(--text-muted);background:rgba(148,163,184,0.15);border-radius:4px;padding:2px 7px;">LOW / NOT VISIBLE</span></td><td style="color:var(--text-muted);">No air Shipments were present in the source file.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 13 ILM / Control Tower Opportunity -->
+    <div class="card">
+      <div class="card-header"><span class="accent">13</span> ILM / Control Tower Opportunity</div>
+      <div class="card-body">
+        <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px;">
+          <span style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);">ILM Potential</span>
+          <span class="classification-badge aa" style="font-size:14px;">Medium-High</span>
+        </div>
+        <ul class="q-list">
+          <li>Centralized cross-border Shipment visibility</li>
+          <li>Border capacity calendar</li>
+          <li>Customs documentation tracking</li>
+          <li>Rail + truck exception management</li>
+          <li>Shipment reporting by consignee, port, mode and HS Code</li>
+          <li>Peak-volume planning</li>
+          <li>Bio Pappel continuity-of-supply dashboarding</li>
+        </ul>
+        <div style="margin-top:12px;padding:10px 14px;background:rgba(0,180,216,0.05);border-radius:5px;border:1px solid rgba(0,180,216,0.15);">
+          <strong style="font-size:11px;color:var(--navy);">Position Akzent as:</strong>
+          <span style="font-size:11px;color:var(--text-muted);"> Operational Complexity Partner · Multimodal Coordination Partner · Customs &amp; Visibility Partner · ILM / Control Tower Partner. Do not position Akzent as a transactional freight provider.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 14 AIOS Classification -->
+    <div class="card">
+      <div class="card-header"><span class="accent">14</span> AIOS Classification</div>
+      <div class="card-body">
+        <table class="hub-table">
+          <tbody>
+            <tr><td><strong>Relationship Status</strong></td><td style="text-align:right;"><span class="classification-badge lead" style="font-size:11px;">LEAD</span></td></tr>
+            <tr><td><strong>AIOS Classification</strong></td><td style="text-align:right;"><span class="classification-badge aa" style="font-size:11px;">AA</span></td></tr>
+            <tr><td><strong>Strategic Fit</strong></td><td style="text-align:right;">AA</td></tr>
+            <tr><td><strong>Operational Complexity</strong></td><td style="text-align:right;">Medium-High</td></tr>
+            <tr><td><strong>Modal Diversity</strong></td><td style="text-align:right;">Medium</td></tr>
+            <tr><td><strong>Cross-Border Exposure</strong></td><td style="text-align:right;">Very High</td></tr>
+            <tr><td><strong>Ocean Exposure</strong></td><td style="text-align:right;">Low</td></tr>
+            <tr><td><strong>Air Exposure</strong></td><td style="text-align:right;color:var(--text-muted);">Not visible</td></tr>
+            <tr><td><strong>Customs Sensitivity</strong></td><td style="text-align:right;">High</td></tr>
+            <tr><td><strong>ILM / Control Tower Potential</strong></td><td style="text-align:right;">Medium-High</td></tr>
+            <tr><td><strong>Commercial Attractiveness</strong></td><td style="text-align:right;">High</td></tr>
+            <tr><td><strong>Account Priority</strong></td><td style="text-align:right;font-weight:700;color:#b45309;">PRIORITY TARGET</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:12px;padding:12px 16px;background:rgba(13,43,94,0.03);border-radius:6px;border:1px solid var(--border);">
+          <strong style="font-size:11px;color:var(--navy);">Final verdict:</strong>
+          <span style="font-size:12px;color:var(--text-muted);line-height:1.6;"> McKinley Paper Company is an AA Strategic Target. The strongest opportunity for Akzent is cross-border control, customs visibility, rail/truck coordination and Control Tower support for recurrent Mexico inbound Shipments.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 15 Commercial Positioning -->
+    <div class="card">
+      <div class="card-header"><span class="accent">15</span> Commercial Positioning</div>
+      <div class="card-body">
+        <div class="positioning-box">
+          <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,0.6);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;">Positioning Statement</div>
+          <div class="positioning-example">"Vemos una operación de alto volumen hacia México, muy concentrada en cross-border y con una relación fuerte hacia Bio Pappel. Normalmente este tipo de flujo requiere mucha disciplina en coordinación de frontera, agentes aduanales, capacidad terrestre/rail y visibilidad para evitar impactos en continuidad de suministro."</div>
+          <div class="grid-2" style="gap:12px;margin-top:14px;">
+            <div>
+              <div style="font-size:11px;font-weight:700;color:var(--teal);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;">What to sell first</div>
+              <ul class="q-list" style="color:#fff;">
+                <li>Cross-border coordination</li>
+                <li>Customs visibility</li>
+                <li>Control Tower for recurrent Shipments</li>
+                <li>Rail + truck coordination</li>
+                <li>Exception management</li>
+                <li>Reporting by lane, consignee, customs and HS Code</li>
+              </ul>
+            </div>
+            <div>
+              <div style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.6);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;">What not to sell first</div>
+              <ul class="q-list" style="color:rgba(255,255,255,0.75);">
+                <li>Spot freight</li>
+                <li>Generic trucking rates</li>
+                <li>Traditional freight provider pitch</li>
+                <li>Ocean-first pitch</li>
+                <li>Air freight pitch</li>
+              </ul>
+            </div>
+          </div>
+          <div class="capability-tags">
+            <span class="cap-tag">Cross-Border Control</span>
+            <span class="cap-tag">Customs Visibility</span>
+            <span class="cap-tag">Control Tower</span>
+            <span class="cap-tag">Rail + Truck Coordination</span>
+            <span class="cap-tag">Exception Management</span>
+            <span class="cap-tag">ILM</span>
+            <span class="cap-tag">Continuity of Supply</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 16 Discovery Questions -->
+    <div class="card">
+      <div class="card-header"><span class="accent">16</span> Discovery Question Engine</div>
+      <div class="card-body">
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Cross-Border Control</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>How are recurrent Mexico inbound Shipments coordinated today?</li>
+              <li>What visibility exists before, during and after border crossing?</li>
+              <li>Where do exceptions usually happen: origin, border, customs broker or final delivery?</li>
+              <li>Which border corridors create the most operational pressure?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Bio Pappel / Customer Continuity</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>How critical is supply continuity for Bio Pappel?</li>
+              <li>Are there fixed delivery windows or inventory buffers?</li>
+              <li>What happens operationally when a Shipment is delayed?</li>
+              <li>Does the customer require specific reporting or visibility?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Rail / Truck Coordination</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>What defines whether a Shipment moves by truck or rail?</li>
+              <li>Is rail used for cost, capacity or product type?</li>
+              <li>Who monitors intermodal exceptions?</li>
+              <li>Is there an opportunity to centralize visibility across both modes?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Customs / Documentation</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>How many customs brokers participate in the operation?</li>
+              <li>Is documentation centralized or handled by lane?</li>
+              <li>Where do documentation issues occur most frequently?</li>
+              <li>How is documentation compliance measured by Shipment?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>ILM / Control Tower</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>Would a centralized view by border, customer, mode and HS Code be useful?</li>
+              <li>What operational reports are used today?</li>
+              <li>Are exceptions handled proactively or reactively?</li>
+              <li>What information is needed to anticipate volume peaks?</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 17 Strategic Expansion Trajectory -->
+    <div class="card">
+      <div class="card-header"><span class="accent">17</span> Strategic Expansion Trajectory</div>
+      <div class="card-body">
+        <div class="phase-grid">
+          <div class="phase-card"><div class="phase-num">Phase 1</div><div class="phase-title">Diagnostic Entry</div><ul class="phase-items"><li>Present Panjiva findings</li><li>Validate real 2026 volume</li><li>Confirm freight control party</li><li>Identify logistics/compliance stakeholders</li></ul></div>
+          <div class="phase-card"><div class="phase-num">Phase 2</div><div class="phase-title">Cross-Border Visibility</div><ul class="phase-items"><li>Pilot visibility for main border corridors</li><li>Segment Ciudad Camargo, Ciudad Juárez, Zaragoza-Isleta and Mexicali</li><li>Track crossing exceptions</li></ul></div>
+          <div class="phase-card"><div class="phase-num">Phase 3</div><div class="phase-title">Rail + Truck Coordination</div><ul class="phase-items"><li>Integrate truck/rail reporting</li><li>Identify capacity and reliability opportunities</li><li>Build exception workflow</li></ul></div>
+          <div class="phase-card"><div class="phase-num">Phase 4</div><div class="phase-title">ILM / Control Tower</div><ul class="phase-items"><li>Centralize operational control</li><li>Integrate customs, carriers and reporting</li><li>Position Akzent as continuity-of-supply partner</li></ul></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 </main>
 
 <script>
@@ -29803,6 +30327,7 @@ const ACCOUNTS = [
   { id:'view-veritiv', name:'Veritiv S.A. de C.V.', sub:'Industrial Packaging / Corrugated &amp; Plastic Packaging · Cross-Border + Customs + Visibility · Panjiva Imports + Exports', rel:'LEAD', cls:'AA', clsPill:'aa' },
   { id:'view-bio-pappel', name:'Bio Pappel SA de CV', sub:'Paper &amp; Packaging Manufacturing · Cross-Border · Rail · Maritime · Customs Complexity · Panjiva Imports + Exports', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
   { id:'view-metalicas-titan', name:'Manufacturas Metálicas Titan', sub:'Industrial Manufacturing · Metal Components · Lighting Parts · Cuautitlán Izcalli, MX · Panjiva Mexico Exports', rel:'LEAD', cls:'AA', clsPill:'aa' },
+  { id:'view-mckinley', name:'McKinley Paper Company', sub:'Paper / Packaging / Recycled Fiber &amp; Corrugated Supply Chain · Mexico Inbound · Cross-Border · Truck + Rail · Panjiva Mexico Imports', rel:'LEAD', cls:'AA', clsPill:'aa' },
 ];
 const MODULES = [
   { id:'view-network',     name:'Network Intelligence', sub:'Cross-account analysis · Lane overlap' },
@@ -29912,7 +30437,8 @@ var INDUSTRY_BY_ID = {
   'view-marquardt':'Auto', 'view-invevni':'Paper', 'view-rassini':'Auto',
   'view-fabrica-mermeladas':'Food', 'view-se-bordnetze':'Auto',
   'view-sumitomo-hardmetal':'Industrial', 'view-tecnoglobal-ph7':'Cosmetics',
-  'view-veritiv':'Packaging', 'view-bio-pappel':'Paper', 'view-metalicas-titan':'Industrial'
+  'view-veritiv':'Packaging', 'view-bio-pappel':'Paper', 'view-metalicas-titan':'Industrial',
+  'view-mckinley':'Paper'
 };
 
 var UNRESOLVED_ACCOUNTS = [];
