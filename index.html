@@ -1261,6 +1261,10 @@ main {
       <span>◆</span> <span style="flex:1;">Grupo Sanfer</span>
       <span class="recent-cls aaa">AAA</span>
     </div>
+    <div class="nav-item" onclick="showView('view-yofc', this)">
+      <span>◆</span> <span style="flex:1;">Yofc International Mexico</span>
+      <span class="recent-cls aa">AA</span>
+    </div>
   </div>
 
   <div class="nav-divider"></div>
@@ -2010,6 +2014,30 @@ main {
         <span class="acct-tag">LATAM exports</span>
         <span class="acct-tag">Customs visibility</span>
         <span class="acct-tag">Control Tower fit</span>
+      </div>
+    </div>
+
+    <!-- Yofc International Mexico -->
+    <div class="account-card aa" onclick="showViewById('view-yofc')">
+      <div class="account-card-header">
+        <div>
+          <div class="account-name">Yofc International Mexico</div>
+          <div class="account-industry">Telecommunications Infrastructure / Fiber Optic Components</div>
+        </div>
+        <span class="account-cls-badge aa">AA</span>
+      </div>
+      <div class="account-metrics">
+        <div class="acct-metric"><div class="acct-metric-val">183</div><div class="acct-metric-lbl">Import Shipments</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">$40.44M</div><div class="acct-metric-lbl">CIF Value</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">93%</div><div class="acct-metric-lbl">Manzanillo</div></div>
+      </div>
+      <div class="account-tags">
+        <span class="acct-tag" style="background:rgba(245,158,11,0.12);color:#b45309;border-color:rgba(245,158,11,0.3);">LEAD</span>
+        <span class="acct-tag">Fiber Optics</span>
+        <span class="acct-tag">Manzanillo</span>
+        <span class="acct-tag">China Sourcing</span>
+        <span class="acct-tag">Ocean Control</span>
+        <span class="acct-tag">ILM fit</span>
       </div>
     </div>
 
@@ -12168,7 +12196,7 @@ main {
       <div class="page-header-sub">Cross-account analysis · Lane overlap · Strategic prioritization</div>
     </div>
     <div class="page-header-meta">
-      <div style="font-size:11px;color:rgba(255,255,255,0.5);">32 ACCOUNTS</div>
+      <div style="font-size:11px;color:rgba(255,255,255,0.5);">33 ACCOUNTS</div>
     </div>
   </div>
   <div class="content-body">
@@ -12735,6 +12763,16 @@ main {
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
               <td style="color:#b45309;font-weight:700;font-size:11px;">★ TARGET</td>
+            </tr>
+            <tr>
+              <td><strong>Yofc International Mexico</strong> <span style="font-size:10px;font-weight:600;color:#b45309;background:rgba(245,158,11,0.12);padding:1px 5px;border-radius:3px;margin-left:4px;">LEAD</span></td>
+              <td><span class="cls-pill aa">AA</span></td>
+              <td style="color:var(--text-muted);">Telecom Infrastructure / Fiber Optic Components</td>
+              <td><div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td><div class="dots"><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div></td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td style="color:#b45309;font-weight:700;font-size:11px;">★ LEAD</td>
             </tr>
           </tbody>
         </table>
@@ -30871,6 +30909,7 @@ const ACCOUNTS = [
   { id:'view-metalicas-titan', name:'Manufacturas Metálicas Titan', sub:'Industrial Manufacturing · Metal Components · Lighting Parts · Cuautitlán Izcalli, MX · Panjiva Mexico Exports', rel:'LEAD', cls:'AA', clsPill:'aa' },
   { id:'view-mckinley', name:'McKinley Paper Company', sub:'Paper / Packaging / Recycled Fiber &amp; Corrugated Supply Chain · Mexico Inbound · Cross-Border · Truck + Rail · Panjiva Mexico Imports', rel:'LEAD', cls:'AA', clsPill:'aa' },
   { id:'view-grupo-sanfer', name:'Grupo Sanfer', sub:'Pharma · Biotech · Packaging · Regulated Products · Multi-Entity Group · Air-Dominant · LATAM Exports · Customs Complexity · Panjiva Mexico Imports + Exports', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
+  { id:'view-yofc', name:'Yofc International Mexico', sub:'Telecommunications Infrastructure / Fiber Optic Components · Import-led Asia Sourcing · Manzanillo Maritime · China Sourcing · Ocean Control · ILM / Control Tower · Panjiva Mexico Imports', rel:'LEAD', cls:'AA', clsPill:'aa' },
 ];
 const MODULES = [
   { id:'view-network',     name:'Network Intelligence', sub:'Cross-account analysis · Lane overlap' },
@@ -30981,7 +31020,7 @@ var INDUSTRY_BY_ID = {
   'view-fabrica-mermeladas':'Food', 'view-se-bordnetze':'Auto',
   'view-sumitomo-hardmetal':'Industrial', 'view-tecnoglobal-ph7':'Cosmetics',
   'view-veritiv':'Packaging', 'view-bio-pappel':'Paper', 'view-metalicas-titan':'Industrial',
-  'view-mckinley':'Paper', 'view-grupo-sanfer':'Pharma'
+  'view-mckinley':'Paper', 'view-grupo-sanfer':'Pharma', 'view-yofc':'Telecom'
 };
 
 var UNRESOLVED_ACCOUNTS = [];
