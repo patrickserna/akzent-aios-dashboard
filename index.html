@@ -624,6 +624,12 @@ main {
   gap: 8px;
 }
 .card-header .accent { color: var(--teal); }
+/* Sub-card headers override the base navy background with a light tint via inline
+   style; the base rule keeps color:#fff, which is invisible on those tints. Force
+   dark text whenever a light background override is present. Higher specificity
+   (class + attribute) beats the base .card-header rule; the inline style only sets
+   background, so color is not overridden. */
+.card-header[style*="background:rgba"] { color: var(--navy); }
 .card-body { padding: 18px; }
 
 /* ── GRID LAYOUTS ── */
