@@ -1279,6 +1279,10 @@ main {
       <span>◆</span> <span style="flex:1;">HIROTEC México</span>
       <span class="recent-cls aaa">AAA</span>
     </div>
+    <div class="nav-item" onclick="showView('view-sisflex', this)">
+      <span>◆</span> <span style="flex:1;">SISFLEX</span>
+      <span class="recent-cls aa">AA</span>
+    </div>
   </div>
 
   <div class="nav-divider"></div>
@@ -1340,7 +1344,7 @@ main {
   <div class="home-stats-row">
     <div class="stat-box">
       <div class="stat-label" id="stat-total-label">Total Accounts</div>
-      <div class="stat-value" id="stat-total-val">51</div>
+      <div class="stat-value" id="stat-total-val">52</div>
     </div>
     <div class="stat-box">
       <div class="stat-label">AAA Accounts</div>
@@ -1348,11 +1352,11 @@ main {
     </div>
     <div class="stat-box">
       <div class="stat-label">AA / AA+ Accounts</div>
-      <div class="stat-value teal" id="stat-aa-val">29</div>
+      <div class="stat-value teal" id="stat-aa-val">30</div>
     </div>
     <div class="stat-box">
       <div class="stat-label">ILM Candidates</div>
-      <div class="stat-value">16</div>
+      <div class="stat-value">17</div>
     </div>
     <div class="stat-box">
       <div class="stat-label">Industries</div>
@@ -2076,6 +2080,30 @@ main {
         <span class="acct-tag">Manzanillo</span>
         <span class="acct-tag">Air urgency</span>
         <span class="acct-tag">ILM fit</span>
+      </div>
+    </div>
+
+    <!-- SISFLEX -->
+    <div class="account-card aa" onclick="showViewById('view-sisflex')">
+      <div class="account-card-header">
+        <div>
+          <div class="account-name">SISFLEX</div>
+          <div class="account-industry">Industrial Manufacturing · Thermal Systems</div>
+        </div>
+        <span class="account-cls-badge aa">AA</span>
+      </div>
+      <div class="account-metrics">
+        <div class="acct-metric"><div class="acct-metric-val">450</div><div class="acct-metric-lbl">2026 YTD Shipments</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">72%</div><div class="acct-metric-lbl">Export Mix</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">NLD</div><div class="acct-metric-lbl">Core Hub</div></div>
+      </div>
+      <div class="account-tags">
+        <span class="acct-tag" style="background:rgba(245,158,11,0.12);color:#b45309;border-color:rgba(245,158,11,0.3);">LEAD</span>
+        <span class="acct-tag">Nuevo Laredo</span>
+        <span class="acct-tag">IMMEX / Returns</span>
+        <span class="acct-tag">Heat Exchangers</span>
+        <span class="acct-tag">Cross-Border</span>
+        <span class="acct-tag">Control Tower Fit</span>
       </div>
     </div>
 
@@ -12914,6 +12942,16 @@ main {
               <td><div class="dots"><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div></td>
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
               <td style="color:#b45309;font-weight:700;font-size:11px;">★ LEAD</td>
+            </tr>
+            <tr>
+              <td><strong>SISFLEX</strong> <span style="font-size:10px;font-weight:600;color:#b45309;background:rgba(245,158,11,0.12);padding:1px 5px;border-radius:3px;margin-left:4px;">LEAD</span></td>
+              <td><span class="cls-pill aa">AA</span></td>
+              <td style="color:var(--text-muted);" title="Relationship Status LEAD · AIOS Classification AA · Volume 450 Shipments 2026 YTD / 797 Shipments FY2025 · Primary Signal Nuevo Laredo + IMMEX + recurring US export customers · Cross-Border Very High · Ocean Low · Air Low · ILM Fit High · Priority Target">Industrial Manufacturing / Thermal Systems</td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td><div class="dots"><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div></td>
+              <td><div class="dots"><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div></td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot"></div></div></td>
+              <td style="color:#b45309;font-weight:700;font-size:11px;">★ PRIORITY TARGET</td>
             </tr>
           </tbody>
         </table>
@@ -31939,6 +31977,419 @@ main {
   </div>
 </div>
 
+<!-- ══ SISFLEX VIEW ══ -->
+<div id="view-sisflex" class="view">
+  <div class="page-header">
+    <div class="page-header-left">
+      <div class="page-header-eyebrow">Target Account · LEAD Analysis</div>
+      <div class="page-header-title">SISFLEX</div>
+      <div class="page-header-sub">Industrial Manufacturing · Heat Exchangers · HVAC / Refrigeration Components · Nuevo Laredo Cross-Border</div>
+    </div>
+    <div class="page-header-meta">
+      <span class="classification-badge lead">LEAD</span>
+      <span class="classification-badge aa">AA</span>
+      <button class="print-btn" onclick="printView('view-sisflex')">⬇ Export PDF</button>
+    </div>
+  </div>
+  <div class="content-body">
+
+    <!-- LEAD source banner -->
+    <div class="card">
+      <div class="card-body" style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+        <span class="classification-badge lead">LEAD</span>
+        <span class="classification-badge aa">AA</span>
+        <span style="font-size:12px;color:var(--text-muted);line-height:1.6;">
+          <strong style="color:var(--navy);">Relationship Status: LEAD (pre-commercial).</strong> SISFLEX, S.A. de C.V. is not operated by Akzent. All analysis is built exclusively on <strong>Panjiva imports + Panjiva exports</strong> as the visible universe — no Akzent shipment data is included. The <strong>AIOS Classification AA</strong> reflects strategic fit and operational complexity and is shown separately from — and is independent of — the LEAD relationship badge.
+        </span>
+      </div>
+    </div>
+
+    <!-- Panjiva Visibility Metrics -->
+    <div class="grid-4">
+      <div class="stat-box"><div class="stat-label">2026 YTD Shipments</div><div class="stat-value teal">450</div><div class="stat-sub">326 exports · 124 imports</div></div>
+      <div class="stat-box"><div class="stat-label">2025 Shipments</div><div class="stat-value" style="font-size:22px;">797</div><div class="stat-sub">603 exports · 194 imports</div></div>
+      <div class="stat-box"><div class="stat-label">Export Mix — 2026 YTD</div><div class="stat-value" style="font-size:22px;">72.4%</div><div class="stat-sub">Export-led operating profile</div></div>
+      <div class="stat-box"><div class="stat-label">Core Hub</div><div class="stat-value" style="font-size:22px;">Nuevo Laredo</div><div class="stat-sub">Dominant cross-border node</div></div>
+    </div>
+
+    <!-- 01 Executive Intelligence Summary -->
+    <div class="card">
+      <div class="card-header"><span class="accent">01</span> Executive Intelligence Summary</div>
+      <div class="card-body">
+        <p style="font-size:13px;line-height:1.7;">SISFLEX shows an industrial manufacturing operation focused on metal fabrication and components for thermal equipment, HVAC, refrigeration, and heat exchangers. Panjiva shows a clearly export-led operation, with <strong>326 Export Shipments in 2026 YTD</strong> and <strong>603 Export Shipments in 2025</strong>, supported by inbound supply of steel, parts, spare parts, and industrial components.</p>
+        <p style="font-size:13px;line-height:1.7;margin-top:10px;">The account has strong fit for Akzent because of its concentration in <strong>Nuevo Laredo</strong>, relevant use of <strong>IMMEX / returns / virtual transfer regimes</strong>, recurring industrial customers in the United States, and the likely need for coordination across plant, customs broker, carrier, and final customer.</p>
+        <div style="background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 6px 6px 0;padding:12px 16px;margin-top:12px;">
+          <strong style="font-size:11px;color:#b45309;text-transform:uppercase;letter-spacing:1px;">⚡ Approach Signal — Source: Panjiva</strong>
+          <p style="font-size:12px;color:var(--text);line-height:1.6;margin-top:4px;">This should not be approached as a transactional transportation opportunity. It should be approached as a <strong>cross-border operational control, customs visibility, exception management, and focused Control Tower / ILM opportunity</strong>.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Relationship Status + AIOS Classification -->
+    <div class="card">
+      <div class="card-header">Relationship Status &amp; AIOS Classification</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:12px;">
+          <div style="padding:14px 16px;background:rgba(245,158,11,0.05);border-radius:6px;border:1px solid var(--border);">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;">Relationship Status</div>
+            <span class="classification-badge lead" style="font-size:14px;">LEAD</span>
+            <p style="font-size:11px;color:var(--text-muted);line-height:1.6;margin-top:8px;">Pre-commercial. Account not yet operated by Akzent.</p>
+          </div>
+          <div style="padding:14px 16px;background:rgba(0,180,216,0.04);border-radius:6px;border:1px solid var(--border);">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;">AIOS Classification</div>
+            <span class="classification-badge aa" style="font-size:14px;">AA</span>
+            <p style="font-size:11px;color:var(--text-muted);line-height:1.6;margin-top:8px;">AA — Strategic Cross-Border Target. Independent of the LEAD badge.</p>
+          </div>
+        </div>
+        <table class="hub-table" style="margin-top:14px;">
+          <tbody>
+            <tr><td><strong>Legal Name</strong></td><td style="text-align:right;">SISFLEX, S.A. de C.V.</td></tr>
+            <tr><td><strong>Industry</strong></td><td style="text-align:right;">Industrial Manufacturing · Heat Exchangers · HVAC / Refrigeration Components · Metal Fabrication</td></tr>
+            <tr><td><strong>Location Signal</strong></td><td style="text-align:right;">Monterrey / Nuevo León</td></tr>
+            <tr><td><strong>Primary Corridor</strong></td><td style="text-align:right;">Nuevo Laredo cross-border</td></tr>
+            <tr><td><strong>Account Priority</strong></td><td style="text-align:right;font-weight:700;color:#b45309;">PRIORITY TARGET</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 02 Shipment Intelligence by Period -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">02</span> Shipment Intelligence by Period</div>
+      <div class="card-body">
+        <p style="font-size:12px;color:var(--text-muted);line-height:1.6;margin-bottom:4px;">Periods are analyzed separately and are not aggregated. <strong>Previous Full Calendar Year: 2025</strong> · <strong>Current YTD: 2026 through June 29, 2026</strong>. Source: Panjiva imports + Panjiva exports.</p>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header" style="background:rgba(13,43,94,0.03);">2025 — Previous Full Calendar Year</div>
+        <div class="card-body">
+          <div class="grid-2" style="gap:10px;">
+            <div class="stat-box"><div class="stat-label">Total Shipments</div><div class="stat-value" style="font-size:22px;">797</div><div class="stat-sub">603 exports · 194 imports</div></div>
+            <div class="stat-box"><div class="stat-label">USD Value</div><div class="stat-value" style="font-size:22px;">$38.10M</div><div class="stat-sub">Declared</div></div>
+          </div>
+          <table class="hub-table" style="margin-top:12px;">
+            <tbody>
+              <tr><td><strong>Total Shipments</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">797</td></tr>
+              <tr><td><strong>Export Shipments</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">603</td></tr>
+              <tr><td><strong>Import Shipments</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">194</td></tr>
+              <tr><td><strong>Export Mix</strong></td><td style="text-align:right;">75.7%</td></tr>
+              <tr><td><strong>Import Mix</strong></td><td style="text-align:right;">24.3%</td></tr>
+              <tr><td><strong>USD Value</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">$38.10M</td></tr>
+              <tr><td><strong>Gross Weight</strong></td><td style="text-align:right;">11.50M kg</td></tr>
+              <tr><td><strong>TEU</strong></td><td style="text-align:right;">1,038.7</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" style="background:rgba(0,180,216,0.05);">2026 YTD — Current Year (through June 29, 2026)</div>
+        <div class="card-body">
+          <div class="grid-2" style="gap:10px;">
+            <div class="stat-box"><div class="stat-label">Total Shipments</div><div class="stat-value teal" style="font-size:22px;">450</div><div class="stat-sub">326 exports · 124 imports</div></div>
+            <div class="stat-box"><div class="stat-label">USD Value</div><div class="stat-value" style="font-size:22px;">$28.29M</div><div class="stat-sub">Declared</div></div>
+          </div>
+          <table class="hub-table" style="margin-top:12px;">
+            <tbody>
+              <tr><td><strong>Total Shipments</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">450</td></tr>
+              <tr><td><strong>Export Shipments</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">326</td></tr>
+              <tr><td><strong>Import Shipments</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">124</td></tr>
+              <tr><td><strong>Export Mix</strong></td><td style="text-align:right;">72.4%</td></tr>
+              <tr><td><strong>Import Mix</strong></td><td style="text-align:right;">27.6%</td></tr>
+              <tr><td><strong>USD Value</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">$28.29M</td></tr>
+              <tr><td><strong>Gross Weight</strong></td><td style="text-align:right;">9.55M kg</td></tr>
+              <tr><td><strong>TEU</strong></td><td style="text-align:right;">868.9</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:12px 16px;background:rgba(0,180,216,0.05);">
+        <strong style="font-size:11px;color:var(--navy);">Insight:</strong>
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> 2026 YTD covers January through June 29, 2026. At 450 Shipments in roughly six visible months, the annualized run-rate is approximately 900 Shipments, above the 797 Shipments recorded in full-year 2025.</span>
+      </div>
+    </div>
+
+    <!-- 03 Trend Intelligence -->
+    <div class="card">
+      <div class="card-header"><span class="accent">03</span> Trend Intelligence</div>
+      <div class="card-body">
+        <table class="hub-table">
+          <thead><tr><th>Variable</th><th style="text-align:right;">2025</th><th style="text-align:right;">2026 YTD</th><th>Signal</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Total Shipments</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">797</td><td style="text-align:right;font-weight:700;color:var(--navy);">450</td><td style="color:var(--text-muted);">YTD run-rate above 2025</td></tr>
+            <tr><td><strong>Export Share</strong></td><td style="text-align:right;">75.7%</td><td style="text-align:right;">72.4%</td><td style="color:var(--text-muted);">Export-led profile remains stable</td></tr>
+            <tr><td><strong>Import Share</strong></td><td style="text-align:right;">24.3%</td><td style="text-align:right;">27.6%</td><td style="color:var(--text-muted);">Imports gaining relative weight</td></tr>
+            <tr><td><strong>USD Value</strong></td><td style="text-align:right;">$38.10M</td><td style="text-align:right;">$28.29M</td><td style="color:var(--text-muted);">High YTD value intensity</td></tr>
+            <tr><td><strong>Gross Weight</strong></td><td style="text-align:right;">11.50M kg</td><td style="text-align:right;">9.55M kg</td><td style="color:var(--text-muted);">Heavy industrial cargo profile</td></tr>
+            <tr><td><strong>Truck Shipments</strong></td><td style="text-align:right;">396</td><td style="text-align:right;">212</td><td style="color:var(--text-muted);">Cross-border backbone</td></tr>
+            <tr><td><strong>Unknown Mode</strong></td><td style="text-align:right;">397</td><td style="text-align:right;">238</td><td style="color:var(--text-muted);">Visibility gap / virtual regime signal</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:12px;padding:10px 14px;background:rgba(13,43,94,0.03);border-radius:5px;border:1px solid var(--border);"><strong style="font-size:11px;color:var(--navy);">Interpretation:</strong><span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> SISFLEX appears to be intensifying operationally in 2026. The account remains export-led, but import value and import share increased in the YTD period, suggesting stronger inbound production input requirements.</span></div>
+      </div>
+    </div>
+
+    <!-- 04 Modal Mix -->
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header"><span class="accent">04</span> Modal Mix — 2025</div>
+        <div class="card-body">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;">797 total Shipments</div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Unknown ◻</strong><span>397 · 49.8%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:100%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Truck 🚛</strong><span>396 · 49.7%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:99.7%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Maritime 🚢</strong><span>2 · 0.3%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:1%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Air ✈</strong><span>2 · 0.3%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:1%"></div></div></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><span class="accent">04</span> Modal Mix — 2026 YTD</div>
+        <div class="card-body">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;">450 total Shipments</div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Unknown ◻</strong><span>238 · 52.9%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:100%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Truck 🚛</strong><span>212 · 47.1%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:89%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Maritime 🚢</strong><span>0 · 0.0%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:0%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Air ✈</strong><span>0 · 0.0%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:0%"></div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:12px 16px;background:rgba(0,180,216,0.05);">
+        <strong style="font-size:11px;color:var(--navy);">Interpretation:</strong>
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> The visible profile is primarily cross-border truck plus a large Unknown-mode component likely tied to virtual, IMMEX, or documentation-heavy records. This reinforces the need to position Akzent around control, visibility, and customs coordination rather than around ocean or air freight.</span>
+      </div>
+    </div>
+
+    <!-- 05 Hub / Customs Intelligence -->
+    <div class="card">
+      <div class="card-header"><span class="accent">05</span> Hub / Customs Intelligence</div>
+      <div class="card-body">
+        <table class="hub-table">
+          <thead><tr><th>Hub / Customs Point</th><th style="text-align:right;">2025 Shipments</th><th style="text-align:right;">2026 YTD Shipments</th><th>Operational Signal</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Nuevo Laredo</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">723 approx.</td><td style="text-align:right;font-weight:700;color:var(--navy);">401 approx.</td><td style="color:var(--text-muted);">Critical cross-border node</td></tr>
+            <tr><td><strong>Monterrey</strong></td><td style="text-align:right;">48</td><td style="text-align:right;">27</td><td style="color:var(--text-muted);">Plant / local operation signal</td></tr>
+            <tr><td><strong>Puebla</strong></td><td style="text-align:right;">21 approx.</td><td style="text-align:right;">17 approx.</td><td style="color:var(--text-muted);">Internal / virtual transfer signal</td></tr>
+            <tr><td><strong>Colombia, NL</strong></td><td style="text-align:right;">1</td><td style="text-align:right;">4</td><td style="color:var(--text-muted);">Secondary cross-border alternative</td></tr>
+            <tr><td><strong>Manzanillo</strong></td><td style="text-align:right;">2</td><td style="text-align:right;">0</td><td style="color:var(--text-muted);">Low current ocean signal</td></tr>
+            <tr><td><strong>MTY Airport</strong></td><td style="text-align:right;">2</td><td style="text-align:right;">0</td><td style="color:var(--text-muted);">Low current air urgency signal</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:12px;padding:10px 14px;background:rgba(13,43,94,0.03);border-radius:5px;border:1px solid var(--border);"><strong style="font-size:11px;color:var(--navy);">Interpretation:</strong><span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> Nuevo Laredo is the dominant operational node. Any commercial approach should prioritize cross-border execution, customs reliability, documentation control, and exception visibility.</span></div>
+      </div>
+    </div>
+
+    <!-- 06 Top HS Code Intelligence -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">06</span> Top HS Code Intelligence</div>
+      <div class="card-body" style="padding:12px 16px;background:rgba(245,158,11,0.05);">
+        <strong style="font-size:11px;color:#b45309;">Note:</strong>
+        <span style="font-size:11px;color:var(--text-muted);"> Some Shipments contain multiple HS Codes. HS counts represent operational presence per Shipment and are not additive.</span>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;margin-bottom:0;">
+      <div class="card-header" style="background:rgba(13,43,94,0.03);">2025 — Top HS Codes</div>
+      <div class="card-body">
+        <table class="hub-table">
+          <thead><tr><th>HS Code</th><th style="text-align:right;">Presence</th><th style="text-align:right;">% of Shipments</th><th>Product Interpretation</th><th>AIOS Signal</th></tr></thead>
+          <tbody>
+            <tr><td><strong>8419900499</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">300</td><td style="text-align:right;">37.6%</td><td>Parts for heat exchangers / heaters</td><td style="color:var(--text-muted);">Core product portfolio</td></tr>
+            <tr><td><strong>4415200299</strong></td><td style="text-align:right;">123</td><td style="text-align:right;">15.4%</td><td>Wooden pallets / crates</td><td style="color:var(--text-muted);">Export packaging dependency</td></tr>
+            <tr><td><strong>7326909999</strong></td><td style="text-align:right;">81</td><td style="text-align:right;">10.2%</td><td>Steel manufactures / supports</td><td style="color:var(--text-muted);">Metal fabrication complexity</td></tr>
+            <tr><td><strong>8418999900</strong></td><td style="text-align:right;">76</td><td style="text-align:right;">9.5%</td><td>Parts for ice machines / refrigeration</td><td style="color:var(--text-muted);">Industrial refrigeration portfolio</td></tr>
+            <tr><td><strong>4407119901</strong></td><td style="text-align:right;">71</td><td style="text-align:right;">8.9%</td><td>Wooden beams / bars</td><td style="color:var(--text-muted);">Packaging / logistics support</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-header" style="background:rgba(0,180,216,0.05);">2026 YTD — Top HS Codes</div>
+      <div class="card-body">
+        <table class="hub-table">
+          <thead><tr><th>HS Code</th><th style="text-align:right;">Presence</th><th style="text-align:right;">% of Shipments</th><th>Product Interpretation</th><th>AIOS Signal</th></tr></thead>
+          <tbody>
+            <tr><td><strong>8419900499</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">173</td><td style="text-align:right;">38.4%</td><td>Parts for heat exchangers</td><td style="color:var(--text-muted);">Stable core product</td></tr>
+            <tr><td><strong>4415200299</strong></td><td style="text-align:right;">64</td><td style="text-align:right;">14.2%</td><td>Wooden pallets / crates</td><td style="color:var(--text-muted);">Export packaging remains structural</td></tr>
+            <tr><td><strong>7326909999</strong></td><td style="text-align:right;">54</td><td style="text-align:right;">12.0%</td><td>Steel manufactures / clamps / supports</td><td style="color:var(--text-muted);">Metal fabrication growing in relative weight</td></tr>
+            <tr><td><strong>8418999900</strong></td><td style="text-align:right;">45</td><td style="text-align:right;">10.0%</td><td>Refrigeration equipment parts</td><td style="color:var(--text-muted);">Industrial refrigeration continuity</td></tr>
+            <tr><td><strong>8415900299</strong></td><td style="text-align:right;">31</td><td style="text-align:right;">6.9%</td><td>Air conditioning parts</td><td style="color:var(--text-muted);">HVAC portfolio signal</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:12px;padding:10px 14px;background:rgba(13,43,94,0.03);border-radius:5px;border:1px solid var(--border);"><strong style="font-size:11px;color:var(--navy);">Portfolio Trend:</strong><span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> The HS portfolio is stable and industrial. Heat exchanger parts remain the dominant operational product family in both periods, supported by packaging, steel fabrication, refrigeration, and HVAC components. This supports a continuity and control conversation with SISFLEX.</span></div>
+      </div>
+    </div>
+
+    <!-- 07 Supplier / Customer Intelligence -->
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header"><span class="accent">07</span> Top Export Customers — 2026 YTD</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <thead><tr><th>Customer</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">USD Value</th><th>Signal</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Hudson Products Corporation</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">116</td><td style="text-align:right;">$5.69M</td><td style="color:var(--text-muted);">Core recurring customer</td></tr>
+              <tr><td><strong>SISFLEX S.A. de C.V.</strong></td><td style="text-align:right;">27</td><td style="text-align:right;">$1.91M</td><td style="color:var(--text-muted);">Possible internal / virtual flow</td></tr>
+              <tr><td><strong>Vertiv Corporation</strong></td><td style="text-align:right;">26</td><td style="text-align:right;">$1.91M</td><td style="color:var(--text-muted);">Strategic industrial customer</td></tr>
+              <tr><td><strong>Kelvion Inc. LLC</strong></td><td style="text-align:right;">21</td><td style="text-align:right;">$0.88M</td><td style="color:var(--text-muted);">Heat exchanger / thermal equipment</td></tr>
+              <tr><td><strong>Rheem Sales Co. Inc.</strong></td><td style="text-align:right;">16</td><td style="text-align:right;">$1.73M</td><td style="color:var(--text-muted);">HVAC / water heating</td></tr>
+              <tr><td><strong>Ymer Technology Inc.</strong></td><td style="text-align:right;">11</td><td style="text-align:right;">$0.29M</td><td style="color:var(--text-muted);">Industrial cooling</td></tr>
+              <tr><td><strong>Generac Power Systems</strong></td><td style="text-align:right;">11</td><td style="text-align:right;">$0.07M</td><td style="color:var(--text-muted);">Power systems</td></tr>
+              <tr><td><strong>Pentair Commercial Ice LLC</strong></td><td style="text-align:right;">10</td><td style="text-align:right;">$0.25M</td><td style="color:var(--text-muted);">Commercial refrigeration</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><span class="accent">07</span> Top Import Suppliers — 2026 YTD</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <thead><tr><th>Supplier</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">USD Value</th><th>Signal</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Unknown</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">74</td><td style="text-align:right;color:var(--text-muted);">N/A</td><td style="color:var(--text-muted);">Supplier visibility gap</td></tr>
+              <tr><td><strong>Amada America Inc.</strong></td><td style="text-align:right;">10</td><td style="text-align:right;">$0.05M</td><td style="color:var(--text-muted);">Machinery / industrial parts</td></tr>
+              <tr><td><strong>S.W. Anderson Co.</strong></td><td style="text-align:right;">6</td><td style="text-align:right;">$0.04M</td><td style="color:var(--text-muted);">Industrial components</td></tr>
+              <tr><td><strong>SISFLEX S.A. de C.V.</strong></td><td style="text-align:right;">5–6</td><td style="text-align:right;">$0.12M approx.</td><td style="color:var(--text-muted);">Internal / related flow signal</td></tr>
+              <tr><td><strong>Alternative Parts Inc.</strong></td><td style="text-align:right;">4</td><td style="text-align:right;">$0.04M</td><td style="color:var(--text-muted);">Industrial spare parts</td></tr>
+              <tr><td><strong>Ryerson Metals de México</strong></td><td style="text-align:right;">2</td><td style="text-align:right;">$0.33M</td><td style="color:var(--text-muted);">Steel / metals</td></tr>
+              <tr><td><strong>ArcelorMittal México</strong></td><td style="text-align:right;">2</td><td style="text-align:right;">$0.09M</td><td style="color:var(--text-muted);">Steel input</td></tr>
+              <tr><td><strong>McMaster Carr Supply Co.</strong></td><td style="text-align:right;">2</td><td style="text-align:right;">$0.02M</td><td style="color:var(--text-muted);">MRO / industrial components</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:12px 16px;background:rgba(0,180,216,0.05);">
+        <strong style="font-size:11px;color:var(--navy);">Interpretation:</strong>
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> The customer base confirms industrial continuity requirements. The supplier side shows steel, MRO, machinery, and components, but also a large Unknown supplier group, which should be used as a discovery angle around upstream visibility.</span>
+      </div>
+    </div>
+
+    <!-- 08 Operational Signal to Pain Mapping -->
+    <div class="card">
+      <div class="card-header"><span class="accent">08</span> Operational Signal → Pain Mapping</div>
+      <div class="card-body">
+        <div class="signal-grid">
+          <div class="signal-item high"><div class="signal-title">1. Nuevo Laredo Dependency</div><div class="signal-prob high">HIGH</div><div class="signal-desc">The account is heavily concentrated in Nuevo Laredo, making border execution and customs coordination a critical operational dependency.</div></div>
+          <div class="signal-item high"><div class="signal-title">2. IMMEX / Virtual Regime Complexity</div><div class="signal-prob high">HIGH</div><div class="signal-desc">Return, transfer, and virtual regimes create documentation sensitivity and coordination workload across plant, customs broker, and carrier.</div></div>
+          <div class="signal-item high"><div class="signal-title">3. Export Customer Continuity</div><div class="signal-prob high">HIGH</div><div class="signal-desc">Recurring customers such as Hudson, Vertiv, Kelvion, Rheem, and Pentair suggest OTIF pressure and service reliability requirements.</div></div>
+          <div class="signal-item"><div class="signal-title">4. Visibility Gap</div><div class="signal-prob medium-high">MEDIUM-HIGH</div><div class="signal-desc">High Unknown-mode share suggests fragmented visibility in the visible Panjiva universe and likely manual coordination.</div></div>
+          <div class="signal-item"><div class="signal-title">5. Industrial Input Sensitivity</div><div class="signal-prob medium-high">MEDIUM-HIGH</div><div class="signal-desc">Steel, parts, machinery, and MRO inputs create production continuity sensitivity.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 09 Akzent Fit Scoring -->
+    <div class="card">
+      <div class="card-header"><span class="accent">09</span> Akzent Fit Scoring</div>
+      <div class="card-body">
+        <div class="fit-score-grid">
+          <div class="fit-score-item"><div class="fit-score-name">Cross-Border Fit</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:95%"></div></div><div class="fit-score-pct">VERY HIGH</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Customs Fit</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:92%"></div></div><div class="fit-score-pct">VERY HIGH</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Shipment Visibility Fit</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:88%"></div></div><div class="fit-score-pct">HIGH</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">ILM / Control Tower Fit</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:82%"></div></div><div class="fit-score-pct">HIGH</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Warehousing / Staging Fit</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:74%"></div></div><div class="fit-score-pct">MEDIUM-HIGH</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Ocean Freight Fit</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:25%"></div></div><div class="fit-score-pct">LOW</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Air Freight Fit</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:20%"></div></div><div class="fit-score-pct">LOW</div></div></div>
+        </div>
+        <div style="margin-top:14px;padding:12px 16px;background:rgba(13,43,94,0.03);border-radius:6px;border:1px solid var(--border);">
+          <strong style="font-size:11px;color:var(--navy);">Justification:</strong>
+          <span style="font-size:12px;color:var(--text-muted);line-height:1.6;"> AA classification is driven by high cross-border concentration, high Shipment volume, customs regime sensitivity, and recurring industrial customer base. It is not AAA because current Panjiva data does not show strong multimodal diversity, recurring air urgency, or meaningful ocean exposure.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10 Commercial Positioning -->
+    <div class="card">
+      <div class="card-header"><span class="accent">10</span> Commercial Positioning</div>
+      <div class="card-body">
+        <div class="positioning-box">
+          <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,0.6);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;">Positioning Statement</div>
+          <div class="positioning-example">Position Akzent as cross-border operational control partner, customs and visibility partner, exception management partner, and focused ILM / Control Tower partner.</div>
+          <div style="font-size:11px;font-weight:700;color:var(--teal);letter-spacing:1px;text-transform:uppercase;margin:16px 0 8px;">Positioning Example</div>
+          <div class="positioning-example">"An industrial operation with this level of recurrence, U.S. customers, and Nuevo Laredo concentration usually does not hurt because of the transportation rate; it hurts because of the daily coordination between plant, customs broker, carrier, documentation, and final customer. That is where Akzent can create value as an operational control partner."</div>
+          <div class="capability-tags">
+            <span class="cap-tag">Nuevo Laredo</span>
+            <span class="cap-tag">Cross-Border Control</span>
+            <span class="cap-tag">Customs Coordination</span>
+            <span class="cap-tag">IMMEX / Returns</span>
+            <span class="cap-tag">Shipment Visibility</span>
+            <span class="cap-tag">Exception Management</span>
+            <span class="cap-tag">Control Tower</span>
+            <span class="cap-tag">Industrial Continuity</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 11 Discovery Question Engine -->
+    <div class="card">
+      <div class="card-header"><span class="accent">11</span> Discovery Question Engine</div>
+      <div class="card-body">
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Cross-Border / Nuevo Laredo</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>What percentage of your Shipments depend on Nuevo Laredo?</li>
+              <li>Where do delays usually appear: documentation, crossing, appointment, equipment, or delivery?</li>
+              <li>Who currently centralizes communication between plant, customs broker, carrier, and customer?</li>
+              <li>How proactive is current Shipment visibility?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>IMMEX / Customs</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>How manual is the control of returns, virtual transfers, and IMMEX documentation?</li>
+              <li>How many customs brokers participate in the operation?</li>
+              <li>What are the most common documentation exceptions?</li>
+              <li>How do you measure customs performance today?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Export Customers</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>Which customers create the highest OTIF pressure?</li>
+              <li>Are delivery windows fixed or variable?</li>
+              <li>Which customers require the most operational follow-up?</li>
+              <li>How often do customer escalations happen?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Supplier / Production Inputs</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>Which imported inputs are critical for production continuity?</li>
+              <li>Which suppliers create the most coordination workload?</li>
+              <li>How much visibility do you have before suppliers release cargo?</li>
+              <li>Are steel and MRO inputs planned or reactive?</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12 Strategic Expansion Trajectory -->
+    <div class="card">
+      <div class="card-header"><span class="accent">12</span> Strategic Expansion Trajectory</div>
+      <div class="card-body">
+        <div class="phase-grid">
+          <div class="phase-card"><div class="phase-num">Phase 1</div><div class="phase-title">Entry: Nuevo Laredo Control</div><ul class="phase-items"><li>Cross-border execution review</li><li>Customs broker coordination</li><li>Shipment status visibility</li><li>Exception escalation</li></ul></div>
+          <div class="phase-card"><div class="phase-num">Phase 2</div><div class="phase-title">Customs &amp; Documentation</div><ul class="phase-items"><li>IMMEX / returns checklist</li><li>Virtual transfer tracking</li><li>Documentation control</li><li>Customs KPI baseline</li></ul></div>
+          <div class="phase-card"><div class="phase-num">Phase 3</div><div class="phase-title">Customer-Lane Management</div><ul class="phase-items"><li>Hudson / Vertiv / Kelvion / Rheem lane mapping</li><li>SOP by customer</li><li>OTIF visibility</li><li>Weekly exception reporting</li></ul></div>
+          <div class="phase-card"><div class="phase-num">Phase 4</div><div class="phase-title">Focused ILM / Control Tower</div><ul class="phase-items"><li>Centralized cross-border governance</li><li>Monthly operational review</li><li>Carrier / broker / plant coordination</li><li>Expansion into staging or warehousing if validated</li></ul></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 </main>
 
 <script>
@@ -31998,6 +32449,7 @@ const ACCOUNTS = [
   { id:'view-grupo-sanfer', name:'Grupo Sanfer', sub:'Pharma · Biotech · Packaging · Regulated Products · Multi-Entity Group · Air-Dominant · LATAM Exports · Customs Complexity · Panjiva Mexico Imports + Exports', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
   { id:'view-yofc', name:'Yofc International Mexico', sub:'Telecommunications Infrastructure / Fiber Optic Components · Import-led Asia Sourcing · Manzanillo Maritime · China Sourcing · Ocean Control · ILM / Control Tower · Panjiva Mexico Imports', rel:'LEAD', cls:'AA', clsPill:'aa' },
   { id:'view-hirotec', name:'HIROTEC México', sub:'Automotive Manufacturing / Body-in-White / Stamped Parts / Tooling · Cross-Border + Maritime + Air + Rail · Nuevo Laredo · Altamira · Manzanillo · AICM · ILM / Control Tower · Panjiva Imports + Exports', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
+  { id:'view-sisflex', name:'SISFLEX', sub:'Industrial Manufacturing · Heat Exchangers · HVAC / Refrigeration Components · Metal Fabrication · Monterrey / Nuevo León · Nuevo Laredo Cross-Border · IMMEX / Returns · Control Tower · Panjiva Imports + Exports', rel:'LEAD', cls:'AA', clsPill:'aa' },
 ];
 const MODULES = [
   { id:'view-network',     name:'Network Intelligence', sub:'Cross-account analysis · Lane overlap' },
@@ -32109,7 +32561,7 @@ var INDUSTRY_BY_ID = {
   'view-sumitomo-hardmetal':'Industrial', 'view-tecnoglobal-ph7':'Cosmetics',
   'view-veritiv':'Packaging', 'view-bio-pappel':'Paper', 'view-metalicas-titan':'Industrial',
   'view-mckinley':'Paper', 'view-grupo-sanfer':'Pharma', 'view-yofc':'Telecom',
-  'view-hirotec':'Auto'
+  'view-hirotec':'Auto', 'view-sisflex':'Industrial'
 };
 
 var UNRESOLVED_ACCOUNTS = [];
