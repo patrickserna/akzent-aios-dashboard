@@ -1291,6 +1291,10 @@ main {
       <span>◆</span> <span style="flex:1;">Owens Corning</span>
       <span class="recent-cls aaa">AAA</span>
     </div>
+    <div class="nav-item" onclick="showView('view-suspensys', this)">
+      <span>◆</span> <span style="flex:1;">Suspensys</span>
+      <span class="recent-cls aa">AA</span>
+    </div>
   </div>
 
   <div class="nav-divider"></div>
@@ -1334,7 +1338,7 @@ main {
     <div class="page-header-left">
       <div class="page-header-eyebrow">Akzent Intelligence OS</div>
       <div class="page-header-title">Strategic Account Command Center</div>
-      <div class="page-header-sub" id="home-header-sub">Pre-commercial intelligence · 57 accounts under analysis</div>
+      <div class="page-header-sub" id="home-header-sub">Pre-commercial intelligence · 58 accounts under analysis</div>
     </div>
     <div class="page-header-meta">
       <div style="font-size:11px;color:rgba(255,255,255,0.5);">SYSTEM STATUS</div>
@@ -1352,7 +1356,7 @@ main {
   <div class="home-stats-row">
     <div class="stat-box">
       <div class="stat-label" id="stat-total-label">Total Accounts</div>
-      <div class="stat-value" id="stat-total-val">57</div>
+      <div class="stat-value" id="stat-total-val">58</div>
     </div>
     <div class="stat-box">
       <div class="stat-label">AAA Accounts</div>
@@ -1360,7 +1364,7 @@ main {
     </div>
     <div class="stat-box">
       <div class="stat-label">AA / AA+ Accounts</div>
-      <div class="stat-value teal" id="stat-aa-val">32</div>
+      <div class="stat-value teal" id="stat-aa-val">33</div>
     </div>
     <div class="stat-box">
       <div class="stat-label">ILM Candidates</div>
@@ -2159,6 +2163,30 @@ main {
         <span class="acct-tag">Manzanillo</span>
         <span class="acct-tag">LATAM exports</span>
         <span class="acct-tag">Rail + Air signals</span>
+        <span class="acct-tag">ILM fit</span>
+      </div>
+    </div>
+
+    <!-- Suspensys Automotive Systems -->
+    <div class="account-card aa" onclick="showViewById('view-suspensys')">
+      <div class="account-card-header">
+        <div>
+          <div class="account-name">Suspensys Automotive Systems</div>
+          <div class="account-industry">Automotive · Heavy Trailer Components</div>
+        </div>
+        <span class="account-cls-badge aa">AA</span>
+      </div>
+      <div class="account-metrics">
+        <div class="acct-metric"><div class="acct-metric-val">21</div><div class="acct-metric-lbl">Shipments in 2025</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">6</div><div class="acct-metric-lbl">Shipments 2026 YTD</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">3</div><div class="acct-metric-lbl">Modes in 2025</div></div>
+      </div>
+      <div class="account-tags">
+        <span class="acct-tag" style="background:rgba(245,158,11,0.12);color:#b45309;border-color:rgba(245,158,11,0.3);">LEAD</span>
+        <span class="acct-tag">Nuevo Laredo</span>
+        <span class="acct-tag">Manzanillo</span>
+        <span class="acct-tag">Ciudad Hidalgo</span>
+        <span class="acct-tag">Suspension / Axles</span>
         <span class="acct-tag">ILM fit</span>
       </div>
     </div>
@@ -13026,6 +13054,16 @@ main {
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
               <td><div class="dots"><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div></td>
               <td><div class="dots"><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div></td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot"></div></div></td>
+              <td style="color:#b45309;font-weight:700;font-size:11px;">★ PRIORITY TARGET</td>
+            </tr>
+            <tr>
+              <td><strong>Suspensys Automotive Systems</strong> <span style="font-size:10px;font-weight:600;color:#b45309;background:rgba(245,158,11,0.12);padding:1px 5px;border-radius:3px;margin-left:4px;">LEAD</span></td>
+              <td><span class="cls-pill aa">AA</span></td>
+              <td style="color:var(--text-muted);" title="Relationship Status LEAD · AIOS Classification AA · Visible universe 21 Shipments 2025 / 6 Shipments 2026 YTD · Core signals Cross-border · Ocean · Air urgency · Customs · Supplier coordination · ILM potential · Strategic Fit AA · Operational Complexity Medium-High · Cross-Border Exposure High · Ocean Exposure Medium-High · Air Exposure Medium-High · Customs Sensitivity High · Key Hubs Nuevo Laredo · Manzanillo · Ciudad Hidalgo · Querétaro · Veracruz · AIFA">Automotive / Trailer Components</td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td><div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div></div></td>
+              <td><div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div></div></td>
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot"></div></div></td>
               <td style="color:#b45309;font-weight:700;font-size:11px;">★ PRIORITY TARGET</td>
             </tr>
@@ -33596,6 +33634,580 @@ main {
 
   </div>
 </div>
+
+<!-- ══ SUSPENSYS AUTOMOTIVE SYSTEMS VIEW ══ -->
+<div id="view-suspensys" class="view">
+  <div class="page-header">
+    <div class="page-header-left">
+      <div class="page-header-eyebrow">Target Account · LEAD Analysis</div>
+      <div class="page-header-title">Suspensys Automotive Systems</div>
+      <div class="page-header-sub">Automotive / Heavy Trailer Components · Panjiva visible universe</div>
+    </div>
+    <div class="page-header-meta">
+      <span class="classification-badge lead">LEAD</span>
+      <span class="classification-badge aa">AA</span>
+      <button class="print-btn" onclick="printView('view-suspensys')">⬇ Export PDF</button>
+    </div>
+  </div>
+  <div class="content-body">
+
+    <!-- LEAD source banner -->
+    <div class="card">
+      <div class="card-body" style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+        <span class="classification-badge lead">LEAD</span>
+        <span class="classification-badge aa">AA</span>
+        <span style="font-size:12px;color:var(--text-muted);line-height:1.6;">
+          <strong style="color:var(--navy);">Relationship Status: LEAD (pre-commercial).</strong> Suspensys Automotive Systems S. de R.L. de C.V. is not operated by Akzent. All analysis is built exclusively on <strong>Panjiva Imports + Panjiva Exports</strong> as the visible logistics universe — no Akzent shipment data was provided or included for this account. The <strong>AIOS Classification AA</strong> reflects strategic fit and operational complexity and is shown separately from — and is independent of — the LEAD relationship badge. Previous full calendar year (2025) and current year-to-date (2026 YTD through August 19, 2026) are reported separately and are not aggregated.
+        </span>
+      </div>
+    </div>
+
+    <!-- Panjiva Visibility Metrics -->
+    <div class="grid-4">
+      <div class="stat-box"><div class="stat-label">2025 Shipments</div><div class="stat-value" style="font-size:22px;">21</div><div class="stat-sub">13 imports · 8 exports</div></div>
+      <div class="stat-box"><div class="stat-label">2026 YTD Shipments</div><div class="stat-value teal" style="font-size:22px;">6</div><div class="stat-sub">0 imports visible · 6 exports</div></div>
+      <div class="stat-box"><div class="stat-label">Modal Diversity — 2025</div><div class="stat-value" style="font-size:22px;">3 Modes</div><div class="stat-sub">Truck 9 · Maritime 8 · Air 4</div></div>
+      <div class="stat-box"><div class="stat-label">Core Cross-Border Node</div><div class="stat-value" style="font-size:22px;">Nuevo Laredo</div><div class="stat-sub">Inbound 2025 · Outbound 2026 YTD</div></div>
+    </div>
+
+    <!-- 01 Executive Intelligence Summary -->
+    <div class="card">
+      <div class="card-header"><span class="accent">01</span> Executive Intelligence Summary</div>
+      <div class="card-body">
+        <p style="font-size:13px;line-height:1.7;">Suspensys Automotive Systems shows a specialized industrial automotive profile focused on heavy trailer components, suspension systems, axles, brake components and technical support equipment. Panjiva visibility does not show massive volume, but it does show meaningful operational complexity: international sourcing from China, the United States and Brazil; maritime imports through Manzanillo and Veracruz; cross-border exposure through Nuevo Laredo; air urgency signals through Querétaro and AIFA; and regional exports toward Guatemala, the United States, Brazil and Chile.</p>
+        <p style="font-size:13px;line-height:1.7;margin-top:10px;">This is not a transactional freight opportunity. The strongest Akzent angle is operational coordination, customs visibility, cross-border control, supplier follow-up and ILM / Control Tower potential for industrial components sensitive to continuity.</p>
+        <p style="font-size:13px;line-height:1.7;margin-top:10px;">In <strong>2025</strong> the visible universe shows <strong>21 Shipments</strong> — <strong>13 imports</strong> and <strong>8 exports</strong> — for <strong>USD 579,783</strong> and <strong>235,647 kg</strong>, executed across truck, maritime and air. In <strong>2026 YTD</strong> the visible universe shows <strong>6 Shipments</strong>, all exports, for <strong>USD 275,727</strong> and <strong>57,464 kg</strong>, all executed by truck through Nuevo Laredo and Ciudad Hidalgo.</p>
+        <div style="background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 6px 6px 0;padding:12px 16px;margin-top:12px;">
+          <strong style="font-size:11px;color:#b45309;text-transform:uppercase;letter-spacing:1px;">⚡ AIOS Classification Rationale — Source: Panjiva</strong>
+          <p style="font-size:12px;color:var(--text);line-height:1.6;margin-top:4px;">AIOS classifies Suspensys Automotive Systems as <strong>AA Strategic Target</strong> because the account combines safety-critical automotive components, real 2025 multimodality, customs exposure across six visible nodes, specialized international suppliers, cross-border dependency through Nuevo Laredo and ecosystem connectivity with Randon Autoparts — with visible volume that remains limited in the uploaded files.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 Relationship Status + AIOS Classification -->
+    <div class="card">
+      <div class="card-header"><span class="accent">02</span> Relationship Status &amp; AIOS Classification</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:12px;">
+          <div style="padding:14px 16px;background:rgba(245,158,11,0.05);border-radius:6px;border:1px solid var(--border);">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;">Relationship Status</div>
+            <span class="classification-badge lead" style="font-size:14px;">LEAD</span>
+            <p style="font-size:11px;color:var(--text-muted);line-height:1.6;margin-top:8px;">Pre-commercial. Account not yet operated by Akzent.</p>
+          </div>
+          <div style="padding:14px 16px;background:rgba(0,180,216,0.04);border-radius:6px;border:1px solid var(--border);">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;">AIOS Classification</div>
+            <span class="classification-badge aa" style="font-size:14px;">AA</span>
+            <p style="font-size:11px;color:var(--text-muted);line-height:1.6;margin-top:8px;">AA Strategic Target. Independent of the LEAD relationship badge.</p>
+          </div>
+        </div>
+        <div style="margin-top:12px;padding:10px 14px;background:rgba(13,43,94,0.03);border-radius:5px;border:1px solid var(--border);"><strong style="font-size:11px;color:var(--navy);">Data Model:</strong><span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> Panjiva is the visible logistics universe. No Akzent shipment data was provided for this account.</span></div>
+        <table class="hub-table" style="margin-top:14px;">
+          <tbody>
+            <tr><td><strong>Legal / Panjiva Name</strong></td><td style="text-align:right;">Suspensys Automotive Systems S. de R.L. de C.V.</td></tr>
+            <tr><td><strong>Industry</strong></td><td style="text-align:right;">Automotive / Heavy Trailer Components / Suspension, Axles &amp; Brake Systems</td></tr>
+            <tr><td><strong>Account Type</strong></td><td style="text-align:right;">Industrial automotive manufacturing and regional distribution</td></tr>
+            <tr><td><strong>Source</strong></td><td style="text-align:right;">Panjiva Imports + Panjiva Exports only · No Akzent shipment data included</td></tr>
+            <tr><td><strong>Cutoff Date</strong></td><td style="text-align:right;">August 19, 2026</td></tr>
+            <tr><td><strong>Main Cross-Border Node</strong></td><td style="text-align:right;">Nuevo Laredo</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 03 Shipment Intelligence by Period -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">03</span> Shipment Intelligence by Period</div>
+      <div class="card-body">
+        <p style="font-size:12px;color:var(--text-muted);line-height:1.6;margin-bottom:4px;">Periods are analyzed separately and are never aggregated into a single operational view. <strong>Previous Full Calendar Year: 2025</strong> · <strong>Current YTD: 2026 through August 19, 2026</strong>. Each Panjiva row is treated as 1 Shipment. Source: Panjiva Imports + Panjiva Exports.</p>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header" style="background:rgba(13,43,94,0.03);">2025 — Previous Full Calendar Year</div>
+        <div class="card-body">
+          <div class="grid-2" style="gap:10px;">
+            <div class="stat-box"><div class="stat-label">Total Shipments</div><div class="stat-value" style="font-size:22px;">21</div><div class="stat-sub">13 imports · 8 exports</div></div>
+            <div class="stat-box"><div class="stat-label">USD Value</div><div class="stat-value" style="font-size:22px;">$579,783</div><div class="stat-sub">Declared</div></div>
+          </div>
+          <table class="hub-table" style="margin-top:12px;">
+            <tbody>
+              <tr><td><strong>Total Shipments</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">21</td></tr>
+              <tr><td><strong>Import Shipments</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">13</td></tr>
+              <tr><td><strong>Export Shipments</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">8</td></tr>
+              <tr><td><strong>Import Mix</strong></td><td style="text-align:right;">61.9%</td></tr>
+              <tr><td><strong>Export Mix</strong></td><td style="text-align:right;">38.1%</td></tr>
+              <tr><td><strong>USD Value</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">$579,783</td></tr>
+              <tr><td><strong>Gross Weight</strong></td><td style="text-align:right;">235,647 kg</td></tr>
+              <tr><td><strong>Modal Mix</strong></td><td style="text-align:right;">Truck 9 · Maritime 8 · Air 4</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" style="background:rgba(0,180,216,0.05);">2026 YTD — Current Year through August 19</div>
+        <div class="card-body">
+          <div class="grid-2" style="gap:10px;">
+            <div class="stat-box"><div class="stat-label">Total Shipments</div><div class="stat-value teal" style="font-size:22px;">6</div><div class="stat-sub">0 imports visible · 6 exports</div></div>
+            <div class="stat-box"><div class="stat-label">USD Value</div><div class="stat-value" style="font-size:22px;">$275,727</div><div class="stat-sub">Declared</div></div>
+          </div>
+          <table class="hub-table" style="margin-top:12px;">
+            <tbody>
+              <tr><td><strong>Total Shipments</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">6</td></tr>
+              <tr><td><strong>Import Shipments</strong></td><td style="text-align:right;">0 visible</td></tr>
+              <tr><td><strong>Export Shipments</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">6</td></tr>
+              <tr><td><strong>Import Mix</strong></td><td style="text-align:right;">0% visible</td></tr>
+              <tr><td><strong>Export Mix</strong></td><td style="text-align:right;">100% visible</td></tr>
+              <tr><td><strong>USD Value</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">$275,727</td></tr>
+              <tr><td><strong>Gross Weight</strong></td><td style="text-align:right;">57,464 kg</td></tr>
+              <tr><td><strong>Modal Mix</strong></td><td style="text-align:right;">Truck 6</td></tr>
+            </tbody>
+          </table>
+          <div style="margin-top:12px;padding:10px 14px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;"><strong style="font-size:11px;color:#b45309;">Visibility Note:</strong><span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> No visible Panjiva import Shipments appear in the uploaded 2026 file. This should not be interpreted as zero real import activity.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 Trend Intelligence -->
+    <div class="card">
+      <div class="card-header"><span class="accent">04</span> Trend Intelligence — 2025 Full Year vs 2026 YTD</div>
+      <div class="card-body">
+        <table class="hub-table">
+          <thead><tr><th>Variable</th><th>2025 Full Year</th><th>2026 YTD</th><th>AIOS Reading</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Volume</strong></td><td>21 Shipments</td><td>6 Shipments</td><td style="color:var(--text-muted);">Lower visible volume YTD, but higher value per Shipment in 2026.</td></tr>
+            <tr><td><strong>Flow mix</strong></td><td>62% imports / 38% exports</td><td>100% exports visible</td><td style="color:var(--text-muted);">2025 was import-heavy; the 2026 YTD visible universe is export-only. Imports are absent from the uploaded file, not proven absent from the operation.</td></tr>
+            <tr><td><strong>Modal mix</strong></td><td>Truck · Maritime · Air</td><td>Truck only</td><td style="color:var(--text-muted);">2026 YTD visibility is concentrated in ground execution. 2025 confirms real multimodal capability.</td></tr>
+            <tr><td><strong>Geography</strong></td><td>China, USA, Brazil inbound · Guatemala, Brazil, Chile outbound</td><td>USA and Guatemala outbound</td><td style="color:var(--text-muted);">2026 concentrates on North America and Central America.</td></tr>
+            <tr><td><strong>Customs / ports</strong></td><td>Manzanillo, Nuevo Laredo, Querétaro, Veracruz, AIFA, Ciudad Hidalgo, Ciudad de México, Manzanillo export</td><td>Nuevo Laredo, Ciudad Hidalgo</td><td style="color:var(--text-muted);">Visible dispersion narrows, but border and customs pressure remain.</td></tr>
+            <tr><td><strong>Portfolio</strong></td><td>Suspension, axles, brakes, fasteners, bushings, pneumatic parts</td><td>Torque tools + suspension / axle parts</td><td style="color:var(--text-muted);">Signal of industrial operation connected to production, technical service or operating equipment.</td></tr>
+            <tr><td><strong>Counterparty pattern</strong></td><td>Multi-supplier + regional customers</td><td>Randon Autoparts + Central de Fricciones</td><td style="color:var(--text-muted);">Higher visible concentration inside the automotive / autoparts ecosystem.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 05 Top HS Codes -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">05</span> Top HS Codes — 2025 and 2026 YTD</div>
+      <div class="card-body" style="padding:12px 16px;background:rgba(245,158,11,0.05);">
+        <strong style="font-size:11px;color:#b45309;">Note:</strong>
+        <span style="font-size:11px;color:var(--text-muted);"> If one Shipment contains multiple HS Codes, HS counts represent operational presence and are not additive.</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" style="background:rgba(13,43,94,0.03);">2025 — Top HS Codes</div>
+      <div class="card-body">
+        <table class="hub-table">
+          <thead><tr><th>HS Code</th><th>Product Interpretation</th><th style="text-align:right;">Presence</th><th style="text-align:right;">% of Shipments</th><th>AIOS Interpretation</th></tr></thead>
+          <tbody>
+            <tr><td><strong>8716909999</strong></td><td>Trailer, axle, suspension and related parts</td><td style="text-align:right;font-weight:700;color:var(--navy);">13</td><td style="text-align:right;">61.9%</td><td style="color:var(--text-muted);">Dominant operational code; core business signal. High sensitivity to availability, supplier coordination, classification and documentation.</td></tr>
+            <tr><td><strong>8708300800</strong></td><td>Brake drums / brake system components</td><td style="text-align:right;">3</td><td style="text-align:right;">14.3%</td><td style="color:var(--text-muted);">Safety-critical vehicle components; strong customs and continuity sensitivity.</td></tr>
+            <tr><td><strong>7318160605</strong></td><td>Nuts / fasteners</td><td style="text-align:right;">2</td><td style="text-align:right;">9.5%</td><td style="color:var(--text-muted);">Low-value but operationally critical inputs for assembly.</td></tr>
+            <tr><td><strong>7318229199</strong></td><td>Washers / circlips</td><td style="text-align:right;">2</td><td style="text-align:right;">9.5%</td><td style="color:var(--text-muted);">Small components that add documentation and consolidation complexity.</td></tr>
+            <tr><td><strong>8483300499</strong></td><td>Bushings / mechanical components</td><td style="text-align:right;">2</td><td style="text-align:right;">9.5%</td><td style="color:var(--text-muted);">Technical components tied to axle and suspension systems.</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:12px;padding:10px 14px;background:rgba(13,43,94,0.03);border-radius:5px;border:1px solid var(--border);"><strong style="font-size:11px;color:var(--navy);">2025 Portfolio Trend:</strong><span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> The 2025 portfolio is dominated by suspension, axle and trailer parts, accompanied by brakes, bushings, nuts, washers, valves, sensors and pneumatic components. This suggests a heavy autoparts operation with high SKU variety, multiple suppliers and sensitivity to operational shortages.</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" style="background:rgba(0,180,216,0.05);">2026 YTD — Top HS Codes</div>
+      <div class="card-body">
+        <table class="hub-table">
+          <thead><tr><th>HS Code</th><th>Product Interpretation</th><th style="text-align:right;">Presence</th><th style="text-align:right;">% of Shipments</th><th>AIOS Interpretation</th></tr></thead>
+          <tbody>
+            <tr><td><strong>8467920100</strong></td><td>Pneumatic / torque tools</td><td style="text-align:right;font-weight:700;color:var(--navy);">4</td><td style="text-align:right;">66.7%</td><td style="color:var(--text-muted);">Possible industrial support, maintenance, line readiness or technical equipment signal. May imply urgent or high-coordination technical Shipments.</td></tr>
+            <tr><td><strong>8716909999</strong></td><td>Trailer, suspension and axle parts</td><td style="text-align:right;">2</td><td style="text-align:right;">33.3%</td><td style="color:var(--text-muted);">Continued core product presence in heavy automotive components.</td></tr>
+            <tr><td><strong>4016930499</strong></td><td>Rubber seals / gaskets</td><td style="text-align:right;">1</td><td style="text-align:right;">16.7%</td><td style="color:var(--text-muted);">Small but critical assembly / maintenance component, sensitive to availability and specification.</td></tr>
+            <tr><td><strong>7318160605</strong></td><td>Nuts / washers</td><td style="text-align:right;">1</td><td style="text-align:right;">16.7%</td><td style="color:var(--text-muted);">Fasteners critical to assembly continuity.</td></tr>
+            <tr><td><strong>7318230299</strong></td><td>Pins / lock pins / fastening components</td><td style="text-align:right;">1</td><td style="text-align:right;">16.7%</td><td style="color:var(--text-muted);">Small mechanical components with high operational relevance and added documentation complexity.</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:12px;padding:10px 14px;background:rgba(13,43,94,0.03);border-radius:5px;border:1px solid var(--border);"><strong style="font-size:11px;color:var(--navy);">2026 Portfolio Trend:</strong><span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> The YTD portfolio shifts toward torque tools and operating equipment while keeping suspension and axle parts. AIOS interprets this as possible support to industrial operation, maintenance, technical service, line start-up, validations or intragroup coordination.</span></div>
+      </div>
+    </div>
+
+    <!-- 06 Import / Export Breakdown -->
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header"><span class="accent">06</span> Import / Export Breakdown — 2025</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <thead><tr><th>Flow</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">%</th><th style="text-align:right;">USD Value</th><th style="text-align:right;">Gross Weight</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Imports</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">13</td><td style="text-align:right;">61.9%</td><td style="text-align:right;">$331,802</td><td style="text-align:right;">163,320 kg</td></tr>
+              <tr><td><strong>Exports</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">8</td><td style="text-align:right;">38.1%</td><td style="text-align:right;">$247,982</td><td style="text-align:right;">72,327 kg</td></tr>
+              <tr><td><strong>Total</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">21</td><td style="text-align:right;">100%</td><td style="text-align:right;">$579,783</td><td style="text-align:right;">235,647 kg</td></tr>
+            </tbody>
+          </table>
+          <div style="margin-top:12px;padding:10px 14px;background:rgba(13,43,94,0.03);border-radius:5px;border:1px solid var(--border);"><strong style="font-size:11px;color:var(--navy);">Interpretation:</strong><span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> 2025 shows a primarily import-led operation, with international component sourcing and regional exports — consistent with local manufacturing / integration and distribution toward regional customers.</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><span class="accent">06</span> Import / Export Breakdown — 2026 YTD</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <thead><tr><th>Flow</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">%</th><th style="text-align:right;">USD Value</th><th style="text-align:right;">Gross Weight</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Imports</strong></td><td style="text-align:right;">0 visible</td><td style="text-align:right;">0% visible</td><td style="text-align:right;">$0 visible</td><td style="text-align:right;">0 kg visible</td></tr>
+              <tr><td><strong>Exports</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">6</td><td style="text-align:right;">100% visible</td><td style="text-align:right;">$275,727</td><td style="text-align:right;">57,464 kg</td></tr>
+              <tr><td><strong>Total</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">6</td><td style="text-align:right;">100%</td><td style="text-align:right;">$275,727</td><td style="text-align:right;">57,464 kg</td></tr>
+            </tbody>
+          </table>
+          <div style="margin-top:12px;padding:10px 14px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;"><strong style="font-size:11px;color:#b45309;">Interpretation:</strong><span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> 2026 YTD shows only exports in the uploaded Panjiva file. The commercial reading must stay cautious: this does not imply Suspensys stopped importing, only that the visible file does not include 2026 imports.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 07 Modal Mix -->
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header"><span class="accent">07</span> Modal Mix — 2025 Full Year</div>
+        <div class="card-body">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;">21 Shipments</div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Truck 🚛</strong><span>9 · 42.9%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:100%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Maritime 🚢</strong><span>8 · 38.1%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:88.8%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Air ✈</strong><span>4 · 19.0%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:44.3%"></div></div></div>
+          <div style="margin-top:12px;padding:10px 14px;background:rgba(13,43,94,0.03);border-radius:5px;border:1px solid var(--border);"><strong style="font-size:11px;color:var(--navy);">AIOS Interpretation:</strong><span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> 2025 confirms real multimodal behavior. The maritime + truck + air combination normally implies coordination between international suppliers, customs, production and operational urgencies.</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><span class="accent">07</span> Modal Mix — 2026 YTD</div>
+        <div class="card-body">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;">6 Shipments</div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Truck 🚛</strong><span>6 · 100%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:100%"></div></div></div>
+          <div style="margin-top:12px;padding:10px 14px;background:rgba(0,180,216,0.05);border-radius:5px;border:1px solid var(--border);"><strong style="font-size:11px;color:var(--navy);">AIOS Interpretation:</strong><span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> 2025 confirms real multimodal behavior. 2026 YTD visible activity is concentrated in truck, reinforcing cross-border and regional execution opportunities — especially through Nuevo Laredo and Ciudad Hidalgo.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 08 Geographic Intelligence -->
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header"><span class="accent">08</span> Geographic Intelligence — 2025 Import Origins</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <thead><tr><th>Origin</th><th style="text-align:right;">Shipments</th></tr></thead>
+            <tbody>
+              <tr><td><strong>China</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">7</td></tr>
+              <tr><td><strong>United States</strong></td><td style="text-align:right;">3</td></tr>
+              <tr><td><strong>Brazil</strong></td><td style="text-align:right;">1</td></tr>
+              <tr><td><strong>China / India / United States</strong></td><td style="text-align:right;">1</td></tr>
+              <tr><td><strong>China / United States</strong></td><td style="text-align:right;">1</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><span class="accent">08</span> Geographic Intelligence — Export Destinations</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <thead><tr><th>Destination</th><th style="text-align:right;">2025</th><th style="text-align:right;">2026 YTD</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Guatemala</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">6</td><td style="text-align:right;">2</td></tr>
+              <tr><td><strong>United States</strong></td><td style="text-align:right;">—</td><td style="text-align:right;font-weight:700;color:var(--navy);">4</td></tr>
+              <tr><td><strong>Brazil</strong></td><td style="text-align:right;">1</td><td style="text-align:right;">—</td></tr>
+              <tr><td><strong>Chile</strong></td><td style="text-align:right;">1</td><td style="text-align:right;">—</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:12px 16px;background:rgba(0,180,216,0.05);">
+        <strong style="font-size:11px;color:var(--navy);">Interpretation:</strong>
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> Suspensys connects international industrial sourcing with regional automotive distribution. The 2026 visible universe concentrates on North America and Central America, opening a conversation about cross-border control, customs coordination, visibility and delivery-window planning.</span>
+      </div>
+    </div>
+
+    <!-- 09 Customs / Port Intelligence -->
+    <div class="card">
+      <div class="card-header"><span class="accent">09</span> Customs / Port Intelligence</div>
+      <div class="card-body">
+        <table class="hub-table">
+          <thead><tr><th>Customs / Port</th><th>Flow</th><th style="text-align:right;">Shipments</th><th>Signal</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Manzanillo</strong></td><td>Imports</td><td style="text-align:right;font-weight:700;color:var(--navy);">6 in 2025</td><td style="color:var(--text-muted);">Ocean gateway, customs and port coordination exposure.</td></tr>
+            <tr><td><strong>Nuevo Laredo</strong></td><td>Imports 2025 / Exports 2026</td><td style="text-align:right;font-weight:700;color:var(--navy);">3 inbound 2025 · 4 outbound 2026</td><td style="color:var(--text-muted);">Cross-border control and customs dependency in both directions.</td></tr>
+            <tr><td><strong>Querétaro</strong></td><td>Imports</td><td style="text-align:right;">2 in 2025</td><td style="color:var(--text-muted);">Air / critical component signal toward plant.</td></tr>
+            <tr><td><strong>Veracruz</strong></td><td>Imports</td><td style="text-align:right;">1 in 2025</td><td style="color:var(--text-muted);">Alternate maritime gateway; port diversification.</td></tr>
+            <tr><td><strong>AIFA</strong></td><td>Imports</td><td style="text-align:right;">1 in 2025</td><td style="color:var(--text-muted);">Air urgency / critical parts.</td></tr>
+            <tr><td><strong>Ciudad Hidalgo</strong></td><td>Exports</td><td style="text-align:right;font-weight:700;color:var(--navy);">6 in 2025 · 2 in 2026 YTD</td><td style="color:var(--text-muted);">Guatemala / Central America corridor.</td></tr>
+            <tr><td><strong>Ciudad de México</strong></td><td>Exports</td><td style="text-align:right;">1 in 2025</td><td style="color:var(--text-muted);">Air export to Brazil.</td></tr>
+            <tr><td><strong>Manzanillo Export</strong></td><td>Exports</td><td style="text-align:right;">1 in 2025</td><td style="color:var(--text-muted);">Ocean export to Chile.</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:12px;padding:10px 14px;background:rgba(13,43,94,0.03);border-radius:5px;border:1px solid var(--border);"><strong style="font-size:11px;color:var(--navy);">AIOS Interpretation:</strong><span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> The operation has two visible commercial axes: the northern border and the southern regional exit. Akzent can position as customs control, visibility and operational coordination partner at both ends.</span></div>
+      </div>
+    </div>
+
+    <!-- 10 Supplier / Customer / Counterparty Intelligence -->
+    <div class="card">
+      <div class="card-header"><span class="accent">10</span> Supplier Intelligence — 2025 Import Suppliers</div>
+      <div class="card-body">
+        <table class="hub-table">
+          <thead><tr><th>Supplier</th><th>Signal</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Shandong Longji Machinery Co., Ltd.</strong></td><td style="color:var(--text-muted);">Brake drums from China; recurring industrial supplier.</td></tr>
+            <tr><td><strong>Guangdong Fuwa Heavy Industries</strong></td><td style="color:var(--text-muted);">Heavy axle / suspension components; clear fit with the trailer industry.</td></tr>
+            <tr><td><strong>Stemco / Stemco Products</strong></td><td style="color:var(--text-muted);">Axle caps, nuts and related components from USA; specialized supplier.</td></tr>
+            <tr><td><strong>Castertech Fundicao E Tecnologia</strong></td><td style="color:var(--text-muted);">Trailer / suspension parts from Brazil.</td></tr>
+            <tr><td><strong>European Braking Systems Ltd.</strong></td><td style="color:var(--text-muted);">Trailer parts from the United Kingdom.</td></tr>
+            <tr><td><strong>Pressure Systems International</strong></td><td style="color:var(--text-muted);">Valves / pneumatic components.</td></tr>
+            <tr><td><strong>Zhejiang New Sorl Auto Parts</strong></td><td style="color:var(--text-muted);">Speed sensor; technical component.</td></tr>
+            <tr><td><strong>KIC LLC</strong></td><td style="color:var(--text-muted);">Brake system components.</td></tr>
+            <tr><td><strong>Nuga Diesel Inc.</strong></td><td style="color:var(--text-muted);">Multi-origin components routed via USA.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header"><span class="accent">10</span> Export Customers — 2025</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <thead><tr><th>Customer</th><th>Signal</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Central de Fricciones y Clutches S.A.</strong></td><td style="color:var(--text-muted);">Recurring Guatemala customer; stable regional corridor.</td></tr>
+              <tr><td><strong>Master Sistemas Automotivos Ltda</strong></td><td style="color:var(--text-muted);">Brazil; possible regional automotive relationship.</td></tr>
+              <tr><td><strong>Implementos S.A.</strong></td><td style="color:var(--text-muted);">Chile; punctual maritime export.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><span class="accent">10</span> Export Customers — 2026 YTD</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <thead><tr><th>Customer</th><th style="text-align:right;">Shipments</th><th>Signal</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Randon Autoparts Northamerica LLC</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">4</td><td style="color:var(--text-muted);">Strong intragroup / autoparts ecosystem signal toward USA.</td></tr>
+              <tr><td><strong>Central de Fricciones y Clutches S.A.</strong></td><td style="text-align:right;">2</td><td style="color:var(--text-muted);">Continuity into Guatemala / Central America.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:12px 16px;background:rgba(0,180,216,0.05);">
+        <strong style="font-size:11px;color:var(--navy);">Interpretation:</strong>
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> The Randon Autoparts signal increases strategic relevance because it suggests potential intragroup or ecosystem coordination in heavy automotive components, and a probable need for cross-border visibility between regional entities.</span>
+      </div>
+    </div>
+
+    <!-- 11 Operational Complexity -->
+    <div class="card">
+      <div class="card-header"><span class="accent">11</span> Operational Complexity</div>
+      <div class="card-body">
+        <div style="padding:12px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 6px 6px 0;margin-bottom:12px;">
+          <strong style="font-size:11px;color:#b45309;text-transform:uppercase;letter-spacing:1px;">Complexity Level: MEDIUM-HIGH</strong>
+        </div>
+        <div class="signal-grid">
+          <div class="signal-item high"><div class="signal-title">Multimodal behavior</div><div class="signal-prob high">HIGH IN 2025</div><div class="signal-desc">Truck, maritime and air executed in the same year.</div></div>
+          <div class="signal-item high"><div class="signal-title">Customs exposure</div><div class="signal-prob high">HIGH</div><div class="signal-desc">Manzanillo, Nuevo Laredo, Veracruz, Querétaro, AIFA and Ciudad Hidalgo.</div></div>
+          <div class="signal-item high"><div class="signal-title">Product sensitivity</div><div class="signal-prob high">HIGH</div><div class="signal-desc">Brakes, suspension, axles, sensors, valves and torque tools.</div></div>
+          <div class="signal-item"><div class="signal-title">Supplier coordination</div><div class="signal-prob medium-high">MEDIUM-HIGH</div><div class="signal-desc">Specialized suppliers from China, USA, Brazil and the United Kingdom.</div></div>
+          <div class="signal-item high"><div class="signal-title">Cross-border exposure</div><div class="signal-prob high">HIGH</div><div class="signal-desc">Nuevo Laredo inbound in 2025 and outbound in 2026 YTD.</div></div>
+          <div class="signal-item"><div class="signal-title">ILM potential</div><div class="signal-prob medium-high">MEDIUM-HIGH</div><div class="signal-desc">Fit for operational coordination, visibility and exception control.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12 Pain Mapping -->
+    <div class="card">
+      <div class="card-header"><span class="accent">12</span> Operational Signal → Pain Mapping</div>
+      <div class="card-body">
+        <table class="hub-table">
+          <thead><tr><th>#</th><th>Operational Signal</th><th>Probable Pain</th><th>Akzent Angle</th></tr></thead>
+          <tbody>
+            <tr><td style="font-weight:700;color:var(--navy);">1</td><td><strong>Critical suspension / brake components</strong></td><td style="color:var(--text-muted);">Shortage risk affecting production or service.</td><td style="color:var(--text-muted);">Supplier follow-up, Shipment tracking and early escalation.</td></tr>
+            <tr><td style="font-weight:700;color:var(--navy);">2</td><td><strong>Multiple customs / ports</strong></td><td style="color:var(--text-muted);">Fragmented customs visibility across six visible nodes.</td><td style="color:var(--text-muted);">Centralized documentation and exception tracking.</td></tr>
+            <tr><td style="font-weight:700;color:var(--navy);">3</td><td><strong>Air Shipments in 2025</strong></td><td style="color:var(--text-muted);">Likely urgency / recoveries on critical components.</td><td style="color:var(--text-muted);">Expedite and critical shipment response.</td></tr>
+            <tr><td style="font-weight:700;color:var(--navy);">4</td><td><strong>Recurring Guatemala exports</strong></td><td style="color:var(--text-muted);">Regional coordination and documentation pressure.</td><td style="color:var(--text-muted);">Control Tower for the Central America corridor.</td></tr>
+            <tr><td style="font-weight:700;color:var(--navy);">5</td><td><strong>Nuevo Laredo exposure</strong></td><td style="color:var(--text-muted);">Cross-border timing pressure inbound and outbound.</td><td style="color:var(--text-muted);">Border coordination, carrier follow-up and customs follow-up.</td></tr>
+            <tr><td style="font-weight:700;color:var(--navy);">6</td><td><strong>Multi-HS Shipments</strong></td><td style="color:var(--text-muted);">Documentation and classification complexity.</td><td style="color:var(--text-muted);">Pre-clearance documentation review and friction prevention.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 13 Multimodal Opportunity -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">13</span> Multimodal Opportunity</div>
+      <div class="card-body">
+        <div class="fit-score-grid">
+          <div class="fit-score-item"><div class="fit-score-name">Cross-Border (Nuevo Laredo)</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:92%"></div></div><div class="fit-score-pct">HIGH</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Ocean (Manzanillo / Veracruz)</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:80%"></div></div><div class="fit-score-pct">MEDIUM-HIGH</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Air (Querétaro / AIFA / AICM)</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:78%"></div></div><div class="fit-score-pct">MEDIUM-HIGH</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">ILM / Control Tower</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:80%"></div></div><div class="fit-score-pct">MEDIUM-HIGH</div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header" style="background:rgba(245,158,11,0.05);">Cross-Border Opportunity — HIGH</div>
+        <div class="card-body">
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--navy);">Reason:</strong> Nuevo Laredo appears in both 2025 imports and 2026 YTD exports. Suspensys has exposure inbound and outbound through the northern border.</p>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.6;margin-top:8px;"><strong style="color:var(--navy);">Akzent angle:</strong> border control, customs coordination, carrier follow-up, exception management, supply-chain visibility and delivery-window planning.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" style="background:rgba(0,180,216,0.05);">Ocean Opportunity — MEDIUM-HIGH</div>
+        <div class="card-body">
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--navy);">Reason:</strong> Manzanillo and Veracruz imports in 2025 plus a Manzanillo maritime export to Chile.</p>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.6;margin-top:8px;"><strong style="color:var(--navy);">Akzent angle:</strong> ocean coordination, ETA visibility, pre-arrival documentation, port and customs issue control, Asian supplier consolidation.</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header" style="background:rgba(0,180,216,0.05);">Air Opportunity — MEDIUM-HIGH</div>
+        <div class="card-body">
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--navy);">Reason:</strong> 2025 includes air activity through Querétaro, AIFA and Ciudad de México. For heavy autoparts, air use is rarely casual — it usually signals urgency, continuity, validations, critical spares or customer pressure.</p>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.6;margin-top:8px;"><strong style="color:var(--navy);">Akzent angle:</strong> expedites, recoveries, critical components, emergency response and fast documentation control.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" style="background:rgba(0,180,216,0.05);">ILM / Control Tower Opportunity — MEDIUM-HIGH</div>
+        <div class="card-body">
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--navy);">Reason:</strong> multi-origin sourcing, sensitive automotive parts, cross-border exposure, regional exports and customs complexity.</p>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.6;margin-top:8px;"><strong style="color:var(--navy);">Akzent angle:</strong> centralized operational visibility and coordination across suppliers, carriers and customs. Do not sell ILM as software — sell it as operational control, visibility and end-to-end coordination.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 14 AIOS Classification -->
+    <div class="card">
+      <div class="card-header"><span class="accent">14</span> AIOS Classification</div>
+      <div class="card-body">
+        <div class="card-body" style="padding:0 0 14px 0;display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+          <span class="classification-badge lead">LEAD</span>
+          <span class="classification-badge aa">AA</span>
+          <span style="font-size:12px;color:var(--text-muted);">Relationship Status and AIOS Classification are independent variables.</span>
+        </div>
+        <table class="hub-table">
+          <thead><tr><th>Variable</th><th style="text-align:right;">Result</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Relationship Status</strong></td><td style="text-align:right;"><span class="classification-badge lead">LEAD</span></td></tr>
+            <tr><td><strong>AIOS Classification</strong></td><td style="text-align:right;"><span class="classification-badge aa">AA</span></td></tr>
+            <tr><td><strong>Strategic Fit</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">AA</td></tr>
+            <tr><td><strong>Operational Complexity</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">Medium-High</td></tr>
+            <tr><td><strong>Modal Diversity</strong></td><td style="text-align:right;">High in 2025 / Truck-only visible in 2026 YTD</td></tr>
+            <tr><td><strong>Cross-Border Exposure</strong></td><td style="text-align:right;font-weight:700;color:var(--red);">High</td></tr>
+            <tr><td><strong>Ocean Exposure</strong></td><td style="text-align:right;">Medium-High</td></tr>
+            <tr><td><strong>Air Exposure</strong></td><td style="text-align:right;">Medium-High</td></tr>
+            <tr><td><strong>Customs Sensitivity</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">High</td></tr>
+            <tr><td><strong>Supplier Coordination Potential</strong></td><td style="text-align:right;">Medium-High</td></tr>
+            <tr><td><strong>ILM / Control Tower Potential</strong></td><td style="text-align:right;">Medium-High</td></tr>
+            <tr><td><strong>Commercial Priority</strong></td><td style="text-align:right;font-weight:700;color:#b45309;">PRIORITY TARGET</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:14px;padding:12px 16px;background:rgba(13,43,94,0.03);border-radius:6px;border:1px solid var(--border);">
+          <strong style="font-size:11px;color:var(--navy);text-transform:uppercase;letter-spacing:1px;">AIOS Verdict</strong>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.6;margin-top:6px;">Suspensys Automotive Systems is an <strong>AA Strategic Target</strong>. It does not reach AAA based on the uploaded Panjiva files because visible volume is limited and 2026 YTD does not show imports. However, the combination of critical automotive components, 2025 multimodal activity, customs exposure, Nuevo Laredo, Manzanillo, specialized suppliers and Randon Autoparts connectivity creates strong strategic fit for Akzent.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 15 Commercial Positioning -->
+    <div class="card">
+      <div class="card-header"><span class="accent">15</span> Commercial Positioning</div>
+      <div class="card-body">
+        <div class="positioning-box">
+          <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,0.6);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;">Positioning Statement</div>
+          <div class="positioning-example">Position Akzent as Operational Complexity Partner · Multimodal Coordination Partner · Customs &amp; Visibility Partner · ILM / Control Tower Partner.</div>
+          <div style="font-size:11px;font-weight:700;color:var(--teal);letter-spacing:1px;text-transform:uppercase;margin:16px 0 8px;">Suggested Commercial Message</div>
+          <div class="positioning-example">"We see a heavy automotive components operation with suspension, axle and brake products, where Panjiva shows international suppliers, Manzanillo, Nuevo Laredo, air urgency signals and regional exports toward Guatemala and the United States. Operations like this usually do not fail because of one isolated Shipment; they fail because of coordination, documentation visibility and exception response. That is where Akzent can help."</div>
+          <div class="capability-tags">
+            <span class="cap-tag">Nuevo Laredo</span>
+            <span class="cap-tag">Manzanillo</span>
+            <span class="cap-tag">Veracruz</span>
+            <span class="cap-tag">Ciudad Hidalgo</span>
+            <span class="cap-tag">Querétaro / AIFA</span>
+            <span class="cap-tag">Suspension / Axles</span>
+            <span class="cap-tag">Brake Systems</span>
+            <span class="cap-tag">Supplier Coordination</span>
+            <span class="cap-tag">Customs Visibility</span>
+            <span class="cap-tag">Control Tower</span>
+          </div>
+        </div>
+        <div style="margin-top:14px;padding:12px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 6px 6px 0;">
+          <strong style="font-size:11px;color:#b45309;text-transform:uppercase;letter-spacing:1px;">Do Not Position Akzent as a Transactional Freight Provider</strong>
+          <ul class="q-list" style="margin-top:6px;">
+            <li>Do not enter with a spot rate.</li>
+            <li>Do not enter as "another transport provider".</li>
+            <li>Do not lead with commodity transportation disconnected from the operational reality of the account.</li>
+            <li>Do not sell ILM as software — sell operational control, visibility and end-to-end coordination.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 16 Discovery Questions -->
+    <div class="card">
+      <div class="card-header"><span class="accent">16</span> Discovery Question Engine</div>
+      <div class="card-body">
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Cross-Border</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>How critical is Nuevo Laredo for customer or related-entity deliveries?</li>
+              <li>Where is the biggest friction today: carrier, customs, documentation or visibility?</li>
+              <li>Do you operate with strict customer delivery windows?</li>
+              <li>How are border crossing, release and final delivery coordinated today?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Ocean / Imports</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>What share of critical sourcing arrives through Manzanillo or Veracruz?</li>
+              <li>What issues appear most before arrival: documentation, ETA, delays, classification or supplier readiness?</li>
+              <li>Which suppliers require the most follow-up before shipping?</li>
+              <li>Do you consolidate Asia suppliers or manage each supplier separately?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Air / Urgency</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>What usually triggers air shipments: shortages, validation, samples, spare parts or customer pressure?</li>
+              <li>Is expedite management structured or handled case by case?</li>
+              <li>How costly is a delay in suspension, brake or axle components?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>ILM / Control Tower</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>Is operational visibility centralized or split across traffic, purchasing, suppliers and customs brokers?</li>
+              <li>What reports do you need to anticipate production or delivery risk?</li>
+              <li>Which Shipments require the most manual coordination?</li>
+              <li>Which part of the operation would you prefer to stop managing internally if a reliable partner could own it?</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 17 Strategic Expansion Trajectory -->
+    <div class="card">
+      <div class="card-header"><span class="accent">17</span> Strategic Expansion Trajectory</div>
+      <div class="card-body">
+        <div class="phase-grid">
+          <div class="phase-card"><div class="phase-num">Phase 1</div><div class="phase-title">Entry</div><ul class="phase-items"><li>Nuevo Laredo cross-border support</li><li>Customs coordination</li><li>Critical shipment visibility</li></ul></div>
+          <div class="phase-card"><div class="phase-num">Phase 2</div><div class="phase-title">Multimodal Control</div><ul class="phase-items"><li>Manzanillo / Veracruz ocean visibility</li><li>Air expedite response</li><li>Supplier follow-up</li></ul></div>
+          <div class="phase-card"><div class="phase-num">Phase 3</div><div class="phase-title">Regional Coordination</div><ul class="phase-items"><li>Guatemala corridor</li><li>USA customer delivery coordination</li><li>Documentation control</li></ul></div>
+          <div class="phase-card"><div class="phase-num">Phase 4</div><div class="phase-title">ILM / Control Tower</div><ul class="phase-items"><li>Centralized exception management</li><li>Supplier-carrier-customs orchestration</li><li>Executive visibility layer</li></ul></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
 </main>
 
 <script>
@@ -33658,6 +34270,7 @@ const ACCOUNTS = [
   { id:'view-sisflex', name:'SISFLEX', sub:'Industrial Manufacturing · Heat Exchangers · HVAC / Refrigeration Components · Metal Fabrication · Monterrey / Nuevo León · Nuevo Laredo Cross-Border · IMMEX / Returns · Control Tower · Panjiva Imports + Exports', rel:'LEAD', cls:'AA', clsPill:'aa' },
   { id:'view-gomez-cuetara', name:'Gómez Cuétara Hnos', sub:'Food Manufacturing · Biscuit / Cookie Exporter · Cross-Border USA · Nuevo Laredo · Customs Sensitivity · Control Tower · Panjiva Imports + Exports', rel:'LEAD', cls:'AA', clsPill:'aa' },
   { id:'view-owens-corning', name:'Owens Corning Mexico', sub:'Construction Materials · Insulation · Fiberglass · Roofing Materials · Cross-Border + LATAM Export Network · Nuevo Laredo · Manzanillo · Veracruz · Ciudad Hidalgo · Rail + Air signals · ILM / Control Tower · Panjiva Imports + Exports', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
+  { id:'view-suspensys', name:'Suspensys Automotive Systems', sub:'Automotive · Heavy Trailer Components · Suspension, Axles &amp; Brake Systems · Cross-Border + Ocean + Air urgency · Nuevo Laredo · Manzanillo · Veracruz · Ciudad Hidalgo · Querétaro · AIFA · Supplier Coordination · ILM / Control Tower · Panjiva Imports + Exports', rel:'LEAD', cls:'AA', clsPill:'aa' },
 ];
 const MODULES = [
   { id:'view-network',     name:'Network Intelligence', sub:'Cross-account analysis · Lane overlap' },
@@ -33770,7 +34383,8 @@ var INDUSTRY_BY_ID = {
   'view-veritiv':'Packaging', 'view-bio-pappel':'Paper', 'view-metalicas-titan':'Industrial',
   'view-mckinley':'Paper', 'view-grupo-sanfer':'Pharma', 'view-yofc':'Telecom',
   'view-hirotec':'Auto', 'view-sisflex':'Industrial',
-  'view-gomez-cuetara':'Food', 'view-owens-corning':'Industrial'
+  'view-gomez-cuetara':'Food', 'view-owens-corning':'Industrial',
+  'view-suspensys':'Auto'
 };
 
 var UNRESOLVED_ACCOUNTS = [];
