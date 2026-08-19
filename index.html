@@ -1287,6 +1287,10 @@ main {
       <span>◆</span> <span style="flex:1;">Gómez Cuétara Hnos</span>
       <span class="recent-cls aa">AA</span>
     </div>
+    <div class="nav-item" onclick="showView('view-owens-corning', this)">
+      <span>◆</span> <span style="flex:1;">Owens Corning</span>
+      <span class="recent-cls aaa">AAA</span>
+    </div>
   </div>
 
   <div class="nav-divider"></div>
@@ -1330,7 +1334,7 @@ main {
     <div class="page-header-left">
       <div class="page-header-eyebrow">Akzent Intelligence OS</div>
       <div class="page-header-title">Strategic Account Command Center</div>
-      <div class="page-header-sub" id="home-header-sub">Pre-commercial intelligence · 48 accounts under analysis</div>
+      <div class="page-header-sub" id="home-header-sub">Pre-commercial intelligence · 57 accounts under analysis</div>
     </div>
     <div class="page-header-meta">
       <div style="font-size:11px;color:rgba(255,255,255,0.5);">SYSTEM STATUS</div>
@@ -1348,15 +1352,15 @@ main {
   <div class="home-stats-row">
     <div class="stat-box">
       <div class="stat-label" id="stat-total-label">Total Accounts</div>
-      <div class="stat-value" id="stat-total-val">52</div>
+      <div class="stat-value" id="stat-total-val">57</div>
     </div>
     <div class="stat-box">
       <div class="stat-label">AAA Accounts</div>
-      <div class="stat-value red" id="stat-aaa-val">22</div>
+      <div class="stat-value red" id="stat-aaa-val">25</div>
     </div>
     <div class="stat-box">
       <div class="stat-label">AA / AA+ Accounts</div>
-      <div class="stat-value teal" id="stat-aa-val">30</div>
+      <div class="stat-value teal" id="stat-aa-val">32</div>
     </div>
     <div class="stat-box">
       <div class="stat-label">ILM Candidates</div>
@@ -1364,7 +1368,7 @@ main {
     </div>
     <div class="stat-box">
       <div class="stat-label">Industries</div>
-      <div class="stat-value" id="stat-ind-val">8</div>
+      <div class="stat-value" id="stat-ind-val">10</div>
     </div>
   </div>
 
@@ -2132,6 +2136,30 @@ main {
         <span class="acct-tag">Food manufacturing</span>
         <span class="acct-tag">Cross-border</span>
         <span class="acct-tag">Control Tower fit</span>
+      </div>
+    </div>
+
+    <!-- Owens Corning Mexico -->
+    <div class="account-card aaa" onclick="showViewById('view-owens-corning')">
+      <div class="account-card-header">
+        <div>
+          <div class="account-name">Owens Corning Mexico</div>
+          <div class="account-industry">Construction Materials · Insulation · Fiberglass</div>
+        </div>
+        <span class="account-cls-badge aaa">AAA</span>
+      </div>
+      <div class="account-metrics">
+        <div class="acct-metric"><div class="acct-metric-val">715</div><div class="acct-metric-lbl">YTD Shipments</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">62%</div><div class="acct-metric-lbl">Imports</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">38%</div><div class="acct-metric-lbl">Exports</div></div>
+      </div>
+      <div class="account-tags">
+        <span class="acct-tag" style="background:rgba(245,158,11,0.12);color:#b45309;border-color:rgba(245,158,11,0.3);">LEAD</span>
+        <span class="acct-tag">Nuevo Laredo</span>
+        <span class="acct-tag">Manzanillo</span>
+        <span class="acct-tag">LATAM exports</span>
+        <span class="acct-tag">Rail + Air signals</span>
+        <span class="acct-tag">ILM fit</span>
       </div>
     </div>
 
@@ -12503,6 +12531,16 @@ main {
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot"></div></div></td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td style="color:#b45309;font-weight:700;font-size:11px;">★ PRIORITY TARGET</td>
+            </tr>
+            <tr>
+              <td><strong>Owens Corning Mexico</strong> <span style="font-size:10px;font-weight:600;color:#b45309;background:rgba(245,158,11,0.12);padding:1px 5px;border-radius:3px;margin-left:4px;">LEAD</span></td>
+              <td><span class="cls-pill aaa">AAA</span></td>
+              <td style="color:var(--text-muted);" title="Relationship Status LEAD · AIOS Classification AAA · 715 Shipments 2026 YTD · Imports 444 YTD · Exports 271 YTD · Primary Hub Nuevo Laredo · Modal Profile Truck + Maritime + Rail + Air · Strategic Fit AAA · ILM Potential AAA · Customs Sensitivity High · Cross-Border Exposure Very High · Ocean Exposure High · Air Exposure Medium">Construction Materials / Insulation</td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot"></div></div></td>
+              <td><div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div></div></td>
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
               <td style="color:#b45309;font-weight:700;font-size:11px;">★ PRIORITY TARGET</td>
             </tr>
@@ -32993,6 +33031,571 @@ main {
   </div>
 </div>
 
+
+<div id="view-owens-corning" class="view">
+  <div class="page-header">
+    <div class="page-header-left">
+      <div class="page-header-eyebrow">Target Account · LEAD Analysis</div>
+      <div class="page-header-title">Owens Corning Mexico</div>
+      <div class="page-header-sub">Construction Materials / Insulation / Fiberglass · Cross-Border + LATAM Export Network</div>
+    </div>
+    <div class="page-header-meta">
+      <span class="classification-badge lead">LEAD</span>
+      <span class="classification-badge aaa">AAA</span>
+      <button class="print-btn" onclick="printView('view-owens-corning')">⬇ Export PDF</button>
+    </div>
+  </div>
+  <div class="content-body">
+
+    <!-- LEAD source banner -->
+    <div class="card">
+      <div class="card-body" style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+        <span class="classification-badge lead">LEAD</span>
+        <span class="classification-badge aaa">AAA</span>
+        <span style="font-size:12px;color:var(--text-muted);line-height:1.6;">
+          <strong style="color:var(--navy);">Relationship Status: LEAD (pre-commercial).</strong> Owens Corning Mexico S De Rl De Cv is not operated by Akzent. All analysis is built exclusively on <strong>Panjiva Imports + Panjiva Exports</strong> as the visible logistics universe — no Akzent shipment data is included. The <strong>AIOS Classification AAA</strong> reflects strategic fit and operational complexity and is shown separately from — and is independent of — the LEAD relationship badge. Previous full calendar year (2025) and current year-to-date (2026 YTD through June 30 2026) are reported separately and are not aggregated.
+        </span>
+      </div>
+    </div>
+
+    <!-- Panjiva Visibility Metrics -->
+    <div class="grid-4">
+      <div class="stat-box"><div class="stat-label">2026 YTD Shipments</div><div class="stat-value teal">715</div><div class="stat-sub">444 imports · 271 exports</div></div>
+      <div class="stat-box"><div class="stat-label">2025 Shipments</div><div class="stat-value" style="font-size:22px;">1,896</div><div class="stat-sub">1,365 imports · 531 exports</div></div>
+      <div class="stat-box"><div class="stat-label">Import / Export Mix — 2026 YTD</div><div class="stat-value" style="font-size:22px;">62.1% / 37.9%</div><div class="stat-sub">More export-oriented than 2025</div></div>
+      <div class="stat-box"><div class="stat-label">Core Hub</div><div class="stat-value" style="font-size:22px;">Nuevo Laredo</div><div class="stat-sub">390 Shipments YTD · critical corridor</div></div>
+    </div>
+
+    <!-- 01 Executive Intelligence Summary -->
+    <div class="card">
+      <div class="card-header"><span class="accent">01</span> Executive Intelligence Summary</div>
+      <div class="card-body">
+        <p style="font-size:13px;line-height:1.7;">Owens Corning Mexico presents a highly strategic operational profile for Akzent. The visible Panjiva universe shows a complex industrial logistics network combining high-frequency imports from the United States, exports to LATAM and the United States, strong cross-border dependency, meaningful ocean activity, rail participation and air urgency signals.</p>
+        <p style="font-size:13px;line-height:1.7;margin-top:10px;">In 2026 YTD, Owens Corning Mexico shows <strong>715 total Shipments</strong>, including <strong>444 imports</strong> and <strong>271 exports</strong>. The mix is <strong>62.1% import</strong> and <strong>37.9% export</strong>. Visible value reaches <strong>USD 40.15M</strong>, with <strong>12.44M kg</strong> and <strong>983.06 TEU</strong>.</p>
+        <p style="font-size:13px;line-height:1.7;margin-top:10px;">The operation is not a simple freight opportunity. It requires coordination across Nuevo Laredo, Colombia NL, Manzanillo, Veracruz, Ciudad Hidalgo, Toluca, AICM and Altamira. Product families include insulation, fiberglass, roofing materials, polystyrene, laminates, acrylic polymers and mineral fiber products.</p>
+        <div style="background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 6px 6px 0;padding:12px 16px;margin-top:12px;">
+          <strong style="font-size:11px;color:#b45309;text-transform:uppercase;letter-spacing:1px;">⚡ AIOS Classification Rationale — Source: Panjiva</strong>
+          <p style="font-size:12px;color:var(--text);line-height:1.6;margin-top:4px;">AIOS classifies Owens Corning Mexico as <strong>AAA</strong> because the account combines scale, cross-border intensity, multimodal execution, customs exposure, regional export complexity and strong ILM / Control Tower potential.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 Relationship Status + AIOS Classification -->
+    <div class="card">
+      <div class="card-header"><span class="accent">02</span> Relationship Status &amp; AIOS Classification</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:12px;">
+          <div style="padding:14px 16px;background:rgba(245,158,11,0.05);border-radius:6px;border:1px solid var(--border);">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;">Relationship Status</div>
+            <span class="classification-badge lead" style="font-size:14px;">LEAD</span>
+            <p style="font-size:11px;color:var(--text-muted);line-height:1.6;margin-top:8px;">Pre-commercial. Account not yet operated by Akzent.</p>
+          </div>
+          <div style="padding:14px 16px;background:rgba(0,180,216,0.04);border-radius:6px;border:1px solid var(--border);">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;">AIOS Classification</div>
+            <span class="classification-badge aaa" style="font-size:14px;">AAA</span>
+            <p style="font-size:11px;color:var(--text-muted);line-height:1.6;margin-top:8px;">AAA — Priority Multimodal Target. Independent of the LEAD badge.</p>
+          </div>
+        </div>
+        <table class="hub-table" style="margin-top:14px;">
+          <tbody>
+            <tr><td><strong>Legal / Panjiva Name</strong></td><td style="text-align:right;">Owens Corning Mexico S De Rl De Cv</td></tr>
+            <tr><td><strong>Industry</strong></td><td style="text-align:right;">Construction Materials / Insulation / Fiberglass / Roofing Materials</td></tr>
+            <tr><td><strong>Account Type</strong></td><td style="text-align:right;">Industrial manufacturing and regional export network</td></tr>
+            <tr><td><strong>Source</strong></td><td style="text-align:right;">Panjiva Imports + Panjiva Exports only · No Akzent shipment data included</td></tr>
+            <tr><td><strong>Main Hub</strong></td><td style="text-align:right;">Nuevo Laredo</td></tr>
+          </tbody>
+        </table>
+        <table class="hub-table" style="margin-top:14px;">
+          <thead><tr><th>Variable</th><th style="text-align:right;">Result</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Relationship Status</strong></td><td style="text-align:right;"><span class="classification-badge lead">LEAD</span></td></tr>
+            <tr><td><strong>AIOS Classification</strong></td><td style="text-align:right;"><span class="classification-badge aaa">AAA</span></td></tr>
+            <tr><td><strong>Strategic Fit</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">AAA</td></tr>
+            <tr><td><strong>Operational Complexity</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">High</td></tr>
+            <tr><td><strong>Modal Diversity</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">High</td></tr>
+            <tr><td><strong>Cross-Border Exposure</strong></td><td style="text-align:right;font-weight:700;color:var(--red);">Very High</td></tr>
+            <tr><td><strong>Ocean Exposure</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">High</td></tr>
+            <tr><td><strong>Rail Exposure</strong></td><td style="text-align:right;">Medium</td></tr>
+            <tr><td><strong>Air Exposure</strong></td><td style="text-align:right;">Medium</td></tr>
+            <tr><td><strong>Customs Sensitivity</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">High</td></tr>
+            <tr><td><strong>Export Network Complexity</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">High</td></tr>
+            <tr><td><strong>ILM / Control Tower Potential</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">AAA</td></tr>
+            <tr><td><strong>Commercial Attractiveness</strong></td><td style="text-align:right;font-weight:700;color:var(--red);">Very High</td></tr>
+            <tr><td><strong>Account Priority</strong></td><td style="text-align:right;font-weight:700;color:#b45309;">PRIORITY TARGET</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 03 Shipment Intelligence by Period -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">03</span> Shipment Intelligence by Period</div>
+      <div class="card-body">
+        <p style="font-size:12px;color:var(--text-muted);line-height:1.6;margin-bottom:4px;">Periods are analyzed separately and are not aggregated. <strong>Previous Full Calendar Year: 2025</strong> · <strong>Current YTD: 2026 through June 30, 2026</strong>. Each Panjiva row is treated as 1 Shipment. Source: Panjiva Imports + Panjiva Exports.</p>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header" style="background:rgba(13,43,94,0.03);">2025 — Previous Full Calendar Year</div>
+        <div class="card-body">
+          <div class="grid-2" style="gap:10px;">
+            <div class="stat-box"><div class="stat-label">Total Shipments</div><div class="stat-value" style="font-size:22px;">1,896</div><div class="stat-sub">1,365 imports · 531 exports</div></div>
+            <div class="stat-box"><div class="stat-label">USD Value</div><div class="stat-value" style="font-size:22px;">USD 81.36M</div><div class="stat-sub">Declared</div></div>
+          </div>
+          <table class="hub-table" style="margin-top:12px;">
+            <tbody>
+              <tr><td><strong>Total Shipments</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">1,896</td></tr>
+              <tr><td><strong>Import Shipments</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">1,365</td></tr>
+              <tr><td><strong>Export Shipments</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">531</td></tr>
+              <tr><td><strong>Import Mix</strong></td><td style="text-align:right;">72.0%</td></tr>
+              <tr><td><strong>Export Mix</strong></td><td style="text-align:right;">28.0%</td></tr>
+              <tr><td><strong>USD Value</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">USD 81.36M</td></tr>
+              <tr><td><strong>Gross Weight</strong></td><td style="text-align:right;">24.53M kg</td></tr>
+              <tr><td><strong>Volume</strong></td><td style="text-align:right;">1,661.87 TEU</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" style="background:rgba(0,180,216,0.05);">2026 YTD — Current Year through June 30</div>
+        <div class="card-body">
+          <div class="grid-2" style="gap:10px;">
+            <div class="stat-box"><div class="stat-label">Total Shipments</div><div class="stat-value teal" style="font-size:22px;">715</div><div class="stat-sub">444 imports · 271 exports</div></div>
+            <div class="stat-box"><div class="stat-label">USD Value</div><div class="stat-value" style="font-size:22px;">USD 40.15M</div><div class="stat-sub">Declared</div></div>
+          </div>
+          <table class="hub-table" style="margin-top:12px;">
+            <tbody>
+              <tr><td><strong>Total Shipments</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">715</td></tr>
+              <tr><td><strong>Import Shipments</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">444</td></tr>
+              <tr><td><strong>Export Shipments</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">271</td></tr>
+              <tr><td><strong>Import Mix</strong></td><td style="text-align:right;">62.1%</td></tr>
+              <tr><td><strong>Export Mix</strong></td><td style="text-align:right;">37.9%</td></tr>
+              <tr><td><strong>USD Value</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">USD 40.15M</td></tr>
+              <tr><td><strong>Gross Weight</strong></td><td style="text-align:right;">12.44M kg</td></tr>
+              <tr><td><strong>Volume</strong></td><td style="text-align:right;">983.06 TEU</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 Trend Intelligence -->
+    <div class="card">
+      <div class="card-header"><span class="accent">04</span> Trend Intelligence</div>
+      <div class="card-body">
+        <table class="hub-table">
+          <thead><tr><th>Signal</th><th>Reading</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Operational footprint</strong></td><td style="color:var(--text-muted);">2026 YTD is smaller in Shipments than 2025 full year, but still represents a large operational footprint.</td></tr>
+            <tr><td><strong>Export orientation</strong></td><td style="color:var(--text-muted);">Compared with 2025, 2026 YTD shows a more export-oriented mix: exports increase from 28.0% of Shipments in 2025 to 37.9% YTD.</td></tr>
+            <tr><td><strong>Modal evolution</strong></td><td style="color:var(--text-muted);">Truck remains dominant, but rail and air gain operational relevance in 2026 YTD.</td></tr>
+            <tr><td><strong>Border concentration</strong></td><td style="color:var(--text-muted);">Nuevo Laredo remains the critical cross-border hub.</td></tr>
+            <tr><td><strong>Secondary nodes</strong></td><td style="color:var(--text-muted);">Manzanillo, Ciudad Hidalgo, Colombia NL and Veracruz remain strategically important.</td></tr>
+            <tr><td><strong>Product portfolio</strong></td><td style="color:var(--text-muted);">The HS portfolio remains concentrated in insulation, fiberglass, roofing/asphalt materials, polystyrene, laminates and industrial chemicals.</td></tr>
+            <tr><td><strong>Commercial signal</strong></td><td style="color:var(--text-muted);">The commercial signal is strongest around cross-border control, export regional coordination, customs visibility and ILM / Control Tower.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 05 Import / Export Breakdown -->
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header"><span class="accent">05</span> Imports — 2026 YTD</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <tbody>
+              <tr><td><strong>Import Shipments</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">444</td></tr>
+              <tr><td><strong>USD Value</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">USD 18.55M</td></tr>
+              <tr><td><strong>Gross Weight</strong></td><td style="text-align:right;">7.67M kg</td></tr>
+              <tr><td><strong>Volume</strong></td><td style="text-align:right;">663.40 TEU</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><span class="accent">05</span> Exports — 2026 YTD</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <tbody>
+              <tr><td><strong>Export Shipments</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">271</td></tr>
+              <tr><td><strong>USD Value</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">USD 21.60M</td></tr>
+              <tr><td><strong>Gross Weight</strong></td><td style="text-align:right;">4.77M kg</td></tr>
+              <tr><td><strong>Volume</strong></td><td style="text-align:right;">319.66 TEU</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header"><span class="accent">05</span> Modal Mix — Imports 2026 YTD</div>
+        <div class="card-body">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;">444 import Shipments</div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Truck 🚛</strong><span>388 · 87.4%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:100%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Rail 🚂</strong><span>27 · 6.1%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:7%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Maritime 🚢</strong><span>24 · 5.4%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:6.2%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Air ✈</strong><span>5 · 1.1%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:1.3%"></div></div></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><span class="accent">05</span> Modal Mix — Exports 2026 YTD</div>
+        <div class="card-body">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;">271 export Shipments</div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Maritime 🚢</strong><span>122 · 45.0%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:100%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Truck 🚛</strong><span>111 · 41.0%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:91%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Unknown ◇</strong><span>16 · 5.9%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:13.1%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Rail 🚂</strong><span>14 · 5.2%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:11.5%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Air ✈</strong><span>8 · 3.0%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:6.6%"></div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:12px 16px;background:rgba(0,180,216,0.05);">
+        <strong style="font-size:11px;color:var(--navy);">Interpretation:</strong>
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> Imports are structurally truck-led cross-border, with a secondary rail and maritime layer. Exports are genuinely multimodal, split almost evenly between maritime and truck, with rail and air present. This asymmetry is exactly where visibility and coordination gaps normally appear.</span>
+      </div>
+    </div>
+
+    <!-- 06 Geographic Intelligence -->
+    <div class="card">
+      <div class="card-header"><span class="accent">06</span> Geographic Intelligence — Top Countries / Regions 2026 YTD</div>
+      <div class="card-body">
+        <table class="hub-table">
+          <thead><tr><th>Country / Region</th><th style="text-align:right;">Shipments</th></tr></thead>
+          <tbody>
+            <tr><td><strong>United States</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">463</td></tr>
+            <tr><td><strong>Chile</strong></td><td style="text-align:right;">37</td></tr>
+            <tr><td><strong>Guatemala</strong></td><td style="text-align:right;">31</td></tr>
+            <tr><td><strong>Poland</strong></td><td style="text-align:right;">22</td></tr>
+            <tr><td><strong>Ecuador</strong></td><td style="text-align:right;">22</td></tr>
+            <tr><td><strong>Brazil</strong></td><td style="text-align:right;">21</td></tr>
+            <tr><td><strong>Peru</strong></td><td style="text-align:right;">20</td></tr>
+            <tr><td><strong>Honduras</strong></td><td style="text-align:right;">18</td></tr>
+            <tr><td><strong>El Salvador</strong></td><td style="text-align:right;">17</td></tr>
+            <tr><td><strong>Mexico</strong></td><td style="text-align:right;">16</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:12px;padding:10px 14px;background:rgba(13,43,94,0.03);border-radius:5px;border:1px solid var(--border);"><strong style="font-size:11px;color:var(--navy);">Interpretation:</strong><span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> United States is the dominant operating corridor, reinforcing cross-border fit. LATAM exports show regional customer complexity, especially Chile, Guatemala, Ecuador, Brazil, Peru, Honduras and El Salvador. Poland indicates European supply exposure.</span></div>
+      </div>
+    </div>
+
+    <!-- 07 Customs / Port Intelligence -->
+    <div class="card">
+      <div class="card-header"><span class="accent">07</span> Customs / Port Intelligence — 2026 YTD</div>
+      <div class="card-body">
+        <table class="hub-table">
+          <thead><tr><th>Customs / Port</th><th style="text-align:right;">Shipments</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Nuevo Laredo</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">390</td></tr>
+            <tr><td><strong>Manzanillo</strong></td><td style="text-align:right;">85</td></tr>
+            <tr><td><strong>Ciudad Hidalgo</strong></td><td style="text-align:right;">76</td></tr>
+            <tr><td><strong>Colombia, NL</strong></td><td style="text-align:right;">61</td></tr>
+            <tr><td><strong>Veracruz</strong></td><td style="text-align:right;">56</td></tr>
+            <tr><td><strong>Toluca / San Cayetano Morelos</strong></td><td style="text-align:right;">18</td></tr>
+            <tr><td><strong>Ciudad Juárez</strong></td><td style="text-align:right;">14</td></tr>
+            <tr><td><strong>AICM</strong></td><td style="text-align:right;">9</td></tr>
+            <tr><td><strong>Altamira</strong></td><td style="text-align:right;">5</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:12px;padding:10px 14px;background:rgba(13,43,94,0.03);border-radius:5px;border:1px solid var(--border);"><strong style="font-size:11px;color:var(--navy);">Interpretation:</strong><span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> Nuevo Laredo is the control point for cross-border execution. Manzanillo and Veracruz create ocean visibility and port coordination opportunities. Ciudad Hidalgo signals Central America corridor complexity. AICM indicates critical or urgent shipment behavior.</span></div>
+      </div>
+    </div>
+
+    <!-- 08 Supplier / Customer / Counterparty Intelligence -->
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header"><span class="accent">08</span> Top Import Suppliers — 2026 YTD</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <thead><tr><th>Supplier</th><th style="text-align:right;">Shipments</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Owens Corning Roofing &amp; Asphalt LLC</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">106</td></tr>
+              <tr><td><strong>Lamtec Corporation</strong></td><td style="text-align:right;">60</td></tr>
+              <tr><td><strong>Coatex Inc.</strong></td><td style="text-align:right;">42</td></tr>
+              <tr><td><strong>Thermafiber Inc.</strong></td><td style="text-align:right;">38</td></tr>
+              <tr><td><strong>Owens Corning Non Woven Tech LLC</strong></td><td style="text-align:right;">31</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><span class="accent">08</span> Top Export Customers — 2026 YTD</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <thead><tr><th>Customer</th><th style="text-align:right;">Shipments</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Owens Corning Insulating System LLC</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">26</td></tr>
+              <tr><td><strong>Owens Corning Sales LLC</strong></td><td style="text-align:right;">21</td></tr>
+              <tr><td><strong>Whirlpool S.A.</strong></td><td style="text-align:right;">21</td></tr>
+              <tr><td><strong>Safe Energy SpA</strong></td><td style="text-align:right;">21</td></tr>
+              <tr><td><strong>Productos Químicos Representaciones S.A.</strong></td><td style="text-align:right;">18</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:12px 16px;background:rgba(0,180,216,0.05);">
+        <strong style="font-size:11px;color:var(--navy);">Interpretation:</strong>
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> The network includes both intragroup counterparties and external regional customers. This creates a supplier/customer coordination opportunity for Akzent around shipment readiness, documentation, milestone visibility and exception control.</span>
+      </div>
+    </div>
+
+    <!-- 09 Top HS Codes -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">09</span> Top HS Codes — 2025 and 2026 YTD</div>
+      <div class="card-body" style="padding:12px 16px;background:rgba(245,158,11,0.05);">
+        <strong style="font-size:11px;color:#b45309;">Note:</strong>
+        <span style="font-size:11px;color:var(--text-muted);"> HS Code counts represent operational presence. If one Shipment includes multiple HS Codes, HS counts are not additive.</span>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header" style="background:rgba(13,43,94,0.03);">Imports 2025 — Top HS Codes</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <thead><tr><th>HS Code</th><th>Product Interpretation</th><th style="text-align:right;">Presence</th><th style="text-align:right;">%</th></tr></thead>
+            <tbody>
+              <tr><td><strong>7019800199</strong></td><td>Fiberglass / wool plates for thermal-acoustic insulation</td><td style="text-align:right;font-weight:700;color:var(--navy);">533</td><td style="text-align:right;">39.0%</td></tr>
+              <tr><td><strong>6807909900</strong></td><td>Asphalt roofing plates</td><td style="text-align:right;">185</td><td style="text-align:right;">13.6%</td></tr>
+              <tr><td><strong>6806100100</strong></td><td>Mineral fiber insulation plates</td><td style="text-align:right;">108</td><td style="text-align:right;">7.9%</td></tr>
+              <tr><td><strong>3921909999</strong></td><td>Reinforced plastic films / sheets</td><td style="text-align:right;">105</td><td style="text-align:right;">7.7%</td></tr>
+              <tr><td><strong>7607200200</strong></td><td>Aluminum sheets with backing</td><td style="text-align:right;">88</td><td style="text-align:right;">6.4%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" style="background:rgba(13,43,94,0.03);">Exports 2025 — Top HS Codes</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <thead><tr><th>HS Code</th><th>Product Interpretation</th><th style="text-align:right;">Presence</th><th style="text-align:right;">%</th></tr></thead>
+            <tbody>
+              <tr><td><strong>7019909903</strong></td><td>Thermal-acoustic insulation and fiberglass products</td><td style="text-align:right;font-weight:700;color:var(--navy);">362</td><td style="text-align:right;">68.2%</td></tr>
+              <tr><td><strong>7019909999</strong></td><td>Fiberglass manufactures</td><td style="text-align:right;">193</td><td style="text-align:right;">36.3%</td></tr>
+              <tr><td><strong>3921110100</strong></td><td>Cellular / extruded polystyrene plates</td><td style="text-align:right;">100</td><td style="text-align:right;">18.8%</td></tr>
+              <tr><td><strong>7019800199</strong></td><td>Insulation / fiberglass products</td><td style="text-align:right;">66</td><td style="text-align:right;">12.4%</td></tr>
+              <tr><td><strong>3919100100</strong></td><td>Adhesive tapes in rolls</td><td style="text-align:right;">10</td><td style="text-align:right;">1.9%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header" style="background:rgba(0,180,216,0.05);">Imports 2026 YTD — Top HS Codes</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <thead><tr><th>HS Code</th><th>Product Interpretation</th><th style="text-align:right;">Presence</th><th style="text-align:right;">%</th></tr></thead>
+            <tbody>
+              <tr><td><strong>6807909900</strong></td><td>Asphalt roofing plates</td><td style="text-align:right;font-weight:700;color:var(--navy);">106</td><td style="text-align:right;">23.9%</td></tr>
+              <tr><td><strong>3921909999</strong></td><td>Reinforced plastic / aluminumized sheets</td><td style="text-align:right;">58</td><td style="text-align:right;">13.1%</td></tr>
+              <tr><td><strong>7607200200</strong></td><td>Aluminum sheets with backing</td><td style="text-align:right;">49</td><td style="text-align:right;">11.0%</td></tr>
+              <tr><td><strong>6806100100</strong></td><td>Mineral fiber insulation plates</td><td style="text-align:right;">46</td><td style="text-align:right;">10.4%</td></tr>
+              <tr><td><strong>3906909900</strong></td><td>Acrylic polymers in solution</td><td style="text-align:right;">42</td><td style="text-align:right;">9.5%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" style="background:rgba(0,180,216,0.05);">Exports 2026 YTD — Top HS Codes</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <thead><tr><th>HS Code</th><th>Product Interpretation</th><th style="text-align:right;">Presence</th><th style="text-align:right;">%</th></tr></thead>
+            <tbody>
+              <tr><td><strong>7019909903</strong></td><td>Thermal-acoustic insulation</td><td style="text-align:right;font-weight:700;color:var(--navy);">172</td><td style="text-align:right;">63.5%</td></tr>
+              <tr><td><strong>7019909999</strong></td><td>Fiberglass manufactures</td><td style="text-align:right;">92</td><td style="text-align:right;">33.9%</td></tr>
+              <tr><td><strong>7019800199</strong></td><td>Insulation / fiberglass products</td><td style="text-align:right;">63</td><td style="text-align:right;">23.2%</td></tr>
+              <tr><td><strong>3921110100</strong></td><td>Extruded polystyrene plates</td><td style="text-align:right;">49</td><td style="text-align:right;">18.1%</td></tr>
+              <tr><td><strong>6806100100</strong></td><td>Mineral fiber insulation plates</td><td style="text-align:right;">6</td><td style="text-align:right;">2.2%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:12px 16px;background:rgba(13,43,94,0.03);">
+        <strong style="font-size:11px;color:var(--navy);">Portfolio Trend:</strong>
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> The portfolio remains centered on insulation, fiberglass, roofing/asphalt materials, polystyrene, laminates and industrial chemicals. This is operationally significant because the account combines bulky construction materials with technical and chemical inputs, increasing the need for customs discipline, documentation control, multimodal planning and supplier/customer coordination.</span>
+      </div>
+    </div>
+
+    <!-- 10 Operational Complexity -->
+    <div class="card">
+      <div class="card-header"><span class="accent">10</span> Operational Complexity</div>
+      <div class="card-body">
+        <div style="padding:12px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 6px 6px 0;margin-bottom:12px;">
+          <strong style="font-size:11px;color:#b45309;text-transform:uppercase;letter-spacing:1px;">Complexity Level: HIGH / AAA</strong>
+        </div>
+        <table class="hub-table">
+          <thead><tr><th>Driver</th></tr></thead>
+          <tbody>
+            <tr><td>Cross-border dependency through Nuevo Laredo and Colombia NL.</td></tr>
+            <tr><td>Multimodal execution across truck, maritime, rail and air.</td></tr>
+            <tr><td>LATAM export network across Chile, Guatemala, Ecuador, Brazil, Peru, Honduras and El Salvador.</td></tr>
+            <tr><td>Industrial product portfolio with customs and classification sensitivity.</td></tr>
+            <tr><td>Multiple customs/ports across border, ocean, air and inland nodes.</td></tr>
+            <tr><td>Air presence indicating urgency or critical shipments.</td></tr>
+            <tr><td>Rail activity indicating intermodal planning needs.</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:12px;padding:10px 14px;background:rgba(13,43,94,0.03);border-radius:5px;border:1px solid var(--border);"><strong style="font-size:11px;color:var(--navy);">Akzent Opportunity:</strong><span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> Position Akzent as Operational Complexity Partner, Multimodal Coordination Partner, Customs &amp; Visibility Partner and ILM / Control Tower Partner.</span></div>
+      </div>
+    </div>
+
+    <!-- 11 Pain Mapping -->
+    <div class="card">
+      <div class="card-header"><span class="accent">11</span> Operational Signal → Pain Mapping</div>
+      <div class="card-body">
+        <div class="signal-grid">
+          <div class="signal-item high"><div class="signal-title">1. Fragmented Visibility</div><div class="signal-prob high">HIGH</div><div class="signal-desc">Multiple customs/ports and modes create a probable visibility gap.</div></div>
+          <div class="signal-item high"><div class="signal-title">2. Border Execution Pressure</div><div class="signal-prob high">HIGH</div><div class="signal-desc">Nuevo Laredo and Colombia NL create cross-border coordination dependency.</div></div>
+          <div class="signal-item high"><div class="signal-title">3. Export Regional Complexity</div><div class="signal-prob high">HIGH</div><div class="signal-desc">LATAM and Central America exports require regional execution control.</div></div>
+          <div class="signal-item"><div class="signal-title">4. Supplier Coordination Load</div><div class="signal-prob medium-high">MEDIUM-HIGH</div><div class="signal-desc">Multiple intragroup and external suppliers require readiness tracking and documentation discipline.</div></div>
+          <div class="signal-item high"><div class="signal-title">5. Customs Classification Sensitivity</div><div class="signal-prob high">HIGH</div><div class="signal-desc">HS portfolio includes chemicals, fiberglass, roofing, laminates and insulation products.</div></div>
+          <div class="signal-item"><div class="signal-title">6. Urgent Shipment Behavior</div><div class="signal-prob medium-high">MEDIUM-HIGH</div><div class="signal-desc">Air Shipments appear in both imports and exports.</div></div>
+          <div class="signal-item medium"><div class="signal-title">7. Intermodal Planning</div><div class="signal-prob medium">MEDIUM</div><div class="signal-desc">Rail activity appears in 2026 YTD.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12 Multimodal Opportunity -->
+    <div class="card">
+      <div class="card-header"><span class="accent">12</span> Multimodal Opportunity</div>
+      <div class="card-body">
+        <div style="padding:12px 16px;background:rgba(0,180,216,0.05);border-left:3px solid var(--teal);border-radius:0 6px 6px 0;margin-bottom:12px;">
+          <strong style="font-size:11px;color:var(--navy);text-transform:uppercase;letter-spacing:1px;">Multimodal Opportunity: VERY HIGH</strong>
+        </div>
+        <table class="hub-table">
+          <thead><tr><th>#</th><th>Entry Point</th></tr></thead>
+          <tbody>
+            <tr><td style="font-weight:700;color:var(--navy);">1</td><td>Nuevo Laredo / Colombia NL cross-border control.</td></tr>
+            <tr><td style="font-weight:700;color:var(--navy);">2</td><td>Manzanillo / Veracruz ocean coordination.</td></tr>
+            <tr><td style="font-weight:700;color:var(--navy);">3</td><td>Ciudad Hidalgo regional export corridor.</td></tr>
+            <tr><td style="font-weight:700;color:var(--navy);">4</td><td>Rail visibility and intermodal handoff control.</td></tr>
+            <tr><td style="font-weight:700;color:var(--navy);">5</td><td>Air urgency support for critical industrial Shipments.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 13 ILM / Control Tower Opportunity -->
+    <div class="card">
+      <div class="card-header"><span class="accent">13</span> ILM / Control Tower Opportunity</div>
+      <div class="card-body">
+        <div style="padding:12px 16px;background:rgba(0,180,216,0.05);border-left:3px solid var(--teal);border-radius:0 6px 6px 0;margin-bottom:12px;">
+          <strong style="font-size:11px;color:var(--navy);text-transform:uppercase;letter-spacing:1px;">ILM Potential: AAA</strong>
+        </div>
+        <div style="padding:12px 16px;background:rgba(13,43,94,0.03);border-radius:6px;border:1px solid var(--border);">
+          <strong style="font-size:11px;color:var(--navy);text-transform:uppercase;letter-spacing:1px;">Recommended ILM Scope</strong>
+          <ul class="q-list" style="margin-top:8px;">
+            <li>Centralized shipment visibility.</li>
+            <li>Supplier readiness tracking.</li>
+            <li>Customs milestone control.</li>
+            <li>Exception escalation.</li>
+            <li>Regional export coordination.</li>
+            <li>Port/border performance dashboard.</li>
+            <li>Documentation control.</li>
+            <li>Cross-border + ocean + rail orchestration.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 14 Commercial Positioning -->
+    <div class="card">
+      <div class="card-header"><span class="accent">14</span> Commercial Positioning</div>
+      <div class="card-body">
+        <div class="positioning-box">
+          <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,0.6);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;">Positioning Statement</div>
+          <div class="positioning-example">Position Akzent as Operational Complexity Partner · Multimodal Coordination Partner · Customs &amp; Visibility Partner · ILM / Control Tower Partner.</div>
+          <div style="font-size:11px;font-weight:700;color:var(--teal);letter-spacing:1px;text-transform:uppercase;margin:16px 0 8px;">Suggested Commercial Message</div>
+          <div class="positioning-example">"We see an operation with strong border concentration, active regional exports, maritime/truck/rail/air execution and a technical product portfolio across insulation, fiberglass, roofing materials, polystyrene, laminates and industrial chemicals. Networks like this usually create pressure around visibility, customs coordination, multimodal execution and exception control. Akzent can help centralize the operation and make it more visible, coordinated and controlled."</div>
+          <div class="capability-tags">
+            <span class="cap-tag">Nuevo Laredo</span>
+            <span class="cap-tag">Colombia NL</span>
+            <span class="cap-tag">Manzanillo</span>
+            <span class="cap-tag">Veracruz</span>
+            <span class="cap-tag">Ciudad Hidalgo</span>
+            <span class="cap-tag">LATAM Exports</span>
+            <span class="cap-tag">Rail Intermodal</span>
+            <span class="cap-tag">Air Urgency</span>
+            <span class="cap-tag">Customs Coordination</span>
+            <span class="cap-tag">Control Tower</span>
+          </div>
+        </div>
+        <div style="margin-top:14px;padding:12px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 6px 6px 0;">
+          <strong style="font-size:11px;color:#b45309;text-transform:uppercase;letter-spacing:1px;">Do Not Position Akzent as a Transactional Freight Provider</strong>
+          <ul class="q-list" style="margin-top:6px;">
+            <li>Do not lead with spot rates per mode.</li>
+            <li>Do not lead with generic cheaper pricing.</li>
+            <li>Do not lead with commodity transportation.</li>
+            <li>Do not lead with a single-lane pitch disconnected from the multimodal reality of the account.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 15 Discovery Questions -->
+    <div class="card">
+      <div class="card-header"><span class="accent">15</span> Discovery Question Engine</div>
+      <div class="card-body">
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Cross-Border</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>How are Shipments through Nuevo Laredo and Colombia NL coordinated today?</li>
+              <li>Are border updates proactive or reactive?</li>
+              <li>Where do delays most often appear: customs, carrier, documentation or appointment windows?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Multimodal</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>How do you coordinate truck, ocean, rail and air activity across one operating view?</li>
+              <li>Which handoffs create the most manual follow-up?</li>
+              <li>Is there centralized visibility across ports, border and inland locations?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Supplier Coordination</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>How is supplier readiness tracked before Shipments move?</li>
+              <li>Are documents validated centrally before shipping?</li>
+              <li>Which suppliers create the most coordination pressure?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Exports</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>How are LATAM and Central America exports coordinated?</li>
+              <li>Which export destinations create the most exceptions?</li>
+              <li>Do customers receive proactive milestone visibility?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>ILM / Control Tower</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>Would a centralized control tower help reduce manual follow-up?</li>
+              <li>Which KPIs matter most: customs clearance, on-time crossing, port delays, supplier readiness, customer delivery or exception resolution?</li>
+              <li>Which flows would be best for a pilot?</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
 </main>
 
 <script>
@@ -33054,6 +33657,7 @@ const ACCOUNTS = [
   { id:'view-hirotec', name:'HIROTEC México', sub:'Automotive Manufacturing / Body-in-White / Stamped Parts / Tooling · Cross-Border + Maritime + Air + Rail · Nuevo Laredo · Altamira · Manzanillo · AICM · ILM / Control Tower · Panjiva Imports + Exports', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
   { id:'view-sisflex', name:'SISFLEX', sub:'Industrial Manufacturing · Heat Exchangers · HVAC / Refrigeration Components · Metal Fabrication · Monterrey / Nuevo León · Nuevo Laredo Cross-Border · IMMEX / Returns · Control Tower · Panjiva Imports + Exports', rel:'LEAD', cls:'AA', clsPill:'aa' },
   { id:'view-gomez-cuetara', name:'Gómez Cuétara Hnos', sub:'Food Manufacturing · Biscuit / Cookie Exporter · Cross-Border USA · Nuevo Laredo · Customs Sensitivity · Control Tower · Panjiva Imports + Exports', rel:'LEAD', cls:'AA', clsPill:'aa' },
+  { id:'view-owens-corning', name:'Owens Corning Mexico', sub:'Construction Materials · Insulation · Fiberglass · Roofing Materials · Cross-Border + LATAM Export Network · Nuevo Laredo · Manzanillo · Veracruz · Ciudad Hidalgo · Rail + Air signals · ILM / Control Tower · Panjiva Imports + Exports', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
 ];
 const MODULES = [
   { id:'view-network',     name:'Network Intelligence', sub:'Cross-account analysis · Lane overlap' },
@@ -33166,7 +33770,7 @@ var INDUSTRY_BY_ID = {
   'view-veritiv':'Packaging', 'view-bio-pappel':'Paper', 'view-metalicas-titan':'Industrial',
   'view-mckinley':'Paper', 'view-grupo-sanfer':'Pharma', 'view-yofc':'Telecom',
   'view-hirotec':'Auto', 'view-sisflex':'Industrial',
-  'view-gomez-cuetara':'Food'
+  'view-gomez-cuetara':'Food', 'view-owens-corning':'Industrial'
 };
 
 var UNRESOLVED_ACCOUNTS = [];
