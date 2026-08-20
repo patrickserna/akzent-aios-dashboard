@@ -1303,6 +1303,10 @@ main {
       <span>◆</span> <span style="flex:1;">Siete Leguas</span>
       <span class="recent-cls aaa">AAA</span>
     </div>
+    <div class="nav-item" onclick="showView('view-pollmann', this)">
+      <span>◆</span> <span style="flex:1;">Pollmann de México</span>
+      <span class="recent-cls aaa">AAA</span>
+    </div>
   </div>
 
   <div class="nav-divider"></div>
@@ -1364,11 +1368,11 @@ main {
   <div class="home-stats-row">
     <div class="stat-box">
       <div class="stat-label" id="stat-total-label">Total Accounts</div>
-      <div class="stat-value" id="stat-total-val">60</div>
+      <div class="stat-value" id="stat-total-val">61</div>
     </div>
     <div class="stat-box">
       <div class="stat-label">AAA Accounts</div>
-      <div class="stat-value red" id="stat-aaa-val">27</div>
+      <div class="stat-value red" id="stat-aaa-val">28</div>
     </div>
     <div class="stat-box">
       <div class="stat-label">AA / AA+ Accounts</div>
@@ -2244,6 +2248,30 @@ main {
         <span class="acct-tag">BRP Rotax</span>
         <span class="acct-tag">MTY Airport</span>
         <span class="acct-tag">Altamira</span>
+        <span class="acct-tag">ILM fit</span>
+      </div>
+    </div>
+
+    <!-- Pollmann de México -->
+    <div class="account-card aaa" onclick="showViewById('view-pollmann')">
+      <div class="account-card-header">
+        <div>
+          <div class="account-name">Pollmann de México</div>
+          <div class="account-industry">Automotive Components / Mechatronics</div>
+        </div>
+        <span class="account-cls-badge aaa">AAA</span>
+      </div>
+      <div class="account-metrics">
+        <div class="acct-metric"><div class="acct-metric-val">429</div><div class="acct-metric-lbl">Total Shipments</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">40</div><div class="acct-metric-lbl">Air YTD Imports</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">10</div><div class="acct-metric-lbl">Customs Nodes</div></div>
+      </div>
+      <div class="account-tags">
+        <span class="acct-tag" style="background:rgba(245,158,11,0.12);color:#b45309;border-color:rgba(245,158,11,0.3);">LEAD</span>
+        <span class="acct-tag">Air urgency</span>
+        <span class="acct-tag">Automotive components</span>
+        <span class="acct-tag">China / Austria sourcing</span>
+        <span class="acct-tag">Customs complexity</span>
         <span class="acct-tag">ILM fit</span>
       </div>
     </div>
@@ -12548,6 +12576,16 @@ main {
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
               <td style="color:#b45309;font-weight:700;font-size:11px;">★ HIGH PRIORITY TARGET</td>
+            </tr>
+            <tr>
+              <td><strong>Pollmann de México</strong> <span style="font-size:10px;font-weight:600;color:#b45309;background:rgba(245,158,11,0.12);padding:1px 5px;border-radius:3px;margin-left:4px;">LEAD</span></td>
+              <td><span class="cls-pill aaa">AAA</span></td>
+              <td style="color:var(--text-muted);" title="Relationship Status LEAD · AIOS Classification AAA — Priority Target · Industry Automotive Components / Mechatronics · Strategic Fit AAA · Operational Complexity High · ILM Potential Very High · Key Signals Air-heavy imports, supplier-diverse, multi-customs, automotive HS portfolio">Automotive Components / Mechatronics</td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot"></div></div></td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot"></div></div></td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td style="color:#b45309;font-weight:700;font-size:11px;">★ PRIORITY TARGET</td>
             </tr>
             <tr>
               <td><strong>Lincoln Electric México</strong> <span style="font-size:10px;font-weight:600;color:#b45309;background:rgba(245,158,11,0.12);padding:1px 5px;border-radius:3px;margin-left:4px;">LEAD</span></td>
@@ -35689,6 +35727,870 @@ main {
 
   </div>
 </div>
+
+<!-- ══ POLLMANN DE MÉXICO VIEW ══ -->
+<div id="view-pollmann" class="view">
+  <div class="page-header">
+    <div class="page-header-left">
+      <div class="page-header-eyebrow">Target Account · LEAD Analysis</div>
+      <div class="page-header-title">Pollmann de México</div>
+      <div class="page-header-sub">Automotive Components / Mechatronics · Import-Dominant · Air-Sensitive Supply Chain</div>
+    </div>
+    <div class="page-header-meta">
+      <span class="classification-badge lead">LEAD</span>
+      <span class="classification-badge aaa">AAA</span>
+      <button class="print-btn" onclick="printView('view-pollmann')">⬇ Export PDF</button>
+    </div>
+  </div>
+  <div class="content-body">
+
+    <!-- LEAD source banner -->
+    <div class="card">
+      <div class="card-body" style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+        <span class="classification-badge lead">LEAD</span>
+        <span class="classification-badge aaa">AAA</span>
+        <span style="font-size:12px;color:var(--text-muted);line-height:1.6;">
+          <strong style="color:var(--navy);">Relationship Status: LEAD (pre-commercial).</strong> Pollmann de México is not operated by Akzent. All analysis is built exclusively on <strong>Panjiva Mexico Imports + Panjiva Mexico Exports</strong> as the visible logistics universe. The <strong>AIOS Classification AAA — Priority Target</strong> reflects strategic fit and operational complexity and is shown separately from — and is independent of — the LEAD relationship badge. Previous full calendar year (2025) and current year-to-date (2026 YTD through June 2026) are reported separately and are not aggregated.
+        </span>
+      </div>
+    </div>
+
+    <!-- Panjiva Visibility Metrics -->
+    <div class="grid-4">
+      <div class="stat-box"><div class="stat-label">2025 Shipments</div><div class="stat-value" style="font-size:22px;">324</div><div class="stat-sub">302 imports · 22 exports</div></div>
+      <div class="stat-box"><div class="stat-label">2026 YTD Shipments</div><div class="stat-value teal" style="font-size:22px;">105</div><div class="stat-sub">94 imports · 11 exports</div></div>
+      <div class="stat-box"><div class="stat-label">Air Share — 2026 YTD Imports</div><div class="stat-value" style="font-size:22px;">42.6%</div><div class="stat-sub">40 of 94 import Shipments</div></div>
+      <div class="stat-box"><div class="stat-label">Account Priority</div><div class="stat-value" style="font-size:22px;">Priority Target</div><div class="stat-sub">AAA — Priority Target</div></div>
+    </div>
+
+    <!-- 01 Executive Intelligence Summary -->
+    <div class="card">
+      <div class="card-header"><span class="accent">01</span> Executive Intelligence Summary</div>
+      <div class="card-body">
+        <p style="font-size:13px;line-height:1.7;">Pollmann de México shows a <strong>high-complexity automotive industrial profile</strong>. The visible Panjiva universe is import-dominant, supplier-diverse and highly multimodal. Panjiva visibility shows <strong>324 Shipments</strong> in previous full calendar year 2025 and <strong>105 Shipments</strong> in current YTD 2026 through June 2026.</p>
+        <p style="font-size:13px;line-height:1.7;margin-top:10px;">Air is the leading import mode, which is a strong operational signal of urgency, production continuity pressure or time-sensitive replenishment. The account uses multiple customs points and ports including Querétaro, Veracruz, Puebla, Manzanillo, AICM, AIFA and Nuevo Laredo.</p>
+        <p style="font-size:13px;line-height:1.7;margin-top:10px;">The operation should be positioned as an <strong>operational coordination and visibility opportunity, not as transactional freight.</strong></p>
+        <div style="background:rgba(13,43,94,0.03);border-radius:6px;border:1px solid var(--border);padding:12px 16px;margin-top:12px;">
+          <strong style="font-size:11px;color:var(--navy);text-transform:uppercase;letter-spacing:1px;">Key Signals</strong>
+          <ul class="q-list" style="margin-top:6px;">
+            <li>324 Panjiva Shipments in previous full calendar year 2025 · USD 11.65M visible value.</li>
+            <li>105 Panjiva Shipments in current YTD 2026 through June 2026 · USD 4.01M visible value.</li>
+            <li>Import-dominant flow: 93.2% of 2025 Shipments and 89.5% of 2026 YTD Shipments are imports.</li>
+            <li>Air is the leading import mode: 45.0% of 2025 imports and 42.6% of 2026 YTD imports.</li>
+            <li>Supplier base concentrated in China, Austria, Czech Republic, Germany and the United States.</li>
+            <li>Multi-node customs footprint across inland customs, maritime ports, airports and border nodes.</li>
+            <li>Automotive body / roof / sunroof parts under HS 8708291600 dominate the portfolio and increase from 39.1% to 43.6% import presence.</li>
+          </ul>
+        </div>
+        <div style="background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 6px 6px 0;padding:12px 16px;margin-top:12px;">
+          <strong style="font-size:11px;color:#b45309;text-transform:uppercase;letter-spacing:1px;">⚡ AIOS Classification Rationale — Source: Panjiva</strong>
+          <p style="font-size:12px;color:var(--text);line-height:1.6;margin-top:4px;">AIOS classifies Pollmann de México as an <strong>AAA — Priority Target</strong> because the operation combines air urgency, multi-country supplier diversity, customs exposure across multiple nodes and automotive component sensitivity tied to production continuity.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 Relationship Status + AIOS Classification -->
+    <div class="card">
+      <div class="card-header"><span class="accent">02</span> Relationship Status &amp; Classification</div>
+      <div class="card-body">
+        <div class="grid-3" style="gap:12px;">
+          <div style="padding:14px 16px;background:rgba(245,158,11,0.05);border-radius:6px;border:1px solid var(--border);">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;">Relationship Status</div>
+            <span class="classification-badge lead" style="font-size:14px;">LEAD</span>
+            <p style="font-size:11px;color:var(--text-muted);line-height:1.6;margin-top:8px;">Pre-commercial. Account not yet operated by Akzent.</p>
+          </div>
+          <div style="padding:14px 16px;background:rgba(0,180,216,0.04);border-radius:6px;border:1px solid var(--border);">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;">AIOS Classification</div>
+            <span class="classification-badge aaa" style="font-size:14px;">AAA</span>
+            <p style="font-size:11px;color:var(--text-muted);line-height:1.6;margin-top:8px;">AAA — Priority Target. Independent of the LEAD relationship badge.</p>
+          </div>
+          <div style="padding:14px 16px;background:rgba(13,43,94,0.03);border-radius:6px;border:1px solid var(--border);">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;">Account Priority</div>
+            <span style="font-size:14px;font-weight:700;color:#b45309;">★ PRIORITY TARGET</span>
+            <p style="font-size:11px;color:var(--text-muted);line-height:1.6;margin-top:8px;">Prioritized for commercial approach.</p>
+          </div>
+        </div>
+        <div style="margin-top:12px;padding:10px 14px;background:rgba(13,43,94,0.03);border-radius:5px;border:1px solid var(--border);"><strong style="font-size:11px;color:var(--navy);">Methodology Note:</strong><span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> Panjiva Mexico Imports and Exports files only. Each Panjiva row is treated as one visible Shipment. HS Code counts represent operational presence per Shipment and are not additive when multiple HS Codes appear in one Shipment. Relationship Status and AIOS Classification are reported as two independent badges.</span></div>
+        <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin:16px 0 8px;">AIOS Scoring</div>
+        <table class="hub-table">
+          <thead><tr><th>Dimension</th><th style="text-align:right;">Score</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Strategic Fit</strong></td><td style="text-align:right;"><span class="cls-pill aaa">AAA</span></td></tr>
+            <tr><td><strong>Operational Complexity</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">HIGH</td></tr>
+            <tr><td><strong>Air Freight Opportunity</strong></td><td style="text-align:right;"><span class="cls-pill aaa">AAA</span></td></tr>
+            <tr><td><strong>Customs Opportunity</strong></td><td style="text-align:right;"><span class="cls-pill aaa">AAA</span></td></tr>
+            <tr><td><strong>Ocean Opportunity</strong></td><td style="text-align:right;"><span class="cls-pill aa">AA</span></td></tr>
+            <tr><td><strong>Cross-Border Opportunity</strong></td><td style="text-align:right;"><span class="cls-pill aa">AA</span></td></tr>
+            <tr><td><strong>ILM / Control Tower Potential</strong></td><td style="text-align:right;font-weight:700;color:var(--red);">VERY HIGH</td></tr>
+            <tr><td><strong>Commercial Attractiveness</strong></td><td style="text-align:right;"><span class="cls-pill aaa">AAA</span></td></tr>
+            <tr><td><strong>Account Priority</strong></td><td style="text-align:right;font-weight:700;color:#b45309;">PRIORITY TARGET</td></tr>
+          </tbody>
+        </table>
+        <table class="hub-table" style="margin-top:14px;">
+          <tbody>
+            <tr><td><strong>Display Name</strong></td><td style="text-align:right;">Pollmann de México</td></tr>
+            <tr><td><strong>Industry</strong></td><td style="text-align:right;">Automotive Components / Mechatronics / Industrial Manufacturing</td></tr>
+            <tr><td><strong>Relationship Status</strong></td><td style="text-align:right;"><span class="classification-badge lead">LEAD</span></td></tr>
+            <tr><td><strong>AIOS Classification</strong></td><td style="text-align:right;"><span class="classification-badge aaa">AAA</span></td></tr>
+            <tr><td><strong>Source</strong></td><td style="text-align:right;">Panjiva Mexico Imports + Panjiva Mexico Exports</td></tr>
+            <tr><td><strong>Periods Analyzed</strong></td><td style="text-align:right;">Previous full calendar year 2025 · Current YTD 2026 through June 2026</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 03 Shipment Intelligence by Period -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">03</span> Shipment Intelligence by Period</div>
+      <div class="card-body">
+        <p style="font-size:12px;color:var(--text-muted);line-height:1.6;margin-bottom:4px;">Periods are analyzed separately and are never aggregated into a single operational view. <strong>Previous Full Calendar Year: 2025</strong> · <strong>Current YTD: 2026 through June 2026</strong>. Each Panjiva row is treated as 1 Shipment. Source: Panjiva Mexico Imports + Panjiva Mexico Exports.</p>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header" style="background:rgba(13,43,94,0.03);">2025 — Previous Full Calendar Year</div>
+        <div class="card-body">
+          <div class="grid-2" style="gap:10px;">
+            <div class="stat-box"><div class="stat-label">Total Visible Shipments</div><div class="stat-value" style="font-size:22px;">324</div><div class="stat-sub">302 imports · 22 exports</div></div>
+            <div class="stat-box"><div class="stat-label">Total USD Value</div><div class="stat-value" style="font-size:22px;">USD 11.65M</div><div class="stat-sub">Declared</div></div>
+          </div>
+          <table class="hub-table" style="margin-top:12px;">
+            <tbody>
+              <tr><td><strong>Imports</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">302 Shipments</td></tr>
+              <tr><td><strong>Exports</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">22 Shipments</td></tr>
+              <tr><td><strong>Total Visible</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">324 Shipments</td></tr>
+              <tr><td><strong>Total USD Value</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">USD 11.65M</td></tr>
+              <tr><td><strong>Total Gross Weight</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">904,009 kg</td></tr>
+              <tr><td><strong>Total Volume</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">82.19 TEU</td></tr>
+              <tr><td><strong>Import Mix</strong></td><td style="text-align:right;">93.2%</td></tr>
+              <tr><td><strong>Export Mix</strong></td><td style="text-align:right;">6.8%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" style="background:rgba(0,180,216,0.05);">2026 YTD — Current Year to Date (through June 2026)</div>
+        <div class="card-body">
+          <div class="grid-2" style="gap:10px;">
+            <div class="stat-box"><div class="stat-label">Total Visible Shipments</div><div class="stat-value teal" style="font-size:22px;">105</div><div class="stat-sub">94 imports · 11 exports</div></div>
+            <div class="stat-box"><div class="stat-label">Total USD Value</div><div class="stat-value teal" style="font-size:22px;">USD 4.01M</div><div class="stat-sub">Declared</div></div>
+          </div>
+          <table class="hub-table" style="margin-top:12px;">
+            <tbody>
+              <tr><td><strong>Imports</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">94 Shipments</td></tr>
+              <tr><td><strong>Exports</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">11 Shipments</td></tr>
+              <tr><td><strong>Total Visible</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">105 Shipments</td></tr>
+              <tr><td><strong>Total USD Value</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">USD 4.01M</td></tr>
+              <tr><td><strong>Total Gross Weight</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">291,067 kg</td></tr>
+              <tr><td><strong>Total Volume</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">26.46 TEU</td></tr>
+              <tr><td><strong>Import Mix</strong></td><td style="text-align:right;">89.5%</td></tr>
+              <tr><td><strong>Export Mix</strong></td><td style="text-align:right;">10.5%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:12px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;">
+        <strong style="font-size:11px;color:#b45309;">Period Note:</strong>
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> 2026 YTD covers only January–June 2026 and is a partial period. The difference against 2025 full year must not be read as a definitive decline.</span>
+      </div>
+    </div>
+
+    <!-- 04 Trend Intelligence -->
+    <div class="card">
+      <div class="card-header"><span class="accent">04</span> Trend Intelligence</div>
+      <div class="card-body">
+        <ul class="q-list">
+          <li><strong>Volume:</strong> 2026 YTD shows 105 Shipments vs 324 in 2025 full year. This is not presented as a definitive decline because 2026 is a partial period.</li>
+          <li><strong>Import / export mix:</strong> imports remain dominant, but exports increased from 6.8% of mix in 2025 to 10.5% in 2026 YTD.</li>
+          <li><strong>Modal mix:</strong> Air remains highly relevant, 45.0% of 2025 imports and 42.6% of 2026 YTD imports.</li>
+          <li><strong>Geography:</strong> China, Austria, Czech Republic, Germany and USA remain strategic sourcing zones.</li>
+          <li><strong>Customs / ports:</strong> Querétaro, Veracruz, Puebla, Manzanillo and Nuevo Laredo remain key nodes.</li>
+          <li><strong>Supplier base:</strong> Pollmann Austria gained weight in 2026 YTD while China and Czech Republic remain relevant.</li>
+          <li><strong>HS portfolio:</strong> automotive parts remain core; resins and tooling strengthen the production-sensitive interpretation.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 05 Modal Mix -->
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header"><span class="accent">05</span> Modal Mix — 2025 Full Year</div>
+        <div class="card-body">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;">Imports — 302 Shipments</div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Air ✈</strong><span>136 · 45.0%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:100%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Maritime 🚢</strong><span>89 · 29.5%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:65.4%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Unknown ❔</strong><span>58 · 19.2%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:42.6%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Truck 🚛</strong><span>19 · 6.3%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:14.0%"></div></div></div>
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin:16px 0 10px;">Exports — 22 Shipments</div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Unknown ❔</strong><span>12 · 54.5%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:100%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Truck 🚛</strong><span>7 · 31.8%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:58.3%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Maritime 🚢</strong><span>3 · 13.6%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:25.0%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Air ✈</strong><span>0 · 0.0%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:0%"></div></div></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><span class="accent">05</span> Modal Mix — 2026 YTD</div>
+        <div class="card-body">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;">Imports — 94 Shipments</div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Air ✈</strong><span>40 · 42.6%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:100%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Maritime 🚢</strong><span>27 · 28.7%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:67.5%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Unknown ❔</strong><span>21 · 22.3%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:52.5%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Truck 🚛</strong><span>6 · 6.4%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:15.0%"></div></div></div>
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin:16px 0 10px;">Exports — 11 Shipments</div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Unknown ❔</strong><span>6 · 54.5%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:100%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Maritime 🚢</strong><span>3 · 27.3%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:50.0%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Air ✈</strong><span>2 · 18.2%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:33.3%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Truck 🚛</strong><span>0 · 0.0%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:0%"></div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:12px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;">
+        <strong style="font-size:11px;color:#b45309;">AIOS Interpretation:</strong>
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> Air is the leading import mode in both periods and remains close to 43% of import Shipments in 2026 YTD. For an automotive components and mechatronics operation, this is a strong operational sensitivity signal. It likely indicates urgent recoveries, critical shortages, production continuity pressure or time-sensitive replenishment. Maritime near 29% confirms recurring international sourcing, while the unknown-coded share highlights a visibility gap.</span>
+      </div>
+    </div>
+
+    <!-- 06 Import / Export Breakdown -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">06</span> Import / Export Breakdown</div>
+      <div class="card-body">
+        <table class="hub-table">
+          <thead><tr><th>Flow</th><th>Period</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">Share of Period Shipments</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Imports</strong></td><td>2025</td><td style="text-align:right;font-weight:700;color:var(--navy);">302</td><td style="text-align:right;">93.2%</td></tr>
+            <tr><td><strong>Imports</strong></td><td>2026 YTD</td><td style="text-align:right;font-weight:700;color:var(--navy);">94</td><td style="text-align:right;">89.5%</td></tr>
+            <tr><td><strong>Exports</strong></td><td>2025</td><td style="text-align:right;font-weight:700;color:var(--navy);">22</td><td style="text-align:right;">6.8%</td></tr>
+            <tr><td><strong>Exports</strong></td><td>2026 YTD</td><td style="text-align:right;font-weight:700;color:var(--navy);">11</td><td style="text-align:right;">10.5%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header" style="background:rgba(13,43,94,0.03);">Imports — 2025</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <tbody>
+              <tr><td><strong>Shipments</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">302</td></tr>
+              <tr><td><strong>Share of Period</strong></td><td style="text-align:right;">93.2%</td></tr>
+            </tbody>
+          </table>
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin:14px 0 8px;">Main Modes</div>
+          <table class="hub-table">
+            <tbody>
+              <tr><td><strong>Air</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">136</td></tr>
+              <tr><td><strong>Maritime</strong></td><td style="text-align:right;">89</td></tr>
+              <tr><td><strong>Unknown</strong></td><td style="text-align:right;">58</td></tr>
+              <tr><td><strong>Truck</strong></td><td style="text-align:right;">19</td></tr>
+            </tbody>
+          </table>
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin:14px 0 8px;">Main Origins</div>
+          <table class="hub-table">
+            <thead><tr><th>#</th><th>Origin</th><th style="text-align:right;">Shipments</th></tr></thead>
+            <tbody>
+              <tr><td style="font-weight:700;color:var(--navy);">1</td><td><strong>China</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">93</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">2</td><td><strong>Czech Republic</strong></td><td style="text-align:right;">42</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">3</td><td><strong>United States</strong></td><td style="text-align:right;">34</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">4</td><td><strong>Germany</strong></td><td style="text-align:right;">34</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">5</td><td><strong>Austria</strong></td><td style="text-align:right;">26</td></tr>
+            </tbody>
+          </table>
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin:14px 0 8px;">Main Customs / Ports</div>
+          <table class="hub-table">
+            <thead><tr><th>#</th><th>Customs / Port</th><th style="text-align:right;">Shipments</th></tr></thead>
+            <tbody>
+              <tr><td style="font-weight:700;color:var(--navy);">1</td><td><strong>Querétaro</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">95</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">2</td><td><strong>Veracruz</strong></td><td style="text-align:right;">61</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">3</td><td><strong>Puebla</strong></td><td style="text-align:right;">52</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">4</td><td><strong>AICM</strong></td><td style="text-align:right;">31</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">5</td><td><strong>Manzanillo</strong></td><td style="text-align:right;">31</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">6</td><td><strong>Nuevo Laredo</strong></td><td style="text-align:right;">19</td></tr>
+            </tbody>
+          </table>
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin:14px 0 8px;">Main Shippers</div>
+          <div class="capability-tags" style="margin-top:0;">
+            <span class="cap-tag">Pollmann Mechatronics Kunshan · 67</span>
+            <span class="cap-tag">Pollmann CZ · 53</span>
+            <span class="cap-tag">Pollmann Austria · 50</span>
+            <span class="cap-tag">Rampf Group · 19</span>
+            <span class="cap-tag">MTA Automation · 18</span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" style="background:rgba(0,180,216,0.05);">Imports — 2026 YTD</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <tbody>
+              <tr><td><strong>Shipments</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">94</td></tr>
+              <tr><td><strong>Share of Period</strong></td><td style="text-align:right;">89.5%</td></tr>
+            </tbody>
+          </table>
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin:14px 0 8px;">Main Modes</div>
+          <table class="hub-table">
+            <tbody>
+              <tr><td><strong>Air</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">40</td></tr>
+              <tr><td><strong>Maritime</strong></td><td style="text-align:right;">27</td></tr>
+              <tr><td><strong>Unknown</strong></td><td style="text-align:right;">21</td></tr>
+              <tr><td><strong>Truck</strong></td><td style="text-align:right;">6</td></tr>
+            </tbody>
+          </table>
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin:14px 0 8px;">Main Origins</div>
+          <table class="hub-table">
+            <thead><tr><th>#</th><th>Origin</th><th style="text-align:right;">Shipments</th></tr></thead>
+            <tbody>
+              <tr><td style="font-weight:700;color:var(--navy);">1</td><td><strong>China</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">21</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">2</td><td><strong>Austria</strong></td><td style="text-align:right;">14</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">3</td><td><strong>Czech Republic</strong></td><td style="text-align:right;">13</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">4</td><td><strong>Germany</strong></td><td style="text-align:right;">11</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">5</td><td><strong>Multi-origin — Austria / Czech Republic / Germany / Japan / Serbia / United Kingdom</strong></td><td style="text-align:right;">6</td></tr>
+            </tbody>
+          </table>
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin:14px 0 8px;">Main Customs / Ports</div>
+          <table class="hub-table">
+            <thead><tr><th>#</th><th>Customs / Port</th><th style="text-align:right;">Shipments</th></tr></thead>
+            <tbody>
+              <tr><td style="font-weight:700;color:var(--navy);">1</td><td><strong>Querétaro</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">24</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">2</td><td><strong>Veracruz</strong></td><td style="text-align:right;">18</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">3</td><td><strong>Puebla</strong></td><td style="text-align:right;">18</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">4</td><td><strong>Manzanillo</strong></td><td style="text-align:right;">9</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">5</td><td><strong>Nuevo Laredo</strong></td><td style="text-align:right;">8</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">6</td><td><strong>AIFA</strong></td><td style="text-align:right;">7</td></tr>
+            </tbody>
+          </table>
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin:14px 0 8px;">Main Shippers</div>
+          <div class="capability-tags" style="margin-top:0;">
+            <span class="cap-tag">Pollmann Austria · 32</span>
+            <span class="cap-tag">Pollmann Mechatronics Kunshan · 17</span>
+            <span class="cap-tag">Pollmann CZ · 12</span>
+            <span class="cap-tag">ONI Temperiertechnik · 6</span>
+            <span class="cap-tag">Maxxom Automation · 5</span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" style="background:rgba(13,43,94,0.03);">Exports — 2025</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <tbody>
+              <tr><td><strong>Shipments</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">22</td></tr>
+              <tr><td><strong>Share of Period</strong></td><td style="text-align:right;">6.8%</td></tr>
+            </tbody>
+          </table>
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin:14px 0 8px;">Main Modes</div>
+          <table class="hub-table">
+            <tbody>
+              <tr><td><strong>Unknown</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">12</td></tr>
+              <tr><td><strong>Truck</strong></td><td style="text-align:right;">7</td></tr>
+              <tr><td><strong>Maritime</strong></td><td style="text-align:right;">3</td></tr>
+              <tr><td><strong>Air</strong></td><td style="text-align:right;">0</td></tr>
+            </tbody>
+          </table>
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin:14px 0 8px;">Main Destinations</div>
+          <table class="hub-table">
+            <thead><tr><th>#</th><th>Destination</th><th style="text-align:right;">Shipments</th></tr></thead>
+            <tbody>
+              <tr><td style="font-weight:700;color:var(--navy);">1</td><td><strong>United States</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">19</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">2</td><td><strong>Austria</strong></td><td style="text-align:right;">3</td></tr>
+            </tbody>
+          </table>
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin:14px 0 8px;">Main Ports</div>
+          <table class="hub-table">
+            <thead><tr><th>#</th><th>Port</th><th style="text-align:right;">Shipments</th></tr></thead>
+            <tbody>
+              <tr><td style="font-weight:700;color:var(--navy);">1</td><td><strong>Ciudad de México</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">12</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">2</td><td><strong>Nuevo Laredo</strong></td><td style="text-align:right;">7</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">3</td><td><strong>Veracruz</strong></td><td style="text-align:right;">3</td></tr>
+            </tbody>
+          </table>
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin:14px 0 8px;">Export Counterparty Signals</div>
+          <div class="capability-tags" style="margin-top:0;">
+            <span class="cap-tag">ZF North America</span>
+            <span class="cap-tag">ZF Transmissions Greenville</span>
+            <span class="cap-tag">Pollmann Austria</span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" style="background:rgba(0,180,216,0.05);">Exports — 2026 YTD</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <tbody>
+              <tr><td><strong>Shipments</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">11</td></tr>
+              <tr><td><strong>Share of Period</strong></td><td style="text-align:right;">10.5%</td></tr>
+            </tbody>
+          </table>
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin:14px 0 8px;">Main Modes</div>
+          <table class="hub-table">
+            <tbody>
+              <tr><td><strong>Unknown</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">6</td></tr>
+              <tr><td><strong>Maritime</strong></td><td style="text-align:right;">3</td></tr>
+              <tr><td><strong>Air</strong></td><td style="text-align:right;">2</td></tr>
+              <tr><td><strong>Truck</strong></td><td style="text-align:right;">0</td></tr>
+            </tbody>
+          </table>
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin:14px 0 8px;">Main Destinations</div>
+          <table class="hub-table">
+            <thead><tr><th>#</th><th>Destination</th><th style="text-align:right;">Shipments</th></tr></thead>
+            <tbody>
+              <tr><td style="font-weight:700;color:var(--navy);">1</td><td><strong>United States</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">6</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">2</td><td><strong>Austria</strong></td><td style="text-align:right;">3</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">3</td><td><strong>China</strong></td><td style="text-align:right;">2</td></tr>
+            </tbody>
+          </table>
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin:14px 0 8px;">Main Ports</div>
+          <table class="hub-table">
+            <thead><tr><th>#</th><th>Port</th><th style="text-align:right;">Shipments</th></tr></thead>
+            <tbody>
+              <tr><td style="font-weight:700;color:var(--navy);">1</td><td><strong>Ciudad de México</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">7</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">2</td><td><strong>Veracruz</strong></td><td style="text-align:right;">2</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">3</td><td><strong>San Felipe</strong></td><td style="text-align:right;">1</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">4</td><td><strong>Manzanillo</strong></td><td style="text-align:right;">1</td></tr>
+            </tbody>
+          </table>
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin:14px 0 8px;">Export Counterparty Signals</div>
+          <div class="capability-tags" style="margin-top:0;">
+            <span class="cap-tag">Pollmann de México</span>
+            <span class="cap-tag">Shenzhen Systec Technology</span>
+            <span class="cap-tag">Destinations: USA / Austria / China</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 07 Geographic Intelligence -->
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header"><span class="accent">07</span> Geographic Intelligence — Imports</div>
+        <div class="card-body">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">2025 Main Origins</div>
+          <p style="font-size:12px;line-height:1.7;">China (93), Czech Republic (42), United States (34), Germany (34), Austria (26).</p>
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin:14px 0 8px;">2026 YTD Main Origins</div>
+          <p style="font-size:12px;line-height:1.7;">China (21), Austria (14), Czech Republic (13), Germany (11), Multi-origin Austria / Czech Republic / Germany / Japan / Serbia / United Kingdom (6).</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><span class="accent">07</span> Geographic Intelligence — Exports</div>
+        <div class="card-body">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">2025 Main Destinations</div>
+          <p style="font-size:12px;line-height:1.7;">United States (19), Austria (3).</p>
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin:14px 0 8px;">2026 YTD Main Destinations</div>
+          <p style="font-size:12px;line-height:1.7;">United States (6), Austria (3), China (2).</p>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:12px 16px;background:rgba(0,180,216,0.05);">
+        <strong style="font-size:11px;color:var(--navy);">Interpretation:</strong>
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> The import base is multinational and technical, combining Asian sourcing through China with an intra-group European axis across Austria, Czech Republic and Germany. Austria gains relative weight in 2026 YTD. Export activity is small in Shipment terms but strategically tied to the United States and to the Austrian parent ecosystem, indicating an international mechatronics component network.</span>
+      </div>
+    </div>
+
+    <!-- 08 Customs / Ports Intelligence -->
+    <div class="card">
+      <div class="card-header"><span class="accent">08</span> Customs / Ports Intelligence</div>
+      <div class="card-body">
+        <table class="hub-table">
+          <thead><tr><th>Hub</th><th>Role</th><th>Operational Meaning</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Querétaro</strong></td><td style="color:var(--text-muted);">Inland customs import</td><td style="color:var(--text-muted);">Leading import node · plant-region coordination</td></tr>
+            <tr><td><strong>Veracruz</strong></td><td style="color:var(--text-muted);">Maritime import / export</td><td style="color:var(--text-muted);">European ocean sourcing and export routing</td></tr>
+            <tr><td><strong>Puebla</strong></td><td style="color:var(--text-muted);">Inland customs import</td><td style="color:var(--text-muted);">Automotive corridor customs exposure</td></tr>
+            <tr><td><strong>AICM</strong></td><td style="color:var(--text-muted);">Air import</td><td style="color:var(--text-muted);">Urgency, critical components, continuity</td></tr>
+            <tr><td><strong>AIFA</strong></td><td style="color:var(--text-muted);">Air import</td><td style="color:var(--text-muted);">Alternative air routing appearing in 2026 YTD</td></tr>
+            <tr><td><strong>Manzanillo</strong></td><td style="color:var(--text-muted);">Maritime import</td><td style="color:var(--text-muted);">Asia / ocean complexity</td></tr>
+            <tr><td><strong>Nuevo Laredo</strong></td><td style="color:var(--text-muted);">Cross-border import / export</td><td style="color:var(--text-muted);">Border execution and customs follow-up</td></tr>
+            <tr><td><strong>Ciudad de México</strong></td><td style="color:var(--text-muted);">Export node</td><td style="color:var(--text-muted);">Leading export customs point in both periods</td></tr>
+            <tr><td><strong>San Felipe</strong></td><td style="color:var(--text-muted);">Export node</td><td style="color:var(--text-muted);">Secondary export routing in 2026 YTD</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:14px;padding:12px 16px;background:rgba(0,180,216,0.05);border-radius:6px;border:1px solid var(--border);">
+          <strong style="font-size:11px;color:var(--navy);text-transform:uppercase;letter-spacing:1px;">Interpretation</strong>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.6;margin-top:6px;">The account is not dependent on a single customs node. Its network combines inland customs, maritime ports, airports and border nodes across import and export flows. That structure creates a natural opportunity for Akzent as Customs &amp; Visibility Partner and ILM / Control Tower Partner.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 09 Supplier / Customer / Counterparty Intelligence -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">09</span> Supplier / Customer / Counterparty Intelligence</div>
+      <div class="card-body">
+        <p style="font-size:12px;color:var(--text-muted);line-height:1.6;margin-bottom:4px;">Counterparties are reported by Shipment count per period. Source: Panjiva Mexico Imports + Panjiva Mexico Exports.</p>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header" style="background:rgba(13,43,94,0.03);">Main Import Shippers — 2025</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <thead><tr><th>#</th><th>Shipper</th><th style="text-align:right;">Shipments</th></tr></thead>
+            <tbody>
+              <tr><td style="font-weight:700;color:var(--navy);">1</td><td><strong>Pollmann Mechatronics Kunshan</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">67</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">2</td><td><strong>Pollmann CZ</strong></td><td style="text-align:right;">53</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">3</td><td><strong>Pollmann Austria</strong></td><td style="text-align:right;">50</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">4</td><td><strong>Rampf Group</strong></td><td style="text-align:right;">19</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">5</td><td><strong>MTA Automation</strong></td><td style="text-align:right;">18</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" style="background:rgba(0,180,216,0.05);">Main Import Shippers — 2026 YTD</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <thead><tr><th>#</th><th>Shipper</th><th style="text-align:right;">Shipments</th></tr></thead>
+            <tbody>
+              <tr><td style="font-weight:700;color:var(--navy);">1</td><td><strong>Pollmann Austria</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">32</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">2</td><td><strong>Pollmann Mechatronics Kunshan</strong></td><td style="text-align:right;">17</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">3</td><td><strong>Pollmann CZ</strong></td><td style="text-align:right;">12</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">4</td><td><strong>ONI Temperiertechnik</strong></td><td style="text-align:right;">6</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">5</td><td><strong>Maxxom Automation</strong></td><td style="text-align:right;">5</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" style="background:rgba(13,43,94,0.03);">Main Consignees — 2025</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <thead><tr><th>#</th><th>Consignee</th><th style="text-align:right;">Shipments</th></tr></thead>
+            <tbody>
+              <tr><td style="font-weight:700;color:var(--navy);">1</td><td><strong>Pollmann de México</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">163</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">2</td><td><strong>WRSI de México</strong></td><td style="text-align:right;">73</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">3</td><td><strong>Brose México</strong></td><td style="text-align:right;">26</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">4</td><td><strong>Inalfa</strong></td><td style="text-align:right;">25</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">5</td><td><strong>Magna Closures</strong></td><td style="text-align:right;">14</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" style="background:rgba(0,180,216,0.05);">Main Consignees — 2026 YTD</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <thead><tr><th>#</th><th>Consignee</th><th style="text-align:right;">Shipments</th></tr></thead>
+            <tbody>
+              <tr><td style="font-weight:700;color:var(--navy);">1</td><td><strong>Pollmann de México</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">43</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">2</td><td><strong>WRSI de México</strong></td><td style="text-align:right;">27</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">3</td><td><strong>Inalfa</strong></td><td style="text-align:right;">13</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">4</td><td><strong>Brose</strong></td><td style="text-align:right;">7</td></tr>
+              <tr><td style="font-weight:700;color:var(--navy);">5</td><td><strong>Vitesco</strong></td><td style="text-align:right;">3</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body">
+        <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">Export Counterparty Signals</div>
+        <table class="hub-table">
+          <thead><tr><th>Period</th><th>Counterparties</th><th>Destinations</th></tr></thead>
+          <tbody>
+            <tr><td><strong>2025</strong></td><td style="color:var(--text-muted);">ZF North America · ZF Transmissions Greenville · Pollmann Austria</td><td style="color:var(--text-muted);">United States · Austria</td></tr>
+            <tr><td><strong>2026 YTD</strong></td><td style="color:var(--text-muted);">Pollmann de México · Shenzhen Systec Technology</td><td style="color:var(--text-muted);">United States · Austria · China</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:14px;padding:12px 16px;background:rgba(0,180,216,0.05);border-radius:6px;border:1px solid var(--border);">
+          <strong style="font-size:11px;color:var(--navy);text-transform:uppercase;letter-spacing:1px;">Interpretation</strong>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.6;margin-top:6px;">The inbound base is intra-group led (Kunshan, CZ, Austria) with a technical third-party layer (Rampf, MTA Automation, ONI Temperiertechnik, Maxxom Automation). Consignee dispersion across WRSI, Brose, Inalfa, Magna Closures and Vitesco indicates that the visible flow serves a broader Tier 1 automotive network, not a single plant. Both facts increase the value of centralized supplier coordination and Shipment visibility.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10 Top 5 HS Codes -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">10</span> Top 5 HS Codes — 2025 and 2026 YTD</div>
+      <div class="card-body" style="padding:12px 16px;background:rgba(245,158,11,0.05);">
+        <strong style="font-size:11px;color:#b45309;">Important Note:</strong>
+        <span style="font-size:11px;color:var(--text-muted);"> When one Shipment contains multiple HS Codes, HS counts represent operational presence and are not additive against total Shipments.</span>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header" style="background:rgba(13,43,94,0.03);">Imports — 2025</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <thead><tr><th>HS Code</th><th>Product Interpretation</th><th style="text-align:right;">Presence</th><th style="text-align:right;">%</th></tr></thead>
+            <tbody>
+              <tr><td><strong>8708291600</strong></td><td>Automotive body / roof / sunroof parts — core automotive production signal</td><td style="text-align:right;font-weight:700;color:var(--navy);">118</td><td style="text-align:right;">39.1%</td></tr>
+              <tr><td><strong>8536909999</strong></td><td>Electrical connectors / terminals — small but critical components</td><td style="text-align:right;font-weight:700;color:var(--navy);">31</td><td style="text-align:right;">10.3%</td></tr>
+              <tr><td><strong>8533210100</strong></td><td>Resistors / electrical components — technical component signal</td><td style="text-align:right;font-weight:700;color:var(--navy);">19</td><td style="text-align:right;">6.3%</td></tr>
+              <tr><td><strong>4016999999</strong></td><td>Rubber manufactures — automotive system integration</td><td style="text-align:right;">18</td><td style="text-align:right;">6.0%</td></tr>
+              <tr><td><strong>7318230299</strong></td><td>Rivets / metal fasteners — assembly components</td><td style="text-align:right;">18</td><td style="text-align:right;">6.0%</td></tr>
+            </tbody>
+          </table>
+          <div style="font-size:10px;color:var(--text-muted);margin-top:8px;">% of import Shipments (302).</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" style="background:rgba(13,43,94,0.03);">Exports — 2025</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <thead><tr><th>HS Code</th><th>Product Interpretation</th><th style="text-align:right;">Presence</th><th style="text-align:right;">%</th></tr></thead>
+            <tbody>
+              <tr><td><strong>8481900599</strong></td><td>Valve parts / covers — technical industrial product</td><td style="text-align:right;font-weight:700;color:var(--navy);">12</td><td style="text-align:right;">54.5%</td></tr>
+              <tr><td><strong>8708999999</strong></td><td>Automotive parts — Tier manufacturing signal</td><td style="text-align:right;font-weight:700;color:var(--navy);">7</td><td style="text-align:right;">31.8%</td></tr>
+              <tr><td><strong>3923409900</strong></td><td>Plastic bobbins / packaging</td><td style="text-align:right;">3</td><td style="text-align:right;">13.6%</td></tr>
+              <tr><td><strong>7612909900</strong></td><td>Aluminum boxes / industrial containers</td><td style="text-align:right;">3</td><td style="text-align:right;">13.6%</td></tr>
+            </tbody>
+          </table>
+          <div style="font-size:10px;color:var(--text-muted);margin-top:8px;">% of export Shipments (22).</div>
+        </div>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header" style="background:rgba(0,180,216,0.05);">Imports — 2026 YTD</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <thead><tr><th>HS Code</th><th>Product Interpretation</th><th style="text-align:right;">Presence</th><th style="text-align:right;">%</th></tr></thead>
+            <tbody>
+              <tr><td><strong>8708291600</strong></td><td>Automotive body / sunroof / roof parts — remains core portfolio</td><td style="text-align:right;font-weight:700;color:var(--navy);">41</td><td style="text-align:right;">43.6%</td></tr>
+              <tr><td><strong>8536909999</strong></td><td>Terminals and electrical connectors — continuity-sensitive components</td><td style="text-align:right;font-weight:700;color:var(--navy);">11</td><td style="text-align:right;">11.7%</td></tr>
+              <tr><td><strong>3903909901</strong></td><td>Resins / polymers — production material</td><td style="text-align:right;font-weight:700;color:var(--navy);">8</td><td style="text-align:right;">8.5%</td></tr>
+              <tr><td><strong>8533210100</strong></td><td>Electrical resistors — technical components</td><td style="text-align:right;">7</td><td style="text-align:right;">7.4%</td></tr>
+              <tr><td><strong>3902309900</strong></td><td>Copolymers / resins — material availability sensitivity</td><td style="text-align:right;">7</td><td style="text-align:right;">7.4%</td></tr>
+            </tbody>
+          </table>
+          <div style="font-size:10px;color:var(--text-muted);margin-top:8px;">% of import Shipments (94).</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" style="background:rgba(0,180,216,0.05);">Exports — 2026 YTD</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <thead><tr><th>HS Code</th><th>Product Interpretation</th><th style="text-align:right;">Presence</th><th style="text-align:right;">%</th></tr></thead>
+            <tbody>
+              <tr><td><strong>8481900599</strong></td><td>Valve parts / covers — recurring technical product</td><td style="text-align:right;font-weight:700;color:var(--navy);">6</td><td style="text-align:right;">54.5%</td></tr>
+              <tr><td><strong>7612909900</strong></td><td>Aluminum boxes / industrial containers</td><td style="text-align:right;font-weight:700;color:var(--navy);">2</td><td style="text-align:right;">18.2%</td></tr>
+              <tr><td><strong>3923409900</strong></td><td>Plastic bobbins / packaging</td><td style="text-align:right;">2</td><td style="text-align:right;">18.2%</td></tr>
+              <tr><td><strong>3907990500</strong></td><td>PBT resin / thermoplastic polymer</td><td style="text-align:right;">2</td><td style="text-align:right;">18.2%</td></tr>
+              <tr><td><strong>8477900499</strong></td><td>Injection machinery parts / tooling signal</td><td style="text-align:right;">1</td><td style="text-align:right;">9.1%</td></tr>
+            </tbody>
+          </table>
+          <div style="font-size:10px;color:var(--text-muted);margin-top:8px;">% of export Shipments (11).</div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:12px 16px;background:rgba(13,43,94,0.03);">
+        <strong style="font-size:11px;color:var(--navy);">Portfolio Trend:</strong>
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> The portfolio remains concentrated around automotive body / roof / sunroof parts under HS 8708291600, increasing from 39.1% import presence in 2025 to 43.6% in 2026 YTD. Electrical components, resins, rubber parts, fasteners and tooling indicate a production-sensitive automotive supply chain, not a simple finished goods flow.</span>
+      </div>
+    </div>
+
+    <!-- 11 Operational Signal to Pain Mapping -->
+    <div class="card">
+      <div class="card-header"><span class="accent">11</span> Operational Signal → Pain Mapping</div>
+      <div class="card-body">
+        <div class="signal-grid">
+          <div class="signal-item high">
+            <div class="signal-title">1. Air as Primary Import Mode</div>
+            <div class="signal-prob high">PROBABILITY: HIGH</div>
+            <div class="signal-desc">Air is 45.0% of 2025 imports and 42.6% of 2026 YTD imports.<br><strong style="color:var(--navy);">Likely pain:</strong> urgent recoveries, critical shortages, production pressure.<br><strong style="color:var(--navy);">Akzent opportunity:</strong> air freight control, escalation desk, visibility.</div>
+          </div>
+          <div class="signal-item high">
+            <div class="signal-title">2. Multiple International Origins</div>
+            <div class="signal-prob high">PROBABILITY: HIGH</div>
+            <div class="signal-desc">China, Austria, Czech Republic, Germany, United States and multi-origin consolidations.<br><strong style="color:var(--navy);">Likely pain:</strong> dispersed supplier coordination.<br><strong style="color:var(--navy);">Akzent opportunity:</strong> supplier readiness and Shipment coordination.</div>
+          </div>
+          <div class="signal-item high">
+            <div class="signal-title">3. Multiple Customs / Ports</div>
+            <div class="signal-prob high">PROBABILITY: HIGH</div>
+            <div class="signal-desc">Querétaro, Veracruz, Puebla, AICM, AIFA, Manzanillo, Nuevo Laredo, Ciudad de México, San Felipe.<br><strong style="color:var(--navy);">Likely pain:</strong> fragmented documentation and visibility.<br><strong style="color:var(--navy);">Akzent opportunity:</strong> customs and visibility control.</div>
+          </div>
+          <div class="signal-item high">
+            <div class="signal-title">4. Automotive Core Components</div>
+            <div class="signal-prob high">PROBABILITY: HIGH</div>
+            <div class="signal-desc">Body / roof / sunroof parts, connectors, resistors, resins, rubber and fasteners.<br><strong style="color:var(--navy);">Likely pain:</strong> continuity / JIT pressure.<br><strong style="color:var(--navy);">Akzent opportunity:</strong> operational control partner.</div>
+          </div>
+          <div class="signal-item">
+            <div class="signal-title">5. Nuevo Laredo Presence</div>
+            <div class="signal-prob medium-high">PROBABILITY: MEDIUM-HIGH</div>
+            <div class="signal-desc">19 import Shipments in 2025 and 8 in 2026 YTD, plus 7 export Shipments in 2025.<br><strong style="color:var(--navy);">Likely pain:</strong> cross-border complexity.<br><strong style="color:var(--navy);">Akzent opportunity:</strong> border coordination and customs follow-up.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12 Operational Complexity -->
+    <div class="card">
+      <div class="card-header"><span class="accent">12</span> Operational Complexity</div>
+      <div class="card-body">
+        <div style="padding:12px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 6px 6px 0;margin-bottom:12px;">
+          <strong style="font-size:11px;color:#b45309;text-transform:uppercase;letter-spacing:1px;">Complexity Level: HIGH</strong>
+        </div>
+        <table class="hub-table">
+          <thead><tr><th>Dimension</th><th>Level</th><th>Driver</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Import Concentration</strong></td><td style="font-weight:700;color:var(--red);">Very High</td><td style="color:var(--text-muted);">93.2% of 2025 and 89.5% of 2026 YTD Shipments are imports</td></tr>
+            <tr><td><strong>Air Freight Exposure</strong></td><td style="font-weight:700;color:var(--red);">Very High</td><td style="color:var(--text-muted);">Air is the leading import mode in both periods</td></tr>
+            <tr><td><strong>Supplier Diversity</strong></td><td style="font-weight:700;color:var(--navy);">High</td><td style="color:var(--text-muted);">Multiple international suppliers across Asia, Europe and USA</td></tr>
+            <tr><td><strong>Customs Exposure</strong></td><td style="font-weight:700;color:var(--navy);">High</td><td style="color:var(--text-muted);">Multiple customs and airport nodes across import and export flows</td></tr>
+            <tr><td><strong>Product Sensitivity</strong></td><td style="font-weight:700;color:var(--red);">Very High</td><td style="color:var(--text-muted);">Automotive component sensitivity tied to production continuity</td></tr>
+            <tr><td><strong>HS Portfolio Breadth</strong></td><td style="font-weight:700;color:var(--navy);">High</td><td style="color:var(--text-muted);">Parts, electrical components, resins, rubber, fasteners and tooling</td></tr>
+            <tr><td><strong>Coordination Requirement</strong></td><td style="font-weight:700;color:var(--navy);">High</td><td style="color:var(--text-muted);">Need for supplier coordination and exception management</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 13 Multimodal Opportunity -->
+    <div class="card">
+      <div class="card-header"><span class="accent">13</span> Multimodal Opportunity</div>
+      <div class="card-body">
+        <div style="padding:12px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 6px 6px 0;margin-bottom:14px;">
+          <strong style="font-size:11px;color:#b45309;text-transform:uppercase;letter-spacing:1px;">Multimodal Opportunity: HIGH</strong>
+        </div>
+        <div class="fit-score-grid">
+          <div class="fit-score-item"><div class="fit-score-name">Air Freight</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:94%"></div></div><div class="fit-score-pct">VERY HIGH</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Ocean (Veracruz / Manzanillo)</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:80%"></div></div><div class="fit-score-pct">HIGH</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Cross-Border (Nuevo Laredo)</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:68%"></div></div><div class="fit-score-pct">MEDIUM-HIGH</div></div></div>
+        </div>
+        <div style="margin-top:14px;padding:12px 16px;background:rgba(13,43,94,0.03);border-radius:6px;border:1px solid var(--border);">
+          <strong style="font-size:11px;color:var(--navy);text-transform:uppercase;letter-spacing:1px;">Air Freight Opportunity — Very High</strong>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.6;margin-top:6px;">Air indicates urgency and production sensitivity. Position around expedite management, escalation desk, premium freight root-cause control and visibility for critical components.</p>
+        </div>
+        <div style="margin-top:10px;padding:12px 16px;background:rgba(0,180,216,0.05);border-radius:6px;border:1px solid var(--border);">
+          <strong style="font-size:11px;color:var(--navy);text-transform:uppercase;letter-spacing:1px;">Ocean Opportunity — High</strong>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.6;margin-top:6px;">Maritime indicates recurring international sourcing through Veracruz and Manzanillo, creating coordination opportunity around booking, ETA, customs release and supplier follow-up.</p>
+        </div>
+        <div style="margin-top:10px;padding:12px 16px;background:rgba(13,43,94,0.03);border-radius:6px;border:1px solid var(--border);">
+          <strong style="font-size:11px;color:var(--navy);text-transform:uppercase;letter-spacing:1px;">Cross-Border Opportunity — Medium-High</strong>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.6;margin-top:6px;">Nuevo Laredo presence and exports toward the USA indicate cross-border relevance. Pollmann combines Air, Maritime, Truck and multiple unknown-coded Shipments; the best entry point is visibility, supplier coordination, customs control and air escalation management.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 14 ILM / Control Tower Opportunity -->
+    <div class="card">
+      <div class="card-header"><span class="accent">14</span> ILM / Control Tower Opportunity</div>
+      <div class="card-body">
+        <div style="padding:12px 16px;background:rgba(0,180,216,0.05);border-radius:6px;border:1px solid var(--border);margin-bottom:14px;">
+          <strong style="font-size:11px;color:var(--navy);text-transform:uppercase;letter-spacing:1px;">ILM Potential: Very High</strong>
+        </div>
+        <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">Potential Scope</div>
+        <table class="hub-table">
+          <thead><tr><th>#</th><th>Scope Component</th><th style="text-align:right;">Potential</th></tr></thead>
+          <tbody>
+            <tr><td style="font-weight:700;color:var(--navy);">1</td><td>Supplier readiness tracking</td><td style="text-align:right;font-weight:700;color:var(--red);">Very High</td></tr>
+            <tr><td style="font-weight:700;color:var(--navy);">2</td><td>Shipment visibility by supplier, mode, customs and HS family</td><td style="text-align:right;font-weight:700;color:var(--red);">Very High</td></tr>
+            <tr><td style="font-weight:700;color:var(--navy);">3</td><td>Documentation control before departure</td><td style="text-align:right;font-weight:700;color:var(--red);">Very High</td></tr>
+            <tr><td style="font-weight:700;color:var(--navy);">4</td><td>Air freight escalation management</td><td style="text-align:right;font-weight:700;color:var(--red);">Very High</td></tr>
+            <tr><td style="font-weight:700;color:var(--navy);">5</td><td>Customs follow-up</td><td style="text-align:right;font-weight:700;color:var(--navy);">High</td></tr>
+            <tr><td style="font-weight:700;color:var(--navy);">6</td><td>Exception management</td><td style="text-align:right;font-weight:700;color:var(--red);">Very High</td></tr>
+            <tr><td style="font-weight:700;color:var(--navy);">7</td><td>Executive reporting</td><td style="text-align:right;font-weight:700;color:var(--navy);">High</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:14px;padding:12px 16px;background:rgba(0,180,216,0.05);border-radius:6px;border:1px solid var(--border);">
+          <strong style="font-size:11px;color:var(--navy);text-transform:uppercase;letter-spacing:1px;">Interpretation</strong>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.6;margin-top:6px;">Pollmann de México has the profile of an operation where Akzent can create value by coordinating the network, not just quoting shipments. The strongest commercial wedge is a Control Tower layer over air urgency, supplier readiness, customs documentation and exception management for production-sensitive components.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 15 Commercial Positioning -->
+    <div class="card">
+      <div class="card-header"><span class="accent">15</span> Commercial Positioning</div>
+      <div class="card-body">
+        <div class="positioning-box">
+          <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,0.6);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;">Position Akzent As</div>
+          <div class="positioning-example">Operational Complexity Partner · Multimodal Coordination Partner · Customs &amp; Visibility Partner · ILM / Control Tower Partner. Do not position Akzent as a transactional freight provider.</div>
+          <div style="font-size:11px;font-weight:700;color:var(--teal);letter-spacing:1px;text-transform:uppercase;margin:16px 0 8px;">Positioning Message</div>
+          <div class="positioning-example">"Vemos una operación automotriz con abastecimiento internacional, alto uso de Air, múltiples aduanas y componentes sensibles para continuidad productiva. Normalmente este tipo de estructura genera presión en coordinación de proveedores, visibilidad, documentación y manejo de urgencias. Akzent puede apoyar como partner de control operativo y coordinación multimodal."</div>
+          <div class="capability-tags">
+            <span class="cap-tag">Air urgency</span>
+            <span class="cap-tag">Automotive components</span>
+            <span class="cap-tag">China / Austria sourcing</span>
+            <span class="cap-tag">Querétaro</span>
+            <span class="cap-tag">Veracruz</span>
+            <span class="cap-tag">Puebla</span>
+            <span class="cap-tag">Manzanillo</span>
+            <span class="cap-tag">AICM</span>
+            <span class="cap-tag">AIFA</span>
+            <span class="cap-tag">Nuevo Laredo</span>
+            <span class="cap-tag">Customs Visibility</span>
+            <span class="cap-tag">Control Tower</span>
+          </div>
+        </div>
+        <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin:16px 0 8px;">Priority Entry Points</div>
+        <table class="hub-table">
+          <thead><tr><th>#</th><th>Entry Point</th></tr></thead>
+          <tbody>
+            <tr><td style="font-weight:700;color:var(--navy);">1</td><td>Air freight control and escalation desk</td></tr>
+            <tr><td style="font-weight:700;color:var(--navy);">2</td><td>Supplier readiness and Shipment coordination</td></tr>
+            <tr><td style="font-weight:700;color:var(--navy);">3</td><td>Customs and visibility control across multiple nodes</td></tr>
+            <tr><td style="font-weight:700;color:var(--navy);">4</td><td>Veracruz / Manzanillo ocean visibility</td></tr>
+            <tr><td style="font-weight:700;color:var(--navy);">5</td><td>Nuevo Laredo border coordination and customs follow-up</td></tr>
+            <tr><td style="font-weight:700;color:var(--navy);">6</td><td>ILM / Control Tower for production-sensitive Shipments</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 16 Discovery Questions -->
+    <div class="card">
+      <div class="card-header"><span class="accent">16</span> Discovery Question Engine</div>
+      <div class="card-body">
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Air Freight &amp; Urgency</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>What percentage of Air Shipments are planned vs urgent?</li>
+              <li>What triggers a Shipment to shift from Maritime to Air?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Supplier Coordination</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>Which suppliers create the most coordination pressure before pickup?</li>
+              <li>How is visibility managed across China, Austria, Czech Republic, Germany and USA?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Customs &amp; Exceptions</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>Where do exceptions happen most often: origin, transit, customs or final delivery?</li>
+              <li>Which customs points create the most variability?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Production Continuity &amp; Control Tower</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>Is there a centralized dashboard by supplier, mode and criticality?</li>
+              <li>Which HS families are most tied to production continuity?</li>
+              <li>Which process could benefit most from an external control tower?</li>
+              <li>Which KPI matters most: customs release time, on-time delivery, urgent Shipment reduction or visibility?</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 17 Strategic Expansion Trajectory -->
+    <div class="card">
+      <div class="card-header"><span class="accent">17</span> Strategic Expansion Trajectory</div>
+      <div class="card-body">
+        <div class="phase-grid">
+          <div class="phase-card"><div class="phase-num">Phase 1</div><div class="phase-title">Air Urgency Control</div><ul class="phase-items"><li>Critical air Shipment visibility</li><li>Escalation desk</li><li>Urgency root-cause tracking</li></ul></div>
+          <div class="phase-card"><div class="phase-num">Phase 2</div><div class="phase-title">Customs &amp; Document Control</div><ul class="phase-items"><li>Documentation control before departure</li><li>Customs node performance</li><li>Pre-alert standardization</li></ul></div>
+          <div class="phase-card"><div class="phase-num">Phase 3</div><div class="phase-title">Supplier Readiness</div><ul class="phase-items"><li>China / Austria / Czech Republic follow-up</li><li>Multi-origin readiness control</li><li>Exception escalation</li></ul></div>
+          <div class="phase-card"><div class="phase-num">Phase 4</div><div class="phase-title">ILM / Control Tower</div><ul class="phase-items"><li>Integrated visibility by supplier, mode, customs and HS family</li><li>Multimodal coordination</li><li>Executive reporting</li></ul></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
 </main>
 
 <script>
@@ -35754,6 +36656,7 @@ const ACCOUNTS = [
   { id:'view-suspensys', name:'Suspensys Automotive Systems', sub:'Automotive · Heavy Trailer Components · Suspension, Axles &amp; Brake Systems · Cross-Border + Ocean + Air urgency · Nuevo Laredo · Manzanillo · Veracruz · Ciudad Hidalgo · Querétaro · AIFA · Supplier Coordination · ILM / Control Tower · Panjiva Imports + Exports', rel:'LEAD', cls:'AA', clsPill:'aa' },
   { id:'view-cemm', name:'Cemm Mex', sub:'Automotive Electronics / Harnesses / Connectors · Mexico · Air urgency · Cross-Border · Nuevo Laredo · Colombia · Altamira · Manzanillo · Puebla · Customs Complexity · ILM / Control Tower · Panjiva Imports + Exports', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
   { id:'view-siete-leguas', name:'Siete Leguas Automotive', sub:'Automotive Manufacturing / Powertrain Components / Industrial Casting &amp; Engine Parts · Gómez Palacio, MX · Air urgency · MTY Airport · AIFA · AICM · Altamira · Manzanillo · Colombia NL · Nuevo Laredo · Ciudad Juárez · BRP Rotax · IMMEX / Virtual Regimes · ILM / Control Tower · Panjiva Imports + Exports', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
+  { id:'view-pollmann', name:'Pollmann de México', sub:'Automotive Components / Mechatronics / Industrial Manufacturing · Import-Dominant · Air-Sensitive Supply Chain · China / Austria / Czech Republic / Germany sourcing · Querétaro · Veracruz · Puebla · Manzanillo · AICM · AIFA · Nuevo Laredo · Customs Complexity · ILM / Control Tower · Panjiva Mexico Imports + Exports', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
 ];
 const MODULES = [
   { id:'view-network',     name:'Network Intelligence', sub:'Cross-account analysis · Lane overlap' },
