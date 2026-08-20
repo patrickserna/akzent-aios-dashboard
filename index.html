@@ -1319,6 +1319,10 @@ main {
       <span>◆</span> <span style="flex:1;">Bitron de México</span>
       <span class="recent-cls aaa">AAA</span>
     </div>
+    <div class="nav-item" onclick="showView('view-chiquita', this)">
+      <span>◆</span> <span style="flex:1;">Chiquita Mexico</span>
+      <span class="recent-cls aa">AA</span>
+    </div>
   </div>
 
   <div class="nav-divider"></div>
@@ -1380,7 +1384,7 @@ main {
   <div class="home-stats-row">
     <div class="stat-box">
       <div class="stat-label" id="stat-total-label">Total Accounts</div>
-      <div class="stat-value" id="stat-total-val">61</div>
+      <div class="stat-value" id="stat-total-val">62</div>
     </div>
     <div class="stat-box">
       <div class="stat-label">AAA Accounts</div>
@@ -1388,15 +1392,15 @@ main {
     </div>
     <div class="stat-box">
       <div class="stat-label">AA / AA+ Accounts</div>
-      <div class="stat-value teal" id="stat-aa-val">33</div>
+      <div class="stat-value teal" id="stat-aa-val">34</div>
     </div>
     <div class="stat-box">
       <div class="stat-label">ILM Candidates</div>
-      <div class="stat-value">17</div>
+      <div class="stat-value">18</div>
     </div>
     <div class="stat-box">
       <div class="stat-label">Industries</div>
-      <div class="stat-value" id="stat-ind-val">10</div>
+      <div class="stat-value" id="stat-ind-val">11</div>
     </div>
   </div>
 
@@ -2334,6 +2338,32 @@ main {
         <span class="acct-tag">Nuevo Laredo</span>
         <span class="acct-tag">Manzanillo</span>
         <span class="acct-tag">ILM fit</span>
+      </div>
+    </div>
+
+    <!-- Chiquita Mexico -->
+    <div class="account-card aa" onclick="showViewById('view-chiquita')">
+      <div class="account-card-header">
+        <div>
+          <div class="account-name">Chiquita Mexico</div>
+          <div class="account-industry">Fresh Produce / Cross-Border Food</div>
+        </div>
+        <div style="display:flex;gap:5px;align-items:center;flex-shrink:0;">
+          <span class="account-cls-badge lead">LEAD</span>
+          <span class="account-cls-badge aa">AA</span>
+        </div>
+      </div>
+      <div class="account-metrics">
+        <div class="acct-metric"><div class="acct-metric-val">97</div><div class="acct-metric-lbl">YTD Shipments</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">$8.1M</div><div class="acct-metric-lbl">YTD Value</div></div>
+        <div class="acct-metric"><div class="acct-metric-val" style="font-size:14px;">Nuevo Laredo</div><div class="acct-metric-lbl">Hub</div></div>
+      </div>
+      <div class="account-tags">
+        <span class="acct-tag" style="background:rgba(245,158,11,0.12);color:#b45309;border-color:rgba(245,158,11,0.3);">LEAD</span>
+        <span class="acct-tag">Fresh Produce</span>
+        <span class="acct-tag">Nuevo Laredo</span>
+        <span class="acct-tag">USA Corridor</span>
+        <span class="acct-tag">Control Tower Fit</span>
       </div>
     </div>
 
@@ -12701,6 +12731,16 @@ main {
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot"></div></div></td>
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td style="color:#b45309;font-weight:700;font-size:11px;">★ PRIORITY TARGET</td>
+            </tr>
+            <tr onclick="showViewById('view-chiquita')" style="cursor:pointer;">
+              <td><strong>Chiquita Mexico</strong> <span style="font-size:10px;font-weight:600;color:#b45309;background:rgba(245,158,11,0.12);padding:1px 5px;border-radius:3px;margin-left:4px;">LEAD</span></td>
+              <td><span class="cls-pill aa">AA</span></td>
+              <td style="color:var(--text-muted);" title="Relationship Status LEAD · AIOS Classification AA · Industry Fresh Produce / Cross-Border Food · Primary Hub Nuevo Laredo · Core Lane Mexico ↔ United States · Primary Mode Truck · Cross-Border Exposure High · Customs Sensitivity High · ILM Potential Medium-High · 2025 Full Year Shipments 120 · 2026 YTD Shipments 97 · Commercial Priority Priority Target">Fresh Produce / Cross-Border Food</td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td><div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></td>
+              <td><div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot"></div></div></td>
               <td style="color:#b45309;font-weight:700;font-size:11px;">★ PRIORITY TARGET</td>
             </tr>
             <tr>
@@ -38762,6 +38802,597 @@ main {
   </div>
 </div>
 
+<div id="view-chiquita" class="view">
+  <div class="page-header">
+    <div class="page-header-left">
+      <div class="page-header-eyebrow">Target Account · LEAD Analysis</div>
+      <div class="page-header-title">Chiquita Mexico</div>
+      <div class="page-header-sub">Fresh Produce / Cross-Border Food Supply Chain · Mexico ↔ United States · Nuevo Laredo</div>
+    </div>
+    <div class="page-header-meta">
+      <span class="classification-badge lead">LEAD</span>
+      <span class="classification-badge aa">AA</span>
+      <button class="print-btn" onclick="printView('view-chiquita')">⬇ Export PDF</button>
+    </div>
+  </div>
+  <div class="content-body">
+
+    <!-- LEAD source banner -->
+    <div class="card">
+      <div class="card-body" style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+        <span class="classification-badge lead">LEAD</span>
+        <span class="classification-badge aa">AA</span>
+        <span style="font-size:12px;color:var(--text-muted);line-height:1.6;">
+          <strong style="color:var(--navy);">Relationship Status: LEAD (pre-commercial).</strong> Chiquita Mexico is not operated by Akzent. All analysis is built exclusively on <strong>Panjiva Imports + Panjiva Exports</strong> as the visible logistics universe — no Akzent Shipment data was provided or included for this account. The <strong>AIOS Classification AA</strong> reflects strategic fit and operational complexity and is shown separately from — and is independent of — the LEAD relationship badge. <strong>2025 Full Year</strong> and <strong>2026 YTD</strong> are reported separately and are never aggregated.
+        </span>
+      </div>
+    </div>
+
+    <!-- Source coverage note -->
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:12px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;">
+        <strong style="font-size:11px;color:#b45309;">Source Coverage:</strong>
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> Panjiva Imports + Panjiva Exports only. <strong>2025 Full Year: 120 visible Shipments</strong> (75 imports · 45 exports). <strong>2026 YTD through June 2026: 97 visible Shipments</strong> (71 imports · 26 exports). Each Panjiva row is treated as one visible Shipment. No Akzent Shipment data was provided, therefore wallet, penetration, revenue, gross profit, margin, coverage, service mix and captured universe metrics are not included for this account.</span>
+      </div>
+    </div>
+
+    <!-- 01 Executive Intelligence Summary -->
+    <div class="card">
+      <div class="card-header"><span class="accent">01</span> Executive Intelligence Summary</div>
+      <div class="card-body">
+        <p style="font-size:13px;line-height:1.7;">Chiquita Mexico shows a <strong>highly concentrated, recurrent cross-border operating profile</strong>. The visible Panjiva universe is almost entirely tied to the <strong>Mexico–United States corridor through Nuevo Laredo</strong>. Imports are primarily operational inputs and packaging, especially <strong>corrugated carton boxes supplied through Fresh Express Inc.</strong>, while exports concentrate the commercial value through <strong>fresh lettuce / radicchio Shipments to the United States</strong>.</p>
+        <p style="font-size:13px;line-height:1.7;margin-top:10px;">This is <strong>not a transactional freight opportunity</strong>. The strategic angle for Akzent is <strong>cross-border control, customs visibility, proactive documentation coordination, and a lightweight control tower for perishable Shipments</strong>.</p>
+        <div style="background:rgba(13,43,94,0.03);border-radius:6px;border:1px solid var(--border);padding:12px 16px;margin-top:12px;">
+          <strong style="font-size:11px;color:var(--navy);text-transform:uppercase;letter-spacing:1px;">Key Signals</strong>
+          <ul class="q-list" style="margin-top:6px;">
+            <li>120 visible Shipments in 2025 Full Year and 97 visible Shipments in 2026 YTD through June 2026.</li>
+            <li>USD 9,416,583 visible value in 2025 Full Year and USD 8,108,280 in 2026 YTD.</li>
+            <li>2026 YTD already equals 81% of 2025 full-year Shipments and 86% of 2025 full-year USD value.</li>
+            <li>Exports carry the commercial value: 93.6% of value in 2025 and 91.5% in 2026 YTD.</li>
+            <li>Nuevo Laredo concentrates 114 of 120 Shipments in 2025 and 97 of 97 Shipments in 2026 YTD.</li>
+            <li>Truck is the only confirmed mode; no significant ocean or air freight is visible in Panjiva.</li>
+            <li>Import portfolio is packaging-driven: HS 4819100100 corrugated carton boxes rises from 69.3% to 95.8% presence.</li>
+            <li>Fresh Express Inc. is the dominant visible import counterparty (58 Shipments in 2025 · 71 in 2026 YTD).</li>
+          </ul>
+        </div>
+        <div style="background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 6px 6px 0;padding:12px 16px;margin-top:12px;">
+          <strong style="font-size:11px;color:#b45309;text-transform:uppercase;letter-spacing:1px;">⚡ AIOS Classification Rationale — Source: Panjiva</strong>
+          <p style="font-size:12px;color:var(--text);line-height:1.6;margin-top:4px;">AIOS classifies Chiquita Mexico as <strong>AA</strong> because of recurrent volume, a bidirectional cross-border structure, full concentration around the United States / Nuevo Laredo corridor, product freshness sensitivity, packaging dependency, and a strong fit for customs visibility and control tower. It is <strong>not AAA</strong> because Panjiva does not show broad multimodal activity, recurring air urgency, multiple significant geographies, or distributed port complexity.</p>
+        </div>
+        <table class="hub-table" style="margin-top:14px;">
+          <tbody>
+            <tr><td><strong>Display Name</strong></td><td style="text-align:right;">Chiquita Mexico</td></tr>
+            <tr><td><strong>Industry</strong></td><td style="text-align:right;">Fresh Produce / Cross-Border Food Supply Chain</td></tr>
+            <tr><td><strong>Core Pattern</strong></td><td style="text-align:right;">Mexico ↔ United States cross-border operation via Nuevo Laredo</td></tr>
+            <tr><td><strong>Relationship Status</strong></td><td style="text-align:right;"><span class="classification-badge lead">LEAD</span></td></tr>
+            <tr><td><strong>AIOS Classification</strong></td><td style="text-align:right;"><span class="classification-badge aa">AA</span></td></tr>
+            <tr><td><strong>Account Priority</strong></td><td style="text-align:right;font-weight:700;color:#b45309;">PRIORITY TARGET</td></tr>
+            <tr><td><strong>Source</strong></td><td style="text-align:right;">Panjiva Imports + Panjiva Exports only</td></tr>
+            <tr><td><strong>Akzent Captured Universe</strong></td><td style="text-align:right;color:var(--text-muted);">Not available for LEAD</td></tr>
+            <tr><td><strong>Periods Reported</strong></td><td style="text-align:right;">2025 Full Year · 2026 YTD (through June 2026)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 02 Shipment Intelligence by Period -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">02</span> Shipment Intelligence by Period</div>
+      <div class="card-body">
+        <p style="font-size:12px;color:var(--text-muted);line-height:1.6;margin-bottom:4px;">Periods are analyzed separately and are never aggregated into a single operational view. <strong>2025 Full Year</strong> · <strong>2026 YTD through June 2026</strong>. Each Panjiva row is treated as 1 Shipment. Source: Panjiva Imports + Panjiva Exports.</p>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header" style="background:rgba(13,43,94,0.03);">2025 Full Year</div>
+        <div class="card-body">
+          <div class="grid-2" style="gap:10px;">
+            <div class="stat-box"><div class="stat-label">Total Shipments</div><div class="stat-value" style="font-size:22px;">120</div><div class="stat-sub">75 imports · 45 exports</div></div>
+            <div class="stat-box"><div class="stat-label">Visible Value</div><div class="stat-value" style="font-size:22px;">USD 9.42M</div><div class="stat-sub">Declared</div></div>
+          </div>
+          <table class="hub-table" style="margin-top:12px;">
+            <tbody>
+              <tr><td><strong>Total Shipments</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">120 Shipments</td></tr>
+              <tr><td><strong>Import Shipments</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">75 Shipments</td></tr>
+              <tr><td><strong>Export Shipments</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">45 Shipments</td></tr>
+              <tr><td><strong>Total USD Value</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">USD 9,416,583</td></tr>
+              <tr><td><strong>Total Gross Weight</strong></td><td style="text-align:right;">12,060,626 kg</td></tr>
+              <tr><td><strong>Total Volume</strong></td><td style="text-align:right;">1,097.4 TEU</td></tr>
+              <tr><td><strong>Avg Monthly Shipments</strong></td><td style="text-align:right;">10.0</td></tr>
+              <tr><td><strong>Import Share of Shipments</strong></td><td style="text-align:right;">62.5%</td></tr>
+              <tr><td><strong>Export Share of Shipments</strong></td><td style="text-align:right;">37.5%</td></tr>
+              <tr><td><strong>Export Share of Value</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">93.6%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" style="background:rgba(0,180,216,0.05);">2026 YTD — through June 2026</div>
+        <div class="card-body">
+          <div class="grid-2" style="gap:10px;">
+            <div class="stat-box"><div class="stat-label">Total Shipments</div><div class="stat-value teal" style="font-size:22px;">97</div><div class="stat-sub">71 imports · 26 exports</div></div>
+            <div class="stat-box"><div class="stat-label">Visible Value</div><div class="stat-value" style="font-size:22px;">USD 8.11M</div><div class="stat-sub">Declared</div></div>
+          </div>
+          <table class="hub-table" style="margin-top:12px;">
+            <tbody>
+              <tr><td><strong>Total Shipments</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">97 Shipments</td></tr>
+              <tr><td><strong>Import Shipments</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">71 Shipments</td></tr>
+              <tr><td><strong>Export Shipments</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">26 Shipments</td></tr>
+              <tr><td><strong>Total USD Value</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">USD 8,108,280</td></tr>
+              <tr><td><strong>Total Gross Weight</strong></td><td style="text-align:right;">11,151,683 kg</td></tr>
+              <tr><td><strong>Total Volume</strong></td><td style="text-align:right;">1,013.8 TEU</td></tr>
+              <tr><td><strong>Avg Monthly Shipments</strong></td><td style="text-align:right;">16.2</td></tr>
+              <tr><td><strong>Import Share of Shipments</strong></td><td style="text-align:right;">73.2%</td></tr>
+              <tr><td><strong>Export Share of Shipments</strong></td><td style="text-align:right;">26.8%</td></tr>
+              <tr><td><strong>Export Share of Value</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">91.5%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:12px 16px;background:rgba(0,180,216,0.05);">
+        <strong style="font-size:11px;color:var(--navy);">Data Integrity Note:</strong>
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> 2025 Full Year and 2026 YTD are reported as separate operational periods and must never be read as a single aggregated universe. Panjiva Imports + Panjiva Exports is the only source of truth for this account. No Akzent Shipment data was provided.</span>
+      </div>
+    </div>
+
+    <!-- 03 Trend Intelligence -->
+    <div class="card">
+      <div class="card-header"><span class="accent">03</span> Trend Intelligence</div>
+      <div class="card-body">
+        <div class="grid-4" style="margin-bottom:14px;">
+          <div class="stat-box"><div class="stat-label">2026 YTD vs 2025 Shipments</div><div class="stat-value teal" style="font-size:22px;">81%</div><div class="stat-sub">97 of 120 Shipments, half-year in</div></div>
+          <div class="stat-box"><div class="stat-label">2026 YTD vs 2025 Value</div><div class="stat-value teal" style="font-size:22px;">86%</div><div class="stat-sub">USD 8.11M of USD 9.42M</div></div>
+          <div class="stat-box"><div class="stat-label">Import Shipments Recovery</div><div class="stat-value" style="font-size:22px;">94.7%</div><div class="stat-sub">71 of 75 full-year imports</div></div>
+          <div class="stat-box"><div class="stat-label">Nuevo Laredo Concentration</div><div class="stat-value" style="font-size:22px;">100%</div><div class="stat-sub">2026 YTD visible Shipments</div></div>
+        </div>
+        <table class="hub-table">
+          <thead><tr><th>Dimension</th><th>2025 Full Year → 2026 YTD</th><th>Reading</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Volume</strong></td><td style="font-weight:700;color:var(--navy);">120 → 97 Shipments</td><td style="color:var(--text-muted);">2026 YTD already equals 81% of the 2025 full-year Shipment count with half the year elapsed.</td></tr>
+            <tr><td><strong>Visible Value</strong></td><td style="font-weight:700;color:var(--navy);">USD 9.42M → USD 8.11M</td><td style="color:var(--text-muted);">2026 YTD already equals 86% of 2025 full-year USD value.</td></tr>
+            <tr><td><strong>Import Shipments</strong></td><td style="font-weight:700;color:var(--navy);">75 → 71</td><td style="color:var(--text-muted);">Import Shipments in 2026 YTD almost reached the entire 2025 full-year import count.</td></tr>
+            <tr><td><strong>Export Value Weight</strong></td><td style="font-weight:700;color:var(--navy);">93.6% → 91.5%</td><td style="color:var(--text-muted);">Exports remain the dominant commercial value carrier of the operation.</td></tr>
+            <tr><td><strong>Corridor</strong></td><td style="font-weight:700;color:var(--navy);">95.0% → 100% Nuevo Laredo</td><td style="color:var(--text-muted);">The operation is becoming more concentrated around a single border crossing.</td></tr>
+            <tr><td><strong>Modal Structure</strong></td><td style="font-weight:700;color:var(--navy);">Truck 100% → Truck 77.3% + Unknown 22.7%</td><td style="color:var(--text-muted);">Truck remains the only confirmed mode; Unknown records signal a data normalization gap.</td></tr>
+            <tr><td><strong>HS Portfolio</strong></td><td style="font-weight:700;color:var(--navy);">More concentrated</td><td style="color:var(--text-muted);">Packaging and fresh produce dominate; carton box import presence rises from 69.3% to 95.8%.</td></tr>
+            <tr><td><strong>Counterparties</strong></td><td style="font-weight:700;color:var(--navy);">Fresh Express Inc. dominant</td><td style="color:var(--text-muted);">Visible import supply concentrates further on a single counterparty.</td></tr>
+            <tr><td><strong>Multimodality</strong></td><td style="font-weight:700;color:var(--navy);">No ocean / air signal</td><td style="color:var(--text-muted);">No evidence of significant ocean or air freight in the uploaded Panjiva data.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 04 Import / Export Breakdown -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">04</span> Import / Export Breakdown</div>
+      <div class="card-body">
+        <p style="font-size:12px;color:var(--text-muted);line-height:1.6;margin-bottom:4px;">Flows are reported separately by direction and by period. Counts are Shipment counts within each flow.</p>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header" style="background:rgba(0,180,216,0.05);">Imports</div>
+        <div class="card-body">
+          <div class="grid-2" style="gap:10px;">
+            <div class="stat-box"><div class="stat-label">2025 Full Year</div><div class="stat-value" style="font-size:22px;">75</div><div class="stat-sub">USD 603,095 · 764,405 kg</div></div>
+            <div class="stat-box"><div class="stat-label">2026 YTD</div><div class="stat-value teal" style="font-size:22px;">71</div><div class="stat-sub">USD 690,834 · 648,233 kg</div></div>
+          </div>
+          <table class="hub-table" style="margin-top:12px;">
+            <thead><tr><th>Metric</th><th style="text-align:right;">2025 Full Year</th><th style="text-align:right;">2026 YTD</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Shipments</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">75</td><td style="text-align:right;font-weight:700;color:var(--navy);">71</td></tr>
+              <tr><td><strong>USD Value</strong></td><td style="text-align:right;">603,095</td><td style="text-align:right;">690,834</td></tr>
+              <tr><td><strong>Gross Weight</strong></td><td style="text-align:right;">764,405 kg</td><td style="text-align:right;">648,233 kg</td></tr>
+              <tr><td><strong>Volume</strong></td><td style="text-align:right;">70.5 TEU</td><td style="text-align:right;">58.9 TEU</td></tr>
+              <tr><td><strong>Share of Value</strong></td><td style="text-align:right;">6.4%</td><td style="text-align:right;">8.5%</td></tr>
+              <tr><td><strong>Main Origin</strong></td><td style="text-align:right;">United States</td><td style="text-align:right;">United States</td></tr>
+              <tr><td><strong>Main Counterparty</strong></td><td style="text-align:right;">Fresh Express Inc. (58)</td><td style="text-align:right;">Fresh Express Inc. (71)</td></tr>
+            </tbody>
+          </table>
+          <div style="margin-top:10px;padding:10px 14px;font-size:11px;color:var(--text-muted);line-height:1.5;background:var(--bg);border-radius:5px;">Imports are <strong>operational inputs</strong>, not commercial product: corrugated carton boxes, plastic bags, fixing ties and paper labels. In 2025 a secondary counterparty, Chiquita Mexico S. de R.L. de C.V., appears with 17 Shipments; minor Mexico origins and isolated Thailand / China records appear in mixed HS cases. In 2026 YTD, China and Mexico origins remain marginal.</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" style="background:rgba(0,180,216,0.05);">Exports</div>
+        <div class="card-body">
+          <div class="grid-2" style="gap:10px;">
+            <div class="stat-box"><div class="stat-label">2025 Full Year</div><div class="stat-value" style="font-size:22px;">45</div><div class="stat-sub">USD 8,813,488 · 11,296,221 kg</div></div>
+            <div class="stat-box"><div class="stat-label">2026 YTD</div><div class="stat-value teal" style="font-size:22px;">26</div><div class="stat-sub">USD 7,417,446 · 10,503,451 kg</div></div>
+          </div>
+          <table class="hub-table" style="margin-top:12px;">
+            <thead><tr><th>Metric</th><th style="text-align:right;">2025 Full Year</th><th style="text-align:right;">2026 YTD</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Shipments</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">45</td><td style="text-align:right;font-weight:700;color:var(--navy);">26</td></tr>
+              <tr><td><strong>USD Value</strong></td><td style="text-align:right;">8,813,488</td><td style="text-align:right;">7,417,446</td></tr>
+              <tr><td><strong>Gross Weight</strong></td><td style="text-align:right;">11,296,221 kg</td><td style="text-align:right;">10,503,451 kg</td></tr>
+              <tr><td><strong>Volume</strong></td><td style="text-align:right;">1,026.9 TEU</td><td style="text-align:right;">954.9 TEU</td></tr>
+              <tr><td><strong>Share of Value</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">93.6%</td><td style="text-align:right;font-weight:700;color:var(--navy);">91.5%</td></tr>
+              <tr><td><strong>Destination</strong></td><td style="text-align:right;">United States 100%</td><td style="text-align:right;">United States 100%</td></tr>
+              <tr><td><strong>Consignee Data</strong></td><td style="text-align:right;color:var(--text-muted);">Mostly Unknown</td><td style="text-align:right;color:var(--text-muted);">Mostly Unknown · one Fresh Express Inc. (ATL)</td></tr>
+            </tbody>
+          </table>
+          <div style="margin-top:10px;padding:10px 14px;font-size:11px;color:var(--text-muted);line-height:1.5;background:var(--bg);border-radius:5px;">Exports carry <strong>the commercial value of the operation</strong>: fresh lettuce, romaine and radicchio moving 100% to the United States. Fewer Shipments carry substantially more value and weight than the entire import flow — every export Shipment is commercially material and time-critical.</div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:12px 16px;background:rgba(13,43,94,0.03);">
+        <strong style="font-size:11px;color:var(--navy);">Interpretation:</strong>
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> The account runs a bidirectional structure with asymmetric economics: imports are packaging and operational inputs, exports are the perishable commercial product. Packaging inbound continuity is what makes the export flow executable — the two directions are operationally linked, not independent.</span>
+      </div>
+    </div>
+
+    <!-- 05 Modal Mix -->
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header"><span class="accent">05</span> Modal Mix — 2025 Full Year</div>
+        <div class="card-body">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;">120 Shipments</div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Truck 🚛</strong><span>120 · 100%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:100%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Maritime 🚢</strong><span>0 · 0%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:0%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Air ✈</strong><span>0 · 0%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:0%"></div></div></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><span class="accent">05</span> Modal Mix — 2026 YTD</div>
+        <div class="card-body">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;">97 Shipments</div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Truck 🚛</strong><span>75 · 77.3%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:100%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Unknown ❔</strong><span>22 · 22.7%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:29.3%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Maritime 🚢 / Air ✈</strong><span>0 · 0%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:0%"></div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:12px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;">
+        <strong style="font-size:11px;color:#b45309;">AIOS Interpretation:</strong>
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> Modal diversity is <strong>low by design</strong>: this is a truck-only cross-border operation. That removes multimodal complexity from the equation and places the entire operational risk on border execution — crossing time, customs release, documentation readiness and exception handling. The 22 Unknown-mode records in 2026 YTD are a data quality signal, not evidence of a second mode.</span>
+      </div>
+    </div>
+
+    <!-- 06 Geographic & Hub Intelligence -->
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header"><span class="accent">06</span> Geographic &amp; Hub Intelligence — 2025 Full Year</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <thead><tr><th>Customs / Port</th><th style="text-align:right;">Shipments</th><th>Operational Signal</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Nuevo Laredo, Tamaulipas</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">114</td><td style="color:var(--text-muted);">Primary and near-exclusive cross-border corridor</td></tr>
+              <tr><td><strong>Colombia, Nuevo León</strong></td><td style="text-align:right;">6</td><td style="color:var(--text-muted);">Secondary border alternative</td></tr>
+            </tbody>
+          </table>
+          <table class="hub-table" style="margin-top:12px;">
+            <thead><tr><th>Geography</th><th>Direction</th><th>Reading</th></tr></thead>
+            <tbody>
+              <tr><td><strong>United States</strong></td><td>Import origin · Export destination</td><td style="color:var(--text-muted);">Dominant origin for packaging inputs and 100% of export demand</td></tr>
+              <tr><td><strong>Mexico</strong></td><td>Import origin</td><td style="color:var(--text-muted);">Minor domestic / internal visible flows</td></tr>
+              <tr><td><strong>Thailand / China</strong></td><td>Import origin</td><td style="color:var(--text-muted);">Isolated records appearing in mixed HS cases</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><span class="accent">06</span> Geographic &amp; Hub Intelligence — 2026 YTD</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <thead><tr><th>Customs / Port</th><th style="text-align:right;">Shipments</th><th>Operational Signal</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Nuevo Laredo, Tamaulipas</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">97</td><td style="color:var(--text-muted);">Single corridor — 100% of visible Shipments</td></tr>
+            </tbody>
+          </table>
+          <table class="hub-table" style="margin-top:12px;">
+            <thead><tr><th>Geography</th><th>Direction</th><th>Reading</th></tr></thead>
+            <tbody>
+              <tr><td><strong>United States</strong></td><td>Import origin · Export destination</td><td style="color:var(--text-muted);">Dominant import origin and 100% of export destination</td></tr>
+              <tr><td><strong>China</strong></td><td>Import origin</td><td style="color:var(--text-muted);">Marginal presence</td></tr>
+              <tr><td><strong>Mexico</strong></td><td>Import origin</td><td style="color:var(--text-muted);">Marginal presence</td></tr>
+            </tbody>
+          </table>
+          <table class="hub-table" style="margin-top:12px;">
+            <thead><tr><th>Customs Agent</th><th>Period</th></tr></thead>
+            <tbody>
+              <tr><td><strong>3988</strong></td><td style="color:var(--text-muted);">Main agent in 2025 Full Year and 2026 YTD</td></tr>
+              <tr><td><strong>3438</strong></td><td style="color:var(--text-muted);">Second agent appearing in 2026 YTD</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:12px 16px;background:rgba(13,43,94,0.03);">
+        <strong style="font-size:11px;color:var(--navy);">Interpretation:</strong>
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> The operation has moved from a 95% / 5% Nuevo Laredo–Colombia NL split to a single-corridor structure. Concentration simplifies execution but removes the fallback option: a congestion, inspection or documentation event at Nuevo Laredo has no visible alternative routing in the Panjiva universe. The appearance of a second customs agent in 2026 YTD is a coordination-surface signal worth confirming in discovery.</span>
+      </div>
+    </div>
+
+    <!-- 07 Top HS Code Intelligence -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">07</span> Top HS Code Intelligence</div>
+      <div class="card-body" style="padding:12px 16px;background:rgba(245,158,11,0.05);">
+        <strong style="font-size:11px;color:#b45309;">Important Methodology Note:</strong>
+        <span style="font-size:11px;color:var(--text-muted);"> If one Shipment has multiple HS Codes, HS counts represent <strong>operational presence</strong> and are <strong>not additive</strong>.</span>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header" style="background:rgba(13,43,94,0.03);">2025 Full Year — Imports</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <thead><tr><th>HS Code</th><th>Product</th><th style="text-align:right;">Presence</th><th style="text-align:right;">%</th></tr></thead>
+            <tbody>
+              <tr><td><strong>4819100100</strong></td><td>Corrugated carton boxes</td><td style="text-align:right;font-weight:700;color:var(--navy);">52</td><td style="text-align:right;">69.3%</td></tr>
+              <tr><td><strong>0705199900</strong></td><td>Romaine / butter lettuce</td><td style="text-align:right;font-weight:700;color:var(--navy);">17</td><td style="text-align:right;">22.7%</td></tr>
+              <tr><td><strong>3923210100</strong></td><td>Ethylene polymer bags / plastic bags for vegetables</td><td style="text-align:right;">4</td><td style="text-align:right;">5.3%</td></tr>
+              <tr><td><strong>3926901400</strong></td><td>Plastic fixing ties</td><td style="text-align:right;">2</td><td style="text-align:right;">2.7%</td></tr>
+              <tr><td><strong>4821100100</strong></td><td>Paper labels</td><td style="text-align:right;">1</td><td style="text-align:right;">1.3%</td></tr>
+            </tbody>
+          </table>
+          <div style="font-size:10px;color:var(--text-muted);margin-top:8px;">% of 2025 Full Year import Shipments (75).</div>
+          <table class="hub-table" style="margin-top:12px;">
+            <thead><tr><th>HS Code</th><th>AIOS Interpretation</th></tr></thead>
+            <tbody>
+              <tr><td><strong>4819100100</strong></td><td style="color:var(--text-muted);">Packaging is critical to the operation; dependency on boxes / carton affects export continuity.</td></tr>
+              <tr><td><strong>0705199900</strong></td><td style="color:var(--text-muted);">Fresh produce sensitivity; time and border delays matter.</td></tr>
+              <tr><td><strong>3923210100</strong></td><td style="color:var(--text-muted);">Packaging support input.</td></tr>
+              <tr><td><strong>3926901400</strong></td><td style="color:var(--text-muted);">Secondary packaging / handling component.</td></tr>
+              <tr><td><strong>4821100100</strong></td><td style="color:var(--text-muted);">Labeling and compliance support.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" style="background:rgba(13,43,94,0.03);">2025 Full Year — Exports</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <thead><tr><th>HS Code</th><th>Product</th><th style="text-align:right;">Presence</th><th style="text-align:right;">%</th></tr></thead>
+            <tbody>
+              <tr><td><strong>0705199900</strong></td><td>Lettuce / romaine lettuce</td><td style="text-align:right;font-weight:700;color:var(--navy);">45</td><td style="text-align:right;">100%</td></tr>
+              <tr><td><strong>4819100100</strong></td><td>Carton boxes</td><td style="text-align:right;font-weight:700;color:var(--navy);">44</td><td style="text-align:right;">97.8%</td></tr>
+              <tr><td><strong>0705110100</strong></td><td>Fresh lettuce varieties</td><td style="text-align:right;font-weight:700;color:var(--navy);">38</td><td style="text-align:right;">84.4%</td></tr>
+            </tbody>
+          </table>
+          <div style="font-size:10px;color:var(--text-muted);margin-top:8px;">% of 2025 Full Year export Shipments (45).</div>
+          <table class="hub-table" style="margin-top:12px;">
+            <thead><tr><th>HS Code</th><th>AIOS Interpretation</th></tr></thead>
+            <tbody>
+              <tr><td><strong>0705199900</strong></td><td style="color:var(--text-muted);">Core perishable export product.</td></tr>
+              <tr><td><strong>4819100100</strong></td><td style="color:var(--text-muted);">Packaging embedded into export execution.</td></tr>
+              <tr><td><strong>0705110100</strong></td><td style="color:var(--text-muted);">Recurring perishable product portfolio.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header" style="background:rgba(0,180,216,0.05);">2026 YTD — Imports</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <thead><tr><th>HS Code</th><th>Product</th><th style="text-align:right;">Presence</th><th style="text-align:right;">%</th></tr></thead>
+            <tbody>
+              <tr><td><strong>4819100100</strong></td><td>Corrugated carton boxes</td><td style="text-align:right;font-weight:700;color:var(--navy);">68</td><td style="text-align:right;">95.8%</td></tr>
+              <tr><td><strong>4821100100</strong></td><td>Printed paper labels</td><td style="text-align:right;">1</td><td style="text-align:right;">1.4%</td></tr>
+              <tr><td><strong>3926901400</strong></td><td>Plastic fixing ties</td><td style="text-align:right;">1</td><td style="text-align:right;">1.4%</td></tr>
+              <tr><td><strong>0705199900</strong></td><td>Radicchio / butter lettuce</td><td style="text-align:right;">1</td><td style="text-align:right;">1.4%</td></tr>
+            </tbody>
+          </table>
+          <div style="font-size:10px;color:var(--text-muted);margin-top:8px;">% of 2026 YTD import Shipments (71).</div>
+          <div style="margin-top:10px;padding:10px 14px;font-size:11px;color:var(--text-muted);line-height:1.5;background:var(--bg);border-radius:5px;">Imports are <strong>overwhelmingly packaging-driven</strong>. Carton availability is structurally tied to export continuity.</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" style="background:rgba(0,180,216,0.05);">2026 YTD — Exports</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <thead><tr><th>HS Code</th><th>Product</th><th style="text-align:right;">Presence</th><th style="text-align:right;">%</th></tr></thead>
+            <tbody>
+              <tr><td><strong>0705199900</strong></td><td>Lettuce / romaine / radicchio</td><td style="text-align:right;font-weight:700;color:var(--navy);">26</td><td style="text-align:right;">100%</td></tr>
+              <tr><td><strong>0705110100</strong></td><td>Fresh lettuce varieties</td><td style="text-align:right;font-weight:700;color:var(--navy);">26</td><td style="text-align:right;">100%</td></tr>
+              <tr><td><strong>4819100100</strong></td><td>Carton boxes</td><td style="text-align:right;font-weight:700;color:var(--navy);">26</td><td style="text-align:right;">100%</td></tr>
+            </tbody>
+          </table>
+          <div style="font-size:10px;color:var(--text-muted);margin-top:8px;">% of 2026 YTD export Shipments (26).</div>
+          <div style="margin-top:10px;padding:10px 14px;font-size:11px;color:var(--text-muted);line-height:1.5;background:var(--bg);border-radius:5px;">Every visible export Shipment carries fresh produce <strong>and</strong> carton packaging presence — product and packaging travel as a single execution unit.</div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:12px 16px;background:rgba(13,43,94,0.03);">
+        <strong style="font-size:11px;color:var(--navy);">Portfolio Trend:</strong>
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> The 2026 YTD portfolio is more concentrated than 2025. Import presence of corrugated carton boxes increased from 69.3% to 95.8%. The export portfolio shows 100% presence of lettuce / radicchio and carton boxes. This indicates <strong>operational standardization</strong> but also <strong>concentration risk</strong>: product freshness, packaging availability, customs readiness and border continuity are all business-critical.</span>
+      </div>
+    </div>
+
+    <!-- 08 Operational Signal → Pain Mapping -->
+    <div class="card">
+      <div class="card-header"><span class="accent">08</span> Operational Signal → Pain Mapping</div>
+      <div class="card-body">
+        <div class="signal-grid">
+          <div class="signal-item high">
+            <div class="signal-title">1. Nuevo Laredo Concentration</div>
+            <div class="signal-prob high">PROBABILITY: HIGH</div>
+            <div class="signal-desc">2026 YTD shows all visible Shipments routed through Nuevo Laredo. Single corridor concentration increases exposure to customs delays, border congestion and exception handling.</div>
+          </div>
+          <div class="signal-item high">
+            <div class="signal-title">2. Perishable Product Sensitivity</div>
+            <div class="signal-prob high">PROBABILITY: HIGH</div>
+            <div class="signal-desc">Lettuce / radicchio exports create time-sensitive execution pressure; late border visibility can impact product quality, customer windows and commercial service levels.</div>
+          </div>
+          <div class="signal-item medium">
+            <div class="signal-title">3. Packaging Dependency</div>
+            <div class="signal-prob medium-high">PROBABILITY: MEDIUM-HIGH</div>
+            <div class="signal-desc">HS 4819100100 dominates import presence, especially in 2026 YTD. Carton availability is structurally tied to export continuity.</div>
+          </div>
+          <div class="signal-item high">
+            <div class="signal-title">4. Counterparty Concentration</div>
+            <div class="signal-prob high">PROBABILITY: HIGH</div>
+            <div class="signal-desc">Fresh Express Inc. appears as the dominant visible import counterparty. Concentration creates coordination and dependency risk.</div>
+          </div>
+          <div class="signal-item high">
+            <div class="signal-title">5. Customs Documentation Exposure</div>
+            <div class="signal-prob high">PROBABILITY: HIGH</div>
+            <div class="signal-desc">Product freshness plus recurring border execution requires clean documentation and proactive issue prevention.</div>
+          </div>
+          <div class="signal-item">
+            <div class="signal-title">6. Data Visibility Gap</div>
+            <div class="signal-prob">PROBABILITY: MEDIUM</div>
+            <div class="signal-desc">Some 2026 import Shipments show Unknown mode; export consignee data is limited in Panjiva, suggesting need for better operational data normalization.</div>
+          </div>
+        </div>
+        <table class="hub-table" style="margin-top:14px;">
+          <thead><tr><th>Signal</th><th>Probability</th><th>Akzent Opportunity</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Nuevo Laredo concentration</strong></td><td style="font-weight:700;color:var(--navy);">HIGH</td><td style="color:var(--text-muted);">Cross-border control, border exception management, contingency routing.</td></tr>
+            <tr><td><strong>Perishable product sensitivity</strong></td><td style="font-weight:700;color:var(--navy);">HIGH</td><td style="color:var(--text-muted);">Proactive alerts and time-window governance for perishable Shipments.</td></tr>
+            <tr><td><strong>Packaging dependency</strong></td><td style="font-weight:700;color:var(--navy);">MEDIUM-HIGH</td><td style="color:var(--text-muted);">Packaging supplier coordination and inbound continuity tracking.</td></tr>
+            <tr><td><strong>Counterparty concentration</strong></td><td style="font-weight:700;color:var(--navy);">HIGH</td><td style="color:var(--text-muted);">Structured counterparty coordination and readiness confirmation.</td></tr>
+            <tr><td><strong>Customs documentation exposure</strong></td><td style="font-weight:700;color:var(--navy);">HIGH</td><td style="color:var(--text-muted);">Documentation pre-validation, HS consistency and broker coordination.</td></tr>
+            <tr><td><strong>Data visibility gap</strong></td><td style="font-weight:700;color:var(--navy);">MEDIUM</td><td style="color:var(--text-muted);">Operational data normalization and single-source Shipment visibility.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 09 Akzent Fit Scoring -->
+    <div class="card">
+      <div class="card-header"><span class="accent">09</span> Akzent Fit Scoring</div>
+      <div class="card-body">
+        <div class="fit-score-grid">
+          <div class="fit-score-item"><div class="fit-score-name">Cross-Border Fit</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:95%"></div></div><div class="fit-score-pct">95%</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Customs Fit</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:90%"></div></div><div class="fit-score-pct">90%</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Product Sensitivity Fit</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:88%"></div></div><div class="fit-score-pct">88%</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Control Tower Fit</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:82%"></div></div><div class="fit-score-pct">82%</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Supplier / Packaging Coordination Fit</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:78%"></div></div><div class="fit-score-pct">78%</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Warehousing / Staging Fit</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:55%"></div></div><div class="fit-score-pct">55%</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Ocean Freight Fit</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:10%"></div></div><div class="fit-score-pct">10%</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Air Freight Fit</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:5%"></div></div><div class="fit-score-pct">5%</div></div></div>
+        </div>
+        <table class="hub-table" style="margin-top:14px;">
+          <thead><tr><th>Dimension</th><th>Level</th><th>Basis</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Strategic Fit</strong></td><td><span class="cls-pill aa">AA</span></td><td style="color:var(--text-muted);">Recurrent bidirectional cross-border volume on Akzent's core corridor.</td></tr>
+            <tr><td><strong>Operational Complexity</strong></td><td style="font-weight:700;color:var(--navy);">MEDIUM</td><td style="color:var(--text-muted);">Single corridor and single mode, but time- and documentation-critical.</td></tr>
+            <tr><td><strong>Cross-Border Exposure</strong></td><td style="font-weight:700;color:var(--navy);">HIGH</td><td style="color:var(--text-muted);">100% of 2026 YTD Shipments cross through Nuevo Laredo.</td></tr>
+            <tr><td><strong>Modal Diversity</strong></td><td style="font-weight:700;color:var(--text-muted);">LOW</td><td style="color:var(--text-muted);">Truck-only operation; no ocean or air signal in Panjiva.</td></tr>
+            <tr><td><strong>Customs Opportunity</strong></td><td style="font-weight:700;color:var(--navy);">HIGH</td><td style="color:var(--text-muted);">Perishable documentation, HS consistency and multiple customs agents.</td></tr>
+            <tr><td><strong>Product Sensitivity</strong></td><td style="font-weight:700;color:var(--navy);">HIGH</td><td style="color:var(--text-muted);">Fresh lettuce and radicchio with tight commercial windows.</td></tr>
+            <tr><td><strong>ILM / Control Tower Potential</strong></td><td style="font-weight:700;color:var(--navy);">MEDIUM-HIGH</td><td style="color:var(--text-muted);">Inbound packaging plus outbound perishable coordination in one view.</td></tr>
+            <tr><td><strong>Commercial Attractiveness</strong></td><td style="font-weight:700;color:var(--navy);">HIGH</td><td style="color:var(--text-muted);">USD 8.11M visible value in 2026 YTD with a stable, recurring rhythm.</td></tr>
+            <tr><td><strong>Account Priority</strong></td><td colspan="2" style="font-weight:700;color:#b45309;">★ PRIORITY TARGET</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:12px;padding:10px 14px;background:rgba(13,43,94,0.03);border-radius:5px;border:1px solid var(--border);">
+          <strong style="font-size:11px;color:var(--navy);">Classification Justification:</strong>
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> AA because of recurrent volume, bidirectional cross-border structure, full concentration around the United States / Nuevo Laredo corridor, product freshness sensitivity, packaging dependency, and strong fit for customs visibility and control tower. Not AAA because Panjiva does not show broad multimodal activity, recurring air urgency, multiple significant geographies, or distributed port complexity.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10 Commercial Positioning -->
+    <div class="card">
+      <div class="card-header"><span class="accent">10</span> Commercial Positioning</div>
+      <div class="card-body">
+        <div class="positioning-box">
+          <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,0.6);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;">Position Akzent As</div>
+          <div class="positioning-example">Operational Complexity Partner · Cross-Border Coordination Partner · Customs &amp; Visibility Partner · ILM / Control Tower Partner. Do not position Akzent as a transactional freight provider.</div>
+          <div style="font-size:11px;font-weight:700;color:var(--teal);letter-spacing:1px;text-transform:uppercase;margin:16px 0 8px;">Recommended Conversation Angle</div>
+          <div class="positioning-example">"Vemos una operación muy concentrada en Nuevo Laredo, con producto fresco hacia Estados Unidos y una dependencia fuerte de empaques/cajas para la continuidad exportadora. En operaciones así, el riesgo no suele estar solo en conseguir transporte, sino en mantener visibilidad, documentación lista, coordinación aduanal y reacción rápida cuando un Shipment se empieza a desviar del plan."</div>
+          <div class="capability-tags">
+            <span class="cap-tag">Nuevo Laredo</span>
+            <span class="cap-tag">USA corridor</span>
+            <span class="cap-tag">Fresh produce</span>
+            <span class="cap-tag">Perishable windows</span>
+            <span class="cap-tag">Packaging continuity</span>
+            <span class="cap-tag">Customs coordination</span>
+            <span class="cap-tag">Documentation control</span>
+            <span class="cap-tag">Exception management</span>
+            <span class="cap-tag">Control Tower</span>
+          </div>
+        </div>
+        <table class="hub-table" style="margin-top:14px;">
+          <thead><tr><th style="width:60px;">Priority</th><th>Service to Position</th></tr></thead>
+          <tbody>
+            <tr><td style="font-weight:700;color:var(--navy);">1</td><td><strong>Cross-border control through Nuevo Laredo</strong></td></tr>
+            <tr><td style="font-weight:700;color:var(--navy);">2</td><td><strong>Customs visibility and release coordination</strong></td></tr>
+            <tr><td style="font-weight:700;color:var(--navy);">3</td><td><strong>Proactive documentation coordination</strong></td></tr>
+            <tr><td style="font-weight:700;color:var(--navy);">4</td><td><strong>Perishable Shipment exception and alert management</strong></td></tr>
+            <tr><td style="font-weight:700;color:var(--navy);">5</td><td><strong>Packaging supplier / inbound continuity coordination</strong></td></tr>
+            <tr><td style="font-weight:700;color:var(--navy);">6</td><td><strong>Lightweight ILM / Control Tower layer</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 11 Discovery Question Engine -->
+    <div class="card">
+      <div class="card-header"><span class="accent">11</span> Discovery Question Engine</div>
+      <div class="card-body">
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Cross-Border / Nuevo Laredo</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>¿Qué porcentaje de la operación actual cruza por Nuevo Laredo?</li>
+              <li>¿Dónde tienen más fricción: documentación, tiempos de cruce, carrier coordination o liberación aduanal?</li>
+              <li>¿Qué tan proactiva es la visibilidad antes de que un Shipment llegue a frontera?</li>
+              <li>¿Qué pasa internamente cuando un Shipment de producto fresco se retrasa?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Producto fresco / continuidad</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>¿Qué ventanas de tiempo son críticas para lechuga/radicchio?</li>
+              <li>¿Qué niveles de rechazo, penalización o impacto comercial existen ante demoras?</li>
+              <li>¿Cómo se comunican excepciones al equipo comercial/operativo?</li>
+              <li>¿Tienen alertas preventivas o trabajan de forma reactiva?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Packaging / insumos</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>¿Qué tan crítica es la disponibilidad de cajas/cartón para exportar?</li>
+              <li>¿Fresh Express participa como proveedor, cliente o contraparte operativa recurrente?</li>
+              <li>¿Existe inventario buffer de empaque o se opera con ventanas ajustadas?</li>
+              <li>¿Quién coordina proveedores, aduana y transporte cuando hay cambios de calendario?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Control Tower / ILM</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>¿Actualmente tienen un solo punto de visibilidad para Shipments inbound y outbound?</li>
+              <li>¿Los updates son manuales o automatizados?</li>
+              <li>¿Qué información necesita dirección para saber si la operación está bajo control?</li>
+              <li>¿Qué parte de la coordinación consume más tiempo del equipo interno?</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12 Strategic Expansion Trajectory -->
+    <div class="card">
+      <div class="card-header"><span class="accent">12</span> Strategic Expansion Trajectory</div>
+      <div class="card-body">
+        <div class="phase-grid">
+          <div class="phase-card"><div class="phase-num">Phase 1</div><div class="phase-title">Entry — Nuevo Laredo Control</div><ul class="phase-items"><li>Cross-border visibility</li><li>Customs coordination</li><li>Exception tracking</li></ul></div>
+          <div class="phase-card"><div class="phase-num">Phase 2</div><div class="phase-title">Documentation &amp; Packaging Continuity</div><ul class="phase-items"><li>Pre-alert discipline</li><li>Packaging supplier coordination</li><li>HS / documentation validation</li></ul></div>
+          <div class="phase-card"><div class="phase-num">Phase 3</div><div class="phase-title">Perishable Control Tower</div><ul class="phase-items"><li>Proactive alerts</li><li>Shipment status visibility</li><li>Escalation protocol</li></ul></div>
+          <div class="phase-card"><div class="phase-num">Phase 4</div><div class="phase-title">ILM Layer</div><ul class="phase-items"><li>Integrated operational coordination</li><li>Centralized reporting</li><li>Full cross-border operating rhythm</li></ul></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 </main>
 
 <script>
@@ -38831,6 +39462,7 @@ const ACCOUNTS = [
   { id:'view-magna-powertrain', name:'Magna Powertrain de México', sub:'Automotive / Powertrain / Auto Components · IMMEX · Cross-Border · Multimodal · Air urgency · Nuevo Laredo · Colombia NL · Piedras Negras · Altamira · Manzanillo · Puebla · Guanajuato / Silao · OEM continuity · Customs Complexity · ILM / Control Tower · Panjiva Imports + Exports', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
   { id:'view-philipmorris', name:'Philip Morris Mexico', sub:'Tobacco / Nicotine Products / Regulated Consumer Goods / Industrial Production Support · Air-Dominant · Maritime · Truck · Double Stack Rail · Guadalajara · Manzanillo · Altamira · Nuevo Laredo · Colombia · Central America · Brazil · Canada · Machinery parts · Customs Sensitivity · ILM / Control Tower · Panjiva Imports + Exports', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
   { id:'view-bitron', name:'Bitron de México', sub:'Electronics Manufacturing / Automotive &amp; Appliance Controls · Mexico · Air urgency · Cross-Border · Asia sourcing · Querétaro · Puebla · Nuevo Laredo · Manzanillo · AICM · AIFA · Veracruz · Capacitors, resistors, diodes &amp; integrated circuits · Supplier coordination · Customs complexity · ILM / Control Tower · Panjiva Imports + Exports', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
+  { id:'view-chiquita', name:'Chiquita Mexico', sub:'Fresh Produce / Cross-Border Food Supply Chain · Mexico ↔ United States · Nuevo Laredo · Truck cross-border · Perishable lettuce &amp; radicchio exports · Corrugated carton packaging imports · Fresh Express Inc. · Customs visibility · ILM / Control Tower · Panjiva Imports + Exports', rel:'LEAD', cls:'AA', clsPill:'aa' },
 ];
 const MODULES = [
   { id:'view-network',     name:'Network Intelligence', sub:'Cross-account analysis · Lane overlap' },
@@ -38946,7 +39578,7 @@ var INDUSTRY_BY_ID = {
   'view-gomez-cuetara':'Food', 'view-owens-corning':'Industrial',
   'view-suspensys':'Auto', 'view-cemm':'Auto', 'view-siete-leguas':'Auto',
   'view-magna-powertrain':'Auto', 'view-philipmorris':'Tobacco',
-  'view-bitron':'Electronics'
+  'view-bitron':'Electronics', 'view-chiquita':'Fresh Produce'
 };
 
 var UNRESOLVED_ACCOUNTS = [];
