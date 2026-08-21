@@ -1327,6 +1327,10 @@ main {
       <span>◆</span> <span style="flex:1;">Crown Envases</span>
       <span class="recent-cls aa">AA</span>
     </div>
+    <div class="nav-item" onclick="showView('view-worldtradefoods', this)">
+      <span>◆</span> <span style="flex:1;">World Trade Foods</span>
+      <span class="recent-cls aa">AA</span>
+    </div>
   </div>
 
   <div class="nav-divider"></div>
@@ -1388,7 +1392,7 @@ main {
   <div class="home-stats-row">
     <div class="stat-box">
       <div class="stat-label" id="stat-total-label">Total Accounts</div>
-      <div class="stat-value" id="stat-total-val">62</div>
+      <div class="stat-value" id="stat-total-val">63</div>
     </div>
     <div class="stat-box">
       <div class="stat-label">AAA Accounts</div>
@@ -1396,7 +1400,7 @@ main {
     </div>
     <div class="stat-box">
       <div class="stat-label">AA / AA+ Accounts</div>
-      <div class="stat-value teal" id="stat-aa-val">34</div>
+      <div class="stat-value teal" id="stat-aa-val">35</div>
     </div>
     <div class="stat-box">
       <div class="stat-label">ILM Candidates</div>
@@ -2396,6 +2400,33 @@ main {
         <span class="acct-tag">El Salvador</span>
         <span class="acct-tag">Aluminum Packaging</span>
         <span class="acct-tag">ILM / Control Tower</span>
+      </div>
+    </div>
+
+    <!-- World Trade Foods -->
+    <div class="account-card aa" onclick="showViewById('view-worldtradefoods')">
+      <div class="account-card-header">
+        <div>
+          <div class="account-name">World Trade Foods</div>
+          <div class="account-industry">Food Imports · Frozen Potato Products</div>
+        </div>
+        <div style="display:flex;gap:5px;align-items:center;flex-shrink:0;">
+          <span class="account-cls-badge lead">LEAD</span>
+          <span class="account-cls-badge aa">AA</span>
+        </div>
+      </div>
+      <div class="account-metrics">
+        <div class="acct-metric"><div class="acct-metric-val">55</div><div class="acct-metric-lbl">Shipments</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">$2.07M</div><div class="acct-metric-lbl">CIF</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">2</div><div class="acct-metric-lbl">Ports</div></div>
+      </div>
+      <div class="account-tags">
+        <span class="acct-tag" style="background:rgba(245,158,11,0.12);color:#b45309;border-color:rgba(245,158,11,0.3);">LEAD</span>
+        <span class="acct-tag">Veracruz</span>
+        <span class="acct-tag">Altamira</span>
+        <span class="acct-tag">Maritime</span>
+        <span class="acct-tag">Food Imports</span>
+        <span class="acct-tag">Control Tower</span>
       </div>
     </div>
 
@@ -12672,7 +12703,7 @@ main {
       <div class="page-header-sub">Cross-account analysis · Lane overlap · Strategic prioritization</div>
     </div>
     <div class="page-header-meta">
-      <div style="font-size:11px;color:rgba(255,255,255,0.5);">33 ACCOUNTS</div>
+      <div style="font-size:11px;color:rgba(255,255,255,0.5);">34 ACCOUNTS</div>
     </div>
   </div>
   <div class="content-body">
@@ -12784,6 +12815,16 @@ main {
               <td><div class="dots"><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div></td>
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
               <td style="color:#b45309;font-weight:700;font-size:11px;">★ PRIORITY TARGET</td>
+            </tr>
+            <tr onclick="showViewById('view-worldtradefoods')" style="cursor:pointer;">
+              <td><strong>World Trade Foods</strong> <span style="font-size:10px;font-weight:600;color:#b45309;background:rgba(245,158,11,0.12);padding:1px 5px;border-radius:3px;margin-left:4px;">LEAD</span></td>
+              <td><span class="cls-pill aa">AA</span></td>
+              <td style="color:var(--text-muted);" title="Relationship Status LEAD · AIOS Classification AA · Industry Food Imports · Key Signals Maritime dependency, food import sensitivity, supplier concentration, customs exposure · Modes Maritime only · ILM / Control Tower Fit Medium-High · Customs Fit High · Ocean Fit Very High · Cross-Border Fit Not visible · Air Fit Not visible">Food Imports</td>
+              <td><div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td><div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot"></div></div></td>
+              <td style="color:#b45309;font-weight:700;font-size:11px;">★ LEAD</td>
             </tr>
             <tr>
               <td><strong>Lincoln Electric México</strong> <span style="font-size:10px;font-weight:600;color:#b45309;background:rgba(245,158,11,0.12);padding:1px 5px;border-radius:3px;margin-left:4px;">LEAD</span></td>
@@ -39995,6 +40036,498 @@ main {
   </div>
 </div>
 
+<div id="view-worldtradefoods" class="view">
+  <div class="page-header">
+    <div class="page-header-left">
+      <div class="page-header-eyebrow">Target Account · LEAD Analysis</div>
+      <div class="page-header-title">World Trade Foods</div>
+      <div class="page-header-sub">Food Imports · Frozen Potato Products · Ocean + Customs Visibility Opportunity</div>
+    </div>
+    <div class="page-header-meta">
+      <span class="classification-badge lead">LEAD</span>
+      <span class="classification-badge aa">AA</span>
+      <button class="print-btn" onclick="printView('view-worldtradefoods')">⬇ Export PDF</button>
+    </div>
+  </div>
+  <div class="content-body">
+
+    <!-- LEAD source banner -->
+    <div class="card">
+      <div class="card-body" style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+        <span class="classification-badge lead">LEAD</span>
+        <span class="classification-badge aa">AA</span>
+        <span style="font-size:12px;color:var(--text-muted);line-height:1.6;">
+          <strong style="color:var(--navy);">Relationship Status: LEAD (pre-commercial).</strong> World Trade Foods LLC S. de R.L. de C.V. is not operated by Akzent. All analysis is built exclusively on <strong>Panjiva Mexico Imports</strong> as the visible logistics universe — no Akzent Shipment data is available for this account. The <strong>AIOS Classification AA</strong> reflects strategic fit and operational complexity and is shown separately from — and is independent of — the LEAD relationship badge. <strong>2025 Visible</strong> and <strong>2026 YTD</strong> are reported separately and are never aggregated.
+        </span>
+      </div>
+    </div>
+
+    <!-- Source coverage note -->
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:12px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;">
+        <strong style="font-size:11px;color:#b45309;">Source Coverage:</strong>
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> Panjiva Mexico Imports only · imports only · visible date range <strong>2025-02-11 to 2026-06-26</strong>. <strong>2025 Visible: 40 Shipments</strong> (40 imports · 0 exports). <strong>2026 YTD through June 26, 2026: 15 Shipments</strong> (15 imports · 0 exports). Each Panjiva row is treated as one visible Shipment. No Akzent Shipment data is available, therefore wallet, penetration, revenue, gross profit, margin and coverage metrics are not included for this account.</span>
+      </div>
+    </div>
+
+    <!-- 01 Executive Intelligence Summary -->
+    <div class="card">
+      <div class="card-header"><span class="accent">01</span> Executive Intelligence Summary</div>
+      <div class="card-body">
+        <p style="font-size:13px;line-height:1.7;">World Trade Foods shows a <strong>concentrated, recurring food import operation</strong> built around maritime imports of frozen and dehydrated potato products. The Panjiva-visible universe contains <strong>55 import Shipments</strong>, all maritime, with <strong>Veracruz</strong> and <strong>Altamira</strong> as the only visible Mexican ports of entry.</p>
+        <p style="font-size:13px;line-height:1.7;margin-top:10px;">The operation is not broadly multimodal, but it shows strong operational dependency on <strong>ocean freight, customs coordination, food documentation, supplier readiness and port visibility</strong>.</p>
+        <p style="font-size:13px;line-height:1.7;margin-top:10px;">This is <strong>not a transactional freight opportunity</strong>. It is an <strong>ocean, customs and food supply chain control opportunity</strong>.</p>
+        <div style="background:rgba(13,43,94,0.03);border-radius:6px;border:1px solid var(--border);padding:12px 16px;margin-top:12px;">
+          <strong style="font-size:11px;color:var(--navy);text-transform:uppercase;letter-spacing:1px;">Key Signals</strong>
+          <ul class="q-list" style="margin-top:6px;">
+            <li>Relationship Status: LEAD</li>
+            <li>AIOS Classification: AA</li>
+            <li>55 Panjiva-visible import Shipments</li>
+            <li>USD 2.07M CIF visible value</li>
+            <li>1.36M kg gross weight</li>
+            <li>123.68 TEU</li>
+            <li>100% maritime</li>
+            <li>Main ports: Veracruz and Altamira</li>
+            <li>Main shipper: Hidrocalira Inc.</li>
+            <li>Main product families: frozen prefried potatoes and dehydrated potato flakes</li>
+            <li>Primary Akzent angle: ocean visibility, customs coordination, supplier readiness, food import control tower</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 Shipment Intelligence by Period -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">02</span> Shipment Intelligence by Period</div>
+      <div class="card-body">
+        <p style="font-size:12px;color:var(--text-muted);line-height:1.6;margin-bottom:4px;">Periods are analyzed separately and are never aggregated into a single operational view. <strong>2025 Visible</strong> · <strong>2026 YTD through June 26, 2026</strong>. Each Panjiva row is treated as 1 Shipment. Source: Panjiva Mexico Imports.</p>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header" style="background:rgba(13,43,94,0.03);">2025 Visible</div>
+        <div class="card-body">
+          <div class="grid-2" style="gap:10px;">
+            <div class="stat-box"><div class="stat-label">Shipments</div><div class="stat-value" style="font-size:22px;">40</div><div class="stat-sub">40 imports · 0 exports</div></div>
+            <div class="stat-box"><div class="stat-label">USD CIF</div><div class="stat-value" style="font-size:22px;">$1.48M</div><div class="stat-sub">Declared</div></div>
+          </div>
+          <table class="hub-table" style="margin-top:12px;">
+            <tbody>
+              <tr><td><strong>Shipments</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">40</td></tr>
+              <tr><td><strong>Imports</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">40</td></tr>
+              <tr><td><strong>Exports</strong></td><td style="text-align:right;">0</td></tr>
+              <tr><td><strong>USD CIF</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">$1.48M</td></tr>
+              <tr><td><strong>Gross Weight</strong></td><td style="text-align:right;">993,840.59 kg</td></tr>
+              <tr><td><strong>Volume</strong></td><td style="text-align:right;">90.35 TEU</td></tr>
+              <tr><td><strong>Avg USD / Shipment</strong></td><td style="text-align:right;">$36,962.93</td></tr>
+              <tr><td><strong>Avg Weight / Shipment</strong></td><td style="text-align:right;">24,846.01 kg</td></tr>
+              <tr><td><strong>Modal Mix</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">100% Maritime</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" style="background:rgba(0,180,216,0.05);">2026 YTD — through June 26, 2026</div>
+        <div class="card-body">
+          <div class="grid-2" style="gap:10px;">
+            <div class="stat-box"><div class="stat-label">Shipments</div><div class="stat-value teal" style="font-size:22px;">15</div><div class="stat-sub">15 imports · 0 exports</div></div>
+            <div class="stat-box"><div class="stat-label">USD CIF</div><div class="stat-value" style="font-size:22px;">$595,075.78</div><div class="stat-sub">Declared</div></div>
+          </div>
+          <table class="hub-table" style="margin-top:12px;">
+            <tbody>
+              <tr><td><strong>Shipments</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">15</td></tr>
+              <tr><td><strong>Imports</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">15</td></tr>
+              <tr><td><strong>Exports</strong></td><td style="text-align:right;">0</td></tr>
+              <tr><td><strong>USD CIF</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">$595,075.78</td></tr>
+              <tr><td><strong>Gross Weight</strong></td><td style="text-align:right;">366,599.58 kg</td></tr>
+              <tr><td><strong>Volume</strong></td><td style="text-align:right;">33.33 TEU</td></tr>
+              <tr><td><strong>Avg USD / Shipment</strong></td><td style="text-align:right;">$39,671.72</td></tr>
+              <tr><td><strong>Avg Weight / Shipment</strong></td><td style="text-align:right;">24,439.97 kg</td></tr>
+              <tr><td><strong>Modal Mix</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">100% Maritime</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:12px 16px;background:rgba(0,180,216,0.05);">
+        <strong style="font-size:11px;color:var(--navy);">Data Integrity Note:</strong>
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> The 2025 dataset is visible from February to December. The 2026 YTD dataset is visible through June 26, 2026. Do not extrapolate missing months.</span>
+      </div>
+    </div>
+
+    <!-- 03 Trend Intelligence -->
+    <div class="card">
+      <div class="card-header"><span class="accent">03</span> Trend Intelligence</div>
+      <div class="card-body" style="padding:0;">
+        <table class="hub-table">
+          <thead><tr><th>Dimension</th><th>2025 Visible</th><th>2026 YTD</th><th>Interpretation</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Shipments</strong></td>
+              <td style="font-weight:700;color:var(--navy);">40</td>
+              <td style="font-weight:700;color:var(--navy);">15</td>
+              <td style="color:var(--text-muted);">Cadence decreases from approximately 3.64 Shipments per visible month to 2.50 Shipments per month; validate completeness before interpreting this as structural decline.</td>
+            </tr>
+            <tr>
+              <td><strong>Avg USD per Shipment</strong></td>
+              <td style="font-weight:700;color:var(--navy);">$36,962.93</td>
+              <td style="font-weight:700;color:var(--navy);">$39,671.72</td>
+              <td style="color:var(--text-muted);">Average value per Shipment increases approximately 7.3%.</td>
+            </tr>
+            <tr>
+              <td><strong>Avg Weight per Shipment</strong></td>
+              <td style="font-weight:700;color:var(--navy);">24,846.01 kg</td>
+              <td style="font-weight:700;color:var(--navy);">24,439.97 kg</td>
+              <td style="color:var(--text-muted);">Load profile remains stable.</td>
+            </tr>
+            <tr>
+              <td><strong>Modal Mix</strong></td>
+              <td style="font-weight:700;color:var(--navy);">100% Maritime</td>
+              <td style="font-weight:700;color:var(--navy);">100% Maritime</td>
+              <td style="color:var(--text-muted);">Ocean freight is the operational backbone.</td>
+            </tr>
+            <tr>
+              <td><strong>Port Mix</strong></td>
+              <td style="font-weight:700;color:var(--navy);">Veracruz 80% · Altamira 20%</td>
+              <td style="font-weight:700;color:var(--navy);">Veracruz 66.7% · Altamira 33.3%</td>
+              <td style="color:var(--text-muted);">Altamira gains relative share in 2026 YTD.</td>
+            </tr>
+            <tr>
+              <td><strong>Supplier Base</strong></td>
+              <td style="font-weight:700;color:var(--navy);">Hidrocalira Inc.</td>
+              <td style="font-weight:700;color:var(--navy);">Hidrocalira Inc.</td>
+              <td style="color:var(--text-muted);">Very high supplier concentration.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 04 Top HS Code Intelligence -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">04</span> Top HS Code Intelligence</div>
+      <div class="card-body" style="padding:12px 16px;background:rgba(245,158,11,0.05);">
+        <strong style="font-size:11px;color:#b45309;">Important Methodology Note:</strong>
+        <span style="font-size:11px;color:var(--text-muted);"> Some Shipments include multiple HS Code lines. HS counts represent <strong>operational presence by Shipment</strong> and are <strong>not additive</strong>.</span>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header" style="background:rgba(13,43,94,0.03);">2025 Visible — Top HS Codes</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <thead><tr><th>HS Code</th><th>Product</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">%</th></tr></thead>
+            <tbody>
+              <tr><td><strong>2004100100</strong></td><td>Frozen prefried potatoes</td><td style="text-align:right;font-weight:700;color:var(--navy);">37</td><td style="text-align:right;">92.5%</td></tr>
+              <tr><td><strong>1105200100</strong></td><td>Dehydrated potato flakes</td><td style="text-align:right;font-weight:700;color:var(--navy);">3</td><td style="text-align:right;">7.5%</td></tr>
+            </tbody>
+          </table>
+          <table class="hub-table" style="margin-top:12px;">
+            <thead><tr><th>HS Code</th><th>AIOS Interpretation</th></tr></thead>
+            <tbody>
+              <tr><td><strong>2004100100</strong></td><td style="color:var(--text-muted);">Core product family. High relevance for cold chain sensitivity, customs documentation, ocean coordination and inventory continuity.</td></tr>
+              <tr><td><strong>1105200100</strong></td><td style="color:var(--text-muted);">Secondary product family. Lower temperature sensitivity than frozen product but still food documentation and customs sensitive.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" style="background:rgba(0,180,216,0.05);">2026 YTD — Top HS Codes</div>
+        <div class="card-body">
+          <table class="hub-table">
+            <thead><tr><th>HS Code</th><th>Product</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">%</th></tr></thead>
+            <tbody>
+              <tr><td><strong>2004100100</strong></td><td>Frozen prefried potatoes</td><td style="text-align:right;font-weight:700;color:var(--navy);">12</td><td style="text-align:right;">80.0%</td></tr>
+              <tr><td><strong>1105200100</strong></td><td>Dehydrated potato flakes</td><td style="text-align:right;font-weight:700;color:var(--navy);">3</td><td style="text-align:right;">20.0%</td></tr>
+            </tbody>
+          </table>
+          <table class="hub-table" style="margin-top:12px;">
+            <thead><tr><th>HS Code</th><th>AIOS Interpretation</th></tr></thead>
+            <tbody>
+              <tr><td><strong>2004100100</strong></td><td style="color:var(--text-muted);">Still dominant product family. Main operational driver.</td></tr>
+              <tr><td><strong>1105200100</strong></td><td style="color:var(--text-muted);">Gains relative presence in 2026 YTD and may indicate portfolio balancing.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:12px 16px;background:rgba(13,43,94,0.03);">
+        <strong style="font-size:11px;color:var(--navy);">Portfolio Trend:</strong>
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> The portfolio is narrow and specialized. Complexity is not driven by many HS Codes, but by product sensitivity, ocean dependency, customs timing, documentation accuracy and inventory continuity.</span>
+      </div>
+    </div>
+
+    <!-- 05 Import / Export Breakdown -->
+    <div class="card">
+      <div class="card-header"><span class="accent">05</span> Import / Export Breakdown</div>
+      <div class="card-body" style="padding:0;">
+        <table class="hub-table">
+          <thead><tr><th>Period</th><th style="text-align:right;">Imports</th><th style="text-align:right;">Exports</th><th>Interpretation</th></tr></thead>
+          <tbody>
+            <tr><td><strong>2025 Visible</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">40</td><td style="text-align:right;">0</td><td style="color:var(--text-muted);">100% import operation in visible Panjiva data.</td></tr>
+            <tr><td><strong>2026 YTD</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">15</td><td style="text-align:right;">0</td><td style="color:var(--text-muted);">Import pattern continues.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:12px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;">
+        <strong style="font-size:11px;color:#b45309;">AIOS Interpretation:</strong>
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> No export activity is visible in the uploaded Panjiva file. Commercial positioning should focus on international sourcing, maritime import coordination, customs and port visibility.</span>
+      </div>
+    </div>
+
+    <!-- 06 Modal Mix -->
+    <div class="card">
+      <div class="card-header"><span class="accent">06</span> Modal Mix</div>
+      <div class="card-body">
+        <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;">55 Shipments</div>
+        <div class="modal-bar"><div class="modal-bar-label"><strong>Maritime 🚢</strong><span>55 · 100%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:100%"></div></div></div>
+        <div class="modal-bar"><div class="modal-bar-label"><strong>Air ✈</strong><span>0 · 0.0%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:0%"></div></div></div>
+        <div class="modal-bar"><div class="modal-bar-label"><strong>Truck 🚛</strong><span>0 · 0.0%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:0%"></div></div></div>
+        <div class="modal-bar"><div class="modal-bar-label"><strong>Rail 🚆</strong><span>0 · 0.0%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:0%"></div></div></div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:12px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;">
+        <strong style="font-size:11px;color:#b45309;">AIOS Interpretation:</strong>
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> There is no visible multimodal diversity in Panjiva. Akzent should not lead with a generic multimodal pitch. Lead with <strong>ocean freight coordination, customs visibility and food import control tower</strong>.</span>
+      </div>
+    </div>
+
+    <!-- 07 Geographic & Port Intelligence -->
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header"><span class="accent">07</span> Origin Intelligence</div>
+        <div class="card-body" style="padding:0;">
+          <table class="hub-table">
+            <thead><tr><th>Origin</th><th style="text-align:right;">Total Visible Shipments</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Belgium + Netherlands</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">27</td></tr>
+              <tr><td><strong>Belgium</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">20</td></tr>
+              <tr><td><strong>Netherlands</strong></td><td style="text-align:right;">7</td></tr>
+              <tr><td><strong>Belgium + Malaysia + Netherlands</strong></td><td style="text-align:right;">1</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><span class="accent">07</span> Port Intelligence</div>
+        <div class="card-body" style="padding:0;">
+          <table class="hub-table">
+            <thead><tr><th>Port</th><th style="text-align:right;">Total Shipments</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Veracruz</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">42</td></tr>
+              <tr><td><strong>Altamira</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">13</td></tr>
+            </tbody>
+          </table>
+          <table class="hub-table" style="margin-top:12px;">
+            <thead><tr><th>Port Period Split</th><th style="text-align:right;">Veracruz</th><th style="text-align:right;">Altamira</th></tr></thead>
+            <tbody>
+              <tr><td><strong>2025 Visible</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">32</td><td style="text-align:right;">8</td></tr>
+              <tr><td><strong>2026 YTD</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">10</td><td style="text-align:right;">5</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:12px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;">
+        <strong style="font-size:11px;color:#b45309;">AIOS Interpretation:</strong>
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> Veracruz is the dominant port, while Altamira increases relative participation in 2026 YTD. This creates a <strong>port optionality and exception-management</strong> conversation.</span>
+      </div>
+    </div>
+
+    <!-- 08 Supplier / Counterparty Intelligence -->
+    <div class="card">
+      <div class="card-header"><span class="accent">08</span> Supplier / Counterparty Intelligence</div>
+      <div class="card-body" style="padding:0;">
+        <table class="hub-table">
+          <tbody>
+            <tr><td><strong>Consignee</strong></td><td style="text-align:right;">World Trade Foods LLC S. de R.L. de C.V.</td></tr>
+            <tr><td><strong>Shipper</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">Hidrocalira Inc.</td></tr>
+            <tr><td><strong>Supplier Concentration</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">VERY HIGH</td></tr>
+            <tr><td><strong>Customer Data</strong></td><td style="text-align:right;color:var(--text-muted);">Not available in the imports file</td></tr>
+            <tr><td><strong>Counterparty Pattern</strong></td><td style="text-align:right;">Repetitive, concentrated shipper relationship</td></tr>
+            <tr><td><strong>Operational Risk</strong></td><td style="text-align:right;">Supplier dependency · documentation dependency · origin readiness risk · port delay sensitivity</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:12px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;">
+        <strong style="font-size:11px;color:#b45309;">AIOS Interpretation:</strong>
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"> Supplier concentration creates operational stability but also dependency risk. Akzent can support <strong>supplier readiness, pre-alert control and Shipment milestone visibility</strong>.</span>
+      </div>
+    </div>
+
+    <!-- 09 Operational Signal → Pain Mapping -->
+    <div class="card">
+      <div class="card-header"><span class="accent">09</span> Operational Signal → Pain Mapping</div>
+      <div class="card-body">
+        <div class="signal-grid">
+          <div class="signal-item high">
+            <div class="signal-title">1. Ocean Visibility</div>
+            <div class="signal-prob high">PROBABILITY: HIGH</div>
+            <div class="signal-desc">100% maritime flow through Veracruz and Altamira creates dependency on ETA, port status, discharge and release visibility.</div>
+          </div>
+          <div class="signal-item high">
+            <div class="signal-title">2. Customs Documentation</div>
+            <div class="signal-prob high">PROBABILITY: HIGH</div>
+            <div class="signal-desc">Food imports require accurate documentation, timing and coordination between supplier, carrier, customs broker and consignee.</div>
+          </div>
+          <div class="signal-item high">
+            <div class="signal-title">3. Food / Cold Chain Sensitivity</div>
+            <div class="signal-prob high">PROBABILITY: HIGH</div>
+            <div class="signal-desc">Frozen prefried potatoes imply temperature and inventory sensitivity if port or customs delays occur.</div>
+          </div>
+          <div class="signal-item high">
+            <div class="signal-title">4. Supplier Concentration</div>
+            <div class="signal-prob high">PROBABILITY: HIGH</div>
+            <div class="signal-desc">Hidrocalira Inc. appears as the only shipper in the visible dataset, creating dependency and supplier coordination opportunity.</div>
+          </div>
+          <div class="signal-item">
+            <div class="signal-title">5. Port Optionality</div>
+            <div class="signal-prob">PROBABILITY: MEDIUM-HIGH</div>
+            <div class="signal-desc">Altamira grows from 20% of 2025 visible Shipments to 33.3% of 2026 YTD Shipments.</div>
+          </div>
+          <div class="signal-item">
+            <div class="signal-title">6. Control Tower Need</div>
+            <div class="signal-prob">PROBABILITY: MEDIUM-HIGH</div>
+            <div class="signal-desc">Recurrent food imports can benefit from milestone visibility, document checklist control and proactive exception management.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10 Akzent Fit Scoring -->
+    <div class="card">
+      <div class="card-header"><span class="accent">10</span> Akzent Fit Scoring</div>
+      <div class="card-body">
+        <div class="fit-score-grid">
+          <div class="fit-score-item"><div class="fit-score-name">Ocean Freight Fit — Very High</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:95%"></div></div><div class="fit-score-pct">95%</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Customs Fit — High</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:90%"></div></div><div class="fit-score-pct">90%</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Food Import Visibility Fit — High</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:88%"></div></div><div class="fit-score-pct">88%</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Supplier Coordination Fit — High</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:85%"></div></div><div class="fit-score-pct">85%</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">ILM / Control Tower Potential — Medium-High</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:78%"></div></div><div class="fit-score-pct">78%</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Cross-Border Fit — Not Visible</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:20%"></div></div><div class="fit-score-pct">20%</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Air Freight Fit — Not Visible</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:10%"></div></div><div class="fit-score-pct">10%</div></div></div>
+          <div class="fit-score-item"><div class="fit-score-name">Modal Diversity — Low</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:15%"></div></div><div class="fit-score-pct">15%</div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 11 Commercial Positioning -->
+    <div class="card">
+      <div class="card-header"><span class="accent">11</span> Commercial Positioning</div>
+      <div class="card-body">
+        <div class="positioning-box">
+          <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,0.6);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;">Operational Control of Recurring Food Imports</div>
+          <div class="positioning-example">Position Akzent as an Operational Complexity Partner for recurring food imports, focused on maritime visibility, customs coordination, document control, port exception management, supplier readiness and continuity of supply.</div>
+          <div style="font-size:11px;font-weight:700;color:var(--teal);letter-spacing:1px;text-transform:uppercase;margin:16px 0 8px;">Recommended Conversation Angle</div>
+          <div class="positioning-example">"We see a recurring food import operation concentrated in European-origin potato products, Veracruz, Altamira, and a single supplier relationship. In operations like this, the value is not just moving freight — it is controlling ETA, documentation, port release, customs coordination, and exceptions before they affect inventory or commercial continuity."</div>
+          <div class="capability-tags">
+            <span class="cap-tag">Ocean Freight</span>
+            <span class="cap-tag">Customs Visibility</span>
+            <span class="cap-tag">Food Imports</span>
+            <span class="cap-tag">Supplier Readiness</span>
+            <span class="cap-tag">Port Control</span>
+            <span class="cap-tag">Control Tower</span>
+            <span class="cap-tag">Exception Management</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12 Discovery Question Engine -->
+    <div class="card">
+      <div class="card-header"><span class="accent">12</span> Discovery Question Engine</div>
+      <div class="card-body">
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Ocean &amp; Port Control</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>How do you currently monitor ETA, discharge, port release and availability in Veracruz and Altamira?</li>
+              <li>Which port creates more operational pressure: Veracruz or Altamira?</li>
+              <li>Is the Veracruz vs Altamira decision planned strategically or driven by availability and exceptions?</li>
+              <li>How often do port delays affect inventory planning?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Food / Cold Chain Sensitivity</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>For frozen products, what are the critical timing and temperature windows after port arrival?</li>
+              <li>What happens operationally when a Shipment is delayed at port or customs?</li>
+              <li>Do you have an escalation protocol for food-sensitive Shipments?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Customs &amp; Documentation</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>Which documents usually create the most friction before customs clearance?</li>
+              <li>Is documentation validated before sailing or only closer to arrival?</li>
+              <li>How centralized is communication between supplier, carrier, customs broker and internal team?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Supplier Coordination</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>Does Hidrocalira coordinate bookings and documentation directly, or does World Trade Foods control part of that process?</li>
+              <li>What visibility do you have before the Shipment leaves origin?</li>
+              <li>Are ready dates, booking confirmations, or document timing ever a recurring issue?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Control Tower</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>Do you have a single dashboard for ETA, documents, port status, customs status and exceptions?</li>
+              <li>Which updates are still managed manually by email or messaging?</li>
+              <li>Where does your team spend the most time: follow-up, documentation, port coordination, customs or inland delivery?</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 13 Strategic Expansion Trajectory -->
+    <div class="card">
+      <div class="card-header"><span class="accent">13</span> Strategic Expansion Trajectory</div>
+      <div class="card-body">
+        <div class="phase-grid">
+          <div class="phase-card"><div class="phase-num">Phase 1</div><div class="phase-title">Entry</div><ul class="phase-items"><li>Ocean visibility</li><li>Veracruz / Altamira tracking</li><li>Customs coordination</li><li>Document checklist</li></ul></div>
+          <div class="phase-card"><div class="phase-num">Phase 2</div><div class="phase-title">Operational Control</div><ul class="phase-items"><li>Supplier readiness</li><li>Pre-alert validation</li><li>ETA and exception management</li><li>Port release visibility</li></ul></div>
+          <div class="phase-card"><div class="phase-num">Phase 3</div><div class="phase-title">Food Import Control Tower</div><ul class="phase-items"><li>Centralized Shipment dashboard</li><li>Customs broker coordination</li><li>Temperature-sensitive escalation</li><li>Inventory continuity visibility</li></ul></div>
+          <div class="phase-card"><div class="phase-num">Phase 4</div><div class="phase-title">ILM Expansion</div><ul class="phase-items"><li>Integrated import coordination</li><li>Port optionality planning</li><li>Exception analytics</li><li>Potential inland distribution validation</li></ul></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 14 Final AIOS Verdict -->
+    <div class="card">
+      <div class="card-header"><span class="accent">14</span> Final AIOS Verdict</div>
+      <div class="card-body">
+        <p style="font-size:13px;line-height:1.7;">World Trade Foods is an <strong>AA LEAD</strong>. The account is commercially attractive for Akzent due to recurring maritime import activity, food product sensitivity, high customs relevance, Veracruz/Altamira dependency and supplier concentration.</p>
+        <p style="font-size:13px;line-height:1.7;margin-top:10px;">The opportunity is <strong>not broad multimodal logistics</strong>. The opportunity is <strong>operational control</strong>: ocean, customs, documentation, supplier readiness, port exceptions and food import visibility.</p>
+        <div style="margin-top:12px;padding:12px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 6px 6px 0;">
+          <strong style="font-size:11px;color:#b45309;text-transform:uppercase;letter-spacing:1px;">Relationship Reminder</strong>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.6;margin-top:4px;">Relationship Status is <strong>LEAD</strong> and is independent of the AIOS Classification <strong>AA</strong>. Akzent does not currently manage this account. All figures on this page come from the Panjiva visible universe only.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 </main>
 
 <script>
@@ -40066,6 +40599,7 @@ const ACCOUNTS = [
   { id:'view-bitron', name:'Bitron de México', sub:'Electronics Manufacturing / Automotive &amp; Appliance Controls · Mexico · Air urgency · Cross-Border · Asia sourcing · Querétaro · Puebla · Nuevo Laredo · Manzanillo · AICM · AIFA · Veracruz · Capacitors, resistors, diodes &amp; integrated circuits · Supplier coordination · Customs complexity · ILM / Control Tower · Panjiva Imports + Exports', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
   { id:'view-chiquita', name:'Chiquita Mexico', sub:'Fresh Produce / Cross-Border Food Supply Chain · Mexico ↔ United States · Nuevo Laredo · Truck cross-border · Perishable lettuce &amp; radicchio exports · Corrugated carton packaging imports · Fresh Express Inc. · Customs visibility · ILM / Control Tower · Panjiva Imports + Exports', rel:'LEAD', cls:'AA', clsPill:'aa' },
   { id:'view-crown-envases', name:'Crown Envases Mexico', sub:'Industrial Packaging · Aluminum Cans · Beverage/Food Containers · Packaging Manufacturing · Cross-Border Supply · LATAM Export Operations · Nuevo Laredo · Ciudad Hidalgo · Manzanillo · Toluca · Altamira · Guatemala · El Salvador · United States · Aluminum cans &amp; closures · Machinery &amp; coatings supply · Supplier coordination · Customs visibility · ILM / Control Tower · Panjiva Imports + Exports', rel:'LEAD', cls:'AA', clsPill:'aa' },
+  { id:'view-worldtradefoods', name:'World Trade Foods', sub:'World Trade Foods LLC S. de R.L. de C.V. · Food Imports · Frozen Potato Products · Mexico · Maritime only · Veracruz · Altamira · Belgium · Netherlands · Frozen prefried potatoes &amp; dehydrated potato flakes · Hidrocalira Inc. · Supplier concentration · Customs visibility · Food import control tower · Panjiva Mexico Imports', rel:'LEAD', cls:'AA', clsPill:'aa' },
 ];
 const MODULES = [
   { id:'view-network',     name:'Network Intelligence', sub:'Cross-account analysis · Lane overlap' },
@@ -40182,7 +40716,7 @@ var INDUSTRY_BY_ID = {
   'view-suspensys':'Auto', 'view-cemm':'Auto', 'view-siete-leguas':'Auto',
   'view-magna-powertrain':'Auto', 'view-philipmorris':'Tobacco',
   'view-bitron':'Electronics', 'view-chiquita':'Fresh Produce',
-  'view-crown-envases':'Packaging'
+  'view-crown-envases':'Packaging', 'view-worldtradefoods':'Food'
 };
 
 var UNRESOLVED_ACCOUNTS = [];
