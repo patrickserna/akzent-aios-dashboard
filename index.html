@@ -1227,6 +1227,11 @@ main {
       <span>◆</span> <span style="flex:1;">Rassini Suspensiones</span>
       <span class="recent-cls aaa">AAA</span>
     </div>
+    <div class="nav-item" onclick="showView('view-brahm', this)">
+      <span>◆</span> <span style="flex:1;">Brahm Precision Products</span>
+      <span class="recent-cls" style="background:rgba(16,185,129,0.2);color:#34d399;">CLIENT</span>
+      <span class="recent-cls aaa">AAA</span>
+    </div>
     <div class="nav-item" onclick="showView('view-invevni', this)">
       <span>◆</span> <span style="flex:1;">Invevni</span>
       <span class="recent-cls aa">AA</span>
@@ -2558,25 +2563,30 @@ main {
     </div>
 
     <!-- Brahm Precision Products -->
-    <div class="account-card aa" onclick="showViewById('view-brahm')">
+    <div class="account-card aaa" onclick="showViewById('view-brahm')" title="Brahm is an active CLIENT with low captured penetration versus visible universe. The account shows high multimodal complexity across import/export, Spain-USA-India-France lanes, Altamira, Colombia NL, Monterrey Airport and AICM. Akzent's 2026 captured business is profitable but narrow, concentrated in import air and one truck shipment.">
       <div class="account-card-header">
         <div>
           <div class="account-name">Brahm Precision Products</div>
           <div class="account-industry">Industrial Manufacturing · Precision Components</div>
         </div>
-        <span class="account-cls-badge aap">AA+</span>
+        <div style="display:flex;gap:5px;align-items:center;flex-shrink:0;">
+          <span class="account-cls-badge client">CLIENT</span>
+          <span class="account-cls-badge aaa">AAA</span>
+        </div>
       </div>
       <div class="account-metrics">
-        <div class="acct-metric"><div class="acct-metric-val">322</div><div class="acct-metric-lbl">Imports</div></div>
-        <div class="acct-metric"><div class="acct-metric-val">305</div><div class="acct-metric-lbl">Exports</div></div>
-        <div class="acct-metric"><div class="acct-metric-val">4+</div><div class="acct-metric-lbl">Modes</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">680</div><div class="acct-metric-lbl">Visible Shipments</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">15</div><div class="acct-metric-lbl">Captured Shipments</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">2.2%</div><div class="acct-metric-lbl">Coverage</div></div>
       </div>
       <div class="account-tags">
+        <span class="acct-tag" style="background:rgba(16,185,129,0.15);color:#10b981;border-color:rgba(16,185,129,0.3);">CLIENT</span>
         <span class="acct-tag">John Deere ecosystem</span>
-        <span class="acct-tag">Air urgency</span>
+        <span class="acct-tag">Spain sourcing</span>
         <span class="acct-tag">Altamira</span>
         <span class="acct-tag">Colombia NL</span>
-        <span class="acct-tag">IMMEX</span>
+        <span class="acct-tag">Air critical</span>
+        <span class="acct-tag">ILM fit</span>
       </div>
     </div>
 
@@ -13059,15 +13069,15 @@ main {
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot"></div></div></td>
               <td style="color:#b45309;font-weight:700;font-size:11px;">★ LEAD</td>
             </tr>
-            <tr>
-              <td><strong>Brahm Precision</strong></td>
-              <td><span class="cls-pill aap">AA+</span></td>
-              <td style="color:var(--text-muted);">Industrial OEM</td>
-              <td><div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div></div></td>
-              <td><div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div></div></td>
-              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot"></div></div></td>
-              <td><div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div></div></td>
-              <td style="color:var(--teal);font-weight:700;font-size:11px;">★ #7</td>
+            <tr onclick="showViewById('view-brahm')" style="cursor:pointer;">
+              <td><strong>Brahm Precision Products</strong> <span style="font-size:10px;font-weight:600;color:#10b981;background:rgba(16,185,129,0.1);padding:1px 5px;border-radius:3px;margin-left:4px;">CLIENT</span></td>
+              <td><span class="cls-pill aaa">AAA</span></td>
+              <td style="color:var(--text-muted);" title="Relationship Status CLIENT · AIOS Classification AAA · Industry Industrial Manufacturing / Precision Components · Visible Shipments 680 · Captured Shipments 15 · Coverage 2.2% · Primary Modes Maritime · Air · Truck · Primary Hubs Altamira · Colombia NL · Monterrey Airport · AICM · Nuevo Laredo · Strategic Fit Very High · ILM Potential Very High · Wallet Expansion Very High · Priority Priority CLIENT Expansion">Industrial Manufacturing / Precision Components</td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td style="color:#10b981;font-weight:700;font-size:11px;">★ Priority CLIENT Expansion</td>
             </tr>
             <tr>
               <td><strong>Invevni</strong> <span style="font-size:10px;font-weight:600;color:#10b981;background:rgba(16,185,129,0.1);padding:1px 5px;border-radius:3px;margin-left:4px;">CLIENT</span></td>
@@ -13489,8 +13499,8 @@ main {
             <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:var(--bg);border-radius:5px;border-left:3px solid var(--teal);">
               <span style="font-size:12px;font-weight:600;">Panel Rey (Nuevo Laredo 172 imp. · 65 exp.)</span><span class="cls-pill aa">AA</span>
             </div>
-            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:var(--bg);border-radius:5px;border-left:3px solid #0077a8;">
-              <span style="font-size:12px;font-weight:600;">Brahm Precision (~207 mov.)</span><span class="cls-pill aap">AA+</span>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:rgba(16,185,129,0.06);border-radius:5px;border-left:3px solid #10b981;">
+              <span style="font-size:12px;font-weight:600;">Brahm Precision (Colombia NL 45 exp. · 28 imp. · Nuevo Laredo 13 exp.)</span><span class="cls-pill aaa">AAA</span>
             </div>
             <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:rgba(16,185,129,0.06);border-radius:5px;border-left:3px solid #10b981;">
               <span style="font-size:12px;font-weight:600;">Del Monte (Reynosa 107 + NL 14 exp.)</span><span class="cls-pill aaa">AAA</span>
@@ -13563,10 +13573,10 @@ main {
             <div class="bar-track"><div class="bar-fill bar-teal" style="width:62%"></div></div>
             <span style="font-size:11px;font-weight:700;text-align:right;color:var(--teal);">Medio</span>
           </div>
-          <div style="display:grid;grid-template-columns:180px 1fr 80px;align-items:center;gap:12px;padding:10px 14px;background:var(--bg);border-radius:5px;">
-            <span style="font-size:12px;font-weight:700;color:#0077a8;">#7 Brahm Precision</span>
-            <div class="bar-track"><div class="bar-fill" style="width:78%;background:#0077a8;"></div></div>
-            <span style="font-size:11px;font-weight:700;text-align:right;color:#0077a8;">Alto</span>
+          <div style="display:grid;grid-template-columns:180px 1fr 80px;align-items:center;gap:12px;padding:10px 14px;background:rgba(16,185,129,0.06);border-radius:5px;border:1px solid rgba(16,185,129,0.2);">
+            <span style="font-size:12px;font-weight:700;color:#10b981;">#7 Brahm Precision <span style="font-size:9px;background:rgba(16,185,129,0.15);padding:1px 4px;border-radius:2px;">CLIENT</span></span>
+            <div class="bar-track"><div class="bar-fill" style="width:92%;background:#10b981;"></div></div>
+            <span style="font-size:11px;font-weight:700;text-align:right;color:#10b981;">Muy Alto</span>
           </div>
           <div style="display:grid;grid-template-columns:180px 1fr 80px;align-items:center;gap:12px;padding:10px 14px;background:rgba(16,185,129,0.06);border-radius:5px;border:1px solid rgba(16,185,129,0.2);">
             <span style="font-size:12px;font-weight:700;color:#10b981;">#8 Laerdal <span style="font-size:9px;background:rgba(16,185,129,0.15);padding:1px 4px;border-radius:2px;">CLIENT</span></span>
@@ -13580,7 +13590,7 @@ main {
           </div>
         </div>
         <div style="margin-top:12px;padding:10px;background:rgba(0,180,216,0.06);border-radius:5px;font-size:11px;color:var(--text-muted);">
-          <strong style="color:var(--navy);">Note:</strong> Palmex ranks #3 in ILM potential despite being a newer account — driven by multi-country export structure, food compliance complexity, and regional coordination requirements that structurally demand a 4PL layer. Brahm ranks #7 with strong ILM evolution pathway once cross-border and customs entry point is established. Laerdal (#8) and Del Monte (#9) are active CLIENTs with confirmed Akzent relationships and Very High ILM potential — both are strategic expansion targets, not new acquisitions.
+          <strong style="color:var(--navy);">Note:</strong> Palmex ranks #3 in ILM potential despite being a newer account — driven by multi-country export structure, food compliance complexity, and regional coordination requirements that structurally demand a 4PL layer. Brahm Precision Products ranks #7 and is an active CLIENT classified AAA — 680 visible Shipments against 15 captured Shipments, with Very High ILM potential across Altamira, Colombia NL, Nuevo Laredo, Monterrey Airport and AICM. Laerdal (#8) and Del Monte (#9) are active CLIENTs with confirmed Akzent relationships and Very High ILM potential — both are strategic expansion targets, not new acquisitions.
         </div>
       </div>
     </div>
@@ -13749,585 +13759,606 @@ main {
 <div id="view-brahm" class="view">
   <div class="page-header">
     <div class="page-header-left">
-      <div class="page-header-eyebrow">Active Client · Industrial Manufacturing · OEM Supply Chain</div>
+      <div class="page-header-eyebrow">CLIENT Account · AIOS Wallet Analysis</div>
       <div class="page-header-title">Brahm Precision Products</div>
-      <div class="page-header-sub">Industrial Manufacturing · Precision Components · Colombia NL / Altamira</div>
+      <div class="page-header-sub">Industrial Manufacturing · Precision Components · Mexico / Spain / USA / India / France</div>
     </div>
     <div class="page-header-meta">
       <span class="classification-badge client">CLIENT</span>
-      <span class="classification-badge aap">AA+</span>
+      <span class="classification-badge aaa">AAA</span>
       <button class="print-btn" onclick="printView('view-brahm')">⬇ Export PDF</button>
     </div>
   </div>
   <div class="content-body">
 
     <!-- 01 Account Intelligence Snapshot -->
-    <div class="card" style="border-top:3px solid #0077a8;">
+    <div class="card" style="border-top:3px solid #10b981;">
       <div class="card-header"><span class="accent">01</span> Account Intelligence Snapshot</div>
       <div class="card-body">
 
-        <!-- Opening summary -->
-        <p style="font-size:13px;line-height:1.7;color:var(--text);margin-bottom:16px;">Brahm is an active Akzent client with growing 2026 revenue contribution, but current penetration remains low versus the visible Panjiva universe. The account should be managed as an <strong>expansion opportunity</strong>, with current strength in import air freight and clear whitespace in exports, ocean and broader multimodal coverage. <strong>This is not a spot freight account — this is an industrial operation with pressure around production continuity, customs coordination, visibility, urgent air freight and multimodal control.</strong></p>
+        <p style="font-size:13px;line-height:1.7;color:var(--text);margin-bottom:16px;"><strong>Brahm Precision Products Corporation México</strong> · Industrial Manufacturing · Precision Components · Engine / Machinery Parts. Relationship Status <strong style="color:#10b981;">CLIENT</strong> · AIOS Classification <strong style="color:var(--red);">AAA Strategic Account</strong> · Priority <strong>CLIENT Expansion</strong>. Core positioning: Operational Complexity Partner · Multimodal Coordination Partner · Customs &amp; Visibility Partner · ILM / Control Tower Partner · Wallet Expansion Partner.</p>
 
         <!-- Status KPIs row 1 -->
-        <div class="grid-4" style="margin-bottom:10px;">
+        <div class="grid-3" style="margin-bottom:10px;">
           <div class="stat-box" style="border-left:3px solid #10b981;">
             <div class="stat-label">Relationship Status</div>
             <div class="stat-value" style="color:#10b981;font-size:16px;">CLIENT</div>
             <div class="stat-sub">Active Akzent account</div>
           </div>
-          <div class="stat-box" style="border-left:3px solid var(--teal);">
-            <div class="stat-label">Commercial Objective</div>
-            <div class="stat-value teal" style="font-size:16px;">EXPAND</div>
-            <div class="stat-sub">Acquisition → expansion</div>
-          </div>
-          <div class="stat-box" style="border-left:3px solid #0077a8;">
-            <div class="stat-label">AIOS Classification</div>
-            <div class="stat-value" style="color:#0077a8;font-size:16px;">AA+</div>
-            <div class="stat-sub">Priority Target</div>
-          </div>
           <div class="stat-box" style="border-left:3px solid var(--red);">
-            <div class="stat-label">Wallet Status</div>
-            <div class="stat-value red" style="font-size:13px;margin-top:5px;">Low Penetration</div>
-            <div class="stat-sub">High gap vs visible universe</div>
+            <div class="stat-label">AIOS Classification</div>
+            <div class="stat-value" style="color:var(--red);font-size:16px;">AAA</div>
+            <div class="stat-sub">Strategic Account</div>
+          </div>
+          <div class="stat-box" style="border-left:3px solid var(--teal);">
+            <div class="stat-label">Priority</div>
+            <div class="stat-value teal" style="font-size:13px;margin-top:5px;">Priority CLIENT Expansion</div>
+            <div class="stat-sub">Wallet expansion mandate</div>
           </div>
         </div>
 
         <!-- Penetration KPIs row 2 -->
-        <div class="grid-4" style="margin-bottom:18px;">
+        <div class="grid-4" style="margin-bottom:10px;">
           <div class="stat-box">
-            <div class="stat-label">Panjiva Universe</div>
-            <div class="stat-value">627</div>
-            <div class="stat-sub">Total visible shipments</div>
+            <div class="stat-label">Panjiva Visible Universe</div>
+            <div class="stat-value">680</div>
+            <div class="stat-sub">Shipments</div>
           </div>
           <div class="stat-box">
-            <div class="stat-label">Akzent Captured</div>
-            <div class="stat-value" style="color:var(--red);">14</div>
+            <div class="stat-label">Akzent Captured Universe</div>
+            <div class="stat-value" style="color:var(--red);">15</div>
+            <div class="stat-sub">Shipments</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Overall Coverage</div>
+            <div class="stat-value red">2.2%</div>
+            <div class="stat-sub">Captured vs visible</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">2026 YTD Coverage</div>
+            <div class="stat-value red">1.8%</div>
+            <div class="stat-sub">Current period</div>
+          </div>
+        </div>
+
+        <!-- Financial KPIs row 3 -->
+        <div class="grid-3" style="margin-bottom:16px;">
+          <div class="stat-box">
+            <div class="stat-label">Akzent Revenue</div>
+            <div class="stat-value" style="font-size:18px;">USD 57,829</div>
             <div class="stat-sub">2025 + 2026 YTD</div>
           </div>
-          <div class="stat-box">
-            <div class="stat-label">Total Coverage</div>
-            <div class="stat-value red">2.2%</div>
-            <div class="stat-sub">Low wallet capture</div>
+          <div class="stat-box" style="border-left:3px solid var(--red);">
+            <div class="stat-label">Akzent Gross Profit</div>
+            <div class="stat-value red" style="font-size:18px;">USD -135,911</div>
+            <div class="stat-sub">2025 + 2026 YTD</div>
           </div>
           <div class="stat-box" style="border-left:3px solid var(--teal);">
-            <div class="stat-label">Cumulative Revenue</div>
-            <div class="stat-value teal" style="font-size:14px;margin-top:4px;">$41,005</div>
-            <div class="stat-sub">↑ Strong growth vs $7,314 in 2025</div>
+            <div class="stat-label">2026 YTD Margin</div>
+            <div class="stat-value teal" style="font-size:18px;">19.5%</div>
+            <div class="stat-sub">Profitable on a smaller base</div>
           </div>
         </div>
 
-        <!-- Two tables side by side -->
-        <div class="grid-2">
-          <!-- Panjiva vs Akzent -->
-          <div>
-            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">Panjiva Universe vs Akzent Captured</div>
-            <table class="network-table">
-              <thead>
-                <tr>
-                  <th>Concept</th>
-                  <th style="text-align:right;">Panjiva</th>
-                  <th style="text-align:right;">Akzent</th>
-                  <th style="text-align:right;">Penetration</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Total Shipments</strong></td>
-                  <td style="text-align:right;">627</td>
-                  <td style="text-align:right;font-weight:700;color:var(--red);">14</td>
-                  <td style="text-align:right;font-weight:700;color:var(--red);">2.2%</td>
-                </tr>
-                <tr>
-                  <td><strong>Imports</strong></td>
-                  <td style="text-align:right;">322</td>
-                  <td style="text-align:right;font-weight:700;color:#0077a8;">13</td>
-                  <td style="text-align:right;font-weight:700;color:#0077a8;">4.0%</td>
-                </tr>
-                <tr>
-                  <td><strong>Exports</strong></td>
-                  <td style="text-align:right;">305</td>
-                  <td style="text-align:right;font-weight:700;color:var(--red);">1</td>
-                  <td style="text-align:right;font-weight:700;color:var(--red);">0.3%</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <!-- Akzent 2025 vs 2026 -->
-          <div>
-            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">Akzent Activity — 2025 vs 2026 YTD</div>
-            <table class="network-table">
-              <thead>
-                <tr>
-                  <th>Metric</th>
-                  <th style="text-align:right;">2025</th>
-                  <th style="text-align:right;">2026 YTD</th>
-                  <th>Signal</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Revenue</strong></td>
-                  <td style="text-align:right;color:var(--text-muted);">$7,314</td>
-                  <td style="text-align:right;font-weight:700;color:#0077a8;">$41,005</td>
-                  <td><span style="color:#10b981;font-weight:600;font-size:11px;">↑ Strong growth</span></td>
-                </tr>
-                <tr>
-                  <td><strong>Profit</strong></td>
-                  <td style="text-align:right;color:var(--text-muted);">$2,998</td>
-                  <td style="text-align:right;font-weight:700;color:#0077a8;">$7,985</td>
-                  <td><span style="color:#10b981;font-weight:600;font-size:11px;">↑ Higher margin</span></td>
-                </tr>
-                <tr>
-                  <td><strong>Exports</strong></td>
-                  <td style="text-align:right;color:var(--text-muted);">1</td>
-                  <td style="text-align:right;font-weight:700;color:var(--red);">0</td>
-                  <td><span style="color:var(--red);font-weight:600;font-size:11px;">⚠ Export gap</span></td>
-                </tr>
-                <tr>
-                  <td><strong>Ocean</strong></td>
-                  <td style="text-align:right;color:var(--text-muted);">2</td>
-                  <td style="text-align:right;font-weight:700;color:var(--red);">0</td>
-                  <td><span style="color:var(--red);font-weight:600;font-size:11px;">⚠ Uncaptured</span></td>
-                </tr>
-                <tr>
-                  <td><strong>Air</strong></td>
-                  <td style="text-align:right;color:var(--text-muted);">6</td>
-                  <td style="text-align:right;font-weight:700;">3</td>
-                  <td><span style="color:var(--text-muted);font-size:11px;">Main service</span></td>
-                </tr>
-                <tr>
-                  <td><strong>Truck</strong></td>
-                  <td style="text-align:right;color:var(--text-muted);">2</td>
-                  <td style="text-align:right;font-weight:700;">1</td>
-                  <td><span style="color:var(--text-muted);font-size:11px;">Limited</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+        <div style="padding:12px 16px;background:rgba(13,43,94,0.04);border-radius:6px;border-left:3px solid #10b981;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:4px;">Snapshot Interpretation</div>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.6;">Brahm is an active CLIENT, but Akzent currently captures only a small fraction of the visible logistics universe. The relationship should be treated as a strategic wallet expansion opportunity, not as a mature account. 2026 YTD captured business is profitable, but narrow and concentrated primarily in import air.</p>
         </div>
-
-        <!-- Chart: Service Mix Bars + Profit Line -->
-        <div style="margin-top:20px;">
-          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:14px;">Service Mix &amp; Profit — 2025 vs 2026 YTD</div>
-
-          <!-- Legend -->
-          <div style="display:flex;gap:20px;align-items:center;margin-bottom:10px;flex-wrap:wrap;">
-            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-muted);">
-              <div style="width:12px;height:12px;border-radius:2px;background:rgba(13,43,94,0.25);"></div>2025 Shipments
-            </div>
-            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-muted);">
-              <div style="width:12px;height:12px;border-radius:2px;background:#00B4D8;"></div>2026 YTD Shipments
-            </div>
-            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-muted);">
-              <div style="width:12px;height:12px;border-radius:2px;background:rgba(232,0,45,0.2);border:1.5px dashed rgba(232,0,45,0.5);"></div>2026 YTD — No capture
-            </div>
-            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:#10b981;">
-              <div style="width:20px;height:2px;background:#10b981;border-radius:1px;"></div>Profit ($)
-            </div>
-          </div>
-
-          <!-- SVG Chart -->
-          <svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;overflow:visible;">
-            <!-- defs -->
-            <defs>
-              <pattern id="hatch" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-                <line x1="0" y1="0" x2="0" y2="4" stroke="rgba(232,0,45,0.35)" stroke-width="1.5"/>
-              </pattern>
-            </defs>
-
-            <!-- Grid lines + Y axis left (shipments 0-8) -->
-            <!-- Y left: 0=190, 2=148, 4=106, 6=64, 8=22  step=42 per 2 units -->
-            <line x1="60" y1="22"  x2="670" y2="22"  stroke="#e5e7eb" stroke-width="1"/>
-            <line x1="60" y1="64"  x2="670" y2="64"  stroke="#e5e7eb" stroke-width="1"/>
-            <line x1="60" y1="106" x2="670" y2="106" stroke="#e5e7eb" stroke-width="1"/>
-            <line x1="60" y1="148" x2="670" y2="148" stroke="#e5e7eb" stroke-width="1"/>
-            <line x1="60" y1="190" x2="670" y2="190" stroke="#9ca3af" stroke-width="1"/>
-
-            <!-- Y axis left labels (shipments) -->
-            <text x="52" y="194" text-anchor="end" font-size="10" fill="#9ca3af">0</text>
-            <text x="52" y="152" text-anchor="end" font-size="10" fill="#9ca3af">2</text>
-            <text x="52" y="110" text-anchor="end" font-size="10" fill="#9ca3af">4</text>
-            <text x="52" y="68"  text-anchor="end" font-size="10" fill="#9ca3af">6</text>
-            <text x="52" y="26"  text-anchor="end" font-size="10" fill="#9ca3af">8</text>
-            <text x="10" y="110" text-anchor="middle" font-size="9" fill="#9ca3af" transform="rotate(-90,10,110)">Shipments</text>
-
-            <!-- Y axis right labels (profit $) -->
-            <!-- Profit range: 0 to 9000. 0=190, 9000=22. Step per $: (190-22)/9000 = 0.01867 -->
-            <!-- $0=190, $3000≈134, $6000≈78, $9000≈22 -->
-            <text x="678" y="194" text-anchor="start" font-size="10" fill="#10b981">$0</text>
-            <text x="678" y="134" text-anchor="start" font-size="10" fill="#10b981">$3k</text>
-            <text x="678" y="78"  text-anchor="start" font-size="10" fill="#10b981">$6k</text>
-            <text x="678" y="26"  text-anchor="start" font-size="10" fill="#10b981">$9k</text>
-            <text x="693" y="110" text-anchor="middle" font-size="9" fill="#10b981" transform="rotate(90,693,110)">Profit ($)</text>
-
-            <!-- X axis line -->
-            <line x1="60" y1="190" x2="670" y2="190" stroke="#9ca3af" stroke-width="1"/>
-
-            <!-- ── BARS ──
-                 4 categories: Air, Ocean, Truck, Exports
-                 Group width: (670-60)/4 = 152.5 each
-                 Group centers: 60 + 76 = 136, 136+152=288, 288+152=440, 440+152=592
-                 Bar width: 28, gap between pair: 6
-                 2025 bar: center - 17, 2026 bar: center + 11  -->
-
-            <!-- AIR: 2025=6, 2026=3 -->
-            <!-- 2025: 6 units → height=6*42=252... cap at chart. Actually 6 units: y=190-6*21=190-126=64, h=126 -->
-            <!-- Scaling: 1 unit = (190-22)/8 = 21px -->
-            <rect x="109" y="64"  width="28" height="126" fill="rgba(13,43,94,0.2)"  rx="3"/>
-            <rect x="143" y="127" width="28" height="63"  fill="#00B4D8"              rx="3"/>
-            <text x="123" y="60"  text-anchor="middle" font-size="10" font-weight="600" fill="#6b7280">6</text>
-            <text x="157" y="123" text-anchor="middle" font-size="10" font-weight="600" fill="#0D2B5E">3</text>
-            <text x="140" y="208" text-anchor="middle" font-size="11" font-weight="700" fill="#1a1d23">Air</text>
-
-            <!-- OCEAN: 2025=2, 2026=0 -->
-            <rect x="261" y="148" width="28" height="42"  fill="rgba(13,43,94,0.2)"  rx="3"/>
-            <rect x="295" y="168" width="28" height="22"  fill="url(#hatch)"          rx="3" stroke="rgba(232,0,45,0.45)" stroke-width="1.5" stroke-dasharray="4,2"/>
-            <text x="275" y="144" text-anchor="middle" font-size="10" font-weight="600" fill="#6b7280">2</text>
-            <text x="309" y="164" text-anchor="middle" font-size="9"  font-weight="600" fill="#E8002D">0 ⚠</text>
-            <text x="292" y="208" text-anchor="middle" font-size="11" font-weight="700" fill="#1a1d23">Ocean</text>
-
-            <!-- TRUCK: 2025=2, 2026=1 -->
-            <rect x="413" y="148" width="28" height="42"  fill="rgba(13,43,94,0.2)"  rx="3"/>
-            <rect x="447" y="169" width="28" height="21"  fill="#00B4D8"              rx="3"/>
-            <text x="427" y="144" text-anchor="middle" font-size="10" font-weight="600" fill="#6b7280">2</text>
-            <text x="461" y="165" text-anchor="middle" font-size="10" font-weight="600" fill="#0D2B5E">1</text>
-            <text x="444" y="208" text-anchor="middle" font-size="11" font-weight="700" fill="#1a1d23">Truck</text>
-
-            <!-- EXPORTS: 2025=1, 2026=0 -->
-            <rect x="565" y="169" width="28" height="21"  fill="rgba(13,43,94,0.2)"  rx="3"/>
-            <rect x="599" y="168" width="28" height="22"  fill="url(#hatch)"          rx="3" stroke="rgba(232,0,45,0.45)" stroke-width="1.5" stroke-dasharray="4,2"/>
-            <text x="579" y="165" text-anchor="middle" font-size="10" font-weight="600" fill="#6b7280">1</text>
-            <text x="613" y="164" text-anchor="middle" font-size="9"  font-weight="600" fill="#E8002D">0 ⚠</text>
-            <text x="596" y="208" text-anchor="middle" font-size="11" font-weight="700" fill="#1a1d23">Exports</text>
-
-            <!-- ── PROFIT LINE ──
-                 Points: (category center, profit value mapped to right Y axis)
-                 Profit right axis: 0=190, 9000=22 → px = 190 - (value/9000)*(190-22) = 190 - value*0.01867
-                 2025: $2,998 → 190 - 2998*0.01867 = 190 - 55.98 ≈ 134
-                 2026: $7,985 → 190 - 7985*0.01867 = 190 - 149.1 ≈ 41
-                 X positions (midpoint of each group): Air=140, Ocean=292, Truck=444, Exports=596
-                 But profit is only 2 points (2025 total, 2026 YTD total) — map across all 4 X positions
-                 Place 2025 at center of Air+Ocean (≈216), 2026 at center of Truck+Exports (≈520) -->
-            <!-- Profit line: x1 at left section center, x2 at right section center -->
-            <line x1="216" y1="134" x2="520" y2="41"
-                  stroke="#10b981" stroke-width="2.5" stroke-linecap="round"/>
-
-            <!-- +166% label at midpoint of profit line -->
-            <!-- midpoint: x=(216+520)/2=368, y=(134+41)/2=87.5≈88 -->
-            <rect x="333" y="75" width="70" height="20" rx="4" fill="#10b981"/>
-            <text x="368" y="89" text-anchor="middle" font-size="10" font-weight="800" fill="#fff">+166% profit</text>
-
-            <!-- Profit dots -->
-            <circle cx="216" cy="134" r="5" fill="#fff" stroke="#10b981" stroke-width="2.5"/>
-            <circle cx="520" cy="41"  r="5" fill="#10b981" stroke="#10b981" stroke-width="2.5"/>
-
-            <!-- Profit labels -->
-            <text x="216" y="126" text-anchor="middle" font-size="10" font-weight="700" fill="#10b981">$2,998</text>
-            <text x="520" y="33"  text-anchor="middle" font-size="10" font-weight="700" fill="#10b981">$7,985</text>
-
-            <!-- 2025 / 2026 YTD section labels -->
-            <text x="216" y="218" text-anchor="middle" font-size="9" fill="#9ca3af" font-style="italic">2025</text>
-            <text x="520" y="218" text-anchor="middle" font-size="9" fill="#9ca3af" font-style="italic">2026 YTD</text>
-            <line x1="60"  y1="214" x2="366" y2="214" stroke="#e5e7eb" stroke-width="1"/>
-            <line x1="370" y1="214" x2="670" y2="214" stroke="#e5e7eb" stroke-width="1"/>
-            <line x1="368" y1="210" x2="368" y2="218" stroke="#d1d5db" stroke-width="1" stroke-dasharray="3,2"/>
-          </svg>
-
-        </div>
-
       </div>
     </div>
 
-    <!-- 03 AIOS Classification -->
+    <!-- 02 Executive Intelligence Summary -->
     <div class="card">
-      <div class="card-header"><span class="accent">02</span> AIOS Classification Matrix</div>
+      <div class="card-header"><span class="accent">02</span> Executive Intelligence Summary</div>
       <div class="card-body">
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;">
-          <div style="padding:10px 14px;background:var(--bg);border-radius:6px;border-left:3px solid #0077a8;">
-            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;">Strategic Fit</div>
-            <div style="font-size:15px;font-weight:800;color:#0077a8;">AA+</div>
-          </div>
-          <div style="padding:10px 14px;background:var(--bg);border-radius:6px;border-left:3px solid var(--navy);">
-            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;">Operational Complexity</div>
-            <div style="font-size:15px;font-weight:800;color:var(--navy);">Alta</div>
-          </div>
-          <div style="padding:10px 14px;background:var(--bg);border-radius:6px;border-left:3px solid var(--navy);">
-            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;">Modal Diversity</div>
-            <div style="font-size:15px;font-weight:800;color:var(--navy);">Alta</div>
-          </div>
-          <div style="padding:10px 14px;background:var(--bg);border-radius:6px;border-left:3px solid var(--red);">
-            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;">Air Exposure</div>
-            <div style="font-size:15px;font-weight:800;color:var(--red);">Alta</div>
-          </div>
-          <div style="padding:10px 14px;background:var(--bg);border-radius:6px;border-left:3px solid var(--red);">
-            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;">Customs Sensitivity</div>
-            <div style="font-size:15px;font-weight:800;color:var(--red);">Alta</div>
-          </div>
-          <div style="padding:10px 14px;background:var(--bg);border-radius:6px;border-left:3px solid var(--teal);">
-            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;">Cross-Border Exposure</div>
-            <div style="font-size:15px;font-weight:800;color:var(--teal);">Alta</div>
-          </div>
-          <div style="padding:10px 14px;background:var(--bg);border-radius:6px;border-left:3px solid var(--teal);">
-            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;">ILM / 4PL Potential</div>
-            <div style="font-size:15px;font-weight:800;color:var(--teal);">Alto</div>
-          </div>
-          <div style="padding:10px 14px;background:var(--bg);border-radius:6px;border-left:3px solid var(--teal);">
-            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;">Commercial Attractiveness</div>
-            <div style="font-size:15px;font-weight:800;color:var(--teal);">Alta</div>
-          </div>
+        <p style="font-size:13px;line-height:1.7;margin-bottom:12px;">Brahm Precision Products shows a high-complexity industrial operation tied to precision components, engine and machinery parts, tooling, metal components, returnable packaging and OEM supply chain activity. Panjiva shows <strong>680 visible Shipments</strong> across imports and exports, while Akzent captures <strong>15 Shipments</strong>. The account has strong multimodal behavior across maritime, air and truck, with relevant exposure to Spain, United States, India and France.</p>
+        <p style="font-size:13px;line-height:1.7;margin-bottom:12px;">The strongest strategic signal is the gap between visible universe and captured universe. Akzent participates in the account, but mainly in import air and limited truck/maritime activity. The largest expansion opportunity is in <strong>export coverage</strong>, <strong>Altamira maritime flows</strong>, <strong>Colombia NL / Nuevo Laredo cross-border control</strong>, <strong>supplier coordination</strong> and <strong>ILM / Control Tower services</strong>.</p>
+        <div style="padding:12px 16px;background:rgba(0,180,216,0.06);border-radius:6px;border-left:3px solid var(--teal);">
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.6;">Do not position Akzent as a transactional freight provider. Position Akzent as a <strong style="color:var(--navy);">coordination, customs, visibility and wallet expansion partner</strong>.</p>
         </div>
       </div>
     </div>
 
-    <!-- 03 Modal Mix -->
-    <div class="grid-2">
-      <div class="card">
-        <div class="card-header"><span class="accent">03</span> Import Modal Mix (322 shipments)</div>
-        <div class="card-body">
-          <div class="modal-bar"><div class="modal-bar-label"><strong>Unknown / Virtual / IMMEX</strong><span>109 · 33.9%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:33.9%"></div></div></div>
-          <div class="modal-bar"><div class="modal-bar-label"><strong>Air</strong><span>101 · 31.4%</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:31.4%"></div></div></div>
-          <div class="modal-bar"><div class="modal-bar-label"><strong>Maritime (Altamira)</strong><span>78 · 24.2%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:24.2%"></div></div></div>
-          <div class="modal-bar"><div class="modal-bar-label"><strong>Truck</strong><span>34 · 10.6%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:10.6%"></div></div></div>
-          <div style="margin-top:10px;padding:8px 12px;background:rgba(232,0,45,0.06);border-radius:5px;font-size:11px;color:var(--text-muted);">
-            <strong style="color:var(--red);">Signal:</strong> 31.4% air freight on imports = high urgency exposure. Spare parts, tooling and OEM-critical components moving by air.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header"><span class="accent">03b</span> Export Modal Mix (305 shipments)</div>
-        <div class="card-body">
-          <div class="modal-bar"><div class="modal-bar-label"><strong>Truck (Cross-border)</strong><span>126 · 41.3%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:41.3%"></div></div></div>
-          <div class="modal-bar"><div class="modal-bar-label"><strong>Maritime</strong><span>115 · 37.7%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:37.7%"></div></div></div>
-          <div class="modal-bar"><div class="modal-bar-label"><strong>Unknown / Virtual</strong><span>42 · 13.8%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:13.8%"></div></div></div>
-          <div class="modal-bar"><div class="modal-bar-label"><strong>Air</strong><span>22 · 7.2%</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:7.2%"></div></div></div>
-          <div style="margin-top:10px;padding:8px 12px;background:rgba(0,180,216,0.06);border-radius:5px;font-size:11px;color:var(--text-muted);">
-            <strong style="color:var(--teal);">Signal:</strong> USA (43.9%) and France (32.1%) dominate exports — two distinct corridors requiring separate execution capabilities.
-          </div>
-        </div>
+    <!-- 03 Panjiva Visible Universe -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">03</span> Panjiva Visible Universe</div>
+      <div class="card-body">
+        <p style="font-size:12px;color:var(--text-muted);line-height:1.6;margin-bottom:4px;">Periods are analyzed separately and are not aggregated into a single operational view. <strong>Previous Full Calendar Year: 2025</strong> · <strong>Current YTD: 2026</strong>. Panjiva represents the visible logistics universe; Akzent shipment data represents captured business.</p>
       </div>
     </div>
-
-    <!-- 04 Geographic Intelligence -->
     <div class="grid-2">
       <div class="card">
-        <div class="card-header"><span class="accent">04</span> Import Origins</div>
+        <div class="card-header" style="background:rgba(13,43,94,0.03);">Previous Full Calendar Year — 2025</div>
         <div class="card-body">
-          <table style="width:100%;font-size:12px;border-collapse:collapse;">
-            <thead><tr style="border-bottom:1px solid var(--border);"><th style="text-align:left;padding:6px 8px;font-weight:600;color:var(--text-muted);">Origin</th><th style="text-align:right;padding:6px 8px;font-weight:600;color:var(--text-muted);">Shipments</th><th style="text-align:left;padding:6px 8px;font-weight:600;color:var(--text-muted);">AIOS Signal</th></tr></thead>
+          <div class="grid-2" style="gap:10px;">
+            <div class="stat-box"><div class="stat-label">Total Shipments</div><div class="stat-value" style="font-size:22px;">462</div><div class="stat-sub">Imports 235 · Exports 227</div></div>
+            <div class="stat-box"><div class="stat-label">Import / Export Share</div><div class="stat-value" style="font-size:22px;">50.9% / 49.1%</div><div class="stat-sub">Balanced flow profile</div></div>
+          </div>
+          <table class="hub-table" style="margin-top:12px;">
             <tbody>
-              <tr style="border-bottom:1px solid var(--border);"><td style="padding:6px 8px;font-weight:700;">Spain</td><td style="padding:6px 8px;text-align:right;font-weight:700;color:var(--navy);">162</td><td style="padding:6px 8px;color:var(--text-muted);">Primary sourcing / intragroup relationship</td></tr>
-              <tr style="border-bottom:1px solid var(--border);"><td style="padding:6px 8px;font-weight:700;">India</td><td style="padding:6px 8px;text-align:right;font-weight:700;color:var(--navy);">68</td><td style="padding:6px 8px;color:var(--text-muted);">Tooling, inserts, cutting tools</td></tr>
-              <tr style="border-bottom:1px solid var(--border);"><td style="padding:6px 8px;font-weight:700;">Mexico</td><td style="padding:6px 8px;text-align:right;font-weight:700;color:var(--navy);">43</td><td style="padding:6px 8px;color:var(--text-muted);">Virtual transfers / IMMEX operations</td></tr>
-              <tr style="border-bottom:1px solid var(--border);"><td style="padding:6px 8px;font-weight:700;">United States</td><td style="padding:6px 8px;text-align:right;font-weight:700;color:var(--navy);">33</td><td style="padding:6px 8px;color:var(--text-muted);">Industrial components / castings</td></tr>
-              <tr><td style="padding:6px 8px;font-weight:700;">Germany</td><td style="padding:6px 8px;text-align:right;font-weight:700;color:var(--navy);">4</td><td style="padding:6px 8px;color:var(--text-muted);">Specialized sourcing</td></tr>
+              <tr><td><strong>USD Value</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">USD 4.44M</td></tr>
+              <tr><td><strong>Gross Weight</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">647,958 kg</td></tr>
+            </tbody>
+          </table>
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin:14px 0 8px;">Modal Mix — 2025</div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Maritime</strong><span>144 Shipments · 31.2%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:31.2%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Unknown</strong><span>122 Shipments · 26.4%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:26.4%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Truck</strong><span>108 Shipments · 23.4%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:23.4%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Air</strong><span>88 Shipments · 19.0%</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:19.0%"></div></div></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" style="background:rgba(0,180,216,0.04);">Current YTD — 2026</div>
+        <div class="card-body">
+          <div class="grid-2" style="gap:10px;">
+            <div class="stat-box"><div class="stat-label">Total Shipments</div><div class="stat-value teal" style="font-size:22px;">218</div><div class="stat-sub">Imports 124 · Exports 94</div></div>
+            <div class="stat-box"><div class="stat-label">Import / Export Share</div><div class="stat-value" style="font-size:22px;">56.9% / 43.1%</div><div class="stat-sub">Import share rising</div></div>
+          </div>
+          <table class="hub-table" style="margin-top:12px;">
+            <tbody>
+              <tr><td><strong>USD Value</strong></td><td style="text-align:right;font-weight:700;color:var(--teal);">USD 2.37M</td></tr>
+              <tr><td><strong>Gross Weight</strong></td><td style="text-align:right;font-weight:700;color:var(--teal);">339,882 kg</td></tr>
+            </tbody>
+          </table>
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin:14px 0 8px;">Modal Mix — 2026 YTD</div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Maritime</strong><span>65 Shipments · 29.8%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:29.8%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Truck</strong><span>57 Shipments · 26.1%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:26.1%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Air</strong><span>52 Shipments · 23.9%</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:23.9%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Unknown</strong><span>44 Shipments · 20.2%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:20.2%"></div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <div style="padding:12px 16px;background:rgba(13,43,94,0.04);border-radius:6px;border-left:3px solid var(--navy);">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:4px;">Interpretation</div>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.6;">Brahm maintains a balanced import/export profile, with imports gaining relative weight in 2026 YTD. Air increases as a share of the operation, which suggests urgency, critical components or production sensitivity. Maritime and truck remain structural and should not be treated as isolated opportunities.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 Trend Intelligence -->
+    <div class="card">
+      <div class="card-header"><span class="accent">04</span> Trend Intelligence — 2025 → 2026 YTD</div>
+      <div class="card-body" style="padding:0;">
+        <table class="network-table">
+          <thead>
+            <tr>
+              <th>Variable</th>
+              <th style="text-align:right;">2025</th>
+              <th style="text-align:right;">2026 YTD</th>
+              <th>AIOS Interpretation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Total Shipments</strong></td><td style="text-align:right;">462</td><td style="text-align:right;font-weight:700;">218</td><td style="color:var(--text-muted);">2026 remains active; do not annualize without explicit instruction.</td></tr>
+            <tr><td><strong>Imports</strong></td><td style="text-align:right;">235</td><td style="text-align:right;font-weight:700;">124</td><td style="color:var(--text-muted);">Import share increases in 2026 YTD.</td></tr>
+            <tr><td><strong>Exports</strong></td><td style="text-align:right;">227</td><td style="text-align:right;font-weight:700;">94</td><td style="color:var(--text-muted);">Export remains material but Akzent captures zero export Shipments in 2026 YTD.</td></tr>
+            <tr><td><strong>Air</strong></td><td style="text-align:right;">88</td><td style="text-align:right;font-weight:700;">52</td><td style="color:var(--text-muted);">Air share increases; likely urgency or supply chain sensitivity.</td></tr>
+            <tr><td><strong>Maritime</strong></td><td style="text-align:right;">144</td><td style="text-align:right;font-weight:700;">65</td><td style="color:var(--text-muted);">Ocean remains structural, especially Altamira.</td></tr>
+            <tr><td><strong>Truck</strong></td><td style="text-align:right;">108</td><td style="text-align:right;font-weight:700;">57</td><td style="color:var(--text-muted);">Cross-border remains relevant through Colombia NL and Nuevo Laredo.</td></tr>
+            <tr><td><strong>Unknown Mode</strong></td><td style="text-align:right;">122</td><td style="text-align:right;font-weight:700;">44</td><td style="color:var(--text-muted);">Visibility/data gaps create Control Tower opportunity.</td></tr>
+          </tbody>
+        </table>
+        <div style="padding:12px 16px;margin:14px;background:rgba(0,180,216,0.06);border-radius:6px;border-left:3px solid var(--teal);">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:4px;">Trend Conclusion</div>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.6;">The account is not a simple freight opportunity. It is a multimodal industrial coordination opportunity with measurable whitespace.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 05 Top HS Code Intelligence -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">05</span> Top HS Code Intelligence</div>
+      <div class="card-body">
+        <div style="padding:10px 14px;background:rgba(232,0,45,0.06);border-radius:5px;font-size:11px;color:var(--text-muted);line-height:1.6;">
+          <strong style="color:var(--red);">Important note:</strong> Some Shipments contain multiple HS Codes. HS Code counts represent operational presence and are not additive.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" style="background:rgba(13,43,94,0.03);">Top HS Codes — 2025</div>
+      <div class="card-body" style="padding:0;">
+        <table class="network-table">
+          <thead>
+            <tr>
+              <th>HS Code</th>
+              <th style="text-align:right;">Presence</th>
+              <th style="text-align:right;">% of Shipments</th>
+              <th>Product Interpretation</th>
+              <th>AIOS Interpretation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>3923100301</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">96</td><td style="text-align:right;">20.8%</td><td>Plastic containers / transport boxes</td><td style="color:var(--text-muted);">Returnable packaging, repeatable logistics and asset coordination signal.</td></tr>
+            <tr><td><strong>8409991000</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">80</td><td style="text-align:right;">17.3%</td><td>Engine parts / covers / supports</td><td style="color:var(--text-muted);">Industrial continuity sensitivity.</td></tr>
+            <tr><td><strong>8708999902</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">58</td><td style="text-align:right;">12.6%</td><td>Automotive / machinery parts</td><td style="color:var(--text-muted);">OEM-related operational complexity.</td></tr>
+            <tr><td><strong>8414901003</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">55</td><td style="text-align:right;">11.9%</td><td>Air components / tubes / assemblies</td><td style="color:var(--text-muted);">Technical components requiring traceability.</td></tr>
+            <tr><td><strong>7326909999</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">52</td><td style="text-align:right;">11.3%</td><td>Metal parts / supports</td><td style="color:var(--text-muted);">Broad industrial component portfolio and customs sensitivity.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" style="background:rgba(0,180,216,0.04);">Top HS Codes — 2026 YTD</div>
+      <div class="card-body" style="padding:0;">
+        <table class="network-table">
+          <thead>
+            <tr>
+              <th>HS Code</th>
+              <th style="text-align:right;">Presence</th>
+              <th style="text-align:right;">% of Shipments</th>
+              <th>Product Interpretation</th>
+              <th>AIOS Interpretation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>3923100301</strong></td><td style="text-align:right;font-weight:700;color:var(--teal);">53</td><td style="text-align:right;">24.3%</td><td>Plastic containers / transport boxes</td><td style="color:var(--text-muted);">Higher relative presence; possible recurring packaging/logistics support flow.</td></tr>
+            <tr><td><strong>8409991000</strong></td><td style="text-align:right;font-weight:700;color:var(--teal);">32</td><td style="text-align:right;">14.7%</td><td>Engine parts / covers / supports</td><td style="color:var(--text-muted);">Core industrial component category remains active.</td></tr>
+            <tr><td><strong>8414901003</strong></td><td style="text-align:right;font-weight:700;color:var(--teal);">26</td><td style="text-align:right;">11.9%</td><td>Air components / tubes / assemblies</td><td style="color:var(--text-muted);">Technical supply chain continuity signal.</td></tr>
+            <tr><td><strong>7326909999</strong></td><td style="text-align:right;font-weight:700;color:var(--teal);">24</td><td style="text-align:right;">11.0%</td><td>Metal parts and supports</td><td style="color:var(--text-muted);">Broad customs and classification complexity.</td></tr>
+            <tr><td><strong>8209000100</strong></td><td style="text-align:right;font-weight:700;color:var(--teal);">17</td><td style="text-align:right;">7.8%</td><td>Inserts / tools / milling tools</td><td style="color:var(--text-muted);">Tooling sensitivity and possible production urgency.</td></tr>
+          </tbody>
+        </table>
+        <div style="padding:12px 16px;margin:14px;background:rgba(13,43,94,0.04);border-radius:6px;border-left:3px solid var(--navy);">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:4px;">Portfolio Trend</div>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.6;">The portfolio remains industrial and technical. 2026 YTD shows continued concentration in packaging, engine components, air components, metal parts and tooling. This supports an ILM / Control Tower narrative around production continuity, supplier coordination, customs control and multimodal execution.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 06 Supplier / Customer / Counterparty Intelligence -->
+    <div class="card">
+      <div class="card-header"><span class="accent">06</span> Supplier / Customer / Counterparty Intelligence — 2026 YTD</div>
+      <div class="card-body" style="padding:0;">
+        <table class="network-table">
+          <thead>
+            <tr>
+              <th>Counterparty</th>
+              <th style="text-align:right;">Shipments</th>
+              <th>Operational Signal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Brahm Precision Products Spain S.A.</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">55</td><td style="color:var(--text-muted);">Strong intra-group Spain-to-Mexico dependency.</td></tr>
+            <tr><td><strong>John Deere Usine de Saran</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">30</td><td style="color:var(--text-muted);">Strategic export customer lane to France.</td></tr>
+            <tr><td><strong>John Deere Engine Works SRG1</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">13</td><td style="color:var(--text-muted);">OEM continuity and industrial customer pressure.</td></tr>
+            <tr><td><strong>Waupaca Foundry Inc.</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">12</td><td style="color:var(--text-muted);">USA industrial supplier exposure.</td></tr>
+            <tr><td><strong>Tooling Planet Pvt. Ltd.</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">11</td><td style="color:var(--text-muted);">India tooling / long lead-time sourcing exposure.</td></tr>
+          </tbody>
+        </table>
+        <div style="padding:12px 16px;margin:14px;background:rgba(13,43,94,0.04);border-radius:6px;border-left:3px solid var(--navy);">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:4px;">Interpretation</div>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.6;">The account operates inside an industrial network where intra-group supply and John Deere-related demand are strategically important. This creates a strong need for supplier coordination, customer delivery control, documentation discipline and exception management.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 07 Geographic & Customs Intelligence -->
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header"><span class="accent">07</span> Top Countries — 2026 YTD</div>
+        <div class="card-body">
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Spain</strong><span>64 Shipments</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:100%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>United States</strong><span>62 Shipments</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:96.9%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>India</strong><span>33 Shipments</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:51.6%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>France</strong><span>31 Shipments</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:48.4%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Mexico</strong><span>21 Shipments</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:32.8%"></div></div></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><span class="accent">07b</span> Top Customs / Ports — 2026 YTD</div>
+        <div class="card-body" style="padding:0;">
+          <table class="network-table">
+            <thead>
+              <tr>
+                <th>Customs / Port</th>
+                <th>Type</th>
+                <th>Shipments</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Colombia NL</strong></td><td><span class="hub-tag border">Cross-Border</span></td><td>45 export + 28 import</td></tr>
+              <tr><td><strong>Altamira</strong></td><td><span class="hub-tag">Maritime</span></td><td>32 import + 32 export</td></tr>
+              <tr><td><strong>Monterrey Airport</strong></td><td><span class="hub-tag air">Air</span></td><td>32 import</td></tr>
+              <tr><td><strong>AICM</strong></td><td><span class="hub-tag air">Air</span></td><td>13 import</td></tr>
+              <tr><td><strong>Nuevo Laredo</strong></td><td><span class="hub-tag border">Border</span></td><td>13 export</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <div style="padding:12px 16px;background:rgba(13,43,94,0.04);border-radius:6px;border-left:3px solid var(--navy);">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:4px;">Interpretation</div>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.6;">The operation is geographically distributed and customs-exposed. The combination of Spain, USA, India and France with Altamira, Colombia NL, Monterrey Airport, AICM and Nuevo Laredo makes Brahm a strong candidate for customs visibility, Control Tower and multimodal coordination.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 08 Akzent Captured Universe -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">08</span> Akzent Captured Universe</div>
+      <div class="card-body">
+        <p style="font-size:12px;color:var(--text-muted);line-height:1.6;margin-bottom:4px;">Captured business represents Shipments actually operated by Akzent. Periods are reported separately.</p>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header" style="background:rgba(13,43,94,0.03);">Captured — 2025</div>
+        <div class="card-body">
+          <div class="grid-2" style="gap:10px;">
+            <div class="stat-box"><div class="stat-label">Akzent Shipments</div><div class="stat-value" style="font-size:22px;">11</div><div class="stat-sub">Imports 9 · Exports 2</div></div>
+            <div class="stat-box" style="border-left:3px solid var(--red);"><div class="stat-label">Margin</div><div class="stat-value red" style="font-size:22px;">-855.3%</div><div class="stat-sub">Driven by export maritime loss</div></div>
+          </div>
+          <table class="hub-table" style="margin-top:12px;">
+            <tbody>
+              <tr><td><strong>Revenue</strong></td><td style="text-align:right;font-weight:700;color:var(--navy);">USD 16,824</td></tr>
+              <tr><td><strong>Gross Profit</strong></td><td style="text-align:right;font-weight:700;color:var(--red);">USD -143,896</td></tr>
+            </tbody>
+          </table>
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin:14px 0 8px;">Service Mix — 2025</div>
+          <table class="hub-table">
+            <tbody>
+              <tr><td><strong>Import Air</strong></td><td style="text-align:right;">5 Shipments</td></tr>
+              <tr><td><strong>Import Maritime</strong></td><td style="text-align:right;">2 Shipments</td></tr>
+              <tr><td><strong>Import Truck</strong></td><td style="text-align:right;">2 Shipments</td></tr>
+              <tr><td><strong>Export Air</strong></td><td style="text-align:right;">1 Shipment</td></tr>
+              <tr><td><strong>Export Maritime</strong></td><td style="text-align:right;">1 Shipment</td></tr>
             </tbody>
           </table>
         </div>
       </div>
       <div class="card">
-        <div class="card-header"><span class="accent">04b</span> Export Destinations</div>
+        <div class="card-header" style="background:rgba(0,180,216,0.04);">Captured — 2026 YTD</div>
         <div class="card-body">
-          <div class="modal-bar"><div class="modal-bar-label"><strong>United States</strong><span>134 · 43.9%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:43.9%"></div></div></div>
-          <div class="modal-bar"><div class="modal-bar-label"><strong>France</strong><span>98 · 32.1%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:32.1%"></div></div></div>
-          <div class="modal-bar"><div class="modal-bar-label"><strong>Mexico (domestic)</strong><span>42 · 13.8%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:13.8%"></div></div></div>
-          <div class="modal-bar"><div class="modal-bar-label"><strong>Argentina</strong><span>30 · 9.8%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:9.8%"></div></div></div>
+          <div class="grid-2" style="gap:10px;">
+            <div class="stat-box"><div class="stat-label">Akzent Shipments</div><div class="stat-value teal" style="font-size:22px;">4</div><div class="stat-sub">Imports 4 · Exports 0</div></div>
+            <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">Margin</div><div class="stat-value teal" style="font-size:22px;">19.5%</div><div class="stat-sub">Profitable, narrow base</div></div>
+          </div>
+          <table class="hub-table" style="margin-top:12px;">
+            <tbody>
+              <tr><td><strong>Revenue</strong></td><td style="text-align:right;font-weight:700;color:var(--teal);">USD 41,005</td></tr>
+              <tr><td><strong>Gross Profit</strong></td><td style="text-align:right;font-weight:700;color:var(--teal);">USD 7,985</td></tr>
+            </tbody>
+          </table>
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin:14px 0 8px;">Service Mix — 2026 YTD</div>
+          <table class="hub-table">
+            <tbody>
+              <tr><td><strong>Import Air</strong></td><td style="text-align:right;">3 Shipments</td></tr>
+              <tr><td><strong>Import Truck</strong></td><td style="text-align:right;">1 Shipment</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <div style="padding:12px 16px;background:rgba(0,180,216,0.06);border-radius:6px;border-left:3px solid var(--teal);">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:4px;">Interpretation</div>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.6;">2026 YTD captured business is profitable but limited. The current captured footprint does not match the complexity or scale of the visible universe. This creates a disciplined expansion opportunity: grow coverage while protecting margin.</p>
         </div>
       </div>
     </div>
 
-    <!-- 05 Critical Hubs -->
+    <!-- 09 Coverage / Wallet / Penetration -->
     <div class="card">
-      <div class="card-header"><span class="accent">05</span> Critical Hub Intelligence</div>
+      <div class="card-header"><span class="accent">09</span> Coverage / Wallet / Penetration</div>
       <div class="card-body" style="padding:0;">
         <table class="network-table">
           <thead>
             <tr>
-              <th>Hub / Customs Point</th>
-              <th>Type</th>
-              <th>Shipments</th>
-              <th>Implication</th>
+              <th>Period</th>
+              <th style="text-align:right;">Panjiva Visible Shipments</th>
+              <th style="text-align:right;">Akzent Captured Shipments</th>
+              <th style="text-align:right;">Coverage</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td><strong>Colombia, NL</strong></td><td><span class="hub-tag border">Cross-Border</span></td><td>~207</td><td>Primary hub for exports and virtual operations — Akzent's core territory</td></tr>
-            <tr><td><strong>Altamira</strong></td><td><span class="hub-tag">Maritime</span></td><td>~191</td><td>Principal ocean exposure — import and export flows via Altamira</td></tr>
-            <tr><td><strong>MTY Airport</strong></td><td><span class="hub-tag air">Air</span></td><td>74 imp.</td><td>Industrial urgencies — OEM-critical components and tooling</td></tr>
-            <tr><td><strong>Puebla</strong></td><td><span class="hub-tag">Inland</span></td><td>66 imp.</td><td>Inland operation linked to industrial customer / OEM ecosystem</td></tr>
-            <tr><td><strong>AICM</strong></td><td><span class="hub-tag air">Air</span></td><td>26 imp.</td><td>Secondary air node — CDMX area industrial supply</td></tr>
-            <tr><td><strong>Nuevo Laredo</strong></td><td><span class="hub-tag border">Border</span></td><td>~38</td><td>Complementary cross-border point — customs coordination dependency</td></tr>
+            <tr><td><strong>2025</strong></td><td style="text-align:right;">462</td><td style="text-align:right;font-weight:700;">11</td><td style="text-align:right;font-weight:700;color:var(--red);">2.4%</td></tr>
+            <tr><td><strong>2026 YTD</strong></td><td style="text-align:right;">218</td><td style="text-align:right;font-weight:700;">4</td><td style="text-align:right;font-weight:700;color:var(--red);">1.8%</td></tr>
+            <tr><td><strong>Total</strong></td><td style="text-align:right;font-weight:700;">680</td><td style="text-align:right;font-weight:700;">15</td><td style="text-align:right;font-weight:700;color:var(--red);">2.2%</td></tr>
           </tbody>
         </table>
+        <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin:16px 14px 8px;">Penetration by Flow</div>
+        <table class="network-table">
+          <thead>
+            <tr>
+              <th>Period</th>
+              <th style="text-align:right;">Visible Imports</th>
+              <th style="text-align:right;">Captured Imports</th>
+              <th style="text-align:right;">Import Coverage</th>
+              <th style="text-align:right;">Visible Exports</th>
+              <th style="text-align:right;">Captured Exports</th>
+              <th style="text-align:right;">Export Coverage</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>2025</strong></td><td style="text-align:right;">235</td><td style="text-align:right;font-weight:700;">9</td><td style="text-align:right;font-weight:700;color:#0077a8;">3.8%</td><td style="text-align:right;">227</td><td style="text-align:right;font-weight:700;">2</td><td style="text-align:right;font-weight:700;color:var(--red);">0.9%</td></tr>
+            <tr><td><strong>2026 YTD</strong></td><td style="text-align:right;">124</td><td style="text-align:right;font-weight:700;">4</td><td style="text-align:right;font-weight:700;color:#0077a8;">3.2%</td><td style="text-align:right;">94</td><td style="text-align:right;font-weight:700;">0</td><td style="text-align:right;font-weight:700;color:var(--red);">0.0%</td></tr>
+          </tbody>
+        </table>
+        <div style="padding:12px 16px;margin:14px;background:rgba(232,0,45,0.06);border-radius:6px;border-left:3px solid var(--red);">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:4px;">Conclusion</div>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.6;">Akzent has an active relationship but low penetration. The largest immediate gap is export coverage. The second major gap is capture of maritime and cross-border activity. Brahm should be treated as a wallet expansion account.</p>
+        </div>
       </div>
     </div>
 
-    <!-- 06 Operational Signals -->
+    <!-- 10 Revenue / Gross Profit / Margin -->
     <div class="card">
-      <div class="card-header"><span class="accent">06</span> Operational Signals → Pain Mapping</div>
+      <div class="card-header"><span class="accent">10</span> Revenue / Gross Profit / Margin</div>
+      <div class="card-body">
+        <div class="grid-3" style="margin-bottom:10px;">
+          <div class="stat-box"><div class="stat-label">Total Akzent Revenue</div><div class="stat-value" style="font-size:18px;">USD 57,829</div><div class="stat-sub">2025 + 2026 YTD</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--red);"><div class="stat-label">Total Akzent Gross Profit</div><div class="stat-value red" style="font-size:18px;">USD -135,911</div><div class="stat-sub">2025 + 2026 YTD</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--red);"><div class="stat-label">Total Margin</div><div class="stat-value red" style="font-size:18px;">-235.0%</div><div class="stat-sub">Distorted by 2025 export maritime</div></div>
+        </div>
+        <div class="grid-3" style="margin-bottom:16px;">
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">2026 YTD Revenue</div><div class="stat-value teal" style="font-size:18px;">USD 41,005</div><div class="stat-sub">Current period</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">2026 YTD Gross Profit</div><div class="stat-value teal" style="font-size:18px;">USD 7,985</div><div class="stat-sub">Current period</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">2026 YTD Margin</div><div class="stat-value teal" style="font-size:18px;">19.5%</div><div class="stat-sub">Healthy on a smaller base</div></div>
+        </div>
+        <div style="padding:12px 16px;background:rgba(13,43,94,0.04);border-radius:6px;border-left:3px solid var(--navy);">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:4px;">Interpretation</div>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.6;">The 2025 profitability issue is driven by a major export maritime loss. 2026 YTD shows healthier profitability on a smaller base. Any expansion plan must include margin controls, service-level discipline and clear scope definition.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 11 Service Mix & Profit — Previous Year vs Current YTD -->
+    <div class="card">
+      <div class="card-header"><span class="accent">11</span> Service Mix &amp; Profit — Previous Year vs Current YTD</div>
+      <div class="card-body" style="padding:0;">
+        <table class="network-table">
+          <thead>
+            <tr>
+              <th>Service</th>
+              <th style="text-align:right;">2025 Shipments</th>
+              <th style="text-align:right;">2025 Profit</th>
+              <th style="text-align:right;">2026 YTD Shipments</th>
+              <th style="text-align:right;">2026 YTD Profit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Import Air</strong></td><td style="text-align:right;">5</td><td style="text-align:right;">USD 1,237</td><td style="text-align:right;font-weight:700;">3</td><td style="text-align:right;font-weight:700;color:var(--teal);">USD 7,830</td></tr>
+            <tr><td><strong>Import Maritime</strong></td><td style="text-align:right;">2</td><td style="text-align:right;">USD 989</td><td style="text-align:right;font-weight:700;">0</td><td style="text-align:right;color:var(--text-muted);">USD 0</td></tr>
+            <tr><td><strong>Import Truck</strong></td><td style="text-align:right;">2</td><td style="text-align:right;">USD 445</td><td style="text-align:right;font-weight:700;">1</td><td style="text-align:right;font-weight:700;">USD 155</td></tr>
+            <tr><td><strong>Export Air</strong></td><td style="text-align:right;">1</td><td style="text-align:right;">USD 327</td><td style="text-align:right;font-weight:700;">0</td><td style="text-align:right;color:var(--text-muted);">USD 0</td></tr>
+            <tr><td><strong>Export Maritime</strong></td><td style="text-align:right;">1</td><td style="text-align:right;font-weight:700;color:var(--red);">USD -146,895</td><td style="text-align:right;font-weight:700;">0</td><td style="text-align:right;color:var(--text-muted);">USD 0</td></tr>
+          </tbody>
+        </table>
+        <div style="padding:12px 16px;margin:14px;background:rgba(13,43,94,0.04);border-radius:6px;border-left:3px solid var(--navy);">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:4px;">Interpretation</div>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.6;">Import air is the strongest current captured wedge. Export maritime must be reviewed before re-entry. The opportunity is not to chase volume blindly, but to expand with better pricing, visibility and operational control.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12 Modal / Service / Export Whitespace -->
+    <div class="card">
+      <div class="card-header"><span class="accent">12</span> Modal / Service / Export Whitespace</div>
       <div class="card-body">
         <div class="signal-grid">
           <div class="signal-item high">
-            <div class="signal-title">Air Freight Urgency (31.4% imports)</div>
-            <div class="signal-prob high">HIGH probability</div>
-            <div class="signal-desc">101 import shipments by air = reactive urgency pattern. OEM customer sensitivity to production stoppages drives air spend that should be avoidable with better supplier synchronization.</div>
+            <div class="signal-title">Export Whitespace</div>
+            <div class="signal-prob high">94 visible · 0 captured</div>
+            <div class="signal-desc"><strong>Evidence:</strong> 94 visible export Shipments in 2026 YTD. Akzent captured 0 export Shipments in 2026 YTD.<br><strong>Opportunity:</strong> Enter through John Deere lanes, export documentation, customs coordination and delivery visibility.</div>
           </div>
           <div class="signal-item high">
-            <div class="signal-title">IMMEX / Virtual Complexity</div>
-            <div class="signal-prob high">HIGH probability</div>
-            <div class="signal-desc">109 import shipments classified as unknown/virtual — IMMEX transfers, regime changes and regularization generate significant administrative and customs coordination burden.</div>
+            <div class="signal-title">Maritime Whitespace</div>
+            <div class="signal-prob high">65 visible · 0 captured</div>
+            <div class="signal-desc"><strong>Evidence:</strong> 65 visible maritime Shipments in 2026 YTD. Akzent captured 0 maritime Shipments in 2026 YTD.<br><strong>Opportunity:</strong> Altamira import/export control, booking coordination, ocean visibility and documentation.</div>
           </div>
           <div class="signal-item high">
-            <div class="signal-title">Multi-Hub Fragmentation</div>
-            <div class="signal-prob high">HIGH probability</div>
-            <div class="signal-desc">6 critical operational hubs (Colombia NL, Altamira, MTY, Puebla, AICM, Nuevo Laredo) with no unified visibility layer. Each hub likely managed by separate agents or carriers.</div>
+            <div class="signal-title">Cross-Border Gap</div>
+            <div class="signal-prob high">1 captured truck Shipment</div>
+            <div class="signal-desc"><strong>Evidence:</strong> Colombia NL and Nuevo Laredo remain active. Akzent captured only 1 import truck Shipment in 2026 YTD.<br><strong>Opportunity:</strong> Cross-border visibility, Laredo support, carrier coordination and customs control.</div>
           </div>
           <div class="signal-item">
-            <div class="signal-title">Spain + India Supplier Coordination</div>
-            <div class="signal-prob medium-high">MEDIUM-HIGH</div>
-            <div class="signal-desc">230 shipments from Spain and India combined. Multi-timezone, multi-currency supplier coordination with documentation requirements that increase error probability.</div>
+            <div class="signal-title">Air Freight Gap</div>
+            <div class="signal-prob medium-high">52 visible · 3 captured</div>
+            <div class="signal-desc"><strong>Evidence:</strong> 52 visible air Shipments in 2026 YTD. Akzent captured 3 import air Shipments.<br><strong>Opportunity:</strong> Build recurring air critical support instead of isolated urgent shipments.</div>
           </div>
           <div class="signal-item">
-            <div class="signal-title">John Deere OEM Sensitivity</div>
-            <div class="signal-prob medium-high">MEDIUM-HIGH</div>
-            <div class="signal-desc">Strong OEM customer dependency elevates the cost of any delay, documentation error or customs hold. Production continuity is non-negotiable for OEM-tier suppliers.</div>
-          </div>
-          <div class="signal-item">
-            <div class="signal-title">Cross-Border Colombia / Laredo Dependency</div>
-            <div class="signal-prob medium-high">MEDIUM-HIGH</div>
-            <div class="signal-desc">~207 shipments through Colombia NL make this a structural dependency. Any friction at this crossing point impacts the entire export operation to USA.</div>
+            <div class="signal-title">ILM / Control Tower Gap</div>
+            <div class="signal-prob medium-high">Multi-node complexity</div>
+            <div class="signal-desc"><strong>Evidence:</strong> Multiple countries, modes, counterparties, ports and customs points.<br><strong>Opportunity:</strong> Supplier coordination for Spain, India and USA; export visibility for John Deere; centralized shipment monitoring.</div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- 07 AIOS Green / Red Flags -->
-    <div class="grid-2">
-      <div class="card">
-        <div class="card-header"><span class="accent">07a</span> AIOS Green Flags</div>
-        <div class="card-body">
-          <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;">
-            <li style="display:flex;gap:8px;align-items:flex-start;"><span style="color:#10b981;font-size:14px;flex-shrink:0;">✓</span><span style="font-size:12px;line-height:1.5;"><strong>Alta recurrencia:</strong> 627 embarques totales — operación activa y constante.</span></li>
-            <li style="display:flex;gap:8px;align-items:flex-start;"><span style="color:#10b981;font-size:14px;flex-shrink:0;">✓</span><span style="font-size:12px;line-height:1.5;"><strong>John Deere ecosystem:</strong> OEM dependency elevates every service to critical tier.</span></li>
-            <li style="display:flex;gap:8px;align-items:flex-start;"><span style="color:#10b981;font-size:14px;flex-shrink:0;">✓</span><span style="font-size:12px;line-height:1.5;"><strong>Elevated air exposure:</strong> 101 import + 22 export air shipments = immediate entry opportunity.</span></li>
-            <li style="display:flex;gap:8px;align-items:flex-start;"><span style="color:#10b981;font-size:14px;flex-shrink:0;">✓</span><span style="font-size:12px;line-height:1.5;"><strong>Real multimodality:</strong> Maritime, truck, air and virtual active simultaneously.</span></li>
-            <li style="display:flex;gap:8px;align-items:flex-start;"><span style="color:#10b981;font-size:14px;flex-shrink:0;">✓</span><span style="font-size:12px;line-height:1.5;"><strong>Customs complexity:</strong> IMMEX, virtual transfers and multiple customs points = high value for Akzent brokerage.</span></li>
-            <li style="display:flex;gap:8px;align-items:flex-start;"><span style="color:#10b981;font-size:14px;flex-shrink:0;">✓</span><span style="font-size:12px;line-height:1.5;"><strong>Diversified international sourcing:</strong> Spain, India, USA and Germany — multi-origin coordination complexity.</span></li>
-          </ul>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header"><span class="accent">07b</span> AIOS Red Flags</div>
-        <div class="card-body">
-          <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;">
-            <li style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--red);font-size:14px;flex-shrink:0;">⚠</span><span style="font-size:12px;line-height:1.5;"><strong>John Deere concentration:</strong> Single OEM dependency = single point of commercial risk.</span></li>
-            <li style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--red);font-size:14px;flex-shrink:0;">⚠</span><span style="font-size:12px;line-height:1.5;"><strong>High unknown/virtual volume:</strong> 33.9% imports unclassified — visibility and documentation quality risk.</span></li>
-            <li style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--red);font-size:14px;flex-shrink:0;">⚠</span><span style="font-size:12px;line-height:1.5;"><strong>Moderate visible value:</strong> $3.77M + $2.55M — service revenue upside depends on consolidation and ILM evolution.</span></li>
-            <li style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--red);font-size:14px;flex-shrink:0;">⚠</span><span style="font-size:12px;line-height:1.5;"><strong>Port/customs fragmentation:</strong> 6 active hubs create coordination complexity for Akzent as well.</span></li>
-            <li style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--red);font-size:14px;flex-shrink:0;">⚠</span><span style="font-size:12px;line-height:1.5;"><strong>Urgency pressure:</strong> Air dependency may indicate reactive firefighting rather than planned logistics — manage expectations.</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- 08 Commercial Opportunity Map -->
+    <!-- 13 Air Freight Gap -->
     <div class="card">
-      <div class="card-header"><span class="accent">08</span> Commercial Opportunity Map</div>
+      <div class="card-header"><span class="accent">13</span> Air Freight Gap</div>
       <div class="card-body">
+        <p style="font-size:13px;line-height:1.7;margin-bottom:12px;">Air is a strategic wedge for Brahm. Panjiva shows <strong>52 visible air Shipments in 2026 YTD</strong>, while Akzent captured <strong>3 import air Shipments</strong>. The current captured air business is profitable and can be used as the entry point for a broader Air Critical program.</p>
+        <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">Position Akzent as</div>
+        <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;">
+          <li style="display:flex;gap:8px;align-items:flex-start;"><span style="color:#10b981;font-size:14px;flex-shrink:0;">✓</span><span style="font-size:12px;line-height:1.5;">Urgent shipment coordinator</span></li>
+          <li style="display:flex;gap:8px;align-items:flex-start;"><span style="color:#10b981;font-size:14px;flex-shrink:0;">✓</span><span style="font-size:12px;line-height:1.5;">Production continuity partner</span></li>
+          <li style="display:flex;gap:8px;align-items:flex-start;"><span style="color:#10b981;font-size:14px;flex-shrink:0;">✓</span><span style="font-size:12px;line-height:1.5;">Exception management partner</span></li>
+          <li style="display:flex;gap:8px;align-items:flex-start;"><span style="color:#10b981;font-size:14px;flex-shrink:0;">✓</span><span style="font-size:12px;line-height:1.5;">Visibility and documentation partner</span></li>
+        </ul>
+        <div style="margin-top:12px;padding:10px 14px;background:rgba(232,0,45,0.06);border-radius:5px;font-size:11px;color:var(--text-muted);">
+          <strong style="color:var(--red);">Do not</strong> position Akzent as spot air quote provider.
+        </div>
+      </div>
+    </div>
+
+    <!-- 14 Cross-Border Gap -->
+    <div class="card">
+      <div class="card-header"><span class="accent">14</span> Cross-Border Gap</div>
+      <div class="card-body">
+        <p style="font-size:13px;line-height:1.7;margin-bottom:12px;">Cross-border remains structurally relevant through <strong>Colombia NL</strong> and <strong>Nuevo Laredo</strong>. Panjiva shows Colombia NL as the strongest cross-border node and Nuevo Laredo as an additional export point. Akzent captured only one truck Shipment in 2026 YTD. This is a clear gap.</p>
+        <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">Opportunity</div>
+        <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;">
+          <li style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--teal);font-size:14px;flex-shrink:0;">→</span><span style="font-size:12px;line-height:1.5;">Colombia NL / Nuevo Laredo operational control</span></li>
+          <li style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--teal);font-size:14px;flex-shrink:0;">→</span><span style="font-size:12px;line-height:1.5;">Border visibility</span></li>
+          <li style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--teal);font-size:14px;flex-shrink:0;">→</span><span style="font-size:12px;line-height:1.5;">Customs coordination</span></li>
+          <li style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--teal);font-size:14px;flex-shrink:0;">→</span><span style="font-size:12px;line-height:1.5;">Carrier follow-up</span></li>
+          <li style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--teal);font-size:14px;flex-shrink:0;">→</span><span style="font-size:12px;line-height:1.5;">Exception escalation</span></li>
+          <li style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--teal);font-size:14px;flex-shrink:0;">→</span><span style="font-size:12px;line-height:1.5;">Laredo support model</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 15 ILM / Control Tower Opportunity -->
+    <div class="card">
+      <div class="card-header"><span class="accent">15</span> ILM / Control Tower Opportunity</div>
+      <div class="card-body">
+        <p style="font-size:13px;line-height:1.7;margin-bottom:12px;">Brahm has the structure for ILM because the operation involves multiple suppliers, customers, countries, modes and customs points. The natural ILM scope should not start as full outsourcing. It should begin as focused Control Tower support around supplier coordination, high-visibility lanes and exception management.</p>
+        <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">Recommended ILM Scope</div>
         <div style="display:flex;flex-direction:column;gap:8px;">
-          <div style="display:grid;grid-template-columns:220px 80px 1fr;align-items:center;gap:12px;padding:10px 14px;background:var(--bg);border-radius:5px;border-left:3px solid var(--red);">
-            <span style="font-size:12px;font-weight:700;">Customs Brokerage</span>
-            <span style="font-size:11px;font-weight:800;color:var(--red);">MUY ALTA</span>
-            <span style="font-size:11px;color:var(--text-muted);">IMMEX regimes, virtual transfers, regularization and multiple customs points</span>
-          </div>
-          <div style="display:grid;grid-template-columns:220px 80px 1fr;align-items:center;gap:12px;padding:10px 14px;background:var(--bg);border-radius:5px;border-left:3px solid var(--red);">
-            <span style="font-size:12px;font-weight:700;">Air Freight / Expedites</span>
-            <span style="font-size:11px;font-weight:800;color:var(--red);">MUY ALTA</span>
-            <span style="font-size:11px;color:var(--text-muted);">101 import + 22 export air shipments — OEM production continuity driver</span>
-          </div>
-          <div style="display:grid;grid-template-columns:220px 80px 1fr;align-items:center;gap:12px;padding:10px 14px;background:var(--bg);border-radius:5px;border-left:3px solid var(--red);">
-            <span style="font-size:12px;font-weight:700;">Documentation Control</span>
-            <span style="font-size:11px;font-weight:800;color:var(--red);">MUY ALTA</span>
-            <span style="font-size:11px;color:var(--text-muted);">Industrial OEM operation with IMMEX sensitivity — zero tolerance for errors</span>
-          </div>
-          <div style="display:grid;grid-template-columns:220px 80px 1fr;align-items:center;gap:12px;padding:10px 14px;background:var(--bg);border-radius:5px;border-left:3px solid var(--teal);">
-            <span style="font-size:12px;font-weight:700;">Cross-Border (Colombia / Laredo)</span>
-            <span style="font-size:11px;font-weight:800;color:var(--teal);">ALTA</span>
-            <span style="font-size:11px;color:var(--text-muted);">~207 shipments through Colombia NL — Akzent's core corridor strength</span>
-          </div>
-          <div style="display:grid;grid-template-columns:220px 80px 1fr;align-items:center;gap:12px;padding:10px 14px;background:var(--bg);border-radius:5px;border-left:3px solid var(--teal);">
-            <span style="font-size:12px;font-weight:700;">Ocean Freight (Altamira)</span>
-            <span style="font-size:11px;font-weight:800;color:var(--teal);">ALTA</span>
-            <span style="font-size:11px;color:var(--text-muted);">~191 shipments via Altamira — primary maritime exposure on both import/export</span>
-          </div>
-          <div style="display:grid;grid-template-columns:220px 80px 1fr;align-items:center;gap:12px;padding:10px 14px;background:var(--bg);border-radius:5px;border-left:3px solid var(--teal);">
-            <span style="font-size:12px;font-weight:700;">Supplier Coordination (Spain + India)</span>
-            <span style="font-size:11px;font-weight:800;color:var(--teal);">ALTA</span>
-            <span style="font-size:11px;color:var(--text-muted);">230 combined shipments from Spain and India — multi-origin consolidation opportunity</span>
-          </div>
-          <div style="display:grid;grid-template-columns:220px 80px 1fr;align-items:center;gap:12px;padding:10px 14px;background:var(--bg);border-radius:5px;border-left:3px solid var(--teal);">
-            <span style="font-size:12px;font-weight:700;">Visibility</span>
-            <span style="font-size:11px;font-weight:800;color:var(--teal);">ALTA</span>
-            <span style="font-size:11px;color:var(--text-muted);">6 active hubs with no unified visibility — strong pain point for operational control</span>
-          </div>
-          <div style="display:grid;grid-template-columns:220px 80px 1fr;align-items:center;gap:12px;padding:10px 14px;background:var(--bg);border-radius:5px;border-left:3px solid var(--text-muted);">
-            <span style="font-size:12px;font-weight:700;">Warehousing / Staging</span>
-            <span style="font-size:11px;font-weight:800;color:var(--text-muted);">MEDIA-ALTA</span>
-            <span style="font-size:11px;color:var(--text-muted);">Border staging at MTY / Laredo / Colombia — supports urgency management</span>
-          </div>
-          <div style="display:grid;grid-template-columns:220px 80px 1fr;align-items:center;gap:12px;padding:10px 14px;background:var(--bg);border-radius:5px;border-left:3px solid var(--text-muted);">
-            <span style="font-size:12px;font-weight:700;">ILM / 4PL</span>
-            <span style="font-size:11px;font-weight:800;color:var(--teal);">ALTA (evolution)</span>
-            <span style="font-size:11px;color:var(--text-muted);">Integral coordination viable once entry through critical operation is established</span>
-          </div>
+          <div style="display:grid;grid-template-columns:28px 1fr;align-items:center;gap:12px;padding:10px 14px;background:var(--bg);border-radius:5px;border-left:3px solid var(--navy);"><span style="font-size:12px;font-weight:800;color:var(--navy);">01</span><span style="font-size:12px;font-weight:600;">Spain supplier coordination</span></div>
+          <div style="display:grid;grid-template-columns:28px 1fr;align-items:center;gap:12px;padding:10px 14px;background:var(--bg);border-radius:5px;border-left:3px solid var(--navy);"><span style="font-size:12px;font-weight:800;color:var(--navy);">02</span><span style="font-size:12px;font-weight:600;">India tooling / component follow-up</span></div>
+          <div style="display:grid;grid-template-columns:28px 1fr;align-items:center;gap:12px;padding:10px 14px;background:var(--bg);border-radius:5px;border-left:3px solid var(--navy);"><span style="font-size:12px;font-weight:800;color:var(--navy);">03</span><span style="font-size:12px;font-weight:600;">Air critical monitoring</span></div>
+          <div style="display:grid;grid-template-columns:28px 1fr;align-items:center;gap:12px;padding:10px 14px;background:var(--bg);border-radius:5px;border-left:3px solid var(--navy);"><span style="font-size:12px;font-weight:800;color:var(--navy);">04</span><span style="font-size:12px;font-weight:600;">Altamira maritime tracking</span></div>
+          <div style="display:grid;grid-template-columns:28px 1fr;align-items:center;gap:12px;padding:10px 14px;background:var(--bg);border-radius:5px;border-left:3px solid var(--navy);"><span style="font-size:12px;font-weight:800;color:var(--navy);">05</span><span style="font-size:12px;font-weight:600;">Colombia NL / Nuevo Laredo cross-border visibility</span></div>
+          <div style="display:grid;grid-template-columns:28px 1fr;align-items:center;gap:12px;padding:10px 14px;background:var(--bg);border-radius:5px;border-left:3px solid var(--navy);"><span style="font-size:12px;font-weight:800;color:var(--navy);">06</span><span style="font-size:12px;font-weight:600;">John Deere export delivery control</span></div>
+          <div style="display:grid;grid-template-columns:28px 1fr;align-items:center;gap:12px;padding:10px 14px;background:var(--bg);border-radius:5px;border-left:3px solid var(--navy);"><span style="font-size:12px;font-weight:800;color:var(--navy);">07</span><span style="font-size:12px;font-weight:600;">Customs documentation tracking</span></div>
+          <div style="display:grid;grid-template-columns:28px 1fr;align-items:center;gap:12px;padding:10px 14px;background:var(--bg);border-radius:5px;border-left:3px solid var(--navy);"><span style="font-size:12px;font-weight:800;color:var(--navy);">08</span><span style="font-size:12px;font-weight:600;">Exception reporting and weekly operational cadence</span></div>
+        </div>
+        <div style="margin-top:14px;padding:12px 16px;background:rgba(232,0,45,0.06);border-radius:6px;border-left:3px solid var(--red);">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:4px;">ILM Potential</div>
+          <p style="font-size:13px;font-weight:800;color:var(--red);">Very High</p>
         </div>
       </div>
     </div>
 
-    <!-- 09 Commercial Positioning -->
+    <!-- 16 Commercial Positioning -->
     <div class="card">
-      <div class="card-header"><span class="accent">09</span> Commercial Positioning</div>
+      <div class="card-header"><span class="accent">16</span> Commercial Positioning</div>
       <div class="card-body">
+        <p style="font-size:13px;line-height:1.7;margin-bottom:12px;"><strong>Do not sell freight. Sell control.</strong> Brahm already works with Akzent, but the visible logistics universe shows that Akzent is only capturing a very small portion of the account. The strongest opportunity is to expand from isolated import execution into a structured operating model: air critical support, cross-border control, Altamira maritime coordination, supplier follow-up and Control Tower visibility.</p>
         <div class="positioning-box">
-          <p style="font-size:13px;line-height:1.6;color:#fff;">Position as <strong style="color:var(--teal);">operational continuity partner · customs + air urgency specialist · multimodal coordinator for OEM-dependent industrial supply chains.</strong></p>
-          <div class="positioning-example">"Vemos una operación industrial con alta mezcla de importación aérea, abastecimiento desde España e India, actividad marítima por Altamira y cruces recurrentes por Colombia / Nuevo Laredo. Normalmente este tipo de operación empieza a enfrentar presión en visibilidad, coordinación aduanal, urgencias y sincronización con cliente OEM. Queremos entender dónde están hoy los puntos de fricción y dónde Akzent puede apoyar con control operativo."</div>
+          <p style="font-size:13px;line-height:1.6;color:#fff;">Position Akzent as <strong style="color:var(--teal);">Operational Complexity Partner · Multimodal Coordination Partner · Customs &amp; Visibility Partner · ILM / Control Tower Partner · Wallet Expansion Partner.</strong></p>
+          <div class="positioning-example">"We see a complex industrial operation across Spain, USA, India, France and Mexico, with air, maritime and cross-border exposure. Akzent already supports part of the operation, but the visible universe suggests there is a much larger opportunity to bring control, visibility and consistency across the account — especially around exports, Altamira, Colombia NL, urgent air and supplier coordination."</div>
           <div class="capability-tags">
-            <span class="cap-tag">Customs / IMMEX</span>
-            <span class="cap-tag">Air Urgency</span>
-            <span class="cap-tag">Cross-Border</span>
-            <span class="cap-tag">Altamira Ocean</span>
-            <span class="cap-tag">Spain + India Sourcing</span>
-            <span class="cap-tag">ILM Evolution</span>
+            <span class="cap-tag">Operational Complexity</span>
+            <span class="cap-tag">Multimodal Coordination</span>
+            <span class="cap-tag">Customs &amp; Visibility</span>
+            <span class="cap-tag">ILM / Control Tower</span>
+            <span class="cap-tag">Wallet Expansion</span>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- 10 Discovery Questions -->
+    <!-- 17 Discovery Questions -->
     <div class="card">
-      <div class="card-header"><span class="accent">10</span> Discovery Question Engine</div>
+      <div class="card-header"><span class="accent">17</span> Discovery Questions</div>
       <div class="card-body">
         <div class="outreach-step">
           <div class="outreach-step-header" onclick="toggleAccordion(this)">
-            <span>Air Freight &amp; Urgencies</span><span class="outreach-step-toggle">+</span>
+            <span>Operational Priority &amp; Air Critical</span><span class="outreach-step-toggle">+</span>
           </div>
           <div class="outreach-step-body">
             <ul class="q-list">
-              <li>¿Qué porcentaje de los embarques aéreos responde a urgencias o faltantes?</li>
-              <li>¿Los aéreos están planeados desde el origen o son mayormente reactivos?</li>
-              <li>¿Qué tan sensible es John Deere a retrasos o errores documentales en los aéreos?</li>
-            </ul>
-          </div>
-        </div>
-        <div class="outreach-step">
-          <div class="outreach-step-header" onclick="toggleAccordion(this)">
-            <span>Customs &amp; IMMEX Operations</span><span class="outreach-step-toggle">+</span>
-          </div>
-          <div class="outreach-step-body">
-            <ul class="q-list">
-              <li>¿Los Shipments virtuales / IMMEX generan carga administrativa relevante?</li>
-              <li>¿Con cuántos agentes aduanales trabajan actualmente entre Colombia, Altamira, MTY, AICM y Nuevo Laredo?</li>
-              <li>¿Han tenido problemas de regularización o cambios de régimen en el último año?</li>
+              <li>What part of Brahm's operation is most critical today: component imports, John Deere exports or urgent air recoveries?</li>
+              <li>What usually triggers air Shipments?</li>
             </ul>
           </div>
         </div>
@@ -14337,72 +14368,95 @@ main {
           </div>
           <div class="outreach-step-body">
             <ul class="q-list">
-              <li>¿La coordinación de España e India está centralizada o la maneja cada área de compras por separado?</li>
-              <li>¿Tienen visibilidad del estatus de cada embarque desde origen hasta planta?</li>
-              <li>¿Los proveedores de India generan más urgencias o problemas documentales que los de España?</li>
+              <li>Who coordinates suppliers in Spain and India before shipment readiness?</li>
+              <li>Why did Akzent not capture export Shipments in 2026 YTD?</li>
             </ul>
           </div>
         </div>
         <div class="outreach-step">
           <div class="outreach-step-header" onclick="toggleAccordion(this)">
-            <span>Cross-Border &amp; Hub Visibility</span><span class="outreach-step-toggle">+</span>
+            <span>Margin Guardrails &amp; Friction Points</span><span class="outreach-step-toggle">+</span>
           </div>
           <div class="outreach-step-body">
             <ul class="q-list">
-              <li>¿Tienen visibilidad unificada de Altamira, MTY, Colombia, AICM y Nuevo Laredo o cada hub se gestiona por separado?</li>
-              <li>¿Hay necesidad de staging, buffer o consolidación en frontera para soportar las urgencias?</li>
-              <li>¿Dónde tienen más fricción hoy: proveedor, aduana, transporte o cliente final?</li>
+              <li>What caused the large export maritime loss in 2025, and what guardrails are needed before re-entering that service?</li>
+              <li>Where are the biggest friction points: customs, supplier readiness, carrier follow-up, documentation or internal communication?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)">
+            <span>Visibility &amp; Control Tower Scope</span><span class="outreach-step-toggle">+</span>
+          </div>
+          <div class="outreach-step-body">
+            <ul class="q-list">
+              <li>How centralized is visibility across Altamira, Colombia NL, Nuevo Laredo, Monterrey Airport and AICM?</li>
+              <li>Would Brahm consider a Control Tower scope for selected strategic lanes rather than transactional shipment handling?</li>
             </ul>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- 11 Strategic Expansion Trajectory -->
+    <!-- 18 Expansion Roadmap -->
     <div class="card">
-      <div class="card-header"><span class="accent">11</span> Strategic Expansion Trajectory</div>
+      <div class="card-header"><span class="accent">18</span> Expansion Roadmap</div>
       <div class="card-body">
-        <div class="phase-grid">
+        <div class="phase-grid" style="grid-template-columns:repeat(5,1fr);">
           <div class="phase-card">
             <div class="phase-num">Phase 1</div>
-            <div class="phase-title">Entry</div>
+            <div class="phase-title">Profitability Stabilization</div>
             <ul class="phase-items">
-              <li>Customs + IMMEX coordination</li>
-              <li>Air freight urgencies</li>
-              <li>Colombia NL / Nuevo Laredo</li>
+              <li>Review 2025 export maritime loss</li>
+              <li>Define pricing controls</li>
+              <li>Define escalation rules</li>
+              <li>Protect margin before expansion</li>
             </ul>
           </div>
           <div class="phase-card">
             <div class="phase-num">Phase 2</div>
-            <div class="phase-title">Integration</div>
+            <div class="phase-title">Air Critical Expansion</div>
             <ul class="phase-items">
-              <li>Altamira ocean management</li>
-              <li>Documentation control</li>
-              <li>Multimodal visibility</li>
+              <li>Convert import air into recurring program</li>
+              <li>Build SOP for urgent Shipments</li>
+              <li>Improve proactive visibility</li>
+              <li>Target production continuity use cases</li>
             </ul>
           </div>
           <div class="phase-card">
             <div class="phase-num">Phase 3</div>
-            <div class="phase-title">Coordination</div>
+            <div class="phase-title">Cross-Border Entry</div>
             <ul class="phase-items">
-              <li>Spain + India supplier sync</li>
-              <li>Warehousing / border staging</li>
-              <li>Unified hub intelligence</li>
+              <li>Colombia NL / Nuevo Laredo coverage</li>
+              <li>Customs coordination</li>
+              <li>Carrier follow-up</li>
+              <li>Border exception management</li>
             </ul>
           </div>
           <div class="phase-card">
             <div class="phase-num">Phase 4</div>
-            <div class="phase-title">ILM / 4PL</div>
+            <div class="phase-title">Maritime Re-Entry</div>
             <ul class="phase-items">
-              <li>Integrated OEM supply chain</li>
-              <li>Proactive urgency management</li>
-              <li>Full operational ownership</li>
+              <li>Altamira import/export control</li>
+              <li>Booking visibility</li>
+              <li>Documentation readiness</li>
+              <li>Port exception management</li>
+            </ul>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">Phase 5</div>
+            <div class="phase-title">ILM / Control Tower</div>
+            <ul class="phase-items">
+              <li>Supplier coordination Spain / India / USA</li>
+              <li>John Deere export visibility</li>
+              <li>Weekly operational cadence</li>
+              <li>Centralized exception reporting</li>
             </ul>
           </div>
         </div>
-        <div style="margin-top:14px;padding:12px 16px;background:rgba(13,43,94,0.04);border-radius:6px;border-left:3px solid #0077a8;">
-          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:4px;">AA+ Classification Justification</div>
-          <p style="font-size:12px;color:var(--text-muted);line-height:1.5;">AA+ for: real multimodal operation with 4 active modes, strong air urgency exposure (101 import + 22 export), OEM ecosystem dependency that elevates every service to critical tier, IMMEX/virtual complexity requiring expert customs brokerage, multi-origin sourcing from Spain and India, and ILM evolution pathway once entry established. Below AAA due to moderate visible value and absence of JIT automotive or pharma-grade regulatory complexity.</p>
+        <div style="margin-top:14px;padding:12px 16px;background:rgba(13,43,94,0.04);border-radius:6px;border-left:3px solid var(--red);">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:4px;">AAA Classification Justification</div>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.5;">AAA Strategic Account: active CLIENT relationship with 680 visible Shipments against 15 captured Shipments, multimodal operation across maritime, air and truck, exposure to Spain, United States, India and France, five active customs and port nodes (Altamira, Colombia NL, Monterrey Airport, AICM, Nuevo Laredo), intra-group and John Deere OEM counterparty structure, and Very High ILM / Control Tower and wallet expansion potential.</p>
         </div>
       </div>
     </div>
@@ -41024,7 +41078,7 @@ const ACCOUNTS = [
   { id:'view-vistamex',  name:'Servicios Vistamex',        sub:'Automotive Plastics · Lighting Electronics · IMMEX Manufacturing · CLIENT / NEW CLIENT', rel:'CLIENT', cls:'AAA',  clsPill:'aaa' },
   { id:'view-laerdal',   name:'Laerdal',                sub:'Medical Manufacturing · Simulation &amp; Training',    rel:'CLIENT', cls:'AAA',  clsPill:'aaa' },
   { id:'view-delmonte',  name:'Del Monte',                 sub:'Food Manufacturing / Citrus Processing / Packaged Food', rel:'CLIENT', cls:'AAA',  clsPill:'aaa' },
-  { id:'view-brahm',     name:'Brahm Precision Products', sub:'Industrial Manufacturing · Precision Components', rel:'CLIENT', cls:'AA+',  clsPill:'aap' },
+  { id:'view-brahm',     name:'Brahm Precision Products', sub:'Brahm Precision Products Corporation México · Industrial Manufacturing · Precision Components · Engine / Machinery Parts · CLIENT / Priority CLIENT Expansion · Mexico / Spain / USA / India / France · Maritime + Air + Truck · Altamira · Colombia NL · Monterrey Airport · AICM · Nuevo Laredo · John Deere ecosystem · Spain sourcing · Air critical · Wallet expansion · ILM / Control Tower', rel:'CLIENT', cls:'AAA',  clsPill:'aaa' },
   { id:'view-invevni',   name:'Invevni',                  sub:'Paper / Recovered Paper · USA → Mexico Industrial Supply · CLIENT / Wallet Expansion', rel:'CLIENT', cls:'AA', clsPill:'aa' },
   { id:'view-skx',       name:'SKX',                       sub:'Export / Air / Cross-Border / IMMEX · Consolidated Account · Expansion Target', rel:'CLIENT', cls:'AA',   clsPill:'aa'  },
   { id:'view-doga',      name:'DOGA México Componentes',  sub:'Automotive / Industrial Components · Expansion / Penetration Target', rel:'CLIENT', cls:'AAA',  clsPill:'aaa' },
