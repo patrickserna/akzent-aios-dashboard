@@ -1156,6 +1156,14 @@ main {
   .print-btn { display: none !important; }
   .rel-tabs { display: none !important; }
   .outreach-step-body { display: block !important; }
+  /* Flex Americas historical appendix — complete but visually secondary in print.
+     Scoped to #view-flex-americas .hist-appendix so no other account is affected. */
+  #view-flex-americas .hist-appendix { break-inside: auto; }
+  #view-flex-americas .hist-appendix .hub-table { font-size: 8.5px !important; min-width: 0 !important; }
+  #view-flex-americas .hist-appendix .hub-table td,
+  #view-flex-americas .hist-appendix .hub-table th { padding: 3px 7px !important; }
+  #view-flex-americas .hist-appendix .hub-table tr { break-inside: avoid; }
+  #view-flex-americas .hist-appendix .outreach-step-header { font-size: 10px; }
   .page-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .card-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .positioning-box { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
@@ -41877,7 +41885,7 @@ main {
           <table class="hub-table" style="margin-top:12px;">
             <tbody>
               <tr><td>Principal corridor</td><td style="text-align:right;font-weight:700;color:var(--navy);">Altamira → Matamoros → Elizabethtown</td></tr>
-              <tr><td>Observed cadence</td><td style="text-align:right;font-weight:700;color:var(--navy);">59.6 Shipments / week</td></tr>
+              <tr><td>Observed route cadence</td><td style="text-align:right;font-weight:700;color:var(--navy);">59.9 Shipments / week</td></tr>
               <tr><td>Modal structure</td><td style="text-align:right;font-weight:700;color:var(--navy);">92.8% Truck</td></tr>
               <tr><td>Gateway dependence</td><td style="text-align:right;font-weight:700;color:var(--navy);">Matamoros 88.03%</td></tr>
               <tr><td>Route status</td><td style="text-align:right;font-weight:800;color:var(--red);font-size:11px;">EXTREME ROUTE CONCENTRATION</td></tr>
@@ -42006,7 +42014,7 @@ main {
             </div>
             <div class="grid-2" style="gap:8px;margin-top:10px;">
               <div class="stat-box" style="background:var(--surface);"><div class="stat-label">Shipments</div><div class="stat-value red" style="font-size:24px;">1,541</div><div class="stat-sub">87.81% of 1,755 Exports</div></div>
-              <div class="stat-box" style="background:var(--surface);"><div class="stat-label">Shipments / Week</div><div class="stat-value red" style="font-size:24px;">59.6</div><div class="stat-sub">Observed cadence</div></div>
+              <div class="stat-box" style="background:var(--surface);"><div class="stat-label">Observed Route Cadence</div><div class="stat-value red" style="font-size:24px;">59.9</div><div class="stat-sub">Shipments / Week · Jan 2 – Jun 30, 2026</div></div>
               <div class="stat-box" style="background:var(--surface);"><div class="stat-label">Active Months</div><div class="stat-value" style="font-size:24px;">6</div><div class="stat-sub">Distinct months with visible Shipments</div></div>
               <div class="stat-box" style="background:var(--surface);"><div class="stat-label">Shipments / Active Month</div><div class="stat-value" style="font-size:24px;">256.8</div><div class="stat-sub">Cumulative coverage 87.81%</div></div>
             </div>
@@ -42018,7 +42026,7 @@ main {
             </div>
             <div class="grid-2" style="gap:8px;margin-top:10px;">
               <div class="stat-box" style="background:var(--surface);"><div class="stat-label">Shipments</div><div class="stat-value" style="font-size:24px;color:var(--text-muted);">2,447</div><div class="stat-sub">84.06% of 2,911 Exports</div></div>
-              <div class="stat-box" style="background:var(--surface);"><div class="stat-label">Shipments / Week</div><div class="stat-value" style="font-size:24px;color:var(--text-muted);">46.9</div><div class="stat-sub">Observed cadence</div></div>
+              <div class="stat-box" style="background:var(--surface);"><div class="stat-label">Observed Route Cadence</div><div class="stat-value" style="font-size:24px;color:var(--text-muted);">47.2</div><div class="stat-sub">Shipments / Week · Jan 2 – Dec 30, 2025</div></div>
               <div class="stat-box" style="background:var(--surface);"><div class="stat-label">Active Months</div><div class="stat-value" style="font-size:24px;color:var(--text-muted);">12</div><div class="stat-sub">Distinct months with visible Shipments</div></div>
               <div class="stat-box" style="background:var(--surface);"><div class="stat-label">Shipments / Active Month</div><div class="stat-value" style="font-size:24px;color:var(--text-muted);">203.9</div><div class="stat-sub">Cumulative coverage 84.06%</div></div>
             </div>
@@ -42053,9 +42061,12 @@ main {
           <span>Rank 1 · 14.40%</span><span>Rank 2 · 28.60%</span><span>Rank 3 · 40.43%</span><span>Ranks 4–40 → 80.08%</span><span>Outside Core Route set · 19.92%</span>
         </div>
 
-        <div style="margin-top:16px;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);">Leading Import Core Routes · Ranks 1–8</div>
+        <div style="margin-top:16px;display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;">
+          <span style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);">Leading Import Core Routes · Ranks 1–8</span>
+          <span style="font-size:10px;color:var(--text-light);">Observed Route Cadence is calculated over each route&rsquo;s own visible date window &mdash; read it together with the Visible Date Range in the complete table.</span>
+        </div>
         <table class="hub-table" style="margin-top:8px;">
-          <thead><tr><th style="text-align:right;">Rank</th><th>Origin Facility → Gateway → Destination</th><th>Mode</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">% Imports</th><th style="text-align:right;">Cumulative</th><th style="text-align:right;">Ship/Wk</th></tr></thead>
+          <thead><tr><th style="text-align:right;">Rank</th><th>Origin Facility → Gateway → Destination</th><th>Mode</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">% Imports</th><th style="text-align:right;">Cumulative</th><th style="text-align:right;" title="Observed Route Cadence — Shipments / Week over the route's own visible date window">Cadence / Wk</th></tr></thead>
           <tbody>
             <tr>
               <td style="text-align:right;font-weight:800;color:var(--navy);">1</td>
@@ -42064,7 +42075,7 @@ main {
               <td style="text-align:right;font-weight:700;color:var(--navy);">73</td>
               <td style="text-align:right;font-weight:700;">14.40%</td>
               <td style="text-align:right;">14.40%</td>
-              <td style="text-align:right;">2.8</td>
+              <td style="text-align:right;">3.0</td>
             </tr>
             <tr>
               <td style="text-align:right;font-weight:800;color:var(--navy);">2</td>
@@ -42073,7 +42084,7 @@ main {
               <td style="text-align:right;font-weight:700;color:var(--navy);">72</td>
               <td style="text-align:right;font-weight:700;">14.20%</td>
               <td style="text-align:right;">28.60%</td>
-              <td style="text-align:right;">2.8</td>
+              <td style="text-align:right;">3.2</td>
             </tr>
             <tr>
               <td style="text-align:right;font-weight:800;color:var(--navy);">3</td>
@@ -42082,7 +42093,7 @@ main {
               <td style="text-align:right;font-weight:700;color:var(--navy);">60</td>
               <td style="text-align:right;font-weight:700;">11.83%</td>
               <td style="text-align:right;">40.43%</td>
-              <td style="text-align:right;">2.3</td>
+              <td style="text-align:right;">16.2</td>
             </tr>
             <tr>
               <td style="text-align:right;font-weight:800;color:var(--navy);">4</td>
@@ -42100,7 +42111,7 @@ main {
               <td style="text-align:right;font-weight:700;color:var(--navy);">15</td>
               <td style="text-align:right;font-weight:700;">2.96%</td>
               <td style="text-align:right;">48.32%</td>
-              <td style="text-align:right;">0.6</td>
+              <td style="text-align:right;">1.4</td>
             </tr>
             <tr>
               <td style="text-align:right;font-weight:800;color:var(--navy);">6</td>
@@ -42118,7 +42129,7 @@ main {
               <td style="text-align:right;font-weight:700;color:var(--navy);">13</td>
               <td style="text-align:right;font-weight:700;">2.56%</td>
               <td style="text-align:right;">53.85%</td>
-              <td style="text-align:right;">0.5</td>
+              <td style="text-align:right;">0.6</td>
             </tr>
             <tr>
               <td style="text-align:right;font-weight:800;color:var(--navy);">8</td>
@@ -42127,7 +42138,7 @@ main {
               <td style="text-align:right;font-weight:700;color:var(--navy);">10</td>
               <td style="text-align:right;font-weight:700;">1.97%</td>
               <td style="text-align:right;">55.82%</td>
-              <td style="text-align:right;">0.4</td>
+              <td style="text-align:right;">0.5</td>
             </tr>
           </tbody>
         </table>
@@ -42143,7 +42154,7 @@ main {
                 <thead><tr>
                   <th style="text-align:right;">Rank</th><th>Origin Facility</th><th>Gateway</th><th>Mode</th>
                   <th style="text-align:right;">Shipments</th><th style="text-align:right;">% Imports</th><th style="text-align:right;">Cumulative</th>
-                  <th style="text-align:right;">Active Mo.</th><th style="text-align:right;">Ship/Mo.</th><th style="text-align:right;">Ship/Wk</th><th>Visible Date Range</th>
+                  <th style="text-align:right;">Active Mo.</th><th style="text-align:right;">Ship/Mo.</th><th style="text-align:right;" title="Observed Route Cadence — Shipments / Week over the route's own visible date window">Cadence / Wk</th><th>Visible Date Range</th>
                 </tr></thead>
                 <tbody>
             <tr style="background:rgba(0,180,216,0.05);">
@@ -42156,7 +42167,7 @@ main {
               <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">14.40%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:14.40%;background:var(--teal);"></div></div></td>
               <td style="text-align:right;">6</td>
               <td style="text-align:right;">12.2</td>
-              <td style="text-align:right;">2.8</td>
+              <td style="text-align:right;">3.0</td>
               <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 7 – Jun 23</td>
             </tr>
             <tr style="background:rgba(0,180,216,0.05);">
@@ -42169,7 +42180,7 @@ main {
               <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">28.60%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:28.60%;background:var(--teal);"></div></div></td>
               <td style="text-align:right;">6</td>
               <td style="text-align:right;">12.0</td>
-              <td style="text-align:right;">2.8</td>
+              <td style="text-align:right;">3.2</td>
               <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 16 – Jun 23</td>
             </tr>
             <tr style="background:rgba(0,180,216,0.05);">
@@ -42182,7 +42193,7 @@ main {
               <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">40.43%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:40.43%;background:var(--teal);"></div></div></td>
               <td style="text-align:right;">1</td>
               <td style="text-align:right;">60.0</td>
-              <td style="text-align:right;">2.3</td>
+              <td style="text-align:right;">16.2</td>
               <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jun 5 – Jun 30</td>
             </tr>
             <tr>
@@ -42208,7 +42219,7 @@ main {
               <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">48.32%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:48.32%;background:var(--teal);"></div></div></td>
               <td style="text-align:right;">4</td>
               <td style="text-align:right;">3.8</td>
-              <td style="text-align:right;">0.6</td>
+              <td style="text-align:right;">1.4</td>
               <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Mar 27 – Jun 8</td>
             </tr>
             <tr>
@@ -42234,7 +42245,7 @@ main {
               <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">53.85%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:53.85%;background:var(--teal);"></div></div></td>
               <td style="text-align:right;">6</td>
               <td style="text-align:right;">2.2</td>
-              <td style="text-align:right;">0.5</td>
+              <td style="text-align:right;">0.6</td>
               <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 10 – Jun 19</td>
             </tr>
             <tr>
@@ -42247,7 +42258,7 @@ main {
               <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">55.82%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:55.82%;background:var(--teal);"></div></div></td>
               <td style="text-align:right;">5</td>
               <td style="text-align:right;">2.0</td>
-              <td style="text-align:right;">0.4</td>
+              <td style="text-align:right;">0.5</td>
               <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Feb 4 – Jun 19</td>
             </tr>
             <tr>
@@ -42260,7 +42271,7 @@ main {
               <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">57.59%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:57.59%;background:var(--teal);"></div></div></td>
               <td style="text-align:right;">3</td>
               <td style="text-align:right;">3.0</td>
-              <td style="text-align:right;">0.3</td>
+              <td style="text-align:right;">0.9</td>
               <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 9 – Mar 18</td>
             </tr>
             <tr>
@@ -42273,7 +42284,7 @@ main {
               <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">59.17%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:59.17%;background:var(--teal);"></div></div></td>
               <td style="text-align:right;">2</td>
               <td style="text-align:right;">4.0</td>
-              <td style="text-align:right;">0.3</td>
+              <td style="text-align:right;">1.7</td>
               <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 15 – Feb 16</td>
             </tr>
             <tr>
@@ -42286,7 +42297,7 @@ main {
               <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">60.55%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:60.55%;background:var(--teal);"></div></div></td>
               <td style="text-align:right;">4</td>
               <td style="text-align:right;">1.8</td>
-              <td style="text-align:right;">0.3</td>
+              <td style="text-align:right;">0.4</td>
               <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Feb 3 – Jun 12</td>
             </tr>
             <tr>
@@ -42299,7 +42310,7 @@ main {
               <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">61.93%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:61.93%;background:var(--teal);"></div></div></td>
               <td style="text-align:right;">2</td>
               <td style="text-align:right;">3.5</td>
-              <td style="text-align:right;">0.3</td>
+              <td style="text-align:right;">3.5</td>
               <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Apr 23 – May 6</td>
             </tr>
             <tr>
@@ -42312,7 +42323,7 @@ main {
               <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">63.31%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:63.31%;background:var(--teal);"></div></div></td>
               <td style="text-align:right;">5</td>
               <td style="text-align:right;">1.4</td>
-              <td style="text-align:right;">0.3</td>
+              <td style="text-align:right;">0.4</td>
               <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 16 – May 20</td>
             </tr>
             <tr>
@@ -42325,7 +42336,7 @@ main {
               <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">64.69%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:64.69%;background:var(--teal);"></div></div></td>
               <td style="text-align:right;">1</td>
               <td style="text-align:right;">7.0</td>
-              <td style="text-align:right;">0.3</td>
+              <td style="text-align:right;">49.0</td>
               <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Mar 9</td>
             </tr>
             <tr>
@@ -42338,7 +42349,7 @@ main {
               <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">65.88%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:65.88%;background:var(--teal);"></div></div></td>
               <td style="text-align:right;">5</td>
               <td style="text-align:right;">1.2</td>
-              <td style="text-align:right;">0.2</td>
+              <td style="text-align:right;">0.3</td>
               <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 9 – Jun 8</td>
             </tr>
             <tr>
@@ -42351,7 +42362,7 @@ main {
               <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">66.67%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:66.67%;background:var(--teal);"></div></div></td>
               <td style="text-align:right;">2</td>
               <td style="text-align:right;">2.0</td>
-              <td style="text-align:right;">0.2</td>
+              <td style="text-align:right;">0.3</td>
               <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 8 – Apr 23</td>
             </tr>
             <tr>
@@ -42364,7 +42375,7 @@ main {
               <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">67.46%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:67.46%;background:var(--teal);"></div></div></td>
               <td style="text-align:right;">2</td>
               <td style="text-align:right;">2.0</td>
-              <td style="text-align:right;">0.2</td>
+              <td style="text-align:right;">0.3</td>
               <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 13 – Apr 10</td>
             </tr>
             <tr>
@@ -42377,7 +42388,7 @@ main {
               <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">68.24%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:68.24%;background:var(--teal);"></div></div></td>
               <td style="text-align:right;">2</td>
               <td style="text-align:right;">2.0</td>
-              <td style="text-align:right;">0.2</td>
+              <td style="text-align:right;">0.8</td>
               <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">May 20 – Jun 25</td>
             </tr>
             <tr>
@@ -42390,7 +42401,7 @@ main {
               <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">69.03%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:69.03%;background:var(--teal);"></div></div></td>
               <td style="text-align:right;">2</td>
               <td style="text-align:right;">2.0</td>
-              <td style="text-align:right;">0.2</td>
+              <td style="text-align:right;">0.8</td>
               <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Apr 24 – May 28</td>
             </tr>
             <tr>
@@ -42403,7 +42414,7 @@ main {
               <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">69.82%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:69.82%;background:var(--teal);"></div></div></td>
               <td style="text-align:right;">2</td>
               <td style="text-align:right;">2.0</td>
-              <td style="text-align:right;">0.2</td>
+              <td style="text-align:right;">0.6</td>
               <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Apr 29 – Jun 17</td>
             </tr>
             <tr>
@@ -42442,7 +42453,7 @@ main {
               <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">71.60%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:71.60%;background:var(--teal);"></div></div></td>
               <td style="text-align:right;">2</td>
               <td style="text-align:right;">1.5</td>
-              <td style="text-align:right;">0.1</td>
+              <td style="text-align:right;">0.2</td>
               <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 30 – May 22</td>
             </tr>
             <tr>
@@ -42455,7 +42466,7 @@ main {
               <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">72.19%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:72.19%;background:var(--teal);"></div></div></td>
               <td style="text-align:right;">1</td>
               <td style="text-align:right;">3.0</td>
-              <td style="text-align:right;">0.1</td>
+              <td style="text-align:right;">1.6</td>
               <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jun 18 – Jun 30</td>
             </tr>
             <tr>
@@ -42468,7 +42479,7 @@ main {
               <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">72.78%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:72.78%;background:var(--teal);"></div></div></td>
               <td style="text-align:right;">1</td>
               <td style="text-align:right;">3.0</td>
-              <td style="text-align:right;">0.1</td>
+              <td style="text-align:right;">1.1</td>
               <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Apr 10 – Apr 29</td>
             </tr>
             <tr>
@@ -42481,7 +42492,7 @@ main {
               <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">73.37%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:73.37%;background:var(--teal);"></div></div></td>
               <td style="text-align:right;">3</td>
               <td style="text-align:right;">1.0</td>
-              <td style="text-align:right;">0.1</td>
+              <td style="text-align:right;">0.2</td>
               <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 23 – May 29</td>
             </tr>
             <tr>
@@ -42494,7 +42505,7 @@ main {
               <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">73.96%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:73.96%;background:var(--teal);"></div></div></td>
               <td style="text-align:right;">3</td>
               <td style="text-align:right;">1.0</td>
-              <td style="text-align:right;">0.1</td>
+              <td style="text-align:right;">0.4</td>
               <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 7 – Mar 6</td>
             </tr>
             <tr>
@@ -42507,7 +42518,7 @@ main {
               <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">74.56%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:74.56%;background:var(--teal);"></div></div></td>
               <td style="text-align:right;">2</td>
               <td style="text-align:right;">1.5</td>
-              <td style="text-align:right;">0.1</td>
+              <td style="text-align:right;">0.4</td>
               <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Apr 9 – Jun 3</td>
             </tr>
             <tr>
@@ -42520,7 +42531,7 @@ main {
               <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">75.15%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:75.15%;background:var(--teal);"></div></div></td>
               <td style="text-align:right;">1</td>
               <td style="text-align:right;">3.0</td>
-              <td style="text-align:right;">0.1</td>
+              <td style="text-align:right;">1.0</td>
               <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Apr 7 – Apr 28</td>
             </tr>
             <tr>
@@ -42533,7 +42544,7 @@ main {
               <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">75.74%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:75.74%;background:var(--teal);"></div></div></td>
               <td style="text-align:right;">1</td>
               <td style="text-align:right;">3.0</td>
-              <td style="text-align:right;">0.1</td>
+              <td style="text-align:right;">1.4</td>
               <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Feb 13 – Feb 27</td>
             </tr>
             <tr>
@@ -42546,7 +42557,7 @@ main {
               <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">76.33%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:76.33%;background:var(--teal);"></div></div></td>
               <td style="text-align:right;">2</td>
               <td style="text-align:right;">1.5</td>
-              <td style="text-align:right;">0.1</td>
+              <td style="text-align:right;">0.9</td>
               <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Feb 16 – Mar 10</td>
             </tr>
             <tr>
@@ -42559,7 +42570,7 @@ main {
               <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">76.92%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:76.92%;background:var(--teal);"></div></div></td>
               <td style="text-align:right;">2</td>
               <td style="text-align:right;">1.5</td>
-              <td style="text-align:right;">0.1</td>
+              <td style="text-align:right;">0.7</td>
               <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Feb 16 – Mar 18</td>
             </tr>
             <tr>
@@ -42585,7 +42596,7 @@ main {
               <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">77.71%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:77.71%;background:var(--teal);"></div></div></td>
               <td style="text-align:right;">2</td>
               <td style="text-align:right;">1.0</td>
-              <td style="text-align:right;">0.1</td>
+              <td style="text-align:right;">0.3</td>
               <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Feb 11 – Mar 26</td>
             </tr>
             <tr>
@@ -42598,7 +42609,7 @@ main {
               <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">78.11%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:78.11%;background:var(--teal);"></div></div></td>
               <td style="text-align:right;">2</td>
               <td style="text-align:right;">1.0</td>
-              <td style="text-align:right;">0.1</td>
+              <td style="text-align:right;">0.3</td>
               <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Apr 9 – May 20</td>
             </tr>
             <tr>
@@ -42611,7 +42622,7 @@ main {
               <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">78.50%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:78.50%;background:var(--teal);"></div></div></td>
               <td style="text-align:right;">1</td>
               <td style="text-align:right;">2.0</td>
-              <td style="text-align:right;">0.1</td>
+              <td style="text-align:right;">0.9</td>
               <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 7 – Jan 22</td>
             </tr>
             <tr>
@@ -42624,7 +42635,7 @@ main {
               <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">78.90%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:78.90%;background:var(--teal);"></div></div></td>
               <td style="text-align:right;">2</td>
               <td style="text-align:right;">1.0</td>
-              <td style="text-align:right;">0.1</td>
+              <td style="text-align:right;">0.4</td>
               <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Apr 16 – May 20</td>
             </tr>
             <tr>
@@ -42637,7 +42648,7 @@ main {
               <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">79.29%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:79.29%;background:var(--teal);"></div></div></td>
               <td style="text-align:right;">1</td>
               <td style="text-align:right;">2.0</td>
-              <td style="text-align:right;">0.1</td>
+              <td style="text-align:right;">14.0</td>
               <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 9</td>
             </tr>
             <tr>
@@ -42650,7 +42661,7 @@ main {
               <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">79.68%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:79.68%;background:var(--teal);"></div></div></td>
               <td style="text-align:right;">1</td>
               <td style="text-align:right;">2.0</td>
-              <td style="text-align:right;">0.1</td>
+              <td style="text-align:right;">14.0</td>
               <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jun 9</td>
             </tr>
             <tr>
@@ -42677,7 +42688,7 @@ main {
               </table>
             </div>
             <div style="padding:12px 16px;border-top:1px solid var(--border);">
-              <span style="font-size:10px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--navy);">Frequency standard:</strong> the AIOS Shipments / Week definition is Shipments ÷ ((Last Visible Shipment Date − First Visible Shipment Date + 1 day) ÷ 7). <strong>Active Months</strong> = distinct calendar months containing at least one visible Shipment for the route. Both measure <strong>observed cadence only</strong> and are never annualized. <strong>Route-level cadence values shown here are supplied by AIOS and are not recalculated on this page</strong> — read a route&rsquo;s cadence together with its Visible Date Range, since several Core Routes are visible only inside part of the period. Addresses are shown at the precision Panjiva provides; where no address exists the row states <strong>“Address not available in Panjiva”</strong>, and where only country-level precision exists it is labelled as a <strong>Panjiva location precision</strong> rather than a street address.</span>
+              <span style="font-size:10px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--navy);">Observed Route Cadence:</strong> Shipments / Week = Shipments ÷ ((Last Visible Shipment Date − First Visible Shipment Date + 1 day) ÷ 7). <strong>Cadence is calculated over each route&rsquo;s own visible date window and should be read together with the Visible Date Range.</strong> <strong>Active Months</strong> = distinct calendar months containing at least one visible Shipment for the route. Both measure <strong>observed cadence only</strong> and are never annualized. Several Core Routes are visible on only a few days &mdash; a mathematically correct cadence can therefore appear high. <strong style="color:#b45309;">A short-window cadence is not sustained weekly capacity and is never extrapolated into a normalized weekly forecast.</strong> Addresses are shown at the precision Panjiva provides; where no address exists the row states <strong>&ldquo;Address not available in Panjiva&rdquo;</strong>, and where only country-level precision exists it is labelled as a <strong>Panjiva location precision</strong> rather than a street address.</span>
             </div>
           </div>
         </div>
@@ -42991,18 +43002,18 @@ main {
           <thead><tr><th>Structural Dimension</th><th>2025 · Established Structure</th><th>Current YTD 2026 · Current State</th><th>Observed Change</th></tr></thead>
           <tbody>
             <tr><td><strong>Principal Export corridor</strong></td><td style="color:var(--text-muted);">Altamira → Matamoros → Elizabethtown · 84.06%</td><td><strong>Same corridor · 87.81%</strong></td><td style="color:#059669;font-weight:700;">Persisting · higher visible share</td></tr>
-            <tr><td><strong>Export cadence on that corridor</strong></td><td style="color:var(--text-muted);">46.9 Shipments / week</td><td><strong>59.6 Shipments / week</strong></td><td style="color:#059669;font-weight:700;">Higher observed cadence</td></tr>
+            <tr><td><strong>Observed route cadence on that corridor</strong></td><td style="color:var(--text-muted);">47.2 Shipments / week</td><td><strong>59.9 Shipments / week</strong></td><td style="color:#059669;font-weight:700;">Higher observed cadence</td></tr>
             <tr><td><strong>Import Core Route count for ≥80%</strong></td><td style="color:var(--text-muted);">84 routes → 80.00%</td><td><strong>40 routes → 80.08%</strong></td><td style="color:var(--text-muted);">Partial-period observation · not comparable as an annual total</td></tr>
             <tr><td><strong>Leading inbound mode</strong></td><td style="color:var(--text-muted);">Air 41.9%</td><td><strong>Maritime 43.0% · Truck 40.4%</strong></td><td style="color:#b45309;font-weight:700;">Modal shift · Air share lower</td></tr>
             <tr><td><strong>Leading Import gateway</strong></td><td style="color:var(--text-muted);">Altamira 31.98%</td><td><strong>Matamoros 40.24%</strong></td><td style="color:#b45309;font-weight:700;">Gateway shift</td></tr>
             <tr><td><strong>Leading Import origin country</strong></td><td style="color:var(--text-muted);">🇮🇳 India 24.91%</td><td><strong>🇺🇸 United States 35.70%</strong></td><td style="color:#b45309;font-weight:700;">Higher United States visible share</td></tr>
             <tr><td><strong>Flex-branded inbound partners</strong></td><td style="color:var(--text-muted);">Flex Films Africa · Flex Films USA · Flex PET Egypt · Flex P. Films Egypt · Flex Middle East FZE</td><td><strong>Flex Films Africa · Flex Films USA · Flex PET Egypt · Flex P. Films Egypt · Flex Americas (Houston)</strong></td><td style="color:var(--text-muted);">Flex-branded entities visible in both periods</td></tr>
-            <tr><td><strong>Polyquest Inc.</strong></td><td style="color:var(--text-light);">Not visible in the 2025 Core Route set</td><td><strong>Rank 3 · 11.83% of YTD Imports</strong></td><td style="color:var(--teal-dim);font-weight:700;">Newly visible YTD</td></tr>
-            <tr><td><strong>Applied Materials Web Coating · Bobst North America · Europe Direct</strong></td><td style="color:var(--text-muted);">Visible in the 2025 Core Route set</td><td style="color:var(--text-light);">Not visible in the Current YTD Core Route set</td><td style="color:var(--text-muted);">Not visible Current YTD</td></tr>
+            <tr><td><strong>Polyquest Inc.</strong></td><td style="color:var(--text-light);">Not visible in the 2025 Core Route set</td><td><strong>Rank 3 · 11.83% of YTD Imports</strong></td><td style="color:var(--teal-dim);font-weight:700;">Newly visible in Current YTD Core Route set</td></tr>
+            <tr><td><strong>Applied Materials Web Coating · Bobst North America · Europe Direct</strong></td><td style="color:var(--text-muted);">Visible in the 2025 Core Route set</td><td style="color:var(--text-light);">Not visible in the Current YTD Core Route set</td><td style="color:var(--text-muted);">Not visible in Current YTD Core Route set</td></tr>
           </tbody>
         </table>
         <div style="margin-top:12px;padding:10px 14px;background:rgba(245,158,11,0.06);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
-          <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:#b45309;">Language discipline:</strong> a 2025 route that is not visible in the Current YTD Core Route set is described as <strong>“not visible Current YTD”</strong> — never as discontinued, terminated, a lost supplier or a provider change. Current YTD is a partial period and the Core Route set is a ≥80% cut, not a complete inventory of all activity.</span>
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:#b45309;">Language discipline:</strong> route change is described only as <strong>Visible in both periods</strong>, <strong>Persisting Core Route</strong>, <strong>Newly visible in Current YTD Core Route set</strong>, <strong>Not visible in Current YTD Core Route set</strong>, <strong>Higher / Lower visible share</strong>, <strong>Gateway shift</strong> or <strong>Modal shift</strong> — never as discontinued, terminated, a lost supplier, a provider change or a new supplier. Current YTD is a partial period and the Core Route set is only the smallest set reaching ≥80% — not the complete universe of every Shipment, so absence from a Core Route set is not evidence that a flow stopped or that a partner is new.</span>
         </div>
       </div>
     </div>
@@ -43200,6 +43211,46 @@ main {
       </div>
     </div>
 
+    <!-- 21b DATA QUALITY / ENTITY RESOLUTION HYPOTHESIS -->
+    <div class="card">
+      <div class="card-body" style="padding:0;">
+        <div style="padding:14px 18px;background:rgba(217,119,6,0.05);border-left:3px solid #d97706;">
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+            <span style="font-size:9px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:#fff;background:#d97706;padding:3px 9px;border-radius:3px;">Data Quality / Entity Resolution Hypothesis — Requires Validation</span>
+            <span style="font-size:11px;color:var(--text-muted);">Source / entity / geography ambiguity — distinct from the Discovery Hypothesis above, which concerns business and ownership structure</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:16px;margin-top:12px;">
+            <div>
+              <strong style="font-size:10px;color:#b45309;text-transform:uppercase;letter-spacing:1.2px;">Observed Source Signals</strong>
+              <ul class="q-list" style="margin-top:6px;font-size:11px;line-height:1.55;">
+                <li><strong>Flex PET (Egypt) S.A.E.</strong> with Panjiva location precision shown as Trinidad and Tobago</li>
+                <li><strong>Singh Timber Traders</strong> with Panjiva location precision shown only at United States level</li>
+                <li><strong>Flex Americas S.A. de C.V.</strong> appearing as an inbound Origin Partner with a Houston address</li>
+              </ul>
+            </div>
+            <div>
+              <strong style="font-size:10px;color:#b45309;text-transform:uppercase;letter-spacing:1.2px;">Hypothesis</strong>
+              <p style="font-size:11px;color:var(--text-muted);line-height:1.6;margin-top:6px;">The visible patterns may reflect corporate or billing addresses, alternate facilities, intermediaries, filing / attribution behavior, entity-resolution issues, or source-data precision limitations.</p>
+              <p style="font-size:11px;color:var(--text-muted);line-height:1.6;margin-top:6px;"><strong style="color:var(--navy);">AIOS treatment:</strong> these records are displayed <strong>exactly as Panjiva supplied them</strong> and are never silently corrected or geocoded.</p>
+            </div>
+            <div>
+              <strong style="font-size:10px;color:#b45309;text-transform:uppercase;letter-spacing:1.2px;">Requires Validation</strong>
+              <ul class="q-list" style="margin-top:6px;font-size:11px;line-height:1.55;">
+                <li>Physical shipping origin versus corporate address</li>
+                <li>Affiliate identity</li>
+                <li>Intermediary involvement</li>
+                <li>Facility attribution</li>
+                <li>Whether the Panjiva geography represents the operational origin facility</li>
+              </ul>
+            </div>
+          </div>
+          <div style="margin-top:10px;padding-top:9px;border-top:1px solid rgba(217,119,6,0.25);">
+            <span style="font-size:10px;color:var(--text-muted);line-height:1.6;">This hypothesis <strong>does not alter the finalized Core Route calculations</strong> without explicit AIOS validation. It is not a Panjiva Fact, not an AIOS Calculation and not finalized intelligence.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- 22 HISTORICAL STRUCTURE — 2025 -->
     <div class="card">
       <div class="card-header" style="background:#64748b;"><span style="color:#cbd5e1;">22</span> Historical Structure — 2025 Established Operating Structure</div>
@@ -43231,7 +43282,7 @@ main {
           <tbody>
             <tr>
               <td style="text-align:right;font-weight:700;">1</td>
-              <td><strong>Flex Americas S.A. de C.V. — Altamira</strong> → <strong>Matamoros Border</strong> → <strong>Flex Films (USA) Inc. — Elizabethtown</strong><div style="font-size:9px;color:var(--text-light);">Active Months 12 · 203.9 Shipments / Active Month · 46.9 Shipments / Week · Jan 2 – Dec 30, 2025</div></td>
+              <td><strong>Flex Americas S.A. de C.V. — Altamira</strong> → <strong>Matamoros Border</strong> → <strong>Flex Films (USA) Inc. — Elizabethtown</strong><div style="font-size:9px;color:var(--text-light);">Active Months 12 · 203.9 Shipments / Active Month · 47.2 Shipments / Week observed route cadence · Jan 2 – Dec 30, 2025</div></td>
               <td><span class="hub-tag truck">Truck</span></td>
               <td style="text-align:right;font-weight:700;">2,447</td>
               <td style="text-align:right;font-weight:700;">84.06%</td>
@@ -43338,12 +43389,16 @@ main {
           </tbody>
         </table>
 
-        <div class="outreach-step" style="margin-top:14px;">
+        <div class="outreach-step hist-appendix" style="margin-top:14px;">
           <div class="outreach-step-header" onclick="toggleAccordion(this)">
             <span>View 2025 Established Core Route Structure — 84 Routes / 80.00% of 2025 Imports</span>
             <span class="outreach-step-toggle">+</span>
           </div>
           <div class="outreach-step-body" style="padding:0;">
+            <div class="hist-appendix-label" style="padding:10px 16px;background:var(--bg);border-bottom:1px solid var(--border);">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-light);">Historical Core Route Appendix — 2025</div>
+              <div style="font-size:10px;color:var(--text-muted);margin-top:2px;">Reference detail only. The Current Operating State above remains the primary narrative.</div>
+            </div>
             <div style="overflow-x:auto;">
               <table class="hub-table" style="font-size:11px;min-width:820px;">
                 <thead><tr>
@@ -44150,7 +44205,7 @@ main {
                 <li><strong>Facility and Gateway remain separate</strong> operational dimensions</li>
                 <li>Panjiva addresses are preserved at the available precision and never externally enriched</li>
                 <li>HS operational-presence counts are <strong>non-additive</strong></li>
-                <li>Shipments / Week uses the <strong>observed route date window</strong></li>
+                <li>Shipments / Week is <strong>Observed Route Cadence</strong> over the route&rsquo;s <strong>own visible date window</strong> &mdash; never a full-period denominator, and never extrapolated</li>
                 <li>As a <strong>LEAD</strong>, this page contains no Akzent captured-business metrics — no Wallet, Penetration, Coverage, Revenue, GP or Margin. The only “coverage” shown is Core Route cumulative Shipment coverage</li>
                 <li><strong>Discovery Hypotheses require validation</strong> and are displayed separately from Panjiva Facts, AIOS Calculations and AIOS Interpretations</li>
               </ul>
