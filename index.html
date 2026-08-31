@@ -1173,6 +1173,15 @@ main {
   #view-skf .hist-appendix .hub-table th { padding: 3px 7px !important; }
   #view-skf .hist-appendix .hub-table tr { break-inside: avoid; }
   #view-skf .hist-appendix .outreach-step-header { font-size: 10px; }
+
+  /* ACCUDYN DE MEXICO historical appendix — complete but visually secondary in print.
+     Scoped to #view-accudyn .hist-appendix so no other account is affected. */
+  #view-accudyn .hist-appendix { break-inside: auto; }
+  #view-accudyn .hist-appendix .hub-table { font-size: 8.5px !important; min-width: 0 !important; }
+  #view-accudyn .hist-appendix .hub-table td,
+  #view-accudyn .hist-appendix .hub-table th { padding: 3px 7px !important; }
+  #view-accudyn .hist-appendix .hub-table tr { break-inside: avoid; }
+  #view-accudyn .hist-appendix .outreach-step-header { font-size: 10px; }
   .page-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .card-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .positioning-box { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
@@ -1368,6 +1377,11 @@ main {
     </div>
     <div class="nav-item" onclick="showView('view-skf', this)">
       <span>◆</span> <span style="flex:1;">SKF de México</span>
+      <span class="recent-cls" style="background:rgba(245,158,11,0.2);color:#f59e0b;">LEAD</span>
+      <span class="recent-cls aaa">AAA</span>
+    </div>
+    <div class="nav-item" onclick="showView('view-accudyn', this)">
+      <span>◆</span> <span style="flex:1;">ACCUDYN</span>
       <span class="recent-cls" style="background:rgba(245,158,11,0.2);color:#f59e0b;">LEAD</span>
       <span class="recent-cls aaa">AAA</span>
     </div>
@@ -2522,6 +2536,38 @@ main {
         <span class="acct-tag">Reynosa</span>
         <span class="acct-tag">Nuevo Laredo</span>
         <span class="acct-tag">USA Export</span>
+        <span class="acct-tag">Control Tower</span>
+      </div>
+    </div>
+
+    <!-- ACCUDYN DE MEXICO -->
+    <div class="account-card aaa" onclick="showViewById('view-accudyn')">
+      <div class="account-card-header">
+        <div>
+          <div class="account-name">ACCUDYN DE MEXICO</div>
+          <div class="account-industry">Industrial Manufacturing</div>
+        </div>
+        <div style="display:flex;gap:5px;align-items:center;flex-shrink:0;">
+          <span class="account-cls-badge lead">LEAD</span>
+          <span class="account-cls-badge aaa">AAA</span>
+        </div>
+      </div>
+      <div class="account-metrics" style="grid-template-columns:repeat(4,1fr);">
+        <div class="acct-metric"><div class="acct-metric-val">584</div><div class="acct-metric-lbl">YTD Shipments</div></div>
+        <div class="acct-metric"><div class="acct-metric-val" style="color:#b45309;">−5.3%</div><div class="acct-metric-lbl">Comparable · observed</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">150</div><div class="acct-metric-lbl">Imports</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">434</div><div class="acct-metric-lbl">Exports</div></div>
+      </div>
+      <div style="margin-top:10px;padding:8px 10px;background:rgba(196,30,58,0.05);border-left:3px solid var(--red);border-radius:0 4px 4px 0;">
+        <div style="font-size:9px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:var(--red);">Operational Complexity · HIGH</div>
+        <div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;margin-top:2px;">3 Import Core Routes to 82.7% vs 30 Export Core Routes to 80.2%</div>
+      </div>
+      <div class="account-tags">
+        <span class="acct-tag" style="background:rgba(245,158,11,0.12);color:#b45309;border-color:rgba(245,158,11,0.3);">LEAD</span>
+        <span class="acct-tag">Cross-Border</span>
+        <span class="acct-tag">Air</span>
+        <span class="acct-tag">IMMEX</span>
+        <span class="acct-tag">Customs</span>
         <span class="acct-tag">Control Tower</span>
       </div>
     </div>
@@ -13018,6 +13064,16 @@ main {
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot"></div></div></td>
               <td><div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div></div></td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td style="color:#b45309;font-weight:700;font-size:11px;">★ PRIORITY TARGET</td>
+            </tr>
+            <tr onclick="showViewById('view-accudyn')" style="cursor:pointer;">
+              <td><strong>ACCUDYN DE MEXICO</strong> <span style="font-size:10px;font-weight:600;color:#b45309;background:rgba(245,158,11,0.12);padding:1px 5px;border-radius:3px;margin-left:4px;">LEAD</span></td>
+              <td><span class="cls-pill aaa">AAA</span></td>
+              <td style="color:var(--text-muted);" title="Relationship LEAD · Classification AAA Strategic Target · Industry Industrial Manufacturing · Operational Complexity HIGH · Current YTD Shipments 584 · Imports 150 (25.7%) · Exports 434 (74.3%) · Comparable Jan 1–Jul 30 actual-vs-actual change −5.3% · Imports −20.6% · Exports +1.4% · Core Network 3 Import Core Routes to 82.7% / 30 Export Core Routes to 80.2% · Primary Gateway Structure Ciudad Juárez / Zaragoza-Isleta · Import gateway concentration 90.7% · Modes Truck / Air / limited Maritime plus material Unknown component · 61 Air Export Shipments · IMMEX and virtual-transfer structures · multiple customs agents · Leading Trading Partner Accudyn Products Inc. 76.7% of Imports · Opportunity Operational Complexity + Customs + ILM · Panjiva Visible Logistics Universe">Industrial Manufacturing</td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td><div class="dots"><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div></td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot"></div></div></td>
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
               <td style="color:#b45309;font-weight:700;font-size:11px;">★ PRIORITY TARGET</td>
             </tr>
@@ -44863,6 +44919,1639 @@ main {
   </div>
 </div>
 
+
+<!-- ══ ACCUDYN DE MEXICO — TARGET ACCOUNT · LEAD ══ -->
+<div id="view-accudyn" class="view">
+  <div class="page-header">
+    <div class="page-header-left">
+      <div class="page-header-eyebrow">Target Account · LEAD · Panjiva Visible Logistics Universe</div>
+      <div class="page-header-title">ACCUDYN DE MEXICO</div>
+      <div class="page-header-sub">Industrial Manufacturing · Engineering Resin Inputs &amp; Molded / Electrical-Apparatus Components · IMMEX · Complejo Industrial Chihuahua · Ciudad Juárez &amp; Zaragoza-Isleta Border Structure</div>
+    </div>
+    <div class="page-header-meta">
+      <span class="classification-badge lead">LEAD</span>
+      <span class="classification-badge aaa">AAA</span>
+      <button class="print-btn" onclick="printView('view-accudyn')">⬇ Export PDF</button>
+    </div>
+  </div>
+  <div class="content-body">
+
+    <!-- Identity strip — Relationship and Classification are independent dimensions -->
+    <div class="card">
+      <div class="card-body" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 18px;">
+        <span style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);">Relationship Status</span>
+        <span class="classification-badge lead">LEAD</span>
+        <span style="width:1px;height:20px;background:var(--border);"></span>
+        <span style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);">AIOS Classification</span>
+        <span class="classification-badge aaa">AAA</span>
+        <span style="font-size:11px;color:var(--text-muted);">Strategic Target</span>
+        <span style="width:1px;height:20px;background:var(--border);"></span>
+        <span style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);">Operational Complexity</span>
+        <span style="font-size:13px;font-weight:800;color:var(--red);letter-spacing:0.5px;">HIGH</span>
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;flex:1;min-width:300px;text-align:right;">
+          <strong style="color:var(--navy);">Pre-commercial.</strong> Akzent does not currently manage this account. All figures are drawn exclusively from the <strong>Panjiva visible logistics universe</strong>.
+        </span>
+      </div>
+    </div>
+
+    <!-- 01 EXECUTIVE INTELLIGENCE — CURRENT OPERATING STATE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">01</span> Executive Intelligence — Current Operating State · January 5 – July 30, 2026</div>
+      <div class="card-body">
+        <div class="grid-4" style="gap:10px;">
+          <div class="stat-box"><div class="stat-label">Visible Shipments · Current YTD</div><div class="stat-value teal" style="font-size:32px;">584</div><div class="stat-sub">Jan 5 – Jul 30, 2026 · observed, never annualized</div></div>
+          <div class="stat-box" style="border-color:rgba(245,158,11,0.35);background:rgba(245,158,11,0.05);"><div class="stat-label">Comparable-Period Change</div><div class="stat-value" style="font-size:32px;color:#b45309;">−5.3%</div><div class="stat-sub">Jan 1 – Jul 30 · <strong>617</strong> → <strong>584</strong> · actual vs actual</div></div>
+          <div class="stat-box"><div class="stat-label">Exports</div><div class="stat-value" style="font-size:32px;">434</div><div class="stat-sub">74.3% of Current YTD Shipments</div></div>
+          <div class="stat-box"><div class="stat-label">Imports</div><div class="stat-value" style="font-size:32px;">150</div><div class="stat-sub">25.7% of Current YTD Shipments</div></div>
+        </div>
+        <div class="grid-4" style="gap:10px;margin-top:10px;">
+          <div class="stat-box" style="border-left:3px solid var(--red);"><div class="stat-label">Import Core Routes ≥80%</div><div class="stat-value red" style="font-size:26px;">3 <span style="font-size:15px;color:var(--text-muted);font-weight:700;">= 82.7%</span></div><div class="stat-sub">Concentrated inbound architecture</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">Export Core Routes ≥80%</div><div class="stat-value teal" style="font-size:26px;">30 <span style="font-size:15px;color:var(--text-muted);font-weight:700;">= 80.2%</span></div><div class="stat-sub">Distributed outbound architecture</div></div>
+          <div class="stat-box"><div class="stat-label">Visible CIF Value · Current YTD</div><div class="stat-value" style="font-size:26px;">USD 26.86M</div><div class="stat-sub">Imports 7.04M · Exports 19.82M · approximate</div></div>
+          <div class="stat-box"><div class="stat-label">Modes Visible · Current YTD</div><div class="stat-value" style="font-size:22px;">Truck · Air · Maritime</div><div class="stat-sub">Plus a material <strong>Unknown</strong> mode component</div></div>
+        </div>
+
+        <div style="margin-top:16px;padding:18px 22px;background:linear-gradient(135deg,rgba(13,43,94,0.05) 0%,rgba(196,30,58,0.05) 100%);border-left:3px solid var(--red);border-radius:0 6px 6px 0;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--red);margin-bottom:8px;">Primary AIOS Conclusion</div>
+          <div style="font-size:21px;font-weight:800;color:var(--navy);line-height:1.35;">Structurally asymmetric network — concentrated inbound<br>+ fragmented outbound + customs / multimodal coordination complexity</div>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.7;margin-top:10px;max-width:940px;">Current YTD inbound is highly concentrated around the <strong>Chihuahua / Ciudad Juárez operating structure</strong> and the recurring <strong>Accudyn Products</strong> relationship — <strong>3 Import Core Routes</strong> reach 82.7%. Outbound is substantially more distributed: <strong>30 Export Core Routes</strong> are required to reach 80.2% of visible Export Shipments. The network combines cross-border Truck, Air, limited Maritime activity, multiple gateways, multiple customs agents and IMMEX / virtual-transfer structures.</p>
+          <p style="font-size:11px;color:var(--text-muted);line-height:1.7;margin-top:8px;"><strong style="color:var(--navy);">This is an AIOS interpretation of the visible network. It is not confirmed customer pain.</strong> Every module below supplies evidence for this conclusion rather than restating it.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 COMPARABLE-PERIOD TREND -->
+    <div class="card">
+      <div class="card-header"><span class="accent">02</span> Comparable-Period Trend — Observed Actual vs Observed Actual</div>
+      <div class="card-body">
+        <div style="display:grid;grid-template-columns:minmax(320px,1.05fr) 1.35fr;gap:22px;align-items:stretch;">
+
+          <div style="padding:18px 20px;background:var(--bg);border:1px solid var(--border);border-radius:8px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal-dim);">Primary Comparison</div>
+            <div style="font-size:14px;font-weight:800;color:var(--navy);margin-top:3px;">Jan 1 – Jul 30, 2025 vs 2026 YTD · Actual</div>
+            <div style="font-size:10px;color:var(--text-muted);margin-top:2px;">Equal observed windows · never annualized</div>
+
+            <div style="display:flex;align-items:flex-end;justify-content:center;gap:40px;margin-top:22px;height:230px;">
+              <div style="display:flex;flex-direction:column;align-items:center;">
+                <div style="font-size:20px;font-weight:800;color:var(--navy);margin-bottom:6px;">617</div>
+                <div style="width:76px;height:180px;display:flex;flex-direction:column;justify-content:flex-end;border-radius:5px 5px 0 0;overflow:hidden;">
+                  <div style="height:55px;background:var(--teal);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;">189</div>
+                  <div style="height:125px;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;">428</div>
+                </div>
+                <div style="font-size:11px;font-weight:700;color:var(--text-muted);margin-top:7px;letter-spacing:0.5px;">2025 comparable</div>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;padding-bottom:60px;">
+                <div style="font-size:15px;font-weight:800;color:#b45309;">▼ −5.3%</div>
+                <div style="font-size:9px;color:var(--text-light);letter-spacing:0.5px;">observed</div>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;">
+                <div style="font-size:20px;font-weight:800;color:var(--navy);margin-bottom:6px;">584</div>
+                <div style="width:76px;height:170px;display:flex;flex-direction:column;justify-content:flex-end;border-radius:5px 5px 0 0;overflow:hidden;">
+                  <div style="height:44px;background:var(--teal);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;">150</div>
+                  <div style="height:126px;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;">434</div>
+                </div>
+                <div style="font-size:11px;font-weight:700;color:var(--navy);margin-top:7px;letter-spacing:0.5px;">2026 YTD</div>
+              </div>
+            </div>
+
+            <div style="display:flex;gap:16px;justify-content:center;margin-top:14px;padding-top:12px;border-top:1px solid var(--border);">
+              <span style="display:inline-flex;align-items:center;gap:6px;font-size:10px;color:var(--text-muted);"><span style="width:10px;height:10px;border-radius:2px;background:var(--navy);"></span> Exports</span>
+              <span style="display:inline-flex;align-items:center;gap:6px;font-size:10px;color:var(--text-muted);"><span style="width:10px;height:10px;border-radius:2px;background:var(--teal);"></span> Imports</span>
+              <span style="font-size:10px;color:var(--text-light);">Observed Shipments · not annualized</span>
+            </div>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div class="grid-3" style="gap:10px;">
+              <div class="stat-box" style="border-top:3px solid #b45309;"><div class="stat-label">Total Shipments</div><div class="stat-value" style="font-size:26px;color:#b45309;">−5.3%</div><div class="stat-sub">617 → 584</div></div>
+              <div class="stat-box" style="border-top:3px solid var(--red);"><div class="stat-label">Imports</div><div class="stat-value" style="font-size:26px;color:var(--red);">−20.6%</div><div class="stat-sub">189 → 150</div></div>
+              <div class="stat-box" style="border-top:3px solid #059669;"><div class="stat-label">Exports</div><div class="stat-value" style="font-size:26px;color:#059669;">+1.4%</div><div class="stat-sub">428 → 434</div></div>
+            </div>
+
+            <div style="padding:14px 16px;background:rgba(13,43,94,0.03);border-radius:6px;border:1px solid var(--border);">
+              <strong style="font-size:10px;color:var(--navy);text-transform:uppercase;letter-spacing:1.5px;">AIOS Interpretation</strong>
+              <p style="font-size:12px;color:var(--text-muted);line-height:1.7;margin-top:6px;">The net reduction in visible activity is <strong>driven by Imports</strong>, while Export activity remains <strong>essentially stable with slight visible growth</strong>.</p>
+              <p style="font-size:11px;color:var(--text-light);line-height:1.6;margin-top:6px;">This is an <strong>observed comparison of two equal calendar windows</strong>. It is not annualized and it does <strong>not</strong> establish why visible Import activity is lower.</p>
+            </div>
+
+            <div style="padding:12px 16px;background:rgba(245,158,11,0.06);border-left:3px solid #f59e0b;border-radius:0 6px 6px 0;">
+              <strong style="font-size:10px;color:#b45309;text-transform:uppercase;letter-spacing:1.5px;">Causal Discipline</strong>
+              <p style="font-size:11px;color:var(--text-muted);line-height:1.7;margin-top:6px;">The visible Import decline is <strong>not</strong> described as demand contraction, supplier loss, production decline, insourcing, provider change or any other causal explanation. Panjiva establishes <strong>what is visible</strong>, not <strong>why it changed</strong>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 IMPORT / EXPORT MIX -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">03</span> Import / Export Mix — Two Different Network Structures</div>
+      <div class="card-body" style="padding:12px 18px;background:rgba(245,158,11,0.05);">
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;">Inbound and outbound are <strong>not one logistics problem</strong>. Inbound is a <strong>concentrated corridor feeding one Chihuahua facility</strong>. Outbound is a <strong>broadly distributed network of destinations, geographies and Trading Partners</strong> leaving it. Each implies a different kind of operational control.</span>
+      </div>
+    </div>
+    <div class="grid-2" style="margin-top:0;">
+      <div class="card">
+        <div class="card-header" style="background:rgba(0,180,216,0.06);">Inbound — Concentrated · 150 Imports · 25.7%</div>
+        <div class="card-body">
+          <div class="grid-2" style="gap:10px;">
+            <div class="stat-box"><div class="stat-label">Import Core Routes</div><div class="stat-value teal" style="font-size:30px;">3</div><div class="stat-sub">Smallest set reaching ≥80%</div></div>
+            <div class="stat-box"><div class="stat-label">Cumulative Coverage</div><div class="stat-value teal" style="font-size:30px;">82.7%</div><div class="stat-sub">of 150 Current YTD Imports</div></div>
+          </div>
+          <table class="hub-table" style="margin-top:12px;">
+            <tbody>
+              <tr><td>Largest single Import Core Route</td><td style="text-align:right;font-weight:700;color:var(--navy);">49.3% of Imports</td></tr>
+              <tr><td>Destination facility for all 3 Core Routes</td><td style="text-align:right;font-weight:700;color:var(--navy);">Complejo Industrial Chihuahua</td></tr>
+              <tr><td>Gateway concentration</td><td style="text-align:right;font-weight:700;color:var(--navy);">Zaragoza-Isleta + Cd. Juárez 90.7%</td></tr>
+              <tr><td>Leading Trading Partner</td><td style="text-align:right;font-weight:700;color:var(--navy);">Accudyn Products Inc. 76.7%</td></tr>
+              <tr><td>Modal structure</td><td style="text-align:right;font-weight:700;color:var(--navy);">Truck 52.0% · Unknown 43.3%</td></tr>
+            </tbody>
+          </table>
+          <div style="margin-top:12px;padding:10px 14px;background:rgba(0,180,216,0.05);border-left:3px solid var(--teal);border-radius:0 5px 5px 0;">
+            <span style="font-size:11px;color:var(--text-muted);line-height:1.6;">Three Core Routes reach 82.7% coverage. <strong>No single route exceeds 80%</strong>, so this is <strong>not</strong> labelled extreme route concentration. Control value sits in <strong>corridor capacity, customs execution and border visibility</strong>.</span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" style="background:rgba(232,0,45,0.06);">Outbound — Distributed · 434 Exports · 74.3%</div>
+        <div class="card-body">
+          <div class="grid-2" style="gap:10px;">
+            <div class="stat-box"><div class="stat-label">Export Core Routes</div><div class="stat-value red" style="font-size:30px;">30</div><div class="stat-sub">Smallest set reaching ≥80%</div></div>
+            <div class="stat-box"><div class="stat-label">Cumulative Coverage</div><div class="stat-value red" style="font-size:30px;">80.2%</div><div class="stat-sub">of 434 Current YTD Exports</div></div>
+          </div>
+          <table class="hub-table" style="margin-top:12px;">
+            <tbody>
+              <tr><td>Largest single Export Core Route</td><td style="text-align:right;font-weight:700;color:var(--navy);">14.3% of Exports</td></tr>
+              <tr><td>Routes tied at the top of the set</td><td style="text-align:right;font-weight:700;color:var(--navy);">2 routes at 14.3% each</td></tr>
+              <tr><td>Gateway structure</td><td style="text-align:right;font-weight:700;color:var(--navy);">Border · Airport · Port</td></tr>
+              <tr><td>Air Export Shipments</td><td style="text-align:right;font-weight:700;color:var(--navy);">61 · 14.1%</td></tr>
+              <tr><td>Modal structure</td><td style="text-align:right;font-weight:700;color:var(--navy);">Unknown 53.7% · Truck 32.0%</td></tr>
+            </tbody>
+          </table>
+          <div style="margin-top:12px;padding:10px 14px;background:rgba(232,0,45,0.05);border-left:3px solid var(--red);border-radius:0 5px 5px 0;">
+            <span style="font-size:11px;color:var(--text-muted);line-height:1.6;">Thirty routes are required to explain 80.2% of visible outbound activity. Control value sits in <strong>coordination workload, exception management, multimodal visibility and customs documentation governance</strong> across many small recurring flows.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 MODAL INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">04</span> Modal Intelligence — Current YTD · Unknown Preserved Explicitly</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:18px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);margin-bottom:10px;">Imports · 150 Shipments</div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>🚛 Truck</strong><span>78 · 52.0%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:100%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>◻ Unknown</strong><span>65 · 43.3%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:83%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>✈ Air</strong><span>6 · 4.0%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:8%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>🚢 Maritime</strong><span>1 · 0.7%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:2%"></div></div></div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);margin-bottom:10px;">Exports · 434 Shipments</div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>◻ Unknown</strong><span>233 · 53.7%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:100%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>🚛 Truck</strong><span>139 · 32.0%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:60%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>✈ Air</strong><span>61 · 14.1%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:26%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>🚢 Maritime</strong><span>1 · 0.2%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:1%"></div></div></div>
+          </div>
+        </div>
+        <div class="grid-2" style="gap:12px;margin-top:14px;">
+          <div style="padding:12px 16px;background:rgba(13,43,94,0.03);border-radius:6px;border:1px solid var(--border);">
+            <strong style="font-size:10px;color:var(--navy);text-transform:uppercase;letter-spacing:1.5px;">AIOS Interpretation</strong>
+            <p style="font-size:11px;color:var(--text-muted);line-height:1.7;margin-top:6px;">Cross-border <strong>Truck</strong> is the leading identified inbound mode. Outbound combines Truck with a meaningful <strong>Air</strong> component — <strong>61 Air Export Shipments</strong> — and a single visible Maritime Shipment in each direction.</p>
+          </div>
+          <div style="padding:12px 16px;background:rgba(217,119,6,0.06);border-left:3px solid #d97706;border-radius:0 6px 6px 0;">
+            <strong style="font-size:10px;color:#b45309;text-transform:uppercase;letter-spacing:1.5px;">Unknown Mode — Preserved, Never Reclassified</strong>
+            <p style="font-size:11px;color:var(--text-muted);line-height:1.7;margin-top:6px;">A material share of Transport Method records is <strong>Unknown</strong> — 43.3% of Imports and 53.7% of Exports. These records are <strong>preserved exactly as Panjiva supplied them</strong> and are never redistributed into Truck, Air or Maritime. Modal shares must be read with this data-precision limitation in view.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 05 GATEWAY INTELLIGENCE -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">05</span> Gateway Intelligence — Border · Airport · Port</div>
+      <div class="card-body" style="padding:12px 18px;">
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--navy);">AIOS Interpretation:</strong> inbound execution is visibly concentrated around the <strong>Ciudad Juárez gateway structure</strong>, while outbound uses a broader set of border and airport gateways. This is an <strong>observed concentration signal — it is not confirmed pain</strong>. Gateway type labels are applied only where the gateway identity supports them.</span>
+      </div>
+    </div>
+    <div class="grid-2" style="margin-top:0;">
+      <div class="card">
+        <div class="card-header" style="background:rgba(0,180,216,0.06);">Import Gateways · Current YTD · 150 Imports</div>
+        <div class="card-body">
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Puente Internacional Zaragoza-Isleta <span class="hub-tag border">Border</span></strong><span>75 · 50.0%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:100%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Ciudad Juárez <span class="hub-tag border">Border</span></strong><span>61 · 40.7%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:81%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Aeropuerto Int. Plan de Guadalupe, Ramos Arizpe <span class="hub-tag air">Airport</span></strong><span>5</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:7%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Querétaro, Santiago de Querétaro</strong><span>4</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:5%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Manzanillo, Colima <span class="hub-tag ocean">Port</span></strong><span>1</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:1%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Colombia, Nuevo León <span class="hub-tag border">Border</span></strong><span>1</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:1%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Aeropuerto Int. Gral. Mariano Escobedo, Apodaca <span class="hub-tag air">Airport</span></strong><span>1</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:1%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Nuevo Laredo, Tamaulipas <span class="hub-tag border">Border</span></strong><span>1</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:1%"></div></div></div>
+          <div style="margin-top:12px;padding:10px 14px;background:rgba(232,0,45,0.05);border-left:3px solid var(--red);border-radius:0 5px 5px 0;">
+            <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--red);">Zaragoza-Isleta + Ciudad Juárez = 90.7%</strong> of Current YTD Imports. This is an <strong>observed concentration signal, not confirmed pain</strong>.</span>
+          </div>
+          <div style="margin-top:8px;font-size:10px;color:var(--text-light);line-height:1.5;">Gateway rows below the two leading entries are shown as <strong>Shipment counts as supplied</strong>; percentages are displayed only where the finalized AIOS intelligence provides them. Querétaro is displayed without a gateway-type label because the supplied gateway identity does not establish one.</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" style="background:rgba(232,0,45,0.06);">Export Gateways · Current YTD · 434 Exports</div>
+        <div class="card-body">
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Ciudad Juárez <span class="hub-tag border">Border</span></strong><span>238 · 54.8%</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:100%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Puente Internacional Zaragoza-Isleta <span class="hub-tag border">Border</span></strong><span>89 · 20.5%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:37%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Aeropuerto Int. Gral. Mariano Escobedo, Apodaca <span class="hub-tag air">Airport</span></strong><span>42 · 9.7%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:18%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Aeropuerto Int. Gral. Roberto Fierro Villalobos, Chihuahua <span class="hub-tag air">Airport</span></strong><span>38 · 8.8%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:16%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Colombia, Nuevo León <span class="hub-tag border">Border</span></strong><span>13 · 3.0%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:5%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Monterrey, Gral. Mariano Escobedo, N.L.</strong><span>12 · 2.8%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:5%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Guadalupe-Tornillo, Guadalupe de Bravo <span class="hub-tag border">Border</span></strong><span>1</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:1%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Altamira, Tamaulipas <span class="hub-tag ocean">Port</span></strong><span>1</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:1%"></div></div></div>
+          <div style="margin-top:12px;padding:10px 14px;background:rgba(13,43,94,0.03);border-radius:5px;border:1px solid var(--border);">
+            <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--navy);">AIOS Interpretation:</strong> outbound uses <strong>two border gateways and two airports</strong> at material scale. Ciudad Juárez exposure is extensive in both directions, and Air gateways carry a meaningful outbound component.</span>
+          </div>
+          <div style="margin-top:8px;font-size:10px;color:var(--text-light);line-height:1.5;"><strong>Monterrey, Gral. Mariano Escobedo, N.L.</strong> is displayed without a gateway-type label: it is supplied as a distinct gateway from the Apodaca airport entry, and the supplied identity does not establish its type.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 06 CURRENT YTD IMPORT CORE ROUTES -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">06</span> Current YTD Import Core Routes — Complete ≥80% Set</div>
+      <div class="card-body" style="padding:12px 18px;">
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--navy);">Core Route Standard:</strong> the smallest route set reaching at least <strong>80% cumulative Shipments</strong> of its own directional universe. Imports and Exports use <strong>separate denominators</strong>. Import universe = <strong>150 Shipments</strong>. The complete set is displayed — never truncated to a Top 5 or Top 10.</span>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:0;">
+        <div class="grid-3" style="gap:10px;padding:14px 18px;">
+          <div class="stat-box"><div class="stat-label">Import Core Routes</div><div class="stat-value teal" style="font-size:28px;">3</div><div class="stat-sub">Complete ≥80% set</div></div>
+          <div class="stat-box"><div class="stat-label">Cumulative Coverage</div><div class="stat-value teal" style="font-size:28px;">82.7%</div><div class="stat-sub">of 150 Current YTD Imports</div></div>
+          <div class="stat-box"><div class="stat-label">Route Concentration Label</div><div class="stat-value" style="font-size:15px;">Concentrated — not extreme</div><div class="stat-sub">No single route exceeds 80%</div></div>
+        </div>
+        <div style="overflow-x:auto;">
+          <table class="hub-table" style="font-size:11px;min-width:1080px;">
+            <thead><tr>
+              <th style="text-align:right;">Rank</th><th>Origin</th><th>Gateway</th><th>Mode</th>
+              <th style="text-align:right;">Shipments</th><th style="text-align:right;">% Imports</th><th style="text-align:right;">Cumulative</th>
+              <th style="text-align:right;">Active Months</th><th style="text-align:right;">/ Month</th><th style="text-align:right;">/ Week</th><th>Visible Date Range</th>
+            </tr></thead>
+            <tbody>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">1</td>
+                <td><strong>🇺🇸 2400 Yoder Drive, Erie Pennsylvania 16506</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">United States</div></td>
+                <td title="PUENTE INTERNACIONAL ZARAGOZA-ISLETA, CIUDAD JUAREZ, CHIHUAHUA."><strong>Zaragoza-Isleta</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                <td><span class="hub-tag truck">Truck</span></td>
+                <td style="text-align:right;font-weight:700;color:var(--navy);">74</td>
+                <td style="text-align:right;font-weight:700;">49.3%</td>
+                <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">49.3%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:49.3%;background:var(--teal);"></div></div></td>
+                <td style="text-align:right;">7</td>
+                <td style="text-align:right;">10.57</td>
+                <td style="text-align:right;">2.51</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 5 – Jul 29</td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">2</td>
+                <td><strong style="color:var(--text-light);font-style:italic;">Address not available in Panjiva</strong></td>
+                <td title="CIUDAD JUAREZ, CIUDAD JUAREZ, CHIHUAHUA."><strong>Ciudad Juárez</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                <td><span class="hub-tag" style="background:rgba(107,114,128,0.12);color:#4b5563;">Unknown</span></td>
+                <td style="text-align:right;font-weight:700;color:var(--navy);">29</td>
+                <td style="text-align:right;font-weight:700;">19.3%</td>
+                <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">68.7%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:68.7%;background:var(--teal);"></div></div></td>
+                <td style="text-align:right;">7</td>
+                <td style="text-align:right;">4.14</td>
+                <td style="text-align:right;">1.09</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 9 – Jul 13</td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">3</td>
+                <td><strong>🇺🇸 2400 Yoder Drive, Erie Pennsylvania 16506</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">United States</div></td>
+                <td title="CIUDAD JUAREZ, CIUDAD JUAREZ, CHIHUAHUA."><strong>Ciudad Juárez</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                <td><span class="hub-tag" style="background:rgba(107,114,128,0.12);color:#4b5563;">Unknown</span></td>
+                <td style="text-align:right;font-weight:700;color:var(--navy);">21</td>
+                <td style="text-align:right;font-weight:700;">14.0%</td>
+                <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">82.7%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:82.7%;background:var(--teal);"></div></div></td>
+                <td style="text-align:right;">7</td>
+                <td style="text-align:right;">3.00</td>
+                <td style="text-align:right;">0.84</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 13 – Jul 7</td>
+              </tr>
+            </tbody>
+            <tfoot><tr style="background:var(--bg);">
+              <td colspan="4" style="font-weight:800;color:var(--navy);padding:10px 12px;">3 Core Routes · Destination Facility for all rows: Avenida Victor Huga No 341 Complejo Industrial Chihuahua</td>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">124</td>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">82.7%</td>
+              <td style="text-align:right;font-weight:800;color:var(--teal-dim);">82.7%</td>
+              <td colspan="4"></td>
+            </tr></tfoot>
+          </table>
+        </div>
+        <div style="padding:12px 16px;border-top:1px solid var(--border);">
+          <span style="font-size:10px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--navy);">Executive takeaway:</strong> three Import Core Routes reach <strong>82.7%</strong> coverage. Because <strong>no single route exceeds 80%</strong>, this structure is described as <strong>concentrated</strong> and is deliberately <strong>not</strong> labelled EXTREME ROUTE CONCENTRATION. Route 2 carries <strong>&ldquo;Address not available in Panjiva&rdquo;</strong> — no geography is invented and no address is silently completed.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 07 CURRENT YTD EXPORT CORE ROUTES -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">07</span> Current YTD Export Core Routes — Complete ≥80% Set · 30 Routes</div>
+      <div class="card-body" style="padding:12px 18px;">
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;">Export universe = <strong>434 Shipments</strong>. <strong>Thirty routes</strong> are required to reach 80.2% — a substantially more distributed outbound network than inbound. The <strong>complete 30-route set is displayed</strong> and is never truncated. <strong style="color:#b45309;">Route Rank is observed Shipment frequency only — it is never a Commercial Route Priority.</strong></span>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:0;">
+        <div class="grid-4" style="gap:10px;padding:14px 18px;">
+          <div class="stat-box"><div class="stat-label">Export Core Routes</div><div class="stat-value red" style="font-size:28px;">30</div><div class="stat-sub">Complete ≥80% set</div></div>
+          <div class="stat-box"><div class="stat-label">Cumulative Coverage</div><div class="stat-value red" style="font-size:28px;">80.2%</div><div class="stat-sub">of 434 Current YTD Exports</div></div>
+          <div class="stat-box"><div class="stat-label">Largest Single Route</div><div class="stat-value" style="font-size:28px;">14.3%</div><div class="stat-sub">Two routes tied at 62 Shipments</div></div>
+          <div class="stat-box"><div class="stat-label">Routes Below 2% Share</div><div class="stat-value" style="font-size:28px;">23</div><div class="stat-sub">of the 30 Core Routes</div></div>
+        </div>
+        <div style="overflow-x:auto;">
+          <table class="hub-table" style="font-size:11px;min-width:1180px;">
+            <thead><tr>
+              <th style="text-align:right;">Rank</th><th>Destination</th><th>Gateway</th><th>Mode</th>
+              <th style="text-align:right;">Shipments</th><th style="text-align:right;">% Exports</th><th style="text-align:right;">Cumulative</th>
+              <th style="text-align:right;">Active Months</th><th style="text-align:right;">/ Month</th><th style="text-align:right;">/ Week</th><th>Visible Date Range</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">1</td>
+              <td><strong>🇺🇸 United States</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Panjiva country-level location precision</div></td>
+              <td title="CIUDAD JUAREZ, CIUDAD JUAREZ, CHIHUAHUA."><strong>Ciudad Juárez</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+              <td style="white-space:nowrap;"><span class="hub-tag" style="background:rgba(107,114,128,0.12);color:#4b5563;">Unknown 33</span> <span class="hub-tag truck">Truck 29</span></td>
+              <td style="text-align:right;font-weight:700;color:var(--navy);">62</td>
+              <td style="text-align:right;font-weight:700;">14.3%</td>
+              <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">14.3%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:14.3%;background:var(--teal);"></div></div></td>
+              <td style="text-align:right;">7</td>
+              <td style="text-align:right;">8.86</td>
+              <td style="text-align:right;">2.12</td>
+              <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 7 – Jul 30</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">2</td>
+              <td><strong>🇺🇸 2400 Yoder Drive, Erie Pennsylvania 16506</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">United States</div></td>
+              <td title="PUENTE INTERNACIONAL ZARAGOZA-ISLETA, CIUDAD JUAREZ, CHIHUAHUA."><strong>Zaragoza-Isleta</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+              <td style="white-space:nowrap;"><span class="hub-tag truck">Truck</span></td>
+              <td style="text-align:right;font-weight:700;color:var(--navy);">62</td>
+              <td style="text-align:right;font-weight:700;">14.3%</td>
+              <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">28.6%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:28.6%;background:var(--teal);"></div></div></td>
+              <td style="text-align:right;">7</td>
+              <td style="text-align:right;">8.86</td>
+              <td style="text-align:right;">2.21</td>
+              <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 9 – Jul 23</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">3</td>
+              <td><strong>🇨🇳 China</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Panjiva country-level location precision</div></td>
+              <td title="AEROPUERTO INTERNACIONAL GENERAL MARIANO ESCOBEDO, APODACA, NUEVO LEON."><strong>Gral. Mariano Escobedo</strong><div style="font-size:9px;color:var(--text-light);">Airport</div></td>
+              <td style="white-space:nowrap;"><span class="hub-tag air">Air</span></td>
+              <td style="text-align:right;font-weight:700;color:var(--navy);">19</td>
+              <td style="text-align:right;font-weight:700;">4.4%</td>
+              <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">32.9%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:32.9%;background:var(--teal);"></div></div></td>
+              <td style="text-align:right;">7</td>
+              <td style="text-align:right;">2.71</td>
+              <td style="text-align:right;">0.68</td>
+              <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 13 – Jul 28</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">4</td>
+              <td><strong>🇲🇽 Mexico</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Panjiva country-level location precision</div></td>
+              <td title="CIUDAD JUAREZ, CIUDAD JUAREZ, CHIHUAHUA."><strong>Ciudad Juárez</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+              <td style="white-space:nowrap;"><span class="hub-tag" style="background:rgba(107,114,128,0.12);color:#4b5563;">Unknown</span></td>
+              <td style="text-align:right;font-weight:700;color:var(--navy);">17</td>
+              <td style="text-align:right;font-weight:700;">3.9%</td>
+              <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">36.9%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:36.9%;background:var(--teal);"></div></div></td>
+              <td style="text-align:right;">7</td>
+              <td style="text-align:right;">2.43</td>
+              <td style="text-align:right;">0.65</td>
+              <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 16 – Jul 17</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">5</td>
+              <td><strong>🇺🇸 United States</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Panjiva country-level location precision</div></td>
+              <td title="AEROPUERTO INTERNACIONAL GENERAL. ROBERTO FIERRO VILLALOBOS, CHIHUAHUA, CHIHUAHUA."><strong>Gral. Roberto Fierro Villalobos</strong><div style="font-size:9px;color:var(--text-light);">Airport</div></td>
+              <td style="white-space:nowrap;"><span class="hub-tag truck">Truck 11</span> <span class="hub-tag air">Air 5</span></td>
+              <td style="text-align:right;font-weight:700;color:var(--navy);">16</td>
+              <td style="text-align:right;font-weight:700;">3.7%</td>
+              <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">40.6%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:40.6%;background:var(--teal);"></div></div></td>
+              <td style="text-align:right;">7</td>
+              <td style="text-align:right;">2.29</td>
+              <td style="text-align:right;">0.61</td>
+              <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 28 – Jul 29</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">6</td>
+              <td><strong>🇪🇸 Spain</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Panjiva country-level location precision</div></td>
+              <td title="CIUDAD JUAREZ, CIUDAD JUAREZ, CHIHUAHUA."><strong>Ciudad Juárez</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+              <td style="white-space:nowrap;"><span class="hub-tag" style="background:rgba(107,114,128,0.12);color:#4b5563;">Unknown</span></td>
+              <td style="text-align:right;font-weight:700;color:var(--navy);">11</td>
+              <td style="text-align:right;font-weight:700;">2.5%</td>
+              <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">43.1%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:43.1%;background:var(--teal);"></div></div></td>
+              <td style="text-align:right;">6</td>
+              <td style="text-align:right;">1.83</td>
+              <td style="text-align:right;">0.49</td>
+              <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 9 – Jun 15</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">7</td>
+              <td><strong>🇺🇸 11311 Concept Boulevard, Largo Florida 33773</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">United States</div></td>
+              <td title="CIUDAD JUAREZ, CIUDAD JUAREZ, CHIHUAHUA."><strong>Ciudad Juárez</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+              <td style="white-space:nowrap;"><span class="hub-tag" style="background:rgba(107,114,128,0.12);color:#4b5563;">Unknown 8</span> <span class="hub-tag truck">Truck 1</span></td>
+              <td style="text-align:right;font-weight:700;color:var(--navy);">9</td>
+              <td style="text-align:right;font-weight:700;">2.1%</td>
+              <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">45.2%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:45.2%;background:var(--teal);"></div></div></td>
+              <td style="text-align:right;">6</td>
+              <td style="text-align:right;">1.50</td>
+              <td style="text-align:right;">0.44</td>
+              <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Feb 20 – Jul 13</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">8</td>
+              <td><strong>🇺🇸 Old Country Rd, HUNTINGTN STA, NY 11747</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">USA</div></td>
+              <td title="PUENTE INTERNACIONAL ZARAGOZA-ISLETA, CIUDAD JUAREZ, CHIHUAHUA."><strong>Zaragoza-Isleta</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+              <td style="white-space:nowrap;"><span class="hub-tag truck">Truck</span></td>
+              <td style="text-align:right;font-weight:700;color:var(--navy);">9</td>
+              <td style="text-align:right;font-weight:700;">2.1%</td>
+              <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">47.2%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:47.2%;background:var(--teal);"></div></div></td>
+              <td style="text-align:right;">5</td>
+              <td style="text-align:right;">1.80</td>
+              <td style="text-align:right;">0.46</td>
+              <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 14 – May 29</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">9</td>
+              <td><strong>🇨🇴 Colombia</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Panjiva country-level location precision</div></td>
+              <td title="CIUDAD JUAREZ, CIUDAD JUAREZ, CHIHUAHUA."><strong>Ciudad Juárez</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+              <td style="white-space:nowrap;"><span class="hub-tag" style="background:rgba(107,114,128,0.12);color:#4b5563;">Unknown</span></td>
+              <td style="text-align:right;font-weight:700;color:var(--navy);">8</td>
+              <td style="text-align:right;font-weight:700;">1.8%</td>
+              <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">49.1%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:49.1%;background:var(--teal);"></div></div></td>
+              <td style="text-align:right;">7</td>
+              <td style="text-align:right;">1.14</td>
+              <td style="text-align:right;">0.31</td>
+              <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 13 – Jul 9</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">10</td>
+              <td><strong>🇲🇽 Parque Industrial Juarez, Cd Juárez, Chih.</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Mexico</div></td>
+              <td title="CIUDAD JUAREZ, CIUDAD JUAREZ, CHIHUAHUA."><strong>Ciudad Juárez</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+              <td style="white-space:nowrap;"><span class="hub-tag" style="background:rgba(107,114,128,0.12);color:#4b5563;">Unknown</span></td>
+              <td style="text-align:right;font-weight:700;color:var(--navy);">8</td>
+              <td style="text-align:right;font-weight:700;">1.8%</td>
+              <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">50.9%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:50.9%;background:var(--teal);"></div></div></td>
+              <td style="text-align:right;">5</td>
+              <td style="text-align:right;">1.60</td>
+              <td style="text-align:right;">0.58</td>
+              <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Feb 27 – Jun 3</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">11</td>
+              <td><strong>🇮🇹 Italy</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Panjiva country-level location precision</div></td>
+              <td title="AEROPUERTO INTERNACIONAL GENERAL. ROBERTO FIERRO VILLALOBOS, CHIHUAHUA, CHIHUAHUA."><strong>Gral. Roberto Fierro Villalobos</strong><div style="font-size:9px;color:var(--text-light);">Airport</div></td>
+              <td style="white-space:nowrap;"><span class="hub-tag air">Air</span></td>
+              <td style="text-align:right;font-weight:700;color:var(--navy);">7</td>
+              <td style="text-align:right;font-weight:700;">1.6%</td>
+              <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">52.5%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:52.5%;background:var(--teal);"></div></div></td>
+              <td style="text-align:right;">5</td>
+              <td style="text-align:right;">1.40</td>
+              <td style="text-align:right;">0.33</td>
+              <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 15 – Jun 10</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">12</td>
+              <td><strong>🇺🇸 6801 Haggerty Road, Canton Michigan 48187</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">United States</div></td>
+              <td title="CIUDAD JUAREZ, CIUDAD JUAREZ, CHIHUAHUA."><strong>Ciudad Juárez</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+              <td style="white-space:nowrap;"><span class="hub-tag" style="background:rgba(107,114,128,0.12);color:#4b5563;">Unknown</span></td>
+              <td style="text-align:right;font-weight:700;color:var(--navy);">7</td>
+              <td style="text-align:right;font-weight:700;">1.6%</td>
+              <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">54.1%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:54.1%;background:var(--teal);"></div></div></td>
+              <td style="text-align:right;">7</td>
+              <td style="text-align:right;">1.00</td>
+              <td style="text-align:right;">0.29</td>
+              <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 15 – Jul 3</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">13</td>
+              <td><strong>🇺🇸 7200 Suter Road, Coopersburg Pennsylvania 18036</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">United States</div></td>
+              <td title="CIUDAD JUAREZ, CIUDAD JUAREZ, CHIHUAHUA."><strong>Ciudad Juárez</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+              <td style="white-space:nowrap;"><span class="hub-tag" style="background:rgba(107,114,128,0.12);color:#4b5563;">Unknown</span></td>
+              <td style="text-align:right;font-weight:700;color:var(--navy);">7</td>
+              <td style="text-align:right;font-weight:700;">1.6%</td>
+              <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">55.8%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:55.8%;background:var(--teal);"></div></div></td>
+              <td style="text-align:right;">7</td>
+              <td style="text-align:right;">1.00</td>
+              <td style="text-align:right;">0.27</td>
+              <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 20 – Jul 17</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">14</td>
+              <td><strong>🇺🇸 8100 West Florissant Avenue, Saint Louis Missouri 63136</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">United States</div></td>
+              <td title="CIUDAD JUAREZ, CIUDAD JUAREZ, CHIHUAHUA."><strong>Ciudad Juárez</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+              <td style="white-space:nowrap;"><span class="hub-tag" style="background:rgba(107,114,128,0.12);color:#4b5563;">Unknown</span></td>
+              <td style="text-align:right;font-weight:700;color:var(--navy);">7</td>
+              <td style="text-align:right;font-weight:700;">1.6%</td>
+              <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">57.4%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:57.4%;background:var(--teal);"></div></div></td>
+              <td style="text-align:right;">7</td>
+              <td style="text-align:right;">1.00</td>
+              <td style="text-align:right;">0.27</td>
+              <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 20 – Jul 17</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">15</td>
+              <td><strong>🇲🇽 Avenida Rosa Ma. y Fuentes No. 7151, Parque Industrial Fuentes, Ciudad Juárez Chihuahua</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Mexico</div></td>
+              <td title="CIUDAD JUAREZ, CIUDAD JUAREZ, CHIHUAHUA."><strong>Ciudad Juárez</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+              <td style="white-space:nowrap;"><span class="hub-tag" style="background:rgba(107,114,128,0.12);color:#4b5563;">Unknown</span></td>
+              <td style="text-align:right;font-weight:700;color:var(--navy);">7</td>
+              <td style="text-align:right;font-weight:700;">1.6%</td>
+              <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">59.0%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:59.0%;background:var(--teal);"></div></div></td>
+              <td style="text-align:right;">7</td>
+              <td style="text-align:right;">1.00</td>
+              <td style="text-align:right;">0.27</td>
+              <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 29 – Jul 28</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">16</td>
+              <td><strong>🇲🇽 Blvd. Insurgentes No. 8503-2, Col. Cerro Colorado, Delegacion La Presa, Tijuana Baja California North</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Mexico</div></td>
+              <td title="CIUDAD JUAREZ, CIUDAD JUAREZ, CHIHUAHUA."><strong>Ciudad Juárez</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+              <td style="white-space:nowrap;"><span class="hub-tag" style="background:rgba(107,114,128,0.12);color:#4b5563;">Unknown</span></td>
+              <td style="text-align:right;font-weight:700;color:var(--navy);">7</td>
+              <td style="text-align:right;font-weight:700;">1.6%</td>
+              <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">60.6%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:60.6%;background:var(--teal);"></div></div></td>
+              <td style="text-align:right;">6</td>
+              <td style="text-align:right;">1.17</td>
+              <td style="text-align:right;">0.33</td>
+              <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Feb 24 – Jul 20</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">17</td>
+              <td><strong>🇲🇽 Del Parque, Chihuahua Chihuahua 31125</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Mexico</div></td>
+              <td title="CIUDAD JUAREZ, CIUDAD JUAREZ, CHIHUAHUA."><strong>Ciudad Juárez</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+              <td style="white-space:nowrap;"><span class="hub-tag" style="background:rgba(107,114,128,0.12);color:#4b5563;">Unknown</span></td>
+              <td style="text-align:right;font-weight:700;color:var(--navy);">7</td>
+              <td style="text-align:right;font-weight:700;">1.6%</td>
+              <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">62.2%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:62.2%;background:var(--teal);"></div></div></td>
+              <td style="text-align:right;">7</td>
+              <td style="text-align:right;">1.00</td>
+              <td style="text-align:right;">0.27</td>
+              <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 7 – Jul 6</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">18</td>
+              <td><strong>🇺🇸 Livernois Rd, Troy, MI 48083</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">USA</div></td>
+              <td title="CIUDAD JUAREZ, CIUDAD JUAREZ, CHIHUAHUA."><strong>Ciudad Juárez</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+              <td style="white-space:nowrap;"><span class="hub-tag" style="background:rgba(107,114,128,0.12);color:#4b5563;">Unknown</span></td>
+              <td style="text-align:right;font-weight:700;color:var(--navy);">7</td>
+              <td style="text-align:right;font-weight:700;">1.6%</td>
+              <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">63.8%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:63.8%;background:var(--teal);"></div></div></td>
+              <td style="text-align:right;">7</td>
+              <td style="text-align:right;">1.00</td>
+              <td style="text-align:right;">0.28</td>
+              <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 15 – Jul 9</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">19</td>
+              <td><strong>🇳🇴 Norway</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Panjiva country-level location precision</div></td>
+              <td title="CIUDAD JUAREZ, CIUDAD JUAREZ, CHIHUAHUA."><strong>Ciudad Juárez</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+              <td style="white-space:nowrap;"><span class="hub-tag" style="background:rgba(107,114,128,0.12);color:#4b5563;">Unknown</span></td>
+              <td style="text-align:right;font-weight:700;color:var(--navy);">7</td>
+              <td style="text-align:right;font-weight:700;">1.6%</td>
+              <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">65.4%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:65.4%;background:var(--teal);"></div></div></td>
+              <td style="text-align:right;">7</td>
+              <td style="text-align:right;">1.00</td>
+              <td style="text-align:right;">0.28</td>
+              <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 21 – Jul 14</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">20</td>
+              <td><strong>🇨🇭 Switzerland</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Panjiva country-level location precision</div></td>
+              <td title="CIUDAD JUAREZ, CIUDAD JUAREZ, CHIHUAHUA."><strong>Ciudad Juárez</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+              <td style="white-space:nowrap;"><span class="hub-tag" style="background:rgba(107,114,128,0.12);color:#4b5563;">Unknown</span></td>
+              <td style="text-align:right;font-weight:700;color:var(--navy);">7</td>
+              <td style="text-align:right;font-weight:700;">1.6%</td>
+              <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">67.1%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:67.1%;background:var(--teal);"></div></div></td>
+              <td style="text-align:right;">7</td>
+              <td style="text-align:right;">1.00</td>
+              <td style="text-align:right;">0.27</td>
+              <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 8 – Jul 10</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">21</td>
+              <td><strong>🇪🇸 Ávila</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Spain</div></td>
+              <td title="CIUDAD JUAREZ, CIUDAD JUAREZ, CHIHUAHUA."><strong>Ciudad Juárez</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+              <td style="white-space:nowrap;"><span class="hub-tag" style="background:rgba(107,114,128,0.12);color:#4b5563;">Unknown</span></td>
+              <td style="text-align:right;font-weight:700;color:var(--navy);">7</td>
+              <td style="text-align:right;font-weight:700;">1.6%</td>
+              <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">68.7%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:68.7%;background:var(--teal);"></div></div></td>
+              <td style="text-align:right;">7</td>
+              <td style="text-align:right;">1.00</td>
+              <td style="text-align:right;">0.28</td>
+              <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 20 – Jul 13</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">22</td>
+              <td><strong>Accudyn Products Inc.</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Trading Partner — facility address not available in Panjiva</div></td>
+              <td title="AEROPUERTO INTERNACIONAL GENERAL MARIANO ESCOBEDO, APODACA, NUEVO LEON."><strong>Gral. Mariano Escobedo</strong><div style="font-size:9px;color:var(--text-light);">Airport</div></td>
+              <td style="white-space:nowrap;"><span class="hub-tag air">Air</span></td>
+              <td style="text-align:right;font-weight:700;color:var(--navy);">6</td>
+              <td style="text-align:right;font-weight:700;">1.4%</td>
+              <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">70.0%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:70.0%;background:var(--teal);"></div></div></td>
+              <td style="text-align:right;">4</td>
+              <td style="text-align:right;">1.50</td>
+              <td style="text-align:right;">0.22</td>
+              <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 15 – Jul 24</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">23</td>
+              <td><strong>🇲🇽 AV CRISTOBAL COLON CHIHUAHUA 31136</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Mexico</div></td>
+              <td title="CIUDAD JUAREZ, CIUDAD JUAREZ, CHIHUAHUA."><strong>Ciudad Juárez</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+              <td style="white-space:nowrap;"><span class="hub-tag" style="background:rgba(107,114,128,0.12);color:#4b5563;">Unknown</span></td>
+              <td style="text-align:right;font-weight:700;color:var(--navy);">6</td>
+              <td style="text-align:right;font-weight:700;">1.4%</td>
+              <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">71.4%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:71.4%;background:var(--teal);"></div></div></td>
+              <td style="text-align:right;">6</td>
+              <td style="text-align:right;">1.00</td>
+              <td style="text-align:right;">0.27</td>
+              <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 7 – Jun 12</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">24</td>
+              <td><strong>🇺🇸 570 Polaris Parkway, Ste 201, Westerville Ohio 43082</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">United States</div></td>
+              <td title="PUENTE INTERNACIONAL ZARAGOZA-ISLETA, CIUDAD JUAREZ, CHIHUAHUA."><strong>Zaragoza-Isleta</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+              <td style="white-space:nowrap;"><span class="hub-tag truck">Truck</span></td>
+              <td style="text-align:right;font-weight:700;color:var(--navy);">6</td>
+              <td style="text-align:right;font-weight:700;">1.4%</td>
+              <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">72.8%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:72.8%;background:var(--teal);"></div></div></td>
+              <td style="text-align:right;">3</td>
+              <td style="text-align:right;">2.00</td>
+              <td style="text-align:right;">0.31</td>
+              <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Feb 5 – Jun 18</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">25</td>
+              <td><strong>🇲🇽 AV.VICTOR HUGO COMPLEJO INDUSTRIAL CHIHUAHUA, CHIHUAHUA 31136</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Mexico</div><div style="font-size:9px;color:#b45309;margin-top:3px;"><strong>Origin override:</strong> Leibnitz No. 11, Int. 302, Mexico 11590, Mexico</div></td>
+              <td title="COLOMBIA, COLOMBIA, NUEVO LEON."><strong>Colombia, Nuevo León</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+              <td style="white-space:nowrap;"><span class="hub-tag" style="background:rgba(107,114,128,0.12);color:#4b5563;">Unknown</span></td>
+              <td style="text-align:right;font-weight:700;color:var(--navy);">6</td>
+              <td style="text-align:right;font-weight:700;">1.4%</td>
+              <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">74.2%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:74.2%;background:var(--teal);"></div></div></td>
+              <td style="text-align:right;">6</td>
+              <td style="text-align:right;">1.00</td>
+              <td style="text-align:right;">0.30</td>
+              <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Feb 12 – Jul 3</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">26</td>
+              <td><strong>🇲🇽 Avenida Victor Huga No 341, Complejo Industrial Chihuahua, Chihuahua Chihuahua CP31136</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Mexico</div><div style="font-size:9px;color:#b45309;margin-top:3px;"><strong>Origin override:</strong> Mexico — Panjiva country-level location precision</div></td>
+              <td title="MONTERREY, GENERAL MARIANO ESCOBEDO, NUEVO LEON."><strong>Monterrey, Gral. Mariano Escobedo, N.L.</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Gateway type not asserted</div></td>
+              <td style="white-space:nowrap;"><span class="hub-tag" style="background:rgba(107,114,128,0.12);color:#4b5563;">Unknown</span></td>
+              <td style="text-align:right;font-weight:700;color:var(--navy);">6</td>
+              <td style="text-align:right;font-weight:700;">1.4%</td>
+              <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">75.6%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:75.6%;background:var(--teal);"></div></div></td>
+              <td style="text-align:right;">6</td>
+              <td style="text-align:right;">1.00</td>
+              <td style="text-align:right;">0.29</td>
+              <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Feb 12 – Jul 7</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">27</td>
+              <td><strong>Command Medical Products Inc.</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Trading Partner — facility address not available in Panjiva</div></td>
+              <td title="AEROPUERTO INTERNACIONAL GENERAL MARIANO ESCOBEDO, APODACA, NUEVO LEON."><strong>Gral. Mariano Escobedo</strong><div style="font-size:9px;color:var(--text-light);">Airport</div></td>
+              <td style="white-space:nowrap;"><span class="hub-tag air">Air</span></td>
+              <td style="text-align:right;font-weight:700;color:var(--navy);">5</td>
+              <td style="text-align:right;font-weight:700;">1.2%</td>
+              <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">76.7%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:76.7%;background:var(--teal);"></div></div></td>
+              <td style="text-align:right;">5</td>
+              <td style="text-align:right;">1.00</td>
+              <td style="text-align:right;">0.24</td>
+              <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Feb 17 – Jul 13</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">28</td>
+              <td><strong>🇺🇸 2221 Industrial Road, Suite 140, Nebraska City Nebraska 68410</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">United States</div></td>
+              <td title="CIUDAD JUAREZ, CIUDAD JUAREZ, CHIHUAHUA."><strong>Ciudad Juárez</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+              <td style="white-space:nowrap;"><span class="hub-tag" style="background:rgba(107,114,128,0.12);color:#4b5563;">Unknown</span></td>
+              <td style="text-align:right;font-weight:700;color:var(--navy);">5</td>
+              <td style="text-align:right;font-weight:700;">1.2%</td>
+              <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">77.9%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:77.9%;background:var(--teal);"></div></div></td>
+              <td style="text-align:right;">5</td>
+              <td style="text-align:right;">1.00</td>
+              <td style="text-align:right;">0.24</td>
+              <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 15 – Jun 9</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">29</td>
+              <td><strong>🇺🇸 56 South Rockford Drive, Tempe Arizona 85288</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">United States</div></td>
+              <td title="CIUDAD JUAREZ, CIUDAD JUAREZ, CHIHUAHUA."><strong>Ciudad Juárez</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+              <td style="white-space:nowrap;"><span class="hub-tag" style="background:rgba(107,114,128,0.12);color:#4b5563;">Unknown</span></td>
+              <td style="text-align:right;font-weight:700;color:var(--navy);">5</td>
+              <td style="text-align:right;font-weight:700;">1.2%</td>
+              <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">79.0%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:79.0%;background:var(--teal);"></div></div></td>
+              <td style="text-align:right;">5</td>
+              <td style="text-align:right;">1.00</td>
+              <td style="text-align:right;">0.29</td>
+              <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Mar 10 – Jul 6</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">30</td>
+              <td><strong>🇨🇦 91 Lincoln Street, Tillsonburg Ontario N4G 2P9</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Canada</div></td>
+              <td title="CIUDAD JUAREZ, CIUDAD JUAREZ, CHIHUAHUA."><strong>Ciudad Juárez</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+              <td style="white-space:nowrap;"><span class="hub-tag" style="background:rgba(107,114,128,0.12);color:#4b5563;">Unknown</span></td>
+              <td style="text-align:right;font-weight:700;color:var(--navy);">5</td>
+              <td style="text-align:right;font-weight:700;">1.2%</td>
+              <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">80.2%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:80.2%;background:var(--teal);"></div></div></td>
+              <td style="text-align:right;">4</td>
+              <td style="text-align:right;">1.25</td>
+              <td style="text-align:right;">0.19</td>
+              <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 7 – Jul 14</td>
+            </tr>
+            </tbody>
+            <tfoot><tr style="background:var(--bg);">
+              <td colspan="4" style="font-weight:800;color:var(--navy);padding:10px 12px;">30 Core Routes · Origin Facility for all rows except Rank 25 and Rank 26: Avenida Victor Huga No 341, Complejo Industrial Chihuahua, Chihuahua Chihuahua CP31136, Mexico</td>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">348</td>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">80.2%</td>
+              <td style="text-align:right;font-weight:800;color:var(--teal-dim);">80.2%</td>
+              <td colspan="4"></td>
+            </tr></tfoot>
+          </table>
+        </div>
+        <div style="padding:12px 16px;border-top:1px solid var(--border);">
+          <span style="font-size:10px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--navy);">Executive takeaway:</strong> Export Core Routes require <strong>30 routes</strong> to reach 80.2%, demonstrating a substantially more distributed outbound network than inbound. <strong style="color:#b45309;">Route Rank is not Commercial Route Priority</strong> and must never be read as a commercial recommendation ordering. Destinations are displayed at the precision Panjiva provides: where only country-level geography exists the row is labelled <strong>Panjiva country-level location precision</strong>, and where a destination is a named Trading Partner without a facility address that is stated explicitly. <strong>No geography is invented and no address is silently completed.</strong> Ranks 25 and 26 carry an explicit <strong>Origin override</strong> because their supplied origin differs from the primary Chihuahua facility.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 08 ROUTE FREQUENCY & PERSISTENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">08</span> Route Frequency &amp; Persistence — Visible Structure Across Both Periods</div>
+      <div class="card-body">
+        <table class="hub-table">
+          <thead><tr><th>Structural Dimension</th><th>2025 · Established Operating Structure</th><th>Current YTD 2026 · Current Operating State</th><th>Observed Status</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Inbound structure</strong></td><td style="color:var(--text-muted);">3 Import Core Routes → 83.8%</td><td><strong>3 Import Core Routes → 82.7%</strong></td><td style="color:#059669;font-weight:700;">Concentrated inbound visible in both periods</td></tr>
+            <tr><td><strong>Erie / Chihuahua / Ciudad Juárez corridor</strong></td><td style="color:var(--text-muted);">Visible — Accudyn Products → Zaragoza-Isleta → Chihuahua</td><td><strong>Visible — 2400 Yoder Drive, Erie → Zaragoza-Isleta → Chihuahua</strong></td><td style="color:#059669;font-weight:700;">Persisting Core Route</td></tr>
+            <tr><td><strong>Leading outbound United States structure</strong></td><td style="color:var(--text-muted);">Chihuahua → Ciudad Juárez → United States · 17.0%</td><td><strong>Same structure · 14.3%</strong></td><td style="color:var(--text-muted);">Persisting · lower visible share</td></tr>
+            <tr><td><strong>Outbound Erie structure</strong></td><td style="color:var(--text-muted);">Chihuahua → Zaragoza-Isleta → Erie, Pennsylvania · 11.9%</td><td><strong>Same structure · 14.3%</strong></td><td style="color:#059669;font-weight:700;">Persisting · higher visible share</td></tr>
+            <tr><td><strong>Export fragmentation</strong></td><td style="color:var(--text-muted);">28 routes required to reach ≥80%</td><td><strong>30 routes required to reach ≥80%</strong></td><td style="color:var(--text-muted);">Fragmentation persists</td></tr>
+            <tr><td><strong>Leading Import gateway</strong></td><td style="color:var(--text-muted);">Ciudad Juárez leads the 2025 Core Route set</td><td><strong>Zaragoza-Isleta 50.0% · Ciudad Juárez 40.7%</strong></td><td style="color:var(--text-muted);">Ciudad Juárez gateway structure visible in both periods</td></tr>
+            <tr><td><strong>Accudyn Products relationship</strong></td><td style="color:var(--text-muted);">Visible inbound and outbound</td><td><strong>115 of 150 Imports · 72 Exports</strong></td><td style="color:#059669;font-weight:700;">Visible in both periods</td></tr>
+            <tr><td><strong>Air outbound activity</strong></td><td style="color:var(--text-muted);">Roberto Fierro and Mariano Escobedo airports visible in the Core Route set</td><td><strong>61 Air Export Shipments · both airports visible</strong></td><td style="color:var(--text-muted);">Visible in both periods</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:12px;padding:10px 14px;background:rgba(245,158,11,0.06);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:#b45309;">Language discipline:</strong> route change is described only as <strong>Visible in both periods</strong>, <strong>Persisting Core Route</strong>, <strong>Higher visible share</strong>, <strong>Lower visible share</strong>, <strong>Newly visible in Current YTD Core Route set</strong> or <strong>Not visible in Current YTD Core Route set</strong> — never as new, lost, discontinued or terminated. Current YTD is a <strong>partial period</strong>, and a Core Route set is only the smallest set reaching ≥80% — not the complete universe of every Shipment. Absence from a Core Route set is therefore <strong>not</strong> evidence that a flow stopped.</span>
+        </div>
+        <div style="margin-top:10px;padding:10px 14px;background:rgba(13,43,94,0.03);border-radius:5px;border:1px solid var(--border);">
+          <span style="font-size:10px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--navy);">Observed Route Cadence:</strong> <strong>Shipments / Active Month</strong> and <strong>Shipments / Week</strong> are the finalized AIOS frequency values supplied for each route, and <strong>Active Months</strong> is the count of distinct calendar months containing at least one visible Shipment. All three measure <strong>observed cadence only</strong>, are read together with each route&rsquo;s <strong>Visible Date Range</strong>, and are <strong>never annualized or extrapolated into forecast capacity</strong>.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 09 HISTORICAL CORE ROUTES — PROGRESSIVE DISCLOSURE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">09</span> Historical Core Route Structure — 2025 Established Operating Structure</div>
+      <div class="card-body">
+        <div class="grid-4" style="gap:10px;">
+          <div class="stat-box"><div class="stat-label">2025 Total Shipments</div><div class="stat-value" style="font-size:26px;">1,045</div><div class="stat-sub">Jan 3 – Dec 30, 2025 · full calendar year</div></div>
+          <div class="stat-box"><div class="stat-label">2025 Imports</div><div class="stat-value" style="font-size:26px;">308</div><div class="stat-sub">Visible CIF ≈ USD 14.00M</div></div>
+          <div class="stat-box"><div class="stat-label">2025 Exports</div><div class="stat-value" style="font-size:26px;">737</div><div class="stat-sub">Visible CIF ≈ USD 40.71M</div></div>
+          <div class="stat-box"><div class="stat-label">2025 Combined Visible CIF</div><div class="stat-value" style="font-size:26px;">USD 54.71M</div><div class="stat-sub">approximate</div></div>
+        </div>
+        <div style="margin-top:12px;padding:10px 14px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.6;">2025 is the <strong>Established Operating Structure / Historical Baseline</strong>. It is held <strong>strictly separate</strong> from Current YTD, is never aggregated with it, and remains visually subordinate to the Current Operating State. The complete historical Core Route sets are preserved below.</span>
+        </div>
+
+        <div class="outreach-step hist-appendix" style="margin-top:14px;">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)">
+            <span>View 2025 Import Core Routes — 3 Routes / 83.8% of 308 Imports</span>
+            <span class="outreach-step-toggle">+</span>
+          </div>
+          <div class="outreach-step-body" style="padding:0;">
+            <div class="hist-appendix-label" style="padding:10px 16px;background:var(--bg);border-bottom:1px solid var(--border);">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-light);">Historical Core Route Appendix — 2025 Imports</div>
+              <div style="font-size:10px;color:var(--text-muted);margin-top:2px;">Reference detail only. The Current Operating State above remains the primary narrative.</div>
+            </div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;min-width:980px;">
+                <thead><tr>
+                  <th style="text-align:right;">Rank</th><th>Origin</th><th>Gateway</th><th>Mode</th>
+                  <th style="text-align:right;">Shipments</th><th style="text-align:right;">% Imports</th><th style="text-align:right;">Cumulative</th>
+                  <th style="text-align:right;">Active Months</th><th style="text-align:right;">/ Month</th><th style="text-align:right;">/ Week</th><th>Visible Date Range</th>
+                </tr></thead>
+                <tbody>
+                  <tr>
+                    <td style="text-align:right;font-weight:700;color:var(--text-muted);">1</td>
+                    <td><strong style="color:var(--text-light);font-style:italic;">Address not available in Panjiva</strong></td>
+                    <td><strong>Ciudad Juárez</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                    <td><span class="hub-tag" style="background:rgba(107,114,128,0.12);color:#4b5563;">Unknown 96</span> <span class="hub-tag truck">Truck 5</span></td>
+                    <td style="text-align:right;font-weight:700;">101</td>
+                    <td style="text-align:right;">32.8%</td>
+                    <td style="text-align:right;color:var(--text-muted);">32.8%</td>
+                    <td style="text-align:right;">12</td>
+                    <td style="text-align:right;">8.42</td>
+                    <td style="text-align:right;">2.10</td>
+                    <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 7 – Dec 8</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align:right;font-weight:700;color:var(--text-muted);">2</td>
+                    <td><strong>Accudyn Products Inc.</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Trading Partner — facility address not available in Panjiva</div></td>
+                    <td><strong>Zaragoza-Isleta</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                    <td><span class="hub-tag truck">Truck</span></td>
+                    <td style="text-align:right;font-weight:700;">83</td>
+                    <td style="text-align:right;">26.9%</td>
+                    <td style="text-align:right;color:var(--text-muted);">59.7%</td>
+                    <td style="text-align:right;">10</td>
+                    <td style="text-align:right;">8.30</td>
+                    <td style="text-align:right;">2.00</td>
+                    <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Mar 4 – Dec 19</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align:right;font-weight:700;color:var(--text-muted);">3</td>
+                    <td><strong style="color:var(--text-light);font-style:italic;">Address not available in Panjiva</strong></td>
+                    <td><strong>Zaragoza-Isleta</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                    <td><span class="hub-tag truck">Truck</span></td>
+                    <td style="text-align:right;font-weight:700;">74</td>
+                    <td style="text-align:right;">24.0%</td>
+                    <td style="text-align:right;color:var(--text-muted);">83.8%</td>
+                    <td style="text-align:right;">12</td>
+                    <td style="text-align:right;">6.17</td>
+                    <td style="text-align:right;">1.48</td>
+                    <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 9 – Dec 23</td>
+                  </tr>
+                </tbody>
+                <tfoot><tr style="background:var(--bg);">
+                  <td colspan="4" style="font-weight:800;color:var(--navy);padding:10px 12px;">3 Core Routes · Destination Facility for all rows: Avenida Victor Huga No 341 Complejo Industrial Chihuahua</td>
+                  <td style="text-align:right;font-weight:800;color:var(--navy);">258</td>
+                  <td style="text-align:right;font-weight:800;color:var(--navy);">83.8%</td>
+                  <td style="text-align:right;font-weight:800;color:var(--text-muted);">83.8%</td>
+                  <td colspan="4"></td>
+                </tr></tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="outreach-step hist-appendix">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)">
+            <span>View 2025 Export Core Routes — Complete 28-Route Set / 80.2% of 737 Exports</span>
+            <span class="outreach-step-toggle">+</span>
+          </div>
+          <div class="outreach-step-body" style="padding:0;">
+            <div class="hist-appendix-label" style="padding:10px 16px;background:var(--bg);border-bottom:1px solid var(--border);">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-light);">Historical Core Route Appendix — 2025 Exports · Complete Set</div>
+              <div style="font-size:10px;color:var(--text-muted);margin-top:2px;">All 28 routes are preserved. Visual simplification never deletes a historical Core Route.</div>
+            </div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;min-width:900px;">
+                <thead><tr>
+                  <th style="text-align:right;">Rank</th><th>Origin</th><th>Gateway</th><th>Destination</th>
+                  <th style="text-align:right;">Shipments</th><th style="text-align:right;">% Exports</th>
+                </tr></thead>
+                <tbody>
+            <tr>
+              <td style="text-align:right;font-weight:700;color:var(--text-muted);">1</td>
+              <td style="color:var(--text-muted);">ACCUDYN — Chihuahua</td>
+              <td><strong>Ciudad Juárez</strong></td>
+              <td>🇺🇸 United States</td>
+              <td style="text-align:right;font-weight:700;">125</td>
+              <td style="text-align:right;color:var(--text-muted);">17.0%</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:700;color:var(--text-muted);">2</td>
+              <td style="color:var(--text-muted);">ACCUDYN — Chihuahua</td>
+              <td><strong>Zaragoza-Isleta</strong></td>
+              <td>🇺🇸 2400 Yoder Drive, Erie Pennsylvania 16506, United States</td>
+              <td style="text-align:right;font-weight:700;">88</td>
+              <td style="text-align:right;color:var(--text-muted);">11.9%</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:700;color:var(--text-muted);">3</td>
+              <td style="color:var(--text-muted);">ACCUDYN — Chihuahua</td>
+              <td><strong>Ciudad Juárez</strong></td>
+              <td>🇲🇽 Mexico</td>
+              <td style="text-align:right;font-weight:700;">64</td>
+              <td style="text-align:right;color:var(--text-muted);">8.7%</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:700;color:var(--text-muted);">4</td>
+              <td style="color:var(--text-muted);">ACCUDYN — Chihuahua</td>
+              <td><strong>Gral. Roberto Fierro Villalobos</strong></td>
+              <td>🇺🇸 United States</td>
+              <td style="text-align:right;font-weight:700;">45</td>
+              <td style="text-align:right;color:var(--text-muted);">6.1%</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:700;color:var(--text-muted);">5</td>
+              <td style="color:var(--text-muted);">ACCUDYN — Chihuahua</td>
+              <td><strong>Ciudad Juárez</strong></td>
+              <td>🇵🇷 Puerto Rico</td>
+              <td style="text-align:right;font-weight:700;">21</td>
+              <td style="text-align:right;color:var(--text-muted);">2.8%</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:700;color:var(--text-muted);">6</td>
+              <td style="color:var(--text-muted);">ACCUDYN — Chihuahua</td>
+              <td><strong>Zaragoza-Isleta</strong></td>
+              <td>🇺🇸 United States</td>
+              <td style="text-align:right;font-weight:700;">15</td>
+              <td style="text-align:right;color:var(--text-muted);">2.0%</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:700;color:var(--text-muted);">7</td>
+              <td style="color:var(--text-muted);">ACCUDYN — Chihuahua</td>
+              <td><strong>Gral. Mariano Escobedo</strong></td>
+              <td>Accudyn Products Inc.</td>
+              <td style="text-align:right;font-weight:700;">14</td>
+              <td style="text-align:right;color:var(--text-muted);">1.9%</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:700;color:var(--text-muted);">8</td>
+              <td style="color:var(--text-muted);">ACCUDYN — Chihuahua</td>
+              <td><strong>Ciudad Juárez</strong></td>
+              <td>🇲🇽 Parque Industrial Juarez, Cd Juárez, Chih., Mexico</td>
+              <td style="text-align:right;font-weight:700;">13</td>
+              <td style="text-align:right;color:var(--text-muted);">1.8%</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:700;color:var(--text-muted);">9</td>
+              <td style="color:var(--text-muted);">🇲🇽 Mexico</td>
+              <td><strong>Monterrey</strong></td>
+              <td>ACCUDYN Chihuahua</td>
+              <td style="text-align:right;font-weight:700;">13</td>
+              <td style="text-align:right;color:var(--text-muted);">1.8%</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:700;color:var(--text-muted);">10</td>
+              <td style="color:var(--text-muted);">ACCUDYN — Chihuahua</td>
+              <td><strong>Ciudad Juárez</strong></td>
+              <td>🇲🇽 AV CRISTOBAL COLON CHIHUAHUA 31136</td>
+              <td style="text-align:right;font-weight:700;">12</td>
+              <td style="text-align:right;color:var(--text-muted);">1.6%</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:700;color:var(--text-muted);">11</td>
+              <td style="color:var(--text-muted);">ACCUDYN — Chihuahua</td>
+              <td><strong>Ciudad Juárez</strong></td>
+              <td>🇲🇽 CIRCUITO DE LA PRODUCTIVIDAD LAS PINTAS GUADALAJARA 45690</td>
+              <td style="text-align:right;font-weight:700;">12</td>
+              <td style="text-align:right;color:var(--text-muted);">1.6%</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:700;color:var(--text-muted);">12</td>
+              <td style="color:var(--text-muted);">ACCUDYN — Chihuahua</td>
+              <td><strong>Ciudad Juárez</strong></td>
+              <td>🇨🇴 Colombia</td>
+              <td style="text-align:right;font-weight:700;">12</td>
+              <td style="text-align:right;color:var(--text-muted);">1.6%</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:700;color:var(--text-muted);">13</td>
+              <td style="color:var(--text-muted);">ACCUDYN — Chihuahua</td>
+              <td><strong>Ciudad Juárez</strong></td>
+              <td>🇪🇸 Juslapeña, Navarre, Spain</td>
+              <td style="text-align:right;font-weight:700;">12</td>
+              <td style="text-align:right;color:var(--text-muted);">1.6%</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:700;color:var(--text-muted);">14</td>
+              <td style="color:var(--text-muted);">ACCUDYN — Chihuahua</td>
+              <td><strong>Ciudad Juárez</strong></td>
+              <td>🇳🇴 Norway</td>
+              <td style="text-align:right;font-weight:700;">12</td>
+              <td style="text-align:right;color:var(--text-muted);">1.6%</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:700;color:var(--text-muted);">15</td>
+              <td style="color:var(--text-muted);">ACCUDYN — Chihuahua</td>
+              <td><strong>Ciudad Juárez</strong></td>
+              <td>🇪🇸 Ávila, Spain</td>
+              <td style="text-align:right;font-weight:700;">12</td>
+              <td style="text-align:right;color:var(--text-muted);">1.6%</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:700;color:var(--text-muted);">16</td>
+              <td style="color:var(--text-muted);">🇲🇽 Mexico</td>
+              <td><strong>Colombia, Nuevo León</strong></td>
+              <td>ACCUDYN Chihuahua</td>
+              <td style="text-align:right;font-weight:700;">12</td>
+              <td style="text-align:right;color:var(--text-muted);">1.6%</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:700;color:var(--text-muted);">17</td>
+              <td style="color:var(--text-muted);">ACCUDYN — Chihuahua</td>
+              <td><strong>Ciudad Juárez</strong></td>
+              <td>🇲🇽 Avenida Rosa Ma. y Fuentes No. 7151, Parque Industrial Fuentes, Ciudad Juárez Chihuahua, Mexico</td>
+              <td style="text-align:right;font-weight:700;">11</td>
+              <td style="text-align:right;color:var(--text-muted);">1.5%</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:700;color:var(--text-muted);">18</td>
+              <td style="color:var(--text-muted);">ACCUDYN — Chihuahua</td>
+              <td><strong>Ciudad Juárez</strong></td>
+              <td>🇲🇽 BLVD INSURGENTES TIJUANA 22223</td>
+              <td style="text-align:right;font-weight:700;">11</td>
+              <td style="text-align:right;color:var(--text-muted);">1.5%</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:700;color:var(--text-muted);">19</td>
+              <td style="color:var(--text-muted);">ACCUDYN — Chihuahua</td>
+              <td><strong>Zaragoza-Isleta</strong></td>
+              <td>🇺🇸 6801 Sandburg Rd #4, Minneapolis, MN 55427, USA</td>
+              <td style="text-align:right;font-weight:700;">11</td>
+              <td style="text-align:right;color:var(--text-muted);">1.5%</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:700;color:var(--text-muted);">20</td>
+              <td style="color:var(--text-muted);">🇲🇽 Insurgentes Sur 975, Col. Ciudad De Los Deportes, Delegacion Benito Juarez, Mexico</td>
+              <td><strong>Matamoros</strong></td>
+              <td>🇲🇽 AV VICTOR HUGO CHIHUAHUA 31136</td>
+              <td style="text-align:right;font-weight:700;">10</td>
+              <td style="text-align:right;color:var(--text-muted);">1.4%</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:700;color:var(--text-muted);">21</td>
+              <td style="color:var(--text-muted);">🇲🇽 Leibnitz No. 11, Int. 302, Mexico 11590, Mexico</td>
+              <td><strong>Colombia, Nuevo León</strong></td>
+              <td>🇲🇽 AV.VICTOR HUGO COMPLEJO INDUSTRIAL CHIHUAHUA, CHIHUAHUA 31136</td>
+              <td style="text-align:right;font-weight:700;">10</td>
+              <td style="text-align:right;color:var(--text-muted);">1.4%</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:700;color:var(--text-muted);">22</td>
+              <td style="color:var(--text-muted);">ACCUDYN — Chihuahua</td>
+              <td><strong>Ciudad Juárez</strong></td>
+              <td>🇲🇽 AV. ALEJANDRO DUMAS CHIHUAHIUA 31136</td>
+              <td style="text-align:right;font-weight:700;">9</td>
+              <td style="text-align:right;color:var(--text-muted);">1.2%</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:700;color:var(--text-muted);">23</td>
+              <td style="color:var(--text-muted);">ACCUDYN — Chihuahua</td>
+              <td><strong>Ciudad Juárez</strong></td>
+              <td>🇨🇦 Canada</td>
+              <td style="text-align:right;font-weight:700;">9</td>
+              <td style="text-align:right;color:var(--text-muted);">1.2%</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:700;color:var(--text-muted);">24</td>
+              <td style="color:var(--text-muted);">ACCUDYN — Chihuahua</td>
+              <td><strong>Gral. Mariano Escobedo</strong></td>
+              <td>🇵🇷 Road 909, Km 0.2, Mariana Industrial Park, Bo. Mariana, Humacao Puerto Rico</td>
+              <td style="text-align:right;font-weight:700;">8</td>
+              <td style="text-align:right;color:var(--text-muted);">1.1%</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:700;color:var(--text-muted);">25</td>
+              <td style="color:var(--text-muted);">ACCUDYN — Chihuahua</td>
+              <td><strong>Ciudad Juárez</strong></td>
+              <td>🇪🇸 C. Guifré el Pilos, s/n, Poligono Industrial Can Vinyals, Santa Perpetua de Mogoda, Spain</td>
+              <td style="text-align:right;font-weight:700;">8</td>
+              <td style="text-align:right;color:var(--text-muted);">1.1%</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:700;color:var(--text-muted);">26</td>
+              <td style="color:var(--text-muted);">ACCUDYN — Chihuahua</td>
+              <td><strong>Ciudad Juárez</strong></td>
+              <td>🇲🇽 Circuito Mexico 145, San Luis Potosi San Luis Potosi 78395, Mexico</td>
+              <td style="text-align:right;font-weight:700;">8</td>
+              <td style="text-align:right;color:var(--text-muted);">1.1%</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:700;color:var(--text-muted);">27</td>
+              <td style="color:var(--text-muted);">ACCUDYN — Chihuahua</td>
+              <td><strong>Ciudad Juárez</strong></td>
+              <td>🇲🇽 Del Parque, Chihuahua Chihuahua 31125, Mexico</td>
+              <td style="text-align:right;font-weight:700;">7</td>
+              <td style="text-align:right;color:var(--text-muted);">0.9%</td>
+            </tr>
+            <tr>
+              <td style="text-align:right;font-weight:700;color:var(--text-muted);">28</td>
+              <td style="color:var(--text-muted);">ACCUDYN — Chihuahua</td>
+              <td><strong>Ciudad Juárez</strong></td>
+              <td>🇫🇷 France</td>
+              <td style="text-align:right;font-weight:700;">7</td>
+              <td style="text-align:right;color:var(--text-muted);">0.9%</td>
+            </tr>
+                </tbody>
+                <tfoot><tr style="background:var(--bg);">
+                  <td colspan="3" style="font-weight:800;color:var(--navy);padding:10px 12px;">28 Core Routes · 2025 Export universe 737 Shipments</td>
+                  <td style="font-weight:800;color:var(--navy);">Cumulative coverage</td>
+                  <td style="text-align:right;font-weight:800;color:var(--navy);">591</td>
+                  <td style="text-align:right;font-weight:800;color:var(--navy);">80.2%</td>
+                </tr></tfoot>
+              </table>
+            </div>
+            <div style="padding:12px 16px;border-top:1px solid var(--border);">
+              <span style="font-size:10px;color:var(--text-muted);line-height:1.6;">Per-route cumulative coverage is displayed only where the finalized AIOS intelligence supplies it. For the 2025 Export Core Route set, the supplied cumulative value is the <strong>set total of 80.2%</strong>, shown in the table footer. Intermediate per-row cumulative values are <strong>not independently calculated</strong>. <strong>ACCUDYN Chihuahua</strong> is displayed exactly as supplied where it appears as a destination.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10 HS & PRODUCT INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">10</span> HS &amp; Product Intelligence — Top 5 by Period and Direction</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:18px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);margin-bottom:10px;">Current YTD 2026 · Imports · Universe 150 Shipments</div>
+            <table class="hub-table" style="font-size:11px;">
+              <thead><tr><th style="text-align:right;">Rank</th><th>HS Code</th><th>Description</th><th style="text-align:right;">Operational Presence</th><th style="text-align:right;">% Imports</th></tr></thead>
+              <tbody>
+                <tr style="background:rgba(0,180,216,0.05);"><td style="text-align:right;font-weight:700;">1</td><td style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:var(--navy);">3908100700</td><td style="color:var(--text-muted);">Polyamide 6/6 resin</td><td style="text-align:right;font-weight:700;">38</td><td style="text-align:right;font-weight:800;color:var(--teal-dim);">25.3%</td></tr>
+                <tr><td style="text-align:right;font-weight:700;">2</td><td style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:var(--navy);">3907400499</td><td style="color:var(--text-muted);">Polycarbonate resin</td><td style="text-align:right;font-weight:700;">29</td><td style="text-align:right;font-weight:700;">19.3%</td></tr>
+                <tr><td style="text-align:right;font-weight:700;">3</td><td style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:var(--navy);">3917299199</td><td style="color:var(--text-muted);">Rigid polycarbonate tube</td><td style="text-align:right;font-weight:700;">28</td><td style="text-align:right;font-weight:700;">18.7%</td></tr>
+                <tr><td style="text-align:right;font-weight:700;">4</td><td style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:var(--navy);">3907299900</td><td style="color:var(--text-muted);">Polymer / polyphenylene ether blends</td><td style="text-align:right;font-weight:700;">27</td><td style="text-align:right;font-weight:700;">18.0%</td></tr>
+                <tr><td style="text-align:right;font-weight:700;">5</td><td style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:var(--navy);">3903300100</td><td style="color:var(--text-muted);">ABS copolymer resin</td><td style="text-align:right;font-weight:700;">26</td><td style="text-align:right;font-weight:700;">17.3%</td></tr>
+              </tbody>
+            </table>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-light);margin:16px 0 8px;padding-top:12px;border-top:1px solid var(--border);">2025 Historical Baseline · Imports · Universe 308 Shipments</div>
+            <table class="hub-table" style="font-size:11px;">
+              <thead><tr><th style="text-align:right;">Rank</th><th>HS Code</th><th>Description</th><th style="text-align:right;">Presence</th><th style="text-align:right;">% Imports</th></tr></thead>
+              <tbody>
+                <tr><td style="text-align:right;font-weight:700;color:var(--text-muted);">1</td><td style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:var(--text-muted);">3926909906</td><td style="color:var(--text-muted);">Plastic rivets / plastic manufactures</td><td style="text-align:right;">62</td><td style="text-align:right;color:var(--text-muted);">20.1%</td></tr>
+                <tr><td style="text-align:right;font-weight:700;color:var(--text-muted);">2</td><td style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:var(--text-muted);">3908100700</td><td style="color:var(--text-muted);">Polyamide 6/6 resin</td><td style="text-align:right;">61</td><td style="text-align:right;color:var(--text-muted);">19.8%</td></tr>
+                <tr><td style="text-align:right;font-weight:700;color:var(--text-muted);">3</td><td style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:var(--text-muted);">6305320100</td><td style="color:var(--text-muted);">Polypropylene bulk bags</td><td style="text-align:right;">54</td><td style="text-align:right;color:var(--text-muted);">17.5%</td></tr>
+                <tr><td style="text-align:right;font-weight:700;color:var(--text-muted);">4</td><td style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:var(--text-muted);">3907400499</td><td style="color:var(--text-muted);">Polycarbonate resin</td><td style="text-align:right;">50</td><td style="text-align:right;color:var(--text-muted);">16.2%</td></tr>
+                <tr><td style="text-align:right;font-weight:700;color:var(--text-muted);">5</td><td style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:var(--text-muted);">3907299900</td><td style="color:var(--text-muted);">Polymer blends</td><td style="text-align:right;">48</td><td style="text-align:right;color:var(--text-muted);">15.6%</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);margin-bottom:10px;">Current YTD 2026 · Exports · Universe 434 Shipments</div>
+            <table class="hub-table" style="font-size:11px;">
+              <thead><tr><th style="text-align:right;">Rank</th><th>HS Code</th><th>Description</th><th style="text-align:right;">Operational Presence</th><th style="text-align:right;">% Exports</th></tr></thead>
+              <tbody>
+                <tr style="background:rgba(232,0,45,0.04);"><td style="text-align:right;font-weight:700;">1</td><td style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:var(--navy);">3926909999</td><td style="color:var(--text-muted);">Plastic manufactures / components</td><td style="text-align:right;font-weight:700;">154</td><td style="text-align:right;font-weight:800;color:var(--red);">35.5%</td></tr>
+                <tr><td style="text-align:right;font-weight:700;">2</td><td style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:var(--navy);">8538900100</td><td style="color:var(--text-muted);">Molded / electrical apparatus parts</td><td style="text-align:right;font-weight:700;">153</td><td style="text-align:right;font-weight:700;">35.3%</td></tr>
+                <tr><td style="text-align:right;font-weight:700;">3</td><td style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:var(--navy);">8538909999</td><td style="color:var(--text-muted);">Molded / electrical apparatus parts</td><td style="text-align:right;font-weight:700;">88</td><td style="text-align:right;font-weight:700;">20.3%</td></tr>
+                <tr><td style="text-align:right;font-weight:700;">4</td><td style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:var(--navy);">8708299999</td><td style="color:var(--text-muted);">Automotive plastic channels / components</td><td style="text-align:right;font-weight:700;">34</td><td style="text-align:right;font-weight:700;">7.8%</td></tr>
+                <tr><td style="text-align:right;font-weight:700;">5</td><td style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:var(--navy);">8531909900</td><td style="color:var(--text-muted);">Plastic covers / components for alarm &amp; detection apparatus</td><td style="text-align:right;font-weight:700;">34</td><td style="text-align:right;font-weight:700;">7.8%</td></tr>
+              </tbody>
+            </table>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-light);margin:16px 0 8px;padding-top:12px;border-top:1px solid var(--border);">2025 Historical Baseline · Exports · Universe 737 Shipments</div>
+            <table class="hub-table" style="font-size:11px;">
+              <thead><tr><th style="text-align:right;">Rank</th><th>HS Code</th><th>Description</th><th style="text-align:right;">Presence</th><th style="text-align:right;">% Exports</th></tr></thead>
+              <tbody>
+                <tr><td style="text-align:right;font-weight:700;color:var(--text-muted);">1</td><td style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:var(--text-muted);">8538900100</td><td style="color:var(--text-muted);">Molded / electrical apparatus parts</td><td style="text-align:right;">291</td><td style="text-align:right;color:var(--text-muted);">39.5%</td></tr>
+                <tr><td style="text-align:right;font-weight:700;color:var(--text-muted);">2</td><td style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:var(--text-muted);">3926909999</td><td style="color:var(--text-muted);">Plastic manufactures / components</td><td style="text-align:right;">258</td><td style="text-align:right;color:var(--text-muted);">35.0%</td></tr>
+                <tr><td style="text-align:right;font-weight:700;color:var(--text-muted);">3</td><td style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:var(--text-muted);">8538909999</td><td style="color:var(--text-muted);">Molded / electrical apparatus parts</td><td style="text-align:right;">143</td><td style="text-align:right;color:var(--text-muted);">19.4%</td></tr>
+                <tr><td style="text-align:right;font-weight:700;color:var(--text-muted);">4</td><td style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:var(--text-muted);">8543909900</td><td style="color:var(--text-muted);">Covers / components for electrical apparatus &amp; sensors</td><td style="text-align:right;">71</td><td style="text-align:right;color:var(--text-muted);">9.6%</td></tr>
+                <tr><td style="text-align:right;font-weight:700;color:var(--text-muted);">5</td><td style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:var(--text-muted);">3926909906</td><td style="color:var(--text-muted);">Plastic / automotive plastic components</td><td style="text-align:right;">58</td><td style="text-align:right;color:var(--text-muted);">7.9%</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="grid-2" style="gap:12px;margin-top:14px;">
+          <div style="padding:12px 16px;background:rgba(13,43,94,0.03);border-radius:6px;border:1px solid var(--border);">
+            <strong style="font-size:10px;color:var(--navy);text-transform:uppercase;letter-spacing:1.5px;">HS Portfolio Trend — Operational Intelligence</strong>
+            <p style="font-size:11px;color:var(--text-muted);line-height:1.7;margin-top:6px;">The visible portfolio consistently shows <strong>engineering resin / plastic inputs</strong> inbound and a <strong>broad output portfolio of molded plastic, electrical-apparatus and automotive-related components</strong> outbound. This is treated as <strong>operational intelligence about what the network actually moves</strong> — not merely customs classification.</p>
+            <p style="font-size:11px;color:var(--text-muted);line-height:1.7;margin-top:6px;">The inbound resin portfolio and the outbound component portfolio are <strong>visible in both periods</strong>, consistent with a persistent transformation operation at the Chihuahua facility.</p>
+          </div>
+          <div style="padding:12px 16px;background:rgba(245,158,11,0.06);border-left:3px solid #f59e0b;border-radius:0 6px 6px 0;">
+            <strong style="font-size:10px;color:#b45309;text-transform:uppercase;letter-spacing:1.5px;">HS Methodology — Mandatory Disclosure</strong>
+            <p style="font-size:11px;color:var(--text-muted);line-height:1.7;margin-top:6px;"><strong>One Shipment may contain multiple HS Codes. HS counts represent operational presence and are not additive.</strong></p>
+            <p style="font-size:11px;color:var(--text-muted);line-height:1.7;margin-top:6px;">Each percentage is measured against its own directional period universe — 150, 434, 308 or 737 Shipments — and <strong>must never be summed</strong>. A Top 5 set will therefore frequently exceed 100% if incorrectly added together.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 11 TRADING PARTNER INTELLIGENCE -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">11</span> Trading Partner Intelligence — Current YTD</div>
+      <div class="card-body" style="padding:12px 18px;">
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong>Trading Partners</strong> is the executive umbrella term. For Imports these are <strong>Origin Partners</strong>; for Exports, <strong>Destination Partners</strong>. <strong style="color:#b45309;">Accudyn-branded entities are not automatically classified as external Suppliers or Customers</strong> — see the Discovery Hypothesis in section 15.</span>
+      </div>
+    </div>
+    <div class="grid-2" style="margin-top:0;">
+      <div class="card">
+        <div class="card-header" style="background:rgba(0,180,216,0.06);">Import Origin Partners · 150 Imports</div>
+        <div class="card-body">
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Accudyn Products Inc.</strong><span>115 · 76.7%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:100%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong style="color:var(--text-light);font-style:italic;">Unnamed / Unknown shipper</strong><span>29</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:25%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Accudyn De Mexico S De Rl De Cv</strong><span>5</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:4%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Boeing Encore Interiors</strong><span>1</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:1%"></div></div></div>
+          <div style="margin-top:14px;padding:10px 14px;background:rgba(232,0,45,0.05);border-left:3px solid var(--red);border-radius:0 5px 5px 0;">
+            <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--red);">Accudyn Products Inc. represents 76.7% of Current YTD Imports</strong> and is also visible in outbound flows. This is a <strong>Panjiva Fact</strong>. What it <em>means</em> is a governed hypothesis, not a conclusion.</span>
+          </div>
+          <div style="margin-top:10px;padding:10px 14px;background:rgba(13,43,94,0.03);border-radius:5px;border:1px solid var(--border);">
+            <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--navy);">AIOS Interpretation:</strong> inbound Trading Partner exposure is <strong>concentrated</strong>. <strong>Accudyn Products Inc. is deliberately not labelled an external Supplier</strong>, and an Accudyn De Mexico entity is itself visible on the inbound side. Percentages are displayed only where the finalized intelligence supplies them; remaining partners are shown as supplied Shipment counts.</span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" style="background:rgba(232,0,45,0.06);">Export Destination Partners · 434 Exports</div>
+        <div class="card-body">
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Accudyn Products Inc.</strong><span>72</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:100%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong style="color:var(--text-light);font-style:italic;">Unknown consignee</strong><span>72</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:100%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Accudyn De Mexico S. De R.L. De C.V.</strong><span>19</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:26%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Lutron Gl Electronics (Shanghai) Co., Ltd.</strong><span>11</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:15%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Conmed Corporation</strong><span>9</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:13%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Ademco Inc.</strong><span>9</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:13%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Honeywell Optoelectronica S. De R.L. De C.V.</strong><span>8</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:11%"></div></div></div>
+          <div style="margin-top:14px;padding:10px 14px;background:rgba(13,43,94,0.03);border-radius:5px;border:1px solid var(--border);">
+            <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--navy);">AIOS Interpretation:</strong> the outbound Trading Partner structure is <strong>materially more distributed</strong> than inbound, spanning Accudyn-branded entities, an Unknown consignee block of equal size, and multiple named third-party organizations across several geographies. <strong>Affiliates are not presented as external customers unless validated.</strong></span>
+          </div>
+          <div style="margin-top:8px;font-size:10px;color:var(--text-light);line-height:1.5;">Percentages are not displayed for outbound partners because the finalized AIOS intelligence supplies Shipment counts only. <strong>No share is independently calculated.</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12 CUSTOMS / IMMEX INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">12</span> Customs &amp; IMMEX Intelligence — Current YTD</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:18px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);margin-bottom:10px;">Import Customs Regimes · 150 Imports</div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Transfer of Goods / Temporary Import Virtual</strong><span>58</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:100%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Final Import / Export</strong><span>43</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:74%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Temporary Import for Transformation, Processing or Repair (IMMEX)</strong><span>30</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:52%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Temporary Import Fixed Assets (IMMEX)</strong><span>9</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:16%"></div></div></div>
+
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);margin:18px 0 10px;padding-top:12px;border-top:1px solid var(--border);">Leading Import Customs Agent Codes</div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Customs Agent 1435</strong><span>64</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:100%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Customs Agent 3491</strong><span>39</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:61%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Customs Agent 1922</strong><span>32</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:50%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Customs Agent 3600</strong><span>5</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:8%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Customs Agent 3589</strong><span>4</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:6%"></div></div></div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);margin-bottom:10px;">Export Customs Regimes · 434 Exports</div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Transfer of Goods / virtual-transfer structure</strong><span>234</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:100%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Return of Goods (IMMEX)</strong><span>199</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:85%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Temporary Export for Repair or Replacement</strong><span>1</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:1%"></div></div></div>
+
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);margin:18px 0 10px;padding-top:12px;border-top:1px solid var(--border);">Leading Export Customs Agent Codes</div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Customs Agent 3491</strong><span>137</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:100%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Customs Agent 3633</strong><span>93</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:68%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Customs Agent 1435</strong><span>77</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:56%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Customs Agent 3600</strong><span>29</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:21%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Customs Agent 3066</strong><span>19</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:14%"></div></div></div>
+          </div>
+        </div>
+
+        <div class="grid-2" style="gap:12px;margin-top:16px;">
+          <div style="padding:12px 16px;background:rgba(13,43,94,0.03);border-radius:6px;border:1px solid var(--border);">
+            <strong style="font-size:10px;color:var(--navy);text-transform:uppercase;letter-spacing:1.5px;">AIOS Interpretation</strong>
+            <p style="font-size:11px;color:var(--text-muted);line-height:1.7;margin-top:6px;"><strong>IMMEX and virtual-transfer regimes are extensively visible in both directions.</strong> Transfer of Goods is the single largest regime on both sides, and Return of Goods (IMMEX) carries the bulk of the remaining outbound activity. Customs milestone and documentation governance are therefore <strong>structurally relevant</strong> to this network.</p>
+            <p style="font-size:11px;color:var(--text-muted);line-height:1.7;margin-top:6px;">Multiple customs agents are visible in <strong>both</strong> directions, with different leading codes inbound (1435) and outbound (3491). <strong>Distribution across agents is an observed structural signal — it is not presented as pain.</strong></p>
+          </div>
+          <div style="padding:12px 16px;background:rgba(245,158,11,0.06);border-left:3px solid #f59e0b;border-radius:0 6px 6px 0;">
+            <strong style="font-size:10px;color:#b45309;text-transform:uppercase;letter-spacing:1.5px;">Source Discipline</strong>
+            <p style="font-size:11px;color:var(--text-muted);line-height:1.7;margin-top:6px;">The company names behind these customs-agent codes are <strong>not visible in Panjiva and are never invented</strong>. Each agent is displayed only as <strong>Customs Agent &lt;code&gt;</strong>.</p>
+            <p style="font-size:11px;color:var(--text-muted);line-height:1.7;margin-top:6px;">Regime and agent figures are shown as <strong>supplied Shipment counts</strong>. Shares are <strong>not independently calculated</strong>, and the supplied regime and agent lists are <strong>leading entries — not necessarily an exhaustive decomposition</strong> of every Shipment.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 13 OPERATIONAL COMPLEXITY -->
+    <div class="card">
+      <div class="card-header"><span class="accent">13</span> Operational Complexity — HIGH</div>
+      <div class="card-body">
+        <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:14px 18px;background:rgba(232,0,45,0.04);border-left:3px solid var(--red);border-radius:0 6px 6px 0;">
+          <span style="font-size:32px;font-weight:800;color:var(--red);letter-spacing:1px;">HIGH</span>
+          <span style="font-size:12px;color:var(--text-muted);line-height:1.6;flex:1;min-width:280px;">Final AIOS assessment, driven by the Current Operating State. <strong>No numerical complexity score is produced</strong> — the assessment is qualitative and evidence-based.</span>
+        </div>
+        <div class="grid-3" style="gap:10px;margin-top:14px;">
+          <div style="padding:12px 14px;background:var(--bg);border-radius:6px;border-left:3px solid var(--teal);">
+            <strong style="font-size:10px;color:var(--navy);text-transform:uppercase;letter-spacing:1.5px;">Volume, Direction &amp; Mode</strong>
+            <ul class="q-list" style="margin-top:6px;font-size:11px;">
+              <li>584 Current YTD Shipments</li>
+              <li>74.3% export orientation</li>
+              <li>Truck + Air + limited Maritime</li>
+              <li>61 Air Export Shipments</li>
+              <li>Meaningful Unknown-mode / data-precision component</li>
+            </ul>
+          </div>
+          <div style="padding:12px 14px;background:var(--bg);border-radius:6px;border-left:3px solid var(--navy);">
+            <strong style="font-size:10px;color:var(--navy);text-transform:uppercase;letter-spacing:1.5px;">Network Structure</strong>
+            <ul class="q-list" style="margin-top:6px;font-size:11px;">
+              <li>Concentrated inbound network</li>
+              <li>Fragmented outbound network</li>
+              <li>30 Export Core Routes for 80.2%</li>
+              <li>Multiple gateways</li>
+              <li>Extensive Ciudad Juárez exposure</li>
+              <li>Broad outbound destination structure</li>
+              <li>Multiple Trading Partners</li>
+            </ul>
+          </div>
+          <div style="padding:12px 14px;background:var(--bg);border-radius:6px;border-left:3px solid var(--red);">
+            <strong style="font-size:10px;color:var(--navy);text-transform:uppercase;letter-spacing:1.5px;">Regulatory &amp; Customs</strong>
+            <ul class="q-list" style="margin-top:6px;font-size:11px;">
+              <li>IMMEX / virtual-transfer structures</li>
+              <li>Multiple customs agents</li>
+              <li>Different leading agent inbound vs outbound</li>
+              <li>Customs milestone and document governance relevance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 14 OPPORTUNITY MAPPING -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">14</span> Opportunity Map — Observed Signal · AIOS Interpretation · Discovery Validation</div>
+      <div class="card-body" style="padding:12px 18px;">
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;">Each opportunity keeps three layers strictly separate. <strong>Observed Operational Signal</strong> is what Panjiva shows. <strong>AIOS Interpretation</strong> is what it may mean. <strong>Discovery Validation</strong> is what must be confirmed with ACCUDYN. These layers are never collapsed, and <strong>none of them asserts confirmed customer pain</strong>.</span>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:0;">
+        <table class="hub-table" style="font-size:11px;">
+          <thead><tr><th style="width:15%;">Signal</th><th style="width:26%;">Observed Operational Signal</th><th style="width:30%;">AIOS Interpretation</th><th style="width:29%;">Discovery Validation</th></tr></thead>
+          <tbody>
+            <tr>
+              <td style="border-left:3px solid var(--red);"><strong style="color:var(--navy);font-size:12px;">1 · Gateway Concentration</strong></td>
+              <td><strong>90.7%</strong> of Current YTD Imports use Zaragoza-Isleta or Ciudad Juárez.</td>
+              <td>Inbound execution is visibly concentrated around the Ciudad Juárez gateway structure.</td>
+              <td>Validate contingency, alternate crossing strategy, escalation process, SLA performance and provider ownership.</td>
+            </tr>
+            <tr>
+              <td style="border-left:3px solid var(--teal);"><strong style="color:var(--navy);font-size:12px;">2 · Export Fragmentation</strong></td>
+              <td><strong>30 Export Core Routes</strong> are required to reach 80.2%.</td>
+              <td>The outbound network may create meaningful coordination and exception-management requirements.</td>
+              <td>Validate operational workload, provider fragmentation, ownership, exception volume and visibility model.</td>
+            </tr>
+            <tr>
+              <td style="border-left:3px solid var(--teal);"><strong style="color:var(--navy);font-size:12px;">3 · Air Activity</strong></td>
+              <td><strong>61</strong> Current YTD Export Shipments are Air.</td>
+              <td>Air is an operationally relevant mode within the visible network.</td>
+              <td>Validate triggers for Air usage, urgency profile, service expectations, procurement and expedite governance.</td>
+            </tr>
+            <tr>
+              <td style="border-left:3px solid var(--navy);"><strong style="color:var(--navy);font-size:12px;">4 · Customs / IMMEX</strong></td>
+              <td>Virtual-transfer and IMMEX regimes are <strong>extensively visible</strong> in both directions.</td>
+              <td>Customs milestone and documentation governance are structurally relevant.</td>
+              <td>Validate customs ownership, broker governance, exception rate, document control, KPI structure and contingency.</td>
+            </tr>
+            <tr>
+              <td style="border-left:3px solid #7c3aed;"><strong style="color:var(--navy);font-size:12px;">5 · Accudyn Products Relationship</strong></td>
+              <td>Accudyn Products represents <strong>76.7%</strong> of Current YTD Imports and is visible outbound.</td>
+              <td>The recurring corridor may be strategically important.</td>
+              <td>Validate affiliate status, contracting structure, decision rights, procurement ownership and capacity model.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:11px 18px;background:rgba(245,158,11,0.05);">
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:#b45309;">Concentration does not equal pain.</strong> Every row above is an observed structural signal. This page does <strong>not</strong> claim that ACCUDYN currently experiences operational difficulty, provider failure or service shortfall in any of these areas.</span>
+      </div>
+    </div>
+
+    <!-- 15 DISCOVERY HYPOTHESIS -->
+    <div class="card">
+      <div class="card-header" style="background:#7c3aed;"><span style="color:#e9d5ff;">15</span> Discovery Hypothesis — Requires Validation</div>
+      <div class="card-body">
+        <div style="padding:14px 18px;background:rgba(124,58,237,0.05);border-left:3px solid #7c3aed;border-radius:0 6px 6px 0;">
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+            <span style="font-size:9px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:#fff;background:#7c3aed;padding:3px 9px;border-radius:3px;">Discovery Hypothesis — Requires Validation</span>
+            <span style="font-size:11px;color:var(--text-muted);">Not a Panjiva Fact · not an AIOS Calculation · not finalized intelligence</span>
+          </div>
+          <div style="font-size:15px;font-weight:700;color:var(--navy);line-height:1.45;margin-top:10px;">Accudyn Products relationship — the recurring corridor may represent an affiliate / intercompany structure</div>
+
+          <div class="grid-2" style="gap:16px;margin-top:12px;">
+            <div>
+              <strong style="font-size:10px;color:#6d28d9;text-transform:uppercase;letter-spacing:1.5px;">Observed Signal</strong>
+              <p style="font-size:12px;color:var(--text-muted);line-height:1.7;margin-top:6px;">Accudyn Products Inc. represents <strong>115 of 150 Current YTD Imports</strong> and is <strong>also visible in outbound flows</strong> — 72 Export Shipments, plus dedicated Air Core Routes through the Mariano Escobedo Airport gateway. An <strong>Accudyn De Mexico</strong> entity is separately visible on both the inbound and outbound sides.</p>
+              <strong style="font-size:10px;color:#6d28d9;text-transform:uppercase;letter-spacing:1.5px;display:block;margin-top:14px;">Hypothesis</strong>
+              <p style="font-size:12px;color:var(--text-muted);line-height:1.7;margin-top:6px;">The pattern <strong>may</strong> represent an affiliate / intercompany relationship with meaningful logistics and procurement implications.</p>
+            </div>
+            <div>
+              <strong style="font-size:10px;color:#6d28d9;text-transform:uppercase;letter-spacing:1.5px;">What Panjiva Does Not Establish</strong>
+              <ul class="q-list" style="margin-top:6px;font-size:11px;line-height:1.55;">
+                <li>Corporate ownership</li>
+                <li>Contractual relationship</li>
+                <li>Freight procurement ownership</li>
+                <li>Centralized decision rights</li>
+                <li>Provider ownership</li>
+              </ul>
+              <strong style="font-size:10px;color:#6d28d9;text-transform:uppercase;letter-spacing:1.5px;display:block;margin-top:14px;">Why It Matters</strong>
+              <p style="font-size:11px;color:var(--text-muted);line-height:1.7;margin-top:6px;">A recurring intercompany corridor may support a <strong>different Control Tower, customs and capacity-governance conversation</strong> than a conventional supplier lane.</p>
+            </div>
+          </div>
+
+          <div style="margin-top:12px;padding:12px 14px;background:var(--surface);border-radius:6px;border:1px solid var(--border);">
+            <strong style="font-size:10px;color:#6d28d9;text-transform:uppercase;letter-spacing:1.5px;">Discovery Should Validate</strong>
+            <div class="capability-tags" style="margin-top:8px;">
+              <span class="acct-tag">Corporate relationship</span><span class="acct-tag">Logistics ownership</span><span class="acct-tag">Procurement ownership</span>
+              <span class="acct-tag">Incumbent provider model</span><span class="acct-tag">Contracts</span><span class="acct-tag">Capacity governance</span>
+              <span class="acct-tag">Decision rights</span>
+            </div>
+          </div>
+          <div style="margin-top:10px;padding-top:9px;border-top:1px solid rgba(124,58,237,0.25);">
+            <span style="font-size:10px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--navy);">Accudyn Products Inc. is deliberately not labelled an external Supplier</strong>, and Accudyn-branded entities appearing outbound are deliberately not labelled external Customers. Neither classification is asserted without validation.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 15b DATA QUALITY / ENTITY RESOLUTION HYPOTHESIS -->
+    <div class="card">
+      <div class="card-body" style="padding:0;">
+        <div style="padding:14px 18px;background:rgba(217,119,6,0.05);border-left:3px solid #d97706;">
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+            <span style="font-size:9px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:#fff;background:#d97706;padding:3px 9px;border-radius:3px;">Data Quality / Entity Resolution Hypothesis — Requires Validation</span>
+            <span style="font-size:11px;color:var(--text-muted);">Source / entity / geography ambiguity — distinct from the Discovery Hypothesis above, which concerns business and ownership structure</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:16px;margin-top:12px;">
+            <div>
+              <strong style="font-size:10px;color:#b45309;text-transform:uppercase;letter-spacing:1.2px;">Observed Source Signals</strong>
+              <ul class="q-list" style="margin-top:6px;font-size:11px;line-height:1.55;">
+                <li>A meaningful share of Transport Method records is <strong>Unknown</strong> — 43.3% of Imports, 53.7% of Exports</li>
+                <li>Some Import shipper records <strong>do not contain a reliable facility address</strong> — Import Core Route 2 states &ldquo;Address not available in Panjiva&rdquo;</li>
+                <li>Some Export consignee records provide <strong>only country-level geography</strong></li>
+                <li>Some records appear to contain <strong>ACCUDYN-related entities or ACCUDYN addresses on both sides of the flow</strong></li>
+              </ul>
+            </div>
+            <div>
+              <strong style="font-size:10px;color:#b45309;text-transform:uppercase;letter-spacing:1.2px;">Hypothesis</strong>
+              <p style="font-size:11px;color:var(--text-muted);line-height:1.6;margin-top:6px;">Panjiva <strong>does not establish</strong> whether these are intercompany, virtual-transfer, entity-attribution or other structures. The patterns may reflect corporate or billing addresses, alternate facilities, intermediaries, filing / attribution behaviour, entity-resolution issues, or source-data precision limitations.</p>
+              <p style="font-size:11px;color:var(--text-muted);line-height:1.6;margin-top:6px;"><strong style="color:var(--navy);">AIOS treatment:</strong> these records are displayed <strong>exactly as Panjiva supplied them</strong> and are never silently corrected, completed, merged or geocoded.</p>
+            </div>
+            <div>
+              <strong style="font-size:10px;color:#b45309;text-transform:uppercase;letter-spacing:1.2px;">Requires Validation</strong>
+              <ul class="q-list" style="margin-top:6px;font-size:11px;line-height:1.55;">
+                <li>Physical shipping origin versus corporate address</li>
+                <li>Affiliate identity and entity attribution</li>
+                <li>Virtual-transfer versus physical movement of goods</li>
+                <li>True transport mode behind Unknown records</li>
+                <li>Whether the Panjiva geography represents the operational facility</li>
+              </ul>
+            </div>
+          </div>
+          <div style="margin-top:10px;padding-top:9px;border-top:1px solid rgba(217,119,6,0.25);">
+            <span style="font-size:10px;color:var(--text-muted);line-height:1.6;">This hypothesis <strong>does not alter the finalized Core Route calculations</strong> without explicit AIOS validation. <strong>Distinct facilities are never merged merely because they share a company name.</strong> It is not a Panjiva Fact, not an AIOS Calculation and not finalized intelligence.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 16 ILM / CONTROL TOWER OPPORTUNITY -->
+    <div class="card">
+      <div class="card-header"><span class="accent">16</span> ILM / Control Tower Opportunity</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:14px;">
+          <div style="padding:14px 16px;background:rgba(13,43,94,0.03);border-radius:6px;border:1px solid var(--border);">
+            <strong style="font-size:10px;color:var(--navy);text-transform:uppercase;letter-spacing:1.5px;">Why the Visible Network Supports the Conversation</strong>
+            <ul class="q-list" style="margin-top:8px;">
+              <li>Concentrated inbound corridor structure</li>
+              <li>Substantially more distributed outbound network</li>
+              <li>30 Export Core Routes required for ≥80%</li>
+              <li>Truck + Air + limited Maritime</li>
+              <li>Multiple border and airport gateways</li>
+              <li>IMMEX and virtual-transfer regimes extensively visible</li>
+              <li>Multiple customs agents across both directions</li>
+              <li>Concentrated inbound Trading Partner exposure</li>
+              <li>Broad outbound Trading Partner and destination distribution</li>
+            </ul>
+          </div>
+          <div style="padding:14px 16px;background:rgba(0,180,216,0.05);border-radius:6px;border:1px solid var(--border);">
+            <strong style="font-size:10px;color:var(--navy);text-transform:uppercase;letter-spacing:1.5px;">Potential Coordination Scope</strong>
+            <div class="capability-tags" style="margin-top:8px;">
+              <span class="acct-tag">Shipment planning</span><span class="acct-tag">Trading Partner coordination</span><span class="acct-tag">Booking coordination</span>
+              <span class="acct-tag">Carrier coordination</span><span class="acct-tag">Border visibility</span><span class="acct-tag">Airport visibility</span>
+              <span class="acct-tag">Customs milestones</span><span class="acct-tag">IMMEX milestone visibility</span><span class="acct-tag">Document control</span>
+              <span class="acct-tag">Exception management</span><span class="acct-tag">Centralized communication</span><span class="acct-tag">KPI governance</span>
+              <span class="acct-tag">Route performance</span><span class="acct-tag">Facility visibility</span><span class="acct-tag">Contingency governance</span>
+            </div>
+            <p style="font-size:11px;color:var(--text-muted);line-height:1.7;margin-top:12px;">Akzent is positioned as a <strong>coordination layer</strong> across this architecture. <strong style="color:var(--navy);">Nothing here states or implies that ACCUDYN currently lacks these capabilities.</strong> They are framed as areas where Akzent could operate <strong>if Discovery validates the need</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 17 COMMERCIAL POSITIONING -->
+    <div class="card">
+      <div class="card-header"><span class="accent">17</span> Commercial Positioning</div>
+      <div class="card-body">
+        <div class="positioning-box">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);">Position Akzent As</div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px;">
+            <div style="padding:12px 14px;background:rgba(255,255,255,0.12);border-radius:6px;border:1px solid rgba(255,255,255,0.25);"><div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal);margin-bottom:3px;">Primary</div><div style="font-size:13px;font-weight:700;line-height:1.35;">Operational Complexity Partner</div></div>
+            <div style="padding:12px 14px;background:rgba(255,255,255,0.07);border-radius:6px;border:1px solid rgba(255,255,255,0.14);"><div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:3px;">Secondary</div><div style="font-size:13px;font-weight:700;line-height:1.35;">Customs &amp; Visibility Partner</div></div>
+            <div style="padding:12px 14px;background:rgba(255,255,255,0.07);border-radius:6px;border:1px solid rgba(255,255,255,0.14);"><div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:3px;">Secondary</div><div style="font-size:13px;font-weight:700;line-height:1.35;">Multimodal Coordination Partner</div></div>
+            <div style="padding:12px 14px;background:rgba(255,255,255,0.07);border-radius:6px;border:1px solid rgba(255,255,255,0.14);"><div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:3px;">Secondary</div><div style="font-size:13px;font-weight:700;line-height:1.35;">ILM / Control Tower Partner</div></div>
+          </div>
+          <div class="positioning-example">
+            “ACCUDYN's visible network combines a highly concentrated inbound structure through Chihuahua / Ciudad Juárez with a substantially more distributed outbound network, significant IMMEX and virtual-transfer activity, Air usage and multiple customs and gateway relationships. The commercial conversation should focus on how that network is governed, coordinated and made visible across providers, Trading Partners and exceptions.”
+          </div>
+          <p style="font-size:11px;color:rgba(255,255,255,0.7);line-height:1.7;margin-top:12px;">Never position Akzent primarily as a <strong style="color:#fff;">transactional freight provider</strong>, <strong style="color:#fff;">commodity transportation provider</strong> or <strong style="color:#fff;">spot-rate provider</strong>. This is <strong style="color:#fff;">Commercial Positioning</strong> — it is <strong style="color:#fff;">not proof of confirmed customer pain</strong>.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 18 DISCOVERY INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">18</span> Discovery Intelligence</div>
+      <div class="card-body">
+        <div style="padding:11px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 6px 6px 0;margin-bottom:14px;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:#b45309;">Do not ask ACCUDYN to identify routes, modes, countries or primary gateways already visible in Panjiva.</strong> Discovery exists to validate <strong>unknown business facts</strong> — ownership, governance, contingency, decision rights and procurement structure.</span>
+        </div>
+        <div class="grid-2" style="gap:14px;">
+          <div>
+            <strong style="font-size:10px;color:var(--navy);text-transform:uppercase;letter-spacing:1.5px;">Ownership, Corridor &amp; Capacity</strong>
+            <ul class="q-list" style="margin-top:8px;font-size:12px;line-height:1.6;">
+              <li>How is logistics ownership divided between the Chihuahua operation and Accudyn Products for the recurring Erie–Chihuahua corridor?</li>
+              <li>Who controls carrier / provider selection and contracting for the principal cross-border flows?</li>
+              <li>How is capacity managed on the recurring Zaragoza / Ciudad Juárez structure?</li>
+              <li>What contingency model exists if the principal Ciudad Juárez crossing structure is disrupted?</li>
+              <li>Is the outbound provider structure centralized or distributed by Trading Partner, geography or business unit?</li>
+            </ul>
+            <strong style="font-size:10px;color:var(--navy);text-transform:uppercase;letter-spacing:1.5px;display:block;margin-top:16px;">Mode &amp; Expedite Governance</strong>
+            <ul class="q-list" style="margin-top:8px;font-size:12px;line-height:1.6;">
+              <li>What operational events trigger Air versus Truck execution?</li>
+              <li>How are Air expedites approved, monitored and measured?</li>
+            </ul>
+          </div>
+          <div>
+            <strong style="font-size:10px;color:var(--navy);text-transform:uppercase;letter-spacing:1.5px;">Customs, Visibility &amp; Escalation</strong>
+            <ul class="q-list" style="margin-top:8px;font-size:12px;line-height:1.6;">
+              <li>What KPIs govern border crossing, customs release and exception performance?</li>
+              <li>How are the multiple Customs Agent relationships allocated and governed?</li>
+              <li>How are virtual transfers and IMMEX documentation coordinated across internal teams and external providers?</li>
+              <li>Is Shipment visibility centralized across Truck, Air, customs and Trading Partners?</li>
+              <li>Where do exceptions currently require the most manual coordination?</li>
+              <li>Who owns escalation when a Shipment misses a customs, border or delivery milestone?</li>
+            </ul>
+            <strong style="font-size:10px;color:var(--navy);text-transform:uppercase;letter-spacing:1.5px;display:block;margin-top:16px;">Procurement &amp; Decision Rights</strong>
+            <ul class="q-list" style="margin-top:8px;font-size:12px;line-height:1.6;">
+              <li>What procurement cycle and contract windows would govern a potential logistics change?</li>
+              <li>What would ACCUDYN require from a Control Tower / ILM partner before considering a change in operating model?</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 19 DATA AVAILABILITY / QUALITY -->
+    <div class="card">
+      <div class="card-header"><span class="accent">19</span> Data Availability &amp; Source Governance</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:16px;">
+          <div>
+            <strong style="font-size:10px;color:var(--navy);text-transform:uppercase;letter-spacing:1.5px;">Evidence Categories Used On This Page</strong>
+            <table class="hub-table" style="font-size:11px;margin-top:8px;">
+              <tbody>
+                <tr><td><span style="font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;background:var(--navy);padding:2px 7px;border-radius:3px;">Panjiva Fact</span></td><td style="color:var(--text-muted);">Directly observed in the source — Shipment counts, gateways, modes, HS codes, regimes, agent codes, addresses, dates</td></tr>
+                <tr><td><span style="font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;background:var(--teal-dim);padding:2px 7px;border-radius:3px;">AIOS Calculation</span></td><td style="color:var(--text-muted);">Finalized computed values — shares, cumulative coverage, comparable-period change, route cadence</td></tr>
+                <tr><td><span style="font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;background:#6b7280;padding:2px 7px;border-radius:3px;">AIOS Interpretation</span></td><td style="color:var(--text-muted);">What the observed structure may mean operationally — never customer-confirmed</td></tr>
+                <tr><td><span style="font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;background:#7c3aed;padding:2px 7px;border-radius:3px;">Discovery Hypothesis</span></td><td style="color:var(--text-muted);">Business / ownership structure that <strong>requires validation</strong></td></tr>
+                <tr><td><span style="font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;background:#d97706;padding:2px 7px;border-radius:3px;">Data Quality / Entity Resolution</span></td><td style="color:var(--text-muted);">Source, entity or geography ambiguity that <strong>requires validation</strong></td></tr>
+              </tbody>
+            </table>
+            <div style="margin-top:12px;padding:10px 14px;background:rgba(13,43,94,0.03);border-radius:5px;border:1px solid var(--border);">
+              <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--navy);">No interpretation or hypothesis on this page is presented as a customer-confirmed fact.</strong></span>
+            </div>
+          </div>
+          <div>
+            <strong style="font-size:10px;color:var(--navy);text-transform:uppercase;letter-spacing:1.5px;">Source Governance Rules Applied</strong>
+            <div class="grid-2" style="gap:14px;margin-top:8px;">
+              <ul class="q-list" style="font-size:11px;line-height:1.6;">
+                <li>Panjiva = <strong>Visible Logistics Universe</strong>; it does not necessarily represent the complete real-world logistics universe</li>
+                <li>Previous Full Calendar Year = <strong>2025</strong> (Jan 3 – Dec 30) · Current YTD = <strong>2026</strong> (Jan 5 – Jul 30)</li>
+                <li><strong>YTD actuals are never annualized</strong> and never combined with 2025</li>
+                <li>Comparable trend uses <strong>observed actual versus observed actual</strong> over equal Jan 1 – Jul 30 windows</li>
+                <li>Core Routes = smallest route set reaching <strong>≥80% cumulative Shipments</strong></li>
+                <li>Imports and Exports use <strong>separate denominators</strong></li>
+              </ul>
+              <ul class="q-list" style="font-size:11px;line-height:1.6;">
+                <li><strong>Unknown</strong> transport mode is preserved explicitly and never reclassified</li>
+                <li>Missing addresses display <strong>&ldquo;Address not available in Panjiva&rdquo;</strong> — geography is never invented or silently completed</li>
+                <li><strong>Distinct facilities are never merged</strong> merely because they share a company name</li>
+                <li>Customs Agent codes are <strong>never converted into invented company names</strong></li>
+                <li>HS operational-presence counts are <strong>non-additive</strong></li>
+                <li>Route Rank is observed frequency — <strong>never Commercial Route Priority</strong></li>
+                <li>As a <strong>LEAD</strong>, this page contains no Akzent captured-business metrics — no Wallet, Penetration, Coverage, Revenue, Gross Profit or Margin. The only &ldquo;coverage&rdquo; shown is Core Route cumulative Shipment coverage</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:14px;padding:12px 16px;background:rgba(217,119,6,0.05);border-left:3px solid #d97706;border-radius:0 6px 6px 0;">
+          <strong style="font-size:10px;color:#b45309;text-transform:uppercase;letter-spacing:1.5px;">Known Source Limitations</strong>
+          <div class="grid-2" style="gap:14px;margin-top:8px;">
+            <ul class="q-list" style="font-size:11px;line-height:1.6;">
+              <li>A meaningful share of Transport Method records is <strong>Unknown</strong></li>
+              <li>Some Import shipper records do <strong>not contain a reliable facility address</strong></li>
+            </ul>
+            <ul class="q-list" style="font-size:11px;line-height:1.6;">
+              <li>Some Export consignee records provide <strong>only country-level geography</strong></li>
+              <li>Some records appear to contain <strong>ACCUDYN-related entities or addresses on both sides of the flow</strong>; Panjiva does not establish whether these are intercompany, virtual-transfer, entity-attribution or other structures</li>
+            </ul>
+          </div>
+          <div style="margin-top:8px;padding-top:8px;border-top:1px solid rgba(217,119,6,0.25);">
+            <span style="font-size:10px;color:var(--text-muted);line-height:1.6;"><strong>These records are never silently &ldquo;corrected.&rdquo;</strong> Source precision is preserved throughout this page.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 </main>
 
 <script>
@@ -44939,6 +46628,7 @@ const ACCOUNTS = [
   { id:'view-fronterra', name:'Fronterra Avocados', sub:'Fronterra Avocados S.A. de C.V. · Agroexport / Fresh Produce / Avocado Exporter · Mexico to USA Cross-Border · 100% Truck · Reynosa · Nuevo Laredo · Aguacate Hass · Fronterra Group Inc. · Consignee concentration · Customs visibility · Exception management · ILM / Control Tower · Panjiva Mexico Exports', rel:'LEAD', cls:'AA', clsPill:'aa' },
   { id:'view-skf', name:'SKF de México', sub:'SKF de México · Target Account · LEAD · AAA Strategic Account · Operational Complexity HIGH · Panjiva Visible Logistics Universe · Import-Led Multimodal International Network · 2,166 Current YTD Shipments · 1,714 Imports 79.1% · 452 Exports 20.9% · −15.1% comparable Jan–Jul actual vs actual · 242 Import Core Routes to ≥80% · 38 Export Core Routes to ≥80% · 369 Import Core Routes 2025 · 47 Export Core Routes 2025 · Inbound fragmentation · Outbound concentration · Observed Gateway Concentration · Nuevo Laredo 54.4% of Export Shipments · Border Gateway · Multimodal · Customs · Cross-Border · Trading Partners · Core Route Complexity · Exception Management · Supplier Coordination · Control Tower Readiness · ILM / Control Tower Partner · Operational Complexity Partner · Multimodal Coordination Partner · Customs & Visibility Partner', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
   { id:'view-flex-americas', name:'Flex Americas', sub:'Flex Americas S.A. de C.V. · Flexible Packaging / Plastic Film Manufacturing · IMMEX · Altamira, Tamaulipas · Matamoros Border · Elizabethtown, Kentucky · EXTREME ROUTE CONCENTRATION · Fragmented Multimodal Inbound + Extreme Outbound Cross-Border Concentration · 2,262 Current YTD Shipments · +12.5% H1 YoY · 507 Imports · 1,755 Exports · 40 Import Core Routes to 80.08% · 84 Import Core Routes 2025 to 80.00% · 1 Export Core Route 87.81% · 2025 Export Core Route 84.06% · Cross-Border · Truck + Maritime + Air · Multimodal · Customs · Customs Agent 3341 · Port Border Airport · Altamira · Matamoros · Manzanillo · MTY Airport · AICM · AIFA · 39 origin countries · Flex Films (USA) · Flex Films Africa · Flex PET Egypt · Polyquest · INX International Ink · Trading Partners · IMMEX · HS 3920620200 · Supplier coordination · Exception management · ILM / Control Tower · Operational Complexity HIGH · AAA Strategic Target · Panjiva Visible Logistics Universe', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
+  { id:'view-accudyn', name:'ACCUDYN DE MEXICO', sub:'ACCUDYN DE MEXICO · Accudyn De Mexico S De Rl De Cv · Target Account · LEAD · AAA Strategic Target · Operational Complexity HIGH · Panjiva Visible Logistics Universe · Industrial Manufacturing · Engineering Resin Inputs &amp; Molded / Electrical-Apparatus Components · 584 Current YTD Shipments · 150 Imports 25.7% · 434 Exports 74.3% · −5.3% comparable Jan 1–Jul 30 actual vs actual · Imports −20.6% · Exports +1.4% · 3 Import Core Routes to 82.7% · 30 Export Core Routes to 80.2% · 2025 baseline 1,045 Shipments · 308 Imports · 737 Exports · 3 Import Core Routes 83.8% · 28 Export Core Routes 80.2% · Concentrated inbound · Fragmented outbound · Structurally asymmetric network · Chihuahua · Complejo Industrial Chihuahua · Avenida Victor Huga · Ciudad Juárez · Puente Internacional Zaragoza-Isleta · Gateway concentration 90.7% · Gral. Mariano Escobedo Airport · Gral. Roberto Fierro Villalobos Airport · Colombia Nuevo León · Querétaro · Manzanillo · Nuevo Laredo · Altamira · Guadalupe-Tornillo · Truck · Air · Maritime · Unknown mode preserved · 61 Air Export Shipments · Erie Pennsylvania · 2400 Yoder Drive · Accudyn Products Inc. 76.7% of Imports · Lutron · Conmed · Ademco · Honeywell Optoelectronica · Boeing Encore Interiors · Command Medical Products · Trading Partners · IMMEX · Virtual Transfer · Transfer of Goods · Return of Goods · Customs Agent 1435 · 3491 · 1922 · 3633 · 3600 · 3066 · 3589 · HS 3908100700 polyamide · 3907400499 polycarbonate · 3926909999 · 8538900100 · Cross-Border · Customs · Multimodal · Core Route Complexity · Exception Management · Operational Complexity Partner · Customs &amp; Visibility Partner · Multimodal Coordination Partner · ILM / Control Tower Partner', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
 ];
 const MODULES = [
   { id:'view-network',     name:'Network Intelligence', sub:'Cross-account analysis · Lane overlap' },
