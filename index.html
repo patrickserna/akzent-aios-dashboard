@@ -1164,6 +1164,15 @@ main {
   #view-flex-americas .hist-appendix .hub-table th { padding: 3px 7px !important; }
   #view-flex-americas .hist-appendix .hub-table tr { break-inside: avoid; }
   #view-flex-americas .hist-appendix .outreach-step-header { font-size: 10px; }
+
+  /* SKF de México historical appendix — complete but visually secondary in print.
+     Scoped to #view-skf .hist-appendix so no other account is affected. */
+  #view-skf .hist-appendix { break-inside: auto; }
+  #view-skf .hist-appendix .hub-table { font-size: 8.5px !important; min-width: 0 !important; }
+  #view-skf .hist-appendix .hub-table td,
+  #view-skf .hist-appendix .hub-table th { padding: 3px 7px !important; }
+  #view-skf .hist-appendix .hub-table tr { break-inside: avoid; }
+  #view-skf .hist-appendix .outreach-step-header { font-size: 10px; }
   .page-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .card-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .positioning-box { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
@@ -1354,6 +1363,11 @@ main {
     </div>
     <div class="nav-item" onclick="showView('view-flex-americas', this)">
       <span>◆</span> <span style="flex:1;">Flex Americas</span>
+      <span class="recent-cls" style="background:rgba(245,158,11,0.2);color:#f59e0b;">LEAD</span>
+      <span class="recent-cls aaa">AAA</span>
+    </div>
+    <div class="nav-item" onclick="showView('view-skf', this)">
+      <span>◆</span> <span style="flex:1;">SKF de México</span>
       <span class="recent-cls" style="background:rgba(245,158,11,0.2);color:#f59e0b;">LEAD</span>
       <span class="recent-cls aaa">AAA</span>
     </div>
@@ -2541,6 +2555,38 @@ main {
         <span class="acct-tag">Air</span>
         <span class="acct-tag">IMMEX</span>
         <span class="acct-tag">ILM</span>
+      </div>
+    </div>
+
+    <!-- SKF de México -->
+    <div class="account-card aaa" onclick="showViewById('view-skf')">
+      <div class="account-card-header">
+        <div>
+          <div class="account-name">SKF de México</div>
+          <div class="account-industry">Import-Led Multimodal International Network · Panjiva Visible Logistics Universe</div>
+        </div>
+        <div style="display:flex;gap:5px;align-items:center;flex-shrink:0;">
+          <span class="account-cls-badge lead">LEAD</span>
+          <span class="account-cls-badge aaa">AAA</span>
+        </div>
+      </div>
+      <div class="account-metrics" style="grid-template-columns:repeat(4,1fr);">
+        <div class="acct-metric"><div class="acct-metric-val">2,166</div><div class="acct-metric-lbl">Current YTD Shipments</div></div>
+        <div class="acct-metric"><div class="acct-metric-val" style="color:var(--red);">−15.1%</div><div class="acct-metric-lbl">Jan–Jul YoY · observed</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">1,714</div><div class="acct-metric-lbl">Imports</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">452</div><div class="acct-metric-lbl">Exports</div></div>
+      </div>
+      <div style="margin-top:10px;padding:8px 10px;background:rgba(196,30,58,0.05);border-left:3px solid var(--red);border-radius:0 4px 4px 0;">
+        <div style="font-size:9px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:var(--red);">Operational Complexity · HIGH</div>
+        <div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;margin-top:2px;">242 Import Core Routes vs 38 Export Core Routes to ≥80%</div>
+      </div>
+      <div class="account-tags">
+        <span class="acct-tag" style="background:rgba(245,158,11,0.12);color:#b45309;border-color:rgba(245,158,11,0.3);">LEAD</span>
+        <span class="acct-tag">Multimodal</span>
+        <span class="acct-tag">Customs</span>
+        <span class="acct-tag">Cross-Border</span>
+        <span class="acct-tag">Core Route Complexity</span>
+        <span class="acct-tag">ILM / Control Tower</span>
       </div>
     </div>
 
@@ -12972,6 +13018,16 @@ main {
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot"></div></div></td>
               <td><div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div></div></td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td style="color:#b45309;font-weight:700;font-size:11px;">★ PRIORITY TARGET</td>
+            </tr>
+            <tr onclick="showViewById('view-skf')" style="cursor:pointer;">
+              <td><strong>SKF de México</strong> <span style="font-size:10px;font-weight:600;color:#b45309;background:rgba(245,158,11,0.12);padding:1px 5px;border-radius:3px;margin-left:4px;">LEAD</span></td>
+              <td><span class="cls-pill aaa">AAA</span></td>
+              <td style="color:var(--text-muted);" title="Relationship LEAD · Classification AAA Strategic Account · Operational Complexity HIGH · Current YTD Shipments 2,166 · Imports 1,714 (79.1%) · Exports 452 (20.9%) · Comparable Jan–Jul actual-vs-actual change −15.1% · Import Core Routes 242 to ≥80% · Export Core Routes 38 to ≥80% · 2025 Import Core Routes 369 · 2025 Export Core Routes 47 · Multimodal international activity visible in Panjiva · Observed Gateway Concentration Nuevo Laredo 54.4% of Current YTD Export Shipments · Panjiva Visible Logistics Universe">Import-Led Multimodal International Network</td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td style="color:var(--text-light);font-size:11px;" title="Modal intensity detail not supplied in the finalized AIOS intelligence for this account. Multimodal international activity is established; per-mode weighting is not.">—</td>
+              <td style="color:var(--text-light);font-size:11px;" title="Modal intensity detail not supplied in the finalized AIOS intelligence for this account. Multimodal international activity is established; per-mode weighting is not.">—</td>
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
               <td style="color:#b45309;font-weight:700;font-size:11px;">★ PRIORITY TARGET</td>
             </tr>
@@ -41704,6 +41760,595 @@ main {
 </div>
 
 <!-- ══ FLEX AMERICAS VIEW ══ -->
+<!-- ══════════════════════════════════════════════════════════════════════════
+     SKF DE MÉXICO — TARGET ACCOUNT · LEAD · AAA STRATEGIC ACCOUNT
+     Panjiva Visible Logistics Universe. Akzent does not manage this account.
+     AIOS owns intelligence. This view presents finalized AIOS intelligence only.
+     ══════════════════════════════════════════════════════════════════════════ -->
+<div id="view-skf" class="view">
+  <div class="page-header">
+    <div class="page-header-left">
+      <div class="page-header-eyebrow">Target Account · LEAD · Panjiva Visible Logistics Universe</div>
+      <div class="page-header-title">SKF de México</div>
+      <div class="page-header-sub">Import-Led Multimodal International Network · Fragmented Inbound Route Architecture · Concentrated Outbound Structure · Nuevo Laredo Outbound Gateway</div>
+    </div>
+    <div class="page-header-meta">
+      <span class="classification-badge lead">LEAD</span>
+      <span class="classification-badge aaa">AAA</span>
+      <button class="print-btn" onclick="printView('view-skf')">⬇ Export PDF</button>
+    </div>
+  </div>
+  <div class="content-body">
+
+    <!-- Identity strip — Relationship and Classification are independent dimensions -->
+    <div class="card">
+      <div class="card-body" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 18px;">
+        <span style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);">Relationship Status</span>
+        <span class="classification-badge lead">LEAD</span>
+        <span style="width:1px;height:20px;background:var(--border);"></span>
+        <span style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);">AIOS Classification</span>
+        <span class="classification-badge aaa">AAA</span>
+        <span style="font-size:11px;color:var(--text-muted);">Strategic Account</span>
+        <span style="width:1px;height:20px;background:var(--border);"></span>
+        <span style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);">Operational Complexity</span>
+        <span style="font-size:13px;font-weight:800;color:var(--red);letter-spacing:0.5px;">HIGH</span>
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;flex:1;min-width:300px;text-align:right;">
+          <strong style="color:var(--navy);">Pre-commercial.</strong> Akzent does not currently manage this account. All figures are drawn exclusively from the <strong>Panjiva visible logistics universe</strong>.
+        </span>
+      </div>
+    </div>
+
+    <!-- 01 EXECUTIVE INTELLIGENCE — CURRENT OPERATING STATE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">01</span> Executive Intelligence — Current Operating State · 2026 YTD</div>
+      <div class="card-body">
+        <div class="grid-4" style="gap:10px;">
+          <div class="stat-box"><div class="stat-label">Visible Shipments · Current YTD</div><div class="stat-value teal" style="font-size:32px;">2,166</div><div class="stat-sub">2026 YTD through last visible Panjiva Shipment date · observed, never annualized</div></div>
+          <div class="stat-box" style="border-color:rgba(196,30,58,0.35);background:rgba(196,30,58,0.04);"><div class="stat-label">Comparable-Period Change</div><div class="stat-value" style="font-size:32px;color:var(--red);">−15.1%</div><div class="stat-sub">Lower visible Shipment activity vs <strong>Jan–Jul 2025</strong> · observed actual vs observed actual</div></div>
+          <div class="stat-box"><div class="stat-label">Imports</div><div class="stat-value" style="font-size:32px;">1,714</div><div class="stat-sub">79.1% of Current YTD Shipments</div></div>
+          <div class="stat-box"><div class="stat-label">Exports</div><div class="stat-value" style="font-size:32px;">452</div><div class="stat-sub">20.9% of Current YTD Shipments</div></div>
+        </div>
+
+        <div class="grid-4" style="gap:10px;margin-top:10px;">
+          <div class="stat-box" style="border-left:3px solid var(--red);"><div class="stat-label">Import Core Routes ≥80%</div><div class="stat-value red" style="font-size:26px;">242 <span style="font-size:13px;color:var(--text-muted);font-weight:700;">routes</span></div><div class="stat-sub">HIGHLY FRAGMENTED INBOUND ARCHITECTURE</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">Export Core Routes ≥80%</div><div class="stat-value" style="font-size:26px;">38 <span style="font-size:13px;color:var(--text-muted);font-weight:700;">routes</span></div><div class="stat-sub">Materially more concentrated outbound structure</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--navy);"><div class="stat-label">Observed Gateway Concentration</div><div class="stat-value" style="font-size:26px;">54.4%</div><div class="stat-sub">of Current YTD Export Shipments associated with <strong>Nuevo Laredo</strong></div></div>
+          <div class="stat-box"><div class="stat-label">Directional Structure</div><div class="stat-value" style="font-size:26px;">Import-Led</div><div class="stat-sub">79.1% Imports / 20.9% Exports · multimodal international</div></div>
+        </div>
+
+        <div style="margin-top:16px;padding:18px 22px;background:linear-gradient(135deg,rgba(13,43,94,0.05) 0%,rgba(196,30,58,0.05) 100%);border-left:3px solid var(--red);border-radius:0 6px 6px 0;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--red);margin-bottom:8px;">Primary AIOS Conclusion</div>
+          <div style="font-size:21px;font-weight:800;color:var(--navy);line-height:1.35;">Highly fragmented inbound route architecture<br>+ materially more concentrated outbound structure</div>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.7;margin-top:10px;max-width:900px;">SKF de México shows a large, complex and highly international Panjiva-visible logistics network. The most important network-level conclusion is the strong <strong>asymmetry between inbound and outbound route structure</strong>. Current YTD Imports require <strong>242 distinct Core Routes</strong> to reach the mandatory ≥80% coverage threshold; Current YTD Exports require <strong>38</strong>. The inbound network is highly fragmented across a large number of route combinations. The outbound network is materially more concentrated.</p>
+          <p style="font-size:11px;color:var(--text-muted);line-height:1.7;margin-top:8px;"><strong style="color:var(--navy);">This is an observed structural signal, not confirmed customer pain.</strong> It is used to communicate Operational Complexity and as the basis for Discovery around coordination, visibility, governance and exception management.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 SHIPMENT TREND — OBSERVED ACTUAL vs OBSERVED ACTUAL -->
+    <div class="card">
+      <div class="card-header"><span class="accent">02</span> Shipment Trend — Observed Actual vs Observed Actual</div>
+      <div class="card-body">
+        <div style="display:grid;grid-template-columns:minmax(300px,0.9fr) 1.4fr;gap:22px;align-items:stretch;">
+
+          <div style="padding:20px 22px;background:var(--bg);border:1px solid var(--border);border-radius:8px;display:flex;flex-direction:column;justify-content:center;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal-dim);">Primary Comparison</div>
+            <div style="font-size:14px;font-weight:800;color:var(--navy);margin-top:3px;">Jan–Jul 2025 vs Jan–Jul 2026 · Actual</div>
+            <div style="font-size:10px;color:var(--text-muted);margin-top:2px;">Comparable observed period, both years</div>
+
+            <div style="margin-top:26px;text-align:center;">
+              <div style="font-size:52px;font-weight:800;color:var(--red);line-height:1;">▼ 15.1%</div>
+              <div style="font-size:12px;font-weight:700;color:var(--navy);margin-top:10px;letter-spacing:0.3px;">Lower visible Shipment activity</div>
+              <div style="font-size:10px;color:var(--text-light);margin-top:4px;">observed actual vs observed actual</div>
+            </div>
+
+            <div style="margin-top:24px;padding-top:16px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;">
+              <span style="font-size:10px;color:var(--text-muted);letter-spacing:0.5px;">Current YTD visible Shipments</span>
+              <span style="font-size:18px;font-weight:800;color:var(--navy);">2,166</span>
+            </div>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div style="padding:16px 20px;background:rgba(196,30,58,0.04);border:1px solid rgba(196,30,58,0.22);border-radius:8px;">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--red);margin-bottom:7px;">Evidence Governance — Language Discipline</div>
+              <p style="font-size:12px;color:var(--text-muted);line-height:1.75;margin:0;">Panjiva establishes <strong style="color:var(--navy);">a visible decline in Shipment activity</strong>. It does <strong>not</strong> establish the reason for that decline. This dashboard therefore states only what is observed.</p>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px;">
+                <div>
+                  <div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#059669;margin-bottom:5px;">✓ Approved language</div>
+                  <ul style="margin:0;padding-left:16px;font-size:11px;color:var(--text-muted);line-height:1.8;">
+                    <li>lower visible Shipment activity</li>
+                    <li>visible decline</li>
+                    <li>observed actual vs observed actual</li>
+                  </ul>
+                </div>
+                <div>
+                  <div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--red);margin-bottom:5px;">✕ Not established by Panjiva</div>
+                  <ul style="margin:0;padding-left:16px;font-size:11px;color:var(--text-light);line-height:1.8;">
+                    <li>demand fell · production fell</li>
+                    <li>supplier loss · customer loss</li>
+                    <li>provider change · operational deterioration</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div style="padding:14px 18px;background:var(--bg);border:1px solid var(--border);border-radius:8px;">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);margin-bottom:7px;">Period Architecture</div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+                <div style="padding:10px 12px;background:#fff;border:1px solid var(--border);border-left:3px solid var(--teal);border-radius:0 5px 5px 0;">
+                  <div style="font-size:11px;font-weight:800;color:var(--navy);">2026 YTD</div>
+                  <div style="font-size:10px;color:var(--text-muted);line-height:1.6;margin-top:3px;">Current Operating State — drives Executive Summary, Classification, Complexity, Positioning and Discovery.</div>
+                </div>
+                <div style="padding:10px 12px;background:#fff;border:1px solid var(--border);border-left:3px solid var(--text-light);border-radius:0 5px 5px 0;">
+                  <div style="font-size:11px;font-weight:800;color:var(--navy);">2025 Full Calendar Year</div>
+                  <div style="font-size:10px;color:var(--text-muted);line-height:1.6;margin-top:3px;">Established Operating Structure — structural and historical context only.</div>
+                </div>
+              </div>
+              <p style="font-size:10px;color:var(--text-light);line-height:1.6;margin:12px 0 0;">Periods are never aggregated. Current YTD is never annualized as actual performance. No forecast is presented anywhere in this view.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 NETWORK STRUCTURE — INBOUND FRAGMENTATION vs OUTBOUND CONCENTRATION -->
+    <div class="card">
+      <div class="card-header"><span class="accent">03</span> Network Structure — Inbound Fragmentation vs Outbound Concentration</div>
+      <div class="card-body">
+        <p style="font-size:12px;color:var(--text-muted);line-height:1.7;margin:0 0 18px;max-width:960px;">Core Routes are defined as <strong style="color:var(--navy);">the smallest route set reaching ≥80% cumulative Shipments of its Import or Export universe</strong>. The denominator is directional — Import route percentages use total Imports, Export route percentages use total Exports. The two directions are therefore measured on the same standard and are directly comparable.</p>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+
+          <div style="padding:20px 22px;background:rgba(196,30,58,0.04);border:1px solid rgba(196,30,58,0.25);border-radius:8px;">
+            <div style="display:flex;align-items:baseline;justify-content:space-between;">
+              <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--red);">Inbound · Imports</div>
+              <div style="font-size:11px;font-weight:700;color:var(--text-muted);">1,714 Shipments</div>
+            </div>
+            <div style="font-size:56px;font-weight:800;color:var(--red);line-height:1;margin-top:10px;">242</div>
+            <div style="font-size:12px;font-weight:700;color:var(--navy);margin-top:4px;">distinct routes required to reach ≥80%</div>
+            <div style="margin-top:16px;display:flex;flex-wrap:wrap;gap:2px;">
+<span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--red);opacity:0.55;border-radius:1px;"></span>
+            </div>
+            <div style="font-size:10px;color:var(--text-muted);line-height:1.6;margin-top:12px;">Each mark is one Core Route inside the ≥80% Import set. The breadth of this set is the defining structural characteristic of the inbound network.</div>
+          </div>
+
+          <div style="padding:20px 22px;background:rgba(0,180,216,0.04);border:1px solid rgba(0,180,216,0.28);border-radius:8px;">
+            <div style="display:flex;align-items:baseline;justify-content:space-between;">
+              <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal-dim);">Outbound · Exports</div>
+              <div style="font-size:11px;font-weight:700;color:var(--text-muted);">452 Shipments</div>
+            </div>
+            <div style="font-size:56px;font-weight:800;color:var(--teal-dim);line-height:1;margin-top:10px;">38</div>
+            <div style="font-size:12px;font-weight:700;color:var(--navy);margin-top:4px;">distinct routes required to reach ≥80%</div>
+            <div style="margin-top:16px;display:flex;flex-wrap:wrap;gap:2px;">
+<span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span><span style="width:5px;height:14px;background:var(--teal);opacity:0.75;border-radius:1px;"></span>
+            </div>
+            <div style="font-size:10px;color:var(--text-muted);line-height:1.6;margin-top:12px;">Measured on the identical ≥80% standard against its own directional denominator. The outbound network reaches the same coverage threshold with a materially smaller route set.</div>
+          </div>
+        </div>
+
+        <div style="margin-top:16px;padding:16px 20px;background:var(--bg);border:1px solid var(--border);border-radius:8px;">
+          <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">Structural Reading</div>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.75;margin:0;max-width:960px;">SKF de México reaches ≥80% outbound coverage with <strong style="color:var(--navy);">38 routes</strong> while requiring <strong style="color:var(--navy);">242 routes</strong> to reach the same threshold inbound. This asymmetry is an <strong>observed operational signal</strong>. It is presented to communicate Operational Complexity and to frame Discovery around coordination, visibility, governance and exception management. <strong style="color:var(--navy);">It is not converted into a score, a ranking, or a confirmed customer pain.</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 GATEWAY INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">04</span> Gateway Intelligence — Observed Gateway Concentration</div>
+      <div class="card-body">
+        <div style="display:grid;grid-template-columns:minmax(280px,0.85fr) 1.5fr;gap:20px;align-items:stretch;">
+
+          <div style="padding:20px 22px;background:linear-gradient(135deg,rgba(13,43,94,0.06) 0%,rgba(13,43,94,0.02) 100%);border:1px solid var(--border);border-left:3px solid var(--navy);border-radius:0 8px 8px 0;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);">Observed Gateway Concentration</div>
+            <div style="font-size:20px;font-weight:800;color:var(--navy);margin-top:8px;">Nuevo Laredo</div>
+            <div style="display:inline-block;margin-top:6px;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#b45309;background:rgba(245,158,11,0.14);border:1px solid rgba(245,158,11,0.3);padding:2px 7px;border-radius:3px;">Border Gateway</div>
+            <div style="font-size:48px;font-weight:800;color:var(--navy);line-height:1;margin-top:18px;">54.4%</div>
+            <div style="font-size:11px;font-weight:700;color:var(--text-muted);line-height:1.6;margin-top:6px;">of Current YTD Export Shipments are associated with Nuevo Laredo</div>
+            <div style="margin-top:14px;height:8px;background:rgba(13,43,94,0.1);border-radius:4px;overflow:hidden;">
+              <div style="width:54.4%;height:100%;background:var(--navy);border-radius:4px;"></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:9px;color:var(--text-light);margin-top:5px;"><span>Nuevo Laredo 54.4%</span><span>Remaining Export network 45.6%</span></div>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div style="padding:16px 20px;background:#fff;border:1px solid var(--border);border-radius:8px;">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:7px;">Observed Operational Signal · Panjiva Fact</div>
+              <p style="font-size:12px;color:var(--text-muted);line-height:1.75;margin:0;">Approximately <strong style="color:var(--navy);">54.4% of Current YTD Export Shipments</strong> are associated with Nuevo Laredo in the finalized AIOS intelligence. Nuevo Laredo is a <strong>Border gateway</strong> — a crossing node in the outbound network. It is never represented as an SKF de México facility. <strong style="color:var(--navy);">Facility and Gateway remain separate operational dimensions throughout this view.</strong></p>
+            </div>
+
+            <div style="padding:16px 20px;background:rgba(245,158,11,0.05);border:1px solid rgba(245,158,11,0.28);border-radius:8px;">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#b45309;margin-bottom:7px;">Governance — What This Is Not</div>
+              <p style="font-size:12px;color:var(--text-muted);line-height:1.75;margin:0;">This is presented as <strong style="color:var(--navy);">Observed Gateway Concentration</strong>. Panjiva does <strong>not</strong> establish that SKF de México is experiencing problems at Nuevo Laredo. The terms <em>bottleneck</em>, <em>pain point</em> and <em>risk</em> are not applied to this observation as fact. Where concentration is discussed commercially, it appears in the Opportunity Mapping module explicitly labelled as <strong>AIOS Interpretation</strong> requiring Discovery Validation.</p>
+            </div>
+
+            <div style="padding:16px 20px;background:var(--bg);border:1px solid var(--border);border-radius:8px;">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);margin-bottom:7px;">Discovery Validation</div>
+              <p style="font-size:12px;color:var(--text-muted);line-height:1.75;margin:0;">Validate how gateway strategy is governed, how customs brokers are managed across gateways, whether broker KPIs are standardized, and what contingency structure exists if a gateway or broker becomes constrained.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 05 CURRENT YTD CORE ROUTES — awaiting AIOS route-level payload -->
+    <div class="card">
+      <div class="card-header"><span class="accent">05</span> Current YTD Core Routes — Complete ≥80% Sets</div>
+      <div class="card-body">
+
+        <div style="display:flex;gap:8px;margin-bottom:16px;">
+          <div style="flex:1;padding:14px 18px;background:rgba(196,30,58,0.05);border:1px solid rgba(196,30,58,0.3);border-radius:7px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;color:var(--red);">Imports · Default View</div>
+            <div style="font-size:15px;font-weight:800;color:var(--navy);margin-top:4px;">Complete ≥80% Import Core Route Set — 242 Routes</div>
+            <div style="font-size:10px;color:var(--text-muted);margin-top:3px;">Denominator: 1,714 Current YTD Imports</div>
+          </div>
+          <div style="flex:1;padding:14px 18px;background:var(--bg);border:1px solid var(--border);border-radius:7px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;color:var(--teal-dim);">Exports</div>
+            <div style="font-size:15px;font-weight:800;color:var(--navy);margin-top:4px;">Complete ≥80% Export Core Route Set — 38 Routes</div>
+            <div style="font-size:10px;color:var(--text-muted);margin-top:3px;">Denominator: 452 Current YTD Exports</div>
+          </div>
+        </div>
+
+        <div style="padding:22px 24px;background:rgba(245,158,11,0.06);border:1px dashed rgba(245,158,11,0.5);border-radius:8px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#b45309;margin-bottom:8px;">⚠ Route-Level AIOS Payload Not Yet Loaded</div>
+          <p style="font-size:12.5px;color:var(--text-muted);line-height:1.75;margin:0 0 12px;max-width:940px;">The governed Core Route <strong style="color:var(--navy);">counts and coverage standard</strong> are finalized and displayed above. The <strong style="color:var(--navy);">route-level records</strong> — rank, Origin Company / Facility, Origin Address, Gateway, Gateway Type, Destination Company / Facility, Destination Address, Mode, Shipments, % of directional universe, Cumulative Coverage, Active Months, Shipments / Active Month, Shipments / Week, First and Last Visible Shipment Date — have not been supplied to this view.</p>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.75;margin:0 0 12px;max-width:940px;">Per AIOS governance, <strong style="color:var(--navy);">no route, address, gateway, cadence value or rank has been generated, estimated or inferred to fill this module.</strong> Routes are rendered only from finalized AIOS intelligence. This module is structurally ready and will render the complete sets — with progressive disclosure and an executive summary view ahead of the full table — once the payload is supplied.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;">
+            <span style="font-size:10px;font-weight:700;color:var(--text-muted);background:#fff;border:1px solid var(--border);padding:4px 9px;border-radius:4px;">242 Import routes pending</span>
+            <span style="font-size:10px;font-weight:700;color:var(--text-muted);background:#fff;border:1px solid var(--border);padding:4px 9px;border-radius:4px;">38 Export routes pending</span>
+            <span style="font-size:10px;font-weight:700;color:var(--text-muted);background:#fff;border:1px solid var(--border);padding:4px 9px;border-radius:4px;">≥80% directional coverage standard enforced</span>
+            <span style="font-size:10px;font-weight:700;color:var(--text-muted);background:#fff;border:1px solid var(--border);padding:4px 9px;border-radius:4px;">No Top-N substitution permitted</span>
+          </div>
+        </div>
+
+        <div style="margin-top:14px;padding:14px 18px;background:var(--bg);border:1px solid var(--border);border-radius:7px;">
+          <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);margin-bottom:7px;">Observed Route Cadence — Methodology (applies when routes render)</div>
+          <p style="font-size:11px;color:var(--text-muted);line-height:1.7;margin:0;"><strong style="color:var(--navy);">Shipments / Week = Shipments ÷ ((Last Visible Shipment Date − First Visible Shipment Date + 1 day) / 7)</strong>, using the route's own observed date window. It is not annualized and is never normalized against the full Current YTD period. Observed Route Cadence reflects the route's own visible date window. A short-window cadence is not evidence of sustained weekly capacity and must not be extrapolated into a forecast or normalized weekly volume. Routes with a short visible window carry a <strong style="color:#b45309;">SHORT OBSERVATION WINDOW</strong> flag with the visible date range shown adjacent to the cadence.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 06 OPERATIONAL COMPLEXITY -->
+    <div class="card">
+      <div class="card-header"><span class="accent">06</span> Operational Complexity — AIOS Assessment</div>
+      <div class="card-body">
+        <div style="display:flex;align-items:center;gap:18px;padding:16px 20px;background:linear-gradient(135deg,rgba(196,30,58,0.06) 0%,rgba(196,30,58,0.02) 100%);border-left:3px solid var(--red);border-radius:0 7px 7px 0;margin-bottom:16px;">
+          <div>
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--red);">Final AIOS Assessment</div>
+            <div style="font-size:34px;font-weight:800;color:var(--red);line-height:1.1;margin-top:2px;">HIGH</div>
+          </div>
+          <div style="width:1px;height:52px;background:var(--border);"></div>
+          <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:0;flex:1;">The approved classification is <strong style="color:var(--navy);">qualitative</strong>. No numerical Complexity Score is created. This classification is driven primarily by <strong style="color:var(--navy);">Current YTD</strong>.</p>
+        </div>
+
+        <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;">Supporting Observed Signals</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:8px;">
+          <div style="padding:11px 14px;background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--teal);border-radius:0 5px 5px 0;font-size:11.5px;color:var(--text-muted);line-height:1.55;"><strong style="color:var(--navy);">2,166</strong> visible Current YTD Shipments</div>
+          <div style="padding:11px 14px;background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--teal);border-radius:0 5px 5px 0;font-size:11.5px;color:var(--text-muted);line-height:1.55;"><strong style="color:var(--navy);">Import-led</strong> directional structure</div>
+          <div style="padding:11px 14px;background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--teal);border-radius:0 5px 5px 0;font-size:11.5px;color:var(--text-muted);line-height:1.55;"><strong style="color:var(--navy);">1,714</strong> Current YTD Imports</div>
+          <div style="padding:11px 14px;background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--teal);border-radius:0 5px 5px 0;font-size:11.5px;color:var(--text-muted);line-height:1.55;"><strong style="color:var(--navy);">452</strong> Current YTD Exports</div>
+          <div style="padding:11px 14px;background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--red);border-radius:0 5px 5px 0;font-size:11.5px;color:var(--text-muted);line-height:1.55;"><strong style="color:var(--navy);">Very large</strong> Import Core Route set</div>
+          <div style="padding:11px 14px;background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--red);border-radius:0 5px 5px 0;font-size:11.5px;color:var(--text-muted);line-height:1.55;"><strong style="color:var(--navy);">242 routes</strong> to reach ≥80% of Current YTD Imports</div>
+          <div style="padding:11px 14px;background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--red);border-radius:0 5px 5px 0;font-size:11.5px;color:var(--text-muted);line-height:1.55;"><strong style="color:var(--navy);">38 routes</strong> to reach ≥80% of Current YTD Exports</div>
+          <div style="padding:11px 14px;background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--navy);border-radius:0 5px 5px 0;font-size:11.5px;color:var(--text-muted);line-height:1.55;"><strong style="color:var(--navy);">Multimodal</strong> international activity visible in Panjiva</div>
+          <div style="padding:11px 14px;background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--navy);border-radius:0 5px 5px 0;font-size:11.5px;color:var(--text-muted);line-height:1.55;">Multiple <strong style="color:var(--navy);">Trading Partners</strong></div>
+          <div style="padding:11px 14px;background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--navy);border-radius:0 5px 5px 0;font-size:11.5px;color:var(--text-muted);line-height:1.55;">Multiple <strong style="color:var(--navy);">origin geographies</strong></div>
+          <div style="padding:11px 14px;background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--navy);border-radius:0 5px 5px 0;font-size:11.5px;color:var(--text-muted);line-height:1.55;">Multiple <strong style="color:var(--navy);">gateways</strong></div>
+          <div style="padding:11px 14px;background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--navy);border-radius:0 5px 5px 0;font-size:11.5px;color:var(--text-muted);line-height:1.55;"><strong style="color:var(--navy);">Customs / regime</strong> activity</div>
+          <div style="padding:11px 14px;background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--red);border-radius:0 5px 5px 0;font-size:11.5px;color:var(--text-muted);line-height:1.55;"><strong style="color:var(--navy);">Facility-level</strong> fragmentation</div>
+          <div style="padding:11px 14px;background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--red);border-radius:0 5px 5px 0;font-size:11.5px;color:var(--text-muted);line-height:1.55;"><strong style="color:var(--navy);">Route-level</strong> fragmentation</div>
+          <div style="padding:11px 14px;background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--navy);border-radius:0 5px 5px 0;font-size:11.5px;color:var(--text-muted);line-height:1.55;"><strong style="color:var(--navy);">Outbound gateway</strong> concentration</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 07 EXECUTIVE THESIS -->
+    <div class="card">
+      <div class="card-header"><span class="accent">07</span> Executive Thesis — Strategic Fit</div>
+      <div class="card-body">
+        <div style="padding:20px 24px;background:linear-gradient(135deg,rgba(13,43,94,0.05) 0%,rgba(0,180,216,0.05) 100%);border-left:3px solid var(--navy);border-radius:0 7px 7px 0;">
+          <div style="font-size:19px;font-weight:800;color:var(--navy);line-height:1.4;">SKF de México is not attractive merely because of Shipment volume.</div>
+          <p style="font-size:12.5px;color:var(--text-muted);line-height:1.75;margin:12px 0 0;max-width:960px;">The strategic fit comes from the combination of large visible international logistics activity, a highly fragmented inbound route architecture, a materially more concentrated outbound architecture, multimodal coordination requirements, customs exposure, multiple Trading Partners, multiple gateways, route cadence variation, and the operational governance challenge inherent in a broad international network.</p>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px;">
+          <div style="padding:16px 20px;background:rgba(16,185,129,0.05);border:1px solid rgba(16,185,129,0.28);border-radius:8px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#059669;margin-bottom:8px;">✓ Position Akzent As</div>
+            <p style="font-size:12.5px;color:var(--navy);font-weight:700;line-height:1.7;margin:0;">A coordination layer around complexity.</p>
+            <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:8px 0 0;">The commercial narrative emphasizes operational control, visibility, coordination, continuity, exception management, customs, Supplier / Trading Partner coordination, multimodal orchestration and network intelligence.</p>
+          </div>
+          <div style="padding:16px 20px;background:rgba(196,30,58,0.04);border:1px solid rgba(196,30,58,0.25);border-radius:8px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--red);margin-bottom:8px;">✕ Do Not Position Akzent As</div>
+            <p style="font-size:12.5px;color:var(--navy);font-weight:700;line-height:1.7;margin:0;">A transactional freight provider.</p>
+            <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:8px 0 0;">Do not lead with spot rates, commodity trucking, generic freight forwarding, or cost-per-move positioning. <strong>Wallet Expansion Partner does not apply</strong> — SKF de México is a LEAD.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 08 OPPORTUNITY MAPPING — mandatory three-stage evidence architecture -->
+    <div class="card">
+      <div class="card-header"><span class="accent">08</span> Opportunity Mapping — Observed Signal → AIOS Interpretation → Discovery Validation</div>
+      <div class="card-body">
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;margin-bottom:10px;">
+          <div style="padding:9px 14px;background:rgba(0,180,216,0.1);border:1px solid rgba(0,180,216,0.3);border-radius:5px 0 0 5px;text-align:center;"><div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);">Observed Operational Signal</div><div style="font-size:9px;color:var(--text-light);margin-top:2px;">Panjiva Fact</div></div>
+          <div style="padding:9px 14px;background:rgba(13,43,94,0.07);border:1px solid rgba(13,43,94,0.2);border-left:none;text-align:center;"><div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--navy);">AIOS Interpretation</div><div style="font-size:9px;color:var(--text-light);margin-top:2px;">Not customer fact</div></div>
+          <div style="padding:9px 14px;background:rgba(245,158,11,0.09);border:1px solid rgba(245,158,11,0.32);border-left:none;border-radius:0 5px 5px 0;text-align:center;"><div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#b45309;">Discovery Validation</div><div style="font-size:9px;color:var(--text-light);margin-top:2px;">Must be validated with SKF</div></div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border:1px solid var(--border);border-radius:6px;overflow:hidden;margin-bottom:10px;">
+          <div style="padding:15px 17px;background:rgba(0,180,216,0.03);border-right:1px solid var(--border);font-size:11.5px;color:var(--text-muted);line-height:1.7;">Current YTD Imports require <strong style="color:var(--navy);">242 Core Routes</strong> to reach ≥80% coverage.</div>
+          <div style="padding:15px 17px;background:#fff;border-right:1px solid var(--border);font-size:11.5px;color:var(--text-muted);line-height:1.7;">The breadth of the inbound network creates a credible environment for <strong style="color:var(--navy);">centralized coordination, visibility and exception-management value</strong>.</div>
+          <div style="padding:15px 17px;background:rgba(245,158,11,0.03);font-size:11.5px;color:var(--text-muted);line-height:1.7;">Validate how SKF currently governs provider coordination, exceptions, Shipment visibility, supplier readiness, customs milestones and escalation across this fragmented inbound network.</div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border:1px solid var(--border);border-radius:6px;overflow:hidden;margin-bottom:10px;">
+          <div style="padding:15px 17px;background:rgba(0,180,216,0.03);border-right:1px solid var(--border);font-size:11.5px;color:var(--text-muted);line-height:1.7;">Current YTD Exports reach ≥80% with <strong style="color:var(--navy);">38 Core Routes</strong>, and approximately <strong style="color:var(--navy);">54.4%</strong> of Export Shipments are associated with <strong style="color:var(--navy);">Nuevo Laredo</strong>.</div>
+          <div style="padding:15px 17px;background:#fff;border-right:1px solid var(--border);font-size:11.5px;color:var(--text-muted);line-height:1.7;">A more concentrated outbound structure with a single dominant gateway is an environment where <strong style="color:var(--navy);">continuity governance, contingency structure and gateway-level performance management</strong> may carry disproportionate operational consequence.</div>
+          <div style="padding:15px 17px;background:rgba(245,158,11,0.03);font-size:11.5px;color:var(--text-muted);line-height:1.7;">Validate how gateway strategy and broker performance are governed, where backup providers are formally established, how contingency decisions are triggered, and which routes carry the greatest operational consequence when capacity tightens.</div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border:1px solid var(--border);border-radius:6px;overflow:hidden;margin-bottom:10px;">
+          <div style="padding:15px 17px;background:rgba(0,180,216,0.03);border-right:1px solid var(--border);font-size:11.5px;color:var(--text-muted);line-height:1.7;">Current YTD visible Shipment activity is approximately <strong style="color:var(--navy);">15.1% lower</strong> than the comparable Jan–Jul 2025 observed period.</div>
+          <div style="padding:15px 17px;background:#fff;border-right:1px solid var(--border);font-size:11.5px;color:var(--text-muted);line-height:1.7;">A change in visible activity level is a credible moment to examine <strong style="color:var(--navy);">network structure, provider mix and coordination governance</strong>. <strong style="color:var(--red);">Panjiva does not establish the reason for the change</strong> and no cause is asserted here.</div>
+          <div style="padding:15px 17px;background:rgba(245,158,11,0.03);font-size:11.5px;color:var(--text-muted);line-height:1.7;">Validate what has changed in SKF's operating structure over this period, how provider strategy is set, which relationships are contract-based versus transactional, and what performance evidence is required before provider expansion.</div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border:1px solid var(--border);border-radius:6px;overflow:hidden;">
+          <div style="padding:15px 17px;background:rgba(0,180,216,0.03);border-right:1px solid var(--border);font-size:11.5px;color:var(--text-muted);line-height:1.7;"><strong style="color:var(--navy);">Multimodal international activity</strong>, multiple origin geographies, multiple gateways and customs / regime activity are visible across the Current YTD network.</div>
+          <div style="padding:15px 17px;background:#fff;border-right:1px solid var(--border);font-size:11.5px;color:var(--text-muted);line-height:1.7;">Multimodal orchestration across many origins and gateways is the operating environment in which an <strong style="color:var(--navy);">ILM / Control Tower coordination layer</strong> is most likely to be relevant.</div>
+          <div style="padding:15px 17px;background:rgba(245,158,11,0.03);font-size:11.5px;color:var(--text-muted);line-height:1.7;">Validate whether centralized visibility exists across modes and providers, which milestones are operationally critical, which KPIs matter most to senior supply-chain leadership, and what information remains fragmented across providers or systems.</div>
+        </div>
+
+        <div style="margin-top:14px;padding:13px 17px;background:rgba(196,30,58,0.04);border-left:3px solid var(--red);border-radius:0 5px 5px 0;">
+          <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:0;"><strong style="color:var(--navy);">Inferred pain is never presented as a customer fact.</strong> Panjiva does not establish that SKF de México lacks visibility, control or coordination capability. Every statement in the centre column is an AIOS interpretation of visible structure and requires Discovery validation before it is used commercially.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 09 ILM / CONTROL TOWER -->
+    <div class="card">
+      <div class="card-header"><span class="accent">09</span> ILM / Control Tower Opportunity — Coordination Domains</div>
+      <div class="card-body">
+        <p style="font-size:12px;color:var(--text-muted);line-height:1.7;margin:0 0 14px;max-width:960px;">ILM / Control Tower is presented as a <strong style="color:var(--navy);">credible strategic conversation supported by visible complexity</strong>. The domains below are areas where Akzent may provide value <strong style="color:var(--navy);">if Discovery validates a governance or execution gap</strong>.</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:7px;">
+          <div style="padding:10px 13px;background:var(--bg);border:1px solid var(--border);border-radius:5px;font-size:11.5px;font-weight:600;color:var(--navy);">Supplier readiness</div>
+          <div style="padding:10px 13px;background:var(--bg);border:1px solid var(--border);border-radius:5px;font-size:11.5px;font-weight:600;color:var(--navy);">Shipment planning</div>
+          <div style="padding:10px 13px;background:var(--bg);border:1px solid var(--border);border-radius:5px;font-size:11.5px;font-weight:600;color:var(--navy);">Booking coordination</div>
+          <div style="padding:10px 13px;background:var(--bg);border:1px solid var(--border);border-radius:5px;font-size:11.5px;font-weight:600;color:var(--navy);">Carrier coordination</div>
+          <div style="padding:10px 13px;background:var(--bg);border:1px solid var(--border);border-radius:5px;font-size:11.5px;font-weight:600;color:var(--navy);">Customs milestones</div>
+          <div style="padding:10px 13px;background:var(--bg);border:1px solid var(--border);border-radius:5px;font-size:11.5px;font-weight:600;color:var(--navy);">Border visibility</div>
+          <div style="padding:10px 13px;background:var(--bg);border:1px solid var(--border);border-radius:5px;font-size:11.5px;font-weight:600;color:var(--navy);">Port visibility</div>
+          <div style="padding:10px 13px;background:var(--bg);border:1px solid var(--border);border-radius:5px;font-size:11.5px;font-weight:600;color:var(--navy);">Airport visibility</div>
+          <div style="padding:10px 13px;background:var(--bg);border:1px solid var(--border);border-radius:5px;font-size:11.5px;font-weight:600;color:var(--navy);">Document control</div>
+          <div style="padding:10px 13px;background:var(--bg);border:1px solid var(--border);border-radius:5px;font-size:11.5px;font-weight:600;color:var(--navy);">Exception management</div>
+          <div style="padding:10px 13px;background:var(--bg);border:1px solid var(--border);border-radius:5px;font-size:11.5px;font-weight:600;color:var(--navy);">Centralized communication</div>
+          <div style="padding:10px 13px;background:var(--bg);border:1px solid var(--border);border-radius:5px;font-size:11.5px;font-weight:600;color:var(--navy);">KPI governance</div>
+          <div style="padding:10px 13px;background:var(--bg);border:1px solid var(--border);border-radius:5px;font-size:11.5px;font-weight:600;color:var(--navy);">Trading Partner performance</div>
+          <div style="padding:10px 13px;background:var(--bg);border:1px solid var(--border);border-radius:5px;font-size:11.5px;font-weight:600;color:var(--navy);">Carrier performance</div>
+          <div style="padding:10px 13px;background:var(--bg);border:1px solid var(--border);border-radius:5px;font-size:11.5px;font-weight:600;color:var(--navy);">Route performance</div>
+          <div style="padding:10px 13px;background:var(--bg);border:1px solid var(--border);border-radius:5px;font-size:11.5px;font-weight:600;color:var(--navy);">Facility visibility</div>
+          <div style="padding:10px 13px;background:var(--bg);border:1px solid var(--border);border-radius:5px;font-size:11.5px;font-weight:600;color:var(--navy);">Contingency governance</div>
+        </div>
+        <p style="font-size:11px;color:var(--text-muted);line-height:1.7;margin:14px 0 0;"><strong style="color:var(--navy);">Nothing here implies that SKF de México currently lacks any of these capabilities.</strong></p>
+      </div>
+    </div>
+
+    <!-- 10 DISCOVERY INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">10</span> Discovery Intelligence — Validating Unknown Business &amp; Operating Structure</div>
+      <div class="card-body">
+        <div style="padding:13px 17px;background:rgba(0,180,216,0.05);border-left:3px solid var(--teal);border-radius:0 5px 5px 0;margin-bottom:14px;">
+          <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:0;">Discovery does <strong style="color:var(--navy);">not</strong> ask SKF questions whose answers Panjiva already reveals reliably — main visible routes, modes used, trading countries and frequent gateways are already observable. These themes validate <strong style="color:var(--navy);">unknown business and operating structure</strong> instead.</p>
+        </div>
+
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Provider Governance</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body"><ul class="q-list">
+            <li>How is responsibility divided across forwarders, carriers, brokers and internal teams?</li>
+            <li>Is provider strategy centralized or managed by facility / region / mode?</li>
+            <li>Which provider relationships are contract-based versus transactional?</li>
+            <li>Where are escalation responsibilities located?</li>
+          </ul></div>
+        </div>
+
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Capacity and Continuity</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body"><ul class="q-list">
+            <li>Which route families require committed or dedicated capacity?</li>
+            <li>Where are backup providers formally established?</li>
+            <li>How are contingency decisions triggered?</li>
+            <li>Which routes have the greatest operational consequence when capacity tightens?</li>
+          </ul></div>
+        </div>
+
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Exception Management</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body"><ul class="q-list">
+            <li>How are Shipment exceptions identified and escalated today?</li>
+            <li>Is there one operating view across modes and providers?</li>
+            <li>Which exception categories consume the most management attention?</li>
+            <li>How are root causes and recurring exceptions tracked?</li>
+          </ul></div>
+        </div>
+
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Customs Governance</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body"><ul class="q-list">
+            <li>How are customs brokers governed across gateways?</li>
+            <li>Are broker KPIs standardized?</li>
+            <li>How are documentation exceptions managed?</li>
+            <li>What contingency structure exists if a gateway or broker becomes constrained?</li>
+          </ul></div>
+        </div>
+
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Supplier Coordination</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body"><ul class="q-list">
+            <li>Who owns supplier readiness and pickup governance?</li>
+            <li>Are suppliers managed directly by SKF, by providers, or through a hybrid structure?</li>
+            <li>How is readiness information integrated into transportation planning?</li>
+            <li>Where does supplier non-readiness create downstream execution pressure?</li>
+          </ul></div>
+        </div>
+
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Control Tower Readiness</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body"><ul class="q-list">
+            <li>Is there centralized visibility across modes and providers?</li>
+            <li>Which milestones are operationally critical?</li>
+            <li>Which KPIs matter most to senior supply-chain leadership?</li>
+            <li>Where would SKF see value in a neutral coordination layer?</li>
+            <li>What information is still fragmented across providers or systems?</li>
+          </ul></div>
+        </div>
+
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Procurement / Decision Process</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body"><ul class="q-list">
+            <li>Who owns logistics provider selection?</li>
+            <li>What is the procurement cycle?</li>
+            <li>What performance evidence is required before provider expansion?</li>
+            <li>What conditions would justify a pilot?</li>
+            <li>What would SKF need to see before changing or adding a coordination partner?</li>
+          </ul></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 11 COMMERCIAL POSITIONING -->
+    <div class="card">
+      <div class="card-header"><span class="accent">11</span> Commercial Positioning — Approved</div>
+      <div class="card-body">
+        <div class="grid-4" style="gap:10px;">
+          <div style="padding:18px 20px;background:linear-gradient(135deg,rgba(13,43,94,0.07) 0%,rgba(13,43,94,0.02) 100%);border:1px solid var(--border);border-top:3px solid var(--navy);border-radius:0 0 7px 7px;"><div style="font-size:14px;font-weight:800;color:var(--navy);line-height:1.4;">Operational Complexity Partner</div></div>
+          <div style="padding:18px 20px;background:linear-gradient(135deg,rgba(0,180,216,0.07) 0%,rgba(0,180,216,0.02) 100%);border:1px solid var(--border);border-top:3px solid var(--teal);border-radius:0 0 7px 7px;"><div style="font-size:14px;font-weight:800;color:var(--navy);line-height:1.4;">Multimodal Coordination Partner</div></div>
+          <div style="padding:18px 20px;background:linear-gradient(135deg,rgba(196,30,58,0.06) 0%,rgba(196,30,58,0.02) 100%);border:1px solid var(--border);border-top:3px solid var(--red);border-radius:0 0 7px 7px;"><div style="font-size:14px;font-weight:800;color:var(--navy);line-height:1.4;">Customs &amp; Visibility Partner</div></div>
+          <div style="padding:18px 20px;background:linear-gradient(135deg,rgba(245,158,11,0.08) 0%,rgba(245,158,11,0.02) 100%);border:1px solid var(--border);border-top:3px solid #f59e0b;border-radius:0 0 7px 7px;"><div style="font-size:14px;font-weight:800;color:var(--navy);line-height:1.4;">ILM / Control Tower Partner</div></div>
+        </div>
+        <p style="font-size:11px;color:var(--text-muted);line-height:1.7;margin:14px 0 0;"><strong style="color:var(--red);">Wallet Expansion Partner is not applicable.</strong> SKF de México is a LEAD. Akzent does not currently manage this account, and no Akzent revenue, gross profit, margin, wallet, penetration or coverage metric appears anywhere in this view.</p>
+      </div>
+    </div>
+
+    <!-- 12 HISTORICAL BASELINE — 2025 ESTABLISHED OPERATING STRUCTURE (visually subordinate) -->
+    <div class="card hist-appendix">
+      <div class="card-header" style="background:rgba(13,43,94,0.03);"><span class="accent">12</span> 2025 Established Operating Structure — Historical Baseline</div>
+      <div class="card-body">
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Previous Full Calendar Year 2025 — Structural &amp; Historical Context</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:0 0 14px;">2025 provides <strong style="color:var(--navy);">structural and historical context only</strong>. It is never aggregated with Current YTD and never drives the Executive Summary, AIOS Classification, Operational Complexity, Commercial Positioning or Discovery Intelligence.</p>
+
+            <div class="grid-2" style="gap:10px;">
+              <div class="stat-box" style="border-left:3px solid var(--text-light);"><div class="stat-label">2025 Import Core Routes ≥80%</div><div class="stat-value" style="font-size:26px;">369 <span style="font-size:13px;color:var(--text-muted);font-weight:700;">routes</span></div><div class="stat-sub">Complete set required — no Top-N substitution</div></div>
+              <div class="stat-box" style="border-left:3px solid var(--text-light);"><div class="stat-label">2025 Export Core Routes ≥80%</div><div class="stat-value" style="font-size:26px;">47 <span style="font-size:13px;color:var(--text-muted);font-weight:700;">routes</span></div><div class="stat-sub">Complete set required — no Top-N substitution</div></div>
+            </div>
+
+            <div style="margin-top:14px;padding:18px 20px;background:rgba(245,158,11,0.05);border:1px dashed rgba(245,158,11,0.45);border-radius:7px;">
+              <div style="font-size:10px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#b45309;margin-bottom:7px;">⚠ Historical Core Route Appendix — Payload Not Yet Loaded</div>
+              <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:0;">The 2025 Core Route <strong style="color:var(--navy);">counts</strong> are finalized and shown above. The complete <strong style="color:var(--navy);">369 Import</strong> and <strong style="color:var(--navy);">47 Export</strong> route records — together with 2025 Shipment structure, modal structure, gateway structure, Trading Partner structure and HS structure — have not been supplied to this view. No historical route, address, gateway or cadence value has been generated or inferred to fill this appendix.</p>
+            </div>
+
+            <div style="margin-top:12px;padding:13px 17px;background:var(--bg);border:1px solid var(--border);border-radius:6px;">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--text-muted);margin-bottom:7px;">Route Persistence / Change — Approved Language (applies when both sets render)</div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                <div>
+                  <div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#059669;margin-bottom:5px;">✓ Evidence-safe</div>
+                  <ul style="margin:0;padding-left:16px;font-size:11px;color:var(--text-muted);line-height:1.75;">
+                    <li>Visible in both periods · Persisting Core Route</li>
+                    <li>Newly visible in Current YTD Core Route set</li>
+                    <li>Not visible in Current YTD Core Route set</li>
+                    <li>Higher / lower visible share · Gateway shift · Modal shift</li>
+                  </ul>
+                </div>
+                <div>
+                  <div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--red);margin-bottom:5px;">✕ Never used</div>
+                  <ul style="margin:0;padding-left:16px;font-size:11px;color:var(--text-light);line-height:1.75;">
+                    <li>discontinued · terminated</li>
+                    <li>lost Supplier · provider changed</li>
+                    <li>new Supplier · new Trading Partner</li>
+                    <li>no prior Shipments</li>
+                  </ul>
+                </div>
+              </div>
+              <p style="font-size:10.5px;color:var(--text-muted);line-height:1.65;margin:11px 0 0;"><strong style="color:var(--navy);">Not visible in a prior Core Route set is never equated with a new Supplier, a new route, or the absence of prior Shipments.</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 13 MODULES AWAITING AIOS PAYLOAD -->
+    <div class="card">
+      <div class="card-header" style="background:rgba(245,158,11,0.06);"><span class="accent">13</span> Intelligence Modules Awaiting AIOS Payload</div>
+      <div class="card-body">
+        <p style="font-size:12px;color:var(--text-muted);line-height:1.7;margin:0 0 14px;max-width:960px;">The following modules are defined in the AIOS presentation standard for this account and are <strong style="color:var(--navy);">structurally ready</strong>, but the underlying finalized intelligence has not been supplied. Per governance, <strong style="color:var(--red);">no value in these modules has been calculated, estimated, inferred or completed from any source outside AIOS.</strong></p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:9px;">
+          <div style="padding:13px 16px;background:var(--bg);border:1px solid var(--border);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+            <div style="font-size:12px;font-weight:800;color:var(--navy);">Current YTD Core Route Records</div>
+            <div style="font-size:10.5px;color:var(--text-muted);line-height:1.6;margin-top:3px;">242 Import · 38 Export — full field set per route</div>
+          </div>
+          <div style="padding:13px 16px;background:var(--bg);border:1px solid var(--border);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+            <div style="font-size:12px;font-weight:800;color:var(--navy);">Historical Core Route Appendix</div>
+            <div style="font-size:10.5px;color:var(--text-muted);line-height:1.6;margin-top:3px;">2025 · 369 Import · 47 Export</div>
+          </div>
+          <div style="padding:13px 16px;background:var(--bg);border:1px solid var(--border);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+            <div style="font-size:12px;font-weight:800;color:var(--navy);">Product / HS Intelligence</div>
+            <div style="font-size:10.5px;color:var(--text-muted);line-height:1.6;margin-top:3px;">Top 5 HS Codes by period</div>
+          </div>
+          <div style="padding:13px 16px;background:var(--bg);border:1px solid var(--border);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+            <div style="font-size:12px;font-weight:800;color:var(--navy);">Trading Partner Intelligence</div>
+            <div style="font-size:10.5px;color:var(--text-muted);line-height:1.6;margin-top:3px;">Leading partners · directional share · geography · gateways · modes</div>
+          </div>
+          <div style="padding:13px 16px;background:var(--bg);border:1px solid var(--border);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+            <div style="font-size:12px;font-weight:800;color:var(--navy);">Customs / Regime Intelligence</div>
+            <div style="font-size:10.5px;color:var(--text-muted);line-height:1.6;margin-top:3px;">Customs Regime · IMMEX activity · Customs Agent codes</div>
+          </div>
+          <div style="padding:13px 16px;background:var(--bg);border:1px solid var(--border);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+            <div style="font-size:12px;font-weight:800;color:var(--navy);">2025 Structural Detail</div>
+            <div style="font-size:10.5px;color:var(--text-muted);line-height:1.6;margin-top:3px;">Shipment · modal · gateway · Trading Partner · HS structure</div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px;padding:13px 17px;background:var(--bg);border:1px solid var(--border);border-radius:6px;">
+          <div style="font-size:9px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;">HS Methodology — applies when HS intelligence renders</div>
+          <p style="font-size:11px;color:var(--text-muted);line-height:1.7;margin:0;">One Shipment may contain multiple HS Codes. HS counts represent operational presence and are not additive. HS counts are never summed and compared against Shipment totals.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 14 DATA PROVENANCE & GOVERNANCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">14</span> Data Provenance &amp; Governance</div>
+      <div class="card-body">
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:9px;">
+          <div style="padding:13px 16px;background:rgba(0,180,216,0.05);border:1px solid rgba(0,180,216,0.28);border-radius:6px;"><div style="font-size:11px;font-weight:800;letter-spacing:0.5px;color:var(--teal-dim);">PANJIVA FACT</div><div style="font-size:10.5px;color:var(--text-muted);line-height:1.6;margin-top:4px;">Directly visible in Panjiva.</div></div>
+          <div style="padding:13px 16px;background:rgba(13,43,94,0.05);border:1px solid rgba(13,43,94,0.22);border-radius:6px;"><div style="font-size:11px;font-weight:800;letter-spacing:0.5px;color:var(--navy);">AIOS CALCULATION</div><div style="font-size:10.5px;color:var(--text-muted);line-height:1.6;margin-top:4px;">Mathematically derived from supplied Panjiva data.</div></div>
+          <div style="padding:13px 16px;background:rgba(13,43,94,0.03);border:1px solid var(--border);border-radius:6px;"><div style="font-size:11px;font-weight:800;letter-spacing:0.5px;color:var(--navy);">AIOS INTERPRETATION</div><div style="font-size:10.5px;color:var(--text-muted);line-height:1.6;margin-top:4px;">Operational or commercial interpretation based on observed evidence.</div></div>
+          <div style="padding:13px 16px;background:rgba(245,158,11,0.06);border:1px solid rgba(245,158,11,0.32);border-radius:6px;"><div style="font-size:11px;font-weight:800;letter-spacing:0.5px;color:#b45309;">DISCOVERY HYPOTHESIS</div><div style="font-size:10.5px;color:var(--text-muted);line-height:1.6;margin-top:4px;">Requires validation. Potentially meaningful but not established by Panjiva.</div></div>
+          <div style="padding:13px 16px;background:rgba(196,30,58,0.04);border:1px solid rgba(196,30,58,0.25);border-radius:6px;"><div style="font-size:11px;font-weight:800;letter-spacing:0.5px;color:var(--red);">DATA QUALITY / ENTITY RESOLUTION HYPOTHESIS</div><div style="font-size:10.5px;color:var(--text-muted);line-height:1.6;margin-top:4px;">Requires validation. Used when source entity/location precision is ambiguous.</div></div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;">
+          <div style="padding:14px 18px;background:var(--bg);border:1px solid var(--border);border-radius:6px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--text-muted);margin-bottom:7px;">Address Integrity</div>
+            <p style="font-size:11px;color:var(--text-muted);line-height:1.7;margin:0;">Exact Panjiva facility addresses are preserved. Where an address is absent, this view displays <strong style="color:var(--navy);">“Address not available in Panjiva”</strong>. Addresses are never silently completed and external geography is never used to make an address look more complete. Any non-Panjiva location would be labelled <strong style="color:var(--navy);">AIOS-enriched location — Requires validation</strong>. A Port, Border or Airport is never represented as an origin or destination facility.</p>
+          </div>
+          <div style="padding:14px 18px;background:var(--bg);border:1px solid var(--border);border-radius:6px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--text-muted);margin-bottom:7px;">No Commercial Route Priority</div>
+            <p style="font-size:11px;color:var(--text-muted);line-height:1.7;margin:0;">Route Rank is factual. <strong style="color:var(--navy);">Volume rank does not equal commercial priority.</strong> No approved Akzent capacity or network input has been supplied for SKF de México, so this view creates no priority lane scores, no sales priority routes, no “best routes for Akzent” and no commercial lane ranking.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:12px;padding:13px 17px;background:rgba(13,43,94,0.03);border-left:3px solid var(--navy);border-radius:0 5px 5px 0;">
+          <p style="font-size:11px;color:var(--text-muted);line-height:1.7;margin:0;"><strong style="color:var(--navy);">Trading Partners</strong> is the executive umbrella term. Where supported by the intelligence, Imports are Suppliers / Origin Partners and Exports are Customers / Destination Partners; where the relationship is uncertain, the entity remains a Trading Partner. <strong style="color:var(--navy);">SKF affiliates are never automatically classified as external Suppliers or Customers,</strong> and Customs Agent codes are never converted into invented company names.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <div id="view-flex-americas" class="view">
   <div class="page-header">
     <div class="page-header-left">
@@ -44292,6 +44937,7 @@ const ACCOUNTS = [
   { id:'view-worldtradefoods', name:'World Trade Foods', sub:'World Trade Foods LLC S. de R.L. de C.V. · Food Imports · Frozen Potato Products · Mexico · Maritime only · Veracruz · Altamira · Belgium · Netherlands · Frozen prefried potatoes &amp; dehydrated potato flakes · Hidrocalira Inc. · Supplier concentration · Customs visibility · Food import control tower · Panjiva Mexico Imports', rel:'LEAD', cls:'AA', clsPill:'aa' },
   { id:'view-helvex', name:'Helvex', sub:'Building Products / Bathroom Fixtures / Sanitary Ware · Mexico · Multimodal Maritime + Air + Truck · Manzanillo · Veracruz · AIFA · AICM · Ciudad Hidalgo · Nuevo Laredo · China / Italy / Taiwan / Spain / Germany sourcing · LATAM, Caribbean &amp; United States export network · Faucets, valves, ceramic sanitary ware &amp; components · Supplier coordination · Customs complexity · Air urgency · ILM / Control Tower · Panjiva Imports + Exports', rel:'LEAD', cls:'AA', clsPill:'aa' },
   { id:'view-fronterra', name:'Fronterra Avocados', sub:'Fronterra Avocados S.A. de C.V. · Agroexport / Fresh Produce / Avocado Exporter · Mexico to USA Cross-Border · 100% Truck · Reynosa · Nuevo Laredo · Aguacate Hass · Fronterra Group Inc. · Consignee concentration · Customs visibility · Exception management · ILM / Control Tower · Panjiva Mexico Exports', rel:'LEAD', cls:'AA', clsPill:'aa' },
+  { id:'view-skf', name:'SKF de México', sub:'SKF de México · Target Account · LEAD · AAA Strategic Account · Operational Complexity HIGH · Panjiva Visible Logistics Universe · Import-Led Multimodal International Network · 2,166 Current YTD Shipments · 1,714 Imports 79.1% · 452 Exports 20.9% · −15.1% comparable Jan–Jul actual vs actual · 242 Import Core Routes to ≥80% · 38 Export Core Routes to ≥80% · 369 Import Core Routes 2025 · 47 Export Core Routes 2025 · Inbound fragmentation · Outbound concentration · Observed Gateway Concentration · Nuevo Laredo 54.4% of Export Shipments · Border Gateway · Multimodal · Customs · Cross-Border · Trading Partners · Core Route Complexity · Exception Management · Supplier Coordination · Control Tower Readiness · ILM / Control Tower Partner · Operational Complexity Partner · Multimodal Coordination Partner · Customs & Visibility Partner', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
   { id:'view-flex-americas', name:'Flex Americas', sub:'Flex Americas S.A. de C.V. · Flexible Packaging / Plastic Film Manufacturing · IMMEX · Altamira, Tamaulipas · Matamoros Border · Elizabethtown, Kentucky · EXTREME ROUTE CONCENTRATION · Fragmented Multimodal Inbound + Extreme Outbound Cross-Border Concentration · 2,262 Current YTD Shipments · +12.5% H1 YoY · 507 Imports · 1,755 Exports · 40 Import Core Routes to 80.08% · 84 Import Core Routes 2025 to 80.00% · 1 Export Core Route 87.81% · 2025 Export Core Route 84.06% · Cross-Border · Truck + Maritime + Air · Multimodal · Customs · Customs Agent 3341 · Port Border Airport · Altamira · Matamoros · Manzanillo · MTY Airport · AICM · AIFA · 39 origin countries · Flex Films (USA) · Flex Films Africa · Flex PET Egypt · Polyquest · INX International Ink · Trading Partners · IMMEX · HS 3920620200 · Supplier coordination · Exception management · ILM / Control Tower · Operational Complexity HIGH · AAA Strategic Target · Panjiva Visible Logistics Universe', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
 ];
 const MODULES = [
@@ -44412,7 +45058,8 @@ var INDUSTRY_BY_ID = {
   'view-crown-envases':'Packaging', 'view-worldtradefoods':'Food',
   'view-helvex':'Building Products',
   'view-fronterra':'Fresh Produce',
-  'view-flex-americas':'Packaging'
+  'view-flex-americas':'Packaging',
+  'view-skf':'Industrial'
 };
 
 var UNRESOLVED_ACCOUNTS = [];
