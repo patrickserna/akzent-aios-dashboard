@@ -1188,6 +1188,15 @@ main {
   #view-autlan .hist-appendix .hub-table th { padding: 3px 7px !important; }
   #view-autlan .hist-appendix .hub-table tr { break-inside: avoid; }
   #view-autlan .hist-appendix .outreach-step-header { font-size: 10px; }
+
+  /* Productora de Papel historical appendix — complete but visually secondary in print.
+     Scoped to #view-productora-papel .hist-appendix so no other account is affected. */
+  #view-productora-papel .hist-appendix { break-inside: auto; }
+  #view-productora-papel .hist-appendix .hub-table { font-size: 8.5px !important; min-width: 0 !important; }
+  #view-productora-papel .hist-appendix .hub-table td,
+  #view-productora-papel .hist-appendix .hub-table th { padding: 3px 7px !important; }
+  #view-productora-papel .hist-appendix .hub-table tr { break-inside: avoid; }
+  #view-productora-papel .hist-appendix .outreach-step-header { font-size: 10px; }
   .page-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .card-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .positioning-box { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
@@ -1395,6 +1404,11 @@ main {
       <span>◆</span> <span style="flex:1;">Compañía Minera Autlán</span>
       <span class="recent-cls" style="background:rgba(245,158,11,0.2);color:#f59e0b;">LEAD</span>
       <span class="recent-cls aaa">AAA</span>
+    </div>
+    <div class="nav-item" onclick="showView('view-productora-papel', this)">
+      <span>◆</span> <span style="flex:1;">Productora de Papel</span>
+      <span class="recent-cls" style="background:rgba(245,158,11,0.2);color:#f59e0b;">LEAD</span>
+      <span class="recent-cls aa">AA</span>
     </div>
   </div>
 
@@ -2642,6 +2656,37 @@ main {
         <span class="acct-tag">Cross-Border</span>
         <span class="acct-tag">Ocean</span>
         <span class="acct-tag">Customs</span>
+        <span class="acct-tag">ILM / Control Tower</span>
+      </div>
+    </div>
+
+    <!-- Productora de Papel -->
+    <div class="account-card aa" onclick="showViewById('view-productora-papel')">
+      <div class="account-card-header">
+        <div>
+          <div class="account-name">Productora de Papel</div>
+          <div class="account-industry">Paper &amp; Recovered Fiber · High-Frequency Cross-Border Network</div>
+        </div>
+        <div style="display:flex;gap:5px;align-items:center;flex-shrink:0;">
+          <span class="account-cls-badge lead">LEAD</span>
+          <span class="account-cls-badge aa">AA</span>
+        </div>
+      </div>
+      <div class="account-metrics" style="grid-template-columns:repeat(4,1fr);">
+        <div class="acct-metric"><div class="acct-metric-val">2,898</div><div class="acct-metric-lbl">Current YTD Shipments</div></div>
+        <div class="acct-metric"><div class="acct-metric-val" style="color:#059669;">+2.3%</div><div class="acct-metric-lbl">Jan–Jul comparable · observed</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">72.9%</div><div class="acct-metric-lbl">Imports · 2,113</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">27.1%</div><div class="acct-metric-lbl">Exports · 785</div></div>
+      </div>
+      <div style="margin-top:10px;padding:8px 10px;background:rgba(196,30,58,0.05);border-left:3px solid var(--red);border-radius:0 4px 4px 0;">
+        <div style="font-size:9px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:var(--red);">Operational Complexity · HIGH</div>
+        <div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;margin-top:2px;">Operational control of a high-frequency, highly concentrated cross-border paper network</div>
+      </div>
+      <div class="account-tags">
+        <span class="acct-tag" style="background:rgba(245,158,11,0.12);color:#b45309;border-color:rgba(245,158,11,0.3);">LEAD</span>
+        <span class="acct-tag">Cross-Border</span>
+        <span class="acct-tag">Customs</span>
+        <span class="acct-tag">Truck + Rail</span>
         <span class="acct-tag">ILM / Control Tower</span>
       </div>
     </div>
@@ -13135,6 +13180,16 @@ main {
               <td style="color:var(--text-muted);" title="Relationship LEAD · Classification AAA Strategic Target · Operational Complexity HIGH · Network Export-led / Cross-Border + Ocean · Primary Gateways Altamira / Ciudad Juárez / Matamoros · Current YTD Shipments 361 · Exports 307 (85.0%) · Imports 54 (15.0%) · Comparable Jan–Jul actual-vs-actual change −13.4% · Imports −21.7% · Exports −11.8% · Import Core Routes 5 to 85.2% · Export Core Routes 13 to 80.1% · 2025 baseline 692 Shipments · 110 Imports · 582 Exports · 7 Import Core Routes 80.9% · 14 Export Core Routes 80.2% · Inbound Altamira concentration 92.6% · Modes Truck / Maritime / Rail / Air / Unknown preserved · 19 visible destination countries · 8 visible origin countries · Panjiva Visible Logistics Universe">Manganese &amp; Ferroalloys · Export-Led Multi-Gateway Network</td>
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td><div class="dots"><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div></td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td style="color:#b45309;font-weight:700;font-size:11px;">★ PRIORITY TARGET</td>
+            </tr>
+            <tr onclick="showViewById('view-productora-papel')" style="cursor:pointer;">
+              <td><strong>Productora de Papel</strong> <span style="font-size:10px;font-weight:600;color:#b45309;background:rgba(245,158,11,0.12);padding:1px 5px;border-radius:3px;margin-left:4px;">LEAD</span></td>
+              <td><span class="cls-pill aa">AA</span></td>
+              <td style="color:var(--text-muted);" title="Relationship LEAD · AIOS Classification AA · Operational Complexity HIGH · Primary Gateway Nuevo Laredo · Current YTD Shipments 2,898 · Imports 2,113 (72.9%) · Exports 785 (27.1%) · Comparable Jan–Jul actual-vs-actual change +2.3% · Imports +2.0% · Exports +3.0% · Import Core Routes 10 to 81.92% · Export Core Routes 5 to 82.93% · 2025 baseline 4,280 Shipments · 3,108 Imports · 1,172 Exports · 9 Import Core Routes 80.86% · 5 Export Core Routes 83.79% · Import gateway concentration Nuevo Laredo 85.4% · top 2 gateways 98.7% · Export Nuevo Laredo 79.6% · top 3 gateways 97.1% · Modes Truck 92.5% / Unknown 3.6% preserved / Rail 2.9% / Air 0.6% / Maritime 0.5% · 56 visible Suppliers / Origin Partners · 17 visible Customer / Destination Partner labels · Panjiva Visible Logistics Universe">Paper &amp; Recovered Fiber · Cross-Border Control</td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td><div class="dots"><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div></td>
               <td><div class="dots"><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div></td>
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
               <td style="color:#b45309;font-weight:700;font-size:11px;">★ PRIORITY TARGET</td>
@@ -47929,6 +47984,1227 @@ main {
   </div>
 </div>
 
+<!-- ══════════════════════════════════════════════════════════════════════════
+     PRODUCTORA DE PAPEL, S.A. DE C.V. — TARGET ACCOUNT · LEAD · AA
+     Panjiva Visible Logistics Universe. Akzent does not manage this account.
+     AIOS owns intelligence. This view presents finalized AIOS intelligence only.
+     ══════════════════════════════════════════════════════════════════════════ -->
+<div id="view-productora-papel" class="view">
+  <div class="page-header">
+    <div class="page-header-left">
+      <div class="page-header-eyebrow">Target Account · LEAD · Panjiva Visible Logistics Universe</div>
+      <div class="page-header-title">Productora de Papel, S.A. de C.V.</div>
+      <div class="page-header-sub">Paper &amp; Recovered Fiber · High-Frequency Cross-Border Network · Nuevo Laredo &amp; Ciudad Camargo Border · Piedras Negras Rail · Real de Anáhuac, Nuevo León</div>
+    </div>
+    <div class="page-header-meta">
+      <span class="classification-badge lead">LEAD</span>
+      <span class="classification-badge aa">AA</span>
+      <button class="print-btn" onclick="printView('view-productora-papel')">⬇ Export PDF</button>
+    </div>
+  </div>
+  <div class="content-body">
+
+    <!-- Identity strip — Relationship and Classification are independent dimensions -->
+    <div class="card">
+      <div class="card-body" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 18px;">
+        <span style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);">Relationship Status</span>
+        <span class="classification-badge lead">LEAD</span>
+        <span style="width:1px;height:20px;background:var(--border);"></span>
+        <span style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);">AIOS Classification</span>
+        <span class="classification-badge aa">AA</span>
+        <span style="font-size:11px;color:var(--text-muted);">Priority Target</span>
+        <span style="width:1px;height:20px;background:var(--border);"></span>
+        <span style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);">Operational Complexity</span>
+        <span style="font-size:13px;font-weight:800;color:var(--red);letter-spacing:0.5px;">HIGH</span>
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;flex:1;min-width:300px;text-align:right;">
+          <strong style="color:var(--navy);">Pre-commercial.</strong> Akzent does not currently manage this account. All figures are drawn exclusively from the <strong>Panjiva visible logistics universe</strong>.
+        </span>
+      </div>
+    </div>
+
+    <!-- 01 EXECUTIVE INTELLIGENCE — CURRENT OPERATING STATE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">01</span> Executive Intelligence — Current Operating State · Current YTD January 1 – July 31, 2026</div>
+      <div class="card-body">
+        <div class="grid-4" style="gap:10px;">
+          <div class="stat-box"><div class="stat-label">Visible Shipments · Current YTD</div><div class="stat-value teal" style="font-size:32px;">2,898</div><div class="stat-sub">January 1 – July 31, 2026 · observed, never annualized</div></div>
+          <div class="stat-box" style="border-color:rgba(5,150,105,0.35);background:rgba(5,150,105,0.04);"><div class="stat-label">Comparable-Period Change</div><div class="stat-value" style="font-size:32px;color:#059669;">+2.3%</div><div class="stat-sub">Jan–Jul · <strong>2,833</strong> → <strong>2,898</strong> · actual vs actual</div></div>
+          <div class="stat-box"><div class="stat-label">Imports</div><div class="stat-value" style="font-size:32px;">2,113</div><div class="stat-sub">72.9% of Current YTD Shipments</div></div>
+          <div class="stat-box"><div class="stat-label">Exports</div><div class="stat-value" style="font-size:32px;">785</div><div class="stat-sub">27.1% of Current YTD Shipments</div></div>
+        </div>
+        <div class="grid-4" style="gap:10px;margin-top:10px;">
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">Import Core Routes ≥80%</div><div class="stat-value teal" style="font-size:26px;">10 <span style="font-size:15px;color:var(--text-muted);font-weight:700;">= 81.92%</span></div><div class="stat-sub">Complete set · 2,113 Import universe</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--red);"><div class="stat-label">Export Core Routes ≥80%</div><div class="stat-value red" style="font-size:26px;">5 <span style="font-size:15px;color:var(--text-muted);font-weight:700;">= 82.93%</span></div><div class="stat-sub">Complete set · 785 Export universe</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--navy);"><div class="stat-label">Import Gateway Concentration</div><div class="stat-value" style="font-size:26px;">98.7%</div><div class="stat-sub">Top 2 Import gateways · <strong>Nuevo Laredo 85.4%</strong> · Camargo 13.3%</div></div>
+          <div class="stat-box"><div class="stat-label">Directional Structure</div><div class="stat-value" style="font-size:26px;">Import-Led</div><div class="stat-sub">72.9% Imports / 27.1% Exports · Truck 92.5% · Rail 2.9%</div></div>
+        </div>
+        <div class="grid-4" style="gap:10px;margin-top:10px;">
+          <div class="stat-box"><div class="stat-label">Visible CIF Value · Current YTD</div><div class="stat-value" style="font-size:22px;">USD 30.27M</div><div class="stat-sub">Panjiva-visible value · +5.8% vs Jan–Jul 2025</div></div>
+          <div class="stat-box"><div class="stat-label">Visible Gross Weight · Current YTD</div><div class="stat-value" style="font-size:22px;">67.14M kg</div><div class="stat-sub">Panjiva-visible weight · +5.6% vs Jan–Jul 2025</div></div>
+          <div class="stat-box"><div class="stat-label">Highest Export Core Route Cadence</div><div class="stat-value red" style="font-size:22px;">10.95 <span style="font-size:12px;color:var(--text-muted);font-weight:700;">Shipments / week</span></div><div class="stat-sub">Export Core Route #1 · observed window only</div></div>
+          <div class="stat-box"><div class="stat-label">Highest Import Core Route Cadence</div><div class="stat-value teal" style="font-size:22px;">9.02 <span style="font-size:12px;color:var(--text-muted);font-weight:700;">Shipments / week</span></div><div class="stat-sub">Import Core Route #1 · observed window only</div></div>
+        </div>
+        <div style="margin-top:8px;padding:10px 14px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.6;">These are <strong>Panjiva-visible values and weights</strong>. They are <strong>not company revenue</strong> and <strong>not total enterprise trade value</strong>. Imports and Exports use <strong>separate denominators</strong> throughout this page, and the <strong>Previous Full Calendar Year 2025</strong> is never aggregated with <strong>Current YTD 2026</strong>.</span>
+        </div>
+
+        <div style="margin-top:16px;padding:18px 22px;background:linear-gradient(135deg,rgba(13,43,94,0.05) 0%,rgba(196,30,58,0.05) 100%);border-left:3px solid var(--red);border-radius:0 6px 6px 0;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--red);margin-bottom:8px;">Executive Thesis</div>
+          <div style="font-size:21px;font-weight:800;color:var(--navy);line-height:1.35;">Operational control of a high-frequency,<br>highly concentrated cross-border paper network</div>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.75;margin-top:10px;max-width:1000px;">Productora de Papel operates a <strong>high-frequency, highly concentrated cross-border paper network</strong>. Current YTD visible Shipment activity is <strong>stable-to-growing (+2.3% vs Jan–Jul 2025)</strong>, while execution remains heavily dependent on <strong>Nuevo Laredo</strong>, <strong>concentrated Customs Agent codes</strong>, a <strong>broad inbound supplier base</strong> and a <strong>small set of customer-critical export routes</strong>. The strongest Akzent thesis is <strong style="color:var(--navy);">operational control, customs visibility, gateway contingency and coordinated Truck + Rail execution</strong> — not transactional freight.</p>
+          <p style="font-size:11px;color:var(--text-muted);line-height:1.7;margin-top:8px;"><strong style="color:var(--navy);">This is an AIOS interpretation of the visible network. It is not confirmed customer pain.</strong> Every module below supplies evidence for this conclusion rather than restating it.</p>
+        </div>
+
+        <!-- Concise concentration signal for the first viewport -->
+        <div class="grid-2" style="gap:14px;margin-top:14px;">
+          <div style="padding:14px 16px;background:rgba(0,180,216,0.05);border:1px solid var(--border);border-radius:6px;">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;">
+              <span style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);">Import Core Route Concentration</span>
+              <span style="font-size:12px;font-weight:800;color:var(--teal-dim);">10 routes = 81.92%</span>
+            </div>
+            <div style="height:9px;background:#e6eaf1;border-radius:5px;overflow:hidden;margin-top:9px;display:flex;">
+              <div style="width:12.68%;background:var(--teal);border-right:1px solid #fff;"></div>
+              <div style="width:12.40%;background:var(--teal);border-right:1px solid #fff;"></div>
+              <div style="width:12.12%;background:var(--teal);border-right:1px solid #fff;"></div>
+              <div style="width:10.41%;background:var(--teal);border-right:1px solid #fff;"></div>
+              <div style="width:6.53%;background:var(--teal-dim);border-right:1px solid #fff;"></div>
+              <div style="width:6.39%;background:var(--teal-dim);border-right:1px solid #fff;"></div>
+              <div style="width:6.15%;background:var(--teal-dim);border-right:1px solid #fff;"></div>
+              <div style="width:5.96%;background:var(--teal-dim);border-right:1px solid #fff;"></div>
+              <div style="width:5.16%;background:var(--teal-dim);border-right:1px solid #fff;"></div>
+              <div style="width:4.12%;background:var(--teal-dim);"></div>
+            </div>
+            <div style="font-size:10px;color:var(--text-muted);line-height:1.55;margin-top:7px;"><strong>No single Import Core Route exceeds 80%.</strong> Largest is <strong>12.68%</strong>. Ten distinct origin partners are required to reach the ≥80% threshold — a <strong>broad inbound base</strong> executed through a narrow gateway set.</div>
+          </div>
+          <div style="padding:14px 16px;background:rgba(232,0,45,0.04);border:1px solid var(--border);border-radius:6px;">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;">
+              <span style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);">Export Core Route Concentration</span>
+              <span style="font-size:12px;font-weight:800;color:var(--red);">5 routes = 82.93%</span>
+            </div>
+            <div style="height:9px;background:#e6eaf1;border-radius:5px;overflow:hidden;margin-top:9px;display:flex;">
+              <div style="width:42.04%;background:var(--red);border-right:1px solid #fff;"></div>
+              <div style="width:14.01%;background:var(--navy);border-right:1px solid #fff;"></div>
+              <div style="width:10.70%;background:#047857;border-right:1px solid #fff;"></div>
+              <div style="width:10.06%;background:var(--navy);border-right:1px solid #fff;"></div>
+              <div style="width:6.11%;background:var(--navy);"></div>
+            </div>
+            <div style="font-size:10px;color:var(--text-muted);line-height:1.55;margin-top:7px;"><strong>No single Export Core Route exceeds 80%.</strong> Largest is <strong>42.04%</strong>. Only <strong>five customer-critical routes</strong> carry ≥80% of visible Exports, one of which is <strong style="color:#047857;">Rail via Piedras Negras</strong>.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 COMPARABLE-PERIOD TREND -->
+    <div class="card">
+      <div class="card-header"><span class="accent">02</span> Comparable-Period Trend — Observed Actual vs Observed Actual</div>
+      <div class="card-body">
+        <div style="display:grid;grid-template-columns:minmax(320px,1.05fr) 1.35fr;gap:22px;align-items:stretch;">
+
+          <div style="padding:18px 20px;background:var(--bg);border:1px solid var(--border);border-radius:8px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal-dim);">Primary Comparison</div>
+            <div style="font-size:14px;font-weight:800;color:var(--navy);margin-top:3px;">January–July 2025 vs January–July 2026 · Actual</div>
+            <div style="font-size:10px;color:var(--text-muted);margin-top:2px;">Equal observed windows · never annualized</div>
+
+            <div style="display:flex;align-items:flex-end;justify-content:center;gap:40px;margin-top:22px;height:250px;">
+              <div style="display:flex;flex-direction:column;align-items:center;">
+                <div style="font-size:20px;font-weight:800;color:var(--navy);margin-bottom:6px;">2,833</div>
+                <div style="width:76px;height:186px;display:flex;flex-direction:column;justify-content:flex-end;border-radius:5px 5px 0 0;overflow:hidden;">
+                  <div style="height:50px;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;">762</div>
+                  <div style="height:136px;background:var(--teal);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;">2,071</div>
+                </div>
+                <div style="font-size:11px;font-weight:700;color:var(--text-muted);margin-top:7px;letter-spacing:0.5px;">Jan–Jul 2025</div>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;padding-bottom:70px;">
+                <div style="font-size:15px;font-weight:800;color:#059669;">▲ +2.3%</div>
+                <div style="font-size:9px;color:var(--text-light);letter-spacing:0.5px;">observed</div>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;">
+                <div style="font-size:20px;font-weight:800;color:var(--navy);margin-bottom:6px;">2,898</div>
+                <div style="width:76px;height:190px;display:flex;flex-direction:column;justify-content:flex-end;border-radius:5px 5px 0 0;overflow:hidden;">
+                  <div style="height:51px;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;">785</div>
+                  <div style="height:139px;background:var(--teal);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;">2,113</div>
+                </div>
+                <div style="font-size:11px;font-weight:700;color:var(--navy);margin-top:7px;letter-spacing:0.5px;">Jan–Jul 2026 · Current YTD</div>
+              </div>
+            </div>
+
+            <div style="display:flex;gap:16px;justify-content:center;margin-top:14px;padding-top:12px;border-top:1px solid var(--border);">
+              <span style="display:inline-flex;align-items:center;gap:6px;font-size:10px;color:var(--text-muted);"><span style="width:10px;height:10px;border-radius:2px;background:var(--teal);"></span> Imports</span>
+              <span style="display:inline-flex;align-items:center;gap:6px;font-size:10px;color:var(--text-muted);"><span style="width:10px;height:10px;border-radius:2px;background:var(--navy);"></span> Exports</span>
+              <span style="font-size:10px;color:var(--text-light);">Observed Shipments · not annualized</span>
+            </div>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div class="grid-3" style="gap:10px;">
+              <div class="stat-box" style="border-top:3px solid #059669;"><div class="stat-label">Total Shipments</div><div class="stat-value" style="font-size:26px;color:#059669;">+2.3%</div><div class="stat-sub">2,833 → 2,898</div></div>
+              <div class="stat-box" style="border-top:3px solid #059669;"><div class="stat-label">Imports</div><div class="stat-value" style="font-size:26px;color:#059669;">+2.0%</div><div class="stat-sub">2,071 → 2,113</div></div>
+              <div class="stat-box" style="border-top:3px solid #059669;"><div class="stat-label">Exports</div><div class="stat-value" style="font-size:26px;color:#059669;">+3.0%</div><div class="stat-sub">762 → 785</div></div>
+            </div>
+
+            <table class="hub-table" style="font-size:11px;">
+              <thead><tr><th>Comparable Dimension · Jan–Jul</th><th style="text-align:right;">2025</th><th style="text-align:right;">2026</th><th style="text-align:right;">Change</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Total Shipments</strong></td><td style="text-align:right;color:var(--text-muted);">2,833</td><td style="text-align:right;font-weight:700;color:var(--navy);">2,898</td><td style="text-align:right;font-weight:800;color:#059669;">+2.3%</td></tr>
+                <tr><td><strong>Import Shipments</strong></td><td style="text-align:right;color:var(--text-muted);">2,071</td><td style="text-align:right;font-weight:700;color:var(--navy);">2,113</td><td style="text-align:right;font-weight:800;color:#059669;">+2.0%</td></tr>
+                <tr><td><strong>Export Shipments</strong></td><td style="text-align:right;color:var(--text-muted);">762</td><td style="text-align:right;font-weight:700;color:var(--navy);">785</td><td style="text-align:right;font-weight:800;color:#059669;">+3.0%</td></tr>
+                <tr style="background:rgba(5,150,105,0.06);"><td><strong>Visible CIF value</strong></td><td style="text-align:right;color:var(--text-muted);">USD 28.62M</td><td style="text-align:right;font-weight:700;color:var(--navy);">USD 30.27M</td><td style="text-align:right;font-weight:800;color:#059669;">+5.8%</td></tr>
+                <tr style="background:rgba(5,150,105,0.06);"><td><strong>Visible gross weight</strong></td><td style="text-align:right;color:var(--text-muted);">63.58M kg</td><td style="text-align:right;font-weight:700;color:var(--navy);">67.14M kg</td><td style="text-align:right;font-weight:800;color:#059669;">+5.6%</td></tr>
+                <tr><td><strong>Import mix</strong></td><td style="text-align:right;color:var(--text-muted);">73.1%</td><td style="text-align:right;font-weight:700;color:var(--navy);">72.9%</td><td style="text-align:right;font-weight:700;color:var(--text-muted);">−0.2 pts</td></tr>
+                <tr><td><strong>Export mix</strong></td><td style="text-align:right;color:var(--text-muted);">26.9%</td><td style="text-align:right;font-weight:700;color:var(--navy);">27.1%</td><td style="text-align:right;font-weight:700;color:var(--text-muted);">+0.2 pts</td></tr>
+              </tbody>
+            </table>
+
+            <div style="padding:14px 16px;background:rgba(13,43,94,0.03);border-radius:6px;border:1px solid var(--border);">
+              <strong style="font-size:10px;color:var(--navy);text-transform:uppercase;letter-spacing:1.5px;">AIOS Interpretation</strong>
+              <p style="font-size:12px;color:var(--text-muted);line-height:1.7;margin-top:6px;">Visible activity is <strong>stable-to-growing in both directions</strong> across the comparable January–July window, with <strong>visible value and weight rising faster than Shipment count</strong>. The <strong>directional mix is essentially unchanged</strong> — this is a structurally consistent network, not a network in transition.</p>
+            </div>
+
+            <div style="padding:12px 16px;background:rgba(245,158,11,0.06);border-left:3px solid #f59e0b;border-radius:0 6px 6px 0;">
+              <strong style="font-size:10px;color:#b45309;text-transform:uppercase;letter-spacing:1.5px;">Causal Discipline</strong>
+              <p style="font-size:11px;color:var(--text-muted);line-height:1.7;margin-top:6px;">The supplied data <strong>does not establish why</strong>. No increase is described as new demand, new orders, pricing movement, share gain, carrier change or any other causal explanation. Panjiva establishes <strong>what is visible</strong>, not <strong>why it changed</strong>. <strong>Previous Full Calendar Year 2025 (4,280 Shipments) is never compared directly against Current YTD 2026</strong>, and <strong>Current YTD is never annualized</strong>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 DIRECTIONAL & MODAL MIX -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">03</span> Import / Export Structure &amp; Modal Mix — Current YTD</div>
+      <div class="card-body" style="padding:12px 18px;background:rgba(245,158,11,0.05);">
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;">Inbound and outbound are <strong>not one logistics problem</strong>. Inbound is a <strong>broad recovered-fiber sourcing base</strong> funnelled through two border gateways. Outbound is a <strong>small set of customer-critical routes</strong> combining Truck and a recurring Rail component. Each implies a different kind of operational control. <strong>Modal Diversity is MEDIUM</strong> — Truck dominates, with a meaningful secondary Rail channel and specialized Air and Maritime presence.</span>
+      </div>
+    </div>
+    <div class="grid-2" style="margin-top:0;">
+      <div class="card">
+        <div class="card-header" style="background:rgba(0,180,216,0.06);">Direction — Import-Led · 2,898 Current YTD Shipments</div>
+        <div class="card-body">
+          <div class="grid-2" style="gap:10px;">
+            <div class="stat-box"><div class="stat-label">Imports</div><div class="stat-value teal" style="font-size:30px;">2,113</div><div class="stat-sub">72.9% · Jan–Jul 2025 mix was 73.1%</div></div>
+            <div class="stat-box"><div class="stat-label">Exports</div><div class="stat-value red" style="font-size:30px;">785</div><div class="stat-sub">27.1% · Jan–Jul 2025 mix was 26.9%</div></div>
+          </div>
+          <table class="hub-table" style="margin-top:12px;font-size:11px;">
+            <tbody>
+              <tr><td>Import Core Routes to ≥80%</td><td style="text-align:right;font-weight:700;color:var(--navy);">10 routes · 81.92%</td></tr>
+              <tr><td>Export Core Routes to ≥80%</td><td style="text-align:right;font-weight:700;color:var(--navy);">5 routes · 82.93%</td></tr>
+              <tr><td>Visible Suppliers / Origin Partners</td><td style="text-align:right;font-weight:700;color:var(--navy);">56</td></tr>
+              <tr><td>Visible Customer / Destination Partner labels</td><td style="text-align:right;font-weight:700;color:var(--navy);">17</td></tr>
+              <tr><td>Top 2 Import gateways</td><td style="text-align:right;font-weight:700;color:var(--navy);">98.7%</td></tr>
+              <tr><td>Top 3 Export gateways</td><td style="text-align:right;font-weight:700;color:var(--navy);">97.1%</td></tr>
+            </tbody>
+          </table>
+          <div style="margin-top:12px;padding:10px 14px;background:rgba(0,180,216,0.05);border-left:3px solid var(--teal);border-radius:0 5px 5px 0;">
+            <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--navy);">Cross-Border Exposure: VERY HIGH.</strong> <strong>Gateway Concentration: VERY HIGH.</strong> Both are <strong>AIOS Interpretations</strong> of the observed structure — they are <strong>not Panjiva fields</strong> and are <strong>not described as failures or pain points</strong>.</span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" style="background:rgba(232,0,45,0.06);">Modal Mix — Current YTD · 2,898 Shipments</div>
+        <div class="card-body">
+          <div class="modal-bar"><div class="modal-bar-label"><strong>🚛 Truck</strong><span>2,681 · 92.5%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:100%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>🚆 Rail</strong><span>84 · 2.9%</span></div><div class="bar-track"><div class="bar-fill" style="width:3%;background:#059669;"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>◻ Unknown</strong><span>103 · 3.6%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:4%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>✈ Air</strong><span>16 · 0.6%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:1%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>🚢 Maritime</strong><span>14 · 0.5%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:1%"></div></div></div>
+          <div style="margin-top:10px;font-size:10px;color:var(--text-light);line-height:1.55;"><strong>Unknown</strong> transport mode is <strong>preserved explicitly</strong> and is never reclassified into Truck, Rail, Air or Maritime.</div>
+
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);margin:18px 0 8px;padding-top:12px;border-top:1px solid var(--border);">Multimodal Opportunity — AIOS Interpretation</div>
+          <table class="hub-table" style="font-size:11px;">
+            <tbody>
+              <tr style="background:rgba(232,0,45,0.05);"><td><strong>Cross-Border</strong></td><td style="text-align:right;font-weight:800;color:var(--red);">VERY HIGH</td><td style="color:var(--text-muted);font-size:10px;">Primary visible commercial opportunity</td></tr>
+              <tr style="background:rgba(5,150,105,0.05);"><td><strong>Rail</strong></td><td style="text-align:right;font-weight:800;color:#047857;">MEDIUM-HIGH</td><td style="color:var(--text-muted);font-size:10px;">10.7% of Current YTD Exports · embedded in a major World Wide Forest Products Core Route</td></tr>
+              <tr><td><strong>Air</strong></td><td style="text-align:right;font-weight:700;color:var(--text-muted);">LOW VOLUME / SPECIALIZED</td><td style="color:var(--text-muted);font-size:10px;">16 Current YTD Import Shipments</td></tr>
+              <tr><td><strong>Maritime</strong></td><td style="text-align:right;font-weight:700;color:var(--text-muted);">LOW VOLUME / SPECIALIZED</td><td style="color:var(--text-muted);font-size:10px;">14 Current YTD total Shipments</td></tr>
+            </tbody>
+          </table>
+          <div style="margin-top:10px;padding:10px 14px;background:rgba(13,43,94,0.03);border-radius:5px;border:1px solid var(--border);">
+            <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--navy);">Air and Maritime are not a primary commercial thesis for this account.</strong> Their visible presence is specialized and low volume, and they are presented as such rather than promoted into a headline opportunity.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 GATEWAY INTELLIGENCE -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">04</span> Gateway Intelligence — Border · Airport · Port</div>
+      <div class="card-body" style="padding:12px 18px;">
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--navy);">Key observed operational signal:</strong> <strong>1,804 of 2,113 Current YTD import Shipments move through Nuevo Laredo — 85.4%</strong>, and <strong>625 of 785 export Shipments — 79.6%</strong>. Gateway type labels are applied only where the supplied gateway identity supports them.</span>
+      </div>
+    </div>
+    <div class="grid-2" style="margin-top:0;">
+      <div class="card">
+        <div class="card-header" style="background:rgba(0,180,216,0.06);">Import Gateways · Current YTD · 2,113 Imports</div>
+        <div class="card-body">
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Nuevo Laredo, Tamaulipas <span class="hub-tag border">Border</span></strong><span>1,804 · 85.4%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:100%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Ciudad Camargo, Tamaulipas <span class="hub-tag border">Border</span></strong><span>281 · 13.3%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:16%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Aeropuerto Internacional General Mariano Escobedo, Apodaca, Nuevo León <span class="hub-tag air">Airport</span></strong><span>18 · 0.9%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:1%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Altamira, Tamaulipas <span class="hub-tag ocean">Port</span></strong><span>7 · 0.3%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:1%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Veracruz</strong><span>1</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:1%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Colombia, Nuevo León</strong><span>1</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:1%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Manzanillo</strong><span>1</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:1%"></div></div></div>
+          <div style="margin-top:8px;font-size:10px;color:var(--text-light);line-height:1.5;"><strong>Veracruz</strong>, <strong>Colombia, Nuevo León</strong> and <strong>Manzanillo</strong> are displayed without a gateway-type label because the supplied gateway identity does not establish one, and <strong>no share is calculated where AIOS supplies only a count</strong>.</div>
+          <div style="margin-top:14px;padding:10px 14px;background:rgba(232,0,45,0.05);border-left:3px solid var(--red);border-radius:0 5px 5px 0;">
+            <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--red);">Top 2 Import gateways = 98.7% of Current YTD Imports.</strong> This is an <strong>observed concentration signal</strong>. It is <strong>not</strong> described as a failure or a pain point, and no congestion, dwell, delay or capacity condition is asserted.</span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" style="background:rgba(232,0,45,0.06);">Export Gateways · Current YTD · 785 Exports</div>
+        <div class="card-body">
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Nuevo Laredo, Tamaulipas <span class="hub-tag border">Border</span></strong><span>625 · 79.6%</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:100%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Piedras Negras, Coahuila <span class="hub-tag border">Border</span> <span class="hub-tag" style="background:rgba(5,150,105,0.12);color:#047857;">Rail</span></strong><span>84 · 10.7%</span></div><div class="bar-track"><div class="bar-fill" style="width:13%;background:#059669;"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Puente Internacional Zaragoza-Isleta, Ciudad Juárez, Chihuahua <span class="hub-tag border">Border</span></strong><span>53 · 6.8%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:9%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Monterrey / General Mariano Escobedo <span class="hub-tag air">Airport</span></strong><span>18 · 2.3%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:3%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Altamira <span class="hub-tag ocean">Port</span></strong><span>4 · 0.5%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:1%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Manzanillo <span class="hub-tag ocean">Port</span></strong><span>1 · 0.1%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:1%"></div></div></div>
+          <div style="margin-top:14px;padding:10px 14px;background:rgba(232,0,45,0.05);border-left:3px solid var(--red);border-radius:0 5px 5px 0;">
+            <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--red);">Top 3 Export gateways = 97.1% of Current YTD Exports.</strong> The visible export network combines <strong>one dominant border gateway</strong> with a <strong>recurring Rail corridor at Piedras Negras</strong> and a secondary Ciudad Juárez crossing.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-header" style="background:rgba(13,43,94,0.04);">Structural Gateway Change — Previous Full Calendar Year 2025 vs Current YTD 2026</div>
+      <div class="card-body" style="padding:0;">
+        <div style="overflow-x:auto;">
+          <table class="hub-table" style="font-size:11px;min-width:640px;">
+            <thead><tr><th>Direction</th><th>Gateway</th><th style="text-align:right;">2025 Share</th><th style="text-align:right;">Current YTD Share</th><th style="text-align:right;">Observed Movement</th></tr></thead>
+            <tbody>
+              <tr><td><span class="hub-tag ocean" style="background:rgba(0,180,216,0.12);color:var(--teal-dim);">Import</span></td><td><strong>Nuevo Laredo, Tamaulipas</strong> <span class="hub-tag border">Border</span></td><td style="text-align:right;color:var(--text-muted);">89.5%</td><td style="text-align:right;font-weight:700;color:var(--navy);">85.4%</td><td style="text-align:right;font-weight:700;color:var(--text-muted);">Lower visible share</td></tr>
+              <tr><td><span class="hub-tag ocean" style="background:rgba(0,180,216,0.12);color:var(--teal-dim);">Import</span></td><td><strong>Ciudad Camargo, Tamaulipas</strong> <span class="hub-tag border">Border</span></td><td style="text-align:right;color:var(--text-muted);">9.0%</td><td style="text-align:right;font-weight:700;color:var(--navy);">13.3%</td><td style="text-align:right;font-weight:700;color:var(--text-muted);">Higher visible share</td></tr>
+              <tr style="background:rgba(232,0,45,0.04);"><td><span class="hub-tag" style="background:rgba(232,0,45,0.12);color:var(--red);">Export</span></td><td><strong>Nuevo Laredo, Tamaulipas</strong> <span class="hub-tag border">Border</span></td><td style="text-align:right;color:var(--text-muted);">68.8%</td><td style="text-align:right;font-weight:800;color:var(--navy);">79.6%</td><td style="text-align:right;font-weight:700;color:var(--text-muted);">Higher visible share</td></tr>
+              <tr><td><span class="hub-tag" style="background:rgba(232,0,45,0.12);color:var(--red);">Export</span></td><td><strong>Piedras Negras, Coahuila</strong> <span class="hub-tag border">Border</span></td><td style="text-align:right;color:var(--text-muted);">14.5%</td><td style="text-align:right;font-weight:700;color:var(--navy);">10.7%</td><td style="text-align:right;font-weight:700;color:var(--text-muted);">Lower visible share</td></tr>
+              <tr><td><span class="hub-tag" style="background:rgba(232,0,45,0.12);color:var(--red);">Export</span></td><td><strong>Puente Internacional Zaragoza-Isleta, Ciudad Juárez</strong> <span class="hub-tag border">Border</span></td><td style="text-align:right;color:var(--text-muted);">14.6%</td><td style="text-align:right;font-weight:700;color:var(--navy);">6.8%</td><td style="text-align:right;font-weight:700;color:var(--text-muted);">Lower visible share</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="padding:12px 16px;border-top:1px solid var(--border);background:rgba(245,158,11,0.05);">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:#b45309;">No cause is inferred for any of these movements.</strong> They are described only as <strong>higher visible share</strong> or <strong>lower visible share</strong> — never as a diversion, a re-route, a loss, a win or a strategic decision. Current YTD is a <strong>partial period</strong> measured against a <strong>full calendar year</strong>, and the two windows are held separate.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 05 CURRENT YTD IMPORT CORE ROUTES -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">05</span> Current YTD Import Core Routes — Complete ≥80% Set · 10 Routes</div>
+      <div class="card-body" style="padding:12px 18px;">
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--navy);">Core Route Standard:</strong> the smallest route set reaching at least <strong>80% cumulative Shipments</strong> of its own directional universe. Imports and Exports use <strong>separate denominators</strong>. Import universe = <strong>2,113 Shipments</strong> · January 1 – July 31, 2026. The <strong>complete 10-route set is displayed</strong> — never truncated to a Top 5. <strong style="color:#b45309;">Route Rank is observed Shipment frequency only — it is never a Commercial Route Priority.</strong></span>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:0;">
+        <div class="grid-4" style="gap:10px;padding:14px 18px;">
+          <div class="stat-box"><div class="stat-label">Import Core Routes</div><div class="stat-value teal" style="font-size:28px;">10</div><div class="stat-sub">Complete ≥80% set</div></div>
+          <div class="stat-box"><div class="stat-label">Cumulative Coverage</div><div class="stat-value teal" style="font-size:28px;">81.92%</div><div class="stat-sub">of 2,113 Current YTD Imports</div></div>
+          <div class="stat-box"><div class="stat-label">Largest Single Route</div><div class="stat-value" style="font-size:28px;">12.68%</div><div class="stat-sub">No single route exceeds 80%</div></div>
+          <div class="stat-box"><div class="stat-label">Highest Observed Cadence</div><div class="stat-value" style="font-size:28px;">9.02</div><div class="stat-sub">Shipments / Week · Route 1 · observed only</div></div>
+        </div>
+        <div style="padding:0 18px 12px;">
+          <span style="font-size:10px;color:var(--text-muted);line-height:1.6;">Routes <strong>#1–#9 are active across all 7 observed months</strong>. Route <strong>#10 is active across 5 months</strong>. Nine of ten Core Routes cross at <strong>Nuevo Laredo</strong>; Route #1 crosses at <strong>Ciudad Camargo</strong>. Every Core Route is <strong>Truck</strong>.</span>
+        </div>
+        <div style="overflow-x:auto;">
+          <table class="hub-table" style="font-size:11px;min-width:1240px;">
+            <thead><tr>
+              <th style="text-align:right;">Rank</th><th style="min-width:280px;">Origin Facility</th><th>Gateway</th><th>Mode</th>
+              <th style="text-align:right;">Shipments</th><th style="text-align:right;">% Imports</th><th style="text-align:right;">Cumulative</th>
+              <th style="text-align:right;">Active Months</th><th style="text-align:right;">/ Month</th><th style="text-align:right;">/ Week</th><th>Visible Date Range</th>
+            </tr></thead>
+            <tbody>
+              <tr style="background:rgba(0,180,216,0.04);">
+                <td style="text-align:right;font-weight:800;color:var(--navy);">1</td>
+                <td><strong>🇺🇸 Edh International Inc. Dba Texas F &amp; R</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">4100 N 2nd St Ste 100, McAllen, TX 78504, USA</div></td>
+                <td><strong>Ciudad Camargo, Tamaulipas</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                <td style="white-space:nowrap;"><span class="hub-tag truck">Truck</span></td>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">268</td>
+                <td style="text-align:right;font-weight:800;">12.68%</td>
+                <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">12.68%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:12.68%;background:var(--teal);"></div></div></td>
+                <td style="text-align:right;">7</td>
+                <td style="text-align:right;font-weight:700;">38.29</td>
+                <td style="text-align:right;font-weight:700;">9.02</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-01-05 → 2026-07-31</td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">2</td>
+                <td><strong>🇺🇸 Cellmark Inc.</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">88 Rowland Way Suite 300, Novato California 94945, United States</div></td>
+                <td><strong>Nuevo Laredo, Tamaulipas</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                <td style="white-space:nowrap;"><span class="hub-tag truck">Truck</span></td>
+                <td style="text-align:right;font-weight:700;color:var(--navy);">262</td>
+                <td style="text-align:right;font-weight:700;">12.40%</td>
+                <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">25.08%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:25.08%;background:var(--teal);"></div></div></td>
+                <td style="text-align:right;">7</td>
+                <td style="text-align:right;">37.43</td>
+                <td style="text-align:right;">8.73</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-01-02 → 2026-07-30</td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">3</td>
+                <td><strong>🇺🇸 Canusa Hershman Recycling Co.</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">45 Northeast Industrial Road, Branford Connecticut 06405, United States</div></td>
+                <td><strong>Nuevo Laredo, Tamaulipas</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                <td style="white-space:nowrap;"><span class="hub-tag truck">Truck</span></td>
+                <td style="text-align:right;font-weight:700;color:var(--navy);">256</td>
+                <td style="text-align:right;font-weight:700;">12.12%</td>
+                <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">37.20%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:37.20%;background:var(--teal);"></div></div></td>
+                <td style="text-align:right;">7</td>
+                <td style="text-align:right;">36.57</td>
+                <td style="text-align:right;">8.53</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-01-02 → 2026-07-30</td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">4</td>
+                <td><strong>🇺🇸 Ekman Recycling</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">1800 Route 34, Building 4, Suite 401, Wall New Jersey 08724, United States</div></td>
+                <td><strong>Nuevo Laredo, Tamaulipas</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                <td style="white-space:nowrap;"><span class="hub-tag truck">Truck</span></td>
+                <td style="text-align:right;font-weight:700;color:var(--navy);">220</td>
+                <td style="text-align:right;font-weight:700;">10.41%</td>
+                <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">47.61%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:47.61%;background:var(--teal);"></div></div></td>
+                <td style="text-align:right;">7</td>
+                <td style="text-align:right;">31.43</td>
+                <td style="text-align:right;">7.40</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-01-05 → 2026-07-31</td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">5</td>
+                <td><strong>🇺🇸 Gp Harmon Recycling Llc</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Two Jericho Plaza, Wing C, Suite 200, 1st Floor, Jericho New York 11753-1681, United States</div></td>
+                <td><strong>Nuevo Laredo, Tamaulipas</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                <td style="white-space:nowrap;"><span class="hub-tag truck">Truck</span></td>
+                <td style="text-align:right;font-weight:700;color:var(--navy);">138</td>
+                <td style="text-align:right;font-weight:700;">6.53%</td>
+                <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">54.14%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:54.14%;background:var(--teal);"></div></div></td>
+                <td style="text-align:right;">7</td>
+                <td style="text-align:right;">19.71</td>
+                <td style="text-align:right;">4.67</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-01-06 → 2026-07-31</td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">6</td>
+                <td><strong>🇺🇸 Wm Recycle America Llc</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">720, East Butterfield Road, Lombard, Illinois, 60148, United States</div></td>
+                <td><strong>Nuevo Laredo, Tamaulipas</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                <td style="white-space:nowrap;"><span class="hub-tag truck">Truck</span></td>
+                <td style="text-align:right;font-weight:700;color:var(--navy);">135</td>
+                <td style="text-align:right;font-weight:700;">6.39%</td>
+                <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">60.53%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:60.53%;background:var(--teal);"></div></div></td>
+                <td style="text-align:right;">7</td>
+                <td style="text-align:right;">19.29</td>
+                <td style="text-align:right;">4.48</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-01-02 → 2026-07-31</td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">7</td>
+                <td><strong>🇺🇸 Texas Recycling/Surplus Inc.</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">1420 S Barry Ave, Dallas Texas 75223-3019, United States</div></td>
+                <td><strong>Nuevo Laredo, Tamaulipas</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                <td style="white-space:nowrap;"><span class="hub-tag truck">Truck</span></td>
+                <td style="text-align:right;font-weight:700;color:var(--navy);">130</td>
+                <td style="text-align:right;font-weight:700;">6.15%</td>
+                <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">66.68%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:66.68%;background:var(--teal);"></div></div></td>
+                <td style="text-align:right;">7</td>
+                <td style="text-align:right;">18.57</td>
+                <td style="text-align:right;">4.64</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-01-16 → 2026-07-30</td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">8</td>
+                <td><strong>🇺🇸 Pioneer Industries International Inc.</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">155 Irving Avenue North, Minneapolis Minnesota 55405, United States</div></td>
+                <td><strong>Nuevo Laredo, Tamaulipas</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                <td style="white-space:nowrap;"><span class="hub-tag truck">Truck</span></td>
+                <td style="text-align:right;font-weight:700;color:var(--navy);">126</td>
+                <td style="text-align:right;font-weight:700;">5.96%</td>
+                <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">72.65%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:72.65%;background:var(--teal);"></div></div></td>
+                <td style="text-align:right;">7</td>
+                <td style="text-align:right;">18.00</td>
+                <td style="text-align:right;">4.30</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-01-07 → 2026-07-30</td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">9</td>
+                <td><strong>🇺🇸 Greenside Solutions Inc.</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Markley Ln, Laredo, TX 78041, USA</div></td>
+                <td><strong>Nuevo Laredo, Tamaulipas</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                <td style="white-space:nowrap;"><span class="hub-tag truck">Truck</span></td>
+                <td style="text-align:right;font-weight:700;color:var(--navy);">109</td>
+                <td style="text-align:right;font-weight:700;">5.16%</td>
+                <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">77.80%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:77.80%;background:var(--teal);"></div></div></td>
+                <td style="text-align:right;">7</td>
+                <td style="text-align:right;">15.57</td>
+                <td style="text-align:right;">3.70</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-01-05 → 2026-07-29</td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">10</td>
+                <td><strong>🇺🇸 Vipa Usa Inc.</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">980 Birmingham Road, Suite 721, Alpharetta Georgia 30004, United States</div></td>
+                <td><strong>Nuevo Laredo, Tamaulipas</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                <td style="white-space:nowrap;"><span class="hub-tag truck">Truck</span></td>
+                <td style="text-align:right;font-weight:700;color:var(--navy);">87</td>
+                <td style="text-align:right;font-weight:700;">4.12%</td>
+                <td style="text-align:right;min-width:78px;"><span style="font-weight:800;color:var(--teal-dim);">81.92%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:81.92%;background:var(--teal);"></div></div></td>
+                <td style="text-align:right;font-weight:700;color:#b45309;">5</td>
+                <td style="text-align:right;">17.40</td>
+                <td style="text-align:right;">4.65</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-03-23 → 2026-07-31</td>
+              </tr>
+            </tbody>
+            <tfoot><tr style="background:var(--bg);">
+              <td colspan="6" style="font-weight:800;color:var(--navy);padding:10px 12px;">10 Core Routes · Destination Facility for all rows: <strong>Productora De Papel Sa De Cv</strong> <span style="font-weight:600;color:var(--text-light);font-style:italic;">— C. Torres de Santo Domingo Real de Anáhuac, Nuevo Leon</span></td>
+              <td style="text-align:right;font-weight:800;color:var(--teal-dim);">81.92%</td>
+              <td colspan="4"></td>
+            </tr></tfoot>
+          </table>
+        </div>
+        <div style="padding:12px 16px;border-top:1px solid var(--border);">
+          <span style="font-size:10px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--navy);">Executive takeaway:</strong> ten Import Core Routes are required to reach <strong>81.92%</strong> — a <strong>broad, distributed inbound sourcing base</strong> whose execution converges on <strong>two border gateways</strong>. The inbound consignee representation <strong>&ldquo;C. Torres de Santo Domingo Real de Anáhuac, Nuevo Leon&rdquo;</strong> is displayed exactly as supplied — <strong>no city or postal code is silently added</strong>, and it is <strong>not merged</strong> with the outbound shipper representation used in the Export Core Route table.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 06 CURRENT YTD EXPORT CORE ROUTES -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">06</span> Current YTD Export Core Routes — Complete ≥80% Set · 5 Routes</div>
+      <div class="card-body" style="padding:12px 18px;">
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;">Export universe = <strong>785 Shipments</strong> · January 1 – July 31, 2026. <strong>Five routes</strong> reach <strong>82.93%</strong>. The <strong>complete set is displayed</strong>. Export origin facility for every row: <strong>Productora De Papel Sa De Cv</strong> — <span style="font-style:italic;color:var(--text-light);">C. Torres de Santo Domingo, Real de Anáhuac, San Nicolás de los Garza Nuevo Leon 66444, Mexico</span>. <strong style="color:#b45309;">Route Rank is observed Shipment frequency only — it is never a Commercial Route Priority.</strong></span>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:0;">
+        <div class="grid-4" style="gap:10px;padding:14px 18px;">
+          <div class="stat-box"><div class="stat-label">Export Core Routes</div><div class="stat-value red" style="font-size:28px;">5</div><div class="stat-sub">Complete ≥80% set</div></div>
+          <div class="stat-box"><div class="stat-label">Cumulative Coverage</div><div class="stat-value red" style="font-size:28px;">82.93%</div><div class="stat-sub">of 785 Current YTD Exports</div></div>
+          <div class="stat-box"><div class="stat-label">Largest Single Route</div><div class="stat-value" style="font-size:28px;">42.04%</div><div class="stat-sub">World Wide Forest Products · Nuevo Laredo · 330 Shipments</div></div>
+          <div class="stat-box"><div class="stat-label">Highest Observed Cadence</div><div class="stat-value" style="font-size:28px;">10.95</div><div class="stat-sub">Shipments / Week · Route 1 · observed only</div></div>
+        </div>
+        <div style="padding:0 18px 12px;">
+          <span style="font-size:10px;color:var(--text-muted);line-height:1.6;"><strong>All five Export Core Routes are active across all 7 observed months.</strong> Four are <strong>Truck</strong>; one is <strong style="color:#047857;">Rail via Piedras Negras</strong>.</span>
+        </div>
+        <div style="overflow-x:auto;">
+          <table class="hub-table" style="font-size:11px;min-width:1240px;">
+            <thead><tr>
+              <th style="text-align:right;">Rank</th><th style="min-width:280px;">Destination Facility</th><th>Gateway</th><th>Mode</th>
+              <th style="text-align:right;">Shipments</th><th style="text-align:right;">% Exports</th><th style="text-align:right;">Cumulative</th>
+              <th style="text-align:right;">Active Months</th><th style="text-align:right;">/ Month</th><th style="text-align:right;">/ Week</th><th>Visible Date Range</th>
+            </tr></thead>
+            <tbody>
+              <tr style="background:rgba(232,0,45,0.04);">
+                <td style="text-align:right;font-weight:800;color:var(--navy);">1</td>
+                <td><strong>🇺🇸 World Wide Forest Products</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">246 Brantwood Road, Amherst New York 14226, United States</div></td>
+                <td><strong>Nuevo Laredo, Tamaulipas</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                <td style="white-space:nowrap;"><span class="hub-tag truck">Truck</span></td>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">330</td>
+                <td style="text-align:right;font-weight:800;">42.04%</td>
+                <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">42.04%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:42.04%;background:var(--teal);"></div></div></td>
+                <td style="text-align:right;">7</td>
+                <td style="text-align:right;font-weight:700;">47.14</td>
+                <td style="text-align:right;font-weight:800;color:var(--red);">10.95</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-01-02 → 2026-07-31</td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">2</td>
+                <td><strong>El Paso Paper Box Inc.</strong> <span style="display:inline-block;font-size:8px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:#fff;background:#d97706;padding:1px 5px;border-radius:3px;vertical-align:middle;">Requires validation</span><div style="font-size:9px;color:var(--text-light);font-style:italic;">Panjiva Shipment Destination: 🇺🇸 United States · <strong style="color:#b45309;">Panjiva Full Address: 🇬🇧 United Kingdom</strong> — conflicting source fields preserved exactly as supplied</div></td>
+                <td><strong>Nuevo Laredo, Tamaulipas</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                <td style="white-space:nowrap;"><span class="hub-tag truck">Truck</span></td>
+                <td style="text-align:right;font-weight:700;color:var(--navy);">110</td>
+                <td style="text-align:right;font-weight:700;">14.01%</td>
+                <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">56.05%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:56.05%;background:var(--teal);"></div></div></td>
+                <td style="text-align:right;">7</td>
+                <td style="text-align:right;">15.71</td>
+                <td style="text-align:right;">4.03</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-01-15 → 2026-07-24</td>
+              </tr>
+              <tr style="background:rgba(5,150,105,0.05);">
+                <td style="text-align:right;font-weight:800;color:var(--navy);">3</td>
+                <td><strong>🇺🇸 World Wide Forest Products</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">246 Brantwood Road, Amherst New York 14226, United States</div></td>
+                <td><strong>Piedras Negras, Coahuila</strong><div style="font-size:9px;color:var(--text-light);">Border / Rail</div></td>
+                <td style="white-space:nowrap;"><span class="hub-tag" style="background:rgba(5,150,105,0.12);color:#047857;">Rail</span></td>
+                <td style="text-align:right;font-weight:700;color:var(--navy);">84</td>
+                <td style="text-align:right;font-weight:700;">10.70%</td>
+                <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">66.75%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:66.75%;background:var(--teal);"></div></div></td>
+                <td style="text-align:right;">7</td>
+                <td style="text-align:right;">12.00</td>
+                <td style="text-align:right;">2.93</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-01-12 → 2026-07-31</td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">4</td>
+                <td><strong>🇺🇸 Zebra Paper Converters Inc.</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">4808 West Converters Drive, Appleton Wisconsin 54913-7944, United States</div></td>
+                <td><strong>Nuevo Laredo, Tamaulipas</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                <td style="white-space:nowrap;"><span class="hub-tag truck">Truck</span></td>
+                <td style="text-align:right;font-weight:700;color:var(--navy);">79</td>
+                <td style="text-align:right;font-weight:700;">10.06%</td>
+                <td style="text-align:right;min-width:78px;"><span style="font-weight:700;color:var(--teal-dim);">76.82%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:76.82%;background:var(--teal);"></div></div></td>
+                <td style="text-align:right;">7</td>
+                <td style="text-align:right;">11.29</td>
+                <td style="text-align:right;">3.12</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-01-07 → 2026-07-02</td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">5</td>
+                <td><strong>El Paso Paper Box Inc.</strong> <span style="display:inline-block;font-size:8px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:#fff;background:#d97706;padding:1px 5px;border-radius:3px;vertical-align:middle;">Requires validation</span><div style="font-size:9px;color:var(--text-light);font-style:italic;">Panjiva Shipment Destination: 🇺🇸 United States · <strong style="color:#b45309;">Panjiva Full Address: 🇬🇧 United Kingdom</strong> — conflicting source fields preserved exactly as supplied</div></td>
+                <td><strong>Puente Internacional Zaragoza-Isleta, Ciudad Juárez, Chihuahua</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                <td style="white-space:nowrap;"><span class="hub-tag truck">Truck</span></td>
+                <td style="text-align:right;font-weight:700;color:var(--navy);">48</td>
+                <td style="text-align:right;font-weight:700;">6.11%</td>
+                <td style="text-align:right;min-width:78px;"><span style="font-weight:800;color:var(--teal-dim);">82.93%</span><div style="height:4px;background:#e6eaf1;border-radius:2px;overflow:hidden;margin-top:4px;"><div style="height:100%;width:82.93%;background:var(--teal);"></div></div></td>
+                <td style="text-align:right;">7</td>
+                <td style="text-align:right;">6.86</td>
+                <td style="text-align:right;">1.63</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-01-07 → 2026-07-31</td>
+              </tr>
+            </tbody>
+            <tfoot><tr style="background:var(--bg);">
+              <td colspan="6" style="font-weight:800;color:var(--navy);padding:10px 12px;">5 Core Routes · Origin Facility for all rows: <strong>Productora De Papel Sa De Cv</strong> <span style="font-weight:600;color:var(--text-light);font-style:italic;">— C. Torres de Santo Domingo, Real de Anáhuac, San Nicolás de los Garza Nuevo Leon 66444, Mexico</span></td>
+              <td style="text-align:right;font-weight:800;color:var(--teal-dim);">82.93%</td>
+              <td colspan="4"></td>
+            </tr></tfoot>
+          </table>
+        </div>
+        <div style="padding:12px 16px;border-top:1px solid var(--border);">
+          <span style="font-size:10px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--navy);">Executive takeaway:</strong> outbound is <strong>customer-critical rather than broad</strong> — five routes carry <strong>82.93%</strong> of visible Exports, with a single route at <strong>42.04%</strong> and <strong>10.95 Shipments per week</strong>. Routes <strong>#2 and #5</strong> carry a <strong>Panjiva consignee-geography conflict</strong> that is preserved, labelled and escalated to Discovery rather than corrected — see the Data Quality module.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 07 ROUTE PERSISTENCE / CHANGE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">07</span> Route Persistence &amp; Change — Current YTD Core Route Set vs 2025</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:16px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);margin-bottom:8px;">Current YTD Import Core Routes</div>
+            <table class="hub-table" style="font-size:11px;">
+              <thead><tr><th style="width:52%;">Core Route Identity</th><th>Observed Status vs 2025</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Cellmark</strong></td><td style="color:#059669;font-weight:700;">Persisting Core Route</td></tr>
+                <tr><td><strong>Canusa Hershman Recycling</strong></td><td style="color:#059669;font-weight:700;">Persisting Core Route</td></tr>
+                <tr><td><strong>Gp Harmon Recycling</strong></td><td style="color:#059669;font-weight:700;">Persisting Core Route</td></tr>
+                <tr><td><strong>Wm Recycle America</strong></td><td style="color:#059669;font-weight:700;">Persisting Core Route</td></tr>
+                <tr><td><strong>Texas Recycling/Surplus</strong></td><td style="color:#059669;font-weight:700;">Persisting Core Route</td></tr>
+                <tr><td><strong>Current exact EDH facility route</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">4100 N 2nd St Ste 100, McAllen, TX 78504, USA · via Ciudad Camargo</div></td><td style="color:var(--navy);font-weight:700;">Visible in 2025 outside the prior Core Route set</td></tr>
+                <tr><td><strong>Greenside Solutions</strong></td><td style="color:var(--navy);font-weight:700;">Visible in 2025 outside the prior Core Route set</td></tr>
+                <tr><td><strong>Vipa USA</strong></td><td style="color:var(--navy);font-weight:700;">Visible in 2025 outside the prior Core Route set</td></tr>
+                <tr><td><strong>Ekman Recycling</strong></td><td style="color:#b45309;font-weight:700;">Not visible as the same exact route identity in 2025</td></tr>
+                <tr><td><strong>Pioneer Industries International</strong></td><td style="color:#b45309;font-weight:700;">Not visible as the same exact route identity in 2025</td></tr>
+              </tbody>
+            </table>
+            <div style="margin-top:10px;padding:10px 14px;background:rgba(217,119,6,0.05);border-left:3px solid #d97706;border-radius:0 5px 5px 0;">
+              <span style="font-size:10px;color:var(--text-muted);line-height:1.6;"><strong style="color:#b45309;">EDH address variants are not merged.</strong> The 2025 Core Route carries <strong>&ldquo;Address not available in Panjiva&rdquo;</strong>; the Current YTD Core Route carries a full McAllen, TX address. These are held as <strong>separate route identities</strong>.</span>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);margin-bottom:8px;">Current YTD Export Core Routes</div>
+            <table class="hub-table" style="font-size:11px;">
+              <thead><tr><th style="width:52%;">Core Route Identity</th><th>Observed Status vs 2025</th></tr></thead>
+              <tbody>
+                <tr><td><strong>World Wide Forest Products</strong> via Nuevo Laredo</td><td style="color:#059669;font-weight:700;">Persisting Core Route</td></tr>
+                <tr><td><strong>El Paso Paper Box</strong> via Nuevo Laredo</td><td style="color:#059669;font-weight:700;">Persisting Core Route</td></tr>
+                <tr><td><strong>World Wide Forest Products</strong> via Piedras Negras <span class="hub-tag" style="background:rgba(5,150,105,0.12);color:#047857;">Rail</span></td><td style="color:#059669;font-weight:700;">Persisting Core Route</td></tr>
+                <tr><td><strong>Zebra Paper Converters</strong> via Nuevo Laredo</td><td style="color:var(--navy);font-weight:700;">Visible in 2025 outside the prior Core Route set</td></tr>
+                <tr><td><strong>El Paso Paper Box</strong> via Zaragoza-Isleta</td><td style="color:var(--navy);font-weight:700;">Visible in 2025 outside the prior Core Route set</td></tr>
+                <tr style="background:rgba(245,158,11,0.06);"><td><strong>Inter Papier North America</strong> routes<div style="font-size:9px;color:var(--text-light);">2025 Core Routes #3 via Nuevo Laredo and #5 via Zaragoza-Isleta</div></td><td style="color:#b45309;font-weight:700;">Not visible in the Current YTD Core Route set</td></tr>
+              </tbody>
+            </table>
+            <div style="margin-top:10px;padding:12px 14px;background:linear-gradient(135deg,rgba(232,0,45,0.06) 0%,rgba(13,43,94,0.05) 100%);border-left:3px solid var(--red);border-radius:0 6px 6px 0;">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--red);">Principal Structural Movement</div>
+              <div style="display:flex;align-items:baseline;gap:10px;margin-top:5px;flex-wrap:wrap;">
+                <span style="font-size:13px;font-weight:700;color:var(--navy);">Top Export Core Route share</span>
+                <span style="font-size:18px;font-weight:800;color:var(--text-muted);">34.9%</span>
+                <span style="font-size:14px;color:var(--text-light);">→</span>
+                <span style="font-size:22px;font-weight:800;color:var(--red);">42.0%</span>
+                <span style="font-size:10px;color:var(--text-muted);">2025 → Current YTD</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:12px;padding:10px 14px;background:rgba(245,158,11,0.06);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:#b45309;">Language discipline:</strong> route change is described only as <strong>Persisting Core Route</strong>, <strong>Visible in 2025 outside the prior Core Route set</strong>, <strong>Not visible as the same exact route identity</strong> or <strong>Not visible in the Current YTD Core Route set</strong> — <strong>never as new, lost, discontinued or terminated</strong>. <strong>Inter Papier routes are not described as discontinued, terminated or lost.</strong> Current YTD is a <strong>partial period</strong>, and a Core Route set is only the smallest set reaching ≥80% — not the complete universe of every Shipment. Absence from a Core Route set is therefore <strong>not</strong> evidence that a flow stopped. <strong>No cause is inferred.</strong></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 08 GEOGRAPHIC INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">08</span> Geographic Intelligence — Current YTD Import Origins &amp; Export Destinations</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:18px;">
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px;">
+              <span style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);">Import Origins · 2,113 Imports</span>
+              <span style="font-size:11px;font-weight:800;color:var(--teal-dim);">🇺🇸 United States 95.5%</span>
+            </div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>🇺🇸 United States</strong><span>2,017 · 95.5%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:100%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>🇲🇽 Mexico</strong><span>50 · 2.4%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:3%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>🇫🇮 Finland</strong><span>8 · 0.4%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:1%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>🇩🇪 🇺🇸 Germany, United States</strong> <span style="font-size:9px;color:var(--text-light);font-style:italic;">mixed Panjiva origin label</span><span>5</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:1%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>🇩🇪 Germany</strong><span>5</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:1%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong style="color:var(--text-light);font-style:italic;">Additional Panjiva origin labels</strong><span>20</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:1%"></div></div></div>
+            <div style="margin-top:12px;padding:10px 14px;background:rgba(0,180,216,0.05);border-left:3px solid var(--teal);border-radius:0 5px 5px 0;">
+              <span style="font-size:11px;color:var(--text-muted);line-height:1.6;">Inbound geography is <strong>overwhelmingly United States</strong>. The <strong>&ldquo;Germany, United States&rdquo;</strong> entry is a <strong>mixed Panjiva origin label</strong> and is displayed as supplied — it is <strong>not split, reassigned or resolved</strong> into a single country. <strong>No share is calculated where AIOS supplies only a count.</strong></span>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px;">
+              <span style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);">Export Destinations · 785 Exports</span>
+              <span style="font-size:11px;font-weight:800;color:var(--red);">🇺🇸 United States 82.4%</span>
+            </div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>🇺🇸 United States</strong><span>647 · 82.4%</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:100%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>🇨🇦 Canada</strong><span>78 · 9.9%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:12%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>🇲🇽 Mexico</strong><span>54 · 6.9%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:8%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>🇯🇲 Jamaica</strong><span>3</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:1%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>🇨🇴 Colombia</strong><span>1</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:1%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>🇪🇸 Spain</strong><span>1</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:1%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>🇯🇵 Japan</strong><span>1</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:1%"></div></div></div>
+            <div style="margin-top:12px;padding:10px 14px;background:rgba(232,0,45,0.05);border-left:3px solid var(--red);border-radius:0 5px 5px 0;">
+              <span style="font-size:11px;color:var(--text-muted);line-height:1.6;">Outbound geography is <strong>North American</strong> — United States, Canada and Mexico account for the visible majority — with a small set of single-Shipment overseas destinations. <strong>Flags accompany country names; they never replace them.</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 09 TRADING PARTNER INTELLIGENCE -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">09</span> Trading Partner Intelligence — Current YTD</div>
+      <div class="card-body" style="padding:12px 18px;">
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong>Trading Partners</strong> is the executive umbrella term. For Imports these are <strong>Suppliers / Origin Partners</strong>; for Exports, <strong>Customers / Destination Partners</strong>. <strong style="color:#b45309;">Trading Partner concentration is a different measure from Route concentration</strong> — a single Trading Partner may carry several Core Routes across different gateways and modes, so the two sets of percentages are not interchangeable.</span>
+      </div>
+    </div>
+    <div class="grid-2" style="margin-top:0;">
+      <div class="card">
+        <div class="card-header" style="background:rgba(0,180,216,0.06);">Import Suppliers / Origin Partners · 2,113 Imports · 56 visible partners</div>
+        <div class="card-body">
+          <div class="modal-bar"><div class="modal-bar-label"><strong>EDH International</strong><span>268 · 12.68%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:100%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Cellmark</strong><span>262 · 12.40%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:98%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Canusa Hershman Recycling</strong><span>256 · 12.12%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:96%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Ekman Recycling</strong><span>220 · 10.41%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:82%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Gp Harmon Recycling</strong><span>138 · 6.53%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:51%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Wm Recycle America</strong><span>135 · 6.39%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:50%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Texas Recycling/Surplus</strong><span>130 · 6.15%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:49%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Pioneer Industries International</strong><span>126 · 5.96%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:47%"></div></div></div>
+          <div class="grid-3" style="gap:10px;margin-top:14px;">
+            <div class="stat-box"><div class="stat-label">Top 3 Concentration</div><div class="stat-value teal" style="font-size:24px;">37.2%</div><div class="stat-sub">of Current YTD Imports</div></div>
+            <div class="stat-box"><div class="stat-label">Top 5 Concentration</div><div class="stat-value teal" style="font-size:24px;">54.1%</div><div class="stat-sub">of Current YTD Imports</div></div>
+            <div class="stat-box"><div class="stat-label">Visible Trading Partners</div><div class="stat-value" style="font-size:24px;">56</div><div class="stat-sub">Suppliers / Origin Partners</div></div>
+          </div>
+          <div style="margin-top:12px;padding:10px 14px;background:rgba(13,43,94,0.03);border-radius:5px;border:1px solid var(--border);">
+            <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--navy);">A broad inbound base.</strong> Fifty-six visible Suppliers / Origin Partners, with the top five accounting for just over half of visible Imports. <strong>This is an observed structural signal, not a claim about supplier performance.</strong></span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" style="background:rgba(232,0,45,0.06);">Export Customers / Destination Partners · 785 Exports · 17 visible labels</div>
+        <div class="card-body">
+          <div class="modal-bar"><div class="modal-bar-label"><strong>World Wide Forest Products</strong><span>417 · 53.12%</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:100%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>El Paso Paper Box Inc.</strong> <span style="display:inline-block;font-size:8px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:#fff;background:#d97706;padding:1px 5px;border-radius:3px;">Requires validation</span><span>158 · 20.13%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:38%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Zebra Paper Converters Inc.</strong><span>79 · 10.06%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:19%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Captiva Group</strong><span>38 · 4.84%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:9%"></div></div></div>
+          <div class="modal-bar"><div class="modal-bar-label"><strong>Shinsei Pulp &amp; Paper Companny Ltd.</strong> <span style="font-size:9px;color:var(--text-light);font-style:italic;">Panjiva spelling preserved</span><span>33 · 4.20%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:8%"></div></div></div>
+          <div class="grid-3" style="gap:10px;margin-top:14px;">
+            <div class="stat-box"><div class="stat-label">Top 3 Concentration</div><div class="stat-value red" style="font-size:24px;">83.3%</div><div class="stat-sub">of Current YTD Exports</div></div>
+            <div class="stat-box"><div class="stat-label">Top 5 Concentration</div><div class="stat-value red" style="font-size:24px;">92.4%</div><div class="stat-sub">of Current YTD Exports</div></div>
+            <div class="stat-box"><div class="stat-label">Visible Partner Labels</div><div class="stat-value" style="font-size:24px;">17</div><div class="stat-sub">Customers / Destination Partners</div></div>
+          </div>
+          <div style="margin-top:12px;padding:10px 14px;background:rgba(232,0,45,0.05);border-left:3px solid var(--red);border-radius:0 5px 5px 0;">
+            <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--navy);">A narrow outbound base.</strong> The top five Customers / Destination Partners represent <strong>92.4%</strong> of visible Exports, and one partner alone represents <strong>53.1%</strong>. <strong>Note the asymmetry:</strong> World Wide Forest Products carries <strong>53.12%</strong> as a Trading Partner but no single <em>route</em> exceeds <strong>42.04%</strong>, because that relationship is executed across <strong>two gateways and two modes</strong>.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10 HS INTELLIGENCE -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">10</span> HS Intelligence — Top 5 by Period</div>
+      <div class="card-body" style="padding:12px 18px;background:rgba(217,119,6,0.06);border-left:3px solid #d97706;">
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:#b45309;">HS Methodology Disclosure:</strong> <strong>One Shipment may contain multiple HS Codes. HS counts represent operational presence and are not additive.</strong> HS counts are never summed and presented as total Shipments, and <strong>HS operational presence is never described as revenue mix</strong>.</span>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body">
+        <div class="grid-2" style="gap:18px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);margin-bottom:10px;">Current YTD 2026 · Top 5</div>
+            <table class="hub-table" style="font-size:11px;">
+              <thead><tr><th style="text-align:right;">Rank</th><th>HS Code</th><th>Business Description</th><th style="text-align:right;">Operational Presence</th><th style="text-align:right;">Share</th></tr></thead>
+              <tbody>
+                <tr style="background:rgba(0,180,216,0.05);"><td style="text-align:right;font-weight:700;">1</td><td style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:var(--navy);">4707100100</td><td style="color:var(--text-muted);">Desperdicio de cartón / recovered paperboard</td><td style="text-align:right;font-weight:700;">1,794</td><td style="text-align:right;font-weight:800;color:var(--teal-dim);">61.90%</td></tr>
+                <tr style="background:rgba(0,180,216,0.03);"><td style="text-align:right;font-weight:700;">2</td><td style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:var(--navy);">4810920100</td><td style="color:var(--text-muted);">Coated multilayer paper/paperboard</td><td style="text-align:right;font-weight:700;">762</td><td style="text-align:right;font-weight:800;color:var(--teal-dim);">26.29%</td></tr>
+                <tr><td style="text-align:right;font-weight:700;">3</td><td style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:var(--navy);">4707209100</td><td style="color:var(--text-muted);">Waste paper</td><td style="text-align:right;font-weight:700;">131</td><td style="text-align:right;font-weight:700;">4.52%</td></tr>
+                <tr><td style="text-align:right;font-weight:700;">4</td><td style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:var(--navy);">4707909100</td><td style="color:var(--text-muted);">Mixed waste paper and paperboard</td><td style="text-align:right;font-weight:700;">123</td><td style="text-align:right;font-weight:700;">4.24%</td></tr>
+                <tr><td style="text-align:right;font-weight:700;">5</td><td style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:var(--navy);">4823909999</td><td style="color:var(--text-muted);">Other paper/paperboard articles; mixed Panjiva descriptions</td><td style="text-align:right;font-weight:700;">20</td><td style="text-align:right;font-weight:700;">0.69%</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-light);margin-bottom:10px;">Previous Full Calendar Year 2025 · Top 5</div>
+            <table class="hub-table" style="font-size:11px;">
+              <thead><tr><th style="text-align:right;">Rank</th><th>HS Code</th><th>Business Description</th><th style="text-align:right;">Presence</th><th style="text-align:right;">Share</th></tr></thead>
+              <tbody>
+                <tr><td style="text-align:right;font-weight:700;color:var(--text-muted);">1</td><td style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:var(--text-muted);">4707100100</td><td style="color:var(--text-muted);">Desperdicio de cartón / recovered paperboard</td><td style="text-align:right;">2,589</td><td style="text-align:right;color:var(--text-muted);">60.49%</td></tr>
+                <tr><td style="text-align:right;font-weight:700;color:var(--text-muted);">2</td><td style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:var(--text-muted);">4810920100</td><td style="color:var(--text-muted);">Coated multilayer paper/paperboard</td><td style="text-align:right;">1,157</td><td style="text-align:right;color:var(--text-muted);">27.03%</td></tr>
+                <tr><td style="text-align:right;font-weight:700;color:var(--text-muted);">3</td><td style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:var(--text-muted);">4707909100</td><td style="color:var(--text-muted);">Mixed waste paper and paperboard</td><td style="text-align:right;">219</td><td style="text-align:right;color:var(--text-muted);">5.12%</td></tr>
+                <tr><td style="text-align:right;font-weight:700;color:var(--text-muted);">4</td><td style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:var(--text-muted);">4707209100</td><td style="color:var(--text-muted);">Waste paper</td><td style="text-align:right;">200</td><td style="text-align:right;color:var(--text-muted);">4.67%</td></tr>
+                <tr><td style="text-align:right;font-weight:700;color:var(--text-muted);">5</td><td style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:var(--text-muted);">8413911306</td><td style="color:var(--text-muted);">Pump/equipment parts</td><td style="text-align:right;">25</td><td style="text-align:right;color:var(--text-muted);">0.58%</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div style="margin-top:16px;padding:14px 16px;background:rgba(13,43,94,0.03);border-radius:6px;border:1px solid var(--border);">
+          <strong style="font-size:10px;color:var(--navy);text-transform:uppercase;letter-spacing:1.5px;">HS Portfolio Trend — AIOS Interpretation</strong>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.7;margin-top:6px;"><strong style="color:var(--navy);">Structurally stable: recovered cardboard dominates inbound operational presence and coated multilayer paperboard dominates outbound operational presence.</strong> <strong>No product-family transformation is invented</strong>, and no commercial cause is attached to any movement between the two periods.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 11 CUSTOMS / REGIME INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">11</span> Customs / Regime Intelligence — Current YTD</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:18px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);margin-bottom:10px;">Import Customs Agent Codes · 2,113 Imports</div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Customs Agent 3448</strong><span>1,800 · 85.2%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:100%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Customs Agent 3549</strong><span>281 · 13.3%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:16%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Customs Agent 3577</strong><span>18 · 0.9%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:1%"></div></div></div>
+            <div style="margin-top:12px;padding:10px 14px;background:rgba(232,0,45,0.05);border-left:3px solid var(--red);border-radius:0 5px 5px 0;">
+              <span style="font-size:11px;color:var(--text-muted);line-height:1.6;">Top 3 import agent codes represent <strong style="color:var(--red);">99.3% of Current YTD Imports</strong>.</span>
+            </div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);margin:18px 0 8px;padding-top:12px;border-top:1px solid var(--border);">Import Customs Regimes · 2,113 Imports</div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Final Import / Export</strong><span>2,065 · 97.7%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:100%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Regime Change Of Supplies Or Temporarily Exported Merchandise</strong><span>29 · 1.4%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:2%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Transfer Of Goods</strong> <span style="font-size:9px;color:var(--text-light);font-style:italic;">virtual and temporary-related regime description</span><span>10 · 0.5%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:1%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Regularisation Of Goods</strong><span>9 · 0.4%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:1%"></div></div></div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);margin-bottom:10px;">Export Customs Agent Codes · 785 Exports</div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Customs Agent 3104</strong><span>614 · 78.2%</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:100%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Customs Agent 3360</strong><span>84 · 10.7%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:14%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Customs Agent 973</strong><span>53 · 6.8%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:9%"></div></div></div>
+            <div style="margin-top:12px;padding:10px 14px;background:rgba(232,0,45,0.05);border-left:3px solid var(--red);border-radius:0 5px 5px 0;">
+              <span style="font-size:11px;color:var(--text-muted);line-height:1.6;">Top 3 export agent codes represent <strong style="color:var(--red);">95.7% of Current YTD Exports</strong>.</span>
+            </div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);margin:18px 0 8px;padding-top:12px;border-top:1px solid var(--border);">Export Customs Regimes · 785 Exports</div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Final Import / Export</strong><span>729 · 92.9%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:100%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Transfer Of Goods</strong> <span style="font-size:9px;color:var(--text-light);font-style:italic;">virtual and temporary-related regime description</span><span>55 · 7.0%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:8%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Luxury Goods For Export Processing / Processing Or Repair</strong><span>1 · 0.1%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:1%"></div></div></div>
+          </div>
+        </div>
+        <div class="grid-2" style="gap:12px;margin-top:16px;">
+          <div style="padding:12px 16px;background:rgba(217,119,6,0.06);border-left:3px solid #d97706;border-radius:0 6px 6px 0;">
+            <strong style="font-size:10px;color:#b45309;text-transform:uppercase;letter-spacing:1.5px;">No IMMEX Claim</strong>
+            <p style="font-size:11px;color:var(--text-muted);line-height:1.7;margin-top:6px;"><strong>A dedicated IMMEX field was not visible in the supplied Panjiva files.</strong> Some regime descriptions contain <strong>temporary</strong> or <strong>virtual</strong> language, but that language is <strong>not converted into a confirmed IMMEX statement</strong> anywhere on this page. IMMEX status is a <strong>Discovery unknown</strong>.</p>
+          </div>
+          <div style="padding:12px 16px;background:rgba(13,43,94,0.03);border-radius:6px;border:1px solid var(--border);">
+            <strong style="font-size:10px;color:var(--navy);text-transform:uppercase;letter-spacing:1.5px;">Source Governance</strong>
+            <p style="font-size:11px;color:var(--text-muted);line-height:1.7;margin-top:6px;"><strong>Customs Agent codes are never converted into invented broker company names.</strong> Regime terminology is displayed exactly as supplied by AIOS. Customs execution is <strong>visibly concentrated above 85% inbound and 78% outbound</strong> — an observed structural signal, <strong>not an assertion of broker performance, failure or risk</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12 OPERATIONAL COMPLEXITY -->
+    <div class="card">
+      <div class="card-header"><span class="accent">12</span> Operational Complexity — HIGH</div>
+      <div class="card-body">
+        <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:14px 18px;background:rgba(232,0,45,0.04);border-left:3px solid var(--red);border-radius:0 6px 6px 0;">
+          <span style="font-size:32px;font-weight:800;color:var(--red);letter-spacing:1px;">HIGH</span>
+          <span style="font-size:12px;color:var(--text-muted);line-height:1.6;flex:1;min-width:280px;">This is an <strong>AIOS Interpretation</strong> — it is <strong>not a Panjiva field</strong>. <strong>No numerical complexity score is produced</strong>; the assessment is qualitative and evidence-based, supported by the visible combination below.</span>
+        </div>
+        <div class="grid-3" style="gap:10px;margin-top:14px;">
+          <div style="padding:12px 14px;background:var(--bg);border-radius:6px;border-left:3px solid var(--teal);">
+            <strong style="font-size:10px;color:var(--navy);text-transform:uppercase;letter-spacing:1.5px;">Scale &amp; Repetition</strong>
+            <ul class="q-list" style="margin-top:6px;font-size:11px;">
+              <li>2,898 Current YTD Shipments</li>
+              <li>Recurring weekly cadence on principal routes</li>
+              <li>10 Current YTD Import Core Routes required to reach ≥80%</li>
+              <li>5 Current YTD Export Core Routes required to reach ≥80%</li>
+              <li>Truck + Rail + Air + Maritime visibly present</li>
+            </ul>
+          </div>
+          <div style="padding:12px 14px;background:var(--bg);border-radius:6px;border-left:3px solid var(--navy);">
+            <strong style="font-size:10px;color:var(--navy);text-transform:uppercase;letter-spacing:1.5px;">Network Structure</strong>
+            <ul class="q-list" style="margin-top:6px;font-size:11px;">
+              <li>56 visible import Suppliers / Origin Partners</li>
+              <li>17 visible export Customer / Destination Partner labels</li>
+              <li>Very high cross-border gateway dependency</li>
+              <li>Strong inbound recovered-paper sourcing structure</li>
+              <li>Strong outbound customer concentration</li>
+            </ul>
+          </div>
+          <div style="padding:12px 14px;background:var(--bg);border-radius:6px;border-left:3px solid var(--red);">
+            <strong style="font-size:10px;color:var(--navy);text-transform:uppercase;letter-spacing:1.5px;">Regulatory Execution</strong>
+            <ul class="q-list" style="margin-top:6px;font-size:11px;">
+              <li>Customs Agent concentration above 85% inbound</li>
+              <li>Customs Agent concentration above 78% outbound</li>
+              <li>Multiple Customs Regimes visible</li>
+              <li>Recurring Rail export component</li>
+            </ul>
+          </div>
+        </div>
+        <div style="margin-top:14px;padding:14px 16px;background:rgba(13,43,94,0.03);border-radius:6px;border:1px solid var(--border);">
+          <strong style="font-size:10px;color:var(--navy);text-transform:uppercase;letter-spacing:1.5px;">AIOS Interpretation</strong>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.75;margin-top:6px;"><strong style="color:var(--navy);">The operating challenge is not broad global modal diversity. It is the scale and repetition of a cross-border paper network that combines multiple Suppliers, concentrated gateways, concentrated customs execution, a recurring Rail export component and highly concentrated outbound customer routes.</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 13 OPPORTUNITY MAPPING -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">13</span> Opportunity Map — Observed Operational Signal · AIOS Interpretation · Discovery Validation</div>
+      <div class="card-body" style="padding:12px 18px;">
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;">Each signal keeps three layers strictly separate. <strong>Observed Operational Signal</strong> is what Panjiva shows. <strong>AIOS Interpretation</strong> is what it may mean. <strong>Discovery Validation</strong> is what must be confirmed with Productora de Papel. These layers are never collapsed, and <strong style="color:#b45309;">no interpretation is ever labelled as confirmed customer pain</strong>.</span>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:0;">
+        <div style="overflow-x:auto;">
+        <table class="hub-table" style="font-size:11px;min-width:900px;">
+          <thead><tr><th style="width:17%;">Signal</th><th style="width:25%;">Observed Operational Signal</th><th style="width:29%;">AIOS Interpretation</th><th style="width:29%;">Discovery Validation</th></tr></thead>
+          <tbody>
+            <tr>
+              <td style="border-left:3px solid var(--red);"><strong style="color:var(--navy);font-size:12px;">1 · Nuevo Laredo Import Dependency</strong></td>
+              <td><strong>85.4%</strong> of Imports via Nuevo Laredo.</td>
+              <td>Gateway dependency makes exception handling and contingency governance commercially relevant.</td>
+              <td>Validate contingency, border KPIs, providers and escalation.</td>
+            </tr>
+            <tr>
+              <td style="border-left:3px solid var(--red);"><strong style="color:var(--navy);font-size:12px;">2 · Nuevo Laredo Export Dependency</strong></td>
+              <td><strong>79.6%</strong> of Exports via Nuevo Laredo.</td>
+              <td>Export execution is increasingly concentrated at one visible gateway.</td>
+              <td>Validate capacity model, backup routing and ownership.</td>
+            </tr>
+            <tr>
+              <td style="border-left:3px solid var(--teal);"><strong style="color:var(--navy);font-size:12px;">3 · Supplier Coordination</strong></td>
+              <td><strong>56</strong> visible import Trading Partners.</td>
+              <td>Supplier coordination workload may be material.</td>
+              <td>Validate supplier readiness, booking, document control and performance ownership.</td>
+            </tr>
+            <tr>
+              <td style="border-left:3px solid var(--navy);"><strong style="color:var(--navy);font-size:12px;">4 · Export Customer Concentration</strong></td>
+              <td>Top 5 export customers represent <strong>92.4%</strong> of Exports.</td>
+              <td>Service consistency for a small customer group may carry high operational importance.</td>
+              <td>Validate SLAs, delivery windows and escalation.</td>
+            </tr>
+            <tr>
+              <td style="border-left:3px solid #d97706;"><strong style="color:var(--navy);font-size:12px;">5 · Customs Concentration</strong></td>
+              <td>Import Customs Agent <strong>3448</strong> represents <strong>85.2%</strong> of Imports.</td>
+              <td>Customs execution is visibly concentrated.</td>
+              <td>Validate governance, KPI review and backup structure.</td>
+            </tr>
+            <tr>
+              <td style="border-left:3px solid var(--navy);"><strong style="color:var(--navy);font-size:12px;">6 · World Wide Forest Products</strong></td>
+              <td>World Wide Forest Products represents <strong>53.1%</strong> of Exports.</td>
+              <td>One destination partner is a major outbound operational node.</td>
+              <td>Validate customer-specific service requirements and route governance.</td>
+            </tr>
+            <tr style="background:rgba(5,150,105,0.05);">
+              <td style="border-left:3px solid #059669;"><strong style="color:var(--navy);font-size:12px;">7 · Rail</strong></td>
+              <td>Rail represents <strong>10.7%</strong> of Exports.</td>
+              <td>Rail is a meaningful secondary export channel.</td>
+              <td>Validate Truck/Rail coordination, customs milestones and mode-selection logic.</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-body" style="padding:11px 18px;background:rgba(245,158,11,0.05);">
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:#b45309;">Concentration does not equal pain.</strong> Every row above is an observed structural signal. This page does <strong>not</strong> claim that Productora de Papel currently experiences operational difficulty, provider failure, congestion, dwell, delay or service shortfall in any of these areas, and it does <strong>not</strong> imply that Productora de Papel lacks any of the capabilities discussed.</span>
+      </div>
+    </div>
+
+    <!-- 14 DATA QUALITY / ENTITY RESOLUTION -->
+    <div class="card">
+      <div class="card-header" style="background:#d97706;"><span style="color:#fde68a;">14</span> Data Quality / Entity Resolution — Requires Validation</div>
+      <div class="card-body" style="padding:0;">
+        <div style="padding:14px 18px;background:rgba(217,119,6,0.05);border-left:3px solid #d97706;">
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+            <span style="font-size:9px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:#fff;background:#d97706;padding:3px 9px;border-radius:3px;">Data Quality / Entity Resolution Hypothesis — Requires Validation</span>
+            <span style="font-size:11px;color:var(--text-muted);">Source, entity and geography ambiguity preserved exactly as supplied</span>
+          </div>
+          <table class="hub-table" style="font-size:11px;margin-top:12px;">
+            <thead><tr><th style="width:20%;">Item</th><th style="width:42%;">Observed Source Signal</th><th style="width:38%;">AIOS Treatment</th></tr></thead>
+            <tbody>
+              <tr style="background:rgba(217,119,6,0.06);">
+                <td><strong style="color:var(--navy);">El Paso Paper Box Inc.</strong><div style="font-size:9px;color:var(--text-light);">Export Core Routes #2 and #5 · 158 Shipments · 20.13% of Exports</div></td>
+                <td>Panjiva shows <strong>Shipment Destination: 🇺🇸 United States</strong> and <strong>Consignee Full Address: 🇬🇧 United Kingdom</strong> for the same entity.</td>
+                <td>Both source fields are <strong>preserved and displayed together</strong>. The Panjiva address is <strong>not corrected or replaced</strong>, and no physical destination is asserted. <strong>Requires validation.</strong></td>
+              </tr>
+              <tr>
+                <td><strong style="color:var(--navy);">EDH International</strong><div style="font-size:9px;color:var(--text-light);">2025 Core Route #5 · Current YTD Core Route #1</div></td>
+                <td>The 2025 Core Route address field is <strong>&ldquo;Address not available in Panjiva&rdquo;</strong>. The Current YTD Core Route carries <strong>&ldquo;4100 N 2nd St Ste 100, McAllen, TX 78504, USA&rdquo;</strong>.</td>
+                <td>These <strong>two route identities are not merged</strong>. The missing 2025 address is <strong>preserved as missing</strong> and never autocompleted from the Current YTD record.</td>
+              </tr>
+              <tr>
+                <td><strong style="color:var(--navy);">Productora de Papel facility precision</strong></td>
+                <td>Inbound consignee precision: <strong>&ldquo;C. Torres de Santo Domingo Real de Anáhuac, Nuevo Leon&rdquo;</strong>. Outbound shipper precision: <strong>&ldquo;C. Torres de Santo Domingo, Real de Anáhuac, San Nicolás de los Garza Nuevo Leon 66444, Mexico&rdquo;</strong>.</td>
+                <td><strong>Both Panjiva forms are preserved</strong> in their own directional tables. They are <strong>not silently normalized</strong> into a single exact-address identity.</td>
+              </tr>
+              <tr>
+                <td><strong style="color:var(--navy);">Mixed origin label</strong></td>
+                <td>An import origin label reads <strong>&ldquo;Germany, United States&rdquo;</strong> across <strong>5 Shipments</strong>, alongside a separate <strong>Germany</strong> label of <strong>5 Shipments</strong>.</td>
+                <td>The mixed label is <strong>displayed as supplied</strong> and is <strong>not split, reassigned or merged</strong> into either single-country entry.</td>
+              </tr>
+            </tbody>
+          </table>
+          <div style="margin-top:10px;padding-top:9px;border-top:1px solid rgba(217,119,6,0.25);">
+            <span style="font-size:10px;color:var(--text-muted);line-height:1.6;">These notes <strong>do not alter the finalized Core Route calculations</strong> without explicit AIOS validation. <strong>Distinct facilities are never merged merely because they share a company name</strong>, and <strong>no external address enrichment has been performed</strong>. Any future enrichment would have to be explicitly labelled <strong>&ldquo;AIOS-enriched location — Requires validation.&rdquo;</strong> Where an address is absent, this page displays exactly <strong>&ldquo;Address not available in Panjiva.&rdquo;</strong></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 15 ILM / CONTROL TOWER OPPORTUNITY -->
+    <div class="card">
+      <div class="card-header"><span class="accent">15</span> ILM / Control Tower Opportunity — AIOS Interpretation · HIGH</div>
+      <div class="card-body">
+        <div style="padding:12px 18px;background:rgba(232,0,45,0.04);border-left:3px solid var(--red);border-radius:0 6px 6px 0;margin-bottom:14px;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--red);font-size:13px;letter-spacing:0.5px;">HIGH</strong> — <strong style="color:var(--navy);">This does not imply that Productora de Papel currently lacks these capabilities.</strong> It means the visible logistics structure creates a credible discovery case for an ILM / Control Tower operating model. <strong>Discovery must validate the existing operating model.</strong></span>
+        </div>
+        <div class="grid-2" style="gap:14px;">
+          <div style="padding:14px 16px;background:rgba(13,43,94,0.03);border-radius:6px;border:1px solid var(--border);">
+            <strong style="font-size:10px;color:var(--navy);text-transform:uppercase;letter-spacing:1.5px;">Why the Visible Network Supports the Conversation</strong>
+            <ul class="q-list" style="margin-top:8px;">
+              <li>2,898 Current YTD Shipments across a recurring weekly cadence</li>
+              <li>Import gateway concentration — Nuevo Laredo 85.4% · top 2 gateways 98.7%</li>
+              <li>Export gateway concentration — Nuevo Laredo 79.6% · top 3 gateways 97.1%</li>
+              <li>10 Import Core Routes and 5 Export Core Routes to ≥80%</li>
+              <li>56 visible Suppliers / Origin Partners inbound</li>
+              <li>Top 5 Customers / Destination Partners at 92.4% of Exports</li>
+              <li>Customs Agent concentration above 85% inbound and 78% outbound</li>
+              <li>A recurring Rail export corridor at 10.7% of Exports</li>
+              <li>An export Core Route running at 10.95 Shipments / week</li>
+            </ul>
+          </div>
+          <div style="padding:14px 16px;background:rgba(0,180,216,0.05);border-radius:6px;border:1px solid var(--border);">
+            <strong style="font-size:10px;color:var(--navy);text-transform:uppercase;letter-spacing:1.5px;">Relevant Capabilities to Position</strong>
+            <div class="capability-tags" style="margin-top:8px;">
+              <span class="acct-tag">Supplier readiness &amp; coordination</span><span class="acct-tag">Shipment planning</span><span class="acct-tag">Cross-border milestone control</span>
+              <span class="acct-tag">Customs milestone visibility</span><span class="acct-tag">Border exception management</span><span class="acct-tag">Rail / Truck coordination</span>
+              <span class="acct-tag">Document control</span><span class="acct-tag">Centralized communication</span><span class="acct-tag">Route KPI governance</span>
+              <span class="acct-tag">Gateway KPI governance</span><span class="acct-tag">Trading Partner performance visibility</span><span class="acct-tag">Contingency governance</span>
+            </div>
+            <p style="font-size:11px;color:var(--text-muted);line-height:1.7;margin-top:12px;">Akzent is positioned as a <strong>coordination layer</strong> across this architecture. <strong style="color:var(--navy);">Nothing here states or implies that Productora de Papel currently lacks these capabilities.</strong> They are framed as areas where Akzent could operate <strong>if Discovery validates the need</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 16 COMMERCIAL POSITIONING -->
+    <div class="card">
+      <div class="card-header"><span class="accent">16</span> Commercial Positioning</div>
+      <div class="card-body">
+        <div class="positioning-box">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);">Primary Thesis</div>
+          <div style="font-size:19px;font-weight:800;line-height:1.35;margin-top:6px;">Operational control of a high-frequency, highly concentrated cross-border paper network</div>
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);margin-top:16px;">Position Akzent As</div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px;">
+            <div style="padding:12px 14px;background:rgba(255,255,255,0.12);border-radius:6px;border:1px solid rgba(255,255,255,0.25);"><div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal);margin-bottom:3px;">Primary</div><div style="font-size:13px;font-weight:700;line-height:1.35;">Operational Complexity Partner</div><div style="font-size:10px;color:rgba(255,255,255,0.6);line-height:1.5;margin-top:5px;">Coordinate a network of thousands of recurring cross-border Shipments, 56 inbound Trading Partners, concentrated gateways and concentrated customs execution.</div></div>
+            <div style="padding:12px 14px;background:rgba(255,255,255,0.07);border-radius:6px;border:1px solid rgba(255,255,255,0.14);"><div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:3px;">Secondary</div><div style="font-size:13px;font-weight:700;line-height:1.35;">Multimodal Coordination Partner</div><div style="font-size:10px;color:rgba(255,255,255,0.6);line-height:1.5;margin-top:5px;">Coordinated Truck + Rail execution across Nuevo Laredo, Ciudad Camargo, Piedras Negras and Zaragoza-Isleta.</div></div>
+            <div style="padding:12px 14px;background:rgba(255,255,255,0.07);border-radius:6px;border:1px solid rgba(255,255,255,0.14);"><div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:3px;">Secondary</div><div style="font-size:13px;font-weight:700;line-height:1.35;">Customs &amp; Visibility Partner</div><div style="font-size:10px;color:rgba(255,255,255,0.6);line-height:1.5;margin-top:5px;">Customs milestone visibility, document control, exception management and agent performance governance.</div></div>
+            <div style="padding:12px 14px;background:rgba(255,255,255,0.07);border-radius:6px;border:1px solid rgba(255,255,255,0.14);"><div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:3px;">Secondary</div><div style="font-size:13px;font-weight:700;line-height:1.35;">ILM / Control Tower Partner</div><div style="font-size:10px;color:rgba(255,255,255,0.6);line-height:1.5;margin-top:5px;">Centralized operational orchestration, contingency governance and exception control across the visible network.</div></div>
+          </div>
+          <div class="positioning-example">
+            &ldquo;The visible Productora de Papel network combines thousands of recurring cross-border Shipments, dozens of inbound Trading Partners, concentrated border gateways, concentrated customs execution and customer-critical Truck + Rail export routes. Akzent should lead with operational control, visibility, contingency and coordinated execution—not commodity freight.&rdquo;
+          </div>
+          <p style="font-size:11px;color:rgba(255,255,255,0.7);line-height:1.7;margin-top:12px;">Never position Akzent as a <strong style="color:#fff;">transactional freight provider</strong> or <strong style="color:#fff;">commodity trucking provider</strong>, and <strong style="color:#fff;">never lead the commercial thesis with spot rates</strong>. This account is a <strong style="color:#fff;">LEAD</strong>, so <strong style="color:#fff;">Wallet Expansion Partner is not a valid position</strong>. This is <strong style="color:#fff;">Commercial Positioning</strong> — it is <strong style="color:#fff;">not proof of confirmed customer pain</strong>.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 17 DISCOVERY INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">17</span> Discovery Intelligence — Validate the Unknown, Not the Visible</div>
+      <div class="card-body">
+        <div style="padding:11px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 6px 6px 0;margin-bottom:14px;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:#b45309;">Do not ask Productora de Papel to tell us its principal routes, countries, modes or gateways.</strong> Panjiva already reveals those reliably enough for commercial discovery. Discovery exists to <strong>validate unknown operating conditions</strong>.</span>
+        </div>
+        <div class="grid-2" style="gap:14px;">
+          <div>
+            <strong style="font-size:10px;color:var(--navy);text-transform:uppercase;letter-spacing:1.5px;">Ownership, Gateways &amp; Contingency</strong>
+            <ul class="q-list" style="margin-top:8px;font-size:12px;line-height:1.6;">
+              <li>How is ownership divided today across border execution, customs, Rail, supplier readiness and exception management?</li>
+              <li>What KPIs govern Nuevo Laredo, Camargo, Piedras Negras and Zaragoza-Isleta, and who owns escalation when service deviates?</li>
+              <li>What contingency model exists if the primary Nuevo Laredo flow is constrained?</li>
+              <li>How are Customs Agent performance, backup coverage and document exceptions governed?</li>
+              <li>For major customers such as World Wide Forest Products, what service commitments or delivery windows drive Truck vs Rail execution?</li>
+            </ul>
+          </div>
+          <div>
+            <strong style="font-size:10px;color:var(--navy);text-transform:uppercase;letter-spacing:1.5px;">Coordination, Visibility &amp; Operating-Model Change</strong>
+            <ul class="q-list" style="margin-top:8px;font-size:12px;line-height:1.6;">
+              <li>How are the 50+ visible inbound Trading Partners coordinated for readiness, documents and booking?</li>
+              <li>Which exception types consume the most operational attention today: border, customs, carrier, supplier readiness, documentation or customer delivery?</li>
+              <li>Is visibility centralized across providers and modes, or split across multiple operating channels?</li>
+              <li>What would need to improve operationally for Productora de Papel to consider changing or expanding a logistics coordination partner?</li>
+              <li>What is the procurement and decision process for cross-border coordination, customs visibility and Control Tower services?</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 18 HISTORICAL CONTEXT — 2025 -->
+    <div class="card">
+      <div class="card-header" style="background:#64748b;"><span style="color:#cbd5e1;">18</span> Historical Context — Previous Full Calendar Year 2025 · Established Operating Structure</div>
+      <div class="card-body">
+        <div class="grid-4" style="gap:10px;">
+          <div class="stat-box"><div class="stat-label">2025 Total Shipments</div><div class="stat-value" style="font-size:26px;">4,280</div><div class="stat-sub">January 1 – December 31, 2025</div></div>
+          <div class="stat-box"><div class="stat-label">2025 Imports</div><div class="stat-value" style="font-size:26px;">3,108</div><div class="stat-sub">Previous full calendar year</div></div>
+          <div class="stat-box"><div class="stat-label">2025 Exports</div><div class="stat-value" style="font-size:26px;">1,172</div><div class="stat-sub">Previous full calendar year</div></div>
+          <div class="stat-box"><div class="stat-label">2025 Visible CIF · Gross Weight</div><div class="stat-value" style="font-size:20px;">USD 47.11M</div><div class="stat-sub">100.76M kg · Panjiva-visible</div></div>
+        </div>
+        <div style="margin-top:12px;padding:10px 14px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.6;">2025 is the <strong>Established Operating Structure / Historical Baseline</strong>. It is held <strong>strictly separate</strong> from Current YTD, is <strong>never aggregated with it</strong>, and remains visually subordinate to the Current Operating State. <strong>The full calendar year is never compared directly against a seven-month YTD window</strong> — the comparable trend in module 02 uses Jan–Jul actual vs Jan–Jul actual. The complete historical Core Route sets are preserved below and are <strong>fully expanded in print</strong>.</span>
+        </div>
+
+        <div class="grid-2" style="gap:10px;margin-top:14px;">
+          <div class="stat-box"><div class="stat-label">2025 Import Core Routes</div><div class="stat-value teal" style="font-size:26px;">9 <span style="font-size:14px;color:var(--text-muted);font-weight:700;">= 80.86%</span></div><div class="stat-sub">Universe 3,108 Import Shipments</div></div>
+          <div class="stat-box"><div class="stat-label">2025 Export Core Routes</div><div class="stat-value red" style="font-size:26px;">5 <span style="font-size:14px;color:var(--text-muted);font-weight:700;">= 83.79%</span></div><div class="stat-sub">Universe 1,172 Export Shipments</div></div>
+        </div>
+
+        <div class="outreach-step hist-appendix" style="margin-top:14px;">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)">
+            <span>View 2025 Import Core Routes — Complete Set · 9 Routes / 80.86% of 3,108 Imports</span>
+            <span class="outreach-step-toggle">+</span>
+          </div>
+          <div class="outreach-step-body" style="padding:0;">
+            <div class="hist-appendix-label" style="padding:10px 16px;background:var(--bg);border-bottom:1px solid var(--border);">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-light);">Historical Core Route Appendix — 2025 Imports</div>
+              <div style="font-size:10px;color:var(--text-muted);margin-top:2px;">Reference detail only. The Current Operating State above remains the primary narrative. Destination for every row: <strong>Productora de Papel</strong>. <strong>Active Months are not supplied by AIOS for the historical set and are therefore not shown</strong> — no value is derived.</div>
+            </div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;min-width:920px;">
+                <thead><tr>
+                  <th style="text-align:right;">Rank</th><th>Origin</th><th>Gateway</th><th>Mode</th>
+                  <th style="text-align:right;">Shipments</th><th style="text-align:right;">% Imports</th><th style="text-align:right;">Cum.</th>
+                  <th style="text-align:right;">/ Month</th><th style="text-align:right;">/ Week</th>
+                </tr></thead>
+                <tbody>
+                  <tr><td style="text-align:right;font-weight:800;">1</td><td><strong>Canusa Hershman Recycling</strong></td><td><strong>Nuevo Laredo</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td><td><span class="hub-tag truck">Truck</span></td><td style="text-align:right;font-weight:700;">434</td><td style="text-align:right;">13.96%</td><td style="text-align:right;font-weight:700;color:var(--teal-dim);">13.96%</td><td style="text-align:right;">36.17</td><td style="text-align:right;">8.37</td></tr>
+                  <tr><td style="text-align:right;font-weight:800;">2</td><td><strong>Cellmark</strong></td><td><strong>Nuevo Laredo</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td><td><span class="hub-tag truck">Truck</span></td><td style="text-align:right;font-weight:700;">406</td><td style="text-align:right;">13.06%</td><td style="text-align:right;font-weight:700;color:var(--teal-dim);">27.03%</td><td style="text-align:right;">33.83</td><td style="text-align:right;">7.94</td></tr>
+                  <tr><td style="text-align:right;font-weight:800;">3</td><td><strong>Pioneer Paper Stock Co. Of Texas</strong></td><td><strong>Nuevo Laredo</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td><td><span class="hub-tag truck">Truck</span></td><td style="text-align:right;font-weight:700;">371</td><td style="text-align:right;">11.94%</td><td style="text-align:right;font-weight:700;color:var(--teal-dim);">38.96%</td><td style="text-align:right;">30.92</td><td style="text-align:right;">7.23</td></tr>
+                  <tr><td style="text-align:right;font-weight:800;">4</td><td><strong>National Fiber Supply</strong></td><td><strong>Nuevo Laredo</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td><td><span class="hub-tag truck">Truck</span></td><td style="text-align:right;font-weight:700;">293</td><td style="text-align:right;">9.43%</td><td style="text-align:right;font-weight:700;color:var(--teal-dim);">48.39%</td><td style="text-align:right;">24.42</td><td style="text-align:right;">5.65</td></tr>
+                  <tr style="background:rgba(217,119,6,0.05);"><td style="text-align:right;font-weight:800;">5</td><td><strong>EDH International</strong><div style="font-size:9px;color:#b45309;font-style:italic;">Address not available in Panjiva</div></td><td><strong>Ciudad Camargo</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td><td><span class="hub-tag truck">Truck</span></td><td style="text-align:right;font-weight:700;">253</td><td style="text-align:right;">8.14%</td><td style="text-align:right;font-weight:700;color:var(--teal-dim);">56.53%</td><td style="text-align:right;">25.30</td><td style="text-align:right;">5.86</td></tr>
+                  <tr><td style="text-align:right;font-weight:800;">6</td><td><strong>Texas Recycling/Surplus</strong></td><td><strong>Nuevo Laredo</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td><td><span class="hub-tag truck">Truck</span></td><td style="text-align:right;font-weight:700;">224</td><td style="text-align:right;">7.21%</td><td style="text-align:right;font-weight:700;color:var(--teal-dim);">63.74%</td><td style="text-align:right;">20.36</td><td style="text-align:right;">4.47</td></tr>
+                  <tr><td style="text-align:right;font-weight:800;">7</td><td><strong>Gp Harmon Recycling</strong></td><td><strong>Nuevo Laredo</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td><td><span class="hub-tag truck">Truck</span></td><td style="text-align:right;font-weight:700;">223</td><td style="text-align:right;">7.18%</td><td style="text-align:right;font-weight:700;color:var(--teal-dim);">70.91%</td><td style="text-align:right;">18.58</td><td style="text-align:right;">4.55</td></tr>
+                  <tr><td style="text-align:right;font-weight:800;">8</td><td><strong>Wm Recycle America</strong></td><td><strong>Nuevo Laredo</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td><td><span class="hub-tag truck">Truck</span></td><td style="text-align:right;font-weight:700;">161</td><td style="text-align:right;">5.18%</td><td style="text-align:right;font-weight:700;color:var(--teal-dim);">76.09%</td><td style="text-align:right;">13.42</td><td style="text-align:right;">3.14</td></tr>
+                  <tr><td style="text-align:right;font-weight:800;">9</td><td><strong>Intl Forest Products</strong></td><td><strong>Nuevo Laredo</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td><td><span class="hub-tag truck">Truck</span></td><td style="text-align:right;font-weight:700;">148</td><td style="text-align:right;">4.76%</td><td style="text-align:right;font-weight:800;color:var(--teal-dim);">80.86%</td><td style="text-align:right;">12.33</td><td style="text-align:right;">2.92</td></tr>
+                </tbody>
+                <tfoot><tr style="background:var(--bg);">
+                  <td colspan="6" style="font-weight:800;color:var(--navy);padding:10px 12px;">9 Core Routes · Destination for all rows: <strong>Productora de Papel</strong></td>
+                  <td style="text-align:right;font-weight:800;color:var(--teal-dim);">80.86%</td>
+                  <td colspan="2"></td>
+                </tr></tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="outreach-step hist-appendix" style="margin-top:10px;">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)">
+            <span>View 2025 Export Core Routes — Complete Set · 5 Routes / 83.79% of 1,172 Exports</span>
+            <span class="outreach-step-toggle">+</span>
+          </div>
+          <div class="outreach-step-body" style="padding:0;">
+            <div class="hist-appendix-label" style="padding:10px 16px;background:var(--bg);border-bottom:1px solid var(--border);">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-light);">Historical Core Route Appendix — 2025 Exports</div>
+              <div style="font-size:10px;color:var(--text-muted);margin-top:2px;">Reference detail only. Origin for every row: <strong>Productora de Papel</strong>. <strong>Active Months are not supplied by AIOS for the historical set and are therefore not shown.</strong></div>
+            </div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;min-width:920px;">
+                <thead><tr>
+                  <th style="text-align:right;">Rank</th><th>Destination</th><th>Gateway</th><th>Mode</th>
+                  <th style="text-align:right;">Shipments</th><th style="text-align:right;">% Exports</th><th style="text-align:right;">Cum.</th>
+                  <th style="text-align:right;">/ Month</th><th style="text-align:right;">/ Week</th>
+                </tr></thead>
+                <tbody>
+                  <tr><td style="text-align:right;font-weight:800;">1</td><td><strong>World Wide Forest Products</strong></td><td><strong>Nuevo Laredo</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td><td><span class="hub-tag truck">Truck</span></td><td style="text-align:right;font-weight:700;">409</td><td style="text-align:right;">34.90%</td><td style="text-align:right;font-weight:700;color:var(--teal-dim);">34.90%</td><td style="text-align:right;">34.08</td><td style="text-align:right;">7.89</td></tr>
+                  <tr style="background:rgba(5,150,105,0.05);"><td style="text-align:right;font-weight:800;">2</td><td><strong>World Wide Forest Products</strong></td><td><strong>Piedras Negras</strong><div style="font-size:9px;color:var(--text-light);">Border / Rail</div></td><td><span class="hub-tag" style="background:rgba(5,150,105,0.12);color:#047857;">Rail</span></td><td style="text-align:right;font-weight:700;">167</td><td style="text-align:right;">14.25%</td><td style="text-align:right;font-weight:700;color:var(--teal-dim);">49.15%</td><td style="text-align:right;">13.92</td><td style="text-align:right;">3.27</td></tr>
+                  <tr><td style="text-align:right;font-weight:800;">3</td><td><strong>Inter Papier North America</strong></td><td><strong>Nuevo Laredo</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td><td><span class="hub-tag truck">Truck</span></td><td style="text-align:right;font-weight:700;">156</td><td style="text-align:right;">13.31%</td><td style="text-align:right;font-weight:700;color:var(--teal-dim);">62.46%</td><td style="text-align:right;">13.00</td><td style="text-align:right;">3.25</td></tr>
+                  <tr><td style="text-align:right;font-weight:800;">4</td><td><strong>El Paso Paper Box</strong></td><td><strong>Nuevo Laredo</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td><td><span class="hub-tag truck">Truck</span></td><td style="text-align:right;font-weight:700;">134</td><td style="text-align:right;">11.43%</td><td style="text-align:right;font-weight:700;color:var(--teal-dim);">73.89%</td><td style="text-align:right;">14.89</td><td style="text-align:right;">2.64</td></tr>
+                  <tr><td style="text-align:right;font-weight:800;">5</td><td><strong>Inter Papier North America</strong></td><td><strong>Zaragoza-Isleta</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td><td><span class="hub-tag truck">Truck</span></td><td style="text-align:right;font-weight:700;">116</td><td style="text-align:right;">9.90%</td><td style="text-align:right;font-weight:800;color:var(--teal-dim);">83.79%</td><td style="text-align:right;">12.89</td><td style="text-align:right;">3.22</td></tr>
+                </tbody>
+                <tfoot><tr style="background:var(--bg);">
+                  <td colspan="6" style="font-weight:800;color:var(--navy);padding:10px 12px;">5 Core Routes · Origin for all rows: <strong>Productora de Papel</strong></td>
+                  <td style="text-align:right;font-weight:800;color:var(--teal-dim);">83.79%</td>
+                  <td colspan="2"></td>
+                </tr></tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 19 DATA AVAILABILITY & SOURCE GOVERNANCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">19</span> Data Availability &amp; Source Governance</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:16px;">
+          <div>
+            <strong style="font-size:10px;color:var(--navy);text-transform:uppercase;letter-spacing:1.5px;">Evidence Categories Used On This Page</strong>
+            <table class="hub-table" style="font-size:11px;margin-top:8px;">
+              <tbody>
+                <tr><td><span style="font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;background:var(--navy);padding:2px 7px;border-radius:3px;">Panjiva Fact</span></td><td style="color:var(--text-muted);">Directly observed in the source — Shipment counts, direction, gateways, modes, HS codes, regimes, customs agent codes, addresses, dates, gross weight, CIF value</td></tr>
+                <tr><td><span style="font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;background:var(--teal-dim);padding:2px 7px;border-radius:3px;">AIOS Calculation</span></td><td style="color:var(--text-muted);">Finalized computed values — shares, cumulative Core Route coverage, comparable-period change, route cadence, Trading Partner concentration</td></tr>
+                <tr><td><span style="font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;background:#6b7280;padding:2px 7px;border-radius:3px;">AIOS Interpretation</span></td><td style="color:var(--text-muted);">What the observed structure may mean operationally — including <strong>Operational Complexity HIGH</strong>, <strong>ILM / Control Tower HIGH</strong>, <strong>Cross-Border VERY HIGH</strong> and <strong>Rail MEDIUM-HIGH</strong> — never customer-confirmed</td></tr>
+                <tr><td><span style="font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;background:#d97706;padding:2px 7px;border-radius:3px;">Data Quality / Entity Resolution</span></td><td style="color:var(--text-muted);">Source, entity or geography ambiguity that <strong>requires validation</strong> — El Paso Paper Box, EDH International, facility precision, mixed origin label</td></tr>
+              </tbody>
+            </table>
+            <div style="margin-top:12px;padding:10px 14px;background:rgba(13,43,94,0.03);border-radius:5px;border:1px solid var(--border);">
+              <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--navy);">No interpretation on this page is presented as a customer-confirmed fact.</strong> <strong>Operational Complexity HIGH is an AIOS Interpretation, not a Panjiva field.</strong></span>
+            </div>
+          </div>
+          <div>
+            <strong style="font-size:10px;color:var(--navy);text-transform:uppercase;letter-spacing:1.5px;">Source Governance Rules Applied</strong>
+            <div class="grid-2" style="gap:14px;margin-top:8px;">
+              <ul class="q-list" style="font-size:11px;line-height:1.6;">
+                <li>Panjiva = <strong>Visible Logistics Universe</strong>; it does not necessarily represent the complete real-world logistics universe</li>
+                <li>Previous Full Calendar Year = <strong>January 1 – December 31, 2025</strong> · Current YTD = <strong>January 1 – July 31, 2026</strong></li>
+                <li><strong>The two periods are never aggregated</strong>, and <strong>Current YTD is never annualized</strong></li>
+                <li>Comparable trend uses <strong>Jan–Jul 2025 actual versus Jan–Jul 2026 actual</strong>; full-year 2025 is never compared directly against Current YTD</li>
+                <li><strong>No run-rate is produced</strong></li>
+                <li>Core Routes = smallest route set reaching <strong>≥80% cumulative Shipments</strong>; the complete set is always displayed and never truncated for aesthetics</li>
+                <li>Imports and Exports use <strong>separate denominators</strong></li>
+                <li>Frequency = <strong>Shipments ÷ ((last visible Shipment date − first visible Shipment date + 1 day) ÷ 7)</strong>, using each route's own observed window — <strong>never annualized or normalized</strong></li>
+              </ul>
+              <ul class="q-list" style="font-size:11px;line-height:1.6;">
+                <li><strong>Unknown</strong> transport mode is preserved explicitly and never reclassified</li>
+                <li>Missing addresses display <strong>&ldquo;Address not available in Panjiva&rdquo;</strong> — geography is never invented, inferred or autocompleted</li>
+                <li><strong>Distinct facilities are never merged</strong> merely because they share a company name; <strong>EDH route identities are not merged</strong> and Productora's inbound and outbound address forms are <strong>not normalized into one</strong></li>
+                <li>Customs Agent codes are <strong>never converted into invented company names</strong>, and <strong>IMMEX is never claimed</strong></li>
+                <li>HS operational-presence counts are <strong>non-additive</strong> and are never described as revenue mix</li>
+                <li>Route Rank is observed Shipment frequency — <strong>never Commercial Route Priority</strong></li>
+                <li>Visible CIF and gross weight are <strong>not company revenue</strong> and not total enterprise trade value</li>
+                <li>As a <strong>LEAD</strong>, this page contains <strong>no Akzent captured-business metrics</strong> — no Wallet, Penetration, Coverage, Revenue, Gross Profit or Margin, and no Account Intelligence Snapshot. The only &ldquo;coverage&rdquo; shown is Core Route cumulative Shipment coverage</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:14px;padding:12px 16px;background:rgba(217,119,6,0.05);border-left:3px solid #d97706;border-radius:0 6px 6px 0;">
+          <strong style="font-size:10px;color:#b45309;text-transform:uppercase;letter-spacing:1.5px;">Known Source Limitations — Not Reliably Available</strong>
+          <div class="grid-2" style="gap:14px;margin-top:8px;">
+            <ul class="q-list" style="font-size:11px;line-height:1.6;">
+              <li>Confirmed IMMEX status — no dedicated IMMEX field was visible in the supplied Panjiva files</li>
+              <li>Customs agent company identities behind the visible codes</li>
+              <li>Physical destination for the El Paso Paper Box records — conflicting Panjiva fields</li>
+              <li>2025 EDH International facility address</li>
+              <li>Carrier names and Incoterms</li>
+            </ul>
+            <ul class="q-list" style="font-size:11px;line-height:1.6;">
+              <li>Logistics provider contracts, SLAs and incumbent ownership</li>
+              <li>Delay, dwell and on-time performance metrics</li>
+              <li>Service failures and root causes</li>
+              <li>Capacity commitments and procurement structure</li>
+              <li>Commercial pain</li>
+            </ul>
+          </div>
+          <div style="margin-top:8px;padding-top:8px;border-top:1px solid rgba(217,119,6,0.25);">
+            <span style="font-size:10px;color:var(--text-muted);line-height:1.6;"><strong>These records are never silently &ldquo;corrected.&rdquo;</strong> Source precision is preserved throughout this page, and every item above is a <strong>Discovery unknown</strong> rather than an assumed condition. <strong>Akzent does not currently manage this account</strong>, and nothing on this page should be read as implying otherwise.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 </main>
 
 <script>
@@ -48007,6 +49283,7 @@ const ACCOUNTS = [
   { id:'view-flex-americas', name:'Flex Americas', sub:'Flex Americas S.A. de C.V. · Flexible Packaging / Plastic Film Manufacturing · IMMEX · Altamira, Tamaulipas · Matamoros Border · Elizabethtown, Kentucky · EXTREME ROUTE CONCENTRATION · Fragmented Multimodal Inbound + Extreme Outbound Cross-Border Concentration · 2,262 Current YTD Shipments · +12.5% H1 YoY · 507 Imports · 1,755 Exports · 40 Import Core Routes to 80.08% · 84 Import Core Routes 2025 to 80.00% · 1 Export Core Route 87.81% · 2025 Export Core Route 84.06% · Cross-Border · Truck + Maritime + Air · Multimodal · Customs · Customs Agent 3341 · Port Border Airport · Altamira · Matamoros · Manzanillo · MTY Airport · AICM · AIFA · 39 origin countries · Flex Films (USA) · Flex Films Africa · Flex PET Egypt · Polyquest · INX International Ink · Trading Partners · IMMEX · HS 3920620200 · Supplier coordination · Exception management · ILM / Control Tower · Operational Complexity HIGH · AAA Strategic Target · Panjiva Visible Logistics Universe', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
   { id:'view-accudyn', name:'ACCUDYN DE MEXICO', sub:'ACCUDYN DE MEXICO · Accudyn De Mexico S De Rl De Cv · Target Account · LEAD · AAA Strategic Target · Operational Complexity HIGH · Panjiva Visible Logistics Universe · Industrial Manufacturing · Engineering Resin Inputs &amp; Molded / Electrical-Apparatus Components · 584 Current YTD Shipments · 150 Imports 25.7% · 434 Exports 74.3% · −5.3% comparable Jan 1–Jul 30 actual vs actual · Imports −20.6% · Exports +1.4% · 3 Import Core Routes to 82.7% · 30 Export Core Routes to 80.2% · 2025 baseline 1,045 Shipments · 308 Imports · 737 Exports · 3 Import Core Routes 83.8% · 28 Export Core Routes 80.2% · Concentrated inbound · Fragmented outbound · Structurally asymmetric network · Chihuahua · Complejo Industrial Chihuahua · Avenida Victor Huga · Ciudad Juárez · Puente Internacional Zaragoza-Isleta · Gateway concentration 90.7% · Gral. Mariano Escobedo Airport · Gral. Roberto Fierro Villalobos Airport · Colombia Nuevo León · Querétaro · Manzanillo · Nuevo Laredo · Altamira · Guadalupe-Tornillo · Truck · Air · Maritime · Unknown mode preserved · 61 Air Export Shipments · Erie Pennsylvania · 2400 Yoder Drive · Accudyn Products Inc. 76.7% of Imports · Lutron · Conmed · Ademco · Honeywell Optoelectronica · Boeing Encore Interiors · Command Medical Products · Trading Partners · IMMEX · Virtual Transfer · Transfer of Goods · Return of Goods · Customs Agent 1435 · 3491 · 1922 · 3633 · 3600 · 3066 · 3589 · HS 3908100700 polyamide · 3907400499 polycarbonate · 3926909999 · 8538900100 · Cross-Border · Customs · Multimodal · Core Route Complexity · Exception Management · Operational Complexity Partner · Customs &amp; Visibility Partner · Multimodal Coordination Partner · ILM / Control Tower Partner', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
   { id:'view-autlan', name:'Compañía Minera Autlán', sub:'Compañía Minera Autlán · Target Account · LEAD · AAA Strategic Target · Operational Complexity HIGH · Panjiva Visible Logistics Universe · Manganese &amp; Ferroalloys · Mining · Silicomanganese · Manganese oxide · Export-Led Multi-Gateway Network · 361 Current YTD Shipments January–July 2026 · 307 Exports 85.0% · 54 Imports 15.0% · −13.4% comparable Jan–Jul actual vs actual · 417 to 361 · Imports −21.7% · Exports −11.8% · Export gross weight +48.8% · Imports CIF USD 17.09M · Exports CIF USD 40.90M · 58.31M kg · 113.39M kg · 5 Import Core Routes to 85.2% · 13 Export Core Routes to 80.1% · 2025 baseline 692 Shipments · 110 Imports · 582 Exports · 7 Import Core Routes 80.9% · 14 Export Core Routes 80.2% · Altamira inbound concentration 92.6% · Altamira Port · Ciudad Juárez Border · Matamoros Border · Tampico · Ciudad Hidalgo · Piedras Negras · Zaragoza–Ysleta · AICM · AIFA · Nuevo Laredo · Toluca · Manzanillo · Truck 53.7% · Maritime 37.8% · Unknown 6.5% preserved · Rail 1.3% · Air 0.7% · San Pedro Garza García · Pedro Ramírez Vázquez 200 · Del Valle Sect Oriente · Nuevo León · Ccma Llc · Barentz · Twinsbridge International · Millenis Sas · Pt Energizer Indonesia · Poortershaven · Acerias Paz Del Rio · Norkem Ltd. · Distribucion De Polishing Refractarios Y Ceramica · Exiros Bv Sucursal Uruguay · Rheinfelden Carbon Products · Vamtec Vitoria · Carbon Resources · Marmara Metal · Shanghai Everspring · Picko Consulting · Autlan Metal Services · China Champs Industry · Mtalx · Energizer Brasil · Norkem Quimica · Aceros De Guatemala · Trading Partners · Trading Partner not available · 19 visible destination countries · 8 visible origin countries · Colombia · Brazil · Germany · China · Gabon · India · Turkey · South Africa · United States · Canada · Mexico · Spain · France · United Kingdom · Indonesia · Netherlands · Venezuela · Customs Agent 3373 · 3435 · 1675 · 3504 · 3589 · 3032 · 3837 · 3752 · Final Import Export · Transfer Of Goods · HS 7202300100 silicomanganese · 2820909900 manganese oxide · 2820100200 manganese dioxide · 2602000299 manganese ore · 7202110100 ferromanganese · 3801300201 electrode paste · 2704000301 metallurgical coke · Cross-Border · Ocean · Customs · Multimodal · Exception Management · Contingency Governance · Operational Complexity Partner · Multimodal Coordination Partner · Customs &amp; Visibility Partner · ILM / Control Tower Partner', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
+  { id:'view-productora-papel', name:'Productora de Papel', sub:'Productora de Papel, S.A. de C.V. · Target Account · LEAD · AA · Priority Target · Operational Complexity HIGH · Panjiva Visible Logistics Universe · Paper &amp; Recovered Fiber · Recovered paperboard · Coated multilayer paperboard · High-Frequency Cross-Border Network · 2,898 Current YTD Shipments January 1 – July 31 2026 · 2,113 Imports 72.9% · 785 Exports 27.1% · +2.3% comparable Jan–Jul actual vs actual · 2,833 to 2,898 · Imports +2.0% · Exports +3.0% · Visible CIF USD 30.27M +5.8% · Visible gross weight 67.14M kg +5.6% · 10 Import Core Routes to 81.92% · 5 Export Core Routes to 82.93% · 2025 baseline 4,280 Shipments · 3,108 Imports · 1,172 Exports · CIF USD 47.11M · 100.76M kg · 9 Import Core Routes 80.86% · 5 Export Core Routes 83.79% · Nuevo Laredo Tamaulipas Border 85.4% Imports 79.6% Exports · Ciudad Camargo Tamaulipas Border 13.3% · Piedras Negras Coahuila Border Rail 10.7% · Puente Internacional Zaragoza-Isleta Ciudad Juárez Chihuahua 6.8% · Aeropuerto Internacional General Mariano Escobedo Apodaca Nuevo León Airport · Altamira Tamaulipas Port · Veracruz · Colombia Nuevo León · Manzanillo · Top 2 Import gateways 98.7% · Top 3 Export gateways 97.1% · Truck 92.5% · Unknown 3.6% preserved · Rail 2.9% · Air 0.6% · Maritime 0.5% · C. Torres de Santo Domingo Real de Anáhuac Nuevo Leon · San Nicolás de los Garza 66444 · Edh International Dba Texas F &amp; R · McAllen TX · Cellmark · Canusa Hershman Recycling · Ekman Recycling · Gp Harmon Recycling · Wm Recycle America · Texas Recycling Surplus · Pioneer Industries International · Greenside Solutions · Vipa Usa · Pioneer Paper Stock Co. Of Texas · National Fiber Supply · Intl Forest Products · World Wide Forest Products · El Paso Paper Box · Zebra Paper Converters · Captiva Group · Shinsei Pulp &amp; Paper Companny · Inter Papier North America · 56 visible Suppliers Origin Partners · 17 visible Customer Destination Partner labels · Top 3 import concentration 37.2% · Top 5 54.1% · Top 3 export concentration 83.3% · Top 5 92.4% · Trading Partners · United States 95.5% imports 82.4% exports · Canada · Mexico · Finland · Germany · Jamaica · Colombia · Spain · Japan · Customs Agent 3448 · 3549 · 3577 · 3104 · 3360 · 973 · Final Import Export · Regime Change Of Supplies · Transfer Of Goods · Regularisation Of Goods · Luxury Goods For Export Processing · No IMMEX claim · HS 4707100100 desperdicio de cartón recovered paperboard · 4810920100 coated multilayer paperboard · 4707209100 waste paper · 4707909100 mixed waste paper · 4823909999 · 8413911306 · Data Quality El Paso Paper Box United Kingdom address anomaly · EDH address not available in Panjiva · Cross-Border · Customs · Truck + Rail · Multimodal · Gateway Contingency · Supplier Coordination · Exception Management · Operational Complexity Partner · Multimodal Coordination Partner · Customs &amp; Visibility Partner · ILM / Control Tower Partner', rel:'LEAD', cls:'AA', clsPill:'aa' },
 ];
 const MODULES = [
   { id:'view-network',     name:'Network Intelligence', sub:'Cross-account analysis · Lane overlap' },
