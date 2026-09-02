@@ -1215,6 +1215,15 @@ main {
   #view-velozzetti .hub-table tr { break-inside: avoid; }
   #view-velozzetti .hist-appendix { break-inside: auto; }
   #view-velozzetti .hist-appendix .outreach-step-header { font-size: 10px; }
+
+  /* Diken — complete >=80% Core Route sets must print in full.
+     Scoped to #view-diken so no other account is affected. */
+  #view-diken .hub-table { font-size: 8.5px !important; min-width: 0 !important; }
+  #view-diken .hub-table td,
+  #view-diken .hub-table th { padding: 3px 6px !important; }
+  #view-diken .hub-table tr { break-inside: avoid; }
+  #view-diken .hist-appendix { break-inside: auto; }
+  #view-diken .hist-appendix .outreach-step-header { font-size: 10px; }
   .page-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .card-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .positioning-box { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
@@ -1435,6 +1444,11 @@ main {
     </div>
     <div class="nav-item" onclick="showView('view-velozzetti', this)">
       <span>◆</span> <span style="flex:1;">Grupo Velozzetti de México</span>
+      <span class="recent-cls" style="background:rgba(245,158,11,0.2);color:#f59e0b;">LEAD</span>
+      <span class="recent-cls aa">AA</span>
+    </div>
+    <div class="nav-item" onclick="showView('view-diken', this)">
+      <span>◆</span> <span style="flex:1;">Diken</span>
       <span class="recent-cls" style="background:rgba(245,158,11,0.2);color:#f59e0b;">LEAD</span>
       <span class="recent-cls aa">AA</span>
     </div>
@@ -2787,6 +2801,42 @@ main {
         <span class="acct-tag">Ocean</span>
         <span class="acct-tag">Customs</span>
         <span class="acct-tag">Supplier Coordination</span>
+        <span class="acct-tag">ILM / Control Tower</span>
+      </div>
+    </div>
+
+    <!-- Diken -->
+    <div class="account-card aa" onclick="showViewById('view-diken')">
+      <div class="account-card-header">
+        <div>
+          <div class="account-name">Diken</div>
+          <div class="account-industry">Diken International / Diken · Export-Oriented Cross-Border Network · Regional LATAM · Selective Ocean</div>
+        </div>
+        <div style="display:flex;gap:5px;align-items:center;flex-shrink:0;">
+          <span class="account-cls-badge lead">LEAD</span>
+          <span class="account-cls-badge aa">AA</span>
+        </div>
+      </div>
+      <div class="account-metrics" style="grid-template-columns:repeat(4,1fr);">
+        <div class="acct-metric"><div class="acct-metric-val">60</div><div class="acct-metric-lbl">2026 YTD Shipments</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">75%</div><div class="acct-metric-lbl">Export Share · 45</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">86.7%</div><div class="acct-metric-lbl">Import Core Concentration</div></div>
+        <div class="acct-metric"><div class="acct-metric-val" style="color:var(--red);">−9.1%</div><div class="acct-metric-lbl">Jan 1–Jul 29 · observed</div></div>
+      </div>
+      <div style="margin-top:8px;padding:7px 10px;background:rgba(232,0,45,0.05);border-left:3px solid var(--red);border-radius:0 4px 4px 0;">
+        <div style="font-size:9px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:var(--red);">Import Core Routes · Extreme Route Concentration</div>
+        <div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;margin-top:2px;"><strong>1</strong> route = 86.7% · Exports: <strong>4</strong> routes = 82.2%</div>
+      </div>
+      <div style="margin-top:8px;padding:8px 10px;background:rgba(245,158,11,0.06);border-left:3px solid #f59e0b;border-radius:0 4px 4px 0;">
+        <div style="font-size:9px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:#b45309;">Operational Complexity · MEDIUM-HIGH</div>
+        <div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;margin-top:2px;">Recurring US corridors · regional LATAM exports · concentrated gateways · selective maritime</div>
+      </div>
+      <div class="account-tags">
+        <span class="acct-tag" style="background:rgba(245,158,11,0.12);color:#b45309;border-color:rgba(245,158,11,0.3);">LEAD</span>
+        <span class="acct-tag">Cross-Border</span>
+        <span class="acct-tag">Customs</span>
+        <span class="acct-tag">LATAM</span>
+        <span class="acct-tag">Maritime</span>
         <span class="acct-tag">ILM / Control Tower</span>
       </div>
     </div>
@@ -13302,6 +13352,16 @@ main {
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td style="color:#b45309;font-weight:700;font-size:11px;">★ PRIORITY TARGET</td>
+            </tr>
+            <tr onclick="showViewById('view-diken')" style="cursor:pointer;">
+              <td><strong>Diken</strong> <span style="font-size:10px;font-weight:600;color:#b45309;background:rgba(245,158,11,0.12);padding:1px 5px;border-radius:3px;margin-left:4px;">LEAD</span></td>
+              <td><span class="cls-pill aa">AA</span></td>
+              <td style="color:var(--text-muted);" title="Relationship LEAD · AIOS Classification AA Priority Target · Operational Complexity MEDIUM-HIGH · Current YTD 2026 Shipments 60 through July 29 2026 · Imports 15 (25.0%) · Exports 45 (75.0%) · Comparable Jan 1–Jul 29 actual-vs-actual change −9.1% · Imports +7.1% · Exports −13.5% · Truck 52 (86.7%) · Maritime 8 (13.3%) · Current YTD Import Core Routes 1 to 86.7% EXTREME ROUTE CONCENTRATION · Current YTD Export Core Routes 4 to 82.2% · 2025 baseline 101 Shipments · 21 Imports · 80 Exports · 1 Import Core Route 90.5% · 3 Export Core Routes 82.5% · Gateways Colombia Nuevo León Border 62.2% of exports · Ciudad Hidalgo Chiapas Border 24.4% · Altamira Port · Puerto Morelos Port · Nuevo Laredo Border 86.7% of imports · Manzanillo Port · Panjiva Visible Logistics Universe">Cross-Border + Regional LATAM + Selective Ocean</td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td><div class="dots"><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div></td>
+              <td><div class="dots"><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div></td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot"></div></div></td>
               <td style="color:#b45309;font-weight:700;font-size:11px;">★ PRIORITY TARGET</td>
             </tr>
             <tr onclick="showViewById('view-productora-papel')" style="cursor:pointer;">
@@ -51513,6 +51573,1267 @@ main {
 </div>
 
 
+<div id="view-diken" class="view">
+  <div class="page-header">
+    <div class="page-header-left">
+      <div class="page-header-eyebrow">Target Account · LEAD · Panjiva Visible Logistics Universe</div>
+      <div class="page-header-title">Diken</div>
+      <div class="page-header-sub">Diken International / Diken · Export-Oriented Cross-Border Network · Recurring US Corridors · Regional LATAM Exports · Selective Ocean Activity</div>
+    </div>
+    <div class="page-header-meta">
+      <span class="classification-badge lead">LEAD</span>
+      <span class="classification-badge aa">AA</span>
+      <button class="print-btn" onclick="printView('view-diken')">⬇ Export PDF</button>
+    </div>
+  </div>
+  <div class="content-body">
+
+    <!-- Identity strip — Relationship and Classification are independent dimensions -->
+    <div class="card">
+      <div class="card-body" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 18px;">
+        <span style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);">Relationship Status</span>
+        <span class="classification-badge lead">LEAD</span>
+        <span style="width:1px;height:20px;background:var(--border);"></span>
+        <span style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);">AIOS Classification</span>
+        <span class="classification-badge aa">AA</span>
+        <span style="font-size:11px;color:var(--text-muted);">Priority Target</span>
+        <span style="width:1px;height:20px;background:var(--border);"></span>
+        <span style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);">Operational Complexity</span>
+        <span style="font-size:13px;font-weight:800;color:#b45309;letter-spacing:0.5px;">MEDIUM-HIGH</span>
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;flex:1;min-width:300px;text-align:right;">
+          <strong style="color:var(--navy);">Pre-commercial.</strong> Akzent does not currently manage this account. Panjiva is the <strong>sole source of truth</strong> for this analysis — <strong>no Wallet, Penetration, Coverage, Account Intelligence Snapshot or Akzent financials</strong> are shown.
+        </span>
+      </div>
+    </div>
+
+    <!-- 01 CURRENT OPERATING STATE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">01</span> Current Operating State — Current YTD 2026 through July 29, 2026</div>
+      <div class="card-body">
+        <div class="grid-4" style="gap:10px;">
+          <div class="stat-box"><div class="stat-label">Visible Shipments · Current YTD</div><div class="stat-value teal" style="font-size:32px;">60</div><div class="stat-sub">2026 YTD through <strong>July 29, 2026</strong> · observed, never annualized</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--navy);"><div class="stat-label">Exports</div><div class="stat-value" style="font-size:32px;">45 <span style="font-size:17px;color:var(--text-muted);font-weight:700;">= 75.0%</span></div><div class="stat-sub">Export-oriented visible network</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">Imports</div><div class="stat-value teal" style="font-size:32px;">15 <span style="font-size:17px;color:var(--text-muted);font-weight:700;">= 25.0%</span></div><div class="stat-sub">Inbound universe for the Import Core Route set</div></div>
+          <div class="stat-box" style="border-left:3px solid #f59e0b;"><div class="stat-label">Operational Complexity</div><div class="stat-value" style="font-size:26px;color:#b45309;">Medium-High</div><div class="stat-sub">AIOS Interpretation · no numerical score</div></div>
+        </div>
+        <div class="grid-4" style="gap:10px;margin-top:10px;">
+          <div class="stat-box" style="border-left:3px solid #f59e0b;"><div class="stat-label">Truck</div><div class="stat-value" style="font-size:26px;color:#92400e;">52 <span style="font-size:15px;color:var(--text-muted);font-weight:700;">= 86.7%</span></div><div class="stat-sub">of total visible Shipments · dominant visible mode</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--navy);"><div class="stat-label">Maritime</div><div class="stat-value" style="font-size:26px;">8 <span style="font-size:15px;color:var(--text-muted);font-weight:700;">= 13.3%</span></div><div class="stat-sub">Secondary but recurring</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--red);"><div class="stat-label">Import Core Routes ≥80%</div><div class="stat-value red" style="font-size:26px;">1 <span style="font-size:15px;color:var(--text-muted);font-weight:700;">= 86.7%</span></div><div class="stat-sub" style="font-weight:800;color:var(--red);letter-spacing:0.4px;">EXTREME ROUTE CONCENTRATION</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">Export Core Routes ≥80%</div><div class="stat-value teal" style="font-size:26px;">4 <span style="font-size:15px;color:var(--text-muted);font-weight:700;">= 82.2%</span></div><div class="stat-sub">Cumulative coverage of 45 visible Exports</div></div>
+        </div>
+        <div style="margin-top:10px;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:6px;display:flex;gap:26px;flex-wrap:wrap;align-items:center;">
+          <div><div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);">Comparable-Period Trend</div><div style="font-size:15px;font-weight:800;color:var(--navy);margin-top:2px;">66 → 60 Shipments <span style="color:var(--red);">−9.1%</span></div></div>
+          <div><div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);">Basis</div><div style="font-size:12px;font-weight:700;color:var(--navy);margin-top:2px;">Jan 1 – Jul 29 · Actual vs Actual</div></div>
+          <div style="flex:1;min-width:280px;"><span style="font-size:10px;color:var(--text-muted);line-height:1.6;"><strong style="color:#b45309;">Current YTD is never annualized</strong> and the 2025 Full Calendar Year is never aggregated with it. Both remain strictly separate universes throughout this page.</span></div>
+        </div>
+
+        <div style="margin-top:16px;padding:18px 22px;background:linear-gradient(135deg,rgba(13,43,94,0.05) 0%,rgba(196,30,58,0.05) 100%);border-left:3px solid var(--red);border-radius:0 6px 6px 0;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--red);margin-bottom:8px;">Executive Thesis · AIOS Interpretation</div>
+          <div style="font-size:21px;font-weight:800;color:var(--navy);line-height:1.35;">An export-oriented, highly cross-border visible network —<br>the opportunity is operational control, not transportation capacity</div>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.75;margin-top:10px;max-width:1000px;">Diken's visible logistics structure is <strong>export-oriented (75.0%)</strong> and <strong>highly cross-border</strong>, with <strong>recurring US corridors</strong>, <strong>regional LATAM distribution</strong> across seven visible destination countries, <strong>concentrated gateways</strong> and <strong>selective maritime activity</strong>. The primary Akzent opportunity is <strong style="color:var(--navy);">not transactional transportation</strong>. It is <strong style="color:var(--navy);">operational control, customs visibility, cross-border coordination, multimodal coordination, exception management, regional orchestration and ILM / Control Tower governance</strong>.</p>
+          <p style="font-size:11px;color:var(--text-muted);line-height:1.7;margin-top:8px;"><strong style="color:var(--navy);">This is an AIOS Interpretation of the visible network. It is not a claim of confirmed customer pain, and it does not state or imply that Diken currently lacks any of these capabilities.</strong> This conclusion is stated once here; later modules supply evidence rather than restating it.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 COMPARABLE-PERIOD TREND -->
+    <div class="card">
+      <div class="card-header"><span class="accent">02</span> Comparable-Period Trend — Observed Actual vs Observed Actual</div>
+      <div class="card-body">
+        <div style="display:grid;grid-template-columns:minmax(320px,1fr) 1.35fr;gap:22px;align-items:stretch;">
+          <div style="padding:18px 20px;background:var(--bg);border:1px solid var(--border);border-radius:8px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal-dim);">Primary Comparison</div>
+            <div style="font-size:14px;font-weight:800;color:var(--navy);margin-top:3px;">January 1 – July 29, 2025 vs January 1 – July 29, 2026</div>
+            <div style="font-size:10px;color:var(--text-muted);margin-top:2px;">Actual vs actual · equal observed windows · never annualized</div>
+            <div style="display:flex;align-items:flex-end;justify-content:center;gap:34px;margin-top:22px;height:250px;">
+              <div style="display:flex;flex-direction:column;align-items:center;">
+                <div style="font-size:20px;font-weight:800;color:var(--navy);margin-bottom:6px;">66</div>
+                <div style="width:70px;height:190px;display:flex;flex-direction:column;justify-content:flex-end;border-radius:5px 5px 0 0;overflow:hidden;">
+                  <div style="height:40px;background:var(--teal);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;">Imp 14</div>
+                  <div style="height:150px;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;">Exp 52</div>
+                </div>
+                <div style="font-size:11px;font-weight:700;color:var(--text-muted);margin-top:7px;letter-spacing:0.5px;">Jan 1 – Jul 29, 2025</div>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;padding-bottom:70px;">
+                <div style="font-size:15px;font-weight:800;color:var(--red);">▼ 9.1%</div>
+                <div style="font-size:9px;color:var(--text-light);letter-spacing:0.5px;">observed</div>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;">
+                <div style="font-size:20px;font-weight:800;color:var(--navy);margin-bottom:6px;">60</div>
+                <div style="width:70px;height:173px;display:flex;flex-direction:column;justify-content:flex-end;border-radius:5px 5px 0 0;overflow:hidden;">
+                  <div style="height:43px;background:var(--teal);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;">Imp 15</div>
+                  <div style="height:130px;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;">Exp 45</div>
+                </div>
+                <div style="font-size:11px;font-weight:700;color:var(--text-muted);margin-top:7px;letter-spacing:0.5px;">Jan 1 – Jul 29, 2026</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:12px;justify-content:center;margin-top:10px;font-size:10px;color:var(--text-muted);flex-wrap:wrap;">
+              <span><span style="display:inline-block;width:9px;height:9px;background:var(--navy);border-radius:2px;"></span> Exports</span>
+              <span><span style="display:inline-block;width:9px;height:9px;background:var(--teal);border-radius:2px;"></span> Imports</span>
+            </div>
+          </div>
+          <div style="padding:0;">
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th>Metric</th><th style="text-align:right;">2025 Comparable</th><th style="text-align:right;">2026 YTD</th><th style="text-align:right;">Change</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Total Shipments</strong></td><td style="text-align:right;font-weight:700;">66</td><td style="text-align:right;font-weight:700;color:var(--navy);">60</td><td style="text-align:right;font-weight:800;color:var(--red);">−9.1%</td></tr>
+                  <tr><td><strong>Imports</strong></td><td style="text-align:right;font-weight:700;">14</td><td style="text-align:right;font-weight:700;color:var(--navy);">15</td><td style="text-align:right;font-weight:800;color:#059669;">+7.1%</td></tr>
+                  <tr><td><strong>Exports</strong></td><td style="text-align:right;font-weight:700;">52</td><td style="text-align:right;font-weight:700;color:var(--navy);">45</td><td style="text-align:right;font-weight:800;color:var(--red);">−13.5%</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div style="margin-top:12px;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:6px;">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:6px;">Required Interpretation</div>
+              <p style="font-size:11.5px;color:var(--text-muted);line-height:1.75;">Visible Shipment activity <strong>decreased during the comparable observed period</strong>, driven by <strong>lower visible export activity</strong>, while <strong>imports increased slightly</strong>.</p>
+            </div>
+            <div style="margin-top:10px;padding:12px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#b45309;margin-bottom:5px;">This observed change does not establish</div>
+              <div style="display:flex;flex-wrap:wrap;gap:6px;">
+                <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">✕ lost business</span>
+                <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">✕ supplier loss</span>
+                <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">✕ customer loss</span>
+                <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">✕ provider change</span>
+                <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">✕ structural contraction</span>
+                <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">✕ operational cause</span>
+              </div>
+              <div style="font-size:10px;color:var(--text-muted);line-height:1.6;margin-top:8px;">This is <strong>observed Panjiva activity only</strong>. <strong style="color:#b45309;">Current YTD is not annualized</strong> and no run-rate or projected full-year value appears anywhere on this page.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 IMPORT / EXPORT STRUCTURE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">03</span> Import / Export Structure — Strictly Separated Periods</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:14px;">
+          <div style="padding:16px 18px;background:var(--bg);border:1px solid var(--border);border-radius:8px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-light);">Previous Full Calendar Year · Historical Baseline</div>
+            <div style="font-size:16px;font-weight:800;color:var(--navy);margin-top:3px;">2025 — Established Operating Structure</div>
+            <div style="display:flex;gap:22px;margin-top:14px;flex-wrap:wrap;">
+              <div><div style="font-size:24px;font-weight:800;color:var(--navy);">101</div><div style="font-size:9px;color:var(--text-muted);letter-spacing:0.5px;">TOTAL SHIPMENTS</div></div>
+              <div><div style="font-size:24px;font-weight:800;color:var(--navy);">21</div><div style="font-size:9px;color:var(--text-muted);letter-spacing:0.5px;">IMPORTS · 20.8%</div></div>
+              <div><div style="font-size:24px;font-weight:800;color:var(--navy);">80</div><div style="font-size:9px;color:var(--text-muted);letter-spacing:0.5px;">EXPORTS · 79.2%</div></div>
+            </div>
+            <div style="height:10px;display:flex;border-radius:5px;overflow:hidden;margin-top:14px;">
+              <div style="width:20.8%;background:var(--teal);" title="Imports 20.8%"></div>
+              <div style="width:79.2%;background:var(--navy);" title="Exports 79.2%"></div>
+            </div>
+          </div>
+          <div style="padding:16px 18px;background:rgba(0,180,216,0.05);border:1px solid rgba(0,180,216,0.3);border-radius:8px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal-dim);">Current YTD · Primary Narrative</div>
+            <div style="font-size:16px;font-weight:800;color:var(--navy);margin-top:3px;">2026 YTD through July 29 — Current Operating State</div>
+            <div style="display:flex;gap:22px;margin-top:14px;flex-wrap:wrap;">
+              <div><div style="font-size:24px;font-weight:800;color:var(--teal-dim);">60</div><div style="font-size:9px;color:var(--text-muted);letter-spacing:0.5px;">TOTAL SHIPMENTS</div></div>
+              <div><div style="font-size:24px;font-weight:800;color:var(--teal-dim);">15</div><div style="font-size:9px;color:var(--text-muted);letter-spacing:0.5px;">IMPORTS · 25.0%</div></div>
+              <div><div style="font-size:24px;font-weight:800;color:var(--teal-dim);">45</div><div style="font-size:9px;color:var(--text-muted);letter-spacing:0.5px;">EXPORTS · 75.0%</div></div>
+            </div>
+            <div style="height:10px;display:flex;border-radius:5px;overflow:hidden;margin-top:14px;">
+              <div style="width:25%;background:var(--teal);" title="Imports 25.0%"></div>
+              <div style="width:75%;background:var(--navy);" title="Exports 75.0%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--navy);margin:18px 0 8px;">Visible Value &amp; Weight — by period and direction</div>
+        <div style="overflow-x:auto;">
+          <table class="hub-table" style="font-size:11px;">
+            <thead><tr><th>Period</th><th>Direction</th><th style="text-align:right;">Visible CIF Value</th><th style="text-align:right;">Visible Gross Weight</th></tr></thead>
+            <tbody>
+              <tr><td style="color:var(--text-muted);"><strong>2025</strong> <span style="font-size:9px;color:var(--text-light);">· full calendar year</span></td><td><span class="hub-tag air">Imports</span></td><td style="text-align:right;color:var(--text-muted);">USD 3,111,426.50</td><td style="text-align:right;color:var(--text-muted);">128,519.51 kg</td></tr>
+              <tr><td style="color:var(--text-muted);"><strong>2025</strong> <span style="font-size:9px;color:var(--text-light);">· full calendar year</span></td><td><span class="hub-tag ocean">Exports</span></td><td style="text-align:right;color:var(--text-muted);">USD 3,387,128.53</td><td style="text-align:right;color:var(--text-muted);">1,374,052.16 kg</td></tr>
+              <tr style="background:rgba(0,180,216,0.04);"><td><strong style="color:var(--navy);">2026 YTD</strong> <span style="font-size:9px;color:var(--text-light);">· through Jul 29</span></td><td><span class="hub-tag air">Imports</span></td><td style="text-align:right;font-weight:700;color:var(--navy);">USD 1,988,057.04</td><td style="text-align:right;font-weight:700;color:var(--navy);">102,595.20 kg</td></tr>
+              <tr style="background:rgba(0,180,216,0.04);"><td><strong style="color:var(--navy);">2026 YTD</strong> <span style="font-size:9px;color:var(--text-light);">· through Jul 29</span></td><td><span class="hub-tag ocean">Exports</span></td><td style="text-align:right;font-weight:700;color:var(--navy);">USD 1,948,361.11</td><td style="text-align:right;font-weight:700;color:var(--navy);">777,861.39 kg</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="margin-top:10px;padding:10px 14px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:#b45309;">Panjiva-visible values only. These values must not be interpreted as company revenue, total logistics spend, or total company trade activity.</strong> The 2025 and 2026 YTD universes are never summed into a single account total.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 MODAL INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">04</span> Modal Intelligence — Truck-Dominant with Recurring Maritime</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:18px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:8px;">Current YTD 2026 · through July 29</div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th>Direction</th><th>Mode</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">Share</th><th style="width:22%;"></th></tr></thead>
+                <tbody>
+                  <tr><td rowspan="2" style="vertical-align:middle;"><strong>Imports</strong><div style="font-size:9px;color:var(--text-light);">15 Shipments</div></td><td><span class="hub-tag truck">Truck</span></td><td style="text-align:right;font-weight:700;">13</td><td style="text-align:right;font-weight:700;">86.7%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:86.7%;background:#f59e0b;"></div></div></td></tr>
+                  <tr><td><span class="hub-tag ocean">Maritime</span></td><td style="text-align:right;font-weight:700;">2</td><td style="text-align:right;">13.3%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:13.3%;background:var(--navy);"></div></div></td></tr>
+                  <tr><td rowspan="2" style="vertical-align:middle;"><strong>Exports</strong><div style="font-size:9px;color:var(--text-light);">45 Shipments</div></td><td><span class="hub-tag truck">Truck</span></td><td style="text-align:right;font-weight:700;">39</td><td style="text-align:right;font-weight:700;">86.7%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:86.7%;background:#f59e0b;"></div></div></td></tr>
+                  <tr><td><span class="hub-tag ocean">Maritime</span></td><td style="text-align:right;font-weight:700;">6</td><td style="text-align:right;">13.3%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:13.3%;background:var(--navy);"></div></div></td></tr>
+                </tbody>
+                <tfoot><tr style="background:var(--bg);"><td colspan="2" style="font-weight:800;color:var(--navy);">Total visible Shipments</td><td style="text-align:right;font-weight:800;color:var(--navy);">60</td><td colspan="2" style="font-size:10px;color:var(--text-muted);">Truck <strong>52 · 86.7%</strong> · Maritime <strong>8 · 13.3%</strong></td></tr></tfoot>
+              </table>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);margin-bottom:8px;">2025 Baseline · full calendar year</div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th>Direction</th><th>Mode</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">Share</th><th style="width:22%;"></th></tr></thead>
+                <tbody>
+                  <tr><td rowspan="2" style="vertical-align:middle;color:var(--text-muted);"><strong>Imports</strong><div style="font-size:9px;color:var(--text-light);">21 Shipments</div></td><td><span class="hub-tag truck">Truck</span></td><td style="text-align:right;font-weight:700;color:var(--text-muted);">20</td><td style="text-align:right;color:var(--text-muted);">95.2%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:95.2%;background:#f59e0b;opacity:0.6;"></div></div></td></tr>
+                  <tr><td><span class="hub-tag air">Air</span></td><td style="text-align:right;color:var(--text-muted);">1</td><td style="text-align:right;color:var(--text-muted);">4.8%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:4.8%;background:var(--teal);opacity:0.6;"></div></div></td></tr>
+                  <tr><td rowspan="2" style="vertical-align:middle;color:var(--text-muted);"><strong>Exports</strong><div style="font-size:9px;color:var(--text-light);">80 Shipments</div></td><td><span class="hub-tag truck">Truck</span></td><td style="text-align:right;font-weight:700;color:var(--text-muted);">73</td><td style="text-align:right;color:var(--text-muted);">91.3%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:91.3%;background:#f59e0b;opacity:0.6;"></div></div></td></tr>
+                  <tr><td><span class="hub-tag ocean">Maritime</span></td><td style="text-align:right;color:var(--text-muted);">7</td><td style="text-align:right;color:var(--text-muted);">8.8%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:8.8%;background:var(--navy);opacity:0.6;"></div></div></td></tr>
+                </tbody>
+                <tfoot><tr style="background:var(--bg);"><td colspan="2" style="font-weight:700;color:var(--text-muted);">Total visible Shipments</td><td style="text-align:right;font-weight:800;color:var(--text-muted);">101</td><td colspan="2" style="font-size:10px;color:var(--text-muted);">Air visible in 2025 Imports only</td></tr></tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:14px;padding:12px 16px;background:rgba(13,43,94,0.03);border:1px solid var(--border);border-radius:6px;">
+          <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:6px;">AIOS Interpretation</div>
+          <ul class="q-list" style="font-size:11px;line-height:1.75;">
+            <li><strong>Truck dominates the visible network</strong> in both periods and in both directions.</li>
+            <li><strong>Maritime is secondary but recurring</strong> — present in 2025 Exports and in both directions in Current YTD.</li>
+            <li>The primary visible commercial opportunity is <strong>cross-border and customs control</strong>, supported by a credible <strong>multimodal coordination layer</strong>.</li>
+            <li><strong style="color:#b45309;">The cause of modal change between periods is not inferred.</strong> Panjiva shows the composition, not the reason.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 05 GEOGRAPHIC INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">05</span> Geographic Intelligence — Export Destinations &amp; Import Item-Origin Presence</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:18px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:8px;">2026 YTD Export Destinations · 45 Shipments</div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>🇺🇸 United States</strong><span>28 Shipments</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:100%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>🇬🇹 Guatemala</strong><span>4 Shipments</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:14%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>🇨🇴 Colombia</strong><span>4 Shipments</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:14%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>🇸🇻 El Salvador</strong><span>3 Shipments</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:11%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>🇨🇷 Costa Rica</strong><span>2 Shipments</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:7%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>🇵🇦 Panama</strong><span>2 Shipments</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:7%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>🇩🇴 Dominican Republic</strong><span>2 Shipments</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:7%"></div></div></div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);margin-bottom:8px;">2025 Export Destinations · 80 Shipments</div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>🇺🇸 United States</strong><span>53 Shipments</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:100%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>🇨🇴 Colombia</strong><span>7 Shipments</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:13%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>🇬🇹 Guatemala</strong><span>6 Shipments</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:11%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>🇵🇦 Panama</strong><span>6 Shipments</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:11%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>🇸🇻 El Salvador</strong><span>5 Shipments</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:9%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>🇨🇷 Costa Rica</strong><span>3 Shipments</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:6%"></div></div></div>
+            <div style="margin-top:12px;padding:10px 14px;background:var(--bg);border:1px solid var(--border);border-radius:6px;">
+              <span style="font-size:10px;color:var(--text-muted);line-height:1.6;">The <strong>United States</strong> is the dominant visible export destination in both periods, alongside a <strong>recurring regional LATAM set</strong>. <strong style="color:#b45309;">Flags never replace country names</strong> anywhere on this page.</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border);">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--navy);margin-bottom:4px;">Import Item-Origin Operational Presence · 2026 YTD</div>
+          <div style="font-size:10px;color:var(--text-muted);margin-bottom:10px;">Panjiva does <strong>not</strong> provide a reliable single shipper-country field for these import records. The values below describe <strong>item-origin operational presence</strong>.</div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;">
+            <div class="stat-box" style="padding:9px 12px;"><div style="font-size:12px;font-weight:700;color:var(--navy);">🇨🇦 Canada</div><div style="font-size:18px;font-weight:800;color:var(--navy);">13</div></div>
+            <div class="stat-box" style="padding:9px 12px;"><div style="font-size:12px;font-weight:700;color:var(--navy);">🇺🇸 United States</div><div style="font-size:18px;font-weight:800;color:var(--navy);">13</div></div>
+            <div class="stat-box" style="padding:9px 12px;"><div style="font-size:12px;font-weight:700;color:var(--navy);">🇨🇳 China</div><div style="font-size:18px;font-weight:800;color:var(--navy);">13</div></div>
+            <div class="stat-box" style="padding:9px 12px;"><div style="font-size:12px;font-weight:700;color:var(--navy);">🇩🇰 Denmark</div><div style="font-size:18px;font-weight:800;color:var(--navy);">11</div></div>
+            <div class="stat-box" style="padding:9px 12px;"><div style="font-size:12px;font-weight:700;color:var(--navy);">🇮🇳 India</div><div style="font-size:18px;font-weight:800;color:var(--navy);">11</div></div>
+            <div class="stat-box" style="padding:9px 12px;"><div style="font-size:12px;font-weight:700;color:var(--navy);">🇻🇳 Vietnam</div><div style="font-size:18px;font-weight:800;color:var(--navy);">11</div></div>
+            <div class="stat-box" style="padding:9px 12px;"><div style="font-size:12px;font-weight:700;color:var(--navy);">🇵🇰 Pakistan</div><div style="font-size:18px;font-weight:800;color:var(--navy);">10</div></div>
+            <div class="stat-box" style="padding:9px 12px;"><div style="font-size:12px;font-weight:700;color:var(--navy);">🇰🇭 Cambodia</div><div style="font-size:18px;font-weight:800;color:var(--navy);">9</div></div>
+            <div class="stat-box" style="padding:9px 12px;background:rgba(245,158,11,0.06);border-color:rgba(245,158,11,0.3);"><div style="font-size:11px;font-weight:700;color:#b45309;line-height:1.4;">plus additional countries</div><div style="font-size:9px;color:var(--text-muted);margin-top:3px;">Principal presence shown as supplied</div></div>
+          </div>
+          <div style="margin-top:12px;padding:12px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+            <span style="font-size:11px;color:var(--text-muted);line-height:1.65;"><strong style="color:#b45309;">One Shipment may contain items from multiple origin countries. Item-origin counts represent operational presence and are not additive.</strong> These counts are <strong>not</strong> total import Shipments by country — the visible import universe is <strong>15 Shipments</strong>.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 06 GATEWAY INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">06</span> Gateway Intelligence — Border · Port · Airport</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:18px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:8px;">Current YTD 2026</div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th>Direction</th><th>Gateway</th><th>Type</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">Share</th></tr></thead>
+                <tbody>
+                  <tr><td rowspan="4" style="vertical-align:middle;"><strong>Exports</strong><div style="font-size:9px;color:var(--text-light);">45 Shipments</div></td><td><strong>Colombia, Nuevo León</strong></td><td><span class="hub-tag border">Border</span></td><td style="text-align:right;font-weight:800;">28</td><td style="text-align:right;font-weight:800;color:var(--navy);">62.2%</td></tr>
+                  <tr><td><strong>Ciudad Hidalgo, Chiapas</strong></td><td><span class="hub-tag border">Border</span></td><td style="text-align:right;font-weight:700;">11</td><td style="text-align:right;font-weight:700;">24.4%</td></tr>
+                  <tr><td><strong>Altamira, Tamaulipas</strong></td><td><span class="hub-tag ocean">Port</span></td><td style="text-align:right;">4</td><td style="text-align:right;">8.9%</td></tr>
+                  <tr><td><strong>Puerto Morelos, Quintana Roo</strong></td><td><span class="hub-tag ocean">Port</span></td><td style="text-align:right;">2</td><td style="text-align:right;">4.4%</td></tr>
+                  <tr><td rowspan="2" style="vertical-align:middle;"><strong>Imports</strong><div style="font-size:9px;color:var(--text-light);">15 Shipments</div></td><td><strong>Nuevo Laredo, Tamaulipas</strong></td><td><span class="hub-tag border">Border</span></td><td style="text-align:right;font-weight:800;">13</td><td style="text-align:right;font-weight:800;color:var(--navy);">86.7%</td></tr>
+                  <tr><td><strong>Manzanillo, Colima</strong></td><td><span class="hub-tag ocean">Port</span></td><td style="text-align:right;">2</td><td style="text-align:right;">13.3%</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);margin-bottom:8px;">2025 Baseline · full calendar year</div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th>Direction</th><th>Gateway</th><th>Type</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">Share</th></tr></thead>
+                <tbody>
+                  <tr><td rowspan="3" style="vertical-align:middle;color:var(--text-muted);"><strong>Exports</strong><div style="font-size:9px;color:var(--text-light);">80 Shipments</div></td><td style="color:var(--text-muted);"><strong>Colombia, Nuevo León</strong></td><td><span class="hub-tag border">Border</span></td><td style="text-align:right;font-weight:700;color:var(--text-muted);">53</td><td style="text-align:right;font-weight:700;color:var(--text-muted);">66.3%</td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>Ciudad Hidalgo, Chiapas</strong></td><td><span class="hub-tag border">Border</span></td><td style="text-align:right;color:var(--text-muted);">20</td><td style="text-align:right;color:var(--text-muted);">25.0%</td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>Altamira, Tamaulipas</strong></td><td><span class="hub-tag ocean">Port</span></td><td style="text-align:right;color:var(--text-muted);">7</td><td style="text-align:right;color:var(--text-muted);">8.8%</td></tr>
+                  <tr><td rowspan="3" style="vertical-align:middle;color:var(--text-muted);"><strong>Imports</strong><div style="font-size:9px;color:var(--text-light);">21 Shipments</div></td><td style="color:var(--text-muted);"><strong>Nuevo Laredo, Tamaulipas</strong></td><td><span class="hub-tag border">Border</span></td><td style="text-align:right;font-weight:700;color:var(--text-muted);">19</td><td style="text-align:right;font-weight:700;color:var(--text-muted);">90.5%</td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>AICM</strong></td><td><span class="hub-tag air">Airport</span></td><td style="text-align:right;color:var(--text-muted);">1</td><td style="text-align:right;color:var(--text-muted);">4.8%</td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>Ciudad Hidalgo, Chiapas</strong></td><td><span class="hub-tag border">Border</span></td><td style="text-align:right;color:var(--text-muted);">1</td><td style="text-align:right;color:var(--text-muted);">4.8%</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:14px;padding:12px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.65;"><strong style="color:#b45309;">Gateway concentration is an observed operational signal. It is not confirmed customer pain.</strong> Gateways are crossing and handling nodes — they are <strong>never</strong> represented as Diken facilities. Facility and gateway remain separate operational dimensions throughout this page.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 07 CURRENT YTD IMPORT CORE ROUTES -->
+    <div class="card">
+      <div class="card-header"><span class="accent">07</span> Current YTD Import Core Routes — Complete ≥80% Set</div>
+      <div class="card-body">
+        <div class="grid-4" style="gap:10px;">
+          <div class="stat-box"><div class="stat-label">Import Universe · Current YTD</div><div class="stat-value" style="font-size:26px;">15</div><div class="stat-sub">Visible Import Shipments</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--red);"><div class="stat-label">Smallest Route Set Reaching ≥80%</div><div class="stat-value red" style="font-size:26px;">1 <span style="font-size:15px;color:var(--text-muted);font-weight:700;">route</span></div><div class="stat-sub">The complete set is a single route</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--red);"><div class="stat-label">Cumulative Coverage</div><div class="stat-value red" style="font-size:26px;">86.7%</div><div class="stat-sub">13 of 15 visible Import Shipments</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--red);background:rgba(232,0,45,0.04);"><div class="stat-label">Route Status</div><div class="stat-value" style="font-size:14px;line-height:1.3;color:var(--red);font-weight:800;letter-spacing:0.4px;">EXTREME ROUTE CONCENTRATION</div><div class="stat-sub">One route completes the ≥80% requirement</div></div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:18px 0 14px;">
+          <span style="font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;background:var(--red);padding:4px 10px;border-radius:4px;">Rank 1 · EXTREME ROUTE CONCENTRATION</span>
+          <span style="font-size:11px;color:var(--text-muted);">Import Core Route #1 — this single route completes the ≥80% Import Core Route requirement.</span>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:10px;align-items:stretch;">
+          <div style="padding:14px 16px;background:rgba(13,43,94,0.04);border:1px solid var(--border);border-radius:6px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:6px;">Origin Company / Facility</div>
+            <div style="font-size:13px;font-weight:700;color:var(--navy);line-height:1.4;">E Global Enterprises Inc.</div>
+            <div style="font-size:10px;color:#b45309;line-height:1.5;margin-top:5px;font-weight:700;">Address not available in Panjiva</div>
+            <div style="font-size:10px;color:var(--text-light);line-height:1.5;margin-top:3px;font-style:italic;">Some source rows provide only: <strong>United States</strong>. No address is enriched or invented.</div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--red);font-weight:700;">→</div>
+          <div style="padding:14px 16px;background:rgba(232,0,45,0.05);border:1px solid rgba(232,0,45,0.22);border-radius:6px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--red);margin-bottom:6px;">Gateway · Border</div>
+            <div style="font-size:13px;font-weight:700;color:var(--navy);line-height:1.4;">Nuevo Laredo, Tamaulipas</div>
+            <div style="font-size:10px;color:var(--text-light);line-height:1.5;margin-top:5px;">Crossing node — <strong>not</strong> a Diken facility</div>
+            <div style="margin-top:6px;"><span class="hub-tag border">Border</span> <span class="hub-tag truck">Truck</span></div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--red);font-weight:700;">→</div>
+          <div style="padding:14px 16px;background:rgba(13,43,94,0.04);border:1px solid var(--border);border-radius:6px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:6px;">Destination Facility</div>
+            <div style="font-size:13px;font-weight:700;color:var(--navy);line-height:1.4;">Diken Institucional S.A. de C.V.</div>
+            <div style="font-size:10px;color:var(--text-light);line-height:1.5;margin-top:5px;font-style:italic;">AV INDUSTRIA AEROESPACIAL 2900 PARQUE INDUSTRIAL RAMOS ARIZPE</div>
+          </div>
+        </div>
+
+        <div class="grid-4" style="gap:8px;margin-top:14px;">
+          <div class="stat-box" style="background:var(--surface);"><div class="stat-label">Shipments</div><div class="stat-value red" style="font-size:24px;">13</div><div class="stat-sub"><strong>86.7%</strong> of 15 Imports</div></div>
+          <div class="stat-box" style="background:var(--surface);"><div class="stat-label">Cumulative Coverage</div><div class="stat-value" style="font-size:24px;">86.7%</div><div class="stat-sub">Complete ≥80% set</div></div>
+          <div class="stat-box" style="background:var(--surface);"><div class="stat-label">Active Months</div><div class="stat-value" style="font-size:24px;">7</div><div class="stat-sub">Distinct months with visible Shipments</div></div>
+          <div class="stat-box" style="background:var(--surface);"><div class="stat-label">Observed Route Cadence</div><div class="stat-value" style="font-size:24px;">1.86 <span style="font-size:12px;color:var(--text-muted);font-weight:700;">/ month</span></div><div class="stat-sub"><strong>0.53</strong> Shipments / Week · Jan 30 – Jul 21, 2026</div></div>
+        </div>
+        <div style="margin-top:8px;padding:9px 14px;background:var(--bg);border:1px solid var(--border);border-radius:6px;display:flex;gap:24px;flex-wrap:wrap;">
+          <div><div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);">First Visible Shipment</div><div style="font-size:12px;font-weight:700;color:var(--navy);">January 30, 2026</div></div>
+          <div><div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);">Last Visible Shipment</div><div style="font-size:12px;font-weight:700;color:var(--navy);">July 21, 2026</div></div>
+          <div><div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);">Mode</div><div style="font-size:12px;font-weight:700;color:var(--navy);">Truck</div></div>
+          <div><div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);">Gateway Type</div><div style="font-size:12px;font-weight:700;color:var(--navy);">Border</div></div>
+        </div>
+
+        <div style="margin-top:12px;height:14px;display:flex;border-radius:7px;overflow:hidden;border:1px solid var(--border);">
+          <div style="width:86.7%;background:var(--red);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;color:#fff;letter-spacing:0.5px;">CORE ROUTE #1 · 86.7%</div>
+          <div style="width:13.3%;background:#e6eaf1;"></div>
+        </div>
+        <div style="font-size:9px;color:var(--text-light);margin-top:4px;">Cumulative coverage of the 15-Shipment visible Import universe.</div>
+
+        <div style="margin-top:14px;padding:12px 16px;background:rgba(13,43,94,0.03);border:1px solid var(--border);border-radius:6px;">
+          <strong style="font-size:10px;color:var(--navy);text-transform:uppercase;letter-spacing:1.5px;">AIOS Interpretation</strong>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.7;margin-top:5px;">A single inbound corridor accounts for <strong>86.7%</strong> of the visible Import universe. <strong style="color:var(--navy);">This is an observed structural signal, not confirmed customer pain</strong>, and the reason for the concentration is not inferred.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 08 CURRENT YTD EXPORT CORE ROUTES -->
+    <div class="card">
+      <div class="card-header"><span class="accent">08</span> Current YTD Export Core Routes — Complete ≥80% Set · 4 Routes</div>
+      <div class="card-body">
+        <div class="grid-4" style="gap:10px;">
+          <div class="stat-box"><div class="stat-label">Export Universe · Current YTD</div><div class="stat-value" style="font-size:26px;">45</div><div class="stat-sub">Visible Export Shipments</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">Smallest Route Set Reaching ≥80%</div><div class="stat-value teal" style="font-size:26px;">4 <span style="font-size:15px;color:var(--text-muted);font-weight:700;">routes</span></div><div class="stat-sub">The complete four-route set is shown in full</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">Cumulative Coverage</div><div class="stat-value teal" style="font-size:26px;">82.2%</div><div class="stat-sub">37 of 45 visible Export Shipments</div></div>
+          <div class="stat-box"><div class="stat-label">Leading Route Share</div><div class="stat-value" style="font-size:26px;">62.2%</div><div class="stat-sub">Route #1 · no single route reaches 80%</div></div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:18px 0 14px;">
+          <span style="font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;background:var(--navy);padding:4px 10px;border-radius:4px;">Rank 1 · 62.2% of visible Exports</span>
+          <span style="font-size:11px;color:var(--text-muted);">Export Core Route #1 — the structurally dominant US-bound corridor.</span>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:10px;align-items:stretch;">
+          <div style="padding:14px 16px;background:rgba(13,43,94,0.04);border:1px solid var(--border);border-radius:6px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:6px;">Origin Facility</div>
+            <div style="font-size:13px;font-weight:700;color:var(--navy);line-height:1.4;">Diken de México S.A. de C.V.</div>
+            <div style="font-size:10px;color:var(--text-light);line-height:1.5;margin-top:5px;">Panjiva Origin Precision: <strong>Mexico</strong></div>
+            <div style="font-size:10px;color:#b45309;line-height:1.5;margin-top:3px;font-weight:700;">Exact address: Address not available in Panjiva</div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--navy);font-weight:700;">→</div>
+          <div style="padding:14px 16px;background:rgba(232,0,45,0.05);border:1px solid rgba(232,0,45,0.22);border-radius:6px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--red);margin-bottom:6px;">Gateway · Border</div>
+            <div style="font-size:13px;font-weight:700;color:var(--navy);line-height:1.4;">Colombia, Nuevo León</div>
+            <div style="font-size:10px;color:var(--text-light);line-height:1.5;margin-top:5px;">Crossing node — <strong>not</strong> a Diken facility</div>
+            <div style="margin-top:6px;"><span class="hub-tag border">Border</span> <span class="hub-tag truck">Truck</span></div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--navy);font-weight:700;">→</div>
+          <div style="padding:14px 16px;background:rgba(13,43,94,0.04);border:1px solid var(--border);border-radius:6px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:6px;">Destination Facility</div>
+            <div style="font-size:13px;font-weight:700;color:var(--navy);line-height:1.4;">Diken International LLC</div>
+            <div style="font-size:10px;color:var(--text-light);line-height:1.5;margin-top:5px;font-style:italic;">2940 Wesley Way, Richland Hills, TX 76118, USA</div>
+            <div style="margin-top:6px;"><span class="hub-tag" style="background:rgba(245,158,11,0.12);color:#b45309;">Discovery Hypothesis — affiliate status requires validation</span></div>
+          </div>
+        </div>
+
+        <div class="grid-4" style="gap:8px;margin-top:14px;">
+          <div class="stat-box" style="background:var(--surface);"><div class="stat-label">Shipments</div><div class="stat-value" style="font-size:24px;">28</div><div class="stat-sub"><strong>62.2%</strong> of 45 Exports</div></div>
+          <div class="stat-box" style="background:var(--surface);"><div class="stat-label">Cumulative Coverage</div><div class="stat-value" style="font-size:24px;">62.2%</div><div class="stat-sub">Rank 1 of the 4-route set</div></div>
+          <div class="stat-box" style="background:var(--surface);"><div class="stat-label">Active Months</div><div class="stat-value" style="font-size:24px;">7</div><div class="stat-sub">Distinct months with visible Shipments</div></div>
+          <div class="stat-box" style="background:var(--surface);"><div class="stat-label">Observed Route Cadence</div><div class="stat-value" style="font-size:24px;">4.00 <span style="font-size:12px;color:var(--text-muted);font-weight:700;">/ month</span></div><div class="stat-sub"><strong>0.99</strong> Shipments / Week · Jan 12 – Jul 27, 2026</div></div>
+        </div>
+
+        <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--navy);margin:20px 0 8px;">Complete Export Core Route Set — all 4 routes to 82.2%</div>
+        <div style="overflow-x:auto;">
+          <table class="hub-table" style="font-size:11px;min-width:1120px;">
+            <thead><tr>
+              <th style="text-align:right;">Rank</th><th>Origin</th><th>Gateway</th><th>Destination</th><th>Mode</th>
+              <th style="text-align:right;">Shipments</th><th style="text-align:right;">% Exports</th><th style="text-align:right;">Cumulative</th>
+              <th style="text-align:right;">Active Months</th><th style="text-align:right;">/ Month</th><th style="text-align:right;">/ Week</th><th>Visible Date Range</th>
+            </tr></thead>
+            <tbody>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">1</td>
+                <td><strong>Diken de México S.A. de C.V.</strong><div style="font-size:9px;color:var(--text-light);">Panjiva precision: Mexico</div><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div></td>
+                <td><strong>Colombia, Nuevo León</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                <td><strong>Diken International LLC</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">2940 Wesley Way, Richland Hills, TX 76118, USA</div></td>
+                <td><span class="hub-tag truck">Truck</span></td>
+                <td style="text-align:right;font-weight:800;">28</td>
+                <td style="text-align:right;font-weight:800;">62.2%</td>
+                <td style="text-align:right;font-weight:700;color:var(--teal-dim);">62.2%</td>
+                <td style="text-align:right;">7</td>
+                <td style="text-align:right;">4.00</td>
+                <td style="text-align:right;">0.99</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 12 – Jul 27, 2026</td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">2</td>
+                <td><strong>Diken International S. de R.L. de C.V.</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Avenida Industria Aeroespacial 2900, Ramos Arizpe Coahuila 25900, Mexico</div></td>
+                <td><strong>Altamira, Tamaulipas</strong><div style="font-size:9px;color:var(--text-light);">Port</div></td>
+                <td><strong>Tecnas S.A. BIC</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Cra. 50g, Itagüi, Medellín, Antioquia, Colombia</div></td>
+                <td><span class="hub-tag ocean">Maritime</span></td>
+                <td style="text-align:right;font-weight:700;">4</td>
+                <td style="text-align:right;font-weight:700;">8.9%</td>
+                <td style="text-align:right;font-weight:700;color:var(--teal-dim);">71.1%</td>
+                <td style="text-align:right;">4</td>
+                <td style="text-align:right;">1.00</td>
+                <td style="text-align:right;">0.17</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Feb 11 – Jul 24, 2026</td>
+              </tr>
+              <tr style="background:rgba(245,158,11,0.05);">
+                <td style="text-align:right;font-weight:800;color:var(--navy);">3</td>
+                <td><strong>Diken International S. de R.L. de C.V.</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Avenida Industria Aeroespacial 2900, Ramos Arizpe Coahuila 25900, Mexico</div></td>
+                <td><strong>Ciudad Hidalgo, Chiapas</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                <td><strong>Agromarket S.A. de C.V.</strong><div style="font-size:9px;color:var(--text-muted);">Panjiva Consignee Address Field: <strong>Puerto Rico</strong></div><div style="font-size:9px;color:var(--text-muted);">Panjiva Shipment Destination: <strong>El Salvador</strong></div><div style="font-size:9px;color:#b45309;font-weight:700;margin-top:2px;">DATA QUALITY / ENTITY RESOLUTION HYPOTHESIS — REQUIRES VALIDATION</div></td>
+                <td><span class="hub-tag truck">Truck</span></td>
+                <td style="text-align:right;font-weight:700;">3</td>
+                <td style="text-align:right;font-weight:700;">6.7%</td>
+                <td style="text-align:right;font-weight:700;color:var(--teal-dim);">77.8%</td>
+                <td style="text-align:right;">3</td>
+                <td style="text-align:right;">1.00</td>
+                <td style="text-align:right;">0.12</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 27 – Jul 20, 2026</td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">4</td>
+                <td><strong>Diken International S. de R.L. de C.V.</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Avenida Industria Aeroespacial 2900, Ramos Arizpe Coahuila 25900, Mexico</div></td>
+                <td><strong>Ciudad Hidalgo, Chiapas</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                <td><strong>Diken de Costa Rica SYV S.A.</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">CALLE DE CAFE VOLIO 200 OESTE 25 NORTE CURRIDABAT SAN JOSE 11613</div><div style="font-size:9px;color:#b45309;font-weight:700;margin-top:2px;">DISCOVERY HYPOTHESIS — affiliate status requires validation</div></td>
+                <td><span class="hub-tag truck">Truck</span></td>
+                <td style="text-align:right;font-weight:700;">2</td>
+                <td style="text-align:right;font-weight:700;">4.4%</td>
+                <td style="text-align:right;font-weight:800;color:var(--teal-dim);">82.2%</td>
+                <td style="text-align:right;">2</td>
+                <td style="text-align:right;">1.00</td>
+                <td style="text-align:right;">0.10</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Mar 14 – Jul 29, 2026</td>
+              </tr>
+            </tbody>
+            <tfoot><tr style="background:var(--bg);">
+              <td colspan="5" style="font-weight:800;color:var(--navy);padding:10px 12px;">4 Core Routes · 37 of 45 visible Export Shipments · complete ≥80% set</td>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">37</td>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">82.2%</td>
+              <td style="text-align:right;font-weight:800;color:var(--teal-dim);">82.2%</td>
+              <td colspan="4"></td>
+            </tr></tfoot>
+          </table>
+        </div>
+
+        <div style="margin-top:12px;height:14px;display:flex;border-radius:7px;overflow:hidden;border:1px solid var(--border);">
+          <div style="width:62.2%;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;color:#fff;">#1 · 62.2%</div>
+          <div style="width:8.9%;background:var(--teal);" title="Route #2 · 8.9%"></div>
+          <div style="width:6.7%;background:#f59e0b;" title="Route #3 · 6.7%"></div>
+          <div style="width:4.4%;background:#94a3b8;" title="Route #4 · 4.4%"></div>
+          <div style="width:17.8%;background:#e6eaf1;"></div>
+        </div>
+        <div style="font-size:9px;color:var(--text-light);margin-top:4px;">Cumulative coverage of the 45-Shipment visible Export universe · 82.2% reached at Route #4.</div>
+
+        <div style="margin-top:14px;padding:12px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.65;"><strong style="color:#b45309;">Route ranks are factual and are rendered exactly as supplied by AIOS.</strong> No Commercial Route Priority score is created anywhere on this page. On Route #3, the Panjiva Consignee Address Field (<strong>Puerto Rico</strong>) and the Panjiva Shipment Destination (<strong>El Salvador</strong>) are <strong>both preserved and not reconciled</strong>.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 09 ROUTE FREQUENCY INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">09</span> Route Frequency Intelligence — Observed Route Cadence</div>
+      <div class="card-body">
+        <div style="overflow-x:auto;">
+          <table class="hub-table" style="font-size:11px;min-width:900px;">
+            <thead><tr><th>Period</th><th>Core Route</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">Active Months</th><th style="text-align:right;">Shipments / Active Month</th><th style="text-align:right;">Shipments / Week</th><th>Visible Date Range</th></tr></thead>
+            <tbody>
+              <tr style="background:rgba(0,180,216,0.04);"><td><strong style="color:var(--navy);">2026 YTD</strong></td><td><span class="hub-tag air">Import</span> <strong>#1</strong> E Global → Nuevo Laredo → Diken Institucional</td><td style="text-align:right;font-weight:800;">13</td><td style="text-align:right;">7</td><td style="text-align:right;font-weight:700;">1.86</td><td style="text-align:right;font-weight:700;">0.53</td><td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 30 – Jul 21, 2026</td></tr>
+              <tr style="background:rgba(0,180,216,0.04);"><td><strong style="color:var(--navy);">2026 YTD</strong></td><td><span class="hub-tag ocean">Export</span> <strong>#1</strong> Diken de México → Colombia, Nuevo León → Diken International LLC</td><td style="text-align:right;font-weight:800;">28</td><td style="text-align:right;">7</td><td style="text-align:right;font-weight:700;">4.00</td><td style="text-align:right;font-weight:700;">0.99</td><td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 12 – Jul 27, 2026</td></tr>
+              <tr style="background:rgba(0,180,216,0.04);"><td><strong style="color:var(--navy);">2026 YTD</strong></td><td><span class="hub-tag ocean">Export</span> <strong>#2</strong> Diken International Ramos Arizpe → Altamira → Tecnas</td><td style="text-align:right;font-weight:700;">4</td><td style="text-align:right;">4</td><td style="text-align:right;">1.00</td><td style="text-align:right;">0.17</td><td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Feb 11 – Jul 24, 2026</td></tr>
+              <tr style="background:rgba(0,180,216,0.04);"><td><strong style="color:var(--navy);">2026 YTD</strong></td><td><span class="hub-tag ocean">Export</span> <strong>#3</strong> Diken International Ramos Arizpe → Ciudad Hidalgo → Agromarket</td><td style="text-align:right;font-weight:700;">3</td><td style="text-align:right;">3</td><td style="text-align:right;">1.00</td><td style="text-align:right;">0.12</td><td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 27 – Jul 20, 2026</td></tr>
+              <tr style="background:rgba(0,180,216,0.04);"><td><strong style="color:var(--navy);">2026 YTD</strong></td><td><span class="hub-tag ocean">Export</span> <strong>#4</strong> Diken International Ramos Arizpe → Ciudad Hidalgo → Diken de Costa Rica</td><td style="text-align:right;font-weight:700;">2</td><td style="text-align:right;">2</td><td style="text-align:right;">1.00</td><td style="text-align:right;">0.10</td><td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Mar 14 – Jul 29, 2026</td></tr>
+              <tr><td style="color:var(--text-muted);"><strong>2025</strong></td><td style="color:var(--text-muted);"><span class="hub-tag air">Import</span> <strong>#1</strong> E Global → Nuevo Laredo → Diken Institucional</td><td style="text-align:right;font-weight:700;color:var(--text-muted);">19</td><td style="text-align:right;color:var(--text-muted);">12</td><td style="text-align:right;color:var(--text-muted);">1.58</td><td style="text-align:right;color:var(--text-muted);">0.38</td><td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 3 – Dec 16, 2025</td></tr>
+              <tr><td style="color:var(--text-muted);"><strong>2025</strong></td><td style="color:var(--text-muted);"><span class="hub-tag ocean">Export</span> <strong>#1</strong> Diken de México → Colombia, Nuevo León → Diken International LLC</td><td style="text-align:right;font-weight:700;color:var(--text-muted);">53</td><td style="text-align:right;color:var(--text-muted);">12</td><td style="text-align:right;color:var(--text-muted);">4.42</td><td style="text-align:right;color:var(--text-muted);">1.09</td><td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 13 – Dec 19, 2025</td></tr>
+              <tr><td style="color:var(--text-muted);"><strong>2025</strong></td><td style="color:var(--text-muted);"><span class="hub-tag ocean">Export</span> <strong>#2</strong> Diken International Ramos Arizpe → Altamira → Tecnas</td><td style="text-align:right;color:var(--text-muted);">7</td><td style="text-align:right;color:var(--text-muted);">6</td><td style="text-align:right;color:var(--text-muted);">1.17</td><td style="text-align:right;color:var(--text-muted);">0.15</td><td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 17 – Dec 12, 2025</td></tr>
+              <tr><td style="color:var(--text-muted);"><strong>2025</strong></td><td style="color:var(--text-muted);"><span class="hub-tag ocean">Export</span> <strong>#3</strong> Diken International Ramos Arizpe → Ciudad Hidalgo → Dimedisa</td><td style="text-align:right;color:var(--text-muted);">6</td><td style="text-align:right;color:var(--text-muted);">6</td><td style="text-align:right;color:var(--text-muted);">1.00</td><td style="text-align:right;color:var(--text-muted);">0.13</td><td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 10 – Dec 11, 2025</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="margin-top:12px;padding:12px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.65;"><strong style="color:#b45309;">Observed Route Cadence reflects the route's own visible date window and must not be extrapolated into a forecast or normalized weekly volume.</strong> Every frequency value above is supplied by AIOS and is rendered without recalculation. The visible date range is kept adjacent to each cadence value.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10 ROUTE PERSISTENCE / CHANGE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">10</span> Route Persistence &amp; Core Route Set Change</div>
+      <div class="card-body">
+        <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:8px;">Persisting Core Routes — visible in both periods</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:10px;">
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">Persisting Import Core Route</div><div style="font-size:12.5px;font-weight:700;color:var(--navy);line-height:1.45;margin-top:4px;">E Global → Nuevo Laredo → Diken Institucional</div><div class="stat-sub">2025: 19 Shipments · 90.5% &nbsp;|&nbsp; 2026 YTD: 13 · 86.7%</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">Persisting Export Core Route</div><div style="font-size:12.5px;font-weight:700;color:var(--navy);line-height:1.45;margin-top:4px;">Diken de México → Colombia, Nuevo León → Diken International LLC</div><div class="stat-sub">2025: 53 Shipments · 66.3% &nbsp;|&nbsp; 2026 YTD: 28 · 62.2%</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">Persisting Export Core Route</div><div style="font-size:12.5px;font-weight:700;color:var(--navy);line-height:1.45;margin-top:4px;">Diken International Ramos Arizpe → Altamira → Tecnas</div><div class="stat-sub">2025: 7 Shipments · 8.8% &nbsp;|&nbsp; 2026 YTD: 4 · 8.9%</div></div>
+        </div>
+
+        <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--navy);margin:18px 0 8px;">Current YTD Core Route Set Change</div>
+        <div style="overflow-x:auto;">
+          <table class="hub-table" style="font-size:11px;">
+            <thead><tr><th>Trading Partner</th><th>Core Route set status</th><th>Governance applied</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Agromarket</strong></td><td><strong style="color:var(--teal-dim);">Newly visible in Current YTD Core Route set</strong></td><td style="color:var(--text-muted);">Not labelled a new Customer, new Supplier or new route.</td></tr>
+              <tr><td><strong>Diken Costa Rica</strong></td><td><strong style="color:var(--teal-dim);">Newly visible in Current YTD Core Route set</strong></td><td style="color:var(--text-muted);">Not labelled a new Customer, new Supplier or new route.</td></tr>
+              <tr><td><strong>Dimedisa</strong></td><td><strong style="color:#b45309;">Not visible in Current YTD Core Route set</strong></td><td style="color:var(--text-muted);">Not labelled discontinued, terminated, a lost Customer, a lost Supplier or a provider change.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="margin-top:12px;padding:12px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.65;">These labels describe <strong>Core Route set membership only</strong>. They are <strong style="color:#b45309;">never</strong> converted into new Customer, new Supplier, new route, discontinued, terminated, lost Customer, lost Supplier or provider changed — none of which is supported by Panjiva. <strong>Dimedisa S.A. remains visible as a Current YTD Trading Partner</strong> (2 Shipments · 4.4%); it is the <strong>Core Route set</strong> in which it is not visible.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 11 HISTORICAL 2025 IMPORT CORE ROUTES — PROGRESSIVE DISCLOSURE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">11</span> Historical Import Core Routes — 2025 Established Operating Structure</div>
+      <div class="card-body">
+        <div class="grid-4" style="gap:10px;">
+          <div class="stat-box"><div class="stat-label">2025 Import Universe</div><div class="stat-value" style="font-size:26px;">21</div><div class="stat-sub">Visible Import Shipments · full calendar year</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--red);"><div class="stat-label">Complete Core Route Set</div><div class="stat-value red" style="font-size:26px;">1 <span style="font-size:15px;color:var(--text-muted);font-weight:700;">route</span></div><div class="stat-sub">Reaches ≥80% on its own</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--red);"><div class="stat-label">Cumulative Coverage</div><div class="stat-value red" style="font-size:26px;">90.5%</div><div class="stat-sub">19 of 21 visible Import Shipments</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--red);background:rgba(232,0,45,0.04);"><div class="stat-label">Route Status</div><div class="stat-value" style="font-size:14px;line-height:1.3;color:var(--red);font-weight:800;letter-spacing:0.4px;">EXTREME ROUTE CONCENTRATION</div><div class="stat-sub">Structure persists from 2025 into Current YTD</div></div>
+        </div>
+        <div style="margin-top:12px;padding:10px 14px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.6;">2025 is the <strong>Established Operating Structure / Historical Baseline</strong>. It is held <strong>strictly separate</strong> from Current YTD, is never aggregated with it, and remains visually subordinate to the Current Operating State. The complete ≥80% historical Core Route set is preserved below and <strong>prints in full</strong>.</span>
+        </div>
+
+        <div class="outreach-step hist-appendix" style="margin-top:14px;">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)">
+            <span>View 2025 Import Core Routes — Complete Set · 1 Route / 90.5% of 21 Imports</span>
+            <span class="outreach-step-toggle">+</span>
+          </div>
+          <div class="outreach-step-body" style="padding:0;">
+            <div class="hist-appendix-label" style="padding:10px 16px;background:var(--bg);border-bottom:1px solid var(--border);">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-light);">Historical Core Route Appendix — 2025 Imports · Complete ≥80% Set</div>
+              <div style="font-size:10px;color:var(--text-muted);margin-top:2px;">Reference detail only. The Current Operating State remains the primary narrative. No historical Core Route is deleted to reduce visual density.</div>
+            </div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;min-width:1060px;">
+                <thead><tr>
+                  <th style="text-align:right;">Rank</th><th>Origin</th><th>Gateway</th><th>Destination</th><th>Mode</th>
+                  <th style="text-align:right;">Shipments</th><th style="text-align:right;">% Imports</th><th style="text-align:right;">Cumulative</th>
+                  <th style="text-align:right;">Active Months</th><th style="text-align:right;">/ Month</th><th style="text-align:right;">/ Week</th><th>Visible Date Range</th>
+                </tr></thead>
+                <tbody>
+                  <tr>
+                    <td style="text-align:right;font-weight:700;color:var(--text-muted);">1</td>
+                    <td><strong>E Global Enterprises Inc.</strong><div style="font-size:9px;color:var(--text-light);">Panjiva Origin Precision: United States</div></td>
+                    <td><strong>Nuevo Laredo, Tamaulipas</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                    <td><strong>Diken Institucional S.A. de C.V.</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">AV INDUSTRIA AEROESPACIAL 2900 PARQUE INDUSTRIAL RAMOS ARIZPE</div></td>
+                    <td><span class="hub-tag truck">Truck</span></td>
+                    <td style="text-align:right;font-weight:800;">19</td>
+                    <td style="text-align:right;font-weight:700;">90.5%</td>
+                    <td style="text-align:right;font-weight:700;color:var(--text-muted);">90.5%</td>
+                    <td style="text-align:right;">12</td>
+                    <td style="text-align:right;">1.58</td>
+                    <td style="text-align:right;">0.38</td>
+                    <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 3 – Dec 16, 2025</td>
+                  </tr>
+                </tbody>
+                <tfoot><tr style="background:var(--bg);">
+                  <td colspan="5" style="font-weight:800;color:var(--navy);padding:10px 12px;">1 Core Route · 19 of 21 visible Import Shipments · complete ≥80% set</td>
+                  <td style="text-align:right;font-weight:800;color:var(--navy);">19</td>
+                  <td style="text-align:right;font-weight:800;color:var(--navy);">90.5%</td>
+                  <td style="text-align:right;font-weight:800;color:var(--text-muted);">90.5%</td>
+                  <td colspan="4"></td>
+                </tr></tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12 HISTORICAL 2025 EXPORT CORE ROUTES — PROGRESSIVE DISCLOSURE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">12</span> Historical Export Core Routes — 2025 Established Operating Structure</div>
+      <div class="card-body">
+        <div class="grid-4" style="gap:10px;">
+          <div class="stat-box"><div class="stat-label">2025 Export Universe</div><div class="stat-value" style="font-size:26px;">80</div><div class="stat-sub">Visible Export Shipments · full calendar year</div></div>
+          <div class="stat-box"><div class="stat-label">Complete Core Route Set</div><div class="stat-value" style="font-size:26px;">3 <span style="font-size:15px;color:var(--text-muted);font-weight:700;">routes</span></div><div class="stat-sub">Current YTD required <strong>4</strong> routes</div></div>
+          <div class="stat-box"><div class="stat-label">Cumulative Coverage</div><div class="stat-value" style="font-size:26px;">82.5%</div><div class="stat-sub">66 of 80 visible Export Shipments</div></div>
+          <div class="stat-box"><div class="stat-label">Leading Route Share</div><div class="stat-value" style="font-size:26px;">66.3%</div><div class="stat-sub">Route #1 · Current YTD: 62.2%</div></div>
+        </div>
+
+        <div class="outreach-step hist-appendix" style="margin-top:14px;">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)">
+            <span>View 2025 Export Core Routes — Complete Set · 3 Routes / 82.5% of 80 Exports</span>
+            <span class="outreach-step-toggle">+</span>
+          </div>
+          <div class="outreach-step-body" style="padding:0;">
+            <div class="hist-appendix-label" style="padding:10px 16px;background:var(--bg);border-bottom:1px solid var(--border);">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-light);">Historical Core Route Appendix — 2025 Exports · Complete ≥80% Set</div>
+              <div style="font-size:10px;color:var(--text-muted);margin-top:2px;">All 3 routes are preserved. Visual simplification never deletes a historical Core Route.</div>
+            </div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;min-width:1120px;">
+                <thead><tr>
+                  <th style="text-align:right;">Rank</th><th>Origin</th><th>Gateway</th><th>Destination</th><th>Mode</th>
+                  <th style="text-align:right;">Shipments</th><th style="text-align:right;">% Exports</th><th style="text-align:right;">Cumulative</th>
+                  <th style="text-align:right;">Active Months</th><th style="text-align:right;">/ Month</th><th style="text-align:right;">/ Week</th><th>Visible Date Range</th>
+                </tr></thead>
+                <tbody>
+                  <tr>
+                    <td style="text-align:right;font-weight:700;color:var(--text-muted);">1</td>
+                    <td><strong>Diken de México S.A. de C.V.</strong><div style="font-size:9px;color:var(--text-light);">Panjiva Origin Precision: Mexico</div></td>
+                    <td><strong>Colombia, Nuevo León</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                    <td><strong>Diken International LLC</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">2940 Wesley Way, Richland Hills, TX 76118, USA</div></td>
+                    <td><span class="hub-tag truck">Truck</span></td>
+                    <td style="text-align:right;font-weight:800;">53</td>
+                    <td style="text-align:right;font-weight:700;">66.3%</td>
+                    <td style="text-align:right;font-weight:700;color:var(--text-muted);">66.3%</td>
+                    <td style="text-align:right;">12</td>
+                    <td style="text-align:right;">4.42</td>
+                    <td style="text-align:right;">1.09</td>
+                    <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 13 – Dec 19, 2025</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align:right;font-weight:700;color:var(--text-muted);">2</td>
+                    <td><strong>Diken International S. de R.L. de C.V.</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Avenida Industria Aeroespacial 2900, Ramos Arizpe Coahuila 25900, Mexico</div></td>
+                    <td><strong>Altamira, Tamaulipas</strong><div style="font-size:9px;color:var(--text-light);">Port</div></td>
+                    <td><strong>Tecnas S.A. BIC</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Cra. 50g, Itagüi, Medellín, Antioquia, Colombia</div></td>
+                    <td><span class="hub-tag ocean">Maritime</span></td>
+                    <td style="text-align:right;font-weight:700;">7</td>
+                    <td style="text-align:right;">8.8%</td>
+                    <td style="text-align:right;font-weight:700;color:var(--text-muted);">75.0%</td>
+                    <td style="text-align:right;">6</td>
+                    <td style="text-align:right;">1.17</td>
+                    <td style="text-align:right;">0.15</td>
+                    <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 17 – Dec 12, 2025</td>
+                  </tr>
+                  <tr style="background:rgba(245,158,11,0.05);">
+                    <td style="text-align:right;font-weight:700;color:var(--text-muted);">3</td>
+                    <td><strong>Diken International S. de R.L. de C.V.</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Avenida Industria Aeroespacial 2900, Ramos Arizpe Coahuila 25900, Mexico</div></td>
+                    <td><strong>Ciudad Hidalgo, Chiapas</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                    <td><strong>Dimedisa S.A.</strong><div style="font-size:9px;color:var(--text-muted);">Panjiva Consignee Address Field: <strong>Puerto Rico</strong></div><div style="font-size:9px;color:var(--text-muted);">Panjiva Shipment Destination: <strong>Panama</strong></div><div style="font-size:9px;color:#b45309;font-weight:700;margin-top:2px;">DATA QUALITY / ENTITY RESOLUTION HYPOTHESIS — REQUIRES VALIDATION</div></td>
+                    <td><span class="hub-tag truck">Truck</span></td>
+                    <td style="text-align:right;font-weight:700;">6</td>
+                    <td style="text-align:right;">7.5%</td>
+                    <td style="text-align:right;font-weight:800;color:var(--text-muted);">82.5%</td>
+                    <td style="text-align:right;">6</td>
+                    <td style="text-align:right;">1.00</td>
+                    <td style="text-align:right;">0.13</td>
+                    <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">Jan 10 – Dec 11, 2025</td>
+                  </tr>
+                </tbody>
+                <tfoot><tr style="background:var(--bg);">
+                  <td colspan="5" style="font-weight:800;color:var(--navy);padding:10px 12px;">3 Core Routes · 66 of 80 visible Export Shipments · complete ≥80% set</td>
+                  <td style="text-align:right;font-weight:800;color:var(--navy);">66</td>
+                  <td style="text-align:right;font-weight:800;color:var(--navy);">82.5%</td>
+                  <td style="text-align:right;font-weight:800;color:var(--text-muted);">82.5%</td>
+                  <td colspan="4"></td>
+                </tr></tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:12px;padding:10px 14px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.6;">On 2025 Export Core Route #3 the Panjiva Consignee Address Field (<strong>Puerto Rico</strong>) and the Panjiva Shipment Destination (<strong>Panama</strong>) are <strong style="color:#b45309;">both preserved and not reconciled</strong>.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 13 HS INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">13</span> HS Intelligence — Top 5 by Period and Direction</div>
+      <div class="card-body">
+        <div style="padding:11px 15px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;margin-bottom:14px;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.65;"><strong style="color:#b45309;">One Shipment may contain multiple HS Codes. HS counts represent operational presence and are not additive.</strong> Percentages are the share of visible Shipments in which the HS Code appears — they do not sum to 100%.</span>
+        </div>
+        <div class="grid-2" style="gap:18px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:8px;">2026 YTD Exports · Top 5 · universe 45 Shipments</div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th>HS Code</th><th>Description</th><th style="text-align:right;">Presence</th><th style="text-align:right;">% Shipments</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>3402909900</strong></td><td style="color:var(--text-muted);">Cleaning / washing preparations, other</td><td style="text-align:right;font-weight:800;">41</td><td style="text-align:right;font-weight:800;color:var(--navy);">91.1%</td></tr>
+                  <tr><td><strong>3808949900</strong></td><td style="color:var(--text-muted);">Disinfectant preparations, other</td><td style="text-align:right;font-weight:700;">38</td><td style="text-align:right;font-weight:700;">84.4%</td></tr>
+                  <tr><td><strong>3307499900</strong></td><td style="color:var(--text-muted);">Room deodorizing / perfuming preparations, other</td><td style="text-align:right;font-weight:700;">22</td><td style="text-align:right;">48.9%</td></tr>
+                  <tr><td><strong>3401200100</strong></td><td style="color:var(--text-muted);">Soap / soap-form products</td><td style="text-align:right;font-weight:700;">21</td><td style="text-align:right;">46.7%</td></tr>
+                  <tr><td><strong>3215199999</strong></td><td style="color:var(--text-muted);">Printing inks, other</td><td style="text-align:right;font-weight:700;">18</td><td style="text-align:right;">40.0%</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin:16px 0 8px;">2026 YTD Imports · Top 5 · universe 15 Shipments</div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th>HS Code</th><th>Description</th><th style="text-align:right;">Presence</th><th style="text-align:right;">% Shipments</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>3926209900</strong></td><td style="color:var(--text-muted);">Plastic apparel / protective articles</td><td style="text-align:right;font-weight:800;">13</td><td style="text-align:right;font-weight:800;color:var(--navy);">86.7%</td></tr>
+                  <tr><td><strong>3926909999</strong></td><td style="color:var(--text-muted);">Other plastic articles</td><td style="text-align:right;font-weight:700;">12</td><td style="text-align:right;font-weight:700;">80.0%</td></tr>
+                  <tr><td><strong>9603909900</strong></td><td style="color:var(--text-muted);">Brooms / brushes / cleaning implements, other</td><td style="text-align:right;font-weight:700;">12</td><td style="text-align:right;font-weight:700;">80.0%</td></tr>
+                  <tr><td><strong>3924909900</strong></td><td style="color:var(--text-muted);">Household / hygienic plastic articles, other</td><td style="text-align:right;font-weight:700;">12</td><td style="text-align:right;font-weight:700;">80.0%</td></tr>
+                  <tr><td><strong>6201409901</strong></td><td style="color:var(--text-muted);">Outerwear / jackets</td><td style="text-align:right;font-weight:700;">11</td><td style="text-align:right;">73.3%</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);margin-bottom:8px;">2025 Exports · Top 5 · universe 80 Shipments</div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th>HS Code</th><th>Description</th><th style="text-align:right;">Presence</th><th style="text-align:right;">% Shipments</th></tr></thead>
+                <tbody>
+                  <tr><td style="color:var(--text-muted);"><strong>3402909900</strong></td><td style="color:var(--text-muted);">Cleaning / washing preparations, other</td><td style="text-align:right;font-weight:700;color:var(--text-muted);">74</td><td style="text-align:right;font-weight:700;color:var(--text-muted);">92.5%</td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>3808949900</strong></td><td style="color:var(--text-muted);">Disinfectant preparations, other</td><td style="text-align:right;color:var(--text-muted);">67</td><td style="text-align:right;color:var(--text-muted);">83.8%</td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>3307499900</strong></td><td style="color:var(--text-muted);">Room deodorizing / perfuming preparations, other</td><td style="text-align:right;color:var(--text-muted);">40</td><td style="text-align:right;color:var(--text-muted);">50.0%</td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>3401200100</strong></td><td style="color:var(--text-muted);">Soap / soap-form products</td><td style="text-align:right;color:var(--text-muted);">38</td><td style="text-align:right;color:var(--text-muted);">47.5%</td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>3307909900</strong></td><td style="color:var(--text-muted);">Other perfumery / toilet preparations</td><td style="text-align:right;color:var(--text-muted);">31</td><td style="text-align:right;color:var(--text-muted);">38.8%</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);margin:16px 0 8px;">2025 Imports · Top 5 · universe 21 Shipments</div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th>HS Code</th><th>Description</th><th style="text-align:right;">Presence</th><th style="text-align:right;">% Shipments</th></tr></thead>
+                <tbody>
+                  <tr><td style="color:var(--text-muted);"><strong>3926909999</strong></td><td style="color:var(--text-muted);">Other plastic articles</td><td style="text-align:right;font-weight:700;color:var(--text-muted);">20</td><td style="text-align:right;font-weight:700;color:var(--text-muted);">95.2%</td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>9603909900</strong></td><td style="color:var(--text-muted);">Brooms / brushes / cleaning implements, other</td><td style="text-align:right;color:var(--text-muted);">20</td><td style="text-align:right;color:var(--text-muted);">95.2%</td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>3926209900</strong></td><td style="color:var(--text-muted);">Plastic apparel / protective articles</td><td style="text-align:right;color:var(--text-muted);">20</td><td style="text-align:right;color:var(--text-muted);">95.2%</td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>6201409901</strong></td><td style="color:var(--text-muted);">Outerwear / jackets</td><td style="text-align:right;color:var(--text-muted);">19</td><td style="text-align:right;color:var(--text-muted);">90.5%</td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>3923300201</strong></td><td style="color:var(--text-muted);">Plastic containers / buckets-type articles</td><td style="text-align:right;color:var(--text-muted);">18</td><td style="text-align:right;color:var(--text-muted);">85.7%</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 14 HS PORTFOLIO TREND -->
+    <div class="card">
+      <div class="card-header"><span class="accent">14</span> HS Portfolio Trend — Operational Portfolio Intelligence</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:14px;">
+          <div style="padding:16px 18px;background:rgba(13,43,94,0.04);border:1px solid var(--border);border-radius:8px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal-dim);">Visible Exports</div>
+            <div style="font-size:15px;font-weight:800;color:var(--navy);margin-top:4px;line-height:1.4;">Highly consistent around cleaning, sanitation and related chemical preparations</div>
+            <div style="margin-top:10px;display:flex;flex-wrap:wrap;gap:5px;">
+              <span class="hub-tag ocean">Cleaning / washing preparations</span>
+              <span class="hub-tag ocean">Disinfectant preparations</span>
+              <span class="hub-tag ocean">Room deodorizing / perfuming</span>
+              <span class="hub-tag ocean">Soap / soap-form products</span>
+            </div>
+            <div style="font-size:10px;color:var(--text-muted);line-height:1.6;margin-top:10px;">The four leading export HS Codes are shared across 2025 and Current YTD. <strong>Printing inks (3215199999)</strong> appears in the Current YTD top five; <strong>other perfumery / toilet preparations (3307909900)</strong> appears in the 2025 top five.</div>
+          </div>
+          <div style="padding:16px 18px;background:rgba(0,180,216,0.05);border:1px solid rgba(0,180,216,0.3);border-radius:8px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal-dim);">Visible Imports</div>
+            <div style="font-size:15px;font-weight:800;color:var(--navy);margin-top:4px;line-height:1.4;">Concentrated in plastic tools / articles, cleaning implements and protective apparel</div>
+            <div style="margin-top:10px;display:flex;flex-wrap:wrap;gap:5px;">
+              <span class="hub-tag air">Plastic apparel / protective articles</span>
+              <span class="hub-tag air">Other plastic articles</span>
+              <span class="hub-tag air">Brooms / brushes / cleaning implements</span>
+              <span class="hub-tag air">Outerwear / jackets</span>
+            </div>
+            <div style="font-size:10px;color:var(--text-muted);line-height:1.6;margin-top:10px;">Four of the five leading import HS Codes are shared across both periods. <strong>Household / hygienic plastic articles (3924909900)</strong> appears in the Current YTD top five; <strong>plastic containers / buckets-type articles (3923300201)</strong> appears in the 2025 top five.</div>
+          </div>
+        </div>
+        <div style="margin-top:12px;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:6px;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.65;"><strong style="color:var(--navy);">Treat this as operational portfolio intelligence.</strong> HS composition describes what is visibly moving; it does not establish product strategy, sourcing decisions, manufacturing footprint or commercial intent. <strong style="color:#b45309;">HS presence counts remain non-additive.</strong></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 15 TRADING PARTNER INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">15</span> Trading Partner Intelligence — Current YTD 2026</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:18px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:8px;">Export Destination Partners · universe 45 Shipments</div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th>Trading Partner</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">% Exports</th><th style="width:20%;"></th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Diken International LLC</strong><div style="font-size:9px;color:#b45309;font-weight:700;">DISCOVERY HYPOTHESIS — affiliate / intercompany status requires validation</div></td><td style="text-align:right;font-weight:800;">28</td><td style="text-align:right;font-weight:800;color:var(--navy);">62.2%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:100%;background:var(--navy);"></div></div></td></tr>
+                  <tr><td><strong>Negocios y Servicios Agropecuarios S.A.</strong></td><td style="text-align:right;font-weight:700;">4</td><td style="text-align:right;font-weight:700;">8.9%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:14%;background:var(--teal);"></div></div></td></tr>
+                  <tr><td><strong>Tecnas S.A. BIC</strong></td><td style="text-align:right;font-weight:700;">4</td><td style="text-align:right;font-weight:700;">8.9%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:14%;background:var(--teal);"></div></div></td></tr>
+                  <tr><td><strong>Agromarket S.A. de C.V.</strong><div style="font-size:9px;color:#b45309;font-weight:700;">DATA QUALITY / ENTITY RESOLUTION HYPOTHESIS — REQUIRES VALIDATION</div></td><td style="text-align:right;font-weight:700;">3</td><td style="text-align:right;">6.7%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:11%;background:#f59e0b;"></div></div></td></tr>
+                  <tr><td><strong>Diken de Costa Rica SYV S.A.</strong><div style="font-size:9px;color:#b45309;font-weight:700;">DISCOVERY HYPOTHESIS — affiliate / intercompany status requires validation</div></td><td style="text-align:right;font-weight:700;">2</td><td style="text-align:right;">4.4%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:7%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td><strong>Dimedisa S.A.</strong><div style="font-size:9px;color:#b45309;font-weight:700;">DATA QUALITY / ENTITY RESOLUTION HYPOTHESIS — REQUIRES VALIDATION</div></td><td style="text-align:right;font-weight:700;">2</td><td style="text-align:right;">4.4%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:7%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td><strong>Macao Alto Resort SRL</strong></td><td style="text-align:right;font-weight:700;">1</td><td style="text-align:right;">2.2%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:4%;background:#94a3b8;"></div></div></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div style="margin-top:8px;font-size:10px;color:var(--text-muted);line-height:1.6;">Trading Partners are rendered exactly as supplied by AIOS. <strong style="color:#b45309;">No partner is classified as a Customer, Supplier or affiliate on this page.</strong></div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:8px;">Import Origin Partner · universe 15 Shipments</div>
+            <div style="padding:18px 20px;background:rgba(232,0,45,0.04);border:1px solid rgba(232,0,45,0.22);border-radius:8px;">
+              <div style="font-size:17px;font-weight:800;color:var(--navy);line-height:1.35;">E Global Enterprises Inc.</div>
+              <div style="display:flex;gap:26px;margin-top:12px;flex-wrap:wrap;">
+                <div><div style="font-size:26px;font-weight:800;color:var(--red);">15</div><div style="font-size:9px;color:var(--text-muted);letter-spacing:0.5px;">SHIPMENTS</div></div>
+                <div><div style="font-size:26px;font-weight:800;color:var(--red);">100%</div><div style="font-size:9px;color:var(--text-muted);letter-spacing:0.5px;">OF VISIBLE IMPORTS</div></div>
+              </div>
+              <div style="font-size:10px;color:#b45309;font-weight:700;margin-top:10px;">Address not available in Panjiva</div>
+              <div style="font-size:10px;color:var(--text-light);line-height:1.55;margin-top:3px;font-style:italic;">Some source rows provide only: United States. This location is not enriched.</div>
+            </div>
+            <div style="margin-top:14px;padding:14px 18px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 6px 6px 0;">
+              <div style="font-size:9px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:#b45309;margin-bottom:6px;">Discovery Hypothesis — requires validation</div>
+              <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;">Diken-named destination entities <strong>may</strong> represent affiliate or intercompany relationships. <strong style="color:var(--navy);">Diken International LLC</strong> and <strong style="color:var(--navy);">Diken de Costa Rica SYV S.A.</strong> are <strong style="color:#b45309;">not automatically labelled external Customers</strong>.</p>
+              <p style="font-size:11px;color:var(--text-muted);line-height:1.7;margin-top:8px;"><strong>Panjiva does not establish corporate ownership or commercial relationship structure.</strong> This must be validated in Discovery.</p>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:14px;padding:10px 14px;background:var(--bg);border:1px solid var(--border);border-radius:6px;">
+          <span style="font-size:10px;color:var(--text-muted);line-height:1.6;">The executive umbrella term used throughout this page is <strong style="color:var(--navy);">Trading Partners</strong>.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 16 CUSTOMS / REGIME INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">16</span> Customs &amp; Regime Intelligence</div>
+      <div class="card-body">
+        <div style="padding:12px 16px;background:rgba(13,43,94,0.03);border:1px solid var(--border);border-radius:6px;margin-bottom:14px;display:flex;gap:20px;flex-wrap:wrap;align-items:center;">
+          <div><div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);">Customs Regime · all supplied records</div><div style="font-size:15px;font-weight:800;color:var(--navy);margin-top:2px;">Final Import / Export</div></div>
+          <div style="flex:1;min-width:280px;"><span style="font-size:10px;color:var(--text-muted);line-height:1.6;">Panjiva provides <strong>customs-agent codes</strong> in the supplied data. <strong style="color:#b45309;">No customs agency company name is invented anywhere on this page — codes remain codes.</strong></span></div>
+        </div>
+        <div class="grid-2" style="gap:18px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:8px;">Current YTD 2026 · Customs Agent Codes</div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th>Direction</th><th>Agent Code</th><th style="text-align:right;">Shipments</th><th style="width:24%;"></th></tr></thead>
+                <tbody>
+                  <tr><td rowspan="5" style="vertical-align:middle;"><strong>Exports</strong><div style="font-size:9px;color:var(--text-light);">45 Shipments</div></td><td><strong>3984</strong></td><td style="text-align:right;font-weight:800;">28</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:100%;background:var(--navy);"></div></div></td></tr>
+                  <tr><td><strong>3950</strong></td><td style="text-align:right;font-weight:700;">7</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:25%;background:var(--teal);"></div></div></td></tr>
+                  <tr><td><strong>3889</strong></td><td style="text-align:right;font-weight:700;">4</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:14%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td><strong>1663</strong></td><td style="text-align:right;font-weight:700;">4</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:14%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td><strong>3506</strong></td><td style="text-align:right;font-weight:700;">2</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:7%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td rowspan="2" style="vertical-align:middle;"><strong>Imports</strong><div style="font-size:9px;color:var(--text-light);">15 Shipments</div></td><td><strong>1807</strong></td><td style="text-align:right;font-weight:800;">13</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:100%;background:var(--navy);"></div></div></td></tr>
+                  <tr><td><strong>3481</strong></td><td style="text-align:right;font-weight:700;">2</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:15%;background:#94a3b8;"></div></div></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);margin-bottom:8px;">2025 Baseline · Customs Agent Codes</div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th>Direction</th><th>Agent Code</th><th style="text-align:right;">Shipments</th><th style="width:24%;"></th></tr></thead>
+                <tbody>
+                  <tr><td rowspan="5" style="vertical-align:middle;color:var(--text-muted);"><strong>Exports</strong><div style="font-size:9px;color:var(--text-light);">80 Shipments</div></td><td style="color:var(--text-muted);"><strong>3984</strong></td><td style="text-align:right;font-weight:700;color:var(--text-muted);">53</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:100%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>3950</strong></td><td style="text-align:right;color:var(--text-muted);">15</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:28%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>1663</strong></td><td style="text-align:right;color:var(--text-muted);">7</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:13%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>1747</strong></td><td style="text-align:right;color:var(--text-muted);">3</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:6%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>1914</strong></td><td style="text-align:right;color:var(--text-muted);">2</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:4%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td rowspan="3" style="vertical-align:middle;color:var(--text-muted);"><strong>Imports</strong><div style="font-size:9px;color:var(--text-light);">21 Shipments</div></td><td style="color:var(--text-muted);"><strong>1807</strong></td><td style="text-align:right;font-weight:700;color:var(--text-muted);">19</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:100%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>1852</strong></td><td style="text-align:right;color:var(--text-muted);">1</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:5%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>1747</strong></td><td style="text-align:right;color:var(--text-muted);">1</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:5%;background:#94a3b8;"></div></div></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:14px;padding:12px 16px;background:rgba(13,43,94,0.03);border:1px solid var(--border);border-radius:6px;">
+          <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:6px;">AIOS Interpretation</div>
+          <p style="font-size:11.5px;color:var(--text-muted);line-height:1.75;">The dominant corridors are associated with <strong>concentrated customs-agent usage</strong>. This creates a valid Discovery topic around <strong>customs governance, performance, contingency, backup structure and escalation</strong>.</p>
+          <p style="font-size:11px;color:#b45309;line-height:1.7;margin-top:6px;font-weight:700;">Customs-agent concentration is not itself presented as customer pain.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 17 OPERATIONAL COMPLEXITY -->
+    <div class="card">
+      <div class="card-header"><span class="accent">17</span> Operational Complexity — AIOS Interpretation</div>
+      <div class="card-body">
+        <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;padding:16px 20px;background:linear-gradient(135deg,rgba(245,158,11,0.07) 0%,rgba(13,43,94,0.04) 100%);border-left:3px solid #f59e0b;border-radius:0 6px 6px 0;">
+          <div><div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#b45309;">Operational Complexity</div><div style="font-size:28px;font-weight:800;color:#b45309;letter-spacing:0.5px;line-height:1.2;">MEDIUM-HIGH</div></div>
+          <div style="flex:1;min-width:320px;"><span style="font-size:11px;color:var(--text-muted);line-height:1.7;"><strong style="color:#b45309;">No numerical complexity score is created.</strong> Complexity is an AIOS Interpretation of the visible operating structure — <strong>it is not a claim that Diken experiences operational difficulty</strong>.</span></div>
+        </div>
+        <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--navy);margin:16px 0 8px;">Supported visible signals</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px;">
+          <div class="stat-box" style="padding:10px 13px;"><div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;">60 visible 2026 YTD Shipments</div></div>
+          <div class="stat-box" style="padding:10px 13px;"><div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;">75% export orientation</div></div>
+          <div class="stat-box" style="padding:10px 13px;"><div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;">Truck + Maritime activity</div></div>
+          <div class="stat-box" style="padding:10px 13px;"><div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;">US cross-border operations</div></div>
+          <div class="stat-box" style="padding:10px 13px;"><div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;">Multiple LATAM destinations</div></div>
+          <div class="stat-box" style="padding:10px 13px;"><div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;">Multiple gateways</div></div>
+          <div class="stat-box" style="padding:10px 13px;"><div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;">High route concentration</div></div>
+          <div class="stat-box" style="padding:10px 13px;"><div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;">Regional destination diversity</div></div>
+          <div class="stat-box" style="padding:10px 13px;"><div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;">Multi-country import item-origin presence</div></div>
+          <div class="stat-box" style="padding:10px 13px;"><div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;">Multiple customs-agent codes</div></div>
+          <div class="stat-box" style="padding:10px 13px;"><div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;">Persistent Core Routes across periods</div></div>
+        </div>
+        <div style="margin-top:14px;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:6px;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.65;"><strong style="color:var(--navy);">Relationship Status (LEAD) and AIOS Classification (AA) are independent dimensions</strong> and are never collapsed into a single badge. <strong>Complexity does not equal pain</strong> — every signal above is an observed structural attribute of the visible network.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 18 OPPORTUNITY MAPPING -->
+    <div class="card">
+      <div class="card-header"><span class="accent">18</span> Opportunity Mapping — Signal · Interpretation · Validation</div>
+      <div class="card-body" style="padding:0;">
+        <div style="overflow-x:auto;">
+          <table class="hub-table" style="font-size:11px;min-width:900px;">
+            <thead><tr>
+              <th style="width:30%;">Observed Operational Signal <span style="font-weight:600;color:var(--text-light);">— Panjiva Fact</span></th>
+              <th style="width:33%;">AIOS Interpretation <span style="font-weight:600;color:var(--text-light);">— may mean</span></th>
+              <th style="width:37%;">Discovery Validation <span style="font-weight:600;color:var(--text-light);">— must be confirmed</span></th>
+            </tr></thead>
+            <tbody>
+              <tr>
+                <td><strong style="color:var(--navy);">86.7%</strong> of 2026 YTD imports use one <strong>E Global → Nuevo Laredo → Ramos Arizpe</strong> Core Route.</td>
+                <td style="color:var(--text-muted);">The concentrated inbound corridor may make <strong>milestone visibility and exception handling</strong> commercially relevant.</td>
+                <td style="color:var(--text-muted);">Validate <strong>incumbent provider structure, SLA performance, escalation model, contingency and capacity</strong>.</td>
+              </tr>
+              <tr>
+                <td><strong style="color:var(--navy);">62.2%</strong> of exports use <strong>Diken de México → Colombia, Nuevo León → Diken International LLC</strong>.</td>
+                <td style="color:var(--text-muted);">The US-bound corridor is <strong>structurally important</strong>.</td>
+                <td style="color:var(--text-muted);">Validate <strong>affiliate / intercompany status, provider ownership, contracting model and decision rights</strong>.</td>
+              </tr>
+              <tr>
+                <td><strong>Ciudad Hidalgo</strong> supports multiple LATAM export relationships.</td>
+                <td style="color:var(--text-muted);">Regional border coordination may benefit from <strong>standardized documentation and execution governance</strong>.</td>
+                <td style="color:var(--text-muted);">Validate <strong>exception frequency, documentation ownership, border process and contingency</strong>.</td>
+              </tr>
+              <tr>
+                <td>Maritime activity is visible at <strong>Altamira, Puerto Morelos and Manzanillo</strong>.</td>
+                <td style="color:var(--text-muted);">A <strong>multimodal coordination opportunity</strong> exists beyond truck.</td>
+                <td style="color:var(--text-muted);">Validate <strong>booking ownership, carrier strategy, visibility and exception management</strong>.</td>
+              </tr>
+              <tr>
+                <td>Customs-agent usage is <strong>concentrated by major corridor</strong>.</td>
+                <td style="color:var(--text-muted);">Customs governance is a <strong>credible executive Discovery theme</strong>.</td>
+                <td style="color:var(--text-muted);">Validate <strong>broker governance, backup structure, KPI ownership and escalation</strong>.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="padding:12px 16px;border-top:1px solid var(--border);">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.65;">Each signal keeps three layers strictly separate. <strong>Observed Operational Signal</strong> is what Panjiva shows. <strong>AIOS Interpretation</strong> is what it may mean. <strong>Discovery Validation</strong> is what must be confirmed with Diken. These layers are never collapsed, and <strong style="color:#b45309;">inferred pain is never presented as customer fact</strong>.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 19 DISCOVERY HYPOTHESES -->
+    <div class="card">
+      <div class="card-header"><span class="accent">19</span> Discovery Hypotheses — Governed &amp; Unvalidated</div>
+      <div class="card-body">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:12px;">
+
+          <div style="padding:16px 18px;background:rgba(245,158,11,0.04);border:1px solid rgba(245,158,11,0.3);border-radius:8px;">
+            <div style="font-size:9px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:#b45309;">Discovery Hypothesis — requires validation</div>
+            <div style="font-size:15px;font-weight:800;color:var(--navy);margin-top:5px;line-height:1.35;">1 · Affiliate / Intercompany Structure</div>
+            <div style="margin-top:12px;"><div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal-dim);">Observed Signal</div><div style="font-size:11px;color:var(--text-muted);line-height:1.65;margin-top:3px;">Diken International LLC represents <strong>62.2%</strong> of 2026 YTD exports. Diken de Costa Rica also appears as a destination partner.</div></div>
+            <div style="margin-top:10px;"><div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal-dim);">Hypothesis</div><div style="font-size:11px;color:var(--text-muted);line-height:1.65;margin-top:3px;">A meaningful share of visible exports <strong>may</strong> represent affiliate / intercompany distribution.</div></div>
+            <div style="margin-top:10px;"><div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#b45309;">Data does not establish</div><div style="font-size:11px;color:var(--text-muted);line-height:1.65;margin-top:3px;">Corporate ownership, transfer-pricing structure, procurement ownership or logistics decision rights.</div></div>
+            <div style="margin-top:10px;"><div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal-dim);">Why it matters</div><div style="font-size:11px;color:var(--text-muted);line-height:1.65;margin-top:3px;">Decision-making may be centralized or split by entity / country.</div></div>
+            <div style="margin-top:10px;padding-top:10px;border-top:1px solid rgba(245,158,11,0.3);"><div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);">Discovery Validation</div><div style="font-size:11px;color:var(--text-muted);line-height:1.65;margin-top:3px;">Determine who owns <strong>transportation procurement, customs, carrier contracts, KPIs and exceptions</strong>.</div></div>
+          </div>
+
+          <div style="padding:16px 18px;background:rgba(245,158,11,0.04);border:1px solid rgba(245,158,11,0.3);border-radius:8px;">
+            <div style="font-size:9px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:#b45309;">Discovery Hypothesis — requires validation</div>
+            <div style="font-size:15px;font-weight:800;color:var(--navy);margin-top:5px;line-height:1.35;">2 · Cross-Border Control Opportunity</div>
+            <div style="margin-top:12px;"><div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal-dim);">Observed Signal</div><div style="font-size:11px;color:var(--text-muted);line-height:1.65;margin-top:3px;">Dominant inbound activity through <strong>Nuevo Laredo</strong> and dominant outbound activity through <strong>Colombia, Nuevo León</strong>.</div></div>
+            <div style="margin-top:10px;"><div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal-dim);">Hypothesis</div><div style="font-size:11px;color:var(--text-muted);line-height:1.65;margin-top:3px;">Centralized <strong>border milestone visibility and exception management</strong> could be commercially valuable.</div></div>
+            <div style="margin-top:10px;"><div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#b45309;">Data does not establish</div><div style="font-size:11px;color:var(--text-muted);line-height:1.65;margin-top:3px;">Current visibility quality or operational pain.</div></div>
+            <div style="margin-top:10px;padding-top:10px;border-top:1px solid rgba(245,158,11,0.3);"><div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);">Discovery Validation</div><div style="font-size:11px;color:var(--text-muted);line-height:1.65;margin-top:3px;">Validate <strong>provider model, border dwell KPIs, exception escalation, capacity commitments and contingency</strong>.</div></div>
+          </div>
+
+          <div style="padding:16px 18px;background:rgba(245,158,11,0.04);border:1px solid rgba(245,158,11,0.3);border-radius:8px;">
+            <div style="font-size:9px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:#b45309;">Discovery Hypothesis — requires validation</div>
+            <div style="font-size:15px;font-weight:800;color:var(--navy);margin-top:5px;line-height:1.35;">3 · Regional Export Orchestration</div>
+            <div style="margin-top:12px;"><div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal-dim);">Observed Signal</div><div style="font-size:11px;color:var(--text-muted);line-height:1.65;margin-top:3px;">Recurring exports to the <strong>United States</strong> and multiple <strong>LATAM destinations</strong> through truck and maritime gateways.</div></div>
+            <div style="margin-top:10px;"><div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal-dim);">Hypothesis</div><div style="font-size:11px;color:var(--text-muted);line-height:1.65;margin-top:3px;">Standardized regional coordination / <strong>Control Tower governance</strong> may have value.</div></div>
+            <div style="margin-top:10px;"><div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#b45309;">Data does not establish</div><div style="font-size:11px;color:var(--text-muted);line-height:1.65;margin-top:3px;">Current coordination quality or organizational ownership.</div></div>
+            <div style="margin-top:10px;padding-top:10px;border-top:1px solid rgba(245,158,11,0.3);"><div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);">Discovery Validation</div><div style="font-size:11px;color:var(--text-muted);line-height:1.65;margin-top:3px;">Validate <strong>ownership by country, booking process, document control, KPI consistency and willingness to centralize</strong>.</div></div>
+          </div>
+
+        </div>
+        <div style="margin-top:14px;padding:12px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.65;"><strong style="color:#b45309;">No Discovery Hypothesis on this page is ever converted into a confirmed customer fact.</strong> Each remains explicitly unvalidated until Discovery establishes otherwise.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 20 DATA QUALITY / ENTITY RESOLUTION -->
+    <div class="card">
+      <div class="card-header"><span class="accent">20</span> Data Quality &amp; Entity Resolution Hypotheses</div>
+      <div class="card-body" style="padding:0;">
+        <div style="overflow-x:auto;">
+          <table class="hub-table" style="font-size:11px;min-width:880px;">
+            <thead><tr><th>Entity / Field</th><th>Panjiva Shipment Destination</th><th>Panjiva Consignee Address Field</th><th>Governance applied</th></tr></thead>
+            <tbody>
+              <tr style="background:rgba(245,158,11,0.05);">
+                <td><strong>Agromarket S.A. de C.V.</strong><div style="font-size:9px;color:#b45309;font-weight:700;">DATA QUALITY / ENTITY RESOLUTION HYPOTHESIS — REQUIRES VALIDATION</div></td>
+                <td><strong>El Salvador</strong></td>
+                <td><strong>Puerto Rico</strong></td>
+                <td style="color:var(--text-muted);">Both fields preserved verbatim. <strong style="color:#b45309;">Not reconciled and not silently corrected.</strong></td>
+              </tr>
+              <tr style="background:rgba(245,158,11,0.05);">
+                <td><strong>Dimedisa S.A.</strong><div style="font-size:9px;color:#b45309;font-weight:700;">DATA QUALITY / ENTITY RESOLUTION HYPOTHESIS — REQUIRES VALIDATION</div></td>
+                <td><strong>Panama</strong></td>
+                <td><strong>Puerto Rico</strong></td>
+                <td style="color:var(--text-muted);">Both fields preserved verbatim. <strong style="color:#b45309;">Not reconciled and not silently corrected.</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Diken de México — Origin</strong></td>
+                <td colspan="2" style="color:var(--text-muted);">Panjiva provides only <strong>Mexico</strong> in the relevant shipper address field.</td>
+                <td style="color:var(--text-muted);">Rendered as <strong style="color:#b45309;">Address not available in Panjiva</strong>. No exact facility address is silently added.</td>
+              </tr>
+              <tr>
+                <td><strong>E Global Enterprises Inc. — Origin</strong></td>
+                <td colspan="2" style="color:var(--text-muted);">No reliable exact origin facility address. Some records provide only <strong>United States</strong>.</td>
+                <td style="color:var(--text-muted);">Rendered as <strong style="color:#b45309;">Address not available in Panjiva</strong>. This location is <strong>not enriched</strong>.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="padding:12px 16px;border-top:1px solid var(--border);">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.65;">Source conflicts are <strong>surfaced, not hidden</strong>. Where Panjiva fields disagree, both values are shown side by side and the conflict is labelled. <strong style="color:#b45309;">No geography is silently enriched anywhere on this page.</strong></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 21 MULTIMODAL / ILM / CONTROL TOWER OPPORTUNITY -->
+    <div class="card">
+      <div class="card-header"><span class="accent">21</span> Multimodal / ILM / Control Tower Opportunity</div>
+      <div class="card-body">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:8px;">
+          <div class="stat-box" style="border-left:3px solid var(--red);padding:11px 14px;"><div style="font-size:11.5px;font-weight:700;color:var(--navy);line-height:1.4;">Cross-border milestone visibility</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--red);padding:11px 14px;"><div style="font-size:11.5px;font-weight:700;color:var(--navy);line-height:1.4;">Customs coordination</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--navy);padding:11px 14px;"><div style="font-size:11.5px;font-weight:700;color:var(--navy);line-height:1.4;">Shipment planning</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--navy);padding:11px 14px;"><div style="font-size:11.5px;font-weight:700;color:var(--navy);line-height:1.4;">Exception management</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--teal);padding:11px 14px;"><div style="font-size:11.5px;font-weight:700;color:var(--navy);line-height:1.4;">Regional export coordination</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--teal);padding:11px 14px;"><div style="font-size:11.5px;font-weight:700;color:var(--navy);line-height:1.4;">Ocean booking / port visibility where applicable</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--navy);padding:11px 14px;"><div style="font-size:11.5px;font-weight:700;color:var(--navy);line-height:1.4;">Trading Partner / affiliate coordination</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--red);padding:11px 14px;"><div style="font-size:11.5px;font-weight:700;color:var(--navy);line-height:1.4;">KPI governance across recurring corridors</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--red);padding:11px 14px;"><div style="font-size:11.5px;font-weight:700;color:var(--navy);line-height:1.4;">Contingency governance</div></div>
+        </div>
+        <div style="margin-top:14px;padding:14px 18px;background:rgba(13,43,94,0.03);border:1px solid var(--border);border-radius:6px;">
+          <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:6px;">AIOS Interpretation</div>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.75;">The visible network supports a credible conversation around Akzent acting as an <strong style="color:var(--navy);">ILM / Control Tower Partner</strong>.</p>
+          <p style="font-size:11.5px;color:var(--text-muted);line-height:1.75;margin-top:8px;"><strong style="color:#b45309;">However, Panjiva does not establish that Diken currently lacks these capabilities.</strong> This page never states that Diken has poor visibility, poor coordination or inadequate systems. Each area above is framed as somewhere Akzent <strong>could</strong> operate <strong>if Discovery validates the need</strong> — this is opportunity positioning, not a capability gap assessment.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 22 COMMERCIAL POSITIONING -->
+    <div class="card">
+      <div class="card-header"><span class="accent">22</span> Commercial Positioning</div>
+      <div class="card-body">
+        <div class="grid-4" style="gap:10px;">
+          <div class="stat-box" style="border-left:3px solid var(--red);"><div class="stat-value" style="font-size:15px;line-height:1.3;">Operational Complexity Partner</div><div class="stat-sub">Multiple gateways, directions, destinations and customs-agent codes</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--navy);"><div class="stat-value" style="font-size:15px;line-height:1.3;">Customs &amp; Visibility Partner</div><div class="stat-sub">Customs and border coordination are structural components</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-value" style="font-size:15px;line-height:1.3;">Multimodal Coordination Partner</div><div class="stat-sub">Truck-dominant with recurring, selective Maritime</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--red);"><div class="stat-value" style="font-size:15px;line-height:1.3;">ILM / Control Tower Partner</div><div class="stat-sub">Corridor and regional breadth create a credible centralization case</div></div>
+        </div>
+        <div style="margin-top:12px;padding:10px 14px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.6;">Akzent is <strong style="color:#b45309;">never positioned as a transactional freight provider, commodity trucking provider or spot-rate provider</strong> for this account.</span>
+        </div>
+        <div style="margin-top:14px;padding:18px 22px;background:linear-gradient(135deg,rgba(13,43,94,0.05) 0%,rgba(196,30,58,0.05) 100%);border-left:3px solid var(--navy);border-radius:0 6px 6px 0;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);margin-bottom:8px;">Executive Conversation Angle</div>
+          <p style="font-size:14px;font-weight:600;color:var(--navy);line-height:1.65;font-style:italic;">&ldquo;Your visible network shows a highly recurring cross-border structure between Mexico and the US, plus regional LATAM exports and selective ocean activity. The opportunity for us is not simply transportation capacity; it is to help create tighter operational control across border milestones, customs, exceptions and regional coordination.&rdquo;</p>
+          <p style="font-size:11px;color:var(--text-muted);line-height:1.7;margin-top:10px;">Present this as a <strong>commercial conversation angle</strong>. <strong style="color:#b45309;">It does not claim that Diken currently has operational problems.</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 23 DISCOVERY INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">23</span> Discovery Intelligence — Validate Unknowns, Not the Visible</div>
+      <div class="card-body" style="padding:12px 18px;">
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:#b45309;">Do not ask Diken to identify routes, modes, countries or gateways that Panjiva already reveals.</strong> Discovery exists to validate unknown business facts. <strong>No question below presumes pain in its wording.</strong></span>
+      </div>
+      <div class="card-body">
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)">
+            <span>Ownership, provider structure &amp; contracting — Questions 1–4</span>
+            <span class="outreach-step-toggle">+</span>
+          </div>
+          <div class="outreach-step-body">
+            <ul class="q-list" style="font-size:11.5px;line-height:1.8;">
+              <li><strong>1.</strong> Is Diken International LLC an affiliate / intercompany destination, and where are logistics decisions owned?</li>
+              <li><strong>2.</strong> Who controls the primary US cross-border provider strategy and contracts?</li>
+              <li><strong>3.</strong> What SLAs govern border milestones, customs release and exception escalation?</li>
+              <li><strong>4.</strong> Is capacity dedicated, contracted, spot or mixed on the recurring US corridor?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)">
+            <span>Contingency, customs governance &amp; regional coordination — Questions 5–8</span>
+            <span class="outreach-step-toggle">+</span>
+          </div>
+          <div class="outreach-step-body">
+            <ul class="q-list" style="font-size:11.5px;line-height:1.8;">
+              <li><strong>5.</strong> What contingency exists for Nuevo Laredo / Colombia disruptions?</li>
+              <li><strong>6.</strong> How are customs brokers governed and measured across gateways?</li>
+              <li><strong>7.</strong> Who owns regional LATAM export coordination and documentation?</li>
+              <li><strong>8.</strong> How are maritime bookings and exceptions managed at Altamira, Puerto Morelos and Manzanillo?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)">
+            <span>Visibility, KPIs &amp; transformation readiness — Questions 9–12</span>
+            <span class="outreach-step-toggle">+</span>
+          </div>
+          <div class="outreach-step-body">
+            <ul class="q-list" style="font-size:11.5px;line-height:1.8;">
+              <li><strong>9.</strong> Is Shipment visibility centralized across entities and countries?</li>
+              <li><strong>10.</strong> Which operational KPIs drive provider reviews and willingness to change?</li>
+              <li><strong>11.</strong> What procurement cycle, contract timing and decision criteria would govern a logistics transformation initiative?</li>
+              <li><strong>12.</strong> Would Diken consider an ILM / Control Tower layer that coordinates existing providers rather than replacing every provider?</li>
+            </ul>
+          </div>
+        </div>
+        <div style="margin-top:14px;padding:12px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 6px 6px 0;">
+          <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#b45309;">Panjiva cannot reveal</div>
+          <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:6px;">
+            <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">Validated carrier names</span>
+            <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">Incoterms</span>
+            <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">Confirmed IMMEX status</span>
+            <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">Validated customs agency company names</span>
+            <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">Customer contracts</span>
+            <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">Provider ownership</span>
+            <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">SLA performance</span>
+            <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">Logistics spend</span>
+            <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">Freight budget</span>
+            <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">Incumbent commercial terms</span>
+            <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">Confirmed operational pain</span>
+            <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">Decision rights</span>
+            <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">Capacity commitments</span>
+            <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">Internal KPIs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 24 DATA AVAILABILITY & METHODOLOGY -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">24</span> Data Availability &amp; Source Governance</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:18px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:8px;">Available in the supplied Panjiva intelligence</div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:6px;">
+              <div class="stat-box" style="padding:8px 11px;"><div style="font-size:10.5px;font-weight:700;color:var(--navy);">Shipment dates</div></div>
+              <div class="stat-box" style="padding:8px 11px;"><div style="font-size:10.5px;font-weight:700;color:var(--navy);">Shipment counts</div></div>
+              <div class="stat-box" style="padding:8px 11px;"><div style="font-size:10.5px;font-weight:700;color:var(--navy);">Visible CIF values</div></div>
+              <div class="stat-box" style="padding:8px 11px;"><div style="font-size:10.5px;font-weight:700;color:var(--navy);">Gross weights</div></div>
+              <div class="stat-box" style="padding:8px 11px;"><div style="font-size:10.5px;font-weight:700;color:var(--navy);">Modes</div></div>
+              <div class="stat-box" style="padding:8px 11px;"><div style="font-size:10.5px;font-weight:700;color:var(--navy);">Destination countries</div></div>
+              <div class="stat-box" style="padding:8px 11px;"><div style="font-size:10.5px;font-weight:700;color:var(--navy);">Item-origin countries</div></div>
+              <div class="stat-box" style="padding:8px 11px;"><div style="font-size:10.5px;font-weight:700;color:var(--navy);">Facilities <span style="font-weight:600;color:var(--text-light);">at varying precision</span></div></div>
+              <div class="stat-box" style="padding:8px 11px;"><div style="font-size:10.5px;font-weight:700;color:var(--navy);">Addresses <span style="font-weight:600;color:var(--text-light);">when supplied</span></div></div>
+              <div class="stat-box" style="padding:8px 11px;"><div style="font-size:10.5px;font-weight:700;color:var(--navy);">Gateways</div></div>
+              <div class="stat-box" style="padding:8px 11px;"><div style="font-size:10.5px;font-weight:700;color:var(--navy);">Customs regime</div></div>
+              <div class="stat-box" style="padding:8px 11px;"><div style="font-size:10.5px;font-weight:700;color:var(--navy);">Customs-agent codes</div></div>
+              <div class="stat-box" style="padding:8px 11px;"><div style="font-size:10.5px;font-weight:700;color:var(--navy);">HS Codes</div></div>
+              <div class="stat-box" style="padding:8px 11px;"><div style="font-size:10.5px;font-weight:700;color:var(--navy);">Goods descriptions</div></div>
+              <div class="stat-box" style="padding:8px 11px;"><div style="font-size:10.5px;font-weight:700;color:var(--navy);">Quantities</div></div>
+              <div class="stat-box" style="padding:8px 11px;"><div style="font-size:10.5px;font-weight:700;color:var(--navy);">Units</div></div>
+              <div class="stat-box" style="padding:8px 11px;"><div style="font-size:10.5px;font-weight:700;color:var(--navy);">Selected company fields</div></div>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#b45309;margin-bottom:8px;">Not reliably available / not supplied</div>
+            <table class="hub-table" style="font-size:11px;">
+              <thead><tr><th>Field</th><th>Governance applied</th></tr></thead>
+              <tbody>
+                <tr style="background:rgba(245,158,11,0.05);"><td><strong style="color:#b45309;">Akzent Shipments &amp; financials</strong></td><td style="color:var(--text-muted);">No Wallet, Penetration, Coverage, Account Intelligence Snapshot, Akzent Captured Universe, Revenue, Gross Profit or Margin</td></tr>
+                <tr><td><strong>Validated carrier names</strong></td><td style="color:var(--text-muted);">Not supplied — no carrier named anywhere on this page</td></tr>
+                <tr><td><strong>Incoterms</strong></td><td style="color:var(--text-muted);">Not supplied — none inferred</td></tr>
+                <tr><td><strong>Confirmed IMMEX status</strong></td><td style="color:var(--text-muted);">Not supplied — no IMMEX status invented</td></tr>
+                <tr><td><strong>Customs agency company names</strong></td><td style="color:var(--text-muted);">Only numeric codes are available — codes remain codes</td></tr>
+                <tr><td><strong>Customer contracts</strong></td><td style="color:var(--text-muted);">Not supplied — none inferred</td></tr>
+                <tr><td><strong>Provider ownership</strong></td><td style="color:var(--text-muted);">Not supplied — none inferred</td></tr>
+                <tr><td><strong>SLA performance</strong></td><td style="color:var(--text-muted);">Not supplied — no delay, dwell or on-time claim made</td></tr>
+                <tr><td><strong>Logistics spend / freight budget</strong></td><td style="color:var(--text-muted);">Not supplied — visible CIF is never presented as spend</td></tr>
+                <tr><td><strong>Incumbent commercial terms</strong></td><td style="color:var(--text-muted);">Not supplied — none inferred</td></tr>
+                <tr><td><strong>Confirmed operational pain</strong></td><td style="color:var(--text-muted);">Not supplied — no pain is asserted as customer fact</td></tr>
+                <tr><td><strong>Decision rights</strong></td><td style="color:var(--text-muted);">Not supplied — held as a Discovery Hypothesis</td></tr>
+                <tr><td><strong>Capacity commitments</strong></td><td style="color:var(--text-muted);">Not supplied — none inferred</td></tr>
+                <tr><td><strong>Internal KPIs</strong></td><td style="color:var(--text-muted);">Not supplied — none inferred</td></tr>
+                <tr><td><strong>Reliable single shipper-country field · imports</strong></td><td style="color:var(--text-muted);">Not available — item-origin presence shown instead, declared non-additive</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div style="margin-top:14px;padding:14px 18px;border-top:1px solid var(--border);background:var(--bg);border-radius:6px;">
+          <span style="font-size:10px;color:var(--text-muted);line-height:1.65;"><strong style="color:var(--navy);">Panjiva is the Visible Logistics Universe and the sole source of truth for this LEAD analysis.</strong> It represents what is externally visible — <strong>not</strong> the complete enterprise logistics footprint of Diken International / Diken. <strong>Akzent does not currently manage this account</strong>, and nothing on this page should be read as implying otherwise. Every figure above is AIOS-finalized intelligence, rendered without recalculation, estimation, inference, annualization, normalization or reconciliation. <strong>2026 YTD runs through July 29, 2026 and is never annualized</strong>; the 2025 Full Calendar Year is never aggregated with it.</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 </main>
 
 <script>
@@ -51594,6 +52915,7 @@ const ACCOUNTS = [
   { id:'view-productora-papel', name:'Productora de Papel', sub:'Productora de Papel, S.A. de C.V. · Target Account · LEAD · AA · Priority Target · Operational Complexity HIGH · Panjiva Visible Logistics Universe · Paper &amp; Recovered Fiber · Recovered paperboard · Coated multilayer paperboard · High-Frequency Cross-Border Network · 2,898 Current YTD Shipments January 1 – July 31 2026 · 2,113 Imports 72.9% · 785 Exports 27.1% · +2.3% comparable Jan–Jul actual vs actual · 2,833 to 2,898 · Imports +2.0% · Exports +3.0% · Visible CIF USD 30.27M +5.8% · Visible gross weight 67.14M kg +5.6% · 10 Import Core Routes to 81.92% · 5 Export Core Routes to 82.93% · 2025 baseline 4,280 Shipments · 3,108 Imports · 1,172 Exports · CIF USD 47.11M · 100.76M kg · 9 Import Core Routes 80.86% · 5 Export Core Routes 83.79% · Nuevo Laredo Tamaulipas Border 85.4% Imports 79.6% Exports · Ciudad Camargo Tamaulipas Border 13.3% · Piedras Negras Coahuila Border Rail 10.7% · Puente Internacional Zaragoza-Isleta Ciudad Juárez Chihuahua 6.8% · Aeropuerto Internacional General Mariano Escobedo Apodaca Nuevo León Airport · Altamira Tamaulipas Port · Veracruz · Colombia Nuevo León · Manzanillo · Top 2 Import gateways 98.7% · Top 3 Export gateways 97.1% · Truck 92.5% · Unknown 3.6% preserved · Rail 2.9% · Air 0.6% · Maritime 0.5% · C. Torres de Santo Domingo Real de Anáhuac Nuevo Leon · San Nicolás de los Garza 66444 · Edh International Dba Texas F &amp; R · McAllen TX · Cellmark · Canusa Hershman Recycling · Ekman Recycling · Gp Harmon Recycling · Wm Recycle America · Texas Recycling Surplus · Pioneer Industries International · Greenside Solutions · Vipa Usa · Pioneer Paper Stock Co. Of Texas · National Fiber Supply · Intl Forest Products · World Wide Forest Products · El Paso Paper Box · Zebra Paper Converters · Captiva Group · Shinsei Pulp &amp; Paper Companny · Inter Papier North America · 56 visible Suppliers Origin Partners · 17 visible Customer Destination Partner labels · Top 3 import concentration 37.2% · Top 5 54.1% · Top 3 export concentration 83.3% · Top 5 92.4% · Trading Partners · United States 95.5% imports 82.4% exports · Canada · Mexico · Finland · Germany · Jamaica · Colombia · Spain · Japan · Customs Agent 3448 · 3549 · 3577 · 3104 · 3360 · 973 · Final Import Export · Regime Change Of Supplies · Transfer Of Goods · Regularisation Of Goods · Luxury Goods For Export Processing · No IMMEX claim · HS 4707100100 desperdicio de cartón recovered paperboard · 4810920100 coated multilayer paperboard · 4707209100 waste paper · 4707909100 mixed waste paper · 4823909999 · 8413911306 · Data Quality El Paso Paper Box United Kingdom address anomaly · EDH address not available in Panjiva · Cross-Border · Customs · Truck + Rail · Multimodal · Gateway Contingency · Supplier Coordination · Exception Management · Operational Complexity Partner · Multimodal Coordination Partner · Customs &amp; Visibility Partner · ILM / Control Tower Partner', rel:'LEAD', cls:'AA', clsPill:'aa' },
   { id:'view-tbc-mexico', name:'TBC de México', sub:'TBC de México · Tbc De Mexico Sa De Cv · Target Account · LEAD · AAA Priority Target · Operational Complexity HIGH · Panjiva Visible Logistics Universe · Tire Logistics · Radial tires · High-Scale Import-Dominant Ocean Network · 2,896 Current YTD Shipments · 2,887 Imports 99.69% · 9 Exports 0.31% · +3.65% comparable Jan–Jul actual vs actual · 2,794 to 2,896 · Imports +3.74% · Exports −18.18% · Visible CIF USD 99.94M · 47.69M kg · 16 Import Core Routes to 80.05% · 2 Export Core Routes to 100% · 2025 baseline 6,465 Shipments · 6,444 Imports · 21 Exports · CIF USD 212.17M · 85.22M kg · 29 Import Core Routes 81.11% · 1 Export Core Route 100% EXTREME ROUTE CONCENTRATION · Manzanillo Colima Port 1,881 65.15% · Lázaro Cárdenas Michoacán Port 935 32.39% · combined 97.54% · Guaymas Sonora · Nuevo Laredo Tamaulipas Border · Querétaro · Mazatlán · Ensenada · AICM · AIFA · Toluca · Altamira · Plan de Guadalupe Ramos Arizpe · Colombia Nuevo León Border · Maritime 98.86% 2,854 · Truck 0.76% · Air 0.38% · Unknown export mode preserved · Modal Diversity LOW · Ocean Exposure VERY HIGH · Gateway Concentration VERY HIGH · Top 3 import route concentration 26.74% · Top 5 41.77% · 2025 Top 3 23.15% · Top 5 31.02% · Top 3 suppliers 45.34% · Top 5 61.86% · 2025 Top 3 41.09% · Top 5 54.66% · Zhongce Rubber (Thailand) Co., Ltd. · Zhongce Rubber Group Co., Ltd. · Sailun Tire Americas Inc. · Zodo Tire Co., Ltd. · Latitude (Singapore) Industrial Pte., Ltd. · Sumitomo Corporation · Wonwill International Inc. · Qingdao Wonwill International Trade Co., Ltd. · Balkrishna Industries Ltd. · Triangle Tyre Co., Ltd. · Weifang Huadong Rubber Co., Ltd. · Shandong Haohua Tire Co., Ltd. · Haohua (Vietnam) Co., Ltd. · Nexen Tire America · Trading Partners · Suppliers Origin Partners · China 56.32% · Vietnam 21.82% · Japan 7.17% · India 6.30% · Thailand 6.20% · Taiwan · United States · South Korea · Hong Kong · Canada · VISIBLE GEOGRAPHIC MIX SHIFT China 73.12% to 56.32% · Vietnam 7.87% to 21.82% · John Deere Mexico Sarl · John Deere Mexico Srl · entity resolution hypothesis · Luxembourg Mexico geography inconsistency · Address not available in Panjiva · origin precision fragmentation · Customs Agent 1874 · 3752 · 1900 · 3341 · 3897 · 1672 · 3346 · 1793 · 3628 · 1693 · 3974 · 1562 · 3468 exports · Final Import Export · Extraction From Bonded Warehouse Agd · Transfer Of Goods · Temporary Import Virtual · Virtual Export Of National Suppliers · No IMMEX claim · HS 4011200400 radial tires above 4,536 kg · 4011101007 · 4011101099 · 4011200601 · 4011101006 · Ocean · Customs · Gateway Contingency · Supplier Coordination · Exception Management · Control Tower · Operational Complexity Partner · Multimodal Coordination Partner · Customs &amp; Visibility Partner · ILM / Control Tower Partner', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
   { id:'view-velozzetti', name:'Grupo Velozzetti de México', sub:'Grupo Velozzetti de México · Grupo Velozzetti De Mexico Sa De Cv · Velozzetti · Target Account · LEAD · AA Priority Target · Operational Complexity HIGH · Multimodal Complexity HIGH · Panjiva Visible Logistics Universe · Specialized Cycling Portfolio · Bicycle parts components tires pedals brakes chains apparel · Genuinely Multimodal Import Network · 60 Current YTD Import Shipments · 2026-01-05 to 2026-07-30 · Export Panjiva data was not provided · no Export intelligence · comparable Jan–Jul actual vs actual 60 to 60 0.0% · CIF USD 2,587,597.23 to 2,694,504.57 +4.1% · gross weight 90,852.50 kg to 89,858.21 kg −1.1% · 15 Import Core Routes to 80.0% · 48 of 60 Shipments · EXTREME ROUTE CONCENTRATION does not apply · 2025 baseline 103 Imports · CIF USD 5,300,602.43 · 150,161.88 kg · 21 Import Core Routes 81.6% · 84 of 103 Shipments · Maritime 29 48.3% · Air 28 46.7% · Truck 3 5.0% · 2025 Maritime 51 49.5% Air 47 45.6% Truck 3 2.9% Unknown 2 1.9% · Modal Diversity HIGH · Air Exposure HIGH · Ocean Exposure HIGH · Cross-Border Exposure SELECTIVE EMERGING · Aeropuerto Internacional General Mariano Escobedo Apodaca Nuevo Leon Airport 28 46.7% · Monterrey International Airport · Manzanillo Colima Port 19 31.7% · Altamira Tamaulipas Port 9 15.0% · Nuevo Laredo Tamaulipas Border 3 5.0% · Veracruz Port 1 1.7% newly visible · 5 visible gateways · 22 Trading Partners · 27 visible route identities · 2025 4 gateways 27 Trading Partners 39 route identities · Top 3 route concentration 33.3% · Top 5 45.0% · 2025 Top 3 31.1% Top 5 40.8% · Top 3 Trading Partners 48.3% · Top 5 58.3% · 2025 Top 3 51.5% Top 5 61.2% · Pirelli Tyre (Suisse) S.A. · Pirelli Tyre Suisse S.A. · Pirelli Tyre Sp A . · Sram Llc · Pas Normal Studios Aps · Evoc Sports Gmb H · Deity Llc · Asg International Srl · Paraply Ab · Kask Sp A · Kmc (Kuei Meng) International Inc. · Niterider Technical Lighting Systems · Star Due Srl · Star Due Srl . · Adhestick Innovations Ltd. · Campagnolo S.L.R. · Esi Grips Extreme Steering Inc. · Huangs Smart Cycling Inc. · Kuat Innovations Llc · Lezyne Usa Inc. Taiwan Branch · China 28 · Italy 18 · Taiwan 18 · Thailand 11 · United States 8 · France 6 · Portugal 4 · Israel 4 · Lithuania 3 · South Africa 3 · Denmark · Vietnam · Sweden · Netherlands · Germany · Romania · Switzerland · country presence counts are not additive · entity resolution hypothesis · Address not available in Panjiva · Privada Calzada del Valle Nuevo León · origin precision fragmentation · Customs Agent 3043 · 1925 · 3692 · 3502 · 1822 · top two agents 76.7% · Final Import Export 100% · Transfer Of Merchandise From Strategic Controlled Premises · No IMMEX claim · HS 8714999900 bicycle parts components · 4011500100 bicycle tires · 8714960100 pedals · 8714949900 brakes · 6109900401 cycling jerseys · 7315110602 chains · Air · Ocean · Cross-Border · Customs · Supplier Coordination · Exception Management · Control Tower · Operational Complexity Partner · Multimodal Coordination Partner · Customs &amp; Visibility Partner · ILM / Control Tower Partner', rel:'LEAD', cls:'AA', clsPill:'aa' },
+  { id:'view-diken', name:'Diken', sub:'Diken International / Diken · Diken de México S.A. de C.V. · Diken International S. de R.L. de C.V. · Diken Institucional S.A. de C.V. · Diken International LLC · Diken de Costa Rica SYV S.A. · Target Account · LEAD · AA Priority Target · Operational Complexity Medium-High · Panjiva Visible Logistics Universe · Export-Oriented Cross-Border Network · Cleaning sanitation disinfectant chemical preparations · 60 Current YTD Shipments through July 29 2026 · Imports 15 25.0% · Exports 45 75.0% · comparable Jan 1–Jul 29 actual vs actual 66 to 60 −9.1% · Imports 14 to 15 +7.1% · Exports 52 to 45 −13.5% · Truck 52 86.7% · Maritime 8 13.3% · 1 Import Core Route 86.7% EXTREME ROUTE CONCENTRATION · 4 Export Core Routes 82.2% · 2025 baseline 101 Shipments 21 Imports 80 Exports · 1 Import Core Route 90.5% · 3 Export Core Routes 82.5% · visible CIF 2026 YTD Imports USD 1,988,057.04 Exports USD 1,948,361.11 · 2025 Imports USD 3,111,426.50 Exports USD 3,387,128.53 · gross weight 2026 YTD 102,595.20 kg imports 777,861.39 kg exports · E Global Enterprises Inc. 15 100% of imports · Diken International LLC 28 62.2% · Negocios y Servicios Agropecuarios S.A. 4 · Tecnas S.A. BIC 4 · Agromarket S.A. de C.V. 3 · Diken de Costa Rica SYV S.A. 2 · Dimedisa S.A. 2 · Macao Alto Resort SRL 1 · Colombia Nuevo León Border 28 62.2% · Ciudad Hidalgo Chiapas Border 11 24.4% · Altamira Tamaulipas Port 4 · Puerto Morelos Quintana Roo Port 2 · Nuevo Laredo Tamaulipas Border 13 86.7% of imports · Manzanillo Colima Port 2 · AICM Airport 2025 · United States 28 · Guatemala 4 · Colombia 4 · El Salvador 3 · Costa Rica 2 · Panama 2 · Dominican Republic 2 · item-origin presence Canada China United States Denmark India Vietnam Pakistan Cambodia not additive · Customs Agent 3984 3950 3889 1663 3506 1807 3481 1852 1747 1914 · Final Import Export · HS 3402909900 cleaning washing preparations · 3808949900 disinfectant · 3307499900 room deodorizing · 3401200100 soap · 3215199999 printing inks · 3926209900 plastic protective articles · 9603909900 brooms brushes · 6201409901 outerwear jackets · Agromarket El Salvador vs Puerto Rico · Dimedisa Panama vs Puerto Rico · data quality entity resolution hypothesis · Address not available in Panjiva · affiliate intercompany Discovery Hypothesis · Cross-Border · Customs · LATAM · Maritime · Operational Complexity Partner · Customs &amp; Visibility Partner · Multimodal Coordination Partner · ILM / Control Tower Partner', rel:'LEAD', cls:'AA', clsPill:'aa' },
 ];
 const MODULES = [
   { id:'view-network',     name:'Network Intelligence', sub:'Cross-account analysis · Lane overlap' },
