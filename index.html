@@ -1293,6 +1293,44 @@ main {
   #view-jiangsu-beiren .hist-appendix { break-inside: auto; }
   #view-jiangsu-beiren .hist-appendix .outreach-step-body { display: block !important; height: auto !important; max-height: none !important; }
   #view-jiangsu-beiren .hist-appendix .outreach-step-header { font-size: 10px; }
+  /* The three 12-column Core Route tables have an intrinsic content width far wider than
+     a Letter page, so shrinking type alone still clips the right-hand columns. Fixing the
+     layout and assigning explicit column proportions makes them fit the page exactly at
+     any print width, with no column dropped and no value abbreviated. */
+  #view-jiangsu-beiren .jb-route-table { table-layout: fixed !important; width: 100% !important; font-size: 7.5px !important; }
+  #view-jiangsu-beiren .jb-route-table td,
+  #view-jiangsu-beiren .jb-route-table th { padding: 2px 3px !important; white-space: normal !important; }
+  /* Long source strings (addresses, plus codes) may break anywhere so nothing is cut;
+     column headings wrap only at spaces so labels never split mid-word. */
+  #view-jiangsu-beiren .jb-route-table td { overflow-wrap: anywhere; }
+  #view-jiangsu-beiren .jb-route-table th { overflow-wrap: normal; word-break: keep-all; letter-spacing: 0.2px !important; font-size: 6.5px !important; }
+  #view-jiangsu-beiren .jb-route-table .hub-tag { font-size: 6.5px; padding: 1px 4px; white-space: nowrap; }
+  /* The SHORT OBSERVATION WINDOW warning must stay whole — it is never split mid-word. */
+  #view-jiangsu-beiren .jb-route-table td div[style*="letter-spacing:0.3px"] { overflow-wrap: normal; word-break: keep-all; letter-spacing: 0 !important; font-size: 6.5px !important; }
+  #view-jiangsu-beiren .jb-route-table th:nth-child(1),
+  #view-jiangsu-beiren .jb-route-table td:nth-child(1)  { width: 4%; }
+  #view-jiangsu-beiren .jb-route-table th:nth-child(2),
+  #view-jiangsu-beiren .jb-route-table td:nth-child(2)  { width: 20%; }
+  #view-jiangsu-beiren .jb-route-table th:nth-child(3),
+  #view-jiangsu-beiren .jb-route-table td:nth-child(3)  { width: 8.5%; }
+  #view-jiangsu-beiren .jb-route-table th:nth-child(4),
+  #view-jiangsu-beiren .jb-route-table td:nth-child(4)  { width: 15%; }
+  #view-jiangsu-beiren .jb-route-table th:nth-child(5),
+  #view-jiangsu-beiren .jb-route-table td:nth-child(5)  { width: 7%; }
+  #view-jiangsu-beiren .jb-route-table th:nth-child(6),
+  #view-jiangsu-beiren .jb-route-table td:nth-child(6)  { width: 6.5%; }
+  #view-jiangsu-beiren .jb-route-table th:nth-child(7),
+  #view-jiangsu-beiren .jb-route-table td:nth-child(7)  { width: 5.5%; }
+  #view-jiangsu-beiren .jb-route-table th:nth-child(8),
+  #view-jiangsu-beiren .jb-route-table td:nth-child(8)  { width: 7%; }
+  #view-jiangsu-beiren .jb-route-table th:nth-child(9),
+  #view-jiangsu-beiren .jb-route-table td:nth-child(9)  { width: 6%; }
+  #view-jiangsu-beiren .jb-route-table th:nth-child(10),
+  #view-jiangsu-beiren .jb-route-table td:nth-child(10) { width: 5%; }
+  #view-jiangsu-beiren .jb-route-table th:nth-child(11),
+  #view-jiangsu-beiren .jb-route-table td:nth-child(11) { width: 5%; }
+  #view-jiangsu-beiren .jb-route-table th:nth-child(12),
+  #view-jiangsu-beiren .jb-route-table td:nth-child(12) { width: 10.5%; }
   .page-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .card-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .positioning-box { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
@@ -62918,7 +62956,7 @@ main {
 
         <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--navy);margin:20px 0 8px;">Complete Import Core Route Set — all 8 routes to 83.3%</div>
         <div style="overflow-x:auto;">
-          <table class="hub-table" style="font-size:11px;min-width:1240px;">
+          <table class="hub-table jb-route-table" style="font-size:11px;min-width:1240px;">
             <thead><tr>
               <th style="text-align:right;">Rank</th><th>Origin Facility / Panjiva Precision</th><th>Gateway</th><th>Destination Facility / Panjiva Precision</th><th>Mode</th>
               <th style="text-align:right;">Shipments</th><th style="text-align:right;">% Imports</th><th style="text-align:right;">Cumulative</th>
@@ -63217,7 +63255,7 @@ main {
               <div style="font-size:10px;color:var(--text-muted);margin-top:2px;">All 6 routes are preserved. Visual simplification never deletes a historical Core Route.</div>
             </div>
             <div style="overflow-x:auto;">
-              <table class="hub-table" style="font-size:11px;min-width:1200px;">
+              <table class="hub-table jb-route-table" style="font-size:11px;min-width:1200px;">
                 <thead><tr>
                   <th style="text-align:right;">Rank</th><th>Origin</th><th>Gateway</th><th>Destination</th><th>Mode</th>
                   <th style="text-align:right;">Shipments</th><th style="text-align:right;">% Imports</th><th style="text-align:right;">Cumulative</th>
@@ -63345,7 +63383,7 @@ main {
               <div style="font-size:10px;color:var(--text-muted);margin-top:2px;">All 3 routes are preserved. No historical Core Route is deleted to reduce visual density.</div>
             </div>
             <div style="overflow-x:auto;">
-              <table class="hub-table" style="font-size:11px;min-width:1200px;">
+              <table class="hub-table jb-route-table" style="font-size:11px;min-width:1200px;">
                 <thead><tr>
                   <th style="text-align:right;">Rank</th><th>Origin</th><th>Gateway</th><th>Destination</th><th>Mode</th>
                   <th style="text-align:right;">Shipments</th><th style="text-align:right;">% Exports</th><th style="text-align:right;">Cumulative</th>
