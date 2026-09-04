@@ -1513,6 +1513,11 @@ main {
       <span class="recent-cls" style="background:rgba(245,158,11,0.2);color:#f59e0b;">LEAD</span>
       <span class="recent-cls aaa">AAA</span>
     </div>
+    <div class="nav-item" onclick="showView('view-jiangsu-beiren', this)">
+      <span>◆</span> <span style="flex:1;">Jiangsu Beiren</span>
+      <span class="recent-cls" style="background:rgba(245,158,11,0.2);color:#f59e0b;">LEAD</span>
+      <span class="recent-cls aa">AA</span>
+    </div>
   </div>
 
   <div class="nav-divider"></div>
@@ -3010,6 +3015,46 @@ main {
         <span class="acct-tag">Cross-Border</span>
         <span class="acct-tag">Ocean</span>
         <span class="acct-tag">Customs</span>
+        <span class="acct-tag">ILM / Control Tower</span>
+      </div>
+    </div>
+
+    <!-- Jiangsu Beiren Smart Mfg. Technology Co., Ltd. -->
+    <div class="account-card aa" onclick="showViewById('view-jiangsu-beiren')">
+      <div class="account-card-header">
+        <div>
+          <div class="account-name">Jiangsu Beiren</div>
+          <div class="account-industry">Jiangsu Beiren Smart Mfg. Technology Co., Ltd. · Industrial Automation &amp; Automotive Manufacturing Support · Air-Led Multimodal Inbound · AIFA &amp; Manzanillo Gateways · Autotek-Concentrated Mexico-Facing Network</div>
+        </div>
+        <div style="display:flex;gap:5px;align-items:center;flex-shrink:0;">
+          <span class="account-cls-badge lead">LEAD</span>
+          <span class="account-cls-badge aa">AA</span>
+        </div>
+      </div>
+      <div class="account-metrics" style="grid-template-columns:repeat(4,1fr);">
+        <div class="acct-metric"><div class="acct-metric-val">32</div><div class="acct-metric-lbl">Current YTD Shipments</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">30</div><div class="acct-metric-lbl">Imports · 93.8%</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">2</div><div class="acct-metric-lbl">Exports · 6.3%</div></div>
+        <div class="acct-metric"><div class="acct-metric-val" style="color:var(--red);">−37.3%</div><div class="acct-metric-lbl">Jan 1–Jul 27 · observed</div></div>
+      </div>
+      <div style="margin-top:8px;padding:7px 10px;background:rgba(232,0,45,0.05);border-left:3px solid var(--red);border-radius:0 4px 4px 0;">
+        <div style="font-size:9px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:var(--red);">Core Routes · Distributed Inbound / Concentrated Outbound</div>
+        <div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;margin-top:2px;">Imports <strong>8</strong> routes = 83.3% · Exports <strong>1</strong> route = 100% — <strong style="color:var(--red);">EXTREME ROUTE CONCENTRATION</strong></div>
+      </div>
+      <div style="margin-top:8px;padding:8px 10px;background:rgba(232,0,45,0.06);border-left:3px solid var(--red);border-radius:0 4px 4px 0;">
+        <div style="font-size:9px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:var(--red);">Operational Complexity · MEDIUM-HIGH</div>
+        <div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;margin-top:2px;">AIFA 60.0% inbound · Manzanillo 26.7% ocean · Air 70.0% / Maritime 26.7% · Autotek Mexico 80.0% of Imports · 7 Customs Agent codes</div>
+      </div>
+      <div style="margin-top:8px;padding:7px 10px;background:rgba(245,158,11,0.07);border-left:3px solid #f59e0b;border-radius:0 4px 4px 0;">
+        <div style="font-size:9px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:#b45309;">Data Quality — requires validation</div>
+        <div style="font-size:10.5px;color:var(--text-muted);line-height:1.45;margin-top:2px;">Records show Shipment Origin China while Shipper Full Address reads &ldquo;United States&rdquo; — preserved, not reconciled · three visible entity name variants</div>
+      </div>
+      <div class="account-tags">
+        <span class="acct-tag" style="background:rgba(245,158,11,0.12);color:#b45309;border-color:rgba(245,158,11,0.3);">LEAD</span>
+        <span class="acct-tag">Air</span>
+        <span class="acct-tag">Ocean</span>
+        <span class="acct-tag">Customs</span>
+        <span class="acct-tag">IMMEX</span>
         <span class="acct-tag">ILM / Control Tower</span>
       </div>
     </div>
@@ -13564,6 +13609,16 @@ main {
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot"></div></div></td>
               <td><div class="dots"><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div></td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td style="color:#b45309;font-weight:700;font-size:11px;">★ PRIORITY TARGET</td>
+            </tr>
+            <tr onclick="showViewById('view-jiangsu-beiren')" style="cursor:pointer;">
+              <td><strong>Jiangsu Beiren</strong> <span style="font-size:10px;font-weight:600;color:#b45309;background:rgba(245,158,11,0.12);padding:1px 5px;border-radius:3px;margin-left:4px;">LEAD</span></td>
+              <td><span class="cls-pill aa">AA</span></td>
+              <td style="color:var(--text-muted);" title="Relationship LEAD · AIOS Classification AA Priority Target · Operational Complexity MEDIUM-HIGH · Current YTD 2026 Shipments 32 · Imports 30 (93.8%) visible through July 27 2026 · Exports 2 (6.3%) visible through June 9 2026 · Comparable Jan 1–Jul 27 actual-vs-actual 51 to 32 −37.3% · Imports 45 to 30 −33.3% · Exports 6 to 2 −66.7% · Import modes Air 21 (70.0%) Maritime 8 (26.7%) Unknown 1 (3.3%) · Export modes Air 2 (100%) · Import modal shift Air 50.0% to 70.0% · Current YTD Import Core Routes 8 to 83.3% · Export Core Routes 1 to 100% EXTREME ROUTE CONCENTRATION · 2025 baseline 72 Shipments · 64 Imports 88.9% · 8 Exports 11.1% · 6 Import Core Routes 81.3% · 3 Export Core Routes 87.5% · Visible Import CIF USD 14.11M Current YTD and USD 40.74M in 2025 · Visible Export CIF USD 8.53K Current YTD and USD 110.97K in 2025 · Import gross weight 502,662.5 kg Current YTD and 1,914,136.5 kg in 2025 · Export gross weight 2,056.0 kg Current YTD and 5,598.5 kg in 2025 · Import gateways AIFA Aeropuerto Internacional Felipe Ángeles Airport 18 (60.0%) Manzanillo Colima Port 8 (26.7%) Querétaro Gateway geography 2 (6.7%) Puebla Gateway geography 1 (3.3%) AICM Airport 1 (3.3%) · 2025 Import gateways Manzanillo Port 31 (48.4%) AIFA Airport 27 (42.2%) AICM Airport 4 (6.3%) Querétaro 1 Puebla 1 · Export gateway AIFA Airport 2 (100%) · Import Trading Partners Autotek Mexico Sa De Cv 24 (80.0%) Beiren Smart Mfg. Solutions S De Rl De Cv 4 (13.3%) Kirchhoff Automotive Mexico Sa De Cv 2 (6.7%) Top 3 concentration 100% · 2025 Import Trading Partners Autotek Mexico 52 (81.3%) Beiren Smart Mfg. Solutions 5 (7.8%) Kirchhoff Automotive Mexico 5 (7.8%) Waldaschaff Automotive Mexico 2 (3.1%) · Export origin partner Autotek Mexico 2 of 2 (100%) · Customs Agent 3547 10 · 3172 8 · 3341 7 · 1648 2 · 3076 1 · 1875 1 · 3976 1 · 2025 leading codes 3341 24 · 3172 24 · 3976 4 · 3129 4 · Final Import Export 28 (93.3%) · Regime Change In Goods Of Fixed Assets 1 (3.3%) · Temporary Import Fixed Assets IMMEX 1 (3.3%) · 2025 Final Import Export 49 (76.6%) Temporary Import Fixed Assets IMMEX 14 (21.9%) · HS 8479899999 automated assembly industrial machinery 19 (63.3%) · 8466949900 machine-tool parts 2 · 8515909900 welding-machine parts 2 · 8536909999 electrical connection components 2 · 8537109999 electrical control apparatus 2 · 2025 HS 8479899999 34 (53.1%) 8708509999 10 8708999999 5 8708292000 4 4821100100 3 · Export HS 8708990700 front suspension frames 2 (100%) · Shipment Origin China with Shipper Full Address United States — data quality and entity resolution requires validation · entity name variants Jiangsu Beiren Smart Mfg. Technology Co., Ltd. / Co.. Ltd. / Jiangsu Beiren Smart Manufacturingtechnology Co., Ltd. · Operational Complexity Partner · Multimodal Coordination Partner · Customs &amp; Visibility Partner · ILM / Control Tower Partner · Panjiva Visible Logistics Universe">Industrial Automation · Air-Led Multimodal Inbound · AIFA / Manzanillo</td>
+              <td><div class="dots"><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div></td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot"></div></div></td>
+              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
               <td style="color:#b45309;font-weight:700;font-size:11px;">★ PRIORITY TARGET</td>
             </tr>
@@ -61433,6 +61488,1438 @@ main {
   </div>
 </div>
 
+<div id="view-jiangsu-beiren" class="view">
+  <div class="page-header">
+    <div class="page-header-left">
+      <div class="page-header-eyebrow">Target Account · LEAD · Panjiva Visible Logistics Universe</div>
+      <div class="page-header-title">Jiangsu Beiren</div>
+      <div class="page-header-sub">Jiangsu Beiren Smart Mfg. Technology Co., Ltd. · Industrial Automation &amp; Automotive Manufacturing Support · Air-Led Multimodal Inbound · AIFA &amp; Manzanillo Gateways · Autotek-Concentrated Mexico-Facing Network</div>
+    </div>
+    <div class="page-header-meta">
+      <span class="classification-badge lead">LEAD</span>
+      <span class="classification-badge aa">AA</span>
+      <button class="print-btn" onclick="printView('view-jiangsu-beiren')">⬇ Export PDF</button>
+    </div>
+  </div>
+  <div class="content-body">
+
+    <!-- Identity strip — Relationship Status, AIOS Classification and Operational Complexity are independent dimensions -->
+    <div class="card">
+      <div class="card-body" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 18px;">
+        <span style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);">Relationship Status</span>
+        <span class="classification-badge lead">LEAD</span>
+        <span style="width:1px;height:20px;background:var(--border);"></span>
+        <span style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);">AIOS Classification</span>
+        <span class="classification-badge aa">AA</span>
+        <span style="font-size:11px;color:var(--text-muted);">Priority Target</span>
+        <span style="width:1px;height:20px;background:var(--border);"></span>
+        <span style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);">Operational Complexity</span>
+        <span style="font-size:13px;font-weight:800;color:#b45309;letter-spacing:0.5px;">MEDIUM-HIGH</span>
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;flex:1;min-width:300px;text-align:right;">
+          <strong style="color:var(--navy);">Pre-commercial.</strong> Akzent does not currently manage this account. Panjiva is the <strong>sole source of truth</strong> for this analysis — <strong>no Wallet, Penetration, Coverage, Account Intelligence Snapshot or Akzent financials</strong> are shown.
+        </span>
+      </div>
+    </div>
+
+    <!-- 01 CURRENT OPERATING STATE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">01</span> Current Operating State — Current YTD 2026 · Imports through July 27 · Exports through June 9</div>
+      <div class="card-body">
+        <div class="grid-4" style="gap:10px;">
+          <div class="stat-box"><div class="stat-label">Visible Shipments · Current YTD</div><div class="stat-value teal" style="font-size:32px;">32</div><div class="stat-sub">Imports visible through <strong>July 27, 2026</strong> · Exports through <strong>June 9, 2026</strong> · observed, never annualized</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">Imports</div><div class="stat-value teal" style="font-size:32px;">30 <span style="font-size:17px;color:var(--text-muted);font-weight:700;">= 93.8%</span></div><div class="stat-sub">Strongly import-oriented visible network</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--navy);"><div class="stat-label">Exports</div><div class="stat-value" style="font-size:32px;">2 <span style="font-size:17px;color:var(--text-muted);font-weight:700;">= 6.3%</span></div><div class="stat-sub">Directional universe for the Export Core Route set</div></div>
+          <div class="stat-box" style="border-left:3px solid #f59e0b;"><div class="stat-label">Operational Complexity</div><div class="stat-value" style="font-size:26px;color:#b45309;">Medium-High</div><div class="stat-sub">AIOS Interpretation · no numerical score</div></div>
+        </div>
+        <div class="grid-4" style="gap:10px;margin-top:10px;">
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">Air · Current YTD Imports</div><div class="stat-value teal" style="font-size:26px;">21 <span style="font-size:15px;color:var(--text-muted);font-weight:700;">= 70.0%</span></div><div class="stat-sub">Dominant visible Import mode</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--navy);"><div class="stat-label">Maritime · Current YTD Imports</div><div class="stat-value" style="font-size:26px;">8 <span style="font-size:15px;color:var(--text-muted);font-weight:700;">= 26.7%</span></div><div class="stat-sub">Secondary but recurring · Unknown 1 · 3.3%</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--navy);"><div class="stat-label">Import Core Routes ≥80%</div><div class="stat-value" style="font-size:26px;">8 <span style="font-size:15px;color:var(--text-muted);font-weight:700;">= 83.3%</span></div><div class="stat-sub">Complete set · 2025 required <strong>6</strong> routes</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--red);background:rgba(232,0,45,0.04);"><div class="stat-label">Export Core Routes ≥80%</div><div class="stat-value red" style="font-size:26px;">1 <span style="font-size:15px;color:var(--text-muted);font-weight:700;">= 100%</span></div><div class="stat-sub" style="font-weight:800;color:var(--red);letter-spacing:0.4px;">EXTREME ROUTE CONCENTRATION</div></div>
+        </div>
+        <div class="grid-4" style="gap:10px;margin-top:10px;">
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">Primary Import Gateway</div><div class="stat-value teal" style="font-size:22px;line-height:1.25;">AIFA</div><div class="stat-sub"><strong>18 of 30 · 60.0%</strong> · Aeropuerto Internacional Felipe Ángeles · Airport</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--navy);"><div class="stat-label">Primary Import Trading Partner</div><div class="stat-value" style="font-size:18px;line-height:1.25;">Autotek Mexico Sa De Cv</div><div class="stat-sub"><strong>24 of 30 · 80.0%</strong> of visible Current YTD Imports</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--navy);"><div class="stat-label">Leading Import HS Operational Presence</div><div class="stat-value" style="font-size:20px;">8479899999</div><div class="stat-sub"><strong>19 of 30 · 63.3%</strong> · automated assembly / industrial machinery</div></div>
+          <div class="stat-box" style="border-left:3px solid #f59e0b;"><div class="stat-label">Visible Import CIF · Current YTD</div><div class="stat-value" style="font-size:24px;color:#b45309;">USD 14.11M</div><div class="stat-sub">Gross weight <strong>502,662.5 kg</strong> · Panjiva-visible value, never spend</div></div>
+        </div>
+        <div style="margin-top:10px;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:6px;display:flex;gap:26px;flex-wrap:wrap;align-items:center;">
+          <div><div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);">Comparable-Period Trend</div><div style="font-size:15px;font-weight:800;color:var(--navy);margin-top:2px;">51 → 32 Shipments <span style="color:var(--red);">−37.3%</span></div></div>
+          <div><div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);">Basis</div><div style="font-size:12px;font-weight:700;color:var(--navy);margin-top:2px;">Jan 1 – Jul 27 · Actual vs Actual</div></div>
+          <div style="flex:1;min-width:280px;"><span style="font-size:10px;color:var(--text-muted);line-height:1.6;"><strong style="color:#b45309;">Current YTD is never annualized</strong> and the 2025 Full Calendar Year is never aggregated with it. Both remain strictly separate universes throughout this page.</span></div>
+        </div>
+
+        <div style="margin-top:16px;padding:18px 22px;background:linear-gradient(135deg,rgba(13,43,94,0.05) 0%,rgba(196,30,58,0.05) 100%);border-left:3px solid var(--red);border-radius:0 6px 6px 0;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--red);margin-bottom:8px;">Executive Thesis · AIOS Interpretation</div>
+          <div style="font-size:21px;font-weight:800;color:var(--navy);line-height:1.35;">Small by Shipment count, operationally meaningful by structure —<br>enter through coordination and customs visibility, not commodity freight</div>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.75;margin-top:10px;max-width:1000px;">Jiangsu Beiren's visible Mexico-facing logistics network is <strong>not large by Shipment count</strong>, but it is <strong>operationally meaningful</strong>: it combines <strong>Air and Maritime Imports</strong>, <strong>concentrated gateway usage</strong>, <strong>technical machinery and automotive components</strong>, <strong>multiple customs-agent relationships</strong> and a <strong>highly concentrated operating relationship around Autotek Mexico</strong>. Akzent should enter through <strong style="color:var(--navy);">coordination, customs visibility and exception governance</strong> rather than commodity freight.</p>
+          <p style="font-size:11px;color:var(--text-muted);line-height:1.7;margin-top:8px;"><strong style="color:var(--navy);">This is an AIOS Interpretation of the visible network. It is not a claim of confirmed customer pain, and it does not state or imply that Jiangsu Beiren currently lacks any of these capabilities.</strong> This conclusion is stated once here; later modules supply evidence rather than restating it.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 COMPARABLE-PERIOD TREND -->
+    <div class="card">
+      <div class="card-header"><span class="accent">02</span> Comparable-Period Trend — Observed Actual vs Observed Actual</div>
+      <div class="card-body">
+        <div style="display:grid;grid-template-columns:minmax(320px,1fr) 1.35fr;gap:22px;align-items:stretch;">
+          <div style="padding:18px 20px;background:var(--bg);border:1px solid var(--border);border-radius:8px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal-dim);">Primary Comparison</div>
+            <div style="font-size:14px;font-weight:800;color:var(--navy);margin-top:3px;">January 1 – July 27, 2025 vs Current YTD through July 27, 2026</div>
+            <div style="font-size:10px;color:var(--text-muted);margin-top:2px;">Actual vs actual · equal observed windows · never annualized</div>
+            <div style="display:flex;align-items:flex-end;justify-content:center;gap:34px;margin-top:22px;height:250px;">
+              <div style="display:flex;flex-direction:column;align-items:center;">
+                <div style="font-size:20px;font-weight:800;color:var(--navy);margin-bottom:6px;">51</div>
+                <div style="width:70px;height:190px;display:flex;flex-direction:column;justify-content:flex-end;border-radius:5px 5px 0 0;overflow:hidden;">
+                  <div style="height:22px;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;">Exp 6</div>
+                  <div style="height:168px;background:var(--teal);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;">Imp 45</div>
+                </div>
+                <div style="font-size:11px;font-weight:700;color:var(--text-muted);margin-top:7px;letter-spacing:0.5px;">Jan 1 – Jul 27, 2025</div>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;padding-bottom:70px;">
+                <div style="font-size:15px;font-weight:800;color:var(--red);">▼ 37.3%</div>
+                <div style="font-size:9px;color:var(--text-light);letter-spacing:0.5px;">observed</div>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;">
+                <div style="font-size:20px;font-weight:800;color:var(--navy);margin-bottom:6px;">32</div>
+                <div style="width:70px;height:119px;display:flex;flex-direction:column;justify-content:flex-end;border-radius:5px 5px 0 0;overflow:hidden;">
+                  <div style="height:7px;background:var(--navy);"></div>
+                  <div style="height:112px;background:var(--teal);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;">Imp 30</div>
+                </div>
+                <div style="font-size:11px;font-weight:700;color:var(--text-muted);margin-top:7px;letter-spacing:0.5px;">Jan 1 – Jul 27, 2026</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:12px;justify-content:center;margin-top:10px;font-size:10px;color:var(--text-muted);flex-wrap:wrap;">
+              <span><span style="display:inline-block;width:9px;height:9px;background:var(--teal);border-radius:2px;"></span> Imports</span>
+              <span><span style="display:inline-block;width:9px;height:9px;background:var(--navy);border-radius:2px;"></span> Exports <span style="color:var(--text-light);">(2 Shipments — bar shown at true scale)</span></span>
+            </div>
+          </div>
+          <div style="padding:0;">
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th>Metric</th><th style="text-align:right;">2025 Comparable</th><th style="text-align:right;">2026 Current YTD</th><th style="text-align:right;">Change</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Total Shipments</strong></td><td style="text-align:right;font-weight:700;">51</td><td style="text-align:right;font-weight:700;color:var(--navy);">32</td><td style="text-align:right;font-weight:800;color:var(--red);">−37.3%</td></tr>
+                  <tr><td><strong>Imports</strong></td><td style="text-align:right;font-weight:700;">45</td><td style="text-align:right;font-weight:700;color:var(--navy);">30</td><td style="text-align:right;font-weight:800;color:var(--red);">−33.3%</td></tr>
+                  <tr><td><strong>Exports</strong></td><td style="text-align:right;font-weight:700;">6</td><td style="text-align:right;font-weight:700;color:var(--navy);">2</td><td style="text-align:right;font-weight:800;color:var(--red);">−66.7%</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div style="margin-top:12px;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:6px;">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:6px;">Required Interpretation</div>
+              <p style="font-size:11.5px;color:var(--text-muted);line-height:1.75;">Panjiva shows <strong>lower visible Shipment activity</strong> in Current YTD versus the same calendar window of the previous year, in both directions.</p>
+            </div>
+            <div style="margin-top:10px;padding:12px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#b45309;margin-bottom:5px;">This observed change does not establish</div>
+              <div style="display:flex;flex-wrap:wrap;gap:6px;">
+                <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">✕ lost business</span>
+                <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">✕ reduced production</span>
+                <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">✕ provider change</span>
+                <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">✕ demand contraction</span>
+                <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">✕ operational cause</span>
+              </div>
+              <div style="font-size:10px;color:var(--text-muted);line-height:1.6;margin-top:8px;">This is <strong>observed Panjiva activity only</strong>. <strong style="color:#b45309;">Current YTD is not annualized</strong> and no run-rate, forecast or projected full-year value appears anywhere on this page.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 IMPORT / EXPORT STRUCTURE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">03</span> Import / Export Structure — Strictly Separated Periods</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:14px;">
+          <div style="padding:16px 18px;background:var(--bg);border:1px solid var(--border);border-radius:8px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-light);">Previous Full Calendar Year · Historical Baseline</div>
+            <div style="font-size:16px;font-weight:800;color:var(--navy);margin-top:3px;">2025 — Established Operating Structure</div>
+            <div style="display:flex;gap:22px;margin-top:14px;flex-wrap:wrap;">
+              <div><div style="font-size:24px;font-weight:800;color:var(--navy);">72</div><div style="font-size:9px;color:var(--text-muted);letter-spacing:0.5px;">TOTAL SHIPMENTS</div></div>
+              <div><div style="font-size:24px;font-weight:800;color:var(--navy);">64</div><div style="font-size:9px;color:var(--text-muted);letter-spacing:0.5px;">IMPORTS · 88.9%</div></div>
+              <div><div style="font-size:24px;font-weight:800;color:var(--navy);">8</div><div style="font-size:9px;color:var(--text-muted);letter-spacing:0.5px;">EXPORTS · 11.1%</div></div>
+            </div>
+            <div style="height:10px;display:flex;border-radius:5px;overflow:hidden;margin-top:14px;">
+              <div style="width:88.9%;background:var(--teal);" title="Imports 88.9%"></div>
+              <div style="width:11.1%;background:var(--navy);" title="Exports 11.1%"></div>
+            </div>
+            <div style="font-size:10px;color:var(--text-muted);margin-top:8px;">January 1 – December 31, 2025</div>
+          </div>
+          <div style="padding:16px 18px;background:rgba(0,180,216,0.05);border:1px solid rgba(0,180,216,0.3);border-radius:8px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal-dim);">Current YTD · Primary Narrative</div>
+            <div style="font-size:16px;font-weight:800;color:var(--navy);margin-top:3px;">2026 Current YTD — Current Operating State</div>
+            <div style="display:flex;gap:22px;margin-top:14px;flex-wrap:wrap;">
+              <div><div style="font-size:24px;font-weight:800;color:var(--teal-dim);">32</div><div style="font-size:9px;color:var(--text-muted);letter-spacing:0.5px;">TOTAL SHIPMENTS</div></div>
+              <div><div style="font-size:24px;font-weight:800;color:var(--teal-dim);">30</div><div style="font-size:9px;color:var(--text-muted);letter-spacing:0.5px;">IMPORTS · 93.8%</div></div>
+              <div><div style="font-size:24px;font-weight:800;color:var(--teal-dim);">2</div><div style="font-size:9px;color:var(--text-muted);letter-spacing:0.5px;">EXPORTS · 6.3%</div></div>
+            </div>
+            <div style="height:10px;display:flex;border-radius:5px;overflow:hidden;margin-top:14px;">
+              <div style="width:93.8%;background:var(--teal);" title="Imports 93.8%"></div>
+              <div style="width:6.2%;background:var(--navy);" title="Exports 6.3%"></div>
+            </div>
+            <div style="font-size:10px;color:var(--text-muted);margin-top:8px;">Imports visible through <strong>July 27, 2026</strong> · Exports visible through <strong>June 9, 2026</strong></div>
+          </div>
+        </div>
+
+        <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--navy);margin:18px 0 8px;">Visible Value &amp; Weight — by period and direction</div>
+        <div style="overflow-x:auto;">
+          <table class="hub-table" style="font-size:11px;">
+            <thead><tr><th>Period</th><th>Direction</th><th style="text-align:right;">Visible CIF Value</th><th style="text-align:right;">Visible Gross Weight</th></tr></thead>
+            <tbody>
+              <tr><td style="color:var(--text-muted);"><strong>2025</strong> <span style="font-size:9px;color:var(--text-light);">· full calendar year</span></td><td><span class="hub-tag air">Imports</span></td><td style="text-align:right;color:var(--text-muted);">USD 40.74M</td><td style="text-align:right;color:var(--text-muted);">1,914,136.5 kg</td></tr>
+              <tr><td style="color:var(--text-muted);"><strong>2025</strong> <span style="font-size:9px;color:var(--text-light);">· full calendar year</span></td><td><span class="hub-tag ocean">Exports</span></td><td style="text-align:right;color:var(--text-muted);">USD 110.97K</td><td style="text-align:right;color:var(--text-muted);">5,598.5 kg</td></tr>
+              <tr style="background:rgba(0,180,216,0.04);"><td><strong style="color:var(--navy);">2026 Current YTD</strong> <span style="font-size:9px;color:var(--text-light);">· through Jul 27</span></td><td><span class="hub-tag air">Imports</span></td><td style="text-align:right;font-weight:700;color:var(--navy);">USD 14.11M</td><td style="text-align:right;font-weight:700;color:var(--navy);">502,662.5 kg</td></tr>
+              <tr style="background:rgba(0,180,216,0.04);"><td><strong style="color:var(--navy);">2026 Current YTD</strong> <span style="font-size:9px;color:var(--text-light);">· through Jun 9</span></td><td><span class="hub-tag ocean">Exports</span></td><td style="text-align:right;font-weight:700;color:var(--navy);">USD 8.53K</td><td style="text-align:right;font-weight:700;color:var(--navy);">2,056.0 kg</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="margin-top:10px;padding:10px 14px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:#b45309;">Panjiva-visible values only. These values must not be interpreted as company revenue, total logistics spend, or total company trade activity.</strong> The 2025 and Current YTD universes are never summed into a single account total, and <strong>no Current YTD annualization is used</strong>.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 MODAL INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">04</span> Modal Intelligence — Visible Import Mix Shifted Toward Air</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:18px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:8px;">Current YTD 2026</div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th>Direction</th><th>Mode</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">Share</th><th style="width:22%;"></th></tr></thead>
+                <tbody>
+                  <tr><td rowspan="3" style="vertical-align:middle;"><strong>Imports</strong><div style="font-size:9px;color:var(--text-light);">30 Shipments</div></td><td><span class="hub-tag air">Air</span></td><td style="text-align:right;font-weight:700;">21</td><td style="text-align:right;font-weight:700;">70.0%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:70%;background:var(--teal);"></div></div></td></tr>
+                  <tr><td><span class="hub-tag ocean">Maritime</span></td><td style="text-align:right;font-weight:700;">8</td><td style="text-align:right;">26.7%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:26.7%;background:var(--navy);"></div></div></td></tr>
+                  <tr><td><span class="hub-tag unknown">Unknown</span></td><td style="text-align:right;">1</td><td style="text-align:right;">3.3%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:3.3%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td style="vertical-align:middle;"><strong>Exports</strong><div style="font-size:9px;color:var(--text-light);">2 Shipments</div></td><td><span class="hub-tag air">Air</span></td><td style="text-align:right;font-weight:700;">2</td><td style="text-align:right;font-weight:700;">100%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:100%;background:var(--teal);"></div></div></td></tr>
+                </tbody>
+                <tfoot><tr style="background:var(--bg);"><td colspan="2" style="font-weight:800;color:var(--navy);">Total visible Shipments</td><td style="text-align:right;font-weight:800;color:var(--navy);">32</td><td colspan="2" style="font-size:10px;color:var(--text-muted);">Imports <strong>30 · 93.8%</strong> · Exports <strong>2 · 6.3%</strong></td></tr></tfoot>
+              </table>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);margin-bottom:8px;">2025 Baseline · full calendar year</div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th>Direction</th><th>Mode</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">Share</th><th style="width:22%;"></th></tr></thead>
+                <tbody>
+                  <tr><td rowspan="3" style="vertical-align:middle;color:var(--text-muted);"><strong>Imports</strong><div style="font-size:9px;color:var(--text-light);">64 Shipments</div></td><td><span class="hub-tag air">Air</span></td><td style="text-align:right;font-weight:700;color:var(--text-muted);">32</td><td style="text-align:right;color:var(--text-muted);">50.0%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:50%;background:var(--teal);opacity:0.6;"></div></div></td></tr>
+                  <tr><td><span class="hub-tag ocean">Maritime</span></td><td style="text-align:right;font-weight:700;color:var(--text-muted);">31</td><td style="text-align:right;color:var(--text-muted);">48.4%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:48.4%;background:var(--navy);opacity:0.6;"></div></div></td></tr>
+                  <tr><td><span class="hub-tag unknown">Unknown</span></td><td style="text-align:right;color:var(--text-muted);">1</td><td style="text-align:right;color:var(--text-muted);">1.6%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:1.6%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td style="vertical-align:middle;color:var(--text-muted);"><strong>Exports</strong><div style="font-size:9px;color:var(--text-light);">8 Shipments</div></td><td><span class="hub-tag air">Air</span></td><td style="text-align:right;font-weight:700;color:var(--text-muted);">8</td><td style="text-align:right;color:var(--text-muted);">100%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:100%;background:var(--teal);opacity:0.6;"></div></div></td></tr>
+                </tbody>
+                <tfoot><tr style="background:var(--bg);"><td colspan="2" style="font-weight:700;color:var(--text-muted);">Total visible Shipments</td><td style="text-align:right;font-weight:800;color:var(--text-muted);">72</td><td colspan="2" style="font-size:10px;color:var(--text-muted);">Exports are <strong>100% Air</strong> in both periods</td></tr></tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;">
+          <div style="padding:14px 18px;background:var(--bg);border:1px solid var(--border);border-radius:8px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);margin-bottom:8px;">2025 Import Modal Mix · 64 Shipments</div>
+            <div style="height:26px;display:flex;border-radius:5px;overflow:hidden;border:1px solid var(--border);">
+              <div style="width:50.0%;background:var(--teal);opacity:0.65;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:#fff;">Air 50.0%</div>
+              <div style="width:48.4%;background:var(--navy);opacity:0.65;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:#fff;">Maritime 48.4%</div>
+              <div style="width:1.6%;background:#94a3b8;"></div>
+            </div>
+          </div>
+          <div style="padding:14px 18px;background:rgba(0,180,216,0.05);border:1px solid rgba(0,180,216,0.3);border-radius:8px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:8px;">Current YTD Import Modal Mix · 30 Shipments</div>
+            <div style="height:26px;display:flex;border-radius:5px;overflow:hidden;border:1px solid var(--border);">
+              <div style="width:70.0%;background:var(--teal);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:#fff;">Air 70.0%</div>
+              <div style="width:26.7%;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:#fff;">Maritime 26.7%</div>
+              <div style="width:3.3%;background:#94a3b8;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px;padding:12px 16px;background:rgba(13,43,94,0.03);border:1px solid var(--border);border-radius:6px;">
+          <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:6px;">AIOS Interpretation</div>
+          <ul class="q-list" style="font-size:11px;line-height:1.75;">
+            <li>The visible Import Modal Mix has <strong>shifted toward Air in Current YTD — 70.0% vs 50.0% in the 2025 full year</strong>.</li>
+            <li>This is a <strong>visible structural shift</strong>, <strong style="color:#b45309;">not evidence of urgency or service failure by itself</strong>.</li>
+            <li>The <strong>coexistence of Air and Maritime</strong> supports a multimodal coordination thesis.</li>
+            <li><strong style="color:#b45309;">The cause of modal change between periods is not inferred.</strong> Panjiva shows the composition, not the reason.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 05 GATEWAY INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">05</span> Geographic &amp; Gateway Intelligence — Airport · Port · Gateway geography</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:18px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:8px;">Current YTD 2026 Import Gateways · 30 Shipments</div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th>Gateway</th><th>Type</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">Import Share</th><th style="width:20%;"></th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Aeropuerto Internacional Felipe Ángeles (AIFA)</strong></td><td><span class="hub-tag air">Airport</span></td><td style="text-align:right;font-weight:800;">18</td><td style="text-align:right;font-weight:800;color:var(--navy);">60.0%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:100%;background:var(--teal);"></div></div></td></tr>
+                  <tr><td><strong>Manzanillo, Colima</strong></td><td><span class="hub-tag ocean">Port</span></td><td style="text-align:right;font-weight:700;">8</td><td style="text-align:right;font-weight:700;">26.7%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:44%;background:var(--navy);"></div></div></td></tr>
+                  <tr><td><strong>Querétaro</strong></td><td><span class="hub-tag" style="background:rgba(107,114,128,0.12);color:#4b5563;">Gateway geography</span></td><td style="text-align:right;">2</td><td style="text-align:right;">6.7%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:11%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td><strong>Puebla</strong></td><td><span class="hub-tag" style="background:rgba(107,114,128,0.12);color:#4b5563;">Gateway geography</span></td><td style="text-align:right;">1</td><td style="text-align:right;">3.3%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:6%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td><strong>AICM</strong></td><td><span class="hub-tag air">Airport</span></td><td style="text-align:right;">1</td><td style="text-align:right;">3.3%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:6%;background:#94a3b8;"></div></div></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div style="margin-top:14px;padding:14px 18px;background:rgba(0,180,216,0.05);border:1px solid rgba(0,180,216,0.3);border-radius:8px;">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:6px;">Current YTD Export Gateway · 2 Shipments</div>
+              <div style="font-size:15px;font-weight:800;color:var(--navy);">AIFA <span style="font-size:11px;font-weight:700;color:var(--text-muted);">· Airport</span></div>
+              <div style="font-size:11px;color:var(--text-muted);margin-top:3px;"><strong>2 of 2 visible Export Shipments · 100%</strong></div>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);margin-bottom:8px;">2025 Baseline Import Gateways · 64 Shipments</div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th>Gateway</th><th>Type</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">Import Share</th><th style="width:20%;"></th></tr></thead>
+                <tbody>
+                  <tr><td style="color:var(--text-muted);"><strong>Manzanillo, Colima</strong></td><td><span class="hub-tag ocean">Port</span></td><td style="text-align:right;font-weight:700;color:var(--text-muted);">31</td><td style="text-align:right;font-weight:700;color:var(--text-muted);">48.4%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:100%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>AIFA</strong></td><td><span class="hub-tag air">Airport</span></td><td style="text-align:right;font-weight:700;color:var(--text-muted);">27</td><td style="text-align:right;font-weight:700;color:var(--text-muted);">42.2%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:87%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>AICM</strong></td><td><span class="hub-tag air">Airport</span></td><td style="text-align:right;color:var(--text-muted);">4</td><td style="text-align:right;color:var(--text-muted);">6.3%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:13%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>Querétaro</strong></td><td><span class="hub-tag" style="background:rgba(107,114,128,0.12);color:#4b5563;">Gateway geography</span></td><td style="text-align:right;color:var(--text-muted);">1</td><td style="text-align:right;color:var(--text-muted);">1.6%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:3%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>Puebla</strong></td><td><span class="hub-tag" style="background:rgba(107,114,128,0.12);color:#4b5563;">Gateway geography</span></td><td style="text-align:right;color:var(--text-muted);">1</td><td style="text-align:right;color:var(--text-muted);">1.6%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:3%;background:#94a3b8;"></div></div></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div style="margin-top:14px;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:6px;">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:6px;">AIOS Interpretation</div>
+              <p style="font-size:11.5px;color:var(--text-muted);line-height:1.75;">Current YTD has a <strong>stronger visible dependency on AIFA</strong> than the 2025 full-year structure, while <strong>Manzanillo remains the principal visible Maritime gateway</strong>. Gateway concentration is an <strong>observed signal, not confirmed pain</strong>.</p>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:14px;padding:12px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.65;"><strong style="color:#b45309;">Gateway concentration is an observed operational signal. It is not confirmed customer pain.</strong> Gateways are crossing and handling nodes — they are <strong>never</strong> represented as Jiangsu Beiren facilities. <strong>Querétaro and Puebla are labelled Gateway geography</strong> because Panjiva does not identify a specific port or airport facility for those records; no facility is invented.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 06 CURRENT YTD IMPORT CORE ROUTES -->
+    <div class="card">
+      <div class="card-header"><span class="accent">06</span> Current YTD Import Core Routes — Complete ≥80% Set · 8 Routes</div>
+      <div class="card-body">
+        <div class="grid-4" style="gap:10px;">
+          <div class="stat-box"><div class="stat-label">Import Universe · Current YTD</div><div class="stat-value" style="font-size:26px;">30</div><div class="stat-sub">Visible Import Shipments · directional denominator</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">Smallest Route Set Reaching ≥80%</div><div class="stat-value teal" style="font-size:26px;">8 <span style="font-size:15px;color:var(--text-muted);font-weight:700;">routes</span></div><div class="stat-sub">The complete eight-route set is shown in full</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">Cumulative Coverage</div><div class="stat-value teal" style="font-size:26px;">83.3%</div><div class="stat-sub">25 of 30 visible Import Shipments</div></div>
+          <div class="stat-box"><div class="stat-label">Leading Route Share</div><div class="stat-value" style="font-size:26px;">26.7%</div><div class="stat-sub">Route #1 · no single route reaches 80%</div></div>
+        </div>
+
+        <div style="margin-top:12px;padding:11px 15px;background:rgba(13,43,94,0.03);border:1px solid var(--border);border-radius:6px;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.65;"><strong style="color:var(--navy);">Route construction preserves Panjiva facility / address precision exactly as supplied.</strong> Where Panjiva does not provide an address this is stated verbatim. A source-level geography anomaly involving <strong>&ldquo;United States&rdquo;</strong> is preserved and flagged for validation in module 19 — it is <strong style="color:#b45309;">not silently corrected</strong>.</span>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:18px 0 14px;">
+          <span style="font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;background:var(--navy);padding:4px 10px;border-radius:4px;">Rank 1 · 26.7% of visible Imports</span>
+          <span style="font-size:11px;color:var(--text-muted);">Import Core Route #1 — the leading visible inbound Air corridor into AIFA.</span>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:10px;align-items:stretch;">
+          <div style="padding:14px 16px;background:rgba(13,43,94,0.04);border:1px solid var(--border);border-radius:6px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:6px;">Origin Company / Facility</div>
+            <div style="font-size:13px;font-weight:700;color:var(--navy);line-height:1.4;">Jiangsu Beiren Smart Mfg. Technology Co., Ltd.</div>
+            <div style="font-size:10px;color:#b45309;line-height:1.5;margin-top:5px;font-weight:700;">Address not available in Panjiva</div>
+            <div style="font-size:10px;color:var(--text-light);line-height:1.5;margin-top:3px;font-style:italic;">Panjiva Shipment Origin: <strong>China</strong>. No address is enriched or invented.</div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--teal-dim);font-weight:700;">→</div>
+          <div style="padding:14px 16px;background:rgba(0,180,216,0.06);border:1px solid rgba(0,180,216,0.3);border-radius:6px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:6px;">Gateway · Airport</div>
+            <div style="font-size:13px;font-weight:700;color:var(--navy);line-height:1.4;">AIFA — Aeropuerto Internacional Felipe Ángeles</div>
+            <div style="font-size:10px;color:var(--text-light);line-height:1.5;margin-top:5px;">Handling node — <strong>not</strong> a Jiangsu Beiren facility</div>
+            <div style="margin-top:6px;"><span class="hub-tag air">Airport</span> <span class="hub-tag air">Air</span></div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--teal-dim);font-weight:700;">→</div>
+          <div style="padding:14px 16px;background:rgba(13,43,94,0.04);border:1px solid var(--border);border-radius:6px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:6px;">Destination Facility</div>
+            <div style="font-size:13px;font-weight:700;color:var(--navy);line-height:1.4;">Autotek Mexico Sa De Cv</div>
+            <div style="font-size:10px;color:#b45309;line-height:1.5;margin-top:5px;font-weight:700;">Address not available in Panjiva</div>
+            <div style="margin-top:6px;"><span class="hub-tag" style="background:rgba(245,158,11,0.12);color:#b45309;">Discovery Hypothesis — operating relationship requires validation</span></div>
+          </div>
+        </div>
+
+        <div class="grid-4" style="gap:8px;margin-top:14px;">
+          <div class="stat-box" style="background:var(--surface);"><div class="stat-label">Shipments</div><div class="stat-value teal" style="font-size:24px;">8</div><div class="stat-sub"><strong>26.7%</strong> of 30 Imports</div></div>
+          <div class="stat-box" style="background:var(--surface);"><div class="stat-label">Cumulative Coverage</div><div class="stat-value" style="font-size:24px;">26.7%</div><div class="stat-sub">Rank 1 of the 8-route set</div></div>
+          <div class="stat-box" style="background:var(--surface);"><div class="stat-label">Active Months</div><div class="stat-value" style="font-size:24px;">5</div><div class="stat-sub">Distinct months with visible Shipments</div></div>
+          <div class="stat-box" style="background:var(--surface);"><div class="stat-label">Observed Route Cadence</div><div class="stat-value" style="font-size:24px;">1.60 <span style="font-size:12px;color:var(--text-muted);font-weight:700;">/ month</span></div><div class="stat-sub"><strong>0.45</strong> Shipments / Week · Mar 25 – Jul 27, 2026</div></div>
+        </div>
+
+        <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--navy);margin:20px 0 8px;">Complete Import Core Route Set — all 8 routes to 83.3%</div>
+        <div style="overflow-x:auto;">
+          <table class="hub-table" style="font-size:11px;min-width:1240px;">
+            <thead><tr>
+              <th style="text-align:right;">Rank</th><th>Origin Facility / Panjiva Precision</th><th>Gateway</th><th>Destination Facility / Panjiva Precision</th><th>Mode</th>
+              <th style="text-align:right;">Shipments</th><th style="text-align:right;">% Imports</th><th style="text-align:right;">Cumulative</th>
+              <th style="text-align:right;">Active Months</th><th style="text-align:right;">/ Month</th><th style="text-align:right;">/ Week</th><th>Visible Date Range</th>
+            </tr></thead>
+            <tbody>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">1</td>
+                <td><strong>Jiangsu Beiren Smart Mfg. Technology Co., Ltd.</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div><div style="font-size:9px;color:var(--text-light);">Shipment Origin: China</div></td>
+                <td><strong>AIFA</strong><div style="font-size:9px;color:var(--text-light);">Airport</div></td>
+                <td><strong>Autotek Mexico Sa De Cv</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div></td>
+                <td><span class="hub-tag air">Air</span></td>
+                <td style="text-align:right;font-weight:800;">8</td>
+                <td style="text-align:right;font-weight:800;">26.7%</td>
+                <td style="text-align:right;font-weight:700;color:var(--teal-dim);">26.7%</td>
+                <td style="text-align:right;">5</td>
+                <td style="text-align:right;">1.60</td>
+                <td style="text-align:right;">0.45</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-03-25 → 2026-07-27</td>
+              </tr>
+              <tr style="background:rgba(245,158,11,0.05);">
+                <td style="text-align:right;font-weight:800;color:var(--navy);">2</td>
+                <td><strong>Jiangsu Beiren Smart Mfg. Technology Co., Ltd.</strong><div style="font-size:9px;color:var(--text-muted);">Panjiva Shipper Full Address: <strong>&ldquo;United States&rdquo;</strong></div><div style="font-size:9px;color:#b45309;font-weight:700;margin-top:2px;">DATA QUALITY / ENTITY RESOLUTION HYPOTHESIS — REQUIRES VALIDATION</div></td>
+                <td><strong>Manzanillo</strong><div style="font-size:9px;color:var(--text-light);">Port</div></td>
+                <td><strong>Autotek Mexico Sa De Cv</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div></td>
+                <td><span class="hub-tag ocean">Maritime</span></td>
+                <td style="text-align:right;font-weight:800;">5</td>
+                <td style="text-align:right;font-weight:800;">16.7%</td>
+                <td style="text-align:right;font-weight:700;color:var(--teal-dim);">43.3%</td>
+                <td style="text-align:right;">4</td>
+                <td style="text-align:right;">1.25</td>
+                <td style="text-align:right;">0.24</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-01-20 → 2026-06-15</td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">3</td>
+                <td><strong>Jiangsu Beiren Smart Mfg. Technology Co., Ltd.</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">QINGQIU LANE SUZHOU INDUSTRIAL PARK, JIANGSU 215126</div></td>
+                <td><strong>AIFA</strong><div style="font-size:9px;color:var(--text-light);">Airport</div></td>
+                <td><strong>Autotek Mexico Sa De Cv</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div></td>
+                <td><span class="hub-tag air">Air</span></td>
+                <td style="text-align:right;font-weight:800;">5</td>
+                <td style="text-align:right;font-weight:800;">16.7%</td>
+                <td style="text-align:right;font-weight:700;color:var(--teal-dim);">60.0%</td>
+                <td style="text-align:right;">2</td>
+                <td style="text-align:right;">2.50</td>
+                <td style="text-align:right;">0.64</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-01-02 → 2026-02-25</td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">4</td>
+                <td><strong>Jiangsu Beiren Smart Mfg. Technology Co., Ltd.</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">QINGQIU LANE SUZHOU INDUSTRIAL PARK, JIANGSU 215126</div></td>
+                <td><strong>AIFA</strong><div style="font-size:9px;color:var(--text-light);">Airport</div></td>
+                <td><strong>Beiren Smart Mfg. Solutions S De Rl De Cv</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">#200-12 Arquitecto Pedro Ramírez Vázquez</div></td>
+                <td><span class="hub-tag air">Air</span></td>
+                <td style="text-align:right;font-weight:700;">2</td>
+                <td style="text-align:right;font-weight:700;">6.7%</td>
+                <td style="text-align:right;font-weight:700;color:var(--teal-dim);">66.7%</td>
+                <td style="text-align:right;">2</td>
+                <td style="text-align:right;">1.00</td>
+                <td style="text-align:right;">0.13</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-04-09 → 2026-07-21</td>
+              </tr>
+              <tr style="background:rgba(245,158,11,0.05);">
+                <td style="text-align:right;font-weight:800;color:var(--navy);">5</td>
+                <td><strong>Jiangsu Beiren Smart Mfg. Technology Co.. Ltd.</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">8Q9C+R6W, Xing Hua Jie, Wu Zhong Qu, Su Zhou Shi, Jiang Su Sheng, China, 215121</div><div style="font-size:9px;color:#b45309;font-weight:700;margin-top:2px;">Source name variant preserved verbatim — entity resolution requires validation</div></td>
+                <td><strong>Manzanillo</strong><div style="font-size:9px;color:var(--text-light);">Port</div></td>
+                <td><strong>Autotek Mexico Sa De Cv</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div></td>
+                <td><span class="hub-tag ocean">Maritime</span></td>
+                <td style="text-align:right;font-weight:700;">2</td>
+                <td style="text-align:right;font-weight:700;">6.7%</td>
+                <td style="text-align:right;font-weight:700;color:var(--teal-dim);">73.3%</td>
+                <td style="text-align:right;">2</td>
+                <td style="text-align:right;">1.00</td>
+                <td style="text-align:right;">0.12</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-02-12 → 2026-06-05</td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">6</td>
+                <td><strong>Jiangsu Beiren Smart Mfg. Technology Co., Ltd.</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div><div style="font-size:9px;color:var(--text-light);">Shipment Origin: Singapore, United States</div></td>
+                <td><strong>AIFA</strong><div style="font-size:9px;color:var(--text-light);">Airport</div></td>
+                <td><strong>Autotek Mexico Sa De Cv</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div></td>
+                <td><span class="hub-tag air">Air</span></td>
+                <td style="text-align:right;font-weight:700;">1</td>
+                <td style="text-align:right;font-weight:700;">3.3%</td>
+                <td style="text-align:right;font-weight:700;color:var(--teal-dim);">76.7%</td>
+                <td style="text-align:right;">1</td>
+                <td style="text-align:right;">1.00</td>
+                <td style="text-align:right;font-weight:800;color:#b45309;">7.00 <span style="font-size:9px;">*</span></td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-05-28<div style="font-size:9px;font-weight:800;color:#b45309;letter-spacing:0.3px;">SHORT OBSERVATION WINDOW</div></td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">7</td>
+                <td><strong>Jiangsu Beiren Smart Mfg. Technology Co., Ltd.</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div><div style="font-size:9px;color:var(--text-light);">Shipment Origin: Germany</div></td>
+                <td><strong>AIFA</strong><div style="font-size:9px;color:var(--text-light);">Airport</div></td>
+                <td><strong>Autotek Mexico Sa De Cv</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div></td>
+                <td><span class="hub-tag air">Air</span></td>
+                <td style="text-align:right;font-weight:700;">1</td>
+                <td style="text-align:right;font-weight:700;">3.3%</td>
+                <td style="text-align:right;font-weight:800;color:var(--teal-dim);">80.0%</td>
+                <td style="text-align:right;">1</td>
+                <td style="text-align:right;">1.00</td>
+                <td style="text-align:right;font-weight:800;color:#b45309;">7.00 <span style="font-size:9px;">*</span></td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-04-17<div style="font-size:9px;font-weight:800;color:#b45309;letter-spacing:0.3px;">SHORT OBSERVATION WINDOW</div></td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">8</td>
+                <td><strong>Jiangsu Beiren Smart Mfg. Technology Co., Ltd.</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div><div style="font-size:9px;color:var(--text-light);">Shipment Origin: China, Germany</div></td>
+                <td><strong>Querétaro</strong><div style="font-size:9px;color:var(--text-light);">Gateway geography</div></td>
+                <td><strong>Kirchhoff Automotive Mexico Sa De Cv</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Avenida San Pedrito</div></td>
+                <td><span class="hub-tag air">Air</span></td>
+                <td style="text-align:right;font-weight:700;">1</td>
+                <td style="text-align:right;font-weight:700;">3.3%</td>
+                <td style="text-align:right;font-weight:800;color:var(--teal-dim);">83.3%</td>
+                <td style="text-align:right;">1</td>
+                <td style="text-align:right;">1.00</td>
+                <td style="text-align:right;font-weight:800;color:#b45309;">7.00 <span style="font-size:9px;">*</span></td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-07-08<div style="font-size:9px;font-weight:800;color:#b45309;letter-spacing:0.3px;">SHORT OBSERVATION WINDOW</div></td>
+              </tr>
+            </tbody>
+            <tfoot><tr style="background:var(--bg);">
+              <td colspan="5" style="font-weight:800;color:var(--navy);padding:10px 12px;">8 Core Routes · 25 of 30 visible Import Shipments · complete ≥80% set</td>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">25</td>
+              <td style="text-align:right;font-weight:800;color:var(--navy);">83.3%</td>
+              <td style="text-align:right;font-weight:800;color:var(--teal-dim);">83.3%</td>
+              <td colspan="4"></td>
+            </tr></tfoot>
+          </table>
+        </div>
+
+        <div style="margin-top:12px;height:14px;display:flex;border-radius:7px;overflow:hidden;border:1px solid var(--border);">
+          <div style="width:26.7%;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;color:#fff;">#1 · 26.7%</div>
+          <div style="width:16.7%;background:var(--teal);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;color:#fff;">#2</div>
+          <div style="width:16.7%;background:var(--teal-dim);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;color:#fff;">#3</div>
+          <div style="width:6.7%;background:#f59e0b;" title="Route #4 · 6.7%"></div>
+          <div style="width:6.7%;background:#b45309;" title="Route #5 · 6.7%"></div>
+          <div style="width:3.3%;background:#94a3b8;" title="Route #6 · 3.3%"></div>
+          <div style="width:3.3%;background:#7f8ea3;" title="Route #7 · 3.3%"></div>
+          <div style="width:3.3%;background:#64748b;" title="Route #8 · 3.3%"></div>
+          <div style="width:16.6%;background:#e6eaf1;"></div>
+        </div>
+        <div style="font-size:9px;color:var(--text-light);margin-top:4px;">Cumulative coverage of the 30-Shipment visible Import universe · 83.3% reached at Route #8.</div>
+
+        <div style="margin-top:14px;padding:12px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+          <div style="font-size:9px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:#b45309;margin-bottom:5px;">* Short observation window — Routes #6, #7 and #8</div>
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.65;"><strong style="color:#b45309;">Observed Route Cadence reflects the route's own visible date window. A short-window cadence is not evidence of sustained weekly capacity and must not be extrapolated into a forecast or normalized weekly volume.</strong> The universal AIOS frequency formula produces <strong>7.00 Shipments / Week</strong> for a one-day visible route window. This is mathematically correct and is rendered exactly as supplied — it is <strong>not</strong> a weekly run rate.</span>
+        </div>
+        <div style="margin-top:10px;padding:12px 16px;background:rgba(13,43,94,0.03);border:1px solid var(--border);border-radius:6px;">
+          <strong style="font-size:10px;color:var(--navy);text-transform:uppercase;letter-spacing:1.5px;">AIOS Interpretation</strong>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.7;margin-top:5px;">The Current YTD Import Core Route set is <strong>more distributed</strong> at the Panjiva source-precision level than the 2025 set — <strong>8 routes</strong> are required to reach ≥80% versus <strong>6</strong> in 2025. <strong style="color:var(--navy);">This is an observed structural signal, not confirmed customer pain</strong>, it is sensitive to Panjiva address precision and source entity variants, and the reason for the change is not inferred.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 07 CURRENT YTD EXPORT CORE ROUTES -->
+    <div class="card">
+      <div class="card-header"><span class="accent">07</span> Current YTD Export Core Routes — Complete ≥80% Set</div>
+      <div class="card-body">
+        <div class="grid-4" style="gap:10px;">
+          <div class="stat-box"><div class="stat-label">Export Universe · Current YTD</div><div class="stat-value" style="font-size:26px;">2</div><div class="stat-sub">Visible Export Shipments · directional denominator</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--red);"><div class="stat-label">Smallest Route Set Reaching ≥80%</div><div class="stat-value red" style="font-size:26px;">1 <span style="font-size:15px;color:var(--text-muted);font-weight:700;">route</span></div><div class="stat-sub">The complete set is a single route</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--red);"><div class="stat-label">Cumulative Coverage</div><div class="stat-value red" style="font-size:26px;">100%</div><div class="stat-sub">2 of 2 visible Export Shipments</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--red);background:rgba(232,0,45,0.04);"><div class="stat-label">Route Status</div><div class="stat-value" style="font-size:14px;line-height:1.3;color:var(--red);font-weight:800;letter-spacing:0.4px;">EXTREME ROUTE CONCENTRATION</div><div class="stat-sub">One route covers the entire visible Export universe</div></div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:18px 0 14px;">
+          <span style="font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;background:var(--red);padding:4px 10px;border-radius:4px;">Rank 1 · EXTREME ROUTE CONCENTRATION</span>
+          <span style="font-size:11px;color:var(--text-muted);">Export Core Route #1 — this single route covers 100% of visible Current YTD Exports.</span>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:10px;align-items:stretch;">
+          <div style="padding:14px 16px;background:rgba(13,43,94,0.04);border:1px solid var(--border);border-radius:6px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:6px;">Origin Facility</div>
+            <div style="font-size:13px;font-weight:700;color:var(--navy);line-height:1.4;">Autotek Mexico Sa De Cv</div>
+            <div style="font-size:10px;color:var(--text-light);line-height:1.5;margin-top:5px;">Panjiva Shipper Full Address: <strong>Mexico</strong></div>
+            <div style="font-size:10px;color:#b45309;line-height:1.5;margin-top:3px;font-weight:700;">Exact facility address not available in Panjiva</div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--red);font-weight:700;">→</div>
+          <div style="padding:14px 16px;background:rgba(232,0,45,0.05);border:1px solid rgba(232,0,45,0.22);border-radius:6px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--red);margin-bottom:6px;">Gateway · Airport</div>
+            <div style="font-size:13px;font-weight:700;color:var(--navy);line-height:1.4;">AIFA — Aeropuerto Internacional Felipe Ángeles</div>
+            <div style="font-size:10px;color:var(--text-light);line-height:1.5;margin-top:5px;">Handling node — <strong>not</strong> a Jiangsu Beiren facility</div>
+            <div style="margin-top:6px;"><span class="hub-tag air">Airport</span> <span class="hub-tag air">Air</span></div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--red);font-weight:700;">→</div>
+          <div style="padding:14px 16px;background:rgba(13,43,94,0.04);border:1px solid var(--border);border-radius:6px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:6px;">Destination Facility</div>
+            <div style="font-size:13px;font-weight:700;color:var(--navy);line-height:1.4;">Jiangsu Beiren Smart Mfg. Technology Co., Ltd.</div>
+            <div style="font-size:10px;color:var(--text-light);line-height:1.5;margin-top:5px;font-style:italic;">Qing Qiu Xiang, Wu Zhong Qu, Su Zhou Shi, Jiang Su Sheng, China, 215126</div>
+          </div>
+        </div>
+
+        <div class="grid-4" style="gap:8px;margin-top:14px;">
+          <div class="stat-box" style="background:var(--surface);"><div class="stat-label">Shipments</div><div class="stat-value red" style="font-size:24px;">2</div><div class="stat-sub"><strong>100%</strong> of 2 Exports</div></div>
+          <div class="stat-box" style="background:var(--surface);"><div class="stat-label">Cumulative Coverage</div><div class="stat-value" style="font-size:24px;">100%</div><div class="stat-sub">Complete ≥80% set</div></div>
+          <div class="stat-box" style="background:var(--surface);"><div class="stat-label">Active Months</div><div class="stat-value" style="font-size:24px;">2</div><div class="stat-sub">Distinct months with visible Shipments</div></div>
+          <div class="stat-box" style="background:var(--surface);"><div class="stat-label">Observed Route Cadence</div><div class="stat-value" style="font-size:24px;">1.00 <span style="font-size:12px;color:var(--text-muted);font-weight:700;">/ month</span></div><div class="stat-sub"><strong>0.09</strong> Shipments / Week · Jan 12 – Jun 9, 2026</div></div>
+        </div>
+        <div style="margin-top:8px;padding:9px 14px;background:var(--bg);border:1px solid var(--border);border-radius:6px;display:flex;gap:24px;flex-wrap:wrap;">
+          <div><div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);">First Visible Shipment</div><div style="font-size:12px;font-weight:700;color:var(--navy);">2026-01-12</div></div>
+          <div><div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);">Last Visible Shipment</div><div style="font-size:12px;font-weight:700;color:var(--navy);">2026-06-09</div></div>
+          <div><div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);">Mode</div><div style="font-size:12px;font-weight:700;color:var(--navy);">Air</div></div>
+          <div><div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);">Gateway Type</div><div style="font-size:12px;font-weight:700;color:var(--navy);">Airport</div></div>
+        </div>
+
+        <div style="margin-top:12px;height:14px;display:flex;border-radius:7px;overflow:hidden;border:1px solid var(--border);">
+          <div style="width:100%;background:var(--red);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;color:#fff;letter-spacing:0.5px;">CORE ROUTE #1 · 100% — EXTREME ROUTE CONCENTRATION</div>
+        </div>
+        <div style="font-size:9px;color:var(--text-light);margin-top:4px;">Cumulative coverage of the 2-Shipment visible Export universe.</div>
+
+        <div style="margin-top:14px;padding:12px 16px;background:rgba(13,43,94,0.03);border:1px solid var(--border);border-radius:6px;">
+          <strong style="font-size:10px;color:var(--navy);text-transform:uppercase;letter-spacing:1.5px;">AIOS Interpretation</strong>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.7;margin-top:5px;">A single outbound corridor accounts for <strong>100%</strong> of the visible Export universe, versus a 2025 Core Route set that required <strong>three routes</strong> to exceed 80%. <strong style="color:var(--navy);">This is an observed structural signal on a very small directional universe (2 Shipments), not confirmed customer pain</strong>, and the reason for the concentration is not inferred.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 08 ROUTE FREQUENCY INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">08</span> Route Frequency Intelligence — Observed Route Cadence</div>
+      <div class="card-body">
+        <div style="overflow-x:auto;">
+          <table class="hub-table" style="font-size:11px;min-width:980px;">
+            <thead><tr><th>Period</th><th>Core Route</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">Active Months</th><th style="text-align:right;">Shipments / Active Month</th><th style="text-align:right;">Shipments / Week</th><th>Visible Date Range</th></tr></thead>
+            <tbody>
+              <tr style="background:rgba(0,180,216,0.04);"><td><strong style="color:var(--navy);">2026 YTD</strong></td><td><span class="hub-tag air">Import</span> <strong>#1</strong> Jiangsu Beiren (origin China) → AIFA → Autotek Mexico</td><td style="text-align:right;font-weight:800;">8</td><td style="text-align:right;">5</td><td style="text-align:right;font-weight:700;">1.60</td><td style="text-align:right;font-weight:700;">0.45</td><td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-03-25 → 2026-07-27</td></tr>
+              <tr style="background:rgba(0,180,216,0.04);"><td><strong style="color:var(--navy);">2026 YTD</strong></td><td><span class="hub-tag air">Import</span> <strong>#2</strong> Jiangsu Beiren (&ldquo;United States&rdquo; address) → Manzanillo → Autotek Mexico</td><td style="text-align:right;font-weight:800;">5</td><td style="text-align:right;">4</td><td style="text-align:right;font-weight:700;">1.25</td><td style="text-align:right;font-weight:700;">0.24</td><td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-01-20 → 2026-06-15</td></tr>
+              <tr style="background:rgba(0,180,216,0.04);"><td><strong style="color:var(--navy);">2026 YTD</strong></td><td><span class="hub-tag air">Import</span> <strong>#3</strong> Jiangsu Beiren (QINGQIU LANE) → AIFA → Autotek Mexico</td><td style="text-align:right;font-weight:800;">5</td><td style="text-align:right;">2</td><td style="text-align:right;font-weight:700;">2.50</td><td style="text-align:right;font-weight:700;">0.64</td><td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-01-02 → 2026-02-25</td></tr>
+              <tr style="background:rgba(0,180,216,0.04);"><td><strong style="color:var(--navy);">2026 YTD</strong></td><td><span class="hub-tag air">Import</span> <strong>#4</strong> Jiangsu Beiren (QINGQIU LANE) → AIFA → Beiren Smart Mfg. Solutions</td><td style="text-align:right;font-weight:700;">2</td><td style="text-align:right;">2</td><td style="text-align:right;">1.00</td><td style="text-align:right;">0.13</td><td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-04-09 → 2026-07-21</td></tr>
+              <tr style="background:rgba(0,180,216,0.04);"><td><strong style="color:var(--navy);">2026 YTD</strong></td><td><span class="hub-tag air">Import</span> <strong>#5</strong> Jiangsu Beiren (8Q9C+R6W Xing Hua Jie) → Manzanillo → Autotek Mexico</td><td style="text-align:right;font-weight:700;">2</td><td style="text-align:right;">2</td><td style="text-align:right;">1.00</td><td style="text-align:right;">0.12</td><td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-02-12 → 2026-06-05</td></tr>
+              <tr style="background:rgba(245,158,11,0.06);"><td><strong style="color:var(--navy);">2026 YTD</strong></td><td><span class="hub-tag air">Import</span> <strong>#6</strong> Jiangsu Beiren (origin Singapore, United States) → AIFA → Autotek Mexico</td><td style="text-align:right;font-weight:700;">1</td><td style="text-align:right;">1</td><td style="text-align:right;">1.00</td><td style="text-align:right;font-weight:800;color:#b45309;">7.00 *</td><td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-05-28 <strong style="color:#b45309;">· SHORT OBSERVATION WINDOW</strong></td></tr>
+              <tr style="background:rgba(245,158,11,0.06);"><td><strong style="color:var(--navy);">2026 YTD</strong></td><td><span class="hub-tag air">Import</span> <strong>#7</strong> Jiangsu Beiren (origin Germany) → AIFA → Autotek Mexico</td><td style="text-align:right;font-weight:700;">1</td><td style="text-align:right;">1</td><td style="text-align:right;">1.00</td><td style="text-align:right;font-weight:800;color:#b45309;">7.00 *</td><td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-04-17 <strong style="color:#b45309;">· SHORT OBSERVATION WINDOW</strong></td></tr>
+              <tr style="background:rgba(245,158,11,0.06);"><td><strong style="color:var(--navy);">2026 YTD</strong></td><td><span class="hub-tag air">Import</span> <strong>#8</strong> Jiangsu Beiren (origin China, Germany) → Querétaro → Kirchhoff Automotive Mexico</td><td style="text-align:right;font-weight:700;">1</td><td style="text-align:right;">1</td><td style="text-align:right;">1.00</td><td style="text-align:right;font-weight:800;color:#b45309;">7.00 *</td><td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-07-08 <strong style="color:#b45309;">· SHORT OBSERVATION WINDOW</strong></td></tr>
+              <tr style="background:rgba(232,0,45,0.04);"><td><strong style="color:var(--navy);">2026 YTD</strong></td><td><span class="hub-tag ocean">Export</span> <strong>#1</strong> Autotek Mexico → AIFA → Jiangsu Beiren (Qing Qiu Xiang)</td><td style="text-align:right;font-weight:800;">2</td><td style="text-align:right;">2</td><td style="text-align:right;font-weight:700;">1.00</td><td style="text-align:right;font-weight:700;">0.09</td><td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-01-12 → 2026-06-09</td></tr>
+              <tr><td style="color:var(--text-muted);"><strong>2025</strong></td><td style="color:var(--text-muted);"><span class="hub-tag air">Import</span> <strong>#1</strong> Jiangsu Beiren (&ldquo;United States&rdquo; address) → Manzanillo → Autotek Mexico</td><td style="text-align:right;font-weight:700;color:var(--text-muted);">24</td><td style="text-align:right;color:var(--text-muted);">7</td><td style="text-align:right;color:var(--text-muted);">3.43</td><td style="text-align:right;color:var(--text-muted);">0.48</td><td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2025-01-10 → 2025-12-23</td></tr>
+              <tr><td style="color:var(--text-muted);"><strong>2025</strong></td><td style="color:var(--text-muted);"><span class="hub-tag air">Import</span> <strong>#2</strong> Jiangsu Beiren (Qing Qiu Xiang) → AIFA → Autotek Mexico</td><td style="text-align:right;font-weight:700;color:var(--text-muted);">12</td><td style="text-align:right;color:var(--text-muted);">4</td><td style="text-align:right;color:var(--text-muted);">3.00</td><td style="text-align:right;color:var(--text-muted);">0.36</td><td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2025-04-28 → 2025-12-17</td></tr>
+              <tr><td style="color:var(--text-muted);"><strong>2025</strong></td><td style="color:var(--text-muted);"><span class="hub-tag air">Import</span> <strong>#3</strong> Jiangsu Beiren (QINGQIU LANE) → AIFA → Autotek Mexico</td><td style="text-align:right;color:var(--text-muted);">7</td><td style="text-align:right;color:var(--text-muted);">5</td><td style="text-align:right;color:var(--text-muted);">1.40</td><td style="text-align:right;color:var(--text-muted);">0.32</td><td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2025-07-08 → 2025-12-05</td></tr>
+              <tr><td style="color:var(--text-muted);"><strong>2025</strong></td><td style="color:var(--text-muted);"><span class="hub-tag ocean">Export</span> <strong>#1</strong> Autotek Mexico → AIFA → Jiangsu Beiren (Qing Qiu Xiang)</td><td style="text-align:right;font-weight:700;color:var(--text-muted);">5</td><td style="text-align:right;color:var(--text-muted);">4</td><td style="text-align:right;color:var(--text-muted);">1.25</td><td style="text-align:right;color:var(--text-muted);">0.13</td><td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2025-03-12 → 2025-11-27</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="margin-top:12px;padding:12px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.65;"><strong style="color:#b45309;">* Observed Route Cadence reflects the route's own visible date window. A short-window cadence is not evidence of sustained weekly capacity and must not be extrapolated into a forecast or normalized weekly volume.</strong> Every frequency value above is supplied by AIOS and is rendered without recalculation or normalization. The visible date range is kept adjacent to each cadence value.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 09 ROUTE PERSISTENCE / CHANGE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">09</span> Route Persistence &amp; Core Route Set Change</div>
+      <div class="card-body">
+        <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:8px;">Persisting structures — visible in both periods</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:10px;">
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">Persisting Export structure</div><div style="font-size:12.5px;font-weight:700;color:var(--navy);line-height:1.45;margin-top:4px;">Autotek Mexico → AIFA → Jiangsu Beiren · Air</div><div class="stat-sub">Visible in both periods and remains the <strong>dominant Export route</strong> · 2025: 5 Shipments · 62.5% &nbsp;|&nbsp; Current YTD: 2 · 100%</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">Persisting Import structure</div><div style="font-size:12.5px;font-weight:700;color:var(--navy);line-height:1.45;margin-top:4px;">AIFA → Autotek Mexico · Air</div><div class="stat-sub"><strong>Structurally important across both periods</strong></div></div>
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">Persisting Import structure</div><div style="font-size:12.5px;font-weight:700;color:var(--navy);line-height:1.45;margin-top:4px;">Manzanillo → Autotek Mexico · Maritime</div><div class="stat-sub"><strong>Visible Maritime structure across both periods</strong></div></div>
+        </div>
+
+        <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--navy);margin:18px 0 8px;">Core Route set change between periods</div>
+        <div style="overflow-x:auto;">
+          <table class="hub-table" style="font-size:11px;">
+            <thead><tr><th>Dimension</th><th style="text-align:right;">2025 Full Calendar Year</th><th style="text-align:right;">2026 Current YTD</th><th>AIOS Observation</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Import Core Routes to ≥80%</strong></td><td style="text-align:right;font-weight:700;color:var(--text-muted);">6 routes · 81.3%</td><td style="text-align:right;font-weight:800;color:var(--navy);">8 routes · 83.3%</td><td style="color:var(--text-muted);">A <strong>more distributed route structure</strong> at the source-precision level used by Panjiva.</td></tr>
+              <tr style="background:rgba(232,0,45,0.04);"><td><strong>Export Core Routes to ≥80%</strong></td><td style="text-align:right;font-weight:700;color:var(--text-muted);">3 routes · 87.5%</td><td style="text-align:right;font-weight:800;color:var(--red);">1 route · 100%</td><td style="color:var(--text-muted);"><strong style="color:var(--red);">Export concentration increased to 100% on one route.</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="margin-top:12px;padding:12px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.65;">This comparison is <strong>sensitive to Panjiva address precision and to source entity / address variants</strong>. These labels describe <strong>Core Route set membership only</strong>. They are <strong style="color:#b45309;">never</strong> converted into new Customer, new Supplier, discontinued, terminated, lost Customer, lost Supplier or provider changed. <strong style="color:#b45309;">No cause is inferred.</strong></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10 HISTORICAL 2025 IMPORT CORE ROUTES — PROGRESSIVE DISCLOSURE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">10</span> Historical Import Core Routes — 2025 Established Operating Structure</div>
+      <div class="card-body">
+        <div class="grid-4" style="gap:10px;">
+          <div class="stat-box"><div class="stat-label">2025 Import Universe</div><div class="stat-value" style="font-size:26px;">64</div><div class="stat-sub">Visible Import Shipments · full calendar year</div></div>
+          <div class="stat-box"><div class="stat-label">Complete Core Route Set</div><div class="stat-value" style="font-size:26px;">6 <span style="font-size:15px;color:var(--text-muted);font-weight:700;">routes</span></div><div class="stat-sub">Current YTD required <strong>8</strong> routes</div></div>
+          <div class="stat-box"><div class="stat-label">Cumulative Coverage</div><div class="stat-value" style="font-size:26px;">81.3%</div><div class="stat-sub">52 of 64 visible Import Shipments</div></div>
+          <div class="stat-box"><div class="stat-label">Leading Route Share</div><div class="stat-value" style="font-size:26px;">37.5%</div><div class="stat-sub">Route #1 · Manzanillo Maritime · Current YTD leader is 26.7% Air</div></div>
+        </div>
+        <div style="margin-top:12px;padding:10px 14px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.6;">2025 is the <strong>Established Operating Structure / Historical Baseline</strong>. It is held <strong>strictly separate</strong> from Current YTD, is never aggregated with it, and remains visually subordinate to the Current Operating State. The complete ≥80% historical Core Route set is preserved below and <strong>prints in full</strong>.</span>
+        </div>
+
+        <div class="outreach-step hist-appendix" style="margin-top:14px;">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)">
+            <span>View 2025 Import Core Routes — Complete Set · 6 Routes / 81.3% of 64 Imports</span>
+            <span class="outreach-step-toggle">+</span>
+          </div>
+          <div class="outreach-step-body" style="padding:0;">
+            <div class="hist-appendix-label" style="padding:10px 16px;background:var(--bg);border-bottom:1px solid var(--border);">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-light);">Historical Core Route Appendix — 2025 Imports · Complete ≥80% Set</div>
+              <div style="font-size:10px;color:var(--text-muted);margin-top:2px;">All 6 routes are preserved. Visual simplification never deletes a historical Core Route.</div>
+            </div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;min-width:1200px;">
+                <thead><tr>
+                  <th style="text-align:right;">Rank</th><th>Origin</th><th>Gateway</th><th>Destination</th><th>Mode</th>
+                  <th style="text-align:right;">Shipments</th><th style="text-align:right;">% Imports</th><th style="text-align:right;">Cumulative</th>
+                  <th style="text-align:right;">Active Months</th><th style="text-align:right;">/ Month</th><th style="text-align:right;">/ Week</th><th>Visible Date Range</th>
+                </tr></thead>
+                <tbody>
+                  <tr style="background:rgba(245,158,11,0.05);">
+                    <td style="text-align:right;font-weight:700;color:var(--text-muted);">1</td>
+                    <td><strong>Jiangsu Beiren</strong><div style="font-size:9px;color:var(--text-muted);">Panjiva Shipper Full Address: <strong>&ldquo;United States&rdquo;</strong></div><div style="font-size:9px;color:#b45309;font-weight:700;margin-top:2px;">DATA QUALITY / ENTITY RESOLUTION HYPOTHESIS — REQUIRES VALIDATION</div></td>
+                    <td><strong>Manzanillo</strong><div style="font-size:9px;color:var(--text-light);">Port</div></td>
+                    <td><strong>Autotek Mexico</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div></td>
+                    <td><span class="hub-tag ocean">Maritime</span></td>
+                    <td style="text-align:right;font-weight:800;">24</td>
+                    <td style="text-align:right;font-weight:700;">37.5%</td>
+                    <td style="text-align:right;font-weight:700;color:var(--text-muted);">37.5%</td>
+                    <td style="text-align:right;">7</td>
+                    <td style="text-align:right;">3.43</td>
+                    <td style="text-align:right;">0.48</td>
+                    <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2025-01-10 → 2025-12-23</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align:right;font-weight:700;color:var(--text-muted);">2</td>
+                    <td><strong>Jiangsu Beiren</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Qing Qiu Xiang, Wu Zhong Qu, Su Zhou Shi, Jiang Su Sheng, China, 215126</div></td>
+                    <td><strong>AIFA</strong><div style="font-size:9px;color:var(--text-light);">Airport</div></td>
+                    <td><strong>Autotek Mexico</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div></td>
+                    <td><span class="hub-tag air">Air</span></td>
+                    <td style="text-align:right;font-weight:800;">12</td>
+                    <td style="text-align:right;font-weight:700;">18.8%</td>
+                    <td style="text-align:right;font-weight:700;color:var(--text-muted);">56.3%</td>
+                    <td style="text-align:right;">4</td>
+                    <td style="text-align:right;">3.00</td>
+                    <td style="text-align:right;">0.36</td>
+                    <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2025-04-28 → 2025-12-17</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align:right;font-weight:700;color:var(--text-muted);">3</td>
+                    <td><strong>Jiangsu Beiren</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">QINGQIU LANE SUZHOU INDUSTRIAL PARK, JIANGSU 215126</div></td>
+                    <td><strong>AIFA</strong><div style="font-size:9px;color:var(--text-light);">Airport</div></td>
+                    <td><strong>Autotek Mexico</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div></td>
+                    <td><span class="hub-tag air">Air</span></td>
+                    <td style="text-align:right;font-weight:700;">7</td>
+                    <td style="text-align:right;">10.9%</td>
+                    <td style="text-align:right;font-weight:700;color:var(--text-muted);">67.2%</td>
+                    <td style="text-align:right;">5</td>
+                    <td style="text-align:right;">1.40</td>
+                    <td style="text-align:right;">0.32</td>
+                    <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2025-07-08 → 2025-12-05</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align:right;font-weight:700;color:var(--text-muted);">4</td>
+                    <td><strong>Jiangsu Beiren</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">QINGQIU LANE SUZHOU INDUSTRIAL PARK, JIANGSU 215126</div></td>
+                    <td><strong>Manzanillo</strong><div style="font-size:9px;color:var(--text-light);">Port</div></td>
+                    <td><strong>Beiren Smart Mfg. Solutions</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">#200-12 Arquitecto Pedro Ramírez Vázquez</div></td>
+                    <td><span class="hub-tag ocean">Maritime</span></td>
+                    <td style="text-align:right;font-weight:700;">4</td>
+                    <td style="text-align:right;">6.3%</td>
+                    <td style="text-align:right;font-weight:700;color:var(--text-muted);">73.4%</td>
+                    <td style="text-align:right;">3</td>
+                    <td style="text-align:right;">1.33</td>
+                    <td style="text-align:right;">0.10</td>
+                    <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2025-03-20 → 2025-12-27</td>
+                  </tr>
+                  <tr style="background:rgba(245,158,11,0.05);">
+                    <td style="text-align:right;font-weight:700;color:var(--text-muted);">5</td>
+                    <td><strong>Jiangsu Beiren</strong><div style="font-size:9px;color:var(--text-muted);">Panjiva Shipper Full Address: <strong>&ldquo;United States&rdquo;</strong></div><div style="font-size:9px;color:#b45309;font-weight:700;margin-top:2px;">DATA QUALITY / ENTITY RESOLUTION HYPOTHESIS — REQUIRES VALIDATION</div></td>
+                    <td><strong>AIFA</strong><div style="font-size:9px;color:var(--text-light);">Airport</div></td>
+                    <td><strong>Autotek Mexico</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div></td>
+                    <td><span class="hub-tag air">Air</span></td>
+                    <td style="text-align:right;font-weight:700;">3</td>
+                    <td style="text-align:right;">4.7%</td>
+                    <td style="text-align:right;font-weight:700;color:var(--text-muted);">78.1%</td>
+                    <td style="text-align:right;">2</td>
+                    <td style="text-align:right;">1.50</td>
+                    <td style="text-align:right;">1.50</td>
+                    <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2025-02-25 → 2025-03-10</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align:right;font-weight:700;color:var(--text-muted);">6</td>
+                    <td><strong>Jiangsu Beiren</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div><div style="font-size:9px;color:var(--text-light);">Shipment Origin: China</div></td>
+                    <td><strong>AIFA</strong><div style="font-size:9px;color:var(--text-light);">Airport</div></td>
+                    <td><strong>Autotek Mexico</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div></td>
+                    <td><span class="hub-tag air">Air</span></td>
+                    <td style="text-align:right;font-weight:700;">2</td>
+                    <td style="text-align:right;">3.1%</td>
+                    <td style="text-align:right;font-weight:800;color:var(--text-muted);">81.3%</td>
+                    <td style="text-align:right;">2</td>
+                    <td style="text-align:right;">1.00</td>
+                    <td style="text-align:right;">0.09</td>
+                    <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2025-05-28 → 2025-10-27</td>
+                  </tr>
+                </tbody>
+                <tfoot><tr style="background:var(--bg);">
+                  <td colspan="5" style="font-weight:800;color:var(--navy);padding:10px 12px;">6 Core Routes · 52 of 64 visible Import Shipments · complete ≥80% set</td>
+                  <td style="text-align:right;font-weight:800;color:var(--navy);">52</td>
+                  <td style="text-align:right;font-weight:800;color:var(--navy);">81.3%</td>
+                  <td style="text-align:right;font-weight:800;color:var(--text-muted);">81.3%</td>
+                  <td colspan="4"></td>
+                </tr></tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 11 HISTORICAL 2025 EXPORT CORE ROUTES — PROGRESSIVE DISCLOSURE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">11</span> Historical Export Core Routes — 2025 Established Operating Structure</div>
+      <div class="card-body">
+        <div class="grid-4" style="gap:10px;">
+          <div class="stat-box"><div class="stat-label">2025 Export Universe</div><div class="stat-value" style="font-size:26px;">8</div><div class="stat-sub">Visible Export Shipments · full calendar year</div></div>
+          <div class="stat-box"><div class="stat-label">Complete Core Route Set</div><div class="stat-value" style="font-size:26px;">3 <span style="font-size:15px;color:var(--text-muted);font-weight:700;">routes</span></div><div class="stat-sub">Current YTD required <strong>1</strong> route</div></div>
+          <div class="stat-box"><div class="stat-label">Cumulative Coverage</div><div class="stat-value" style="font-size:26px;">87.5%</div><div class="stat-sub">7 of 8 visible Export Shipments</div></div>
+          <div class="stat-box"><div class="stat-label">Leading Route Share</div><div class="stat-value" style="font-size:26px;">62.5%</div><div class="stat-sub">Route #1 · Current YTD: 100% on one route</div></div>
+        </div>
+
+        <div class="outreach-step hist-appendix" style="margin-top:14px;">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)">
+            <span>View 2025 Export Core Routes — Complete Set · 3 Routes / 87.5% of 8 Exports</span>
+            <span class="outreach-step-toggle">+</span>
+          </div>
+          <div class="outreach-step-body" style="padding:0;">
+            <div class="hist-appendix-label" style="padding:10px 16px;background:var(--bg);border-bottom:1px solid var(--border);">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-light);">Historical Core Route Appendix — 2025 Exports · Complete ≥80% Set</div>
+              <div style="font-size:10px;color:var(--text-muted);margin-top:2px;">All 3 routes are preserved. No historical Core Route is deleted to reduce visual density.</div>
+            </div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;min-width:1200px;">
+                <thead><tr>
+                  <th style="text-align:right;">Rank</th><th>Origin</th><th>Gateway</th><th>Destination</th><th>Mode</th>
+                  <th style="text-align:right;">Shipments</th><th style="text-align:right;">% Exports</th><th style="text-align:right;">Cumulative</th>
+                  <th style="text-align:right;">Active Months</th><th style="text-align:right;">/ Month</th><th style="text-align:right;">/ Week</th><th>Visible Date Range</th>
+                </tr></thead>
+                <tbody>
+                  <tr>
+                    <td style="text-align:right;font-weight:700;color:var(--text-muted);">1</td>
+                    <td><strong>Autotek Mexico</strong><div style="font-size:9px;color:var(--text-light);">Panjiva Shipper Full Address: Mexico</div></td>
+                    <td><strong>AIFA</strong><div style="font-size:9px;color:var(--text-light);">Airport</div></td>
+                    <td><strong>Jiangsu Beiren</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Qing Qiu Xiang, Wu Zhong Qu, Su Zhou Shi, Jiang Su Sheng, China, 215126</div></td>
+                    <td><span class="hub-tag air">Air</span></td>
+                    <td style="text-align:right;font-weight:800;">5</td>
+                    <td style="text-align:right;font-weight:700;">62.5%</td>
+                    <td style="text-align:right;font-weight:700;color:var(--text-muted);">62.5%</td>
+                    <td style="text-align:right;">4</td>
+                    <td style="text-align:right;">1.25</td>
+                    <td style="text-align:right;">0.13</td>
+                    <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2025-03-12 → 2025-11-27</td>
+                  </tr>
+                  <tr style="background:rgba(245,158,11,0.05);">
+                    <td style="text-align:right;font-weight:700;color:var(--text-muted);">2</td>
+                    <td><strong>Autotek Mexico</strong><div style="font-size:9px;color:var(--text-light);">Panjiva Shipper Full Address: Mexico</div></td>
+                    <td><strong>AIFA</strong><div style="font-size:9px;color:var(--text-light);">Airport</div></td>
+                    <td><strong>Jiangsu Beiren</strong><div style="font-size:9px;color:var(--text-muted);">Panjiva Consignee Full Address: <strong>&ldquo;United States&rdquo;</strong></div><div style="font-size:9px;color:#b45309;font-weight:700;margin-top:2px;">DATA QUALITY / ENTITY RESOLUTION HYPOTHESIS — REQUIRES VALIDATION</div></td>
+                    <td><span class="hub-tag air">Air</span></td>
+                    <td style="text-align:right;font-weight:700;">1</td>
+                    <td style="text-align:right;">12.5%</td>
+                    <td style="text-align:right;font-weight:700;color:var(--text-muted);">75.0%</td>
+                    <td style="text-align:right;">1</td>
+                    <td style="text-align:right;">1.00</td>
+                    <td style="text-align:right;font-weight:800;color:#b45309;">7.00 *</td>
+                    <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2025-04-08<div style="font-size:9px;font-weight:800;color:#b45309;letter-spacing:0.3px;">SHORT OBSERVATION WINDOW</div></td>
+                  </tr>
+                  <tr>
+                    <td style="text-align:right;font-weight:700;color:var(--text-muted);">3</td>
+                    <td><strong>Kirchhoff Automotive Mexico</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Av. San Pedrito, 76215 Qro., Mexico</div></td>
+                    <td><strong>AICM</strong><div style="font-size:9px;color:var(--text-light);">Airport</div></td>
+                    <td><strong>Jiangsu Beiren</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div><div style="font-size:9px;color:var(--text-light);">Destination: China</div></td>
+                    <td><span class="hub-tag air">Air</span></td>
+                    <td style="text-align:right;font-weight:700;">1</td>
+                    <td style="text-align:right;">12.5%</td>
+                    <td style="text-align:right;font-weight:800;color:var(--text-muted);">87.5%</td>
+                    <td style="text-align:right;">1</td>
+                    <td style="text-align:right;">1.00</td>
+                    <td style="text-align:right;font-weight:800;color:#b45309;">7.00 *</td>
+                    <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2025-06-23<div style="font-size:9px;font-weight:800;color:#b45309;letter-spacing:0.3px;">SHORT OBSERVATION WINDOW</div></td>
+                  </tr>
+                </tbody>
+                <tfoot><tr style="background:var(--bg);">
+                  <td colspan="5" style="font-weight:800;color:var(--navy);padding:10px 12px;">3 Core Routes · 7 of 8 visible Export Shipments · complete ≥80% set</td>
+                  <td style="text-align:right;font-weight:800;color:var(--navy);">7</td>
+                  <td style="text-align:right;font-weight:800;color:var(--navy);">87.5%</td>
+                  <td style="text-align:right;font-weight:800;color:var(--text-muted);">87.5%</td>
+                  <td colspan="4"></td>
+                </tr></tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:12px;padding:10px 14px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:#b45309;">* Observed Route Cadence reflects the route's own visible date window. A short-window cadence is not evidence of sustained weekly capacity and must not be extrapolated into a forecast or normalized weekly volume.</strong> On 2025 Export Core Route #2 the Panjiva Consignee Full Address (<strong>&ldquo;United States&rdquo;</strong>) is <strong>preserved and not reconciled</strong>.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12 HS INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">12</span> HS Intelligence — Top 5 by Period and Direction</div>
+      <div class="card-body">
+        <div style="padding:11px 15px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;margin-bottom:14px;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.65;"><strong style="color:#b45309;">One Shipment may contain multiple HS Codes. HS counts represent operational presence and are not additive.</strong> Percentages are the share of visible Shipments in which the HS Code appears — they do not sum to 100%. Each HS Code is counted <strong>at most once per Shipment</strong>.</span>
+        </div>
+        <div class="grid-2" style="gap:18px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:8px;">2026 Current YTD Imports · Top 5 · universe 30 Shipments</div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th>HS Code</th><th>Business Interpretation from Goods Shipped</th><th style="text-align:right;">Presence</th><th style="text-align:right;">% Shipments</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>8479899999</strong></td><td style="color:var(--text-muted);">Automated assembly / industrial machinery and equipment</td><td style="text-align:right;font-weight:800;">19</td><td style="text-align:right;font-weight:800;color:var(--navy);">63.3%</td></tr>
+                  <tr><td><strong>8466949900</strong></td><td style="color:var(--text-muted);">Parts for machine tools / metalworking machinery</td><td style="text-align:right;font-weight:700;">2</td><td style="text-align:right;font-weight:700;">6.7%</td></tr>
+                  <tr><td><strong>8515909900</strong></td><td style="color:var(--text-muted);">Welding-machine parts</td><td style="text-align:right;font-weight:700;">2</td><td style="text-align:right;font-weight:700;">6.7%</td></tr>
+                  <tr><td><strong>8536909999</strong></td><td style="color:var(--text-muted);">Electrical connection / apparatus components</td><td style="text-align:right;font-weight:700;">2</td><td style="text-align:right;font-weight:700;">6.7%</td></tr>
+                  <tr><td><strong>8537109999</strong></td><td style="color:var(--text-muted);">Electrical control / distribution apparatus</td><td style="text-align:right;font-weight:700;">2</td><td style="text-align:right;font-weight:700;">6.7%</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin:16px 0 8px;">2026 Current YTD Exports · universe 2 Shipments</div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th>HS Code</th><th>Business Interpretation</th><th style="text-align:right;">Presence</th><th style="text-align:right;">% Shipments</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>8708990700</strong></td><td style="color:var(--text-muted);">Front suspension frames / automotive chassis-related components</td><td style="text-align:right;font-weight:800;">2</td><td style="text-align:right;font-weight:800;color:var(--navy);">100%</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div style="margin-top:8px;padding:10px 14px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+              <span style="font-size:10.5px;color:var(--text-muted);line-height:1.6;"><strong style="color:#b45309;">Only one HS Code is visible across the two Current YTD Export Shipments; therefore a Top 5 cannot be populated without inventing data.</strong> No additional HS Codes are created to fill the table.</span>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);margin-bottom:8px;">2025 Imports · Top 5 · universe 64 Shipments</div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th>HS Code</th><th>Business Interpretation</th><th style="text-align:right;">Presence</th><th style="text-align:right;">% Shipments</th></tr></thead>
+                <tbody>
+                  <tr><td style="color:var(--text-muted);"><strong>8479899999</strong></td><td style="color:var(--text-muted);">Assembly lines / industrial machinery</td><td style="text-align:right;font-weight:700;color:var(--text-muted);">34</td><td style="text-align:right;font-weight:700;color:var(--text-muted);">53.1%</td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>8708509999</strong></td><td style="color:var(--text-muted);">Automotive axle / drivetrain-related components</td><td style="text-align:right;color:var(--text-muted);">10</td><td style="text-align:right;color:var(--text-muted);">15.6%</td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>8708999999</strong></td><td style="color:var(--text-muted);">Other automotive parts</td><td style="text-align:right;color:var(--text-muted);">5</td><td style="text-align:right;color:var(--text-muted);">7.8%</td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>8708292000</strong></td><td style="color:var(--text-muted);">Vehicle body-related parts</td><td style="text-align:right;color:var(--text-muted);">4</td><td style="text-align:right;color:var(--text-muted);">6.3%</td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>4821100100</strong></td><td style="color:var(--text-muted);">Printed / adhesive labels within automotive component Shipments</td><td style="text-align:right;color:var(--text-muted);">3</td><td style="text-align:right;color:var(--text-muted);">4.7%</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);margin:16px 0 8px;">2025 Exports · Top 5 · universe 8 Shipments</div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th>HS Code</th><th style="text-align:right;">Presence</th><th style="text-align:right;">% Shipments</th></tr></thead>
+                <tbody>
+                  <tr><td style="color:var(--text-muted);"><strong>8708990700</strong></td><td style="text-align:right;font-weight:700;color:var(--text-muted);">3</td><td style="text-align:right;font-weight:700;color:var(--text-muted);">37.5%</td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>7318160603</strong></td><td style="text-align:right;color:var(--text-muted);">1</td><td style="text-align:right;color:var(--text-muted);">12.5%</td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>8302309100</strong></td><td style="text-align:right;color:var(--text-muted);">1</td><td style="text-align:right;color:var(--text-muted);">12.5%</td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>8708299999</strong></td><td style="text-align:right;color:var(--text-muted);">1</td><td style="text-align:right;color:var(--text-muted);">12.5%</td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>8708800500</strong></td><td style="text-align:right;color:var(--text-muted);">1</td><td style="text-align:right;color:var(--text-muted);">12.5%</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 13 HS PORTFOLIO TREND -->
+    <div class="card">
+      <div class="card-header"><span class="accent">13</span> HS Portfolio Trend — Operational Portfolio Intelligence</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:14px;">
+          <div style="padding:16px 18px;background:rgba(0,180,216,0.05);border:1px solid rgba(0,180,216,0.3);border-radius:8px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal-dim);">Visible Imports</div>
+            <div style="font-size:15px;font-weight:800;color:var(--navy);margin-top:4px;line-height:1.4;">HS 8479899999 remains dominant and increased from <span style="color:var(--teal-dim);">53.1%</span> of 2025 Imports to <span style="color:var(--teal-dim);">63.3%</span> of Current YTD Imports</div>
+            <div style="margin-top:12px;height:24px;display:flex;gap:8px;align-items:center;">
+              <span style="font-size:10px;font-weight:700;color:var(--text-muted);width:52px;">2025</span>
+              <div style="flex:1;height:14px;background:#e6eaf1;border-radius:7px;overflow:hidden;"><div style="height:100%;width:53.1%;background:var(--teal);opacity:0.6;"></div></div>
+              <span style="font-size:11px;font-weight:800;color:var(--text-muted);width:46px;text-align:right;">53.1%</span>
+            </div>
+            <div style="margin-top:6px;height:24px;display:flex;gap:8px;align-items:center;">
+              <span style="font-size:10px;font-weight:700;color:var(--navy);width:52px;">YTD 2026</span>
+              <div style="flex:1;height:14px;background:#e6eaf1;border-radius:7px;overflow:hidden;"><div style="height:100%;width:63.3%;background:var(--teal);"></div></div>
+              <span style="font-size:11px;font-weight:800;color:var(--navy);width:46px;text-align:right;">63.3%</span>
+            </div>
+            <div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:5px;">
+              <span class="hub-tag air">Automated assembly / industrial machinery</span>
+              <span class="hub-tag air">Machine-tool parts</span>
+              <span class="hub-tag air">Welding-machine parts</span>
+              <span class="hub-tag air">Electrical connection components</span>
+              <span class="hub-tag air">Electrical control apparatus</span>
+            </div>
+            <div style="font-size:10px;color:var(--text-muted);line-height:1.6;margin-top:10px;">Current YTD also shows <strong>technical machinery, welding and electrical-control components</strong> in the leading HS portfolio, alongside the dominant automated-assembly presence.</div>
+          </div>
+          <div style="padding:16px 18px;background:rgba(13,43,94,0.04);border:1px solid var(--border);border-radius:8px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal-dim);">Visible Exports</div>
+            <div style="font-size:15px;font-weight:800;color:var(--navy);margin-top:4px;line-height:1.4;">Export visibility remains small and concentrated in automotive chassis / suspension-related goods</div>
+            <div style="margin-top:10px;display:flex;flex-wrap:wrap;gap:5px;">
+              <span class="hub-tag ocean">Front suspension frames / chassis components</span>
+              <span class="hub-tag ocean">Fasteners</span>
+              <span class="hub-tag ocean">Mountings / fittings</span>
+              <span class="hub-tag ocean">Other vehicle parts</span>
+            </div>
+            <div style="font-size:10px;color:var(--text-muted);line-height:1.6;margin-top:10px;"><strong>HS 8708990700</strong> leads both periods — <strong>3 of 8 (37.5%)</strong> in 2025 and <strong>2 of 2 (100%)</strong> in Current YTD. The 2025 Export portfolio additionally shows four single-Shipment HS Codes at 12.5% each.</div>
+          </div>
+        </div>
+        <div style="margin-top:12px;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:6px;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.65;"><strong style="color:var(--navy);">Treat this as operational portfolio intelligence.</strong> HS composition describes what is visibly moving; it does not establish product strategy, sourcing decisions, manufacturing footprint or commercial intent. <strong style="color:#b45309;">HS presence counts remain non-additive.</strong></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 14 TRADING PARTNER INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">14</span> Trading Partner Intelligence</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:18px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:8px;">Current YTD Imports — Consignees / Destination Partners · universe 30 Shipments</div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th>Trading Partner</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">Import Share</th><th style="width:20%;"></th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Autotek Mexico Sa De Cv</strong><div style="font-size:9px;color:#b45309;font-weight:700;">DISCOVERY HYPOTHESIS — operating relationship requires validation</div></td><td style="text-align:right;font-weight:800;">24</td><td style="text-align:right;font-weight:800;color:var(--navy);">80.0%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:100%;background:var(--navy);"></div></div></td></tr>
+                  <tr><td><strong>Beiren Smart Mfg. Solutions S De Rl De Cv</strong></td><td style="text-align:right;font-weight:700;">4</td><td style="text-align:right;font-weight:700;">13.3%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:17%;background:var(--teal);"></div></div></td></tr>
+                  <tr><td><strong>Kirchhoff Automotive Mexico Sa De Cv</strong></td><td style="text-align:right;font-weight:700;">2</td><td style="text-align:right;font-weight:700;">6.7%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:8%;background:#94a3b8;"></div></div></td></tr>
+                </tbody>
+                <tfoot><tr style="background:var(--bg);"><td style="font-weight:800;color:var(--navy);">Top 3 concentration</td><td style="text-align:right;font-weight:800;color:var(--navy);">30</td><td style="text-align:right;font-weight:800;color:var(--red);">100%</td><td></td></tr></tfoot>
+              </table>
+            </div>
+            <div style="margin-top:14px;padding:16px 20px;background:rgba(232,0,45,0.04);border:1px solid rgba(232,0,45,0.22);border-radius:8px;">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--red);margin-bottom:6px;">Current YTD Exports — Origin Partner · universe 2 Shipments</div>
+              <div style="font-size:16px;font-weight:800;color:var(--navy);line-height:1.35;">Autotek Mexico Sa De Cv</div>
+              <div style="display:flex;gap:26px;margin-top:12px;flex-wrap:wrap;">
+                <div><div style="font-size:26px;font-weight:800;color:var(--red);">2</div><div style="font-size:9px;color:var(--text-muted);letter-spacing:0.5px;">SHIPMENTS</div></div>
+                <div><div style="font-size:26px;font-weight:800;color:var(--red);">100%</div><div style="font-size:9px;color:var(--text-muted);letter-spacing:0.5px;">OF VISIBLE EXPORTS</div></div>
+              </div>
+              <div style="font-size:10px;color:var(--text-light);line-height:1.55;margin-top:10px;">Both visible Current YTD Exports originate with Autotek Mexico and move to Jiangsu Beiren.</div>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);margin-bottom:8px;">2025 Imports — Consignees / Destination Partners · universe 64 Shipments</div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th>Trading Partner</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">Import Share</th><th style="width:20%;"></th></tr></thead>
+                <tbody>
+                  <tr><td style="color:var(--text-muted);"><strong>Autotek Mexico Sa De Cv</strong></td><td style="text-align:right;font-weight:700;color:var(--text-muted);">52</td><td style="text-align:right;font-weight:700;color:var(--text-muted);">81.3%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:100%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>Beiren Smart Mfg. Solutions S De Rl De Cv</strong></td><td style="text-align:right;color:var(--text-muted);">5</td><td style="text-align:right;color:var(--text-muted);">7.8%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:10%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>Kirchhoff Automotive Mexico Sa De Cv</strong></td><td style="text-align:right;color:var(--text-muted);">5</td><td style="text-align:right;color:var(--text-muted);">7.8%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:10%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>Waldaschaff Automotive Mexico S De Rl De Cv</strong></td><td style="text-align:right;color:var(--text-muted);">2</td><td style="text-align:right;color:var(--text-muted);">3.1%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:4%;background:#94a3b8;"></div></div></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div style="margin-top:14px;padding:14px 18px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 6px 6px 0;">
+              <div style="font-size:9px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:#b45309;margin-bottom:6px;">AIOS Interpretation</div>
+              <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;">The visible Mexico-facing network is <strong>highly concentrated around Autotek Mexico in both periods</strong>.</p>
+              <p style="font-size:11px;color:var(--text-muted);line-height:1.7;margin-top:8px;"><strong style="color:#b45309;">The data does not establish contractual ownership, procurement control, affiliate status, or incumbent logistics-provider structure.</strong> No partner on this page is classified as a Customer, Supplier or affiliate.</p>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:14px;padding:10px 14px;background:var(--bg);border:1px solid var(--border);border-radius:6px;">
+          <span style="font-size:10px;color:var(--text-muted);line-height:1.6;">The executive umbrella term used throughout this page is <strong style="color:var(--navy);">Trading Partners</strong>. Affiliates are <strong>not</strong> automatically labelled external Suppliers or Customers.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 15 CUSTOMS / REGIME INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">15</span> Customs, Regime &amp; IMMEX Intelligence</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:18px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:8px;">Current YTD Imports · Customs Regime · 30 Shipments</div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th>Customs Regime</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">Share</th><th style="width:22%;"></th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Final Import / Export</strong></td><td style="text-align:right;font-weight:800;">28</td><td style="text-align:right;font-weight:800;color:var(--navy);">93.3%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:93.3%;background:var(--navy);"></div></div></td></tr>
+                  <tr><td><strong>Regime Change In Goods Of Fixed Assets</strong></td><td style="text-align:right;font-weight:700;">1</td><td style="text-align:right;">3.3%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:3.3%;background:#f59e0b;"></div></div></td></tr>
+                  <tr><td><strong>Temporary Import Fixed Assets (IMMEX)</strong></td><td style="text-align:right;font-weight:700;">1</td><td style="text-align:right;">3.3%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:3.3%;background:#f59e0b;"></div></div></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin:16px 0 8px;">Current YTD Imports · Customs Agent Codes</div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th>Agent Code</th><th style="text-align:right;">Shipments</th><th style="width:32%;"></th></tr></thead>
+                <tbody>
+                  <tr><td><strong>3547</strong></td><td style="text-align:right;font-weight:800;">10</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:100%;background:var(--navy);"></div></div></td></tr>
+                  <tr><td><strong>3172</strong></td><td style="text-align:right;font-weight:700;">8</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:80%;background:var(--teal);"></div></div></td></tr>
+                  <tr><td><strong>3341</strong></td><td style="text-align:right;font-weight:700;">7</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:70%;background:var(--teal);"></div></div></td></tr>
+                  <tr><td><strong>1648</strong></td><td style="text-align:right;font-weight:700;">2</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:20%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td><strong>3076</strong></td><td style="text-align:right;">1</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:10%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td><strong>1875</strong></td><td style="text-align:right;">1</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:10%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td><strong>3976</strong></td><td style="text-align:right;">1</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:10%;background:#94a3b8;"></div></div></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);margin-bottom:8px;">2025 Imports · Customs Regime · 64 Shipments</div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th>Customs Regime</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">Share</th><th style="width:22%;"></th></tr></thead>
+                <tbody>
+                  <tr><td style="color:var(--text-muted);"><strong>Final Import / Export</strong></td><td style="text-align:right;font-weight:700;color:var(--text-muted);">49</td><td style="text-align:right;font-weight:700;color:var(--text-muted);">76.6%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:76.6%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>Temporary Import Fixed Assets (IMMEX)</strong></td><td style="text-align:right;font-weight:700;color:var(--text-muted);">14</td><td style="text-align:right;color:var(--text-muted);">21.9%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:21.9%;background:#f59e0b;opacity:0.6;"></div></div></td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>Regime Change In Goods Of Fixed Assets</strong></td><td style="text-align:right;color:var(--text-muted);">1</td><td style="text-align:right;color:var(--text-muted);">1.6%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:1.6%;background:#94a3b8;"></div></div></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);margin:16px 0 8px;">2025 Imports · Leading Customs Agent Codes</div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th>Agent Code</th><th style="text-align:right;">Shipments</th><th style="width:32%;"></th></tr></thead>
+                <tbody>
+                  <tr><td style="color:var(--text-muted);"><strong>3341</strong></td><td style="text-align:right;font-weight:700;color:var(--text-muted);">24</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:100%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>3172</strong></td><td style="text-align:right;font-weight:700;color:var(--text-muted);">24</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:100%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>3976</strong></td><td style="text-align:right;color:var(--text-muted);">4</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:17%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong>3129</strong></td><td style="text-align:right;color:var(--text-muted);">4</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:17%;background:#94a3b8;"></div></div></td></tr>
+                </tbody>
+                <tfoot><tr style="background:var(--bg);"><td colspan="3" style="font-size:10px;color:var(--text-muted);">Other visible 2025 codes: <strong>3200 · 3547 · 1766 · 1725 · 3076 · 1877</strong></td></tr></tfoot>
+              </table>
+            </div>
+            <div style="margin-top:14px;padding:12px 16px;background:rgba(13,43,94,0.03);border:1px solid var(--border);border-radius:6px;">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:6px;">Exports · both periods</div>
+              <ul class="q-list" style="font-size:11px;line-height:1.75;">
+                <li><strong>2026 Current YTD:</strong> 2 Shipments · <strong>Final Import / Export</strong> · both Customs Agent code <strong>3172</strong>.</li>
+                <li><strong>2025:</strong> <strong>6</strong> Final Import / Export and <strong>2</strong> Return Of Goods (IMMEX).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:14px;padding:12px 16px;background:rgba(13,43,94,0.03);border:1px solid var(--border);border-radius:6px;">
+          <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:6px;">AIOS Interpretation</div>
+          <p style="font-size:11.5px;color:var(--text-muted);line-height:1.75;">The visible customs structure includes <strong>multiple Customs Agent codes</strong> and <strong>fixed-asset / IMMEX-related regimes</strong>. This supports Discovery around <strong>customs governance, escalation, exception ownership and coordination across gateways</strong>.</p>
+          <p style="font-size:11px;color:#b45309;line-height:1.7;margin-top:6px;font-weight:700;">It does not establish customs pain or poor performance. No customs agency company name is invented anywhere on this page — codes remain codes.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 16 OPERATIONAL COMPLEXITY -->
+    <div class="card">
+      <div class="card-header"><span class="accent">16</span> Operational Complexity — AIOS Interpretation</div>
+      <div class="card-body">
+        <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;padding:16px 20px;background:linear-gradient(135deg,rgba(245,158,11,0.07) 0%,rgba(13,43,94,0.04) 100%);border-left:3px solid #f59e0b;border-radius:0 6px 6px 0;">
+          <div><div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#b45309;">Operational Complexity</div><div style="font-size:28px;font-weight:800;color:#b45309;letter-spacing:0.5px;line-height:1.2;">MEDIUM-HIGH</div></div>
+          <div style="flex:1;min-width:320px;"><span style="font-size:11px;color:var(--text-muted);line-height:1.7;"><strong style="color:#b45309;">No numerical complexity score is created.</strong> Complexity is an AIOS Interpretation of the visible operating structure — <strong>it is not a claim that Jiangsu Beiren experiences operational difficulty</strong>. The account is <strong>not classified as HIGH solely from volume</strong>; the thesis comes from multimodal, gateway, customs, facility and technical-product structure.</span></div>
+        </div>
+        <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--navy);margin:16px 0 8px;">Supported Current YTD visible signals</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px;">
+          <div class="stat-box" style="padding:10px 13px;"><div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;">32 visible Shipments, heavily import-oriented</div></div>
+          <div class="stat-box" style="padding:10px 13px;"><div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;">Air + Maritime Import activity</div></div>
+          <div class="stat-box" style="padding:10px 13px;"><div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;">Five visible Import gateways / gateway geographies</div></div>
+          <div class="stat-box" style="padding:10px 13px;"><div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;">Eight Core Import routes to reach ≥80% at Panjiva source precision</div></div>
+          <div class="stat-box" style="padding:10px 13px;"><div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;">AIFA concentration at 60% of Imports</div></div>
+          <div class="stat-box" style="padding:10px 13px;"><div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;">Autotek Mexico concentration at 80% of Imports</div></div>
+          <div class="stat-box" style="padding:10px 13px;"><div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;">Multiple Customs Agent codes</div></div>
+          <div class="stat-box" style="padding:10px 13px;"><div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;">IMMEX / fixed-asset customs-regime visibility</div></div>
+          <div class="stat-box" style="padding:10px 13px;"><div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;">Machinery / automated assembly / automotive component portfolio</div></div>
+          <div class="stat-box" style="padding:10px 13px;"><div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;">Import and Export network asymmetry</div></div>
+        </div>
+        <div style="margin-top:14px;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:6px;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.65;"><strong style="color:var(--navy);">Relationship Status (LEAD) and AIOS Classification (AA) are independent dimensions</strong> and are never collapsed into a single badge. <strong>Complexity does not equal pain</strong> — every signal above is an observed structural attribute of the visible network.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 17 OPPORTUNITY MAPPING -->
+    <div class="card">
+      <div class="card-header"><span class="accent">17</span> Opportunity Mapping — Signal · Interpretation · Validation</div>
+      <div class="card-body" style="padding:0;">
+        <div style="overflow-x:auto;">
+          <table class="hub-table" style="font-size:11px;min-width:920px;">
+            <thead><tr>
+              <th style="width:30%;">Observed Operational Signal <span style="font-weight:600;color:var(--text-light);">— Panjiva Fact</span></th>
+              <th style="width:33%;">AIOS Interpretation <span style="font-weight:600;color:var(--text-light);">— may mean</span></th>
+              <th style="width:37%;">Discovery Validation <span style="font-weight:600;color:var(--text-light);">— must be confirmed</span></th>
+            </tr></thead>
+            <tbody>
+              <tr>
+                <td><strong style="color:var(--navy);">Multimodal Coordination.</strong> Air represents <strong>70.0%</strong> of Current YTD Imports while Maritime remains <strong>26.7%</strong>.</td>
+                <td style="color:var(--text-muted);">The network <strong>may</strong> benefit from coordinated visibility across Air and Ocean execution, especially where equipment and technical parts follow different operational paths.</td>
+                <td style="color:var(--text-muted);">Validate <strong>current provider model, booking ownership, escalation process, exception frequency, KPI governance</strong> and whether <strong>Air/Ocean coordination is centralized</strong>.</td>
+              </tr>
+              <tr>
+                <td><strong style="color:var(--navy);">Customs &amp; Gateway Visibility.</strong> AIFA handles <strong>60.0%</strong> of Current YTD Imports; Manzanillo handles <strong>26.7%</strong>; <strong>multiple Customs Agent codes</strong> are visible.</td>
+                <td style="color:var(--text-muted);">Gateway and customs coordination are <strong>commercially relevant conversation areas</strong>.</td>
+                <td style="color:var(--text-muted);">Validate <strong>customs-broker governance, milestone visibility, escalation ownership, contingency plans and gateway-performance criteria</strong>.</td>
+              </tr>
+              <tr>
+                <td><strong style="color:var(--navy);">ILM / Control Tower.</strong> Multiple destination partners, multimodal Imports, multiple gateways, route concentration and technical machinery / automotive goods.</td>
+                <td style="color:var(--text-muted);">The visible structure supports a <strong>credible ILM / Control Tower conversation</strong> centred on coordination and exception management.</td>
+                <td style="color:var(--text-muted);">Validate whether <strong>supplier readiness, bookings, documents, customs milestones, exception management and KPI governance</strong> are centrally orchestrated today.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="padding:12px 16px;border-top:1px solid var(--border);">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.65;">Each signal keeps three layers strictly separate. <strong>Observed Operational Signal</strong> is what Panjiva shows. <strong>AIOS Interpretation</strong> is what it may mean. <strong>Discovery Validation</strong> is what must be confirmed with Jiangsu Beiren. These layers are never collapsed, and <strong style="color:#b45309;">inferred pain is never presented as customer fact</strong>.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 18 DISCOVERY HYPOTHESES -->
+    <div class="card">
+      <div class="card-header"><span class="accent">18</span> Discovery Hypotheses — Governed &amp; Unvalidated</div>
+      <div class="card-body">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:12px;">
+
+          <div style="padding:16px 18px;background:rgba(245,158,11,0.04);border:1px solid rgba(245,158,11,0.3);border-radius:8px;">
+            <div style="font-size:9px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:#b45309;">Discovery Hypothesis — requires validation</div>
+            <div style="font-size:15px;font-weight:800;color:var(--navy);margin-top:5px;line-height:1.35;">1 · Autotek-centered operating dependency</div>
+            <div style="margin-top:12px;"><div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal-dim);">Observed Signal</div><div style="font-size:11px;color:var(--text-muted);line-height:1.65;margin-top:3px;">Autotek Mexico receives <strong>80.0%</strong> of Current YTD Imports and is the origin of <strong>100%</strong> of visible Current YTD Exports.</div></div>
+            <div style="margin-top:10px;"><div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal-dim);">Hypothesis</div><div style="font-size:11px;color:var(--text-muted);line-height:1.65;margin-top:3px;">Autotek <strong>may</strong> be a strategically important operational node in the Jiangsu Beiren Mexico-facing network.</div></div>
+            <div style="margin-top:10px;"><div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#b45309;">Data does not establish</div><div style="font-size:11px;color:var(--text-muted);line-height:1.65;margin-top:3px;">Contractual ownership, program ownership, logistics-provider ownership, or procurement authority.</div></div>
+            <div style="margin-top:10px;"><div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal-dim);">Why it matters</div><div style="font-size:11px;color:var(--text-muted);line-height:1.65;margin-top:3px;">A concentrated node may shape service design, escalation and visibility requirements.</div></div>
+            <div style="margin-top:10px;padding-top:10px;border-top:1px solid rgba(245,158,11,0.3);"><div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);">Discovery Validation</div><div style="font-size:11px;color:var(--text-muted);line-height:1.65;margin-top:3px;">Establish <strong>who owns logistics decisions</strong>, how <strong>Autotek / Jiangsu Beiren coordination</strong> works, and <strong>where operational responsibility changes hands</strong>.</div></div>
+          </div>
+
+          <div style="padding:16px 18px;background:rgba(245,158,11,0.04);border:1px solid rgba(245,158,11,0.3);border-radius:8px;">
+            <div style="font-size:9px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:#b45309;">Discovery Hypothesis — requires validation</div>
+            <div style="font-size:15px;font-weight:800;color:var(--navy);margin-top:5px;line-height:1.35;">2 · Air usage may reflect service-critical requirements</div>
+            <div style="margin-top:12px;"><div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal-dim);">Observed Signal</div><div style="font-size:11px;color:var(--text-muted);line-height:1.65;margin-top:3px;"><strong>70.0%</strong> of Current YTD Imports are Air, versus 50.0% across the 2025 full year.</div></div>
+            <div style="margin-top:10px;"><div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal-dim);">Hypothesis</div><div style="font-size:11px;color:var(--text-muted);line-height:1.65;margin-top:3px;">Some flows <strong>may</strong> have tighter timing, commissioning, spare-parts or production-support requirements.</div></div>
+            <div style="margin-top:10px;"><div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#b45309;">Data does not establish</div><div style="font-size:11px;color:var(--text-muted);line-height:1.65;margin-top:3px;">Urgency, expedites, delays, line-down events or service failures.</div></div>
+            <div style="margin-top:10px;"><div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal-dim);">Why it matters</div><div style="font-size:11px;color:var(--text-muted);line-height:1.65;margin-top:3px;">Validated criticality could support premium exception-management and Control Tower services.</div></div>
+            <div style="margin-top:10px;padding-top:10px;border-top:1px solid rgba(245,158,11,0.3);"><div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);">Discovery Validation</div><div style="font-size:11px;color:var(--text-muted);line-height:1.65;margin-top:3px;">Validate <strong>service-level requirements, planning horizon, exception triggers, premium-freight governance</strong> and <strong>root causes for Air selection</strong>.</div></div>
+          </div>
+
+        </div>
+        <div style="margin-top:14px;padding:12px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.65;"><strong style="color:#b45309;">No Discovery Hypothesis on this page is ever converted into a confirmed customer fact.</strong> Each remains explicitly unvalidated until Discovery establishes otherwise.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 19 DATA QUALITY / ENTITY RESOLUTION -->
+    <div class="card">
+      <div class="card-header"><span class="accent">19</span> Data Quality &amp; Entity Resolution Hypotheses</div>
+      <div class="card-body">
+        <div style="padding:16px 20px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 6px 6px 0;">
+          <div style="font-size:10px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:#b45309;">Data Quality / Entity Resolution Hypothesis — requires validation</div>
+          <div style="font-size:16px;font-weight:800;color:var(--navy);margin-top:5px;line-height:1.4;">Panjiva shows records where <strong>Shipment Origin = China</strong> while <strong>Shipper Full Address = &ldquo;United States&rdquo;</strong> for Jiangsu Beiren</div>
+          <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin-top:10px;">This source inconsistency is <strong style="color:var(--navy);">preserved exactly and is not silently corrected</strong> in any route display on this page. Possible explanations such as <strong>corporate-address attribution, intermediary behaviour, alternate entity / facility mapping, or source-data normalization require validation</strong>.</p>
+        </div>
+
+        <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--navy);margin:18px 0 8px;">Where the anomaly is visible in the Core Route sets</div>
+        <div style="overflow-x:auto;">
+          <table class="hub-table" style="font-size:11px;min-width:900px;">
+            <thead><tr><th>Period · Route</th><th>Panjiva Shipment Origin / Destination</th><th>Panjiva Address Field</th><th>Governance applied</th></tr></thead>
+            <tbody>
+              <tr style="background:rgba(245,158,11,0.05);">
+                <td><strong>Current YTD Import Core Route #2</strong><div style="font-size:9px;color:var(--text-light);">Manzanillo → Autotek Mexico · Maritime · 5 Shipments</div></td>
+                <td style="color:var(--text-muted);">Jiangsu Beiren — <strong>China</strong>-associated entity</td>
+                <td><strong>&ldquo;United States&rdquo;</strong></td>
+                <td style="color:var(--text-muted);">Both values preserved verbatim. <strong style="color:#b45309;">Not reconciled and not silently corrected.</strong></td>
+              </tr>
+              <tr style="background:rgba(245,158,11,0.05);">
+                <td><strong>2025 Import Core Route #1</strong><div style="font-size:9px;color:var(--text-light);">Manzanillo → Autotek Mexico · Maritime · 24 Shipments</div></td>
+                <td style="color:var(--text-muted);">Jiangsu Beiren — <strong>China</strong>-associated entity</td>
+                <td><strong>&ldquo;United States&rdquo;</strong></td>
+                <td style="color:var(--text-muted);">Both values preserved verbatim. <strong style="color:#b45309;">Not reconciled and not silently corrected.</strong></td>
+              </tr>
+              <tr style="background:rgba(245,158,11,0.05);">
+                <td><strong>2025 Import Core Route #5</strong><div style="font-size:9px;color:var(--text-light);">AIFA → Autotek Mexico · Air · 3 Shipments</div></td>
+                <td style="color:var(--text-muted);">Jiangsu Beiren — <strong>China</strong>-associated entity</td>
+                <td><strong>&ldquo;United States&rdquo;</strong></td>
+                <td style="color:var(--text-muted);">Both values preserved verbatim. <strong style="color:#b45309;">Not reconciled and not silently corrected.</strong></td>
+              </tr>
+              <tr style="background:rgba(245,158,11,0.05);">
+                <td><strong>2025 Export Core Route #2</strong><div style="font-size:9px;color:var(--text-light);">Autotek Mexico → AIFA → Jiangsu Beiren · Air · 1 Shipment</div></td>
+                <td style="color:var(--text-muted);">Consignee is the <strong>China</strong>-associated Jiangsu Beiren entity</td>
+                <td><strong>Consignee Full Address: &ldquo;United States&rdquo;</strong></td>
+                <td style="color:var(--text-muted);">Both values preserved verbatim. <strong style="color:#b45309;">Not reconciled and not silently corrected.</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Current YTD Import Core Route #6</strong><div style="font-size:9px;color:var(--text-light);">AIFA → Autotek Mexico · Air · 1 Shipment</div></td>
+                <td style="color:var(--text-muted);">Shipment Origin: <strong>Singapore, United States</strong></td>
+                <td style="color:#b45309;font-weight:700;">Address not available in Panjiva</td>
+                <td style="color:var(--text-muted);">Composite source geography preserved. <strong style="color:#b45309;">No single origin country is chosen for the account.</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Current YTD Import Core Route #8</strong><div style="font-size:9px;color:var(--text-light);">Querétaro → Kirchhoff Automotive Mexico · Air · 1 Shipment</div></td>
+                <td style="color:var(--text-muted);">Shipment Origin: <strong>China, Germany</strong></td>
+                <td style="color:#b45309;font-weight:700;">Address not available in Panjiva</td>
+                <td style="color:var(--text-muted);">Composite source geography preserved. <strong style="color:#b45309;">No single origin country is chosen for the account.</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--navy);margin:18px 0 8px;">Visible entity name variants — preserved, never merged</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:8px;">
+          <div class="stat-box" style="padding:11px 14px;border-left:3px solid #f59e0b;"><div style="font-size:11.5px;font-weight:700;color:var(--navy);line-height:1.45;">Jiangsu Beiren Smart Mfg. Technology Co., Ltd.</div></div>
+          <div class="stat-box" style="padding:11px 14px;border-left:3px solid #f59e0b;"><div style="font-size:11.5px;font-weight:700;color:var(--navy);line-height:1.45;">Jiangsu Beiren Smart Mfg. Technology Co.. Ltd.</div><div style="font-size:9px;color:var(--text-light);margin-top:2px;">Period instead of comma — preserved verbatim</div></div>
+          <div class="stat-box" style="padding:11px 14px;border-left:3px solid #f59e0b;"><div style="font-size:11.5px;font-weight:700;color:var(--navy);line-height:1.45;">Jiangsu Beiren Smart Manufacturingtechnology Co., Ltd.</div><div style="font-size:9px;color:var(--text-light);margin-top:2px;">Concatenated word form — preserved verbatim</div></div>
+        </div>
+        <div style="margin-top:12px;padding:12px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.65;">These variants <strong>appear operationally related</strong> but <strong style="color:#b45309;">should not be silently treated as legally identical without entity-resolution validation</strong>. Source conflicts are <strong>surfaced, not hidden</strong>. <strong style="color:#b45309;">No geography is silently enriched and no source data is silently fixed or merged anywhere on this page.</strong></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 20 MULTIMODAL / ILM / CONTROL TOWER OPPORTUNITY -->
+    <div class="card">
+      <div class="card-header"><span class="accent">20</span> Multimodal / ILM / Control Tower Opportunity</div>
+      <div class="card-body">
+        <div style="padding:14px 18px;background:linear-gradient(135deg,rgba(0,180,216,0.07) 0%,rgba(13,43,94,0.04) 100%);border-left:3px solid var(--teal);border-radius:0 6px 6px 0;margin-bottom:14px;">
+          <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal-dim);">AIOS Assessment</div>
+          <div style="font-size:19px;font-weight:800;color:var(--navy);letter-spacing:0.3px;line-height:1.3;margin-top:3px;">HIGH POTENTIAL FOR A COORDINATION CONVERSATION</div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:8px;">
+          <div class="stat-box" style="border-left:3px solid var(--teal);padding:11px 14px;"><div style="font-size:11.5px;font-weight:700;color:var(--navy);line-height:1.4;">Air / Ocean coordination</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--navy);padding:11px 14px;"><div style="font-size:11.5px;font-weight:700;color:var(--navy);line-height:1.4;">Supplier readiness and Shipment planning</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--navy);padding:11px 14px;"><div style="font-size:11.5px;font-weight:700;color:var(--navy);line-height:1.4;">Booking coordination</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--red);padding:11px 14px;"><div style="font-size:11.5px;font-weight:700;color:var(--navy);line-height:1.4;">Customs milestones</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--red);padding:11px 14px;"><div style="font-size:11.5px;font-weight:700;color:var(--navy);line-height:1.4;">AIFA / Manzanillo visibility</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--navy);padding:11px 14px;"><div style="font-size:11.5px;font-weight:700;color:var(--navy);line-height:1.4;">Document control</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--red);padding:11px 14px;"><div style="font-size:11.5px;font-weight:700;color:var(--navy);line-height:1.4;">Exception management</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--teal);padding:11px 14px;"><div style="font-size:11.5px;font-weight:700;color:var(--navy);line-height:1.4;">Centralized communication</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--red);padding:11px 14px;"><div style="font-size:11.5px;font-weight:700;color:var(--navy);line-height:1.4;">Route and gateway KPI governance</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--navy);padding:11px 14px;"><div style="font-size:11.5px;font-weight:700;color:var(--navy);line-height:1.4;">Trading Partner coordination</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--teal);padding:11px 14px;"><div style="font-size:11.5px;font-weight:700;color:var(--navy);line-height:1.4;">Contingency governance</div></div>
+        </div>
+        <div style="margin-top:14px;padding:14px 18px;background:rgba(13,43,94,0.03);border:1px solid var(--border);border-radius:6px;">
+          <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:6px;">AIOS Interpretation</div>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.75;">The visible network supports a credible conversation around Akzent acting as an <strong style="color:var(--navy);">ILM / Control Tower Partner</strong>. This is a <strong>commercial positioning opportunity</strong>.</p>
+          <p style="font-size:11.5px;color:var(--text-muted);line-height:1.75;margin-top:8px;"><strong style="color:#b45309;">It is not a statement that Jiangsu Beiren lacks these capabilities.</strong> This page never states that Jiangsu Beiren has poor visibility, poor coordination or inadequate systems. Each area above is framed as somewhere Akzent <strong>could</strong> operate <strong>if Discovery validates the need</strong>.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 21 COMMERCIAL POSITIONING -->
+    <div class="card">
+      <div class="card-header"><span class="accent">21</span> Commercial Positioning</div>
+      <div class="card-body">
+        <div class="grid-4" style="gap:10px;">
+          <div class="stat-box" style="border-left:3px solid var(--red);"><div class="stat-value" style="font-size:15px;line-height:1.3;">Operational Complexity Partner</div><div class="stat-sub">Multimodal, multi-gateway, multi-customs-agent visible structure</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-value" style="font-size:15px;line-height:1.3;">Multimodal Coordination Partner</div><div class="stat-sub">Air 70.0% with recurring Maritime at 26.7%</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--navy);"><div class="stat-value" style="font-size:15px;line-height:1.3;">Customs &amp; Visibility Partner</div><div class="stat-sub">Fixed-asset / IMMEX regimes and seven visible Customs Agent codes</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--red);"><div class="stat-value" style="font-size:15px;line-height:1.3;">ILM / Control Tower Partner</div><div class="stat-sub">Concentrated nodes and multimodal breadth create a credible centralization case</div></div>
+        </div>
+        <div style="margin-top:12px;padding:10px 14px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.6;">Akzent is <strong style="color:#b45309;">never positioned as a transactional freight provider or spot-rate provider</strong> for this account. <strong>Do not lead with transactional freight or spot pricing.</strong></span>
+        </div>
+        <div style="margin-top:14px;padding:18px 22px;background:linear-gradient(135deg,rgba(13,43,94,0.05) 0%,rgba(196,30,58,0.05) 100%);border-left:3px solid var(--navy);border-radius:0 6px 6px 0;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);margin-bottom:8px;">Recommended Entry Thesis</div>
+          <p style="font-size:14px;font-weight:600;color:var(--navy);line-height:1.65;font-style:italic;">&ldquo;Lead with coordination, customs visibility, AIFA / Manzanillo exception governance and multimodal orchestration — not spot freight.&rdquo;</p>
+          <p style="font-size:11px;color:var(--text-muted);line-height:1.7;margin-top:10px;">Present this as a <strong>commercial conversation angle</strong>. <strong style="color:#b45309;">It does not claim that Jiangsu Beiren currently has operational problems.</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 22 DISCOVERY INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">22</span> Discovery Intelligence — Validate Unknowns, Not the Visible</div>
+      <div class="card-body" style="padding:12px 18px;">
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:#b45309;">Do not ask for routes, modes, principal gateways or principal visible Trading Partners already revealed by Panjiva.</strong> Discovery exists to validate unknown business facts. <strong>No question below presumes pain in its wording.</strong></span>
+      </div>
+      <div class="card-body">
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)">
+            <span>Decision rights, mode selection &amp; service levels — Questions 1–4</span>
+            <span class="outreach-step-toggle">+</span>
+          </div>
+          <div class="outreach-step-body">
+            <ul class="q-list" style="font-size:11.5px;line-height:1.8;">
+              <li><strong>1.</strong> Who owns logistics-provider selection between Jiangsu Beiren, Beiren Smart Mfg. Solutions, Autotek and other operating partners?</li>
+              <li><strong>2.</strong> Is Air vs Ocean mode selection planned centrally or decided by project / exception?</li>
+              <li><strong>3.</strong> What service-level or project milestones drive the high visible Air share?</li>
+              <li><strong>4.</strong> Who owns AIFA and Manzanillo exception escalation?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)">
+            <span>Customs governance, contingency &amp; Shipment types — Questions 5–7</span>
+            <span class="outreach-step-toggle">+</span>
+          </div>
+          <div class="outreach-step-body">
+            <ul class="q-list" style="font-size:11.5px;line-height:1.8;">
+              <li><strong>5.</strong> How are multiple Customs Agent relationships governed and measured?</li>
+              <li><strong>6.</strong> What contingency exists if a gateway, broker or carrier underperforms?</li>
+              <li><strong>7.</strong> Are machinery-installation / commissioning Shipments managed differently from recurring parts Shipments?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)">
+            <span>Coordination, KPIs &amp; transformation readiness — Questions 8–10</span>
+            <span class="outreach-step-toggle">+</span>
+          </div>
+          <div class="outreach-step-body">
+            <ul class="q-list" style="font-size:11.5px;line-height:1.8;">
+              <li><strong>8.</strong> How are supplier readiness, documents, bookings and customs milestones coordinated today?</li>
+              <li><strong>9.</strong> Which KPIs determine provider performance and renewal?</li>
+              <li><strong>10.</strong> What would need to improve for the account to consider changing or adding a coordination partner?</li>
+            </ul>
+          </div>
+        </div>
+        <div style="margin-top:14px;padding:12px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 6px 6px 0;">
+          <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#b45309;">Panjiva cannot reveal</div>
+          <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:6px;">
+            <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">Carrier information</span>
+            <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">Incoterms</span>
+            <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">Validated customs agency company names</span>
+            <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">Provider contracts</span>
+            <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">SLA performance</span>
+            <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">Procurement ownership</span>
+            <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">Capacity commitments</span>
+            <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">Incumbent provider ownership</span>
+            <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">Confirmed operational pain</span>
+            <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">Decision rights</span>
+            <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">Internal KPIs</span>
+            <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);">Logistics spend</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 23 DATA AVAILABILITY & METHODOLOGY -->
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><span class="accent">23</span> Data Availability &amp; Source Governance</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:18px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:8px;">Available in the supplied Panjiva files</div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:6px;">
+              <div class="stat-box" style="padding:8px 11px;"><div style="font-size:10.5px;font-weight:700;color:var(--navy);">Shipment dates</div></div>
+              <div class="stat-box" style="padding:8px 11px;"><div style="font-size:10.5px;font-weight:700;color:var(--navy);">Import / Export direction</div></div>
+              <div class="stat-box" style="padding:8px 11px;"><div style="font-size:10.5px;font-weight:700;color:var(--navy);">Consignee / shipper names</div></div>
+              <div class="stat-box" style="padding:8px 11px;"><div style="font-size:10.5px;font-weight:700;color:var(--navy);">Partial facility addresses</div></div>
+              <div class="stat-box" style="padding:8px 11px;"><div style="font-size:10.5px;font-weight:700;color:var(--navy);">Shipment Origin / Destination</div></div>
+              <div class="stat-box" style="padding:8px 11px;"><div style="font-size:10.5px;font-weight:700;color:var(--navy);">Gateways</div></div>
+              <div class="stat-box" style="padding:8px 11px;"><div style="font-size:10.5px;font-weight:700;color:var(--navy);">Modes</div></div>
+              <div class="stat-box" style="padding:8px 11px;"><div style="font-size:10.5px;font-weight:700;color:var(--navy);">Customs regimes</div></div>
+              <div class="stat-box" style="padding:8px 11px;"><div style="font-size:10.5px;font-weight:700;color:var(--navy);">Customs Agent codes</div></div>
+              <div class="stat-box" style="padding:8px 11px;"><div style="font-size:10.5px;font-weight:700;color:var(--navy);">TEU <span style="font-weight:600;color:var(--text-light);">where populated</span></div></div>
+              <div class="stat-box" style="padding:8px 11px;"><div style="font-size:10.5px;font-weight:700;color:var(--navy);">Gross weight</div></div>
+              <div class="stat-box" style="padding:8px 11px;"><div style="font-size:10.5px;font-weight:700;color:var(--navy);">CIF value</div></div>
+              <div class="stat-box" style="padding:8px 11px;"><div style="font-size:10.5px;font-weight:700;color:var(--navy);">HS Codes</div></div>
+              <div class="stat-box" style="padding:8px 11px;"><div style="font-size:10.5px;font-weight:700;color:var(--navy);">Goods Shipped</div></div>
+              <div class="stat-box" style="padding:8px 11px;"><div style="font-size:10.5px;font-weight:700;color:var(--navy);">Quantities / units</div></div>
+              <div class="stat-box" style="padding:8px 11px;"><div style="font-size:10.5px;font-weight:700;color:var(--navy);">Item origin / destination</div></div>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#b45309;margin-bottom:8px;">Missing / limited — governance applied</div>
+            <table class="hub-table" style="font-size:11px;">
+              <thead><tr><th>Field</th><th>Governance applied</th></tr></thead>
+              <tbody>
+                <tr style="background:rgba(245,158,11,0.05);"><td><strong style="color:#b45309;">Akzent Shipments &amp; financials</strong></td><td style="color:var(--text-muted);">No Wallet, Penetration, Coverage, Account Intelligence Snapshot, Akzent Revenue, Gross Profit or Margin</td></tr>
+                <tr><td><strong>Many Mexican facility addresses</strong></td><td style="color:var(--text-muted);">Absent — rendered as <strong style="color:#b45309;">Address not available in Panjiva</strong>. No address is enriched or invented</td></tr>
+                <tr><td><strong>Some Jiangsu Beiren origin-address fields</strong></td><td style="color:var(--text-muted);">Absent or internally inconsistent — both source values preserved and flagged, never reconciled</td></tr>
+                <tr><td><strong>Carrier information</strong></td><td style="color:var(--text-muted);">Not present in the supplied extracts — no carrier named anywhere on this page</td></tr>
+                <tr><td><strong>Incoterms</strong></td><td style="color:var(--text-muted);">Not present — none inferred</td></tr>
+                <tr><td><strong>Provider contracts / SLA</strong></td><td style="color:var(--text-muted);">No verified provider-contract or SLA data supplied — no delay, dwell or on-time claim made</td></tr>
+                <tr><td><strong>Procurement ownership</strong></td><td style="color:var(--text-muted);">Not supplied — held as a Discovery Hypothesis</td></tr>
+                <tr><td><strong>Capacity &amp; performance data</strong></td><td style="color:var(--text-muted);">Not supplied — none inferred</td></tr>
+                <tr><td><strong>Incumbent logistics-provider ownership</strong></td><td style="color:var(--text-muted);">Panjiva cannot establish it from these files alone</td></tr>
+                <tr><td><strong>Customer pain</strong></td><td style="color:var(--text-muted);">Cannot be established from these files — no pain is asserted as customer fact</td></tr>
+                <tr><td><strong>Customs agency company names</strong></td><td style="color:var(--text-muted);">Only numeric codes are available — codes remain codes</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div style="margin-top:14px;padding:14px 18px;border-top:1px solid var(--border);background:var(--bg);border-radius:6px;">
+          <span style="font-size:10px;color:var(--text-muted);line-height:1.65;"><strong style="color:var(--navy);">Panjiva is the Visible Logistics Universe and the sole source of truth for this LEAD analysis.</strong> It represents what is externally visible — <strong>not</strong> the complete enterprise logistics footprint of Jiangsu Beiren Smart Mfg. Technology Co., Ltd. <strong>Akzent does not currently manage this account</strong>, and nothing on this page should be read as implying otherwise. Every figure above is AIOS-finalized intelligence, rendered without recalculation, estimation, inference, annualization, normalization, geocoding, entity merging or reconciliation. <strong>Current YTD is never annualized</strong> — Imports are visible through <strong>2026-07-27</strong> and Exports through <strong>2026-06-09</strong> — and the <strong>2025 Full Calendar Year is never aggregated with it</strong>. No Wallet, Penetration, Coverage, Account Intelligence Snapshot, Akzent Revenue, Gross Profit or Margin is shown, and no Commercial Route Priority is defined.</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 </main>
 
 <script>
@@ -61517,6 +63004,7 @@ const ACCOUNTS = [
   { id:'view-diken', name:'Diken', sub:'Diken International / Diken · Diken de México S.A. de C.V. · Diken International S. de R.L. de C.V. · Diken Institucional S.A. de C.V. · Diken International LLC · Diken de Costa Rica SYV S.A. · Target Account · LEAD · AA Priority Target · Operational Complexity Medium-High · Panjiva Visible Logistics Universe · Export-Oriented Cross-Border Network · Cleaning sanitation disinfectant chemical preparations · 60 Current YTD Shipments through July 29 2026 · Imports 15 25.0% · Exports 45 75.0% · comparable Jan 1–Jul 29 actual vs actual 66 to 60 −9.1% · Imports 14 to 15 +7.1% · Exports 52 to 45 −13.5% · Truck 52 86.7% · Maritime 8 13.3% · 1 Import Core Route 86.7% EXTREME ROUTE CONCENTRATION · 4 Export Core Routes 82.2% · 2025 baseline 101 Shipments 21 Imports 80 Exports · 1 Import Core Route 90.5% · 3 Export Core Routes 82.5% · visible CIF 2026 YTD Imports USD 1,988,057.04 Exports USD 1,948,361.11 · 2025 Imports USD 3,111,426.50 Exports USD 3,387,128.53 · gross weight 2026 YTD 102,595.20 kg imports 777,861.39 kg exports · E Global Enterprises Inc. 15 100% of imports · Diken International LLC 28 62.2% · Negocios y Servicios Agropecuarios S.A. 4 · Tecnas S.A. BIC 4 · Agromarket S.A. de C.V. 3 · Diken de Costa Rica SYV S.A. 2 · Dimedisa S.A. 2 · Macao Alto Resort SRL 1 · Colombia Nuevo León Border 28 62.2% · Ciudad Hidalgo Chiapas Border 11 24.4% · Altamira Tamaulipas Port 4 · Puerto Morelos Quintana Roo Port 2 · Nuevo Laredo Tamaulipas Border 13 86.7% of imports · Manzanillo Colima Port 2 · AICM Airport 2025 · United States 28 · Guatemala 4 · Colombia 4 · El Salvador 3 · Costa Rica 2 · Panama 2 · Dominican Republic 2 · item-origin presence Canada China United States Denmark India Vietnam Pakistan Cambodia not additive · Customs Agent 3984 3950 3889 1663 3506 1807 3481 1852 1747 1914 · Final Import Export · HS 3402909900 cleaning washing preparations · 3808949900 disinfectant · 3307499900 room deodorizing · 3401200100 soap · 3215199999 printing inks · 3926209900 plastic protective articles · 9603909900 brooms brushes · 6201409901 outerwear jackets · Agromarket El Salvador vs Puerto Rico · Dimedisa Panama vs Puerto Rico · data quality entity resolution hypothesis · Address not available in Panjiva · affiliate intercompany Discovery Hypothesis · Cross-Border · Customs · LATAM · Maritime · Operational Complexity Partner · Customs &amp; Visibility Partner · Multimodal Coordination Partner · ILM / Control Tower Partner', rel:'LEAD', cls:'AA', clsPill:'aa' },
   { id:'view-ternium', name:'Ternium México', sub:'Relationship LEAD · AIOS Classification AAA Priority Strategic Target · Operational Complexity VERY HIGH · Current YTD 2026 Shipments 11,254 through July 31 2026 · Imports 10,049 (89.3%) · Exports 1,205 (10.7%) · Comparable Jan 1–Jul 31 actual-vs-actual 9,916 to 11,254 +13.5% · Imports 8,429 to 10,049 +19.2% · Exports 1,487 to 1,205 −19.0% · Import modes Rail 5,002 (49.78%) Truck 2,399 (23.87%) Air 1,441 (14.34%) Maritime 1,098 (10.93%) Unknown 109 · Export modes Unknown 530 (43.98%) Truck 427 (35.44%) Rail 154 (12.78%) Maritime 88 (7.30%) Air 6 · Import modal trend Rail 38.9% to 49.8% Truck 32.4% to 23.9% · Current YTD Import Core Routes 93 to 80.05% · Export Core Routes 36 to 80.08% · Import Top 3 25.47% Top 5 34.84% Top 10 48.62% · Export Top 3 32.78% Top 5 41.24% Top 10 53.78% · EXTREME ROUTE CONCENTRATION does not apply in either direction — the network is operationally dispersed · 2025 baseline 17,818 Shipments · 15,446 Imports · 2,372 Exports · 145 Import Core Routes 80.07% · 60 Export Core Routes 80.31% · Import gateways Matamoros Border 3,630 (36.12%) Nuevo Laredo Border 3,073 (30.58%) AIFA Santa Lucía Airport 1,042 Altamira Port 920 Ciudad Juárez Border 409 AICM Airport 360 Piedras Negras Border 328 Manzanillo Port 154 Colombia Nuevo León Border 61 Monterrey Airport 37 · Export gateways Nuevo Laredo Border 717 (59.50%) Ciudad Hidalgo Border 294 (24.40%) Coatzacoalcos Port 54 Matamoros Border 39 Colombia Nuevo León Border 32 Altamira Port 31 · Import origins United States 4,125 Brazil 1,003 Germany 776 Italy 547 Egypt 501 Brazil-Taiwan composite 442 China 383 Vietnam 259 · Export destinations Mexico 530 United States 341 Guatemala 247 Nicaragua 28 El Salvador 17 Costa Rica 12 · Trading Partners Ternium Procurement 2,353 Transamerica E And I Trading Corp 1,652 Exiros Bv Sucursal Uruguay 864 · Ternium International Guatemala 240 Ternium Usa 239 Trinity Rail de Mexico 68 Industrias John Deere 48 · Customs Agent 3430 38.79% imports 61.66% exports · 1675 36.75% · 3340 10.35% · 3752 6.31% · Final Import Export 90.58% imports · Transfer virtual regime 43.90% exports · Return of Goods IMMEX 35.77% · HS 7207129199 non-alloy steel slab · 7204499900 steel scrap · 7224909999 alloy steel slab · 8606920100 gondola railcar · 7210610100 coated flat-rolled steel · composite source geography entity resolution requires validation · 530 Exports Unknown transport method · Operational Complexity Partner · Multimodal Coordination Partner · Customs &amp; Visibility Partner · ILM / Control Tower Partner · Panjiva Visible Logistics Universe · Metals &amp; Mining / Steel · Rail · Cross-Border · Ocean · Air · Customs · ILM / Control Tower', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
   { id:'view-cuprum', name:'Cuprum S.A. de C.V.', sub:'Cuprum S.A. de C.V. · Cuprum Sa Cv · Target Account · LEAD · AAA Priority Target · Operational Complexity HIGH · Panjiva Visible Logistics Universe · Aluminum Extrusion &amp; Industrial Products · aluminum profiles hollow profiles tubes bars · Relationship LEAD · AIOS Classification AAA Priority Target · Operational Complexity HIGH · Current YTD 2026 Shipments 598 from January 1 through July 31 2026 · Imports 331 (55.4%) · Exports 267 (44.6%) · Comparable Jan 1–Jul 31 actual-vs-actual 822 to 598 −27.3% · Imports 562 to 331 −41.1% · Exports 260 to 267 +2.7% · Import modes Truck 224 (67.7%) Maritime 106 (32.0%) Unknown 1 (0.3%) · Export modes Unknown 224 (83.9%) Truck 41 (15.4%) Maritime 2 (0.7%) · Current YTD Import Core Routes 16 to 80.1% covering 265 Shipments · Export Core Routes 27 to 80.5% covering 215 Shipments · EXTREME ROUTE CONCENTRATION does not apply in either direction · leading Import route 14.5% · leading Export route 7.9% · 2025 baseline 1,202 Shipments · 802 Imports 66.7% · 400 Exports 33.3% · 29 Import Core Routes 80.5% · 29 Export Core Routes 80.8% · Import gateways Nuevo Laredo Border 216 (65.3%) Veracruz Port 83 (25.1%) Manzanillo Port 20 (6.0%) Ciudad Acuña Border 4 Colombia Nuevo León Border 4 Altamira Port 4 · Export gateways Nuevo Laredo Border 159 (59.6%) Veracruz Port 97 (36.3%) Ciudad Reynosa Border 7 Ciudad Hidalgo Border 2 Manzanillo Port 2 · Export gateway shift Nuevo Laredo 92.7% to 59.6% and Veracruz 4.2% to 36.3% · Import origins United Arab Emirates 71 United States 59 Canada 32 Italy 30 Bahrain 29 South Africa 26 United Kingdom 25 Spain 11 South Korea 7 Australia 6 India 6 Mexico 4 Switzerland 3 China 3 Germany 3 · Export Shipment Destination field Mexico 224 United States 38 El Salvador 4 Canada 1 · Import Trading Partners EGA America 71 Aluminium Bahrain 29 Wagstaff 27 Concord Resources 26 Quickgrind Carbide Tooling 22 Rio Tinto Alcan 21 HMA 19 Southtex Mago 16 Presezzi Extrusion 12 Ipsen 8 · Export Trading Partners Wabtec Mfg. Mexico 21 Ruskin Geneva 20 FEMSA 12 Springs Window Fashions de Mexico 11 ASC Systems 9 Corporación Heil Trailer 8 Hunter Douglas Fabrication 8 Springs Window Fashions de Victoria 8 Castlight de Mexico 7 ABB Electrical Control Systems Saltillo 7 · Customs Agent 1763 66.5% imports 11.6% exports · 472 25.1% imports 36.3% exports · 3306 47.6% exports · 1905 3.9% imports · Final Import Export 86.1% imports · Temporary Import IMMEX 13.6% · Extraction from bonded warehouse 0.3% · Transfer of Goods virtual regime 83.9% exports · HS 7601200299 aluminio · 7601100299 primary aluminum ingot · 3923100301 plastic boxes · 8207700302 carbide milling tools · 8466949900 extrusion press pusher · HS 7604290200 aluminum profile · 7604210100 hollow aluminum profile · 7608200100 aluminum tube · 7604299900 aluminum bar · 8431399900 aluminum ramp stop · 224 of 267 Current YTD Exports show Mexico destination Unknown transport method and virtual customs regime — data quality and entity resolution requires validation · Operational Complexity Partner · Multimodal Coordination Partner · Customs &amp; Visibility Partner · ILM / Control Tower Partner · Panjiva Visible Logistics Universe · Aluminum · Extrusion · Cross-Border · Ocean · Customs · IMMEX · ILM / Control Tower', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
+  { id:'view-jiangsu-beiren', name:'Jiangsu Beiren', sub:'Jiangsu Beiren Smart Mfg. Technology Co., Ltd. · Jiangsu Beiren Smart Mfg. Technology Co.. Ltd. · Jiangsu Beiren Smart Manufacturingtechnology Co., Ltd. · Target Account · LEAD · AA Priority Target · Operational Complexity MEDIUM-HIGH · Panjiva Visible Logistics Universe · Industrial Automation &amp; Automotive Manufacturing Support · automated assembly lines industrial machinery welding equipment electrical control apparatus automotive chassis suspension components · Current YTD 2026 Shipments 32 · Imports 30 (93.8%) visible through July 27 2026 · Exports 2 (6.3%) visible through June 9 2026 · Comparable Jan 1–Jul 27 actual-vs-actual 51 to 32 −37.3% · Imports 45 to 30 −33.3% · Exports 6 to 2 −66.7% · Import modes Air 21 (70.0%) Maritime 8 (26.7%) Unknown 1 (3.3%) · Export modes Air 2 (100%) · Import modal shift Air 50.0% to 70.0% · Current YTD Import Core Routes 8 to 83.3% · Export Core Routes 1 to 100% EXTREME ROUTE CONCENTRATION · 2025 baseline 72 Shipments · 64 Imports 88.9% · 8 Exports 11.1% · 6 Import Core Routes 81.3% · 3 Export Core Routes 87.5% · Visible Import CIF USD 14.11M Current YTD and USD 40.74M in 2025 · Visible Export CIF USD 8.53K Current YTD and USD 110.97K in 2025 · Import gross weight 502,662.5 kg Current YTD and 1,914,136.5 kg in 2025 · Export gross weight 2,056.0 kg Current YTD and 5,598.5 kg in 2025 · Import gateways AIFA Aeropuerto Internacional Felipe Ángeles Airport 18 (60.0%) Manzanillo Colima Port 8 (26.7%) Querétaro Gateway geography 2 (6.7%) Puebla Gateway geography 1 (3.3%) AICM Airport 1 (3.3%) · 2025 Import gateways Manzanillo Port 31 (48.4%) AIFA Airport 27 (42.2%) AICM Airport 4 (6.3%) Querétaro 1 (1.6%) Puebla 1 (1.6%) · Export gateway AIFA Airport 2 (100%) · Import Trading Partners Autotek Mexico Sa De Cv 24 (80.0%) Beiren Smart Mfg. Solutions S De Rl De Cv 4 (13.3%) Kirchhoff Automotive Mexico Sa De Cv 2 (6.7%) Top 3 concentration 100% · 2025 Import Trading Partners Autotek Mexico 52 (81.3%) Beiren Smart Mfg. Solutions 5 (7.8%) Kirchhoff Automotive Mexico 5 (7.8%) Waldaschaff Automotive Mexico 2 (3.1%) · Export origin partner Autotek Mexico 2 of 2 (100%) · Customs Agent 3547 10 · 3172 8 · 3341 7 · 1648 2 · 3076 1 · 1875 1 · 3976 1 · 2025 leading codes 3341 24 · 3172 24 · 3976 4 · 3129 4 · other 2025 codes 3200 3547 1766 1725 3076 1877 · Final Import Export 28 (93.3%) · Regime Change In Goods Of Fixed Assets 1 (3.3%) · Temporary Import Fixed Assets IMMEX 1 (3.3%) · 2025 Final Import Export 49 (76.6%) Temporary Import Fixed Assets IMMEX 14 (21.9%) Regime Change In Goods Of Fixed Assets 1 (1.6%) · Export regimes 2 Final Import Export Current YTD · 6 Final Import Export and 2 Return Of Goods IMMEX in 2025 · HS 8479899999 automated assembly industrial machinery 19 (63.3%) · 8466949900 machine-tool parts 2 (6.7%) · 8515909900 welding-machine parts 2 (6.7%) · 8536909999 electrical connection components 2 (6.7%) · 8537109999 electrical control distribution apparatus 2 (6.7%) · 2025 HS 8479899999 34 (53.1%) 8708509999 axle drivetrain 10 (15.6%) 8708999999 other automotive parts 5 (7.8%) 8708292000 vehicle body parts 4 (6.3%) 4821100100 printed adhesive labels 3 (4.7%) · Export HS 8708990700 front suspension frames automotive chassis 2 (100%) Current YTD and 3 (37.5%) in 2025 · 2025 Export HS 7318160603 8302309100 8708299999 8708800500 each 1 (12.5%) · Import Core Route origins QINGQIU LANE SUZHOU INDUSTRIAL PARK JIANGSU 215126 · 8Q9C+R6W Xing Hua Jie Wu Zhong Qu Su Zhou Shi Jiang Su Sheng China 215121 · Qing Qiu Xiang Wu Zhong Qu Su Zhou Shi Jiang Su Sheng China 215126 · destination facilities Autotek Mexico address not available in Panjiva · Beiren Smart Mfg. Solutions #200-12 Arquitecto Pedro Ramírez Vázquez · Kirchhoff Automotive Mexico Avenida San Pedrito · short observation window routes at 7.00 Shipments per week must not be extrapolated · Shipment Origin China with Shipper Full Address United States — data quality and entity resolution requires validation · composite Shipment Origin Singapore United States and China Germany preserved · Operational Complexity Partner · Multimodal Coordination Partner · Customs &amp; Visibility Partner · ILM / Control Tower Partner · Panjiva Visible Logistics Universe · Air · Ocean · Customs · IMMEX · ILM / Control Tower', rel:'LEAD', cls:'AA', clsPill:'aa' },
   { id:'view-jyrsa', name:'JYRSA PPE', sub:'JYRSA PPE S.A. de C.V. · Jyrsa Ppe Sa De Cv · Target Account · LEAD · AA Priority Target · Operational Complexity Medium-High · Panjiva Visible Logistics Universe · Personal Protective Equipment Industrial Safety Products · hearing protection earmuffs plugs · protective eyewear safety glasses · safety apparel · textile PPE lumbar supports · plastic safety industrial accessories · Ocean-Led Asia Sourcing · Manzanillo-Concentrated Inbound · Central American Export Corridor · 135 Current YTD Shipments · Imports 110 81.5% Jan 2 to Jul 29 2026 · Exports 25 18.5% Jan 9 to Jul 8 2026 · comparable Jan 1–Jul 29 actual vs actual 92 to 135 +46.7% · Imports 68 to 110 +61.8% · Exports 24 to 25 +4.2% · Import share +7.6 pp · Import Maritime 99 90.0% Truck 9 8.2% Air 2 1.8% · Export Truck 25 100.0% · 16 Import Core Routes 81.8% of 29 visible routes · 7 Export Core Routes 84.0% of 10 visible routes · EXTREME ROUTE CONCENTRATION does not apply · Top 3 Imports 40.0% Top 5 48.2% · Top 3 Exports 48.0% Top 5 68.0% · 2025 baseline 177 Shipments 137 Imports 40 Exports · 16 Import Core Routes 80.3% · 12 Export Core Routes 80.0% · visible CIF 2026 YTD Imports USD 2.548M Exports USD 0.500M total USD 3.048M · 2025 Imports USD 2.938M Exports USD 0.913M total USD 3.851M · gross weight 2026 YTD 735,479.91 kg imports 39,915.08 kg exports · 2025 741,279.98 kg imports 79,744.94 kg exports · Hangzhou Top Safe 20 18.2% · Shanghai H&amp;L Industry 14 12.7% · Ansafe Industrial Safety Products 10 9.1% · Nung Lai 8 7.3% · Radians Inc. 7 6.4% · Suzhou Rhz Textile Technology · Fujian Rds Foreign Trade · Guangzhou Junyue Foam Earplug · Shanghai East Best International · Dikamar Ind Proteccao Calcado · Ltld Esd · Pat Safety · Suzhou Weebitex · The Best Time Fuzhou · Sondel Sociedad Anonima 5 · Items Industriales 4 · Tecnofijaciones De Costa Rica 3 · Afalpi Medica Sociedad Anonima 2 · Equipos Comerciales Y Servicios Electricos 2 · Moreno Macay 2 · Manzanillo Colima Port 96 87.3% of imports · Nuevo Laredo Tamaulipas Border 7 6.4% · Aeropuerto Internacional General Mariano Escobedo Airport 3 · Veracruz Port 3 · AICM Airport 1 · Ciudad Hidalgo Chiapas Border 21 84.0% of exports · Nuevo Laredo Border 4 16.0% · Altamira 2025 exports · MTY Airport 2025 imports · China 90 81.8% · Taiwan 9 8.2% · United States 7 6.4% · Portugal 4 3.6% · Costa Rica 10 40.0% · Nicaragua 5 20.0% · Guatemala 4 16.0% · United States 4 16.0% · El Salvador 2 8.0% · Dominican Republic Honduras Bolivia 2025 · Customs Agent 1742 96 87.3% · 3614 · 3043 · 3403 · 3685 · 3950 21 84.0% · 3323 · 3923 · Final Import Export · HS 3926901100 hearing protection · 3926909999 plastic industrial safety articles · 6307909999 safety textile lumbar supports · 3926209900 protective apparel · 9004909900 safety glasses · HS counts non-additive · Radians Inc. two Panjiva address renderings not merged · Safety Co. Nicaragua S.A. Costa Rica destination conflict · Afalpi Sociedad Anonima vs Afalpi Medica Sociedad Anonima · Ferreteria Ochoa two separate records · data quality entity resolution hypothesis · Address not available in Panjiva · Ocean · Customs · Cross-Border · LATAM · Operational Complexity Partner · Multimodal Coordination Partner · Customs &amp; Visibility Partner · ILM / Control Tower Partner', rel:'LEAD', cls:'AA', clsPill:'aa' },
 ];
 const MODULES = [
