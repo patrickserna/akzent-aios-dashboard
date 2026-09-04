@@ -1261,6 +1261,16 @@ main {
      prints in full, so filtered-out rows are forced back and the control is hidden. */
   #view-ternium .hub-table tbody tr { display: table-row !important; }
   #view-ternium .rail-filter { display: none !important; }
+  /* Laerdal — complete >=80% Core Route sets (12 / 7 / 10 / 8 routes) plus the
+     preserved Akzent commercial layer must print in full. Scoped to #view-laerdal. */
+  #view-laerdal .hub-table { font-size: 8.5px !important; min-width: 0 !important; }
+  #view-laerdal .hub-table td,
+  #view-laerdal .hub-table th { padding: 3px 6px !important; }
+  #view-laerdal .hub-table tr { break-inside: avoid; }
+  #view-laerdal .hist-appendix { break-inside: auto; }
+  #view-laerdal .hist-appendix .outreach-step-body { display: block !important; height: auto !important; max-height: none !important; }
+  #view-laerdal .outreach-step-body { display: block !important; height: auto !important; max-height: none !important; }
+  #view-laerdal .hist-appendix .outreach-step-header { font-size: 10px; }
   /* Cuprum S.A. de C.V. — complete >=80% Core Route sets (16 / 27 / 29 / 29 routes)
      must print in full. Scoped to #view-cuprum so no other account is affected. */
   #view-cuprum .hub-table { font-size: 8.5px !important; min-width: 0 !important; }
@@ -1270,6 +1280,19 @@ main {
   #view-cuprum .hist-appendix { break-inside: auto; }
   #view-cuprum .hist-appendix .outreach-step-body { display: block !important; height: auto !important; max-height: none !important; }
   #view-cuprum .hist-appendix .outreach-step-header { font-size: 10px; }
+  /* Jiangsu Beiren Smart Mfg. Technology Co., Ltd. — complete >=80% Core Route sets
+     (8 / 1 / 6 / 3 routes) must print in full. Without min-width:0 the 12-column route
+     tables force the page canvas wider than Letter and clip every module on the right.
+     Scoped to #view-jiangsu-beiren so no other account is affected. */
+  #view-jiangsu-beiren .hub-table { font-size: 8.5px !important; min-width: 0 !important; }
+  #view-jiangsu-beiren .hub-table td,
+  #view-jiangsu-beiren .hub-table th { padding: 3px 6px !important; }
+  #view-jiangsu-beiren .hub-table tr { break-inside: avoid; }
+  /* Table wrappers scroll on screen; in print they must let the table reflow, never clip. */
+  #view-jiangsu-beiren [style*="overflow-x:auto"] { overflow: visible !important; }
+  #view-jiangsu-beiren .hist-appendix { break-inside: auto; }
+  #view-jiangsu-beiren .hist-appendix .outreach-step-body { display: block !important; height: auto !important; max-height: none !important; }
+  #view-jiangsu-beiren .hist-appendix .outreach-step-header { font-size: 10px; }
   .page-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .card-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .positioning-box { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
@@ -3274,16 +3297,17 @@ main {
         <span class="account-cls-badge aaa">AAA</span>
       </div>
       <div class="account-metrics">
-        <div class="acct-metric"><div class="acct-metric-val">972</div><div class="acct-metric-lbl">Imports</div></div>
-        <div class="acct-metric"><div class="acct-metric-val">474</div><div class="acct-metric-lbl">Exports</div></div>
-        <div class="acct-metric"><div class="acct-metric-val">$56M</div><div class="acct-metric-lbl">CIF Value</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">544</div><div class="acct-metric-lbl">Current YTD Shipments</div></div>
+        <div class="acct-metric"><div class="acct-metric-val" style="color:var(--red);">&minus;16.4%</div><div class="acct-metric-lbl">Jan&ndash;Jul YoY · observed</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">374</div><div class="acct-metric-lbl">Imports</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">170</div><div class="acct-metric-lbl">Exports</div></div>
       </div>
       <div class="account-tags">
         <span class="acct-tag" style="background:rgba(16,185,129,0.15);color:#10b981;border-color:rgba(16,185,129,0.3);">CLIENT</span>
         <span class="acct-tag">IMMEX</span>
-        <span class="acct-tag">Colombia NL</span>
-        <span class="acct-tag">Air gap 0%</span>
-        <span class="acct-tag">ILM AAA</span>
+        <span class="acct-tag">Colombia NL 71%</span>
+        <span class="acct-tag">Air + Border</span>
+        <span class="acct-tag">ILM Very High</span>
       </div>
     </div>
 
@@ -19100,9 +19124,9 @@ main {
 <div id="view-laerdal" class="view">
   <div class="page-header">
     <div class="page-header-left">
-      <div class="page-header-eyebrow">Active Client · Medical Manufacturing · IMMEX / Cross-Border Operation</div>
+      <div class="page-header-eyebrow">Active Client · Medical Manufacturing · IMMEX / Cross-Border Operation · Refreshed Panjiva Universe</div>
       <div class="page-header-title">Laerdal</div>
-      <div class="page-header-sub">Medical Manufacturing · Simulation &amp; Training Products · Colombia NL / MTY Airport</div>
+      <div class="page-header-sub">Laerdal Medical Monterrey S.A. de C.V. · Medical Simulation &amp; Training Products · Colombia NL Border-Dominant Network · Mariano Escobedo Air Layer · Manzanillo / Altamira Ocean Exposure · IMMEX &amp; Virtual-Transfer Customs Architecture</div>
     </div>
     <div class="page-header-meta">
       <span class="classification-badge client">CLIENT</span>
@@ -19112,9 +19136,54 @@ main {
   </div>
   <div class="content-body">
 
+    <!-- Identity strip — Relationship Status, AIOS Classification and Operational Complexity are independent dimensions -->
+    <div class="card">
+      <div class="card-body" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 18px;">
+        <span style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);">Relationship Status</span>
+        <span class="classification-badge client">CLIENT</span>
+        <span style="width:1px;height:20px;background:var(--border);"></span>
+        <span style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);">AIOS Classification</span>
+        <span class="classification-badge aaa">AAA</span>
+        <span style="font-size:11px;color:var(--text-muted);">Strategic · Priority Expansion Target</span>
+        <span style="width:1px;height:20px;background:var(--border);"></span>
+        <span style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);">Operational Complexity</span>
+        <span style="font-size:13px;font-weight:800;color:var(--red);letter-spacing:0.5px;">HIGH</span>
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;flex:1;min-width:300px;text-align:right;">
+          <strong style="color:var(--navy);">Two independent layers on one page.</strong> The <strong>Akzent captured layer</strong> is preserved; the <strong>Panjiva visible layer</strong> has been fully refreshed and is period-separated.
+        </span>
+      </div>
+    </div>
+
+    <!-- Source governance — dual-layer basis and the LEAD / CLIENT reconciliation -->
+    <div class="card" style="border-top:3px solid #b45309;">
+      <div class="card-header"><span class="accent" style="color:#b45309;">00</span> Source Governance — Two Layers, Two Bases, One Page</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:12px;">
+          <div style="padding:14px 18px;background:rgba(16,185,129,0.05);border:1px solid rgba(16,185,129,0.28);border-radius:6px;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#059669;margin-bottom:6px;">Layer A · Akzent Captured Performance — Preserved</div>
+            <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:0;">Laerdal is an <strong style="color:var(--navy);">active Akzent client</strong>. Wallet, penetration, coverage, revenue, gross profit and margin are <strong>retained in full</strong> in modules 01 and 20–25, on their original basis. Nothing in the refreshed Panjiva delivery removes or contradicts the commercial relationship.</p>
+          </div>
+          <div style="padding:14px 18px;background:rgba(0,180,216,0.05);border:1px solid rgba(0,180,216,0.28);border-radius:6px;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:6px;">Layer B · Panjiva Visible Universe — Refreshed</div>
+            <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:0;"><strong style="color:var(--navy);">Panjiva only.</strong> <strong>1,635 visible Shipments</strong> across the supplied Import and Export datasets, split into <strong>2025 Full Calendar Year (1,091)</strong> and <strong>Current YTD 2026 (544)</strong>. Modules 03–19 and 26–27 are drawn exclusively from this delivery and supersede the earlier Panjiva pull.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:12px;padding:13px 17px;background:rgba(245,158,11,0.07);border-left:3px solid #b45309;border-radius:0 6px 6px 0;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#b45309;margin-bottom:5px;">Why the AIOS delivery reads &ldquo;LEAD&rdquo; while this account remains CLIENT</div>
+          <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:0;">The refreshed AIOS analysis was produced <strong>with no Akzent shipment data supplied to it</strong>, so it classified the relationship <strong>LEAD</strong> and deliberately excluded Wallet, Penetration, Coverage, Revenue, Gross Profit and Margin. That is a <strong>statement about the inputs AIOS received, not a change in the commercial relationship.</strong> Relationship status on this dashboard is <strong style="color:var(--navy);">always account-owner mandated, never inferred</strong> — Laerdal therefore remains <strong style="color:#059669;">CLIENT</strong>, and the Akzent captured layer is kept in place alongside the refreshed Panjiva intelligence.</p>
+        </div>
+
+        <div style="margin-top:10px;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:6px;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.7;"><strong style="color:var(--navy);">Period architecture is absolute.</strong> Current YTD 2026 is <strong>never annualized</strong> and the 2025 Full Calendar Year is <strong>never aggregated</strong> with it. The two remain separate universes throughout modules 03–19. <strong style="color:#b45309;">Penetration has not been recomputed against the refreshed universe</strong> — doing so would require Akzent captured Shipments split by period and direction, which this delivery does not contain. See module 27.</span>
+        </div>
+      </div>
+    </div>
+
     <!-- 01 Account Intelligence Snapshot -->
     <div class="card" style="border-top:3px solid var(--red);">
-      <div class="card-header"><span class="accent">01</span> Account Intelligence Snapshot</div>
+      <div class="card-header"><span class="accent">01</span> Akzent Account Intelligence Snapshot — Captured Performance Layer · Preserved</div>
+      <div style="padding:11px 22px 0;"><div style="padding:10px 14px;background:rgba(16,185,129,0.05);border:1px solid rgba(16,185,129,0.25);border-radius:6px;font-size:11px;color:var(--text-muted);line-height:1.65;"><strong style="color:#059669;">Layer A · preserved on its original basis.</strong> The Panjiva figures in this module (<strong>1,446</strong> aggregated Shipments · 972 Imports · 474 Exports · 350 Air · 653 regime/virtual · $56.36M CIF) come from the <strong>prior Panjiva pull</strong>, which aggregated 2025 and 2026 YTD into a single universe. The <strong>refreshed, period-separated</strong> Panjiva universe (<strong>1,635</strong> Shipments) is presented in modules 03–19 and is the current Panjiva source of truth. Akzent captured performance below is unchanged.</div></div>
       <div class="card-body">
 
         <!-- Opening summary -->
@@ -19422,133 +19491,1035 @@ main {
       </div>
     </div>
 
-    <!-- 02 AIOS Classification Matrix -->
+    <!-- 02 AIOS Classification Matrix — refreshed dimensions -->
     <div class="card">
-      <div class="card-header"><span class="accent">02</span> AIOS Classification Matrix</div>
+      <div class="card-header"><span class="accent">02</span> AIOS Classification Matrix — Refreshed Dimensional Assessment</div>
       <div class="card-body">
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;">
+        <div style="margin-bottom:12px;padding:11px 15px;background:rgba(0,180,216,0.05);border:1px solid rgba(0,180,216,0.25);border-radius:6px;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.65;">Dimensions <strong style="color:var(--navy);">Relationship</strong> through <strong style="color:var(--navy);">Commercial Positioning</strong> are restated from the refreshed AIOS delivery. <strong style="color:#059669;">Wallet Expansion Potential</strong> is retained from the Akzent captured layer — AIOS did not assess it, because no Akzent data was supplied to the refreshed run.</span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px;">
+          <div style="padding:10px 14px;background:var(--bg);border-radius:6px;border-left:3px solid #10b981;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;">Relationship · Account-Owner Mandated</div>
+            <div style="font-size:15px;font-weight:800;color:#059669;">CLIENT</div>
+            <div style="font-size:10px;color:var(--text-light);margin-top:3px;">AIOS read the Panjiva-only inputs as LEAD — see module 00</div>
+          </div>
           <div style="padding:10px 14px;background:var(--bg);border-radius:6px;border-left:3px solid var(--red);">
-            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;">Strategic Fit</div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;">AIOS Classification</div>
             <div style="font-size:15px;font-weight:800;color:var(--red);">AAA</div>
+            <div style="font-size:10px;color:var(--text-light);margin-top:3px;">Strategic</div>
           </div>
           <div style="padding:10px 14px;background:var(--bg);border-radius:6px;border-left:3px solid var(--red);">
             <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;">Operational Complexity</div>
-            <div style="font-size:15px;font-weight:800;color:var(--red);">Muy Alta</div>
+            <div style="font-size:15px;font-weight:800;color:var(--red);">HIGH</div>
+            <div style="font-size:10px;color:var(--text-light);margin-top:3px;">Interpretation · no numerical score</div>
+          </div>
+          <div style="padding:10px 14px;background:var(--bg);border-radius:6px;border-left:3px solid var(--red);">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;">Cross-Border Relevance</div>
+            <div style="font-size:15px;font-weight:800;color:var(--red);">HIGH</div>
+          </div>
+          <div style="padding:10px 14px;background:var(--bg);border-radius:6px;border-left:3px solid var(--red);">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;">Air Relevance</div>
+            <div style="font-size:15px;font-weight:800;color:var(--red);">HIGH</div>
+          </div>
+          <div style="padding:10px 14px;background:var(--bg);border-radius:6px;border-left:3px solid #b45309;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;">Ocean Relevance</div>
+            <div style="font-size:15px;font-weight:800;color:#b45309;">MEDIUM</div>
+          </div>
+          <div style="padding:10px 14px;background:var(--bg);border-radius:6px;border-left:3px solid var(--red);">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;">Customs / IMMEX Relevance</div>
+            <div style="font-size:15px;font-weight:800;color:var(--red);">VERY HIGH</div>
+          </div>
+          <div style="padding:10px 14px;background:var(--bg);border-radius:6px;border-left:3px solid var(--teal);">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;">Multimodal Coordination Potential</div>
+            <div style="font-size:15px;font-weight:800;color:var(--teal);">VERY HIGH</div>
+          </div>
+          <div style="padding:10px 14px;background:var(--bg);border-radius:6px;border-left:3px solid var(--teal);">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;">ILM / Control Tower Potential</div>
+            <div style="font-size:15px;font-weight:800;color:var(--teal);">VERY HIGH</div>
           </div>
           <div style="padding:10px 14px;background:var(--bg);border-radius:6px;border-left:3px solid var(--navy);">
-            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;">Modal Diversity</div>
-            <div style="font-size:15px;font-weight:800;color:var(--navy);">Alta</div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;">Commercial Positioning</div>
+            <div style="font-size:13px;font-weight:800;color:var(--navy);line-height:1.3;">Operational Complexity Partner</div>
           </div>
-          <div style="padding:10px 14px;background:var(--bg);border-radius:6px;border-left:3px solid var(--red);">
-            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;">Air Exposure</div>
-            <div style="font-size:15px;font-weight:800;color:var(--red);">Alta — 0% capturado</div>
+          <div style="padding:10px 14px;background:rgba(16,185,129,0.05);border-radius:6px;border-left:3px solid #10b981;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;">Wallet Expansion Potential · Akzent Layer</div>
+            <div style="font-size:15px;font-weight:800;color:#059669;">VERY HIGH</div>
+            <div style="font-size:10px;color:var(--text-light);margin-top:3px;">Retained from Layer A · not assessed by the refreshed run</div>
           </div>
-          <div style="padding:10px 14px;background:var(--bg);border-radius:6px;border-left:3px solid var(--red);">
-            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;">Customs / IMMEX Sensitivity</div>
-            <div style="font-size:15px;font-weight:800;color:var(--red);">Muy Alta</div>
-          </div>
-          <div style="padding:10px 14px;background:var(--bg);border-radius:6px;border-left:3px solid var(--red);">
-            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;">Cross-Border Exposure</div>
-            <div style="font-size:15px;font-weight:800;color:var(--red);">Muy Alta</div>
-          </div>
-          <div style="padding:10px 14px;background:var(--bg);border-radius:6px;border-left:3px solid var(--teal);">
-            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;">ILM / 4PL Potential</div>
-            <div style="font-size:15px;font-weight:800;color:var(--teal);">AAA</div>
-          </div>
-          <div style="padding:10px 14px;background:var(--bg);border-radius:6px;border-left:3px solid var(--teal);">
-            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;">Wallet Expansion Potential</div>
-            <div style="font-size:15px;font-weight:800;color:var(--teal);">Muy Alto</div>
-          </div>
+        </div>
+
+        <div style="margin-top:16px;padding:18px 22px;background:linear-gradient(135deg,rgba(13,43,94,0.05) 0%,rgba(196,30,58,0.05) 100%);border-left:3px solid var(--red);border-radius:0 6px 6px 0;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--red);margin-bottom:8px;">Executive Thesis · AIOS Interpretation</div>
+          <div style="font-size:21px;font-weight:800;color:var(--navy);line-height:1.35;">A concentrated operating backbone that still needs coordination across border, airport, ocean, IMMEX and related entities —<br>the defensible conversation is operational control, not tariff</div>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.75;margin-top:10px;max-width:1040px;">The visible network runs <strong>544 Current YTD Shipments</strong> across <strong>Truck, Air and Maritime</strong>, with a <strong>dominant Colombia, Nuevo León gateway</strong>, a substantial <strong>Mariano Escobedo air layer</strong>, <strong>Manzanillo and Altamira</strong> ocean exposure, materially present <strong>IMMEX, temporary and virtual-transfer regimes</strong>, and <strong>multiple Laerdal entities</strong> dominating Trading Partner activity. The strongest Akzent conversation is <strong style="color:var(--navy);">multimodal orchestration, customs visibility and exception management</strong> — a coordination layer, not simply another transportation provider.</p>
+          <p style="font-size:11px;color:var(--text-muted);line-height:1.7;margin-top:8px;"><strong style="color:var(--navy);">This is an AIOS Interpretation of the visible network. It is not a claim of confirmed customer pain, and it does not state or imply that Laerdal currently lacks any of these capabilities.</strong> It is stated once here; later modules supply evidence rather than restating it.</p>
         </div>
       </div>
     </div>
 
-    <!-- 03 Import / Export Modal Mix -->
-    <div class="grid-2">
-      <div class="card">
-        <div class="card-header"><span class="accent">03</span> Import Modal Mix (972 shipments)</div>
-        <div class="card-body">
-          <div class="modal-bar"><div class="modal-bar-label"><strong>Unknown / Virtual / IMMEX</strong><span>493 · 50.7%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:50.7%"></div></div></div>
-          <div class="modal-bar"><div class="modal-bar-label"><strong>Truck</strong><span>231 · 23.8%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:23.8%"></div></div></div>
-          <div class="modal-bar"><div class="modal-bar-label"><strong style="color:var(--red);">Air</strong><span style="color:var(--red);">190 · 19.5%</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:19.5%"></div></div></div>
-          <div class="modal-bar"><div class="modal-bar-label"><strong>Maritime</strong><span>58 · 6.0%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:6.0%"></div></div></div>
-          <div style="margin-top:10px;padding:8px 12px;background:rgba(232,0,45,0.06);border-radius:5px;font-size:11px;color:var(--text-muted);">
-            <strong style="color:var(--red);">Signal:</strong> 190 air imports into Monterrey Airport = urgent components and sensitive replenishment. All 190 uncaptured by Akzent.
-          </div>
-        </div>
+    <!-- ═══ LAYER B · REFRESHED PANJIVA VISIBLE UNIVERSE · MODULES 03–19 ═══ -->
+    <div class="card" style="border-top:3px solid var(--teal);">
+      <div class="card-body" style="padding:13px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+        <span style="font-size:10px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:#fff;background:var(--teal-dim);padding:5px 12px;border-radius:4px;">Layer B · Modules 03–19</span>
+        <span style="font-size:12px;font-weight:700;color:var(--navy);">Refreshed Panjiva Visible Universe — 1,635 Shipments · Panjiva only</span>
+        <span style="font-size:11px;color:var(--text-muted);flex:1;min-width:280px;text-align:right;line-height:1.6;">No Akzent Wallet, Penetration, Coverage, Revenue, Gross Profit or Margin appears in this layer — none was supplied to the refreshed run.</span>
       </div>
-      <div class="card">
-        <div class="card-header"><span class="accent">03b</span> Export Modal Mix (474 shipments)</div>
-        <div class="card-body">
-          <div class="modal-bar"><div class="modal-bar-label"><strong style="color:var(--red);">Air</strong><span style="color:var(--red);">160 · 33.8%</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:33.8%"></div></div></div>
-          <div class="modal-bar"><div class="modal-bar-label"><strong>Unknown / Virtual / Regime</strong><span>160 · 33.8%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:33.8%"></div></div></div>
-          <div class="modal-bar"><div class="modal-bar-label"><strong>Truck</strong><span>151 · 31.9%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:31.9%"></div></div></div>
-          <div class="modal-bar"><div class="modal-bar-label"><strong>Maritime</strong><span>3 · 0.6%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:0.6%"></div></div></div>
-          <div style="margin-top:10px;padding:8px 12px;background:rgba(232,0,45,0.06);border-radius:5px;font-size:11px;color:var(--text-muted);">
-            <strong style="color:var(--red);">Signal:</strong> 160 air exports — Laerdal sends critical medical equipment globally via air. Akzent captures 0.8% of all exports.
-          </div>
+    </div>
+
+    <!-- 03 CURRENT OPERATING STATE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">03</span> Current Operating State — Current YTD 2026 · Observed, Never Annualized</div>
+      <div class="card-body">
+        <div class="grid-4" style="gap:10px;">
+          <div class="stat-box"><div class="stat-label">Visible Shipments · Current YTD</div><div class="stat-value teal" style="font-size:32px;">544</div><div class="stat-sub">Visible range <strong>Jan 2 – Jul 31, 2026</strong> · observed, never annualized</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">Imports</div><div class="stat-value teal" style="font-size:32px;">374 <span style="font-size:17px;color:var(--text-muted);font-weight:700;">= 68.8%</span></div><div class="stat-sub">Directional universe for the Import Core Route set</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--navy);"><div class="stat-label">Exports</div><div class="stat-value" style="font-size:32px;">170 <span style="font-size:17px;color:var(--text-muted);font-weight:700;">= 31.3%</span></div><div class="stat-sub">Material outbound structure retained</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--red);"><div class="stat-label">Operational Complexity</div><div class="stat-value red" style="font-size:26px;">High</div><div class="stat-sub">AIOS Interpretation · no numerical score</div></div>
+        </div>
+        <div class="grid-4" style="gap:10px;margin-top:10px;">
+          <div class="stat-box" style="border-left:3px solid #f59e0b;"><div class="stat-label">Visible CIF Value · Current YTD</div><div class="stat-value" style="font-size:24px;color:#b45309;">USD 23.47M</div><div class="stat-sub">Imports <strong>$10.73M</strong> · Exports <strong>$12.74M</strong> · visible value, never spend</div></div>
+          <div class="stat-box" style="border-left:3px solid #f59e0b;"><div class="stat-label">Visible Gross Weight · Current YTD</div><div class="stat-value" style="font-size:24px;color:#b45309;">864,965 kg</div><div class="stat-sub">Imports <strong>448,958 kg</strong> · Exports <strong>416,007 kg</strong></div></div>
+          <div class="stat-box" style="border-left:3px solid var(--navy);"><div class="stat-label">Import Core Routes ≥80%</div><div class="stat-value" style="font-size:26px;">12 <span style="font-size:15px;color:var(--text-muted);font-weight:700;">= 80.5%</span></div><div class="stat-sub">Complete set · 2025 required <strong>10</strong> routes</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--navy);"><div class="stat-label">Export Core Routes ≥80%</div><div class="stat-value" style="font-size:26px;">7 <span style="font-size:15px;color:var(--text-muted);font-weight:700;">= 81.2%</span></div><div class="stat-sub">Complete set · 2025 required <strong>8</strong> routes</div></div>
+        </div>
+        <div class="grid-4" style="gap:10px;margin-top:10px;">
+          <div class="stat-box" style="border-left:3px solid var(--red);background:rgba(232,0,45,0.04);"><div class="stat-label">Dominant Gateway · Imports</div><div class="stat-value red" style="font-size:20px;line-height:1.25;">Colombia, Nuevo León</div><div class="stat-sub"><strong>266 of 374 · 71.1%</strong> · border node</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--red);background:rgba(232,0,45,0.04);"><div class="stat-label">Dominant Gateway · Exports</div><div class="stat-value red" style="font-size:20px;line-height:1.25;">Colombia, Nuevo León</div><div class="stat-sub"><strong>91 of 170 · 53.5%</strong> · same node, both directions</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">Primary Import Trading Partner</div><div class="stat-value teal" style="font-size:19px;line-height:1.25;">Laerdal Medical</div><div class="stat-sub"><strong>184 of 374 · 49.2%</strong> · top-three concentration <strong>97.6%</strong></div></div>
+          <div class="stat-box" style="border-left:3px solid var(--navy);"><div class="stat-label">Leading HS Operational Presence</div><div class="stat-value" style="font-size:20px;">9023000100</div><div class="stat-sub">Imports <strong>34.0%</strong> · Exports <strong>50.0%</strong> · training / demonstration apparatus</div></div>
+        </div>
+        <div style="margin-top:10px;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:6px;display:flex;gap:26px;flex-wrap:wrap;align-items:center;">
+          <div><div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);">Comparable-Period Trend</div><div style="font-size:15px;font-weight:800;color:var(--navy);margin-top:2px;">651 → 544 Shipments <span style="color:var(--red);">−16.4%</span></div></div>
+          <div><div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);">Basis</div><div style="font-size:12px;font-weight:700;color:var(--navy);margin-top:2px;">Jan–Jul 2025 · Actual vs Actual</div></div>
+          <div><div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);">Customs Agent Concentration</div><div style="font-size:12px;font-weight:700;color:var(--navy);margin-top:2px;">Code 3468 · 74.3% Imports · 53.5% Exports</div></div>
+          <div style="flex:1;min-width:260px;"><span style="font-size:10px;color:var(--text-muted);line-height:1.6;"><strong style="color:#b45309;">Current YTD is never annualized</strong> and the 2025 Full Calendar Year is never aggregated with it.</span></div>
         </div>
       </div>
     </div>
 
-    <!-- 04 Hub Intelligence -->
-    <div class="grid-2">
-      <div class="card">
-        <div class="card-header"><span class="accent">04</span> Import Hubs</div>
-        <div class="card-body">
-          <table style="width:100%;font-size:12px;border-collapse:collapse;">
-            <thead><tr style="border-bottom:1px solid var(--border);"><th style="text-align:left;padding:6px 8px;font-weight:600;color:var(--text-muted);">Hub</th><th style="text-align:right;padding:6px 8px;font-weight:600;color:var(--text-muted);">Shipments</th><th style="text-align:left;padding:6px 8px;font-weight:600;color:var(--text-muted);">AIOS Signal</th></tr></thead>
+    <!-- 04 PERIOD ARCHITECTURE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">04</span> Period Architecture — Strictly Separated Universes</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:14px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:8px;">Previous Full Calendar Year — 2025 · Established Operating Structure</div>
+            <table class="network-table">
+              <thead><tr><th>Direction</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">Visible CIF</th><th style="text-align:right;">Gross Weight</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Imports</strong></td><td style="text-align:right;font-weight:700;">731</td><td style="text-align:right;">$20.07M</td><td style="text-align:right;">757,415 kg</td></tr>
+                <tr><td><strong>Exports</strong></td><td style="text-align:right;font-weight:700;">360</td><td style="text-align:right;">$21.05M</td><td style="text-align:right;">604,544 kg</td></tr>
+                <tr style="background:rgba(13,43,94,0.04);"><td><strong>Total</strong></td><td style="text-align:right;font-weight:800;color:var(--navy);">1,091</td><td style="text-align:right;font-weight:800;color:var(--navy);">$41.13M</td><td style="text-align:right;font-weight:800;color:var(--navy);">1,361,958 kg</td></tr>
+              </tbody>
+            </table>
+            <div style="margin-top:8px;font-size:10.5px;color:var(--text-muted);line-height:1.6;">Historical Baseline. Directional mix <strong>67.0% Imports / 33.0% Exports</strong>.</div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:8px;">Current YTD — 2026 · Current Operating State</div>
+            <table class="network-table">
+              <thead><tr><th>Direction</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">Visible CIF</th><th style="text-align:right;">Gross Weight</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Imports</strong></td><td style="text-align:right;font-weight:700;">374</td><td style="text-align:right;">$10.73M</td><td style="text-align:right;">448,958 kg</td></tr>
+                <tr><td><strong>Exports</strong></td><td style="text-align:right;font-weight:700;">170</td><td style="text-align:right;">$12.74M</td><td style="text-align:right;">416,007 kg</td></tr>
+                <tr style="background:rgba(0,180,216,0.06);"><td><strong>Total</strong></td><td style="text-align:right;font-weight:800;color:var(--teal-dim);">544</td><td style="text-align:right;font-weight:800;color:var(--teal-dim);">$23.47M</td><td style="text-align:right;font-weight:800;color:var(--teal-dim);">864,965 kg</td></tr>
+              </tbody>
+            </table>
+            <div style="margin-top:8px;font-size:10.5px;color:var(--text-muted);line-height:1.6;">Current Operating State. Directional mix <strong>68.8% Imports / 31.3% Exports</strong>. <strong style="color:#b45309;">Not annualized.</strong></div>
+          </div>
+        </div>
+        <div style="margin-top:12px;padding:11px 15px;background:rgba(13,43,94,0.03);border:1px solid var(--border);border-radius:6px;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.65;"><strong style="color:var(--navy);">Structural observation:</strong> Export CIF value <strong>exceeds</strong> Import CIF value in both periods despite exports being roughly half the Shipment count — $12.74M outbound against $10.73M inbound Current YTD, and $21.05M against $20.07M in 2025. Panjiva does not establish why; it is a visible value-density difference, not a margin or spend statement.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 05 COMPARABLE-PERIOD TREND -->
+    <div class="card">
+      <div class="card-header"><span class="accent">05</span> Comparable-Period Trend — Observed Actual vs Observed Actual</div>
+      <div class="card-body">
+        <div style="margin-bottom:12px;padding:11px 15px;background:rgba(13,43,94,0.03);border:1px solid var(--border);border-radius:6px;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.65;">Comparison basis: <strong style="color:var(--navy);">Jan–Jul 2025 actual vs Jan–Jul 2026 actual</strong>. Neither side is annualized, extrapolated or normalized.</span>
+        </div>
+        <table class="network-table">
+          <thead><tr><th>Direction</th><th style="text-align:right;">Jan–Jul 2025</th><th style="text-align:right;">Jan–Jul 2026</th><th style="text-align:right;">Visible Change</th><th>Observation</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Imports</strong></td><td style="text-align:right;">436</td><td style="text-align:right;font-weight:700;">374</td><td style="text-align:right;font-weight:800;color:var(--red);">−14.2%</td><td style="font-size:11px;color:var(--text-muted);">Inbound activity lower across the observed window</td></tr>
+            <tr><td><strong>Exports</strong></td><td style="text-align:right;">215</td><td style="text-align:right;font-weight:700;">170</td><td style="text-align:right;font-weight:800;color:var(--red);">−20.9%</td><td style="font-size:11px;color:var(--text-muted);">Steeper visible decline than inbound</td></tr>
+            <tr style="background:rgba(232,0,45,0.04);"><td><strong>Total</strong></td><td style="text-align:right;font-weight:800;">651</td><td style="text-align:right;font-weight:800;">544</td><td style="text-align:right;font-weight:800;color:var(--red);">−16.4%</td><td style="font-size:11px;color:var(--text-muted);">Both directions moved in the same direction</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:12px;padding:13px 17px;background:rgba(245,158,11,0.07);border-left:3px solid #b45309;border-radius:0 6px 6px 0;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#b45309;margin-bottom:5px;">AIOS Interpretation · Causal Restraint</div>
+          <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:0;">Visible activity decreased in both directions against the same observed period of 2025. This is an observation of <strong>Shipment activity only</strong>. <strong style="color:var(--navy);">Panjiva does not establish the cause.</strong> It must <strong>not</strong> be read as lost business, production contraction, a logistics-provider change or structural reduction. Discovery, not inference, resolves it.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 06 MODAL INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">06</span> Modal Intelligence — Truck · Air · Maritime · Unknown, by Period and Direction</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:16px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:8px;">Imports · 2025 <span style="color:var(--text-light);font-weight:600;">(731 Shipments)</span></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Unknown</strong><span>345 · 47.2%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:47.2%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Truck</strong><span>182 · 24.9%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:24.9%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Air</strong><span>161 · 22.0%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:22.0%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Maritime</strong><span>43 · 5.9%</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:5.9%"></div></div></div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:8px;">Imports · 2026 YTD <span style="color:var(--text-light);font-weight:600;">(374 Shipments)</span></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Unknown</strong><span>208 · 55.6%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:55.6%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Truck</strong><span>90 · 24.1%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:24.1%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Air</strong><span>50 · 13.4%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:13.4%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Maritime</strong><span>26 · 7.0%</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:7.0%"></div></div></div>
+          </div>
+        </div>
+        <div class="grid-2" style="gap:16px;margin-top:18px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:8px;">Exports · 2025 <span style="color:var(--text-light);font-weight:600;">(360 Shipments)</span></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Air</strong><span>123 · 34.2%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:34.2%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Unknown</strong><span>123 · 34.2%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:34.2%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Truck</strong><span>111 · 30.8%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:30.8%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Maritime</strong><span>3 · 0.8%</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:0.8%"></div></div></div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:8px;">Exports · 2026 YTD <span style="color:var(--text-light);font-weight:600;">(170 Shipments)</span></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Unknown</strong><span>70 · 41.2%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:41.2%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Truck</strong><span>58 · 34.1%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:34.1%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong>Air</strong><span>42 · 24.7%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:24.7%"></div></div></div>
+            <div class="modal-bar"><div class="modal-bar-label"><strong style="color:var(--red);">Maritime</strong><span style="color:var(--red);">0 · 0%</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:0.4%"></div></div></div>
+          </div>
+        </div>
+        <div style="margin-top:14px;padding:13px 17px;background:rgba(245,158,11,0.07);border-left:3px solid #b45309;border-radius:0 6px 6px 0;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#b45309;margin-bottom:5px;">Mandatory Caveat · Unknown Transport Method</div>
+          <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:0;">Multimodality is <strong>structurally visible</strong> — Truck, Air and Maritime all recur in both directions. However, the share classified <strong>Unknown</strong> is material: <strong>55.6% of Current YTD Imports</strong> and <strong>41.2% of Current YTD Exports</strong>. <strong style="color:var(--navy);">The Modal Mix must therefore not be over-interpreted as a complete representation of the physical operation.</strong> Maritime Exports reading 0 Current YTD is a visible-data statement, not a confirmed cessation of ocean outbound.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 07 GEOGRAPHIC INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">07</span> Geographic Intelligence — Current YTD 2026 · Shipment Origin and Destination as Panjiva Presents Them</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:16px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:8px;">Principal Import Origin Geography</div>
+            <table class="network-table">
+              <thead><tr><th>Shipment Origin · as supplied</th><th style="text-align:right;">Shipments</th></tr></thead>
+              <tbody>
+                <tr><td>🇲🇽 <strong>Mexico</strong></td><td style="text-align:right;font-weight:800;">148</td></tr>
+                <tr><td>🇺🇸 <strong>United States</strong></td><td style="text-align:right;font-weight:800;">48</td></tr>
+                <tr><td>🇨🇳 <strong>China</strong></td><td style="text-align:right;font-weight:800;">36</td></tr>
+                <tr style="background:rgba(245,158,11,0.06);"><td><strong>Mexico + United States</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Multi-country value — preserved, not split</div></td><td style="text-align:right;font-weight:800;">11</td></tr>
+                <tr><td>🇰🇷 <strong>South Korea</strong></td><td style="text-align:right;font-weight:800;">7</td></tr>
+                <tr><td>🇹🇼 <strong>Taiwan</strong></td><td style="text-align:right;font-weight:800;">6</td></tr>
+                <tr><td>🇳🇴 <strong>Norway</strong></td><td style="text-align:right;font-weight:800;">6</td></tr>
+              </tbody>
+            </table>
+            <div style="margin-top:8px;font-size:10.5px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--navy);">Principal values only</strong> — these seven account for <strong>262 of 374</strong> visible Imports; the remainder sits in a longer tail AIOS did not enumerate.</div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:8px;">Principal Export Destinations</div>
+            <table class="network-table">
+              <thead><tr><th>Destination</th><th style="text-align:right;">Shipments</th></tr></thead>
+              <tbody>
+                <tr><td>🇺🇸 <strong>United States</strong></td><td style="text-align:right;font-weight:800;">75</td></tr>
+                <tr><td>🇲🇽 <strong>Mexico</strong></td><td style="text-align:right;font-weight:800;">70</td></tr>
+                <tr><td>🇳🇴 <strong>Norway</strong></td><td style="text-align:right;font-weight:800;">19</td></tr>
+                <tr><td>🇩🇪 <strong>Germany</strong></td><td style="text-align:right;font-weight:800;">2</td></tr>
+                <tr><td>🇨🇳 <strong>China</strong></td><td style="text-align:right;font-weight:800;">1</td></tr>
+                <tr><td>🇳🇿 <strong>New Zealand</strong></td><td style="text-align:right;font-weight:800;">1</td></tr>
+                <tr><td>🇳🇱 <strong>Netherlands</strong></td><td style="text-align:right;font-weight:800;">1</td></tr>
+                <tr><td>🇫🇷 <strong>France</strong></td><td style="text-align:right;font-weight:800;">1</td></tr>
+              </tbody>
+            </table>
+            <div style="margin-top:8px;font-size:10.5px;color:var(--text-muted);line-height:1.6;">These eight destinations account for <strong>all 170</strong> visible Current YTD Exports.</div>
+          </div>
+        </div>
+        <div style="margin-top:14px;padding:13px 17px;background:rgba(245,158,11,0.07);border-left:3px solid #b45309;border-radius:0 6px 6px 0;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#b45309;margin-bottom:5px;">Source Precision · Multi-Country Origin Values</div>
+          <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:0;">Some Import records carry <strong>multiple countries inside a single Shipment Origin value</strong> — <em>Mexico + United States</em> here, and <em>China + Germany + Norway + United States</em> on Import Core Route #10. These are preserved <strong style="color:var(--navy);">exactly as Panjiva presents them</strong> and are never silently assigned to one geography. <strong>AIOS Interpretation:</strong> outbound is tightly concentrated on United States, Mexico and Norway, while inbound draws on a materially broader sourcing geography.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 08 GATEWAY INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">08</span> Gateway Intelligence — Current YTD 2026 · Border · Airport · Port</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:16px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:8px;">Imports <span style="color:var(--text-light);font-weight:600;">(374 Shipments)</span></div>
+            <table class="network-table">
+              <thead><tr><th>Gateway</th><th>Type</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">Import Share</th></tr></thead>
+              <tbody>
+                <tr style="background:rgba(232,0,45,0.05);"><td><strong>Colombia, Nuevo León</strong></td><td><span class="hub-tag border">Border</span></td><td style="text-align:right;font-weight:800;">266</td><td style="text-align:right;font-weight:800;color:var(--red);">71.1%</td></tr>
+                <tr><td><strong>Mariano Escobedo Airport, Apodaca</strong></td><td><span class="hub-tag air">Airport</span></td><td style="text-align:right;font-weight:800;">48</td><td style="text-align:right;font-weight:700;">12.8%</td></tr>
+                <tr><td><strong>Nuevo Laredo</strong></td><td><span class="hub-tag border">Border</span></td><td style="text-align:right;font-weight:800;">16</td><td style="text-align:right;font-weight:700;">4.3%</td></tr>
+                <tr><td><strong>Manzanillo</strong></td><td><span class="hub-tag ocean">Port</span></td><td style="text-align:right;font-weight:800;">14</td><td style="text-align:right;font-weight:700;">3.7%</td></tr>
+                <tr><td><strong>Altamira</strong></td><td><span class="hub-tag ocean">Port</span></td><td style="text-align:right;font-weight:800;">12</td><td style="text-align:right;font-weight:700;">3.2%</td></tr>
+                <tr><td><strong>Puebla</strong></td><td><span class="hub-tag unknown">Inland</span></td><td style="text-align:right;font-weight:800;">10</td><td style="text-align:right;font-weight:700;">2.7%</td></tr>
+                <tr><td><strong>Monterrey / Mariano Escobedo</strong></td><td><span class="hub-tag air">Airport</span></td><td style="text-align:right;font-weight:800;">4</td><td style="text-align:right;font-weight:700;">1.1%</td></tr>
+                <tr><td><strong>Mexico City International Airport</strong></td><td><span class="hub-tag air">Airport</span></td><td style="text-align:right;font-weight:800;">2</td><td style="text-align:right;font-weight:700;">0.5%</td></tr>
+              </tbody>
+            </table>
+            <div style="margin-top:8px;font-size:10px;color:var(--text-muted);line-height:1.6;">Listed gateways total <strong>372 of 374</strong> visible Imports (99.5%) — see module 27.</div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:8px;">Exports <span style="color:var(--text-light);font-weight:600;">(170 Shipments)</span></div>
+            <table class="network-table">
+              <thead><tr><th>Gateway</th><th>Type</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">Export Share</th></tr></thead>
+              <tbody>
+                <tr style="background:rgba(232,0,45,0.05);"><td><strong>Colombia, Nuevo León</strong></td><td><span class="hub-tag border">Border</span></td><td style="text-align:right;font-weight:800;">91</td><td style="text-align:right;font-weight:800;color:var(--red);">53.5%</td></tr>
+                <tr><td><strong>Mariano Escobedo Airport, Apodaca</strong></td><td><span class="hub-tag air">Airport</span></td><td style="text-align:right;font-weight:800;">42</td><td style="text-align:right;font-weight:700;">24.7%</td></tr>
+                <tr><td><strong>Monterrey / Mariano Escobedo</strong></td><td><span class="hub-tag air">Airport</span></td><td style="text-align:right;font-weight:800;">13</td><td style="text-align:right;font-weight:700;">7.6%</td></tr>
+                <tr><td><strong>Manzanillo</strong></td><td><span class="hub-tag ocean">Port</span></td><td style="text-align:right;font-weight:800;">7</td><td style="text-align:right;font-weight:700;">4.1%</td></tr>
+                <tr><td><strong>Nuevo Laredo</strong></td><td><span class="hub-tag border">Border</span></td><td style="text-align:right;font-weight:800;">7</td><td style="text-align:right;font-weight:700;">4.1%</td></tr>
+                <tr><td><strong>Guaymas</strong></td><td><span class="hub-tag ocean">Port</span></td><td style="text-align:right;font-weight:800;">6</td><td style="text-align:right;font-weight:700;">3.5%</td></tr>
+                <tr><td><strong>Guadalajara</strong></td><td><span class="hub-tag unknown">Inland</span></td><td style="text-align:right;font-weight:800;">2</td><td style="text-align:right;font-weight:700;">1.2%</td></tr>
+                <tr><td><strong>Tampico</strong></td><td><span class="hub-tag ocean">Port</span></td><td style="text-align:right;font-weight:800;">1</td><td style="text-align:right;font-weight:700;">0.6%</td></tr>
+              </tbody>
+            </table>
+            <div style="margin-top:8px;font-size:10px;color:var(--text-muted);line-height:1.6;">Listed gateways total <strong>169 of 170</strong> visible Exports (99.4%) — see module 27.</div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px;padding:14px 18px;background:rgba(232,0,45,0.05);border:1px solid rgba(232,0,45,0.25);border-radius:6px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--red);margin-bottom:6px;">Observed Operational Signal · Single-Node Dependency</div>
+          <p style="font-size:12px;color:var(--text);line-height:1.7;margin:0 0 8px;">Colombia, Nuevo León concentrates <strong>71.1% of Current YTD Imports</strong> and <strong>53.5% of Current YTD Exports</strong> — the same node dominates both directions. Mariano Escobedo is the <strong>#2 gateway in both directions</strong>, adding an operationally distinct airport layer on top of the border layer.</p>
+          <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:0 0 8px;"><strong style="color:var(--navy);">AIOS Interpretation:</strong> operational performance at this one gateway carries disproportionate network relevance, and the network requires coordination across at least two operationally different execution environments.</p>
+          <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:0;"><strong style="color:#b45309;">Discovery Validation required:</strong> capacity model · incumbent provider(s) · border SLA · contingency · escalation ownership · backup strategy under exception. <strong style="color:var(--navy);">Concentration alone does not constitute a confirmed pain.</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 09 CURRENT YTD IMPORT CORE ROUTES -->
+    <div class="card">
+      <div class="card-header"><span class="accent">09</span> Current YTD Import Core Routes — Complete ≥80% Set · 12 Routes</div>
+      <div class="card-body">
+        <div class="grid-4" style="gap:10px;">
+          <div class="stat-box"><div class="stat-label">Import Universe · Current YTD</div><div class="stat-value" style="font-size:26px;">374</div><div class="stat-sub">Visible Import Shipments · directional denominator</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">Smallest Route Set Reaching ≥80%</div><div class="stat-value teal" style="font-size:26px;">12 <span style="font-size:15px;color:var(--text-muted);font-weight:700;">routes</span></div><div class="stat-sub">The complete twelve-route set is shown in full</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">Cumulative Coverage</div><div class="stat-value teal" style="font-size:26px;">80.5%</div><div class="stat-sub">301 of 374 visible Import Shipments</div></div>
+          <div class="stat-box"><div class="stat-label">Leading Route Share</div><div class="stat-value" style="font-size:26px;">41.7%</div><div class="stat-sub">Route #1 · no single route reaches 80%</div></div>
+        </div>
+
+        <div style="margin-top:12px;padding:11px 15px;background:rgba(13,43,94,0.03);border:1px solid var(--border);border-radius:6px;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.65;"><strong style="color:var(--navy);">Route construction preserves Panjiva facility / address precision exactly as supplied.</strong> Where Panjiva gives no address this is stated verbatim as <strong>&ldquo;Address not available in Panjiva&rdquo;</strong> and is never enriched or inferred — including for the dominant destination entity, Laerdal Medical Monterrey. Multi-country origin values are preserved intact. See module 26.</span>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:18px 0 14px;">
+          <span style="font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;background:var(--navy);padding:4px 10px;border-radius:4px;">Rank 1 · 41.7% of visible Imports</span>
+          <span style="font-size:11px;color:var(--text-muted);">Import Core Route #1 — the dominant visible inbound corridor through the Colombia border node.</span>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:10px;align-items:stretch;">
+          <div style="padding:14px 16px;background:rgba(13,43,94,0.04);border:1px solid var(--border);border-radius:6px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:6px;">Origin Company / Facility</div>
+            <div style="font-size:13px;font-weight:700;color:var(--navy);line-height:1.4;">Laerdal Medical</div>
+            <div style="font-size:10px;color:#b45309;line-height:1.5;margin-top:5px;font-weight:700;">Address not available in Panjiva</div>
+            <div style="font-size:10px;color:var(--text-light);line-height:1.5;margin-top:3px;font-style:italic;">Origin precision is country-level only. No Laerdal facility is inferred.</div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--teal-dim);font-weight:700;">→</div>
+          <div style="padding:14px 16px;background:rgba(0,180,216,0.06);border:1px solid rgba(0,180,216,0.3);border-radius:6px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:6px;">Gateway · Border</div>
+            <div style="font-size:13px;font-weight:700;color:var(--navy);line-height:1.4;">Colombia, Nuevo León</div>
+            <div style="font-size:10px;color:var(--text-light);line-height:1.5;margin-top:5px;">Handling node — <strong>not</strong> a Laerdal facility</div>
+            <div style="margin-top:6px;"><span class="hub-tag border">Border</span> <span class="hub-tag truck">Truck</span> <span class="hub-tag unknown">Unknown</span></div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--teal-dim);font-weight:700;">→</div>
+          <div style="padding:14px 16px;background:rgba(13,43,94,0.04);border:1px solid var(--border);border-radius:6px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:6px;">Destination Facility</div>
+            <div style="font-size:13px;font-weight:700;color:var(--navy);line-height:1.4;">Laerdal Medical Monterrey</div>
+            <div style="font-size:10px;color:#b45309;line-height:1.5;margin-top:5px;font-weight:700;">Address not available in Panjiva</div>
+            <div style="margin-top:6px;"><span class="hub-tag" style="background:rgba(245,158,11,0.12);color:#b45309;">Data Quality Hypothesis A — dominant facility address unavailable</span></div>
+          </div>
+        </div>
+
+        <div class="grid-4" style="gap:8px;margin-top:14px;">
+          <div class="stat-box" style="background:var(--surface);"><div class="stat-label">Shipments</div><div class="stat-value teal" style="font-size:24px;">156</div><div class="stat-sub"><strong>41.7%</strong> of 374 Imports</div></div>
+          <div class="stat-box" style="background:var(--surface);"><div class="stat-label">Cumulative Coverage</div><div class="stat-value" style="font-size:24px;">41.7%</div><div class="stat-sub">Rank 1 of the 12-route set</div></div>
+          <div class="stat-box" style="background:var(--surface);"><div class="stat-label">Active Months</div><div class="stat-value" style="font-size:24px;">7</div><div class="stat-sub">Distinct months with visible Shipments</div></div>
+          <div class="stat-box" style="background:var(--surface);"><div class="stat-label">Observed Route Cadence</div><div class="stat-value" style="font-size:24px;">22.3 <span style="font-size:12px;color:var(--text-muted);font-weight:700;">/ month</span></div><div class="stat-sub"><strong>5.20</strong> Shipments / Week · Jan 2 – Jul 30, 2026</div></div>
+        </div>
+
+        <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--navy);margin:20px 0 8px;">Complete Import Core Route Set — all 12 routes to 80.5%</div>
+        <div style="overflow-x:auto;">
+          <table class="hub-table" style="font-size:11px;min-width:1300px;">
+            <thead><tr>
+              <th style="text-align:right;">Rank</th><th>Origin Facility / Panjiva Precision</th><th>Gateway</th><th>Destination Facility / Panjiva Precision</th><th>Mode</th>
+              <th style="text-align:right;">Shipments</th><th style="text-align:right;">% Imports</th><th style="text-align:right;">Cumulative</th>
+              <th style="text-align:right;">Active Months</th><th style="text-align:right;">/ Month</th><th style="text-align:right;">/ Week</th><th>Visible Date Range</th>
+            </tr></thead>
             <tbody>
-              <tr style="border-bottom:1px solid var(--border);"><td style="padding:6px 8px;font-weight:700;">Colombia, Nuevo León</td><td style="padding:6px 8px;text-align:right;font-weight:700;color:var(--navy);">667</td><td style="padding:6px 8px;color:var(--text-muted);">Core IMMEX / cross-border hub</td></tr>
-              <tr style="border-bottom:1px solid var(--border);"><td style="padding:6px 8px;font-weight:700;color:var(--red);">Monterrey Airport</td><td style="padding:6px 8px;text-align:right;font-weight:700;color:var(--red);">188</td><td style="padding:6px 8px;color:var(--text-muted);">Air urgency — 0% Akzent capture</td></tr>
-              <tr style="border-bottom:1px solid var(--border);"><td style="padding:6px 8px;font-weight:700;">Altamira</td><td style="padding:6px 8px;text-align:right;font-weight:700;color:var(--navy);">33</td><td style="padding:6px 8px;color:var(--text-muted);">Maritime support</td></tr>
-              <tr style="border-bottom:1px solid var(--border);"><td style="padding:6px 8px;font-weight:700;">Nuevo Laredo</td><td style="padding:6px 8px;text-align:right;font-weight:700;color:var(--navy);">27</td><td style="padding:6px 8px;color:var(--text-muted);">Secondary cross-border corridor</td></tr>
-              <tr><td style="padding:6px 8px;font-weight:700;">Manzanillo</td><td style="padding:6px 8px;text-align:right;font-weight:700;color:var(--navy);">26</td><td style="padding:6px 8px;color:var(--text-muted);">Asia / ocean sourcing</td></tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">1</td>
+                <td><strong>Laerdal Medical</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div></td>
+                <td><strong>Colombia, NL</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                <td><strong>Laerdal Medical Monterrey</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div></td>
+                <td><span class="hub-tag unknown">Unknown</span> <span class="hub-tag truck">Truck</span></td>
+                <td style="text-align:right;font-weight:800;">156</td><td style="text-align:right;font-weight:800;">41.7%</td>
+                <td style="text-align:right;font-weight:700;color:var(--teal-dim);">41.7%</td>
+                <td style="text-align:right;">7</td><td style="text-align:right;">22.3</td><td style="text-align:right;">5.20</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-01-02 → 2026-07-30</td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">2</td>
+                <td><strong>Laerdal Medical Corporation</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Farm To Market 116, Gatesville, TX 76528</div></td>
+                <td><strong>Colombia, NL</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                <td><strong>Laerdal Medical Monterrey</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div></td>
+                <td><span class="hub-tag unknown">Unknown</span></td>
+                <td style="text-align:right;font-weight:800;">74</td><td style="text-align:right;font-weight:800;">19.8%</td>
+                <td style="text-align:right;font-weight:700;color:var(--teal-dim);">61.5%</td>
+                <td style="text-align:right;">7</td><td style="text-align:right;">10.6</td><td style="text-align:right;">2.74</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-01-07 → 2026-07-14</td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">3</td>
+                <td><strong>Laerdal Medical</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div></td>
+                <td><strong>Mariano Escobedo Airport</strong><div style="font-size:9px;color:var(--text-light);">Airport · Apodaca</div></td>
+                <td><strong>Laerdal Medical Monterrey</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div></td>
+                <td><span class="hub-tag air">Air</span> <span class="hub-tag truck">Truck</span></td>
+                <td style="text-align:right;font-weight:800;">24</td><td style="text-align:right;font-weight:800;">6.4%</td>
+                <td style="text-align:right;font-weight:700;color:var(--teal-dim);">67.9%</td>
+                <td style="text-align:right;">5</td><td style="text-align:right;">4.8</td><td style="text-align:right;">0.85</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-01-06 → 2026-07-21</td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">4</td>
+                <td><strong>Laerdal Medical Corporation</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Farm To Market 116, Gatesville</div></td>
+                <td><strong>Puebla</strong><div style="font-size:9px;color:var(--text-light);">Inland</div></td>
+                <td><strong>Glezco ERS del Occidente</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">6276 Anillo Periférico Sur Manuel Gómez Morín</div><div style="font-size:9px;color:#b45309;font-weight:700;">Non-Laerdal destination — validate role</div></td>
+                <td><span class="hub-tag unknown">Unknown</span></td>
+                <td style="text-align:right;font-weight:800;">10</td><td style="text-align:right;font-weight:800;">2.7%</td>
+                <td style="text-align:right;font-weight:700;color:var(--teal-dim);">70.6%</td>
+                <td style="text-align:right;">7</td><td style="text-align:right;">1.4</td><td style="text-align:right;">0.34</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-01-09 → 2026-07-30</td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">5</td>
+                <td><strong>China</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div><div style="font-size:9px;color:var(--text-light);">Country-level origin precision</div></td>
+                <td><strong>Manzanillo</strong><div style="font-size:9px;color:var(--text-light);">Port</div></td>
+                <td><strong>Laerdal Medical Monterrey</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div></td>
+                <td><span class="hub-tag ocean">Maritime</span></td>
+                <td style="text-align:right;font-weight:800;">7</td><td style="text-align:right;font-weight:800;">1.9%</td>
+                <td style="text-align:right;font-weight:700;color:var(--teal-dim);">72.5%</td>
+                <td style="text-align:right;">4</td><td style="text-align:right;">1.8</td><td style="text-align:right;">0.29</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-01-12 → 2026-06-29</td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">6</td>
+                <td><strong>Laerdal Medical Corporation</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">167 Myers Corners Rd, Wappingers Falls, NY 12590</div></td>
+                <td><strong>Colombia, NL</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                <td><strong>Laerdal Medical Monterrey</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div></td>
+                <td><span class="hub-tag unknown">Unknown</span></td>
+                <td style="text-align:right;font-weight:800;">6</td><td style="text-align:right;font-weight:800;">1.6%</td>
+                <td style="text-align:right;font-weight:700;color:var(--teal-dim);">74.1%</td>
+                <td style="text-align:right;">5</td><td style="text-align:right;">1.2</td><td style="text-align:right;">0.28</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-01-12 → 2026-06-12</td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">7</td>
+                <td><strong>Laerdal Medical Corporation</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">167 Myers Corners Rd, Wappingers Falls, NY 12590</div></td>
+                <td><strong>Nuevo Laredo</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                <td><strong>Laerdal Mexico</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">644 Obrero Mundial</div></td>
+                <td><span class="hub-tag truck">Truck</span></td>
+                <td style="text-align:right;font-weight:800;">6</td><td style="text-align:right;font-weight:800;">1.6%</td>
+                <td style="text-align:right;font-weight:700;color:var(--teal-dim);">75.7%</td>
+                <td style="text-align:right;">5</td><td style="text-align:right;">1.2</td><td style="text-align:right;">0.20</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-01-02 → 2026-07-31</td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">8</td>
+                <td><strong>Amazon Exp. Sales LLC</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div><div style="font-size:9px;color:var(--text-light);">Non-Laerdal Trading Partner</div></td>
+                <td><strong>Nuevo Laredo</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                <td><strong>Estafeta Mexicana</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Av. José Vasconcelos 105 Piso 4, Hipódromo Condesa</div></td>
+                <td><span class="hub-tag truck">Truck</span></td>
+                <td style="text-align:right;font-weight:800;">6</td><td style="text-align:right;font-weight:800;">1.6%</td>
+                <td style="text-align:right;font-weight:700;color:var(--teal-dim);">77.3%</td>
+                <td style="text-align:right;">3</td><td style="text-align:right;">2.0</td><td style="text-align:right;">0.98</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-04-23 → 2026-06-04</td>
+              </tr>
+              <tr style="background:rgba(245,158,11,0.07);">
+                <td style="text-align:right;font-weight:800;color:var(--navy);">9</td>
+                <td><strong>Laerdal Medical Corporation</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">167 Myers Corners Rd, Wappingers Falls NY 12590-8840</div></td>
+                <td><strong>Monterrey</strong><div style="font-size:9px;color:var(--text-light);">Airport / metro node</div></td>
+                <td><strong>Laerdal Medical Monterrey</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div></td>
+                <td><span class="hub-tag unknown">Unknown</span></td>
+                <td style="text-align:right;font-weight:800;">4</td><td style="text-align:right;font-weight:800;">1.1%</td>
+                <td style="text-align:right;font-weight:700;color:var(--teal-dim);">78.3%</td>
+                <td style="text-align:right;">1</td><td style="text-align:right;">4.0</td>
+                <td style="text-align:right;font-weight:800;color:#b45309;">28.00 ⚠</td>
+                <td style="font-size:10px;color:#b45309;white-space:nowrap;font-weight:700;">2026-04-21 only · single date</td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">10</td>
+                <td><strong>China + Germany + Norway + United States</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div><div style="font-size:9px;color:var(--text-light);">Multi-country origin value — preserved, not split</div></td>
+                <td><strong>Mariano Escobedo Airport</strong><div style="font-size:9px;color:var(--text-light);">Airport · Apodaca</div></td>
+                <td><strong>Laerdal Medical Monterrey</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div></td>
+                <td><span class="hub-tag air">Air</span></td>
+                <td style="text-align:right;font-weight:800;">3</td><td style="text-align:right;font-weight:800;">0.8%</td>
+                <td style="text-align:right;font-weight:700;color:var(--teal-dim);">79.1%</td>
+                <td style="text-align:right;">3</td><td style="text-align:right;">1.0</td><td style="text-align:right;">0.24</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-02-10 → 2026-05-08</td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">11</td>
+                <td><strong>Laerdal Medical Corporation</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">167 Myers Corners Rd, Wappingers Falls, NY 12590</div></td>
+                <td><strong>Manzanillo</strong><div style="font-size:9px;color:var(--text-light);">Port</div></td>
+                <td><strong>Laerdal Medical Monterrey</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div></td>
+                <td><span class="hub-tag ocean">Maritime</span></td>
+                <td style="text-align:right;font-weight:800;">3</td><td style="text-align:right;font-weight:800;">0.8%</td>
+                <td style="text-align:right;font-weight:700;color:var(--teal-dim);">79.9%</td>
+                <td style="text-align:right;">2</td><td style="text-align:right;">1.5</td><td style="text-align:right;">0.23</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-03-19 → 2026-06-18</td>
+              </tr>
+              <tr style="background:rgba(0,180,216,0.05);">
+                <td style="text-align:right;font-weight:800;color:var(--navy);">12</td>
+                <td><strong>Laerdal Medical</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div></td>
+                <td><strong>Altamira</strong><div style="font-size:9px;color:var(--text-light);">Port</div></td>
+                <td><strong>Laerdal Medical Monterrey</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div></td>
+                <td><span class="hub-tag ocean">Maritime</span></td>
+                <td style="text-align:right;font-weight:800;">2</td><td style="text-align:right;font-weight:800;">0.5%</td>
+                <td style="text-align:right;font-weight:800;color:var(--teal-dim);">80.5%</td>
+                <td style="text-align:right;">2</td><td style="text-align:right;">1.0</td><td style="text-align:right;">0.09</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-01-27 → 2026-06-23</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="margin-top:14px;padding:14px 18px;background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.35);border-radius:6px;">
+          <div style="font-size:10px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:#b45309;margin-bottom:6px;">⚠ Short Observation Window · Import Core Route #9</div>
+          <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:0;">Route #9's four Shipments all occur on a <strong>single visible date — April 21, 2026</strong>. Under the AIOS universal frequency formula the mathematically correct observed cadence is <strong style="color:#b45309;">28.00 Shipments / week</strong>. This figure is reported because the formula is applied uniformly, but it is <strong style="color:var(--navy);">not evidence of sustained weekly capacity and must not be extrapolated</strong> into volume, capability or commercial sizing. Every other route in this set spans two or more active months.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10 CURRENT YTD EXPORT CORE ROUTES -->
+    <div class="card">
+      <div class="card-header"><span class="accent">10</span> Current YTD Export Core Routes — Complete ≥80% Set · 7 Routes</div>
+      <div class="card-body">
+        <div class="grid-4" style="gap:10px;">
+          <div class="stat-box"><div class="stat-label">Export Universe · Current YTD</div><div class="stat-value" style="font-size:26px;">170</div><div class="stat-sub">Visible Export Shipments · directional denominator</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">Smallest Route Set Reaching ≥80%</div><div class="stat-value teal" style="font-size:26px;">7 <span style="font-size:15px;color:var(--text-muted);font-weight:700;">routes</span></div><div class="stat-sub">The complete seven-route set is shown in full</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">Cumulative Coverage</div><div class="stat-value teal" style="font-size:26px;">81.2%</div><div class="stat-sub">138 of 170 visible Export Shipments</div></div>
+          <div class="stat-box"><div class="stat-label">Leading Route Share</div><div class="stat-value" style="font-size:26px;">34.1%</div><div class="stat-sub">Route #1 · no single route reaches 80%</div></div>
+        </div>
+
+        <div style="margin-top:12px;padding:11px 15px;background:rgba(13,43,94,0.03);border:1px solid var(--border);border-radius:6px;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.65;">The Export set introduces <strong style="color:var(--navy);">four non-Laerdal origin facilities</strong> — Coverpack de México, SK Pucore México, Danhil de México and Fuerza Gráfica del Norte — each with a full Panjiva address and each recurring across <strong>6–7 active months</strong>. Their commercial role is <strong style="color:#b45309;">not established by Panjiva</strong> and is carried as a Discovery Hypothesis in module 19.</span>
+        </div>
+
+        <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--navy);margin:18px 0 8px;">Complete Export Core Route Set — all 7 routes to 81.2%</div>
+        <div style="overflow-x:auto;">
+          <table class="hub-table" style="font-size:11px;min-width:1300px;">
+            <thead><tr>
+              <th style="text-align:right;">Rank</th><th>Origin Facility / Panjiva Precision</th><th>Gateway</th><th>Destination Facility / Panjiva Precision</th><th>Mode</th>
+              <th style="text-align:right;">Shipments</th><th style="text-align:right;">% Exports</th><th style="text-align:right;">Cumulative</th>
+              <th style="text-align:right;">Active Months</th><th style="text-align:right;">/ Month</th><th style="text-align:right;">/ Week</th><th>Visible Date Range</th>
+            </tr></thead>
+            <tbody>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">1</td>
+                <td><strong>Laerdal Medical Monterrey</strong><div style="font-size:9px;color:var(--text-light);">Mexico</div></td>
+                <td><strong>Colombia, NL</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                <td><strong>United States</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div><div style="font-size:9px;color:var(--text-light);">Country-level destination precision</div></td>
+                <td><span class="hub-tag truck">Truck</span></td>
+                <td style="text-align:right;font-weight:800;">58</td><td style="text-align:right;font-weight:800;">34.1%</td>
+                <td style="text-align:right;font-weight:700;color:var(--teal-dim);">34.1%</td>
+                <td style="text-align:right;">7</td><td style="text-align:right;">8.3</td><td style="text-align:right;">2.06</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-01-13 → 2026-07-28</td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">2</td>
+                <td><strong>Laerdal Medical Monterrey</strong><div style="font-size:9px;color:var(--text-light);">Mexico</div></td>
+                <td><strong>Mariano Escobedo Airport</strong><div style="font-size:9px;color:var(--text-light);">Airport · Apodaca</div></td>
+                <td><strong>Laerdal Medical</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div></td>
+                <td><span class="hub-tag air">Air</span></td>
+                <td style="text-align:right;font-weight:800;">42</td><td style="text-align:right;font-weight:800;">24.7%</td>
+                <td style="text-align:right;font-weight:700;color:var(--teal-dim);">58.8%</td>
+                <td style="text-align:right;">7</td><td style="text-align:right;">6.0</td><td style="text-align:right;">1.43</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-01-06 → 2026-07-29</td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">3</td>
+                <td><strong>Laerdal Medical Monterrey</strong><div style="font-size:9px;color:var(--text-light);">Mexico</div></td>
+                <td><strong>Colombia, NL</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                <td><strong>Laerdal Medical Corp.</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Farm To Market 116, Gatesville TX</div></td>
+                <td><span class="hub-tag unknown">Unknown</span></td>
+                <td style="text-align:right;font-weight:800;">11</td><td style="text-align:right;font-weight:800;">6.5%</td>
+                <td style="text-align:right;font-weight:700;color:var(--teal-dim);">65.3%</td>
+                <td style="text-align:right;">6</td><td style="text-align:right;">1.8</td><td style="text-align:right;">0.51</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-01-12 → 2026-06-12</td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">4</td>
+                <td><strong>Coverpack de México</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Camino Vecinal al Milagro 550, Apodaca</div><div style="font-size:9px;color:#b45309;font-weight:700;">Non-Laerdal origin — validate role</div></td>
+                <td><strong>Nuevo Laredo</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                <td><strong>Mexico</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div></td>
+                <td><span class="hub-tag unknown">Unknown</span></td>
+                <td style="text-align:right;font-weight:800;">7</td><td style="text-align:right;font-weight:800;">4.1%</td>
+                <td style="text-align:right;font-weight:700;color:var(--teal-dim);">69.4%</td>
+                <td style="text-align:right;">7</td><td style="text-align:right;">1.0</td><td style="text-align:right;">0.28</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-01-12 → 2026-07-07</td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">5</td>
+                <td><strong>SK Pucore México</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Carr. a Colombia 102, Escobedo</div><div style="font-size:9px;color:#b45309;font-weight:700;">Non-Laerdal origin — validate role</div></td>
+                <td><strong>Manzanillo</strong><div style="font-size:9px;color:var(--text-light);">Port</div></td>
+                <td><strong>Laerdal Medical Corp.</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Gatesville</div></td>
+                <td><span class="hub-tag unknown">Unknown</span></td>
+                <td style="text-align:right;font-weight:800;">7</td><td style="text-align:right;font-weight:800;">4.1%</td>
+                <td style="text-align:right;font-weight:700;color:var(--teal-dim);">73.5%</td>
+                <td style="text-align:right;">7</td><td style="text-align:right;">1.0</td><td style="text-align:right;">0.27</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-01-13 → 2026-07-15</td>
+              </tr>
+              <tr>
+                <td style="text-align:right;font-weight:800;color:var(--navy);">6</td>
+                <td><strong>Danhil de México</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Violeta, 66648 Apodaca</div><div style="font-size:9px;color:#b45309;font-weight:700;">Non-Laerdal origin — validate role</div></td>
+                <td><strong>Monterrey</strong><div style="font-size:9px;color:var(--text-light);">Airport / metro node</div></td>
+                <td><strong>Laerdal Medical Monterrey</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Address not available in Panjiva</div></td>
+                <td><span class="hub-tag unknown">Unknown</span></td>
+                <td style="text-align:right;font-weight:800;">7</td><td style="text-align:right;font-weight:800;">4.1%</td>
+                <td style="text-align:right;font-weight:700;color:var(--teal-dim);">77.6%</td>
+                <td style="text-align:right;">7</td><td style="text-align:right;">1.0</td><td style="text-align:right;">0.26</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-01-08 → 2026-07-13</td>
+              </tr>
+              <tr style="background:rgba(0,180,216,0.05);">
+                <td style="text-align:right;font-weight:800;color:var(--navy);">7</td>
+                <td><strong>Fuerza Gráfica del Norte</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Martin Carrera, Monterrey</div><div style="font-size:9px;color:#b45309;font-weight:700;">Non-Laerdal origin — validate role</div></td>
+                <td><strong>Colombia, NL</strong><div style="font-size:9px;color:var(--text-light);">Border</div></td>
+                <td><strong>Laerdal Medical Corp.</strong><div style="font-size:9px;color:var(--text-light);font-style:italic;">Gatesville</div></td>
+                <td><span class="hub-tag unknown">Unknown</span></td>
+                <td style="text-align:right;font-weight:800;">6</td><td style="text-align:right;font-weight:800;">3.5%</td>
+                <td style="text-align:right;font-weight:800;color:var(--teal-dim);">81.2%</td>
+                <td style="text-align:right;">6</td><td style="text-align:right;">1.0</td><td style="text-align:right;">0.24</td>
+                <td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2026-01-12 → 2026-07-07</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="margin-top:14px;padding:11px 15px;background:rgba(13,43,94,0.03);border:1px solid var(--border);border-radius:6px;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.65;"><strong style="color:var(--navy);">No SHORT OBSERVATION WINDOW flag applies to the Export set.</strong> Every route spans six or seven active months, and the lowest-ranked route still runs January through July. Route cadence here reflects genuinely recurring outbound structure rather than a single-date artefact.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 11 ROUTE CONCENTRATION -->
+    <div class="card">
+      <div class="card-header"><span class="accent">11</span> Route Concentration — Backbone Plus Specialist Tail</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:16px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:8px;">Imports · Current YTD</div>
+            <table class="network-table">
+              <thead><tr><th>Measure</th><th style="text-align:right;">Share of 374</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Route #1</strong></td><td style="text-align:right;font-weight:800;">41.7%</td></tr>
+                <tr><td><strong>Top 2</strong></td><td style="text-align:right;font-weight:800;color:var(--navy);">61.5%</td></tr>
+                <tr><td><strong>Top 3</strong></td><td style="text-align:right;font-weight:800;color:var(--navy);">67.9%</td></tr>
+                <tr style="background:rgba(13,43,94,0.04);"><td><strong>Routes required for ≥80%</strong></td><td style="text-align:right;font-weight:800;">12</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:8px;">Exports · Current YTD</div>
+            <table class="network-table">
+              <thead><tr><th>Measure</th><th style="text-align:right;">Share of 170</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Route #1</strong></td><td style="text-align:right;font-weight:800;">34.1%</td></tr>
+                <tr><td><strong>Top 2</strong></td><td style="text-align:right;font-weight:800;color:var(--teal-dim);">58.8%</td></tr>
+                <tr><td><strong>Top 3</strong></td><td style="text-align:right;font-weight:800;color:var(--teal-dim);">65.3%</td></tr>
+                <tr style="background:rgba(0,180,216,0.06);"><td><strong>Routes required for ≥80%</strong></td><td style="text-align:right;font-weight:800;">7</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div style="margin-top:14px;padding:14px 18px;background:rgba(13,43,94,0.04);border-left:3px solid var(--navy);border-radius:0 6px 6px 0;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--navy);margin-bottom:6px;">AIOS Interpretation · Concentration Without Extreme Concentration</div>
+          <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:0 0 8px;">Current YTD concentration is significant but <strong style="color:var(--navy);">does not meet the AIOS definition of Extreme Route Concentration</strong> in either direction. The network instead combines two characteristics at once: a <strong>highly concentrated backbone</strong> — two routes carry 61.5% of Imports and 58.8% of Exports — and a <strong>specialist tail</strong> of ten further Import routes and four further Export routes needed to complete the 80% universe.</p>
+          <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:0;">This shape favours a commercial conversation about <strong style="color:var(--navy);">control of the core corridors plus orchestration of exceptions and secondary routes</strong> — not a single-lane tariff play, and not a pure long-tail consolidation play either.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12 HISTORICAL IMPORT CORE ROUTES 2025 -->
+    <div class="card hist-appendix">
+      <div class="card-header"><span class="accent">12</span> Historical Import Core Routes — 2025 Full Calendar Year · Complete ≥80% Set · 10 Routes</div>
+      <div class="card-body">
+        <div class="grid-4" style="gap:10px;">
+          <div class="stat-box"><div class="stat-label">Import Universe · 2025</div><div class="stat-value" style="font-size:26px;">731</div><div class="stat-sub">Established Operating Structure</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--navy);"><div class="stat-label">Routes Required for ≥80%</div><div class="stat-value" style="font-size:26px;">10 <span style="font-size:15px;color:var(--text-muted);font-weight:700;">routes</span></div><div class="stat-sub">Current YTD requires <strong>12</strong></div></div>
+          <div class="stat-box" style="border-left:3px solid var(--navy);"><div class="stat-label">Cumulative Coverage</div><div class="stat-value" style="font-size:26px;">80.4%</div><div class="stat-sub">588 of 731 visible Import Shipments</div></div>
+          <div class="stat-box"><div class="stat-label">Leading Route Share</div><div class="stat-value" style="font-size:26px;">33.5%</div><div class="stat-sub">Route #1 · rose to <strong>41.7%</strong> Current YTD</div></div>
+        </div>
+        <div style="overflow-x:auto;margin-top:14px;">
+          <table class="hub-table" style="font-size:11px;min-width:900px;">
+            <thead><tr><th style="text-align:right;">Rank</th><th>Origin → Gateway → Destination</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">% Imports</th><th style="text-align:right;">Cumulative</th></tr></thead>
+            <tbody>
+              <tr><td style="text-align:right;font-weight:800;color:var(--navy);">1</td><td><strong>Laerdal Medical</strong> → Colombia, NL → <strong>Laerdal Medical Monterrey</strong></td><td style="text-align:right;font-weight:800;">245</td><td style="text-align:right;font-weight:800;">33.5%</td><td style="text-align:right;font-weight:700;color:var(--teal-dim);">33.5%</td></tr>
+              <tr><td style="text-align:right;font-weight:800;color:var(--navy);">2</td><td><strong>Laerdal Medical Corp., Gatesville</strong> → Colombia → <strong>Laerdal Monterrey</strong></td><td style="text-align:right;font-weight:800;">140</td><td style="text-align:right;font-weight:800;">19.2%</td><td style="text-align:right;font-weight:700;color:var(--teal-dim);">52.7%</td></tr>
+              <tr><td style="text-align:right;font-weight:800;color:var(--navy);">3</td><td><strong>Laerdal Medical</strong> → Mariano Escobedo Airport → <strong>Laerdal Monterrey</strong></td><td style="text-align:right;font-weight:800;">100</td><td style="text-align:right;font-weight:800;">13.7%</td><td style="text-align:right;font-weight:700;color:var(--teal-dim);">66.3%</td></tr>
+              <tr><td style="text-align:right;font-weight:800;color:var(--navy);">4</td><td><strong>Laerdal Medical Corp., Wappingers Falls</strong> → Colombia → <strong>Laerdal Monterrey</strong></td><td style="text-align:right;font-weight:800;">33</td><td style="text-align:right;font-weight:800;">4.5%</td><td style="text-align:right;font-weight:700;color:var(--teal-dim);">70.9%</td></tr>
+              <tr><td style="text-align:right;font-weight:800;color:var(--navy);">5</td><td><strong>Laerdal Medical Corp., Wappingers Falls</strong> → Mariano Escobedo → <strong>Laerdal Monterrey</strong></td><td style="text-align:right;font-weight:800;">20</td><td style="text-align:right;font-weight:800;">2.7%</td><td style="text-align:right;font-weight:700;color:var(--teal-dim);">73.6%</td></tr>
+              <tr><td style="text-align:right;font-weight:800;color:var(--navy);">6</td><td><strong>Laerdal Medical Corp., Gatesville</strong> → Puebla → <strong>Glezco ERS</strong></td><td style="text-align:right;font-weight:800;">15</td><td style="text-align:right;font-weight:800;">2.1%</td><td style="text-align:right;font-weight:700;color:var(--teal-dim);">75.6%</td></tr>
+              <tr><td style="text-align:right;font-weight:800;color:var(--navy);">7</td><td><strong>Laerdal Medical</strong> → Nuevo Laredo → <strong>Busman PI</strong></td><td style="text-align:right;font-weight:800;">11</td><td style="text-align:right;font-weight:800;">1.5%</td><td style="text-align:right;font-weight:700;color:var(--teal-dim);">77.2%</td></tr>
+              <tr><td style="text-align:right;font-weight:800;color:var(--navy);">8</td><td><strong>Laerdal Medical Corp., Wappingers Falls</strong> → Manzanillo → <strong>Laerdal Monterrey</strong></td><td style="text-align:right;font-weight:800;">9</td><td style="text-align:right;font-weight:800;">1.2%</td><td style="text-align:right;font-weight:700;color:var(--teal-dim);">78.4%</td></tr>
+              <tr><td style="text-align:right;font-weight:800;color:var(--navy);">9</td><td><strong>Laerdal Medical Corp., Wappingers Falls</strong> → Colombia → <strong>Laerdal Monterrey</strong></td><td style="text-align:right;font-weight:800;">9</td><td style="text-align:right;font-weight:800;">1.2%</td><td style="text-align:right;font-weight:700;color:var(--teal-dim);">79.6%</td></tr>
+              <tr style="background:rgba(0,180,216,0.05);"><td style="text-align:right;font-weight:800;color:var(--navy);">10</td><td><strong>China + United States</strong> → Mariano Escobedo → <strong>Laerdal Monterrey</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Multi-country origin value — preserved, not split</div></td><td style="text-align:right;font-weight:800;">6</td><td style="text-align:right;font-weight:800;">0.8%</td><td style="text-align:right;font-weight:800;color:var(--teal-dim);">80.4%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="margin-top:12px;padding:11px 15px;background:rgba(245,158,11,0.06);border:1px solid rgba(245,158,11,0.3);border-radius:6px;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.65;"><strong style="color:#b45309;">Basis note:</strong> the 2025 historical sets were delivered with <strong>Shipments, Share and Cumulative only</strong>. Active Months, cadence and visible date ranges were <strong>not supplied</strong> for 2025 and are therefore <strong style="color:var(--navy);">not shown and not back-calculated</strong>. The Current YTD sets in modules 09 and 10 carry the full frequency and date-range detail.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 13 HISTORICAL EXPORT CORE ROUTES 2025 -->
+    <div class="card hist-appendix">
+      <div class="card-header"><span class="accent">13</span> Historical Export Core Routes — 2025 Full Calendar Year · Complete ≥80% Set · 8 Routes</div>
+      <div class="card-body">
+        <div class="grid-4" style="gap:10px;">
+          <div class="stat-box"><div class="stat-label">Export Universe · 2025</div><div class="stat-value" style="font-size:26px;">360</div><div class="stat-sub">Established Operating Structure</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--navy);"><div class="stat-label">Routes Required for ≥80%</div><div class="stat-value" style="font-size:26px;">8 <span style="font-size:15px;color:var(--text-muted);font-weight:700;">routes</span></div><div class="stat-sub">Current YTD requires <strong>7</strong></div></div>
+          <div class="stat-box" style="border-left:3px solid var(--navy);"><div class="stat-label">Cumulative Coverage</div><div class="stat-value" style="font-size:26px;">81.4%</div><div class="stat-sub">293 of 360 visible Export Shipments</div></div>
+          <div class="stat-box"><div class="stat-label">Leading Route Share</div><div class="stat-value" style="font-size:26px;">30.0%</div><div class="stat-sub">Route #1 · rose to <strong>34.1%</strong> Current YTD</div></div>
+        </div>
+        <div style="overflow-x:auto;margin-top:14px;">
+          <table class="hub-table" style="font-size:11px;min-width:900px;">
+            <thead><tr><th style="text-align:right;">Rank</th><th>Origin → Gateway → Destination</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">% Exports</th><th style="text-align:right;">Cumulative</th></tr></thead>
+            <tbody>
+              <tr><td style="text-align:right;font-weight:800;color:var(--navy);">1</td><td><strong>Laerdal Monterrey</strong> → Colombia → <strong>United States</strong></td><td style="text-align:right;font-weight:800;">108</td><td style="text-align:right;font-weight:800;">30.0%</td><td style="text-align:right;font-weight:700;color:var(--teal-dim);">30.0%</td></tr>
+              <tr><td style="text-align:right;font-weight:800;color:var(--navy);">2</td><td><strong>Laerdal Monterrey</strong> → Mariano Escobedo → <strong>Laerdal Medical</strong></td><td style="text-align:right;font-weight:800;">107</td><td style="text-align:right;font-weight:800;">29.7%</td><td style="text-align:right;font-weight:700;color:var(--teal-dim);">59.7%</td></tr>
+              <tr><td style="text-align:right;font-weight:800;color:var(--navy);">3</td><td><strong>Laerdal Monterrey</strong> → Colombia → <strong>Laerdal Medical Corp., Gatesville</strong></td><td style="text-align:right;font-weight:800;">18</td><td style="text-align:right;font-weight:800;">5.0%</td><td style="text-align:right;font-weight:700;color:var(--teal-dim);">64.7%</td></tr>
+              <tr><td style="text-align:right;font-weight:800;color:var(--navy);">4</td><td><strong>Laerdal Monterrey</strong> → Mariano Escobedo → <strong>Laerdal Medical Corp., Wappingers Falls</strong></td><td style="text-align:right;font-weight:800;">16</td><td style="text-align:right;font-weight:800;">4.4%</td><td style="text-align:right;font-weight:700;color:var(--teal-dim);">69.2%</td></tr>
+              <tr><td style="text-align:right;font-weight:800;color:var(--navy);">5</td><td><strong>Danhil de México</strong> → Monterrey → <strong>Laerdal Monterrey</strong></td><td style="text-align:right;font-weight:800;">12</td><td style="text-align:right;font-weight:800;">3.3%</td><td style="text-align:right;font-weight:700;color:var(--teal-dim);">72.5%</td></tr>
+              <tr><td style="text-align:right;font-weight:800;color:var(--navy);">6</td><td><strong>Maquinados y Engranes Valenciano</strong> → Colombia → <strong>Laerdal Medical Corp., Gatesville</strong></td><td style="text-align:right;font-weight:800;">12</td><td style="text-align:right;font-weight:800;">3.3%</td><td style="text-align:right;font-weight:700;color:var(--teal-dim);">75.8%</td></tr>
+              <tr><td style="text-align:right;font-weight:800;color:var(--navy);">7</td><td><strong>Fuerza Gráfica del Norte</strong> → Colombia → <strong>Laerdal Medical Corp., Gatesville</strong></td><td style="text-align:right;font-weight:800;">11</td><td style="text-align:right;font-weight:800;">3.1%</td><td style="text-align:right;font-weight:700;color:var(--teal-dim);">78.9%</td></tr>
+              <tr style="background:rgba(0,180,216,0.05);"><td style="text-align:right;font-weight:800;color:var(--navy);">8</td><td><strong>SK Pucore México</strong> → Lázaro Cárdenas → <strong>Laerdal Medical Corp., Gatesville</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Lázaro Cárdenas appears in 2025 only — absent from the Current YTD gateway set</div></td><td style="text-align:right;font-weight:800;">9</td><td style="text-align:right;font-weight:800;">2.5%</td><td style="text-align:right;font-weight:800;color:var(--teal-dim);">81.4%</td></tr>
             </tbody>
           </table>
         </div>
       </div>
-      <div class="card">
-        <div class="card-header"><span class="accent">04b</span> Export Hubs</div>
-        <div class="card-body">
-          <div class="modal-bar"><div class="modal-bar-label"><strong>Colombia, MX</strong><span>228 · 48.1%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:48.1%"></div></div></div>
-          <div class="modal-bar"><div class="modal-bar-label"><strong style="color:var(--red);">Monterrey, MX</strong><span style="color:var(--red);">194 · 40.9%</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:40.9%"></div></div></div>
-          <div class="modal-bar"><div class="modal-bar-label"><strong>Guaymas</strong><span>17 · 3.6%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:3.6%"></div></div></div>
-          <div class="modal-bar"><div class="modal-bar-label"><strong>Manzanillo</strong><span>9 · 1.9%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:1.9%"></div></div></div>
-          <div style="margin-top:10px;padding:8px 12px;background:rgba(0,180,216,0.06);border-radius:5px;font-size:11px;color:var(--text-muted);">
-            <strong style="color:var(--teal);">Signal:</strong> Colombia NL and Monterrey dominate both import and export — two corridors where Akzent has operational strength and expansion capacity.
+    </div>
+
+    <!-- 14 ROUTE PERSISTENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">14</span> Route Persistence &amp; Structural Change — 2025 vs Current YTD</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:16px;">
+          <div style="padding:14px 18px;background:rgba(16,185,129,0.05);border:1px solid rgba(16,185,129,0.28);border-radius:6px;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#059669;margin-bottom:8px;">Persisting Core Structure</div>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+              <li style="font-size:11.5px;line-height:1.6;color:var(--text-muted);">✓ Laerdal → <strong>Colombia</strong> → Laerdal Monterrey <span style="color:var(--text-light);">· inbound</span></li>
+              <li style="font-size:11.5px;line-height:1.6;color:var(--text-muted);">✓ <strong>Gatesville</strong> → Colombia → Monterrey <span style="color:var(--text-light);">· inbound</span></li>
+              <li style="font-size:11.5px;line-height:1.6;color:var(--text-muted);">✓ Laerdal → <strong>Mariano Escobedo</strong> → Monterrey <span style="color:var(--text-light);">· inbound</span></li>
+              <li style="font-size:11.5px;line-height:1.6;color:var(--text-muted);">✓ Monterrey → <strong>Colombia</strong> → United States <span style="color:var(--text-light);">· outbound</span></li>
+              <li style="font-size:11.5px;line-height:1.6;color:var(--text-muted);">✓ Monterrey → <strong>Mariano Escobedo</strong> → Laerdal <span style="color:var(--text-light);">· outbound</span></li>
+              <li style="font-size:11.5px;line-height:1.6;color:var(--text-muted);">✓ Monterrey → <strong>Colombia</strong> → Gatesville <span style="color:var(--text-light);">· outbound</span></li>
+            </ul>
+            <div style="margin-top:9px;font-size:11px;color:var(--text-muted);line-height:1.65;">The backbone <strong style="color:var(--navy);">persists clearly across both periods</strong> in both directions.</div>
+          </div>
+          <div style="padding:14px 18px;background:rgba(245,158,11,0.06);border:1px solid rgba(245,158,11,0.3);border-radius:6px;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#b45309;margin-bottom:8px;">Visible Structural Change</div>
+            <table class="network-table">
+              <thead><tr><th>Route</th><th style="text-align:right;">2025</th><th style="text-align:right;">YTD 2026</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Import #1</strong> · Colombia backbone</td><td style="text-align:right;">33.5%</td><td style="text-align:right;font-weight:800;color:var(--red);">41.7% ↑</td></tr>
+                <tr><td><strong>Export #1</strong> · Colombia → US</td><td style="text-align:right;">30.0%</td><td style="text-align:right;font-weight:800;color:var(--red);">34.1% ↑</td></tr>
+                <tr><td><strong>Export air</strong> · Mariano Escobedo</td><td style="text-align:right;">29.7%</td><td style="text-align:right;font-weight:800;color:var(--navy);">24.7% ↓</td></tr>
+                <tr><td><strong>Import routes to ≥80%</strong></td><td style="text-align:right;">10</td><td style="text-align:right;font-weight:800;">12 ↑</td></tr>
+                <tr><td><strong>Export routes to ≥80%</strong></td><td style="text-align:right;">8</td><td style="text-align:right;font-weight:800;">7 ↓</td></tr>
+              </tbody>
+            </table>
+            <div style="margin-top:9px;font-size:11px;color:var(--text-muted);line-height:1.65;">Both leading routes <strong style="color:var(--navy);">gained share</strong> while the leading outbound air route lost share. <strong style="color:#b45309;">These are variations in visible structure; Panjiva does not establish the causes.</strong></div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- 05 Critical Hub Intelligence table -->
+    <!-- 15 HS INTELLIGENCE -->
     <div class="card">
-      <div class="card-header"><span class="accent">05</span> Critical Hub Intelligence</div>
-      <div class="card-body" style="padding:0;">
-        <table class="network-table">
-          <thead>
-            <tr>
-              <th>Hub / Customs Point</th>
-              <th>Type</th>
-              <th>Shipments</th>
-              <th>Implication</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td><strong>Colombia, NL</strong></td><td><span class="hub-tag border">Cross-Border</span></td><td>~667 imp / ~228 exp</td><td>Primary cross-border hub for IMMEX imports and outbound exports — Akzent core corridor</td></tr>
-            <tr><td><strong>Monterrey Airport</strong></td><td><span class="hub-tag air">Air</span></td><td>188 imp / ~194 exp</td><td>High-urgency air — critical medical components in, global product out — 0% Akzent capture</td></tr>
-            <tr><td><strong>Altamira</strong></td><td><span class="hub-tag">Maritime</span></td><td>33 imp</td><td>Ocean freight support — Akzent has 29.5% penetration on ocean, opportunity to expand</td></tr>
-            <tr><td><strong>Nuevo Laredo</strong></td><td><span class="hub-tag border">Border</span></td><td>27 imp</td><td>Secondary cross-border — additional truck and customs coordination potential</td></tr>
-            <tr><td><strong>Manzanillo</strong></td><td><span class="hub-tag">Maritime</span></td><td>26 imp / 9 exp</td><td>Asia sourcing and minor ocean exports — longer-term ocean coordination opportunity</td></tr>
-          </tbody>
-        </table>
+      <div class="card-header"><span class="accent">15</span> HS Intelligence — Top 5 Operational Presence by Period and Direction</div>
+      <div class="card-body">
+        <div style="margin-bottom:12px;padding:13px 17px;background:rgba(245,158,11,0.07);border-left:3px solid #b45309;border-radius:0 6px 6px 0;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#b45309;margin-bottom:5px;">Mandatory Methodology Disclosure</div>
+          <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:0;"><strong style="color:var(--navy);">One Shipment may contain multiple HS Codes. HS counts represent operational presence and are not additive.</strong> Percentages are share of Shipments in which that HS family appears — they will not sum to 100%, and must never be added together or read as volume.</p>
+        </div>
+        <div class="grid-2" style="gap:16px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:8px;">Imports · 2025 <span style="color:var(--text-light);font-weight:600;">(731 Shipments)</span></div>
+            <table class="network-table">
+              <thead><tr><th>HS Code</th><th style="text-align:right;">Presence</th><th style="text-align:right;">% Import Shipments</th></tr></thead>
+              <tbody>
+                <tr><td><strong>9023000100</strong></td><td style="text-align:right;font-weight:800;">217</td><td style="text-align:right;font-weight:700;">29.7%</td></tr>
+                <tr><td><strong>3926909999</strong></td><td style="text-align:right;font-weight:800;">157</td><td style="text-align:right;font-weight:700;">21.5%</td></tr>
+                <tr><td><strong>7318150400</strong></td><td style="text-align:right;font-weight:800;">94</td><td style="text-align:right;font-weight:700;">12.9%</td></tr>
+                <tr><td><strong>3917400100</strong></td><td style="text-align:right;font-weight:800;">92</td><td style="text-align:right;font-weight:700;">12.6%</td></tr>
+                <tr><td><strong>8538900500</strong></td><td style="text-align:right;font-weight:800;">73</td><td style="text-align:right;font-weight:700;">10.0%</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:8px;">Imports · 2026 YTD <span style="color:var(--text-light);font-weight:600;">(374 Shipments)</span></div>
+            <table class="network-table">
+              <thead><tr><th>HS Code</th><th style="text-align:right;">Presence</th><th style="text-align:right;">% Import Shipments</th></tr></thead>
+              <tbody>
+                <tr style="background:rgba(0,180,216,0.06);"><td><strong>9023000100</strong></td><td style="text-align:right;font-weight:800;">127</td><td style="text-align:right;font-weight:800;color:var(--teal-dim);">34.0%</td></tr>
+                <tr><td><strong>3926909999</strong></td><td style="text-align:right;font-weight:800;">83</td><td style="text-align:right;font-weight:700;">22.2%</td></tr>
+                <tr><td><strong>7318150400</strong></td><td style="text-align:right;font-weight:800;">61</td><td style="text-align:right;font-weight:700;">16.3%</td></tr>
+                <tr><td><strong>3917400100</strong></td><td style="text-align:right;font-weight:800;">57</td><td style="text-align:right;font-weight:700;">15.2%</td></tr>
+                <tr style="background:rgba(245,158,11,0.05);"><td><strong>8544429904</strong><div style="font-size:9px;color:#b45309;font-weight:700;">New to the Top 5 · replaces 8538900500</div></td><td style="text-align:right;font-weight:800;">50</td><td style="text-align:right;font-weight:700;">13.4%</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="grid-2" style="gap:16px;margin-top:18px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:8px;">Exports · 2025 <span style="color:var(--text-light);font-weight:600;">(360 Shipments)</span></div>
+            <table class="network-table">
+              <thead><tr><th>HS Code</th><th style="text-align:right;">Presence</th><th style="text-align:right;">% Export Shipments</th></tr></thead>
+              <tbody>
+                <tr style="background:rgba(13,43,94,0.04);"><td><strong>9023000100</strong></td><td style="text-align:right;font-weight:800;">195</td><td style="text-align:right;font-weight:800;color:var(--navy);">54.2%</td></tr>
+                <tr><td><strong>4819100100</strong></td><td style="text-align:right;font-weight:800;">130</td><td style="text-align:right;font-weight:700;">36.1%</td></tr>
+                <tr><td><strong>3926909999</strong></td><td style="text-align:right;font-weight:800;">106</td><td style="text-align:right;font-weight:700;">29.4%</td></tr>
+                <tr><td><strong>8518210299</strong></td><td style="text-align:right;font-weight:800;">64</td><td style="text-align:right;font-weight:700;">17.8%</td></tr>
+                <tr><td><strong>3917400100</strong></td><td style="text-align:right;font-weight:800;">58</td><td style="text-align:right;font-weight:700;">16.1%</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:8px;">Exports · 2026 YTD <span style="color:var(--text-light);font-weight:600;">(170 Shipments)</span></div>
+            <table class="network-table">
+              <thead><tr><th>HS Code</th><th style="text-align:right;">Presence</th><th style="text-align:right;">% Export Shipments</th></tr></thead>
+              <tbody>
+                <tr style="background:rgba(0,180,216,0.06);"><td><strong>9023000100</strong></td><td style="text-align:right;font-weight:800;">85</td><td style="text-align:right;font-weight:800;color:var(--teal-dim);">50.0%</td></tr>
+                <tr><td><strong>4819100100</strong></td><td style="text-align:right;font-weight:800;">70</td><td style="text-align:right;font-weight:700;">41.2%</td></tr>
+                <tr><td><strong>3926909999</strong></td><td style="text-align:right;font-weight:800;">58</td><td style="text-align:right;font-weight:700;">34.1%</td></tr>
+                <tr><td><strong>3917400100</strong></td><td style="text-align:right;font-weight:800;">31</td><td style="text-align:right;font-weight:700;">18.2%</td></tr>
+                <tr style="background:rgba(245,158,11,0.05);"><td><strong>3917329100</strong><div style="font-size:9px;color:#b45309;font-weight:700;">New to the Top 5 · replaces 8518210299</div></td><td style="text-align:right;font-weight:800;">31</td><td style="text-align:right;font-weight:700;">18.2%</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div style="margin-top:14px;padding:14px 18px;background:rgba(13,43,94,0.04);border-left:3px solid var(--navy);border-radius:0 6px 6px 0;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--navy);margin-bottom:6px;">Business Interpretation · HS Portfolio Trend</div>
+          <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:0 0 8px;">The visible HS portfolio is consistent with <strong>apparatus and models for demonstrational or training purposes</strong>, <strong>plastic components and articles</strong>, <strong>tubing and fittings</strong>, <strong>fasteners</strong>, <strong>electrical components and conductors</strong>, <strong>corrugated packaging</strong> and supporting components.</p>
+          <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:0 0 8px;"><strong style="color:var(--navy);">HS 9023000100 remains the principal operational family in both directions and both periods</strong> — and its presence <em>strengthened</em> on the import side (29.7% → 34.0%) while staying dominant on the export side (54.2% → 50.0%). Packaging (4819100100) and plastic component families remain material throughout.</p>
+          <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:0;"><strong style="color:#b45309;">AIOS Interpretation:</strong> the portfolio supports a visible operating profile involving <strong>medical-training products plus a substantial component and packaging ecosystem</strong> — a profile that generates classification, documentation and regime workload beyond simple freight movement.</p>
+        </div>
       </div>
     </div>
 
-    <!-- 06 Operational Signals → Pain Mapping -->
+    <!-- 16 TRADING PARTNER INTELLIGENCE -->
     <div class="card">
-      <div class="card-header"><span class="accent">06</span> Operational Signals → Pain Mapping</div>
+      <div class="card-header"><span class="accent">16</span> Trading Partner Intelligence — Current YTD 2026</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:16px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:8px;">Imports <span style="color:var(--text-light);font-weight:600;">(374 Shipments)</span></div>
+            <table class="network-table">
+              <thead><tr><th>Trading Partner · as Panjiva names it</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">Share</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Laerdal Medical</strong></td><td style="text-align:right;font-weight:800;">184</td><td style="text-align:right;font-weight:700;">49.2%</td></tr>
+                <tr><td><strong>Laerdal Medical Corporation</strong></td><td style="text-align:right;font-weight:800;">104</td><td style="text-align:right;font-weight:700;">27.8%</td></tr>
+                <tr style="background:rgba(245,158,11,0.05);"><td><strong>Trading Partner not available in Panjiva</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Identity absent on the record — not an unnamed company</div></td><td style="text-align:right;font-weight:800;">77</td><td style="text-align:right;font-weight:700;">20.6%</td></tr>
+                <tr><td><strong>Amazon Exp. Sales LLC</strong></td><td style="text-align:right;font-weight:800;">6</td><td style="text-align:right;font-weight:700;">1.6%</td></tr>
+                <tr><td>Other individually visible partners</td><td style="text-align:right;font-weight:800;">3</td><td style="text-align:right;font-weight:700;">0.8%</td></tr>
+                <tr style="background:rgba(232,0,45,0.05);"><td><strong>Top-three visible / category concentration</strong></td><td style="text-align:right;font-weight:800;">365</td><td style="text-align:right;font-weight:800;color:var(--red);">97.6%</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:8px;">Exports <span style="color:var(--text-light);font-weight:600;">(170 Shipments)</span></div>
+            <table class="network-table">
+              <thead><tr><th>Trading Partner · as Panjiva names it</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">Share</th></tr></thead>
+              <tbody>
+                <tr style="background:rgba(245,158,11,0.05);"><td><strong>Trading Partner not available in Panjiva</strong><div style="font-size:9px;color:#b45309;font-weight:700;">Largest single category on the export side</div></td><td style="text-align:right;font-weight:800;">65</td><td style="text-align:right;font-weight:700;">38.2%</td></tr>
+                <tr><td><strong>Laerdal Medical Corporation</strong></td><td style="text-align:right;font-weight:800;">47</td><td style="text-align:right;font-weight:700;">27.6%</td></tr>
+                <tr><td><strong>Laerdal Medical</strong></td><td style="text-align:right;font-weight:800;">42</td><td style="text-align:right;font-weight:700;">24.7%</td></tr>
+                <tr><td><strong>Laerdal Medical Monterrey S.A. de C.V.</strong></td><td style="text-align:right;font-weight:800;">12</td><td style="text-align:right;font-weight:700;">7.1%</td></tr>
+                <tr><td>Additional Laerdal-name variants</td><td style="text-align:right;font-weight:800;">4</td><td style="text-align:right;font-weight:700;">2.4%</td></tr>
+                <tr style="background:rgba(232,0,45,0.05);"><td><strong>Top-three concentration</strong></td><td style="text-align:right;font-weight:800;">154</td><td style="text-align:right;font-weight:800;color:var(--red);">90.6%</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div style="margin-top:14px;padding:16px 20px;background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.35);border-radius:6px;">
+          <div style="font-size:10px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:#b45309;margin-bottom:8px;">Discovery Hypothesis — Requires Validation</div>
+          <div style="display:flex;flex-direction:column;gap:9px;">
+            <div><span style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);">Observed Signal</span><div style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin-top:2px;">Multiple Laerdal entities dominate visible inbound and outbound Trading Partner activity — <strong>97.6% import</strong> and <strong>90.6% export</strong> top-three concentration.</div></div>
+            <div><span style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);">Hypothesis</span><div style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin-top:2px;">A meaningful portion of this activity may represent <strong>affiliate / intercompany logistics</strong>.</div></div>
+            <div><span style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--red);">Panjiva Does NOT Establish</span><div style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin-top:2px;">Commercial ownership · transfer-pricing structure · freight procurement ownership · contractual carrier ownership · whether logistics decisions are centralized.</div></div>
+            <div><span style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal-dim);">Why It Matters</span><div style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin-top:2px;">Centralized or coordinated intercompany flows can create <strong style="color:var(--navy);">strong ILM / Control Tower relevance</strong> — value that a lane-by-lane freight conversation cannot reach.</div></div>
+            <div><span style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#b45309;">Discovery Should Validate</span><div style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin-top:2px;">Who owns provider selection, transportation procurement, exception management and KPI governance <strong>across Laerdal entities</strong>.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 17 CUSTOMS / IMMEX -->
+    <div class="card">
+      <div class="card-header"><span class="accent">17</span> Customs, Regime &amp; IMMEX Intelligence — Current YTD 2026</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:16px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:8px;">Import Regimes <span style="color:var(--text-light);font-weight:600;">(374 Shipments)</span></div>
+            <table class="network-table">
+              <thead><tr><th>Regime</th><th style="text-align:right;">Shipments</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Regime Change of Supplies or Temporarily Exported Merchandise</strong></td><td style="text-align:right;font-weight:800;">104</td></tr>
+                <tr><td><strong>Transfer of Goods / Temporary Import Virtual / Virtual Return</strong><div style="font-size:9px;color:var(--text-light);">and related virtual structure</div></td><td style="text-align:right;font-weight:800;">87</td></tr>
+                <tr><td><strong>Temporary Import subject to Transformation, Processing or Repair — IMMEX</strong></td><td style="text-align:right;font-weight:800;">86</td></tr>
+                <tr><td><strong>Final Import / Export</strong></td><td style="text-align:right;font-weight:800;">66</td></tr>
+                <tr><td><strong>Regime Change in Fixed Assets</strong></td><td style="text-align:right;font-weight:800;">12</td></tr>
+              </tbody>
+            </table>
+            <div style="margin-top:8px;font-size:10px;color:var(--text-muted);line-height:1.6;">Listed regimes total <strong>355 of 374</strong> visible Imports — see module 27.</div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:8px;">Export Regimes <span style="color:var(--text-light);font-weight:600;">(170 Shipments)</span></div>
+            <table class="network-table">
+              <thead><tr><th>Regime</th><th style="text-align:right;">Shipments</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Transfer of Goods / Virtual structure</strong></td><td style="text-align:right;font-weight:800;">70</td></tr>
+                <tr><td><strong>Return of Goods — IMMEX</strong></td><td style="text-align:right;font-weight:800;">60</td></tr>
+                <tr><td><strong>Final Import / Export</strong></td><td style="text-align:right;font-weight:800;">40</td></tr>
+              </tbody>
+            </table>
+            <div style="margin-top:8px;font-size:10px;color:var(--text-muted);line-height:1.6;">These three regimes account for <strong>all 170</strong> visible Exports.</div>
+
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--red);margin:16px 0 8px;">Customs Agent Concentration</div>
+            <table class="network-table">
+              <thead><tr><th>Agent Code</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">Share</th></tr></thead>
+              <tbody>
+                <tr style="background:rgba(232,0,45,0.05);"><td><strong>3468</strong> · Imports</td><td style="text-align:right;font-weight:800;">278 / 374</td><td style="text-align:right;font-weight:800;color:var(--red);">74.3%</td></tr>
+                <tr style="background:rgba(232,0,45,0.05);"><td><strong>3468</strong> · Exports</td><td style="text-align:right;font-weight:800;">91 / 170</td><td style="text-align:right;font-weight:800;color:var(--red);">53.5%</td></tr>
+                <tr><td><strong>3600</strong></td><td style="text-align:right;font-weight:700;" colspan="2">Materially present, especially in airport activity</td></tr>
+              </tbody>
+            </table>
+            <div style="margin-top:8px;font-size:10px;color:#b45309;font-weight:700;line-height:1.6;">AIOS does not infer the company behind a Customs Agent code.</div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px;padding:14px 18px;background:rgba(232,0,45,0.05);border:1px solid rgba(232,0,45,0.25);border-radius:6px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--red);margin-bottom:6px;">Observed Operational Signal · Customs Architecture Is Integral, Not Peripheral</div>
+          <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:0 0 8px;"><strong style="color:var(--navy);">IMMEX, temporary and virtual regimes are materially present in both directions</strong> — 277 of 374 visible Imports sit in regime-change, virtual-transfer or IMMEX temporary-import structures, and 130 of 170 visible Exports sit in virtual-transfer or IMMEX return structures. Customs-agent activity is simultaneously <strong>concentrated on a single code</strong>.</p>
+          <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:0 0 8px;"><strong style="color:var(--navy);">AIOS Interpretation:</strong> this customs architecture is commercially relevant for milestone visibility, document governance, escalation, border coordination, exception management and contingency — the documentary layer is inseparable from the physical layer here.</p>
+          <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:0;"><strong style="color:#b45309;">Discovery Validation required:</strong> current customs governance · SLA model · backup structure · escalation ownership. <strong style="color:var(--navy);">This is not an assertion that current customs performance is deficient.</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 18 OPERATIONAL COMPLEXITY -->
+    <div class="card">
+      <div class="card-header"><span class="accent">18</span> Operational Complexity — AIOS Interpretation · HIGH</div>
+      <div class="card-body">
+        <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:14px;">
+          <div style="padding:14px 26px;background:rgba(232,0,45,0.07);border:1px solid rgba(232,0,45,0.3);border-radius:6px;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-muted);">Assessment</div>
+            <div style="font-size:26px;font-weight:800;color:var(--red);line-height:1.2;">HIGH</div>
+          </div>
+          <div style="flex:1;min-width:300px;font-size:11.5px;color:var(--text-muted);line-height:1.7;"><strong style="color:var(--navy);">No unsupported numerical Complexity Score is created.</strong> The assessment is an interpretation of the Current YTD evidence listed below, each item independently visible in the supplied Panjiva data.</div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:8px;">
+          <div style="padding:9px 13px;background:var(--bg);border-radius:5px;border-left:3px solid var(--navy);font-size:11.5px;color:var(--text);"><strong>544</strong> visible Shipments</div>
+          <div style="padding:9px 13px;background:var(--bg);border-radius:5px;border-left:3px solid var(--navy);font-size:11.5px;color:var(--text);"><strong>374</strong> Imports + <strong>170</strong> Exports</div>
+          <div style="padding:9px 13px;background:var(--bg);border-radius:5px;border-left:3px solid var(--navy);font-size:11.5px;color:var(--text);"><strong>Truck + Air + Maritime</strong></div>
+          <div style="padding:9px 13px;background:var(--bg);border-radius:5px;border-left:3px solid var(--navy);font-size:11.5px;color:var(--text);"><strong>12</strong> Import Core Routes for ≥80%</div>
+          <div style="padding:9px 13px;background:var(--bg);border-radius:5px;border-left:3px solid var(--navy);font-size:11.5px;color:var(--text);"><strong>7</strong> Export Core Routes for ≥80%</div>
+          <div style="padding:9px 13px;background:var(--bg);border-radius:5px;border-left:3px solid var(--navy);font-size:11.5px;color:var(--text);">Multiple <strong>international geographies</strong></div>
+          <div style="padding:9px 13px;background:var(--bg);border-radius:5px;border-left:3px solid var(--navy);font-size:11.5px;color:var(--text);">Multiple <strong>gateways</strong> · border, air, port</div>
+          <div style="padding:9px 13px;background:var(--bg);border-radius:5px;border-left:3px solid var(--red);font-size:11.5px;color:var(--text);">High <strong>Colombia gateway concentration</strong></div>
+          <div style="padding:9px 13px;background:var(--bg);border-radius:5px;border-left:3px solid var(--navy);font-size:11.5px;color:var(--text);">Recurring <strong>airport activity</strong></div>
+          <div style="padding:9px 13px;background:var(--bg);border-radius:5px;border-left:3px solid var(--navy);font-size:11.5px;color:var(--text);">Recurring <strong>port activity</strong></div>
+          <div style="padding:9px 13px;background:var(--bg);border-radius:5px;border-left:3px solid var(--red);font-size:11.5px;color:var(--text);"><strong>IMMEX</strong> regimes</div>
+          <div style="padding:9px 13px;background:var(--bg);border-radius:5px;border-left:3px solid var(--red);font-size:11.5px;color:var(--text);"><strong>Virtual transfers</strong></div>
+          <div style="padding:9px 13px;background:var(--bg);border-radius:5px;border-left:3px solid var(--navy);font-size:11.5px;color:var(--text);">Multiple <strong>Trading Partners / entities</strong></div>
+          <div style="padding:9px 13px;background:var(--bg);border-radius:5px;border-left:3px solid var(--navy);font-size:11.5px;color:var(--text);">Recurring <strong>route cadence</strong></div>
+          <div style="padding:9px 13px;background:var(--bg);border-radius:5px;border-left:3px solid #b45309;font-size:11.5px;color:var(--text);">Meaningful <strong>Unknown Transport Method</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 19 OPPORTUNITY MAPPING -->
+    <div class="card">
+      <div class="card-header"><span class="accent">19</span> Opportunity Mapping — Observed Signal · AIOS Interpretation · Discovery Validation</div>
+      <div class="card-body">
+        <div style="margin-bottom:12px;padding:11px 15px;background:rgba(13,43,94,0.03);border:1px solid var(--border);border-radius:6px;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.65;">Each item below separates <strong style="color:var(--navy);">what Panjiva shows</strong> from <strong style="color:var(--navy);">what AIOS infers</strong> from <strong style="color:#b45309;">what must be validated in conversation</strong>. <strong>None of these is a confirmed customer pain</strong>, and none implies Laerdal currently lacks the capability in question.</span>
+        </div>
+        <div style="overflow-x:auto;">
+          <table class="hub-table" style="font-size:11.5px;min-width:900px;">
+            <thead><tr><th style="width:28px;">#</th><th style="width:190px;">Opportunity Area</th><th>Observed Operational Signal</th><th>AIOS Interpretation</th><th>Discovery Validation</th></tr></thead>
+            <tbody>
+              <tr>
+                <td style="font-weight:800;color:var(--navy);">1</td>
+                <td><strong>Colombia / Border Concentration</strong><div style="margin-top:4px;"><span class="hub-tag border">Border</span></div></td>
+                <td style="color:var(--text-muted);"><strong style="color:var(--navy);">71.1%</strong> of Current YTD Imports and <strong style="color:var(--navy);">53.5%</strong> of Exports move through Colombia, Nuevo León.</td>
+                <td style="color:var(--text-muted);">Operational performance at this single gateway carries disproportionate network relevance.</td>
+                <td style="color:var(--text-muted);">Incumbent model · capacity · SLA · exceptions · backup gateway strategy · escalation ownership.</td>
+              </tr>
+              <tr>
+                <td style="font-weight:800;color:var(--navy);">2</td>
+                <td><strong>Air + Border Coordination</strong><div style="margin-top:4px;"><span class="hub-tag air">Air</span> <span class="hub-tag border">Border</span></div></td>
+                <td style="color:var(--text-muted);">Mariano Escobedo is the <strong style="color:var(--navy);">#2 gateway in both directions</strong> — 12.8% of Imports, 24.7% of Exports.</td>
+                <td style="color:var(--text-muted);">The network requires coordination across at least two operationally different execution environments.</td>
+                <td style="color:var(--text-muted);">Ownership of air expedites · decision criteria · premium-freight governance · exception triggers.</td>
+              </tr>
+              <tr>
+                <td style="font-weight:800;color:var(--navy);">3</td>
+                <td><strong>Customs / IMMEX</strong><div style="margin-top:4px;"><span class="hub-tag" style="background:rgba(232,0,45,0.08);color:var(--red);">IMMEX</span></div></td>
+                <td style="color:var(--text-muted);">Substantial IMMEX, return and virtual-transfer activity, with <strong style="color:var(--navy);">74.3%</strong> import customs-agent concentration on code 3468.</td>
+                <td style="color:var(--text-muted);">Customs milestones and documentation are integral to the visible operating structure, not peripheral to it.</td>
+                <td style="color:var(--text-muted);">Customs governance · broker SLA · document ownership · escalation · contingency.</td>
+              </tr>
+              <tr>
+                <td style="font-weight:800;color:var(--navy);">4</td>
+                <td><strong>Intercompany / Affiliate Structure</strong><div style="margin-top:4px;"><span class="hub-tag" style="background:rgba(0,180,216,0.1);color:var(--teal);">ILM</span></div></td>
+                <td style="color:var(--text-muted);">Laerdal entities dominate Trading Partner activity — <strong style="color:var(--navy);">97.6%</strong> import and <strong style="color:var(--navy);">90.6%</strong> export top-three concentration.</td>
+                <td style="color:var(--text-muted);">Centralized coordination may create value well beyond individual freight transactions.</td>
+                <td style="color:var(--text-muted);">Organizational ownership · procurement model · decision rights across entities.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="margin-top:16px;" class="grid-2">
+          <div style="padding:14px 18px;background:rgba(0,180,216,0.05);border:1px solid rgba(0,180,216,0.28);border-radius:6px;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:6px;">Multimodal Opportunity · VERY HIGH</div>
+            <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:0 0 7px;">Credible Akzent conversation areas: cross-border coordination · airport visibility · ocean coordination · customs milestones · exception management · document control · Trading Partner coordination · centralized communication · KPI governance.</p>
+            <p style="font-size:11px;color:#b45309;line-height:1.65;margin:0;font-weight:700;">Do not imply Laerdal currently lacks these capabilities.</p>
+          </div>
+          <div style="padding:14px 18px;background:rgba(0,180,216,0.05);border:1px solid rgba(0,180,216,0.28);border-radius:6px;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:6px;">ILM / Control Tower Opportunity · VERY HIGH</div>
+            <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:0 0 7px;">The visible structure supports a conversation around Shipment planning · supplier and affiliate readiness · booking coordination · border, airport and port milestones · customs visibility · documentation · exception management · centralized communication · route, gateway and Trading Partner performance · contingency governance.</p>
+            <p style="font-size:11px;color:var(--navy);line-height:1.65;margin:0;font-weight:700;">Akzent should be positioned as a coordination layer, not simply another transportation provider.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ LAYER A · PRESERVED AKZENT COMMERCIAL LAYER · MODULES 20–25 ═══ -->
+    <div class="card" style="border-top:3px solid #10b981;">
+      <div class="card-body" style="padding:14px 20px;">
+        <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:9px;">
+          <span style="font-size:10px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:#fff;background:#059669;padding:5px 12px;border-radius:4px;">Layer A · Modules 20–25</span>
+          <span style="font-size:12px;font-weight:700;color:var(--navy);">Preserved Akzent Commercial Layer — Captured Position, Flags, Positioning and Expansion Plan</span>
+        </div>
+        <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:0;">The six modules that follow are the <strong style="color:#059669;">existing Akzent commercial analysis, retained unchanged</strong>. They were built on the <strong>prior Panjiva pull</strong>, which aggregated 2025 and 2026 YTD into a single <strong>1,446</strong>-Shipment universe (972 Imports · 474 Exports · 350 Air · 653 regime/virtual · $56.36M CIF). The refreshed, period-separated universe in modules 03–19 (<strong>1,635</strong> Shipments) is now the Panjiva source of truth, and <strong style="color:var(--navy);">figures below retain their original basis — AIOS has not recomputed them</strong>. Read the two layers together: Layer B describes the network, Layer A describes Akzent's position in it.</p>
+      </div>
+    </div>
+
+    <!-- 20 Operational Signals → Pain Mapping -->
+    <div class="card">
+      <div class="card-header"><span class="accent">20</span> Operational Signals → Pain Mapping</div>
       <div class="card-body">
         <div class="signal-grid">
           <div class="signal-item high">
@@ -19585,10 +20556,10 @@ main {
       </div>
     </div>
 
-    <!-- 07 AIOS Green / Red Flags -->
+    <!-- 21 AIOS Green / Red Flags -->
     <div class="grid-2">
       <div class="card">
-        <div class="card-header"><span class="accent">07a</span> AIOS Green Flags</div>
+        <div class="card-header"><span class="accent">21a</span> AIOS Green Flags</div>
         <div class="card-body">
           <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;">
             <li style="display:flex;gap:8px;align-items:flex-start;"><span style="color:#10b981;font-size:14px;flex-shrink:0;">✓</span><span style="font-size:12px;line-height:1.5;"><strong>Active client relationship:</strong> 77 captured shipments and $117K revenue — expansion starts from a trust base, not a cold pitch.</span></li>
@@ -19601,7 +20572,7 @@ main {
         </div>
       </div>
       <div class="card">
-        <div class="card-header"><span class="accent">07b</span> AIOS Red Flags</div>
+        <div class="card-header"><span class="accent">21b</span> AIOS Red Flags</div>
         <div class="card-body">
           <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;">
             <li style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--red);font-size:14px;flex-shrink:0;">⚠</span><span style="font-size:12px;line-height:1.5;"><strong>Air freight fully uncaptured:</strong> 350 Panjiva air shipments, 0 Akzent captures — another operator controls this lane entirely.</span></li>
@@ -19614,9 +20585,9 @@ main {
       </div>
     </div>
 
-    <!-- 08 Commercial Opportunity Map -->
+    <!-- 22 Commercial Opportunity Map -->
     <div class="card">
-      <div class="card-header"><span class="accent">08</span> Commercial Opportunity Map</div>
+      <div class="card-header"><span class="accent">22</span> Commercial Opportunity Map</div>
       <div class="card-body">
         <div style="display:flex;flex-direction:column;gap:8px;">
           <div style="display:grid;grid-template-columns:220px 80px 1fr;align-items:center;gap:12px;padding:10px 14px;background:var(--bg);border-radius:5px;border-left:3px solid var(--red);">
@@ -19653,9 +20624,9 @@ main {
       </div>
     </div>
 
-    <!-- 09 Commercial Positioning -->
+    <!-- 23 Commercial Positioning -->
     <div class="card">
-      <div class="card-header"><span class="accent">09</span> Commercial Positioning</div>
+      <div class="card-header"><span class="accent">23</span> Commercial Positioning</div>
       <div class="card-body">
         <div class="positioning-box">
           <p style="font-size:13px;line-height:1.6;color:#fff;">Position as <strong style="color:var(--teal);">existing operational partner · air urgency and export expansion specialist · IMMEX / customs coordination partner · cross-border orchestrator and ILM evolution candidate for a medical IMMEX operation.</strong></p>
@@ -19672,9 +20643,9 @@ main {
       </div>
     </div>
 
-    <!-- 10 Discovery Questions -->
+    <!-- 24 Discovery Questions -->
     <div class="card">
-      <div class="card-header"><span class="accent">10</span> Discovery Question Engine</div>
+      <div class="card-header"><span class="accent">24</span> Discovery Question Engine</div>
       <div class="card-body">
         <div class="outreach-step">
           <div class="outreach-step-header" onclick="toggleAccordion(this)">
@@ -19727,9 +20698,9 @@ main {
       </div>
     </div>
 
-    <!-- 11 Strategic Expansion Trajectory -->
+    <!-- 25 Strategic Expansion Trajectory -->
     <div class="card">
-      <div class="card-header"><span class="accent">11</span> Strategic Expansion Trajectory</div>
+      <div class="card-header"><span class="accent">25</span> Strategic Expansion Trajectory</div>
       <div class="card-body">
         <div class="phase-grid">
           <div class="phase-card">
@@ -19772,6 +20743,104 @@ main {
         <div style="margin-top:14px;padding:12px 16px;background:rgba(232,0,45,0.04);border-radius:6px;border-left:3px solid var(--red);">
           <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--red);margin-bottom:4px;">AAA Classification Justification</div>
           <p style="font-size:12px;color:var(--text-muted);line-height:1.5;">AAA for: active client with real revenue and 31.7% margin, 1,446-shipment Panjiva universe with $56.36M CIF value, zero air freight capture on 350 Panjiva air shipments, 0.8% export coverage on 474 exports, extreme IMMEX / customs complexity (653 regime shipments), Colombia NL as structural hub where Akzent has operational strength, and AAA-grade ILM / control tower potential across the full operation.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 26 DATA QUALITY & ENTITY RESOLUTION HYPOTHESES -->
+    <div class="card" style="border-top:3px solid #b45309;">
+      <div class="card-header"><span class="accent" style="color:#b45309;">26</span> Data Quality &amp; Entity Resolution Hypotheses — Governed, Unresolved, Never Silently Corrected</div>
+      <div class="card-body">
+        <div style="display:flex;flex-direction:column;gap:11px;">
+          <div style="padding:14px 18px;background:rgba(245,158,11,0.06);border:1px solid rgba(245,158,11,0.3);border-radius:6px;">
+            <div style="font-size:11px;font-weight:800;letter-spacing:0.6px;color:#b45309;margin-bottom:6px;">Hypothesis A · Missing Monterrey Facility Address</div>
+            <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:0 0 6px;">Panjiva identifies <strong style="color:var(--navy);">Laerdal Medical Monterrey S.A. de C.V.</strong>, but the supplied records provide <strong>no exact facility address</strong> for the dominant entity in this network — the destination of the #1, #2, #3, #5, #6, #9, #11 and #12 Import Core Routes.</p>
+            <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:0;"><strong style="color:var(--navy);">Governed treatment:</strong> every occurrence is displayed as <strong>&ldquo;Address not available in Panjiva&rdquo;</strong>. The address is <strong style="color:#b45309;">not enriched and not inferred</strong>, even though the facility is unambiguously the operational centre of the visible network.</p>
+          </div>
+          <div style="padding:14px 18px;background:rgba(245,158,11,0.06);border:1px solid rgba(245,158,11,0.3);border-radius:6px;">
+            <div style="font-size:11px;font-weight:800;letter-spacing:0.6px;color:#b45309;margin-bottom:6px;">Hypothesis B · Country-Level Origin Precision</div>
+            <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:0 0 6px;">Some Laerdal records identify origin only at <strong>country or multi-country level</strong> — <em>Laerdal Medical (no address)</em>, <em>China</em>, <em>China + Germany + Norway + United States</em>, <em>China + United States</em>, <em>Mexico + United States</em>.</p>
+            <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:0;"><strong style="color:var(--navy);">Governed treatment:</strong> these records are preserved exactly. They are <strong style="color:#b45309;">not silently resolved</strong> to Gatesville, Wappingers Falls, Stavanger or any other known Laerdal location, and multi-country values are never split across geographies.</p>
+          </div>
+          <div style="padding:14px 18px;background:rgba(245,158,11,0.06);border:1px solid rgba(245,158,11,0.3);border-radius:6px;">
+            <div style="font-size:11px;font-weight:800;letter-spacing:0.6px;color:#b45309;margin-bottom:6px;">Hypothesis C · Entity Name Variants</div>
+            <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:0 0 6px;">Multiple variants of the Monterrey entity appear across the data — <em>Laerdal Medical Monterrey</em>, <em>Laerdal Medical Monterrey S.A. de C.V.</em>, <em>Laerdal Mexico</em>, plus additional Laerdal-name variants on the Trading Partner side.</p>
+            <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:0;"><strong style="color:var(--navy);">Governed treatment:</strong> they may well represent the same corporate entity, but they are <strong style="color:#b45309;">not merged for facility-level analysis</strong> where source precision differs. Route identity, Trading Partner counts and gateway attribution all preserve the distinction until validation resolves it.</p>
+          </div>
+          <div style="padding:14px 18px;background:rgba(0,180,216,0.05);border:1px solid rgba(0,180,216,0.28);border-radius:6px;">
+            <div style="font-size:11px;font-weight:800;letter-spacing:0.6px;color:var(--teal-dim);margin-bottom:6px;">Hypothesis D · Non-Laerdal Facilities Inside the Core Route Sets</div>
+            <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:0;">Six non-Laerdal facilities appear inside the ≥80% sets with full addresses and recurring cadence — <strong>Glezco ERS del Occidente</strong>, <strong>Estafeta Mexicana</strong> (with <strong>Amazon Exp. Sales LLC</strong> as origin), <strong>Coverpack de México</strong>, <strong>SK Pucore México</strong>, <strong>Danhil de México</strong> and <strong>Fuerza Gráfica del Norte</strong>; <strong>Busman PI</strong> and <strong>Maquinados y Engranes Valenciano</strong> appear in the 2025 sets. <strong style="color:var(--navy);">Panjiva does not establish their commercial role</strong> — supplier, packaging provider, contract manufacturer, consignee or unrelated flow. They are shown as recorded and flagged for validation, not classified by inference.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 27 DATA AVAILABILITY & SOURCE GOVERNANCE -->
+    <div class="card" style="border-top:3px solid var(--navy);">
+      <div class="card-header"><span class="accent">27</span> Data Availability, Limitations &amp; Source Governance</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:16px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#059669;margin-bottom:8px;">Available in the Supplied Panjiva Data</div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px;">
+              <div style="padding:7px 11px;background:rgba(16,185,129,0.06);border-radius:4px;font-size:11px;color:var(--text);">Shipment dates</div>
+              <div style="padding:7px 11px;background:rgba(16,185,129,0.06);border-radius:4px;font-size:11px;color:var(--text);">Imports / Exports</div>
+              <div style="padding:7px 11px;background:rgba(16,185,129,0.06);border-radius:4px;font-size:11px;color:var(--text);">Shipment counts</div>
+              <div style="padding:7px 11px;background:rgba(16,185,129,0.06);border-radius:4px;font-size:11px;color:var(--text);">Visible CIF value</div>
+              <div style="padding:7px 11px;background:rgba(16,185,129,0.06);border-radius:4px;font-size:11px;color:var(--text);">Gross weight</div>
+              <div style="padding:7px 11px;background:rgba(16,185,129,0.06);border-radius:4px;font-size:11px;color:var(--text);">Transport Method</div>
+              <div style="padding:7px 11px;background:rgba(16,185,129,0.06);border-radius:4px;font-size:11px;color:var(--text);">Countries</div>
+              <div style="padding:7px 11px;background:rgba(16,185,129,0.06);border-radius:4px;font-size:11px;color:var(--text);">Gateways</div>
+              <div style="padding:7px 11px;background:rgba(16,185,129,0.06);border-radius:4px;font-size:11px;color:var(--text);">Selected facility / address info</div>
+              <div style="padding:7px 11px;background:rgba(16,185,129,0.06);border-radius:4px;font-size:11px;color:var(--text);">Trading Partners</div>
+              <div style="padding:7px 11px;background:rgba(16,185,129,0.06);border-radius:4px;font-size:11px;color:var(--text);">HS Codes</div>
+              <div style="padding:7px 11px;background:rgba(16,185,129,0.06);border-radius:4px;font-size:11px;color:var(--text);">Goods descriptions</div>
+              <div style="padding:7px 11px;background:rgba(16,185,129,0.06);border-radius:4px;font-size:11px;color:var(--text);">Customs regimes</div>
+              <div style="padding:7px 11px;background:rgba(16,185,129,0.06);border-radius:4px;font-size:11px;color:var(--text);">Customs Agent codes</div>
+              <div style="padding:7px 11px;background:rgba(16,185,129,0.06);border-radius:4px;font-size:11px;color:var(--text);">Route dates</div>
+              <div style="padding:7px 11px;background:rgba(16,185,129,0.06);border-radius:4px;font-size:11px;color:var(--text);">Shipment frequency</div>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--red);margin-bottom:8px;">Material Limitations</div>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:7px;">
+              <li style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--red);font-size:13px;flex-shrink:0;">⚠</span><span style="font-size:11.5px;line-height:1.6;color:var(--text-muted);">The dominant <strong>Laerdal Monterrey exact facility address is unavailable</strong>.</span></li>
+              <li style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--red);font-size:13px;flex-shrink:0;">⚠</span><span style="font-size:11.5px;line-height:1.6;color:var(--text-muted);">Many <strong>Trading Partner addresses are unavailable</strong>.</span></li>
+              <li style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--red);font-size:13px;flex-shrink:0;">⚠</span><span style="font-size:11.5px;line-height:1.6;color:var(--text-muted);">Substantial <strong>Transport Method is Unknown</strong> — 55.6% of Current YTD Imports, 41.2% of Exports.</span></li>
+              <li style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--red);font-size:13px;flex-shrink:0;">⚠</span><span style="font-size:11.5px;line-height:1.6;color:var(--text-muted);">Some <strong>Shipment Origin values contain multiple countries</strong>.</span></li>
+              <li style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--red);font-size:13px;flex-shrink:0;">⚠</span><span style="font-size:11.5px;line-height:1.6;color:var(--text-muted);"><strong>Trading Partner identity is absent</strong> on some records — 77 Imports, 65 Exports.</span></li>
+              <li style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--red);font-size:13px;flex-shrink:0;">⚠</span><span style="font-size:11.5px;line-height:1.6;color:var(--text-muted);">Panjiva does <strong>not</strong> establish incumbent logistics providers, contracts, SLA performance, pain, procurement ownership or decision rights.</span></li>
+            </ul>
+            <div style="margin-top:11px;padding:10px 14px;background:rgba(13,43,94,0.04);border-radius:5px;">
+              <span style="font-size:11px;color:var(--text-muted);line-height:1.65;"><strong style="color:var(--navy);">No non-Panjiva geography has been silently added</strong> anywhere in Layer B.</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:16px;padding:16px 20px;background:rgba(0,180,216,0.05);border:1px solid rgba(0,180,216,0.3);border-radius:6px;">
+          <div style="font-size:10px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:9px;">Claude High-Value Observations — Open Items to Return to AIOS</div>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div>
+              <div style="font-size:11.5px;font-weight:800;color:var(--navy);">1 · Penetration cannot be recomputed against the refreshed universe</div>
+              <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:3px 0 0;">Layer A's penetration ratios (5.3% total · 7.5% imports · 0.8% exports · 15.4% truck · 29.5% ocean · 0% air) are computed against the <strong>prior aggregated 1,446-Shipment pull</strong>. Restating them against the refreshed <strong>1,635</strong>-Shipment universe would require Akzent captured Shipments <strong>split by period (2025 FY vs Current YTD) and by direction</strong>, which this delivery does not contain — and aggregating the two periods to force a match would violate the period architecture AIOS mandates. <strong style="color:var(--navy);">The ratios are therefore left on their original basis rather than silently recomputed.</strong> Ask AIOS for a period-separated Akzent-vs-Panjiva penetration cut to close this.</p>
+            </div>
+            <div>
+              <div style="font-size:11.5px;font-weight:800;color:var(--navy);">2 · Three supplied tables do not sum to their stated universes</div>
+              <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:3px 0 0;">Import gateways total <strong>372 of 374</strong> (2 unlisted), export gateways <strong>169 of 170</strong> (1 unlisted), and import regimes <strong>355 of 374</strong> (19 unlisted). Each is shown exactly as supplied with the shortfall stated on the table, and <strong style="color:var(--navy);">no residual &ldquo;Other&rdquo; row has been invented</strong> to force a reconciliation. These are almost certainly small unenumerated tails rather than errors, but the tail composition is worth confirming.</p>
+            </div>
+            <div>
+              <div style="font-size:11.5px;font-weight:800;color:var(--navy);">3 · The 2025 Core Route sets lack cadence and date-range detail</div>
+              <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:3px 0 0;">The Current YTD sets carry Active Months, /Month, /Week and visible date ranges in full. The <strong>2025 historical sets carry Shipments, Share and Cumulative only</strong>. Route persistence in module 14 is therefore assessed on <strong>share and identity</strong>, not on cadence change — a genuine year-over-year <em>frequency</em> comparison is not derivable from what was supplied, and has not been back-calculated.</p>
+            </div>
+            <div>
+              <div style="font-size:11.5px;font-weight:800;color:var(--navy);">4 · Modal Mix is not cross-tabulated against any other dimension</div>
+              <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin:3px 0 0;">Gateways, geography, HS, customs regimes and Trading Partners are never supplied broken out by mode. A mode-segmented view — for example the network excluding Air, or the Colombia node by mode — is <strong style="color:var(--navy);">not derivable from this delivery</strong>. With 55.6% of Current YTD Imports classified Unknown, mode-filtered analysis would in any case rest on a minority of classified records. Request a mode-segmented Core Route and dimension cut if that view is wanted.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px;padding:13px 17px;background:var(--bg);border:1px solid var(--border);border-radius:6px;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.7;"><strong style="color:var(--navy);">Final AIOS Verdict · AAA.</strong> The visible network combines meaningful Shipment scale, recurring cross-border corridors, significant air activity, ocean exposure, strong gateway concentration, IMMEX and customs complexity, international Trading Partners, an apparent affiliate structure requiring validation, and recurring operational cadence. <strong style="color:var(--navy);">The strongest commercial proposition is operational orchestration and visibility, not commodity freight</strong> — and on this account that conversation starts from an existing client relationship rather than a cold approach.</span>
         </div>
       </div>
     </div>
