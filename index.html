@@ -1162,6 +1162,45 @@ main {
 .scoring-matrix tr:last-child td { border-bottom: none; }
 
 /* ── PRINT ── */
+/* GRUPO ALUREM — scoped view components (#view-alurem only). */
+#view-alurem .alr-concl { display:flex; gap:8px; align-items:flex-start; font-size:11.5px; color:var(--text-muted); line-height:1.55; }
+#view-alurem .alr-concl-n { flex-shrink:0; width:18px; height:18px; border-radius:50%; background:var(--navy); color:#fff; font-size:10px; font-weight:800; display:flex; align-items:center; justify-content:center; margin-top:1px; }
+#view-alurem .alr-hop { padding:8px 11px; background:var(--bg); border:1px solid var(--border); border-radius:6px; }
+#view-alurem .alr-hop-lbl { font-size:8.5px; font-weight:700; letter-spacing:1.1px; text-transform:uppercase; color:var(--teal-dim); }
+#view-alurem .alr-hop-name { font-size:12.5px; font-weight:800; color:var(--navy); line-height:1.4; margin-top:2px; }
+#view-alurem .alr-addr { font-size:9.5px; color:var(--text-light); font-style:italic; margin-top:2px; }
+#view-alurem .alr-addr-na { font-size:9.5px; color:#b45309; font-weight:700; margin-top:2px; }
+#view-alurem .alr-hop-arrow { text-align:center; color:var(--text-light); font-size:13px; line-height:1.2; }
+#view-alurem .alr-route-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin-top:11px; }
+#view-alurem .alr-route-stats b { display:block; font-size:18px; font-weight:800; color:var(--navy); line-height:1.15; }
+#view-alurem .alr-route-stats span { font-size:8.5px; color:var(--text-muted); letter-spacing:0.3px; text-transform:uppercase; }
+#view-alurem .alr-range { font-size:10.5px; color:var(--text-muted); margin-top:8px; }
+#view-alurem .alr-sow { display:inline-block; font-size:9px; font-weight:800; letter-spacing:0.5px; color:#92400e; background:rgba(245,158,11,0.16); border:1px solid rgba(245,158,11,0.45); padding:2px 7px; border-radius:3px; cursor:help; }
+#view-alurem .alr-sow-mini { font-size:8px; font-weight:800; color:#b45309; letter-spacing:0.3px; white-space:nowrap; }
+#view-alurem .alr-conc-row { display:grid; grid-template-columns:110px 1fr 48px; gap:8px; align-items:center; margin-top:6px; }
+#view-alurem .alr-conc-lbl { font-size:10.5px; font-weight:700; color:var(--navy); }
+#view-alurem .alr-conc-bar { height:10px; background:#e6eaf1; border-radius:5px; overflow:hidden; }
+#view-alurem .alr-conc-bar > div { height:100%; }
+#view-alurem .alr-conc-val { font-size:12px; font-weight:800; color:var(--navy); text-align:right; }
+#view-alurem .alr-hyp { padding:14px 16px; background:var(--surface); border:1px solid rgba(245,158,11,0.4); border-top:3px solid #f59e0b; border-radius:6px; font-size:11px; color:var(--text-muted); line-height:1.6; }
+#view-alurem .alr-hyp p { margin-top:7px; }
+#view-alurem .alr-hyp-tag { font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:#b45309; }
+#view-alurem .alr-hyp-title { font-size:14px; font-weight:800; color:var(--navy); margin-top:3px; }
+#view-alurem .alr-hyp-sig { font-size:11px; color:var(--navy); margin-top:5px; padding:6px 9px; background:rgba(13,43,94,0.04); border-radius:4px; }
+#view-alurem .alr-hyp-no { color:#92400e; }
+#view-alurem .alr-scope { display:inline-block; font-size:11px; font-weight:700; color:var(--navy); background:rgba(0,180,216,0.07); border:1px solid rgba(0,180,216,0.28); padding:5px 10px; border-radius:5px; }
+@media (max-width: 900px) {
+  #view-alurem .grid-4 { grid-template-columns: repeat(2, 1fr) !important; }
+  #view-alurem .grid-2,
+  #view-alurem .alr-trend-grid,
+  #view-alurem .alr-tp-grid { grid-template-columns: 1fr !important; }
+  #view-alurem .alr-hero-sep { display: none; }
+  #view-alurem .alr-route-grid { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 520px) {
+  #view-alurem .grid-4 { grid-template-columns: 1fr !important; }
+  #view-alurem .alr-route-stats { grid-template-columns: repeat(2, 1fr); }
+}
 @media print {
   .sidebar { display: none !important; }
   main { height: auto; overflow: visible; }
@@ -1664,6 +1703,30 @@ main {
   #view-lankwitzer .lnk-opp-table { table-layout: fixed !important; width: 100% !important; min-width: 0 !important; }
   #view-lankwitzer .lnk-opp-table td,
   #view-lankwitzer .lnk-opp-table th { white-space: normal !important; overflow-wrap: anywhere; }
+  /* GRUPO ALUREM — Current YTD stays primary; the complete 4-route Current YTD set (cards)
+     and the complete 10-route 2025 Historical Core Route Appendix print in full.
+     Scoped to #view-alurem so no other account is affected. */
+  #view-alurem .hub-table { font-size: 8.5px !important; min-width: 0 !important; }
+  #view-alurem .hub-table td,
+  #view-alurem .hub-table th { padding: 3px 6px !important; }
+  #view-alurem .hub-table tr { break-inside: avoid; }
+  #view-alurem [style*="overflow-x:auto"] { overflow: visible !important; }
+  #view-alurem .grid-2 > *,
+  #view-alurem .grid-4 > * { min-width: 0 !important; }
+  #view-alurem .alr-route-grid { grid-template-columns: 1fr 1fr !important; }
+  #view-alurem .alr-route,
+  #view-alurem .alr-hyp { break-inside: avoid; }
+  #view-alurem .hist-appendix { break-inside: auto; }
+  #view-alurem .hist-appendix .outreach-step-body { display: block !important; height: auto !important; max-height: none !important; }
+  #view-alurem .hist-appendix .outreach-step-header { font-size: 10px; }
+  #view-alurem .alr-hist-table { table-layout: auto !important; width: 100% !important; min-width: 0 !important; font-size: 7.5px !important; }
+  #view-alurem .alr-hist-table td,
+  #view-alurem .alr-hist-table th { padding: 2px 3px !important; white-space: normal !important; overflow-wrap: anywhere; }
+  #view-alurem .alr-hist-table th { overflow-wrap: normal; word-break: keep-all; font-size: 6.5px !important; }
+  #view-alurem .alr-hist-table .alr-sow-mini { white-space: normal; font-size: 6px; }
+  #view-alurem .alr-opp-table { table-layout: fixed !important; width: 100% !important; min-width: 0 !important; }
+  #view-alurem .alr-opp-table td,
+  #view-alurem .alr-opp-table th { white-space: normal !important; overflow-wrap: anywhere; }
   .page-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .card-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .positioning-box { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
@@ -1929,6 +1992,11 @@ main {
     </div>
     <div class="nav-item" onclick="showView('view-lankwitzer', this)">
       <span>◆</span> <span style="flex:1;">Lankwitzer</span>
+      <span class="recent-cls" style="background:rgba(245,158,11,0.2);color:#f59e0b;">LEAD</span>
+      <span class="recent-cls aa">AA</span>
+    </div>
+    <div class="nav-item" onclick="showView('view-alurem', this)">
+      <span>◆</span> <span style="flex:1;">Grupo Alurem</span>
       <span class="recent-cls" style="background:rgba(245,158,11,0.2);color:#f59e0b;">LEAD</span>
       <span class="recent-cls aa">AA</span>
     </div>
@@ -3639,6 +3707,43 @@ main {
         <span class="acct-tag">International</span>
         <span class="acct-tag">Extreme Route Concentration</span>
         <span class="acct-tag">ILM Potential</span>
+      </div>
+    </div>
+
+    <!-- GRUPO ALUREM, S.A. DE C.V. -->
+    <div class="account-card aa" onclick="showViewById('view-alurem')">
+      <div class="account-card-header">
+        <div>
+          <div class="account-name">Grupo Alurem</div>
+          <div class="account-industry">Grupo Alurem, S.A. de C.V. · 100% Maritime Import Network · Visible HS portfolio led by worked granite &amp; marble · Port — Altamira + Port — Manzanillo · Egypt-led visible sourcing · Nuevo León</div>
+        </div>
+        <div style="display:flex;gap:5px;align-items:center;flex-shrink:0;">
+          <span class="account-cls-badge lead">LEAD</span>
+          <span class="account-cls-badge aa">AA</span>
+        </div>
+      </div>
+      <div class="account-metrics" style="grid-template-columns:repeat(4,1fr);">
+        <div class="acct-metric"><div class="acct-metric-val">21</div><div class="acct-metric-lbl">2026 YTD Imports</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">100%</div><div class="acct-metric-lbl">Maritime</div></div>
+        <div class="acct-metric"><div class="acct-metric-val" style="color:var(--teal-dim);">80.95%</div><div class="acct-metric-lbl">Core Route Coverage · 4 routes</div></div>
+        <div class="acct-metric"><div class="acct-metric-val" style="color:var(--teal-dim);">+200.0%</div><div class="acct-metric-lbl">Jan 1–Jun 22 · observed</div></div>
+      </div>
+      <div style="margin-top:8px;padding:7px 10px;background:rgba(0,180,216,0.06);border-left:3px solid var(--teal);border-radius:0 4px 4px 0;">
+        <div style="font-size:9px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:var(--teal-dim);">Observed Operational Signal · Operational Complexity MEDIUM</div>
+        <div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;margin-top:2px;">🇪🇬 Egypt / Kiro Marble <strong>57.1%</strong> · Altamira <strong>66.7%</strong> / Manzanillo <strong>33.3%</strong> · Top 3 Trading Partners <strong>81.0%</strong> · 2 Customs Agent codes</div>
+      </div>
+      <div style="margin-top:8px;padding:7px 10px;background:rgba(245,158,11,0.07);border-left:3px solid #f59e0b;border-radius:0 4px 4px 0;">
+        <div style="font-size:9px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:#b45309;">Source scope &amp; data quality — requires validation</div>
+        <div style="font-size:10.5px;color:var(--text-muted);line-height:1.45;margin-top:2px;">Exports — <strong>not available in supplied Panjiva file</strong> · several Kiro records show Egypt as Shipment Origin with a United States shipper-country/address reference — both fields preserved</div>
+      </div>
+      <div class="account-tags">
+        <span class="acct-tag" style="background:rgba(245,158,11,0.12);color:#b45309;border-color:rgba(245,158,11,0.3);">LEAD</span>
+        <span class="acct-tag">Ocean</span>
+        <span class="acct-tag">Altamira</span>
+        <span class="acct-tag">Manzanillo</span>
+        <span class="acct-tag">Customs</span>
+        <span class="acct-tag">Supplier Coordination</span>
+        <span class="acct-tag">ILM / Control Tower</span>
       </div>
     </div>
 
@@ -14245,6 +14350,16 @@ main {
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot"></div></div></td>
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
               <td style="color:#b45309;font-weight:700;font-size:11px;">&#9733; PRIORITY TARGET</td>
+            </tr>
+            <tr onclick="showViewById('view-alurem')" style="cursor:pointer;">
+              <td><strong>Grupo Alurem</strong> <span style="font-size:10px;font-weight:600;color:#b45309;background:rgba(245,158,11,0.12);padding:1px 5px;border-radius:3px;margin-left:4px;">LEAD</span></td>
+              <td><span class="cls-pill aa">AA</span></td>
+              <td style="color:var(--text-muted);" title="Grupo Alurem &middot; Grupo Alurem, S.A. de C.V. &middot; Relationship LEAD &middot; AIOS Classification AA &middot; Operational Complexity MEDIUM &middot; Current YTD Shipments 21 Imports (2026-01-02 to 2026-06-22) &middot; Exports not available in supplied Panjiva file &middot; Mode 100% Maritime &middot; Primary Gateway Port &mdash; Altamira 66.7% &middot; Secondary Gateway Port &mdash; Manzanillo 33.3% &middot; Core Route Concentration 4 routes = 80.95% &middot; Commercial Position Ocean + Customs + Visibility + Supplier Coordination &middot; Cross-Border, Truck, Air and Rail not visible in supplied Panjiva file">21 Imports &middot; 100% Maritime &middot; Port &mdash; Altamira / Port &mdash; Manzanillo &middot; 4 routes = 80.95%</td>
+              <td title="Not visible in supplied Panjiva file"><div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></td>
+              <td title="100% Maritime"><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td title="Not visible in supplied Panjiva file"><div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></td>
+              <td title="ILM / Control Tower MEDIUM-HIGH"><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot"></div></div></td>
+              <td style="color:#b45309;font-weight:700;font-size:11px;">Ocean + Customs + Visibility + Supplier Coordination</td>
             </tr>
             <tr onclick="showViewById('view-productora-papel')" style="cursor:pointer;">
               <td><strong>Productora de Papel</strong> <span style="font-size:10px;font-weight:600;color:#b45309;background:rgba(245,158,11,0.12);padding:1px 5px;border-radius:3px;margin-left:4px;">LEAD</span></td>
@@ -71316,6 +71431,926 @@ main {
 
   </div>
 </div>
+<div id="view-alurem" class="view">
+  <div class="page-header">
+    <div class="page-header-left">
+      <div class="page-header-eyebrow">Target Account · LEAD · Panjiva Visible Logistics Universe</div>
+      <div class="page-header-title">Grupo Alurem</div>
+      <div class="page-header-sub">Grupo Alurem, S.A. de C.V. · Ocean Import Network · Visible HS portfolio led by worked granite &amp; marble · Port — Altamira + Port — Manzanillo · Egypt-led visible sourcing · Destination: 401 Calzada del Valle, Nuevo León</div>
+    </div>
+    <div class="page-header-meta">
+      <span class="classification-badge lead">LEAD</span>
+      <span class="classification-badge aa">AA</span>
+      <button class="print-btn" onclick="printView('view-alurem')">⬇ Export PDF</button>
+    </div>
+  </div>
+  <div class="content-body">
+
+    <!-- Identity strip — Relationship Status and AIOS Classification are never combined -->
+    <div class="card">
+      <div class="card-body" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:11px 18px;">
+        <span style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);">Relationship Status</span>
+        <span class="classification-badge lead">LEAD</span>
+        <span style="width:1px;height:20px;background:var(--border);"></span>
+        <span style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);">AIOS Classification</span>
+        <span class="classification-badge aa">AA</span>
+        <span style="width:1px;height:20px;background:var(--border);"></span>
+        <span style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);">Operational Complexity · Current YTD</span>
+        <span style="font-size:13px;font-weight:800;color:var(--navy);letter-spacing:0.5px;">MEDIUM</span>
+        <span style="flex:1;min-width:240px;font-size:10px;color:var(--text-muted);line-height:1.55;">
+          Independent dimensions — never collapsed into a single badge. Panjiva only. <strong style="color:#b45309;">No evidence has been supplied that Akzent currently manages Grupo Alurem.</strong>
+        </span>
+      </div>
+    </div>
+
+    <!-- EXECUTIVE HERO — mandated first viewport · Current YTD primary -->
+    <div class="card">
+      <div class="card-body" style="padding:16px 20px;background:linear-gradient(135deg,rgba(13,43,94,0.05) 0%,rgba(0,180,216,0.05) 100%);border-left:3px solid var(--navy);border-radius:0 6px 6px 0;">
+        <div style="font-size:9px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;color:var(--teal-dim);">Current YTD 2026 · visible period 2026-01-02 to 2026-06-22 · observed, never annualized</div>
+        <div style="display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-top:6px;">
+          <div>
+            <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;">
+              <span style="font-size:48px;font-weight:800;color:var(--teal-dim);line-height:1;">21</span>
+              <span style="font-size:16px;font-weight:700;color:var(--navy);">Import Shipments</span>
+            </div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px;">
+              <span class="hub-tag ocean" style="font-weight:800;">🚢 100% Maritime</span>
+              <span class="hub-tag" style="background:transparent;border:1px dashed #94a3b8;color:#4b5563;" title="No Panjiva export file was supplied. This is a data-availability state, not zero exports.">Exports · Not available in supplied Panjiva file</span>
+            </div>
+          </div>
+          <span class="alr-hero-sep" style="width:1px;height:58px;background:var(--border);"></span>
+          <div>
+            <div style="font-size:9px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;color:var(--teal-dim);">Comparable-period trend</div>
+            <div style="font-size:32px;font-weight:800;color:var(--teal-dim);line-height:1.1;">▲ +200.0%</div>
+            <div style="font-size:10px;color:var(--text-muted);">Shipments vs same calendar window 2025 · 7 → 21</div>
+          </div>
+          <span class="alr-hero-sep" style="width:1px;height:58px;background:var(--border);"></span>
+          <div>
+            <div style="font-size:9px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;color:var(--navy);">Operational Complexity</div>
+            <div style="font-size:24px;font-weight:800;color:var(--navy);line-height:1.25;">MEDIUM</div>
+            <div style="font-size:10px;color:var(--text-muted);">AIOS Interpretation · no numerical score</div>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px;margin-top:14px;">
+          <div class="stat-box" style="padding:10px 13px;background:var(--surface);border-left:3px solid var(--navy);"><div class="stat-label">Visible CIF Value</div><div style="font-size:22px;font-weight:800;color:var(--navy);line-height:1.2;">USD 660.36K</div><div class="stat-sub">USD 660,362.33 · Panjiva Fact</div></div>
+          <div class="stat-box" style="padding:10px 13px;background:var(--surface);border-left:3px solid var(--navy);"><div class="stat-label">Visible Volume</div><div style="font-size:22px;font-weight:800;color:var(--navy);line-height:1.2;">115.55 TEU</div><div class="stat-sub">Gross weight 1,271,092 kg</div></div>
+          <div class="stat-box" style="padding:10px 13px;background:var(--surface);border-left:3px solid var(--teal);"><div class="stat-label">Import Core Routes ≥80%</div><div style="font-size:22px;font-weight:800;color:var(--teal-dim);line-height:1.2;">4 routes = 80.95%</div><div class="stat-sub">Complete set · Module 04</div></div>
+          <div class="stat-box" style="padding:10px 13px;background:var(--surface);border-left:3px solid #f59e0b;"><div class="stat-label">Principal Gateway</div><div style="font-size:22px;font-weight:800;color:var(--navy);line-height:1.2;">Altamira 66.7%</div><div class="stat-sub">⚓ Port · Manzanillo 33.3%</div></div>
+        </div>
+
+        <div style="margin-top:14px;padding:14px 18px;background:var(--surface);border:1px solid rgba(13,43,94,0.18);border-radius:6px;">
+          <div style="font-size:9px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;color:var(--navy);margin-bottom:6px;">Executive Thesis · AIOS Interpretation</div>
+          <p style="font-size:14px;font-weight:700;color:var(--navy);line-height:1.65;max-width:1080px;">Grupo Alurem’s visible 2026 YTD network is a concentrated Ocean import structure led by Egypt/Kiro Marble, executed primarily through Altamira with a meaningful Manzanillo secondary gateway. The strongest Akzent entry point is centralized ocean execution, customs visibility, supplier coordination and exception control.</p>
+          <div style="font-size:10px;color:var(--text-muted);margin-top:6px;">Commercial Thesis: <strong style="color:var(--navy);">Ocean + Customs + Visibility + Supplier Coordination → ILM / Control Tower expansion</strong> · not a statement of customer pain · stated once on this page</div>
+        </div>
+
+        <div style="margin-top:12px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:6px 18px;">
+          <div class="alr-concl"><span class="alr-concl-n">1</span><span><strong>100%</strong> of supplied 2026 YTD Import Shipments are <strong>Maritime</strong>.</span></div>
+          <div class="alr-concl"><span class="alr-concl-n">2</span><span>🇪🇬 <strong>Egypt</strong> is the principal Shipment Origin: <strong>12 of 21 Shipments, 57.1%</strong>.</span></div>
+          <div class="alr-concl"><span class="alr-concl-n">3</span><span><strong>Kiro Marble For Marble &amp; Granite</strong> is the dominant visible Trading Partner: <strong>12 of 21, 57.1%</strong>.</span></div>
+          <div class="alr-concl"><span class="alr-concl-n">4</span><span><strong>Altamira</strong> is the principal gateway: <strong>14 Shipments, 66.7%</strong>; <strong>Manzanillo</strong> has <strong>7, 33.3%</strong>.</span></div>
+          <div class="alr-concl"><span class="alr-concl-n">5</span><span><strong>Top 3</strong> Trading Partners represent <strong>81.0%</strong> of 2026 YTD Shipments; <strong>Top 5</strong> represent <strong>90.5%</strong>.</span></div>
+          <div class="alr-concl"><span class="alr-concl-n">6</span><span><strong>Four Import Core Routes</strong> reach <strong>80.95%</strong> of the 2026 YTD Import universe.</span></div>
+          <div class="alr-concl"><span class="alr-concl-n">7</span><span>Visible opportunity: <strong>Ocean coordination, customs visibility, supplier orchestration and exception management</strong>, with a credible <strong>ILM / Control Tower</strong> expansion conversation.</span></div>
+          <div class="alr-concl"><span class="alr-concl-n">8</span><span><strong>No Air, Truck or Rail activity</strong> is claimed from this supplied Panjiva universe.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 01 CURRENT OPERATING STATE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">01</span> Current Operating State — Current YTD 2026 · 2026-01-02 to 2026-06-22</div>
+      <div class="card-body">
+        <div class="grid-4" style="gap:10px;">
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">Import Shipments</div><div class="stat-value teal" style="font-size:30px;">21</div><div class="stat-sub">Panjiva Fact · never annualized</div></div>
+          <div class="stat-box" style="border-left:3px dashed #94a3b8;"><div class="stat-label">Export Shipments</div><div style="font-size:14px;font-weight:800;color:#4b5563;line-height:1.35;margin:6px 0 4px;">Not available in supplied Panjiva file</div><div class="stat-sub">Data-availability state — <strong>not zero</strong></div></div>
+          <div class="stat-box" style="border-left:3px solid var(--navy);"><div class="stat-label">Maritime Shipments</div><div class="stat-value" style="font-size:30px;">21 <span style="font-size:14px;color:var(--text-muted);font-weight:700;">= 100.0%</span></div><div class="stat-sub">Maritime Share of Imports</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--navy);"><div class="stat-label">Operational Complexity</div><div class="stat-value" style="font-size:24px;">MEDIUM</div><div class="stat-sub">AIOS Interpretation · no numerical score</div></div>
+        </div>
+        <div class="grid-4" style="gap:10px;margin-top:10px;">
+          <div class="stat-box"><div class="stat-label">Visible CIF Value</div><div class="stat-value" style="font-size:20px;">USD 660,362.33</div><div class="stat-sub">Panjiva-visible value · not an Akzent figure</div></div>
+          <div class="stat-box"><div class="stat-label">Gross Weight</div><div class="stat-value" style="font-size:20px;">1,271,092 <span style="font-size:12px;color:var(--text-muted);font-weight:700;">kg</span></div><div class="stat-sub">Panjiva-visible gross weight</div></div>
+          <div class="stat-box"><div class="stat-label">Visible Volume</div><div class="stat-value" style="font-size:20px;">115.55 <span style="font-size:12px;color:var(--text-muted);font-weight:700;">TEU</span></div><div class="stat-sub">As finalized by AIOS</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">Import Core Routes ≥80%</div><div class="stat-value" style="font-size:20px;color:var(--teal-dim);">4 <span style="font-size:12px;color:var(--text-muted);font-weight:700;">routes = 80.95%</span></div><div class="stat-sub">Smallest route set reaching ≥80%</div></div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin-top:10px;">
+          <div class="stat-box" style="padding:9px 12px;"><div class="stat-label">Origin Countries</div><div style="font-size:18px;font-weight:800;color:var(--navy);">6</div></div>
+          <div class="stat-box" style="padding:9px 12px;"><div class="stat-label">Visible Trading Partners</div><div style="font-size:18px;font-weight:800;color:var(--navy);">7</div></div>
+          <div class="stat-box" style="padding:9px 12px;"><div class="stat-label">Mexican Gateways</div><div style="font-size:18px;font-weight:800;color:var(--navy);">2 <span style="font-size:11px;color:var(--text-muted);font-weight:700;">Ports</span></div></div>
+          <div class="stat-box" style="padding:9px 12px;"><div class="stat-label">Customs Agent Codes</div><div style="font-size:18px;font-weight:800;color:var(--navy);">2</div></div>
+          <div class="stat-box" style="padding:9px 12px;"><div class="stat-label">Destination Entity / Address</div><div style="font-size:18px;font-weight:800;color:var(--navy);">1</div></div>
+        </div>
+
+        <div style="margin-top:14px;padding:14px 18px;background:rgba(13,43,94,0.03);border:1px solid var(--border);border-radius:6px;">
+          <div style="font-size:9px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--navy);margin-bottom:8px;">Operational Complexity: MEDIUM — evidence</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;">
+            <span class="hub-tag ocean">21 Current YTD Import Shipments</span>
+            <span class="hub-tag ocean">🚢 100% Maritime</span>
+            <span class="hub-tag ocean">6 origin countries</span>
+            <span class="hub-tag ocean">7 visible Trading Partners</span>
+            <span class="hub-tag ocean">⚓ 2 Ports</span>
+            <span class="hub-tag ocean">4 Core Routes to cross ≥80%</span>
+            <span class="hub-tag ocean">Kiro concentration 57.1%</span>
+            <span class="hub-tag ocean">2 Customs Agent codes</span>
+            <span class="hub-tag ocean">Heavy natural-stone portfolio</span>
+            <span class="hub-tag ocean">1 principal destination entity / address</span>
+          </div>
+          <p style="font-size:11.5px;color:var(--text-muted);line-height:1.7;margin-top:10px;"><strong style="color:var(--navy);">AIOS Interpretation:</strong> complexity is driven by <strong>international sourcing diversity, supplier concentration, dual-port execution, customs coordination and heavy-material flow</strong> — <strong style="color:#b45309;">not by modal diversity</strong>. No numerical Complexity Score is created.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 COMPARABLE-PERIOD TREND -->
+    <div class="card">
+      <div class="card-header"><span class="accent">02</span> Comparable-Period Trend — Observed Actual vs Observed Actual</div>
+      <div class="card-body">
+        <div class="alr-trend-grid" style="display:grid;grid-template-columns:minmax(280px,0.8fr) 1.4fr;gap:22px;align-items:stretch;">
+          <div style="padding:18px 20px;background:var(--bg);border:1px solid var(--border);border-radius:8px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal-dim);">Import Shipments · same calendar window</div>
+            <div style="font-size:13px;font-weight:800;color:var(--navy);margin-top:3px;">2025-01-01 → 06-22 vs 2026-01-01 → 06-22</div>
+            <div style="display:flex;align-items:flex-end;justify-content:center;gap:34px;margin-top:20px;height:250px;">
+              <div style="display:flex;flex-direction:column;align-items:center;">
+                <div style="font-size:20px;font-weight:800;color:var(--text-muted);margin-bottom:6px;">7</div>
+                <div style="width:70px;height:67px;background:#94a3b8;border-radius:5px 5px 0 0;"></div>
+                <div style="font-size:11px;font-weight:700;color:var(--text-muted);margin-top:7px;">2025 window</div>
+                <div style="font-size:9px;color:var(--text-light);">observed actual</div>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;padding-bottom:80px;">
+                <div style="font-size:15px;font-weight:800;color:var(--teal-dim);">▲ 200.0%</div>
+                <div style="font-size:9px;color:var(--text-light);">observed Shipments</div>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;">
+                <div style="font-size:20px;font-weight:800;color:var(--navy);margin-bottom:6px;">21</div>
+                <div style="width:70px;height:200px;background:var(--teal);border-radius:5px 5px 0 0;"></div>
+                <div style="font-size:11px;font-weight:700;color:var(--navy);margin-top:7px;">2026 YTD</div>
+                <div style="font-size:9px;color:var(--text-light);">observed actual</div>
+              </div>
+            </div>
+            <div style="margin-top:12px;padding:9px 12px;background:rgba(245,158,11,0.06);border-left:3px solid #f59e0b;border-radius:0 4px 4px 0;">
+              <span style="font-size:10.5px;color:var(--text-muted);line-height:1.6;">Two observed points only — <strong>no run-rate, forecast or annualization</strong>. The supplied 2025 data begins on <strong>2025-02-01</strong>.</span>
+            </div>
+          </div>
+          <div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th>Metric</th><th style="text-align:right;">2025 Same Calendar Window</th><th style="text-align:right;">2026 YTD</th><th style="text-align:right;">Change</th></tr></thead>
+                <tbody>
+                  <tr style="background:rgba(0,180,216,0.05);"><td><strong>Import Shipments</strong></td><td style="text-align:right;color:var(--text-muted);font-weight:700;">7</td><td style="text-align:right;font-weight:800;color:var(--navy);">21</td><td style="text-align:right;font-weight:800;color:var(--teal-dim);">+200.0%</td></tr>
+                  <tr><td><strong>Visible CIF Value</strong></td><td style="text-align:right;color:var(--text-muted);">USD 203,784.74</td><td style="text-align:right;font-weight:800;color:var(--navy);">USD 660,362.33</td><td style="text-align:right;font-weight:800;color:var(--teal-dim);">+224.0%</td></tr>
+                  <tr><td><strong>Gross Weight</strong></td><td style="text-align:right;color:var(--text-muted);">218,301.17 kg</td><td style="text-align:right;font-weight:800;color:var(--navy);">1,271,092 kg</td><td style="text-align:right;font-weight:800;color:var(--teal-dim);">+482.3%</td></tr>
+                  <tr><td><strong>Visible Volume</strong></td><td style="text-align:right;color:var(--text-muted);">19.85 TEU</td><td style="text-align:right;font-weight:800;color:var(--navy);">115.55 TEU</td><td style="text-align:right;font-weight:800;color:var(--teal-dim);">+482.3%</td></tr>
+                  <tr><td><strong>Maritime Share</strong></td><td style="text-align:right;color:var(--text-muted);">100%</td><td style="text-align:right;font-weight:800;color:var(--navy);">100%</td><td style="text-align:right;color:var(--text-muted);">No visible modal change</td></tr>
+                  <tr><td><strong>Altamira Share</strong></td><td style="text-align:right;color:var(--text-muted);">100%</td><td style="text-align:right;font-weight:800;color:var(--navy);">66.7%</td><td style="text-align:right;color:var(--text-muted);">Lower visible share</td></tr>
+                  <tr><td><strong>Manzanillo Share</strong></td><td style="text-align:right;color:var(--text-muted);">0%</td><td style="text-align:right;font-weight:800;color:var(--navy);">33.3%</td><td style="text-align:right;color:var(--text-muted);">Newly visible in comparable window</td></tr>
+                  <tr><td><strong>Origin Countries</strong></td><td style="text-align:right;color:var(--text-muted);">2</td><td style="text-align:right;font-weight:800;color:var(--navy);">6</td><td style="text-align:right;color:var(--text-muted);">Higher visible diversity</td></tr>
+                  <tr><td><strong>Trading Partners</strong></td><td style="text-align:right;color:var(--text-muted);">5</td><td style="text-align:right;font-weight:800;color:var(--navy);">7</td><td style="text-align:right;color:var(--text-muted);">Higher visible diversity</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div style="margin-top:12px;padding:11px 15px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+              <span style="font-size:11px;color:var(--text-muted);line-height:1.65;"><strong>AIOS Calculation</strong> on observed actuals only. <strong style="color:#b45309;">The supplied data does not establish the cause of any change shown</strong>, and full-year 2025 is never compared directly to Current YTD as a trend.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 2026 YTD NETWORK STRUCTURE — MODE + GEOGRAPHY -->
+    <div class="card">
+      <div class="card-header"><span class="accent">03</span> 2026 YTD Network Structure — Mode &amp; Origin Geography</div>
+      <div class="card-body">
+        <div style="padding:13px 17px;background:rgba(13,43,94,0.04);border:1px solid rgba(13,43,94,0.18);border-radius:6px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+          <span class="hub-tag ocean" style="font-size:12px;padding:5px 11px;font-weight:800;">🚢 Maritime</span>
+          <div style="flex:1;min-width:260px;">
+            <div style="font-size:13px;font-weight:800;color:var(--navy);">Supplied Panjiva imports: 100% Maritime. No other import mode is visible in the supplied file.</div>
+            <div style="font-size:10.5px;color:var(--text-muted);margin-top:3px;">2026 YTD <strong>21 Shipments — 100.0%</strong> · 2025 <strong>23 Shipments — 100.0%</strong> · the source supports a strong Ocean thesis, not a factual multimodal pain claim.</div>
+          </div>
+        </div>
+
+        <div class="grid-2" style="gap:18px;margin-top:16px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:8px;">2026 YTD Origin Countries · 21 Shipments · Top 3 = 85.7%</div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th style="text-align:right;">#</th><th>Country</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">Share</th><th style="width:30%;"></th></tr></thead>
+                <tbody>
+                  <tr style="background:rgba(0,180,216,0.05);"><td style="text-align:right;font-weight:800;">1</td><td><strong>🇪🇬 Egypt</strong></td><td style="text-align:right;font-weight:800;">12</td><td style="text-align:right;font-weight:800;color:var(--navy);">57.1%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:57.1%;background:var(--teal);"></div></div></td></tr>
+                  <tr><td style="text-align:right;font-weight:800;">2</td><td><strong>🇨🇳 China</strong></td><td style="text-align:right;font-weight:800;">4</td><td style="text-align:right;font-weight:800;color:var(--navy);">19.0%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:19%;background:var(--teal);"></div></div></td></tr>
+                  <tr><td style="text-align:right;font-weight:800;">3</td><td><strong>🇬🇷 Greece</strong></td><td style="text-align:right;font-weight:800;">2</td><td style="text-align:right;font-weight:800;color:var(--navy);">9.5%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:9.5%;background:var(--teal);"></div></div></td></tr>
+                  <tr><td style="text-align:right;">4</td><td>🇪🇸 Spain</td><td style="text-align:right;">1</td><td style="text-align:right;">4.8%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:4.8%;background:#7dd3e8;"></div></div></td></tr>
+                  <tr><td style="text-align:right;">5</td><td>🇮🇩 Indonesia</td><td style="text-align:right;">1</td><td style="text-align:right;">4.8%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:4.8%;background:#7dd3e8;"></div></div></td></tr>
+                  <tr><td style="text-align:right;">6</td><td>🇧🇷 Brazil</td><td style="text-align:right;">1</td><td style="text-align:right;">4.8%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:4.8%;background:#7dd3e8;"></div></div></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);margin-bottom:8px;">2025 Origin Countries · 23 Shipments · historical context</div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th style="text-align:right;">#</th><th>Country</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">Share</th><th style="width:30%;"></th></tr></thead>
+                <tbody>
+                  <tr><td style="text-align:right;color:var(--text-muted);font-weight:700;">1</td><td style="color:var(--text-muted);"><strong>🇪🇬 Egypt</strong></td><td style="text-align:right;color:var(--text-muted);font-weight:700;">10</td><td style="text-align:right;color:var(--text-muted);font-weight:700;">43.5%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:43.5%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td style="text-align:right;color:var(--text-muted);font-weight:700;">2</td><td style="color:var(--text-muted);"><strong>🇧🇷 Brazil</strong></td><td style="text-align:right;color:var(--text-muted);font-weight:700;">8</td><td style="text-align:right;color:var(--text-muted);font-weight:700;">34.8%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:34.8%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td style="text-align:right;color:var(--text-muted);">3</td><td style="color:var(--text-muted);">🇮🇳 India</td><td style="text-align:right;color:var(--text-muted);">1</td><td style="text-align:right;color:var(--text-muted);">4.3%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:4.3%;background:#cbd5e1;"></div></div></td></tr>
+                  <tr><td style="text-align:right;color:var(--text-muted);">4</td><td style="color:var(--text-muted);">🇮🇹 Italy</td><td style="text-align:right;color:var(--text-muted);">1</td><td style="text-align:right;color:var(--text-muted);">4.3%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:4.3%;background:#cbd5e1;"></div></div></td></tr>
+                  <tr><td style="text-align:right;color:var(--text-muted);">5</td><td style="color:var(--text-muted);">🇨🇳 China</td><td style="text-align:right;color:var(--text-muted);">1</td><td style="text-align:right;color:var(--text-muted);">4.3%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:4.3%;background:#cbd5e1;"></div></div></td></tr>
+                  <tr><td style="text-align:right;color:var(--text-muted);">6</td><td style="color:var(--text-muted);">🇮🇩 Indonesia</td><td style="text-align:right;color:var(--text-muted);">1</td><td style="text-align:right;color:var(--text-muted);">4.3%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:4.3%;background:#cbd5e1;"></div></div></td></tr>
+                  <tr><td style="text-align:right;color:var(--text-muted);">7</td><td style="color:var(--text-muted);">🇪🇸 Spain</td><td style="text-align:right;color:var(--text-muted);">1</td><td style="text-align:right;color:var(--text-muted);">4.3%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:4.3%;background:#cbd5e1;"></div></div></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:12px;padding:11px 15px;background:rgba(0,180,216,0.05);border:1px solid rgba(0,180,216,0.3);border-radius:6px;">
+          <span style="font-size:11.5px;color:var(--text-muted);line-height:1.65;"><strong style="color:var(--navy);">Geographic trend:</strong> the visible origin mix shifts from a 2025 structure led by <strong>Egypt + Brazil</strong> to a 2026 YTD structure led by <strong>Egypt + China</strong>, with <strong>Greece</strong> visibly present. <strong style="color:#b45309;">No cause is inferred.</strong></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 CURRENT YTD IMPORT CORE ROUTES — COMPLETE >=80% SET · 4 ROUTES -->
+    <div class="card">
+      <div class="card-header"><span class="accent">04</span> Current YTD Import Core Routes — Complete ≥80% Set · 4 Routes</div>
+      <div class="card-body">
+        <div class="grid-4" style="gap:10px;">
+          <div class="stat-box"><div class="stat-label">Import Universe · 2026 YTD</div><div class="stat-value" style="font-size:26px;">21</div><div class="stat-sub">Shipments · directional denominator</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">Stopping Point</div><div class="stat-value" style="font-size:26px;color:var(--teal-dim);">4 <span style="font-size:14px;color:var(--text-muted);font-weight:700;">routes</span></div><div class="stat-sub">Smallest set reaching ≥80%</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">Cumulative Coverage</div><div class="stat-value" style="font-size:26px;color:var(--teal-dim);">80.95%</div><div class="stat-sub">Reached at rank 4</div></div>
+          <div class="stat-box"><div class="stat-label">Destination Facility</div><div style="font-size:13px;font-weight:800;color:var(--navy);line-height:1.35;margin-top:4px;">Grupo Alurem Sa De Cv</div><div class="stat-sub" style="font-style:italic;">401 Calzada del Valle, Nuevo León</div></div>
+        </div>
+
+        <div style="margin-top:14px;">
+          <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);margin-bottom:6px;">Cumulative coverage — ends at 80.95% on rank 4</div>
+          <div style="height:26px;display:flex;border-radius:5px;overflow:hidden;border:1px solid var(--border);">
+            <div style="width:47.62%;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:9.5px;font-weight:800;color:#fff;" title="#1 · 47.62% · cumulative 47.62%">#1 · 47.62%</div>
+            <div style="width:14.29%;background:#1e4a8a;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;color:#fff;" title="#2 · 14.29% · cumulative 61.90%">#2 · 61.90%</div>
+            <div style="width:9.52%;background:var(--teal);display:flex;align-items:center;justify-content:center;font-size:8.5px;font-weight:800;color:#fff;" title="#3 · 9.52% · cumulative 71.43%">#3</div>
+            <div style="width:9.52%;background:#f59e0b;display:flex;align-items:center;justify-content:center;font-size:8.5px;font-weight:800;color:#fff;" title="#4 · 9.52% · cumulative 80.95%">#4</div>
+            <div style="flex:1;background:#e6eaf1;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:var(--text-light);">outside the ≥80% set</div>
+          </div>
+        </div>
+
+        <div class="alr-route-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px;margin-top:16px;">
+
+          <!-- Route 1 -->
+          <div class="alr-route" style="border:1px solid rgba(13,43,94,0.3);border-radius:8px;overflow:hidden;">
+            <div style="padding:9px 14px;background:rgba(13,43,94,0.06);display:flex;align-items:center;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--border);">
+              <span style="font-size:9.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;background:var(--navy);padding:3px 9px;border-radius:3px;">Rank 1</span>
+              <span class="hub-tag ocean">🚢 Maritime</span>
+              <span style="flex:1;"></span>
+              <span style="font-size:11px;font-weight:800;color:var(--navy);">47.62% · cum. 47.62%</span>
+            </div>
+            <div style="padding:13px 16px;">
+              <div class="alr-hop"><div class="alr-hop-lbl">Origin Facility · 🇪🇬 Egypt</div><div class="alr-hop-name">Kiro Marble For Marble &amp; Granite</div><div class="alr-addr-na">Address not available in Panjiva</div></div>
+              <div class="alr-hop-arrow">↓</div>
+              <div class="alr-hop"><div class="alr-hop-lbl">Gateway</div><div class="alr-hop-name"><span class="hub-tag ocean">⚓ Port</span> Altamira, Tamaulipas</div></div>
+              <div class="alr-hop-arrow">↓</div>
+              <div class="alr-hop"><div class="alr-hop-lbl">Destination Facility</div><div class="alr-hop-name">Grupo Alurem Sa De Cv</div><div class="alr-addr">401 Calzada del Valle, Nuevo León</div></div>
+              <div class="alr-route-stats">
+                <div><b>10</b><span>Shipments</span></div>
+                <div><b>3</b><span>Active Months</span></div>
+                <div><b>3.33</b><span>/ Active Month</span></div>
+                <div><b>0.89</b><span>/ Week</span></div>
+              </div>
+              <div class="alr-range">Visible range <strong>2026-02-17 → 2026-05-06</strong></div>
+            </div>
+          </div>
+
+          <!-- Route 2 -->
+          <div class="alr-route" style="border:1px solid rgba(13,43,94,0.25);border-radius:8px;overflow:hidden;">
+            <div style="padding:9px 14px;background:rgba(13,43,94,0.05);display:flex;align-items:center;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--border);">
+              <span style="font-size:9.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;background:#1e4a8a;padding:3px 9px;border-radius:3px;">Rank 2</span>
+              <span class="hub-tag ocean">🚢 Maritime</span>
+              <span style="flex:1;"></span>
+              <span style="font-size:11px;font-weight:800;color:var(--navy);">14.29% · cum. 61.90%</span>
+            </div>
+            <div style="padding:13px 16px;">
+              <div class="alr-hop"><div class="alr-hop-lbl">Origin Facility · 🇨🇳 China</div><div class="alr-hop-name">Xiamen Si Tong Stone Industry Co., Ltd.</div><div class="alr-addr-na">Address not available in Panjiva <span style="font-weight:600;color:var(--text-light);">(2026 YTD)</span></div></div>
+              <div class="alr-hop-arrow">↓</div>
+              <div class="alr-hop"><div class="alr-hop-lbl">Gateway</div><div class="alr-hop-name"><span class="hub-tag ocean">⚓ Port</span> Manzanillo, Colima</div></div>
+              <div class="alr-hop-arrow">↓</div>
+              <div class="alr-hop"><div class="alr-hop-lbl">Destination Facility</div><div class="alr-hop-name">Grupo Alurem Sa De Cv</div><div class="alr-addr">401 Calzada del Valle, Nuevo León</div></div>
+              <div class="alr-route-stats">
+                <div><b>3</b><span>Shipments</span></div>
+                <div><b>2</b><span>Active Months</span></div>
+                <div><b>1.50</b><span>/ Active Month</span></div>
+                <div><b>0.20</b><span>/ Week</span></div>
+              </div>
+              <div class="alr-range">Visible range <strong>2026-01-02 → 2026-04-17</strong></div>
+            </div>
+          </div>
+
+          <!-- Route 3 -->
+          <div class="alr-route" style="border:1px solid var(--border);border-radius:8px;overflow:hidden;">
+            <div style="padding:9px 14px;background:var(--bg);display:flex;align-items:center;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--border);">
+              <span style="font-size:9.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;background:var(--teal-dim);padding:3px 9px;border-radius:3px;">Rank 3</span>
+              <span class="hub-tag ocean">🚢 Maritime</span>
+              <span style="flex:1;"></span>
+              <span style="font-size:11px;font-weight:800;color:var(--navy);">9.52% · cum. 71.43%</span>
+            </div>
+            <div style="padding:13px 16px;">
+              <div class="alr-hop"><div class="alr-hop-lbl">Origin Facility · 🇬🇷 Greece</div><div class="alr-hop-name">Ioannis Giannakis &amp; Co.</div><div class="alr-addr-na">Address not available in Panjiva</div></div>
+              <div class="alr-hop-arrow">↓</div>
+              <div class="alr-hop"><div class="alr-hop-lbl">Gateway</div><div class="alr-hop-name"><span class="hub-tag ocean">⚓ Port</span> Altamira, Tamaulipas</div></div>
+              <div class="alr-hop-arrow">↓</div>
+              <div class="alr-hop"><div class="alr-hop-lbl">Destination Facility</div><div class="alr-hop-name">Grupo Alurem Sa De Cv</div><div class="alr-addr">401 Calzada del Valle, Nuevo León</div></div>
+              <div class="alr-route-stats">
+                <div><b>2</b><span>Shipments</span></div>
+                <div><b>2</b><span>Active Months</span></div>
+                <div><b>1.00</b><span>/ Active Month</span></div>
+                <div><b>0.48</b><span>/ Week</span></div>
+              </div>
+              <div class="alr-range">Visible range <strong>2026-05-25 → 2026-06-22</strong></div>
+            </div>
+          </div>
+
+          <!-- Route 4 -->
+          <div class="alr-route" style="border:1px solid rgba(245,158,11,0.45);border-radius:8px;overflow:hidden;">
+            <div style="padding:9px 14px;background:rgba(245,158,11,0.07);display:flex;align-items:center;gap:8px;flex-wrap:wrap;border-bottom:1px solid rgba(245,158,11,0.3);">
+              <span style="font-size:9.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;background:#f59e0b;padding:3px 9px;border-radius:3px;">Rank 4</span>
+              <span class="hub-tag ocean">🚢 Maritime</span>
+              <span class="alr-sow" title="Observed Route Cadence reflects the route's own visible date window. A short-window cadence is not evidence of sustained weekly capacity and must not be extrapolated into a forecast or normalized weekly volume.">⚠ SHORT OBSERVATION WINDOW</span>
+              <span style="flex:1;"></span>
+              <span style="font-size:11px;font-weight:800;color:var(--navy);">9.52% · cum. 80.95%</span>
+            </div>
+            <div style="padding:13px 16px;">
+              <div class="alr-hop"><div class="alr-hop-lbl">Origin Facility · 🇪🇬 Egypt</div><div class="alr-hop-name">Kiro Marble For Marble &amp; Granite</div><div class="alr-addr-na">Address not available in Panjiva</div></div>
+              <div class="alr-hop-arrow">↓</div>
+              <div class="alr-hop"><div class="alr-hop-lbl">Gateway</div><div class="alr-hop-name"><span class="hub-tag ocean">⚓ Port</span> Manzanillo, Colima</div></div>
+              <div class="alr-hop-arrow">↓</div>
+              <div class="alr-hop"><div class="alr-hop-lbl">Destination Facility</div><div class="alr-hop-name">Grupo Alurem Sa De Cv</div><div class="alr-addr">401 Calzada del Valle, Nuevo León</div></div>
+              <div class="alr-route-stats">
+                <div><b>2</b><span>Shipments</span></div>
+                <div><b>1</b><span>Active Month</span></div>
+                <div><b>2.00</b><span>/ Active Month</span></div>
+                <div><b style="color:#b45309;">14.00</b><span>/ Week · short window</span></div>
+              </div>
+              <div class="alr-range">Visible range <strong>2026-04-06 → 2026-04-06</strong></div>
+              <div style="margin-top:8px;padding:8px 11px;background:rgba(245,158,11,0.07);border-left:3px solid #f59e0b;border-radius:0 4px 4px 0;font-size:10px;color:#92400e;line-height:1.55;">Observed Route Cadence reflects the route's own visible date window. A short-window cadence is not evidence of sustained weekly capacity and must not be extrapolated into a forecast or normalized weekly volume.</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div style="margin-top:12px;padding:12px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+          <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#b45309;margin-bottom:5px;">Route governance</div>
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.65;"><strong>Core Routes</strong> = the smallest route set reaching ≥80% cumulative Shipments of the Import universe. The set is AIOS-finalized — <strong style="color:#b45309;">never recalculated, re-ranked or truncated</strong>. <strong>Route Rank is factual</strong>; no Commercial Route Priority is assigned. Origin addresses not present in Panjiva are shown as <strong>Address not available in Panjiva</strong> and are never geocoded or enriched. The destination address is rendered exactly as supplied.</span>
+        </div>
+
+        <!-- Current YTD Export Core Routes — data availability state -->
+        <div style="margin-top:14px;padding:16px 20px;border:1px dashed #94a3b8;border-radius:8px;background:rgba(107,114,128,0.04);display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+          <div style="font-size:24px;color:var(--text-light);line-height:1;">◌</div>
+          <div style="flex:1;min-width:240px;">
+            <div style="font-size:9px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;color:#b45309;">Current YTD Export Core Routes</div>
+            <div style="font-size:15px;font-weight:800;color:var(--navy);margin-top:2px;">Export Core Routes — Data not available in supplied Panjiva file</div>
+            <div style="font-size:10.5px;color:var(--text-muted);margin-top:3px;">Not zero · no export route, value, mode or partner is inferred from import records.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 05 GATEWAY INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">05</span> Gateway Intelligence — Mexican Ports by Period</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:18px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:8px;">2026 YTD · 21 Import Shipments</div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th>Gateway</th><th>Type</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">Share</th><th style="width:26%;"></th></tr></thead>
+                <tbody>
+                  <tr style="background:rgba(0,180,216,0.05);"><td><strong>Altamira, Tamaulipas</strong></td><td><span class="hub-tag ocean">⚓ Port</span></td><td style="text-align:right;font-weight:800;">14</td><td style="text-align:right;font-weight:800;color:var(--navy);">66.7%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:66.7%;background:var(--navy);"></div></div></td></tr>
+                  <tr><td><strong>Manzanillo, Colima</strong></td><td><span class="hub-tag ocean">⚓ Port</span></td><td style="text-align:right;font-weight:800;">7</td><td style="text-align:right;font-weight:800;color:var(--navy);">33.3%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:33.3%;background:var(--teal);"></div></div></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);margin-bottom:8px;">2025 · 23 Import Shipments · historical context</div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th>Gateway</th><th>Type</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">Share</th><th style="width:26%;"></th></tr></thead>
+                <tbody>
+                  <tr><td style="color:var(--text-muted);"><strong>Altamira, Tamaulipas</strong></td><td><span class="hub-tag ocean">⚓ Port</span></td><td style="text-align:right;font-weight:700;color:var(--text-muted);">21</td><td style="text-align:right;font-weight:700;color:var(--text-muted);">91.3%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:91.3%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td style="color:var(--text-muted);">Lázaro Cárdenas, Michoacán</td><td><span class="hub-tag ocean">⚓ Port</span></td><td style="text-align:right;color:var(--text-muted);">1</td><td style="text-align:right;color:var(--text-muted);">4.3%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:4.3%;background:#cbd5e1;"></div></div></td></tr>
+                  <tr><td style="color:var(--text-muted);">Manzanillo, Colima</td><td><span class="hub-tag ocean">⚓ Port</span></td><td style="text-align:right;color:var(--text-muted);">1</td><td style="text-align:right;color:var(--text-muted);">4.3%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:4.3%;background:#cbd5e1;"></div></div></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:12px;padding:12px 16px;background:rgba(13,43,94,0.04);border-left:3px solid var(--navy);border-radius:0 5px 5px 0;">
+          <span style="font-size:12px;font-weight:700;color:var(--navy);line-height:1.6;">Altamira remains the principal gateway, while Manzanillo rises to 33.3% of 2026 YTD imports.</span>
+          <span style="font-size:11px;color:#b45309;font-weight:700;display:block;margin-top:3px;">Panjiva does not establish why each Port is used.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 06 TRADING PARTNER INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">06</span> Trading Partner Intelligence — Concentration by Period</div>
+      <div class="card-body">
+        <div class="alr-tp-grid" style="display:grid;grid-template-columns:1.5fr 1fr;gap:18px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:8px;">2026 YTD · 7 visible Trading Partners · 21 Shipments</div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th style="text-align:right;">#</th><th>Trading Partner</th><th>Origin</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">Share</th></tr></thead>
+                <tbody>
+                  <tr style="background:rgba(0,180,216,0.05);"><td style="text-align:right;font-weight:800;">1</td><td><strong>Kiro Marble For Marble &amp; Granite</strong></td><td>🇪🇬 Egypt</td><td style="text-align:right;font-weight:800;">12</td><td style="text-align:right;font-weight:800;color:var(--navy);">57.1%</td></tr>
+                  <tr><td style="text-align:right;font-weight:800;">2</td><td><strong>Xiamen Si Tong Stone Industry Co., Ltd.</strong></td><td>🇨🇳 China</td><td style="text-align:right;font-weight:800;">3</td><td style="text-align:right;font-weight:800;color:var(--navy);">14.3%</td></tr>
+                  <tr><td style="text-align:right;font-weight:800;">3</td><td><strong>Ioannis Giannakis &amp; Co.</strong></td><td>🇬🇷 Greece</td><td style="text-align:right;font-weight:800;">2</td><td style="text-align:right;font-weight:800;color:var(--navy);">9.5%</td></tr>
+                  <tr><td style="text-align:right;">4</td><td>Gomez Grau Sl.</td><td>🇪🇸 Spain</td><td style="text-align:right;">1</td><td style="text-align:right;">4.8%</td></tr>
+                  <tr><td style="text-align:right;">5</td><td>Pt . Pedra Dorma Berkat</td><td>🇮🇩 Indonesia</td><td style="text-align:right;">1</td><td style="text-align:right;">4.8%</td></tr>
+                  <tr><td style="text-align:right;">6</td><td>Linyi Consmos Imp. &amp; Exp. . Co., Ltd.</td><td>🇨🇳 China</td><td style="text-align:right;">1</td><td style="text-align:right;">4.8%</td></tr>
+                  <tr><td style="text-align:right;">7</td><td>Cs3 Marmores E Granitos Ltda</td><td>🇧🇷 Brazil</td><td style="text-align:right;">1</td><td style="text-align:right;">4.8%</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--navy);margin-bottom:10px;">Concentration — 2025 vs 2026 YTD</div>
+            <div class="alr-conc-row"><div class="alr-conc-lbl">Top 3 · 2026 YTD</div><div class="alr-conc-bar"><div style="width:81%;background:var(--navy);"></div></div><div class="alr-conc-val">81.0%</div></div>
+            <div class="alr-conc-row"><div class="alr-conc-lbl" style="color:var(--text-light);">Top 3 · 2025</div><div class="alr-conc-bar"><div style="width:52.2%;background:#94a3b8;"></div></div><div class="alr-conc-val" style="color:var(--text-muted);">52.2%</div></div>
+            <div class="alr-conc-row" style="margin-top:10px;"><div class="alr-conc-lbl">Top 5 · 2026 YTD</div><div class="alr-conc-bar"><div style="width:90.5%;background:var(--teal);"></div></div><div class="alr-conc-val">90.5%</div></div>
+            <div class="alr-conc-row"><div class="alr-conc-lbl" style="color:var(--text-light);">Top 5 · 2025</div><div class="alr-conc-bar"><div style="width:60.9%;background:#cbd5e1;"></div></div><div class="alr-conc-val" style="color:var(--text-muted);">60.9%</div></div>
+            <div style="margin-top:14px;padding:11px 14px;background:var(--bg);border:1px solid var(--border);border-radius:6px;">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);margin-bottom:5px;">2025 · historical context</div>
+              <ul class="q-list" style="font-size:11px;line-height:1.7;color:var(--text-muted);">
+                <li>Kiro — <strong>8</strong> Shipments · 34.8%</li>
+                <li>Elnahar — <strong>2</strong> · 8.7%</li>
+                <li>Cs3 — <strong>2</strong> · 8.7%</li>
+                <li>Remaining visible partners — 1 each</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:12px;padding:11px 15px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.65;"><strong style="color:var(--navy);">AIOS Interpretation:</strong> Current YTD is visibly more concentrated around one Trading Partner. <strong style="color:#b45309;">This is not proof of supplier dependency or customer pain.</strong> No affiliate relationship is assigned to any partner.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 07 HS INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">07</span> HS Intelligence — Top HS Codes by Period</div>
+      <div class="card-body">
+        <div style="padding:10px 14px;background:rgba(245,158,11,0.06);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;margin-bottom:14px;">
+          <span style="font-size:11.5px;font-weight:700;color:#92400e;">One Shipment may contain multiple HS Codes. HS counts represent operational presence and are not additive.</span>
+        </div>
+        <div class="grid-2" style="gap:18px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:8px;">2026 YTD · only four distinct HS Codes visible</div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th style="text-align:right;">#</th><th>HS Code</th><th style="text-align:right;">Presence</th><th style="text-align:right;">% Shipments</th><th>Interpretation</th></tr></thead>
+                <tbody>
+                  <tr style="background:rgba(0,180,216,0.05);"><td style="text-align:right;font-weight:800;">1</td><td><strong style="font-family:ui-monospace,Menlo,monospace;">6802930100</strong></td><td style="text-align:right;font-weight:800;">17</td><td style="text-align:right;font-weight:800;color:var(--navy);">81.0%</td><td style="color:var(--text-muted);">Granite slabs / tiles / worked granite products</td></tr>
+                  <tr><td style="text-align:right;font-weight:800;">2</td><td><strong style="font-family:ui-monospace,Menlo,monospace;">6802910100</strong></td><td style="text-align:right;font-weight:800;">3</td><td style="text-align:right;font-weight:800;color:var(--navy);">14.3%</td><td style="color:var(--text-muted);">Marble slabs / tiles / worked marble products</td></tr>
+                  <tr><td style="text-align:right;font-weight:800;">3</td><td><strong style="font-family:ui-monospace,Menlo,monospace;">6802230299</strong></td><td style="text-align:right;font-weight:800;">2</td><td style="text-align:right;font-weight:800;color:var(--navy);">9.5%</td><td style="color:var(--text-muted);">Granite plates / construction stone products</td></tr>
+                  <tr><td style="text-align:right;font-weight:800;">4</td><td><strong style="font-family:ui-monospace,Menlo,monospace;">3925909900</strong></td><td style="text-align:right;font-weight:800;">1</td><td style="text-align:right;font-weight:800;color:var(--navy);">4.8%</td><td style="color:var(--text-muted);">Plastic wall-covering / construction component</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);margin-bottom:8px;">2025 · Top 5 · historical context</div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th style="text-align:right;">#</th><th>HS Code</th><th style="text-align:right;">Presence</th><th style="text-align:right;">% Shipments</th><th>Interpretation</th></tr></thead>
+                <tbody>
+                  <tr><td style="text-align:right;color:var(--text-muted);font-weight:700;">1</td><td style="color:var(--text-muted);"><strong style="font-family:ui-monospace,Menlo,monospace;">6802930100</strong></td><td style="text-align:right;color:var(--text-muted);font-weight:700;">14</td><td style="text-align:right;color:var(--text-muted);font-weight:700;">60.9%</td><td style="color:var(--text-muted);">Granite slabs / tiles / worked granite products</td></tr>
+                  <tr><td style="text-align:right;color:var(--text-muted);font-weight:700;">2</td><td style="color:var(--text-muted);"><strong style="font-family:ui-monospace,Menlo,monospace;">6802910100</strong></td><td style="text-align:right;color:var(--text-muted);font-weight:700;">8</td><td style="text-align:right;color:var(--text-muted);font-weight:700;">34.8%</td><td style="color:var(--text-muted);">Marble slabs / tiles / worked marble products</td></tr>
+                  <tr><td style="text-align:right;color:var(--text-muted);">3</td><td style="color:var(--text-muted);"><strong style="font-family:ui-monospace,Menlo,monospace;">6802999100</strong></td><td style="text-align:right;color:var(--text-muted);">4</td><td style="text-align:right;color:var(--text-muted);">17.4%</td><td style="color:var(--text-muted);">Other worked natural stone, including quartzite</td></tr>
+                  <tr><td style="text-align:right;color:var(--text-muted);">4</td><td style="color:var(--text-muted);"><strong style="font-family:ui-monospace,Menlo,monospace;">9403609900</strong></td><td style="text-align:right;color:var(--text-muted);">2</td><td style="text-align:right;color:var(--text-muted);">8.7%</td><td style="color:var(--text-muted);">Wooden display / furniture items</td></tr>
+                  <tr><td style="text-align:right;color:var(--text-muted);">5</td><td style="color:var(--text-muted);"><strong style="font-family:ui-monospace,Menlo,monospace;">6802230299</strong></td><td style="text-align:right;color:var(--text-muted);">2</td><td style="text-align:right;color:var(--text-muted);">8.7%</td><td style="color:var(--text-muted);">Granite plates / construction stone products</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:12px;padding:12px 16px;background:rgba(13,43,94,0.04);border:1px solid var(--border);border-radius:6px;">
+          <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--navy);margin-bottom:7px;">HS Portfolio Trend · HS 6802930100 operational presence</div>
+          <div class="alr-conc-row"><div class="alr-conc-lbl">2026 YTD</div><div class="alr-conc-bar"><div style="width:81%;background:var(--navy);"></div></div><div class="alr-conc-val">81.0%</div></div>
+          <div class="alr-conc-row"><div class="alr-conc-lbl" style="color:var(--text-light);">2025</div><div class="alr-conc-bar"><div style="width:60.9%;background:#94a3b8;"></div></div><div class="alr-conc-val" style="color:var(--text-muted);">60.9%</div></div>
+          <p style="font-size:11.5px;color:var(--text-muted);line-height:1.65;margin-top:8px;">2026 YTD is visibly more concentrated around worked granite. HS 6802930100 is present in <strong>81.0%</strong> of visible Shipments versus <strong>60.9%</strong> in 2025.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 08 CUSTOMS INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">08</span> Customs Intelligence — Regime &amp; Customs Agent Codes</div>
+      <div class="card-body">
+        <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px;">
+          <span style="font-size:9px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;color:var(--text-muted);">Customs Regime · all supplied records</span>
+          <span class="hub-tag ocean" style="font-size:11px;padding:3px 10px;font-weight:800;">Final Import / Export</span>
+          <span style="font-size:10.5px;color:#b45309;font-weight:700;">No IMMEX status is inferred</span>
+        </div>
+        <div class="grid-2" style="gap:18px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:8px;">Customs Agent Codes · 2026 YTD</div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th>Code</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">Share</th><th style="width:36%;"></th></tr></thead>
+                <tbody>
+                  <tr><td><strong style="font-family:ui-monospace,Menlo,monospace;">1633</strong></td><td style="text-align:right;font-weight:800;">11</td><td style="text-align:right;font-weight:800;color:var(--navy);">52.4%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:52.4%;background:var(--navy);"></div></div></td></tr>
+                  <tr><td><strong style="font-family:ui-monospace,Menlo,monospace;">3345</strong></td><td style="text-align:right;font-weight:800;">10</td><td style="text-align:right;font-weight:800;color:var(--navy);">47.6%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:47.6%;background:var(--teal);"></div></div></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);margin-bottom:8px;">Customs Agent Codes · 2025 · historical context</div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th>Code</th><th style="text-align:right;">Shipments</th><th style="text-align:right;">Share</th><th style="width:36%;"></th></tr></thead>
+                <tbody>
+                  <tr><td style="color:var(--text-muted);"><strong style="font-family:ui-monospace,Menlo,monospace;">1633</strong></td><td style="text-align:right;color:var(--text-muted);font-weight:700;">12</td><td style="text-align:right;color:var(--text-muted);font-weight:700;">52.2%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:52.2%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong style="font-family:ui-monospace,Menlo,monospace;">3345</strong></td><td style="text-align:right;color:var(--text-muted);font-weight:700;">10</td><td style="text-align:right;color:var(--text-muted);font-weight:700;">43.5%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:43.5%;background:#94a3b8;"></div></div></td></tr>
+                  <tr><td style="color:var(--text-muted);"><strong style="font-family:ui-monospace,Menlo,monospace;">3387</strong></td><td style="text-align:right;color:var(--text-muted);">1</td><td style="text-align:right;color:var(--text-muted);">4.3%</td><td><div style="height:6px;background:#e6eaf1;border-radius:3px;overflow:hidden;"><div style="height:100%;width:4.3%;background:#cbd5e1;"></div></div></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:12px;padding:12px 16px;background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.65;"><strong style="color:var(--navy);">AIOS Interpretation:</strong> 2026 YTD customs execution is visibly split almost evenly between codes 1633 and 3345. <strong style="color:#b45309;">No company name is mapped to any code.</strong> Discovery must validate whether this reflects gateway specialization, redundancy, supplier assignment, contract structure or another model.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 09 ROUTE PERSISTENCE / CHANGE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">09</span> Route Persistence &amp; Change — 2025 vs 2026 YTD Core Route Sets</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:12px;margin-bottom:14px;">
+          <div class="stat-box" style="border-left:3px solid #94a3b8;"><div class="stat-label">2025 · routes to cross ≥80%</div><div class="stat-value" style="font-size:24px;color:var(--text-muted);">10 <span style="font-size:13px;font-weight:700;">routes = 82.61%</span></div></div>
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">2026 YTD · routes to cross ≥80%</div><div class="stat-value" style="font-size:24px;color:var(--teal-dim);">4 <span style="font-size:13px;color:var(--text-muted);font-weight:700;">routes = 80.95%</span></div></div>
+        </div>
+        <div style="overflow-x:auto;">
+          <table class="hub-table" style="font-size:11px;">
+            <thead><tr><th style="width:38%;">Route</th><th style="width:22%;">Status</th><th>Observation</th></tr></thead>
+            <tbody>
+              <tr style="background:rgba(0,180,216,0.05);"><td><strong>Kiro / 🇪🇬 Egypt → ⚓ Altamira → Grupo Alurem</strong></td><td><span class="hub-tag air" style="font-weight:800;">Persisting Core Route</span></td><td style="color:var(--text-muted);">Visible in both periods · share <strong>34.8% in 2025 → 47.6% in 2026 YTD</strong></td></tr>
+              <tr><td><strong>Kiro / 🇪🇬 Egypt → ⚓ Manzanillo → Grupo Alurem</strong></td><td><span class="hub-tag ocean" style="font-weight:800;">Newly visible in Current YTD Core Route set</span></td><td style="color:var(--text-muted);">Not described as a new route without qualification</td></tr>
+              <tr><td><strong>Cs3 / 🇧🇷 Brazil → ⚓ Altamira</strong></td><td><span class="hub-tag unknown">Outside 2026 YTD stopping set</span></td><td style="color:var(--text-muted);">Part of the 2025 Core Route set; outside the minimum 2026 YTD ≥80% stopping set, while still having <strong>one visible 2026 YTD Shipment</strong></td></tr>
+              <tr><td><strong>Elnahar / 🇪🇬 Egypt → ⚓ Altamira</strong></td><td><span class="hub-tag unknown">Not visible in 2026 YTD</span></td><td style="color:var(--text-muted);">Part of the 2025 Core Route set; not visible in supplied 2026 YTD data</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="margin-top:12px;padding:12px 16px;background:rgba(13,43,94,0.04);border-left:3px solid var(--navy);border-radius:0 5px 5px 0;">
+          <span style="font-size:12px;font-weight:700;color:var(--navy);">AIOS Interpretation: Current YTD route structure is materially more concentrated.</span>
+          <span style="font-size:11px;color:#b45309;font-weight:700;display:block;margin-top:3px;">No cause is inferred for any route, gateway or supplier change.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10 2025 HISTORICAL STRUCTURE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">10</span> Previous Full Calendar Year — 2025 Historical Structure</div>
+      <div class="card-body">
+        <div style="font-size:10px;color:var(--text-muted);margin-bottom:10px;">Visible period <strong>2025-02-01 to 2025-12-04</strong> · historical context · <strong style="color:#b45309;">never aggregated with 2026 YTD</strong></div>
+        <div style="overflow-x:auto;">
+          <table class="hub-table" style="font-size:11px;">
+            <thead><tr><th>Dimension</th><th style="text-align:right;">2025 · Previous Full Calendar Year</th><th style="text-align:right;">2026 · Current YTD</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Import Shipments</strong></td><td style="text-align:right;color:var(--text-muted);font-weight:700;">23</td><td style="text-align:right;font-weight:800;color:var(--navy);">21</td></tr>
+              <tr><td><strong>Maritime</strong></td><td style="text-align:right;color:var(--text-muted);font-weight:700;">23 — 100.0%</td><td style="text-align:right;font-weight:800;color:var(--navy);">21 — 100.0%</td></tr>
+              <tr><td><strong>Visible CIF Value</strong></td><td style="text-align:right;color:var(--text-muted);font-weight:700;">USD 607,936.77</td><td style="text-align:right;font-weight:800;color:var(--navy);">USD 660,362.33</td></tr>
+              <tr><td><strong>Gross Weight</strong></td><td style="text-align:right;color:var(--text-muted);font-weight:700;">864,954.17 kg</td><td style="text-align:right;font-weight:800;color:var(--navy);">1,271,092 kg</td></tr>
+              <tr><td><strong>Visible Volume</strong></td><td style="text-align:right;color:var(--text-muted);font-weight:700;">78.63 TEU</td><td style="text-align:right;font-weight:800;color:var(--navy);">115.55 TEU</td></tr>
+              <tr><td><strong>Origin Countries</strong></td><td style="text-align:right;color:var(--text-muted);font-weight:700;">7</td><td style="text-align:right;font-weight:800;color:var(--navy);">6</td></tr>
+              <tr><td><strong>Visible Trading Partners</strong></td><td style="text-align:right;color:var(--text-muted);font-weight:700;">13</td><td style="text-align:right;font-weight:800;color:var(--navy);">7</td></tr>
+              <tr><td><strong>Mexican Gateways</strong></td><td style="text-align:right;color:var(--text-muted);font-weight:700;">3</td><td style="text-align:right;font-weight:800;color:var(--navy);">2</td></tr>
+              <tr><td><strong>Customs Agent Codes</strong></td><td style="text-align:right;color:var(--text-muted);font-weight:700;">3</td><td style="text-align:right;font-weight:800;color:var(--navy);">2</td></tr>
+            </tbody>
+            <tfoot><tr style="background:var(--bg);"><td colspan="3" style="font-size:10px;color:var(--text-muted);">Parallel period universes shown side by side for reference only — <strong>not a trend</strong>. The only trend statement is the same-calendar-window comparison in Module 02.</td></tr></tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- 11 2025 IMPORT CORE ROUTES — COMPLETE >=80% · PROGRESSIVE DISCLOSURE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">11</span> Previous Full Calendar Year Import Core Routes — Complete ≥80% Set · 10 Routes</div>
+      <div class="card-body">
+        <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:baseline;">
+          <div><span style="font-size:22px;font-weight:800;color:var(--text-muted);">23</span> <span style="font-size:10px;color:var(--text-muted);letter-spacing:0.5px;">SHIPMENT IMPORT UNIVERSE</span></div>
+          <div><span style="font-size:22px;font-weight:800;color:var(--text-muted);">10</span> <span style="font-size:10px;color:var(--text-muted);letter-spacing:0.5px;">ROUTES · STOPPING POINT</span></div>
+          <div><span style="font-size:22px;font-weight:800;color:var(--text-muted);">82.61%</span> <span style="font-size:10px;color:var(--text-muted);letter-spacing:0.5px;">CUMULATIVE COVERAGE</span></div>
+        </div>
+        <div style="font-size:10.5px;color:var(--text-muted);margin-top:6px;">Destination on every route: <strong>Grupo Alurem Sa De Cv</strong> — <em>401 Calzada del Valle, Nuevo León</em> · physical origin facility addresses are <strong>not available in Panjiva</strong> for these 2025 routes.</div>
+
+        <div class="outreach-step hist-appendix" style="margin-top:14px;">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)">
+            <span>View complete 2025 Import Core Route set — 10 Routes / 82.61% of 23 Shipments</span>
+            <span class="outreach-step-toggle">+</span>
+          </div>
+          <div class="outreach-step-body" style="padding:0;">
+            <div class="hist-appendix-label" style="padding:10px 16px;background:var(--bg);border-bottom:1px solid var(--border);">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-light);">Historical Core Route Appendix — 2025 Imports · Complete ≥80% Set</div>
+              <div style="font-size:10px;color:var(--text-muted);margin-top:2px;">All <strong>10</strong> routes preserved. Every route: 🚢 Maritime · destination Grupo Alurem Sa De Cv · origin address not available in Panjiva. <strong style="color:#b45309;">SHORT OBSERVATION WINDOW</strong> marks route 3 and every one-day route — their weekly cadence must not be extrapolated.</div>
+            </div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table alr-hist-table" style="font-size:11px;min-width:1080px;">
+                <thead><tr>
+                  <th style="text-align:right;">Rank</th><th>Origin Facility / Partner</th><th>Origin</th><th>Gateway</th><th>Mode</th>
+                  <th style="text-align:right;">Shipments</th><th style="text-align:right;">% Imports</th><th style="text-align:right;">Cum.</th>
+                  <th style="text-align:right;">Active Months</th><th style="text-align:right;">/ Active Month</th><th style="text-align:right;">/ Week</th><th>Visible Date Range</th>
+                </tr></thead>
+                <tbody>
+                  <tr style="background:rgba(13,43,94,0.04);"><td style="text-align:right;font-weight:800;">1</td><td><strong>Kiro Marble For Marble &amp; Granite</strong></td><td>🇪🇬 Egypt</td><td><span class="hub-tag ocean">⚓ Port</span> Altamira</td><td><span class="hub-tag ocean">Maritime</span></td><td style="text-align:right;font-weight:800;">8</td><td style="text-align:right;font-weight:800;">34.78%</td><td style="text-align:right;font-weight:800;color:var(--teal-dim);">34.78%</td><td style="text-align:right;">5</td><td style="text-align:right;">1.60</td><td style="text-align:right;">0.51</td><td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2025-08-18 → 2025-12-04</td></tr>
+                  <tr><td style="text-align:right;font-weight:800;">2</td><td><strong>Cs3 Marmores E Granitos Ltda</strong></td><td>🇧🇷 Brazil</td><td><span class="hub-tag ocean">⚓ Port</span> Altamira</td><td><span class="hub-tag ocean">Maritime</span></td><td style="text-align:right;font-weight:800;">2</td><td style="text-align:right;font-weight:800;">8.70%</td><td style="text-align:right;font-weight:800;color:var(--teal-dim);">43.48%</td><td style="text-align:right;">2</td><td style="text-align:right;">1.00</td><td style="text-align:right;">0.41</td><td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2025-02-01 → 2025-03-06</td></tr>
+                  <tr><td style="text-align:right;font-weight:800;">3</td><td><strong>Elnahar Co. For Marble &amp; Granite</strong></td><td>🇪🇬 Egypt</td><td><span class="hub-tag ocean">⚓ Port</span> Altamira</td><td><span class="hub-tag ocean">Maritime</span></td><td style="text-align:right;font-weight:800;">2</td><td style="text-align:right;font-weight:800;">8.70%</td><td style="text-align:right;font-weight:800;color:var(--teal-dim);">52.17%</td><td style="text-align:right;">1</td><td style="text-align:right;">2.00</td><td style="text-align:right;font-weight:800;">14.00<div class="alr-sow-mini">SHORT OBSERVATION WINDOW</div></td><td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2025-03-31</td></tr>
+                  <tr><td style="text-align:right;">4</td><td>Bizzarri Srl .</td><td>🇮🇹 Italy</td><td><span class="hub-tag ocean">⚓ Port</span> Altamira</td><td><span class="hub-tag ocean">Maritime</span></td><td style="text-align:right;">1</td><td style="text-align:right;">4.35%</td><td style="text-align:right;color:var(--teal-dim);">56.52%</td><td style="text-align:right;">1</td><td style="text-align:right;">1.00</td><td style="text-align:right;font-weight:800;">7.00<div class="alr-sow-mini">SHORT OBSERVATION WINDOW</div></td><td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2025-09-22</td></tr>
+                  <tr><td style="text-align:right;">5</td><td>Bramagran Brasileiro Marmore E Granito Ltda</td><td>🇧🇷 Brazil</td><td><span class="hub-tag ocean">⚓ Port</span> Altamira</td><td><span class="hub-tag ocean">Maritime</span></td><td style="text-align:right;">1</td><td style="text-align:right;">4.35%</td><td style="text-align:right;color:var(--teal-dim);">60.87%</td><td style="text-align:right;">1</td><td style="text-align:right;">1.00</td><td style="text-align:right;font-weight:800;">7.00<div class="alr-sow-mini">SHORT OBSERVATION WINDOW</div></td><td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2025-08-25</td></tr>
+                  <tr><td style="text-align:right;">6</td><td>Gramazini Granitose Marmores Thomazini Ltda</td><td>🇧🇷 Brazil</td><td><span class="hub-tag ocean">⚓ Port</span> Altamira</td><td><span class="hub-tag ocean">Maritime</span></td><td style="text-align:right;">1</td><td style="text-align:right;">4.35%</td><td style="text-align:right;color:var(--teal-dim);">65.22%</td><td style="text-align:right;">1</td><td style="text-align:right;">1.00</td><td style="text-align:right;font-weight:800;">7.00<div class="alr-sow-mini">SHORT OBSERVATION WINDOW</div></td><td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2025-07-23</td></tr>
+                  <tr><td style="text-align:right;">7</td><td>Granitos Colodetti S.A.</td><td>🇧🇷 Brazil</td><td><span class="hub-tag ocean">⚓ Port</span> Altamira</td><td><span class="hub-tag ocean">Maritime</span></td><td style="text-align:right;">1</td><td style="text-align:right;">4.35%</td><td style="text-align:right;color:var(--teal-dim);">69.57%</td><td style="text-align:right;">1</td><td style="text-align:right;">1.00</td><td style="text-align:right;font-weight:800;">7.00<div class="alr-sow-mini">SHORT OBSERVATION WINDOW</div></td><td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2025-02-04</td></tr>
+                  <tr><td style="text-align:right;">8</td><td>Industria De Marm. E Gran. Pedra Do Frade Ltda</td><td>🇧🇷 Brazil</td><td><span class="hub-tag ocean">⚓ Port</span> Altamira</td><td><span class="hub-tag ocean">Maritime</span></td><td style="text-align:right;">1</td><td style="text-align:right;">4.35%</td><td style="text-align:right;color:var(--teal-dim);">73.91%</td><td style="text-align:right;">1</td><td style="text-align:right;">1.00</td><td style="text-align:right;font-weight:800;">7.00<div class="alr-sow-mini">SHORT OBSERVATION WINDOW</div></td><td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2025-02-27</td></tr>
+                  <tr><td style="text-align:right;">9</td><td>Levantina Techlam S.L.U</td><td>🇪🇸 Spain</td><td><span class="hub-tag ocean">⚓ Port</span> Altamira</td><td><span class="hub-tag ocean">Maritime</span></td><td style="text-align:right;">1</td><td style="text-align:right;">4.35%</td><td style="text-align:right;color:var(--teal-dim);">78.26%</td><td style="text-align:right;">1</td><td style="text-align:right;">1.00</td><td style="text-align:right;font-weight:800;">7.00<div class="alr-sow-mini">SHORT OBSERVATION WINDOW</div></td><td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2025-07-15</td></tr>
+                  <tr style="background:rgba(0,180,216,0.05);"><td style="text-align:right;">10</td><td>Magban Marmores E Granitos Aquidaban Ltda</td><td>🇧🇷 Brazil</td><td><span class="hub-tag ocean">⚓ Port</span> Altamira</td><td><span class="hub-tag ocean">Maritime</span></td><td style="text-align:right;">1</td><td style="text-align:right;">4.35%</td><td style="text-align:right;font-weight:800;color:var(--teal-dim);">82.61%</td><td style="text-align:right;">1</td><td style="text-align:right;">1.00</td><td style="text-align:right;font-weight:800;">7.00<div class="alr-sow-mini">SHORT OBSERVATION WINDOW</div></td><td style="font-size:10px;color:var(--text-muted);white-space:nowrap;">2025-09-19</td></tr>
+                </tbody>
+                <tfoot><tr style="background:var(--bg);"><td colspan="7" style="font-weight:800;color:var(--text-muted);">Complete ≥80% 2025 Import Core Route set · 10 routes</td><td style="text-align:right;font-weight:800;color:var(--teal-dim);">82.61%</td><td colspan="4" style="font-size:10px;color:var(--text-muted);">Observed Route Cadence reflects each route's own visible date window — never normalized</td></tr></tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:12px;padding:14px 18px;border:1px dashed #94a3b8;border-radius:8px;background:rgba(107,114,128,0.04);">
+          <div style="font-size:9px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;color:#b45309;">Previous Full Calendar Year Export Core Routes</div>
+          <div style="font-size:14px;font-weight:800;color:var(--navy);margin-top:2px;">Export Core Routes — Data not available in supplied Panjiva file</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12 OPPORTUNITY MAPPING -->
+    <div class="card">
+      <div class="card-header"><span class="accent">12</span> Opportunity Mapping — Signal · Interpretation · Validation</div>
+      <div class="card-body" style="padding:0;">
+        <div style="overflow-x:auto;">
+          <table class="hub-table alr-opp-table" style="font-size:11px;min-width:900px;">
+            <thead><tr>
+              <th style="width:30%;">Observed Operational Signal <span style="font-weight:600;color:var(--text-light);">— Panjiva Fact</span></th>
+              <th style="width:32%;">AIOS Interpretation</th>
+              <th style="width:38%;">Discovery Validation <span style="font-weight:600;color:var(--text-light);">— must be confirmed</span></th>
+            </tr></thead>
+            <tbody>
+              <tr style="background:rgba(13,43,94,0.03);">
+                <td><strong style="color:var(--navy);">Ocean Coordination.</strong> <strong>100% Maritime</strong> in 2026 YTD · <strong>Altamira + Manzanillo</strong></td>
+                <td style="color:var(--text-muted);">Booking governance, sailing visibility, port milestones and exception handling are credible conversation areas.</td>
+                <td style="color:var(--text-muted);">Incumbent forwarder · ocean contracts · booking ownership · KPI performance · demurrage / detention · exception frequency · willingness to change</td>
+              </tr>
+              <tr>
+                <td><strong style="color:var(--navy);">Supplier Coordination.</strong> <strong>7</strong> visible Trading Partners · <strong>6</strong> origin countries · Kiro <strong>57.1%</strong></td>
+                <td style="color:var(--text-muted);">Supplier readiness and centralized origin coordination may have value.</td>
+                <td style="color:var(--text-muted);">Supplier readiness ownership · handoff process · documentation control · booking instruction flow · escalation model</td>
+              </tr>
+              <tr style="background:rgba(0,180,216,0.04);">
+                <td><strong style="color:var(--navy);">Customs &amp; Port Visibility.</strong> <strong>2</strong> Ports · <strong>2</strong> Customs Agent codes</td>
+                <td style="color:var(--text-muted);">Centralized milestone and exception visibility may reduce coordination fragmentation if current execution is distributed.</td>
+                <td style="color:var(--text-muted);">Broker governance · pre-clearance · document quality · release KPIs · escalation · contingency</td>
+              </tr>
+              <tr>
+                <td><strong style="color:var(--navy);">ILM / Control Tower.</strong> Multiple origins · concentrated Trading Partner structure · <strong>2</strong> Ports · <strong>2</strong> Customs Agent codes</td>
+                <td style="color:var(--text-muted);">Credible centralized visibility and exception-management conversation.</td>
+                <td style="color:var(--text-muted);">Current visibility stack · end-to-end ownership · KPI governance · supplier performance · exception workflow · Control Tower readiness</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="padding:12px 18px;border-top:1px solid var(--border);">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.65;">The three layers stay separate. <strong style="color:#b45309;">This page never states that Grupo Alurem currently lacks any of these capabilities.</strong></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 13 DISCOVERY HYPOTHESES -->
+    <div class="card">
+      <div class="card-header"><span class="accent">13</span> Discovery Hypotheses — Requires Validation</div>
+      <div class="card-body">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:12px;">
+          <div class="alr-hyp">
+            <div class="alr-hyp-tag">Discovery Hypothesis — Requires validation</div>
+            <div class="alr-hyp-title">Supplier Concentration Governance</div>
+            <div class="alr-hyp-sig">Observed Signal: <strong>Kiro = 57.1% of 2026 YTD Shipments</strong></div>
+            <p><strong>Hypothesis:</strong> Kiro may be operationally important enough to merit dedicated supplier-performance and contingency governance.</p>
+            <p class="alr-hyp-no"><strong>Data does not establish:</strong> sole-source status · contractual dependency · customer pain · operational risk</p>
+            <p><strong>Discovery:</strong> contract structure · alternatives · allocation · KPIs · exception rate · contingency</p>
+          </div>
+          <div class="alr-hyp">
+            <div class="alr-hyp-tag">Discovery Hypothesis — Requires validation</div>
+            <div class="alr-hyp-title">Dual-Port Governance</div>
+            <div class="alr-hyp-sig">Observed Signal: <strong>Altamira 66.7% / Manzanillo 33.3%</strong></div>
+            <p><strong>Hypothesis:</strong> Port selection may reflect supplier geography, carrier/service selection, cost or contingency.</p>
+            <p class="alr-hyp-no"><strong>Data does not establish:</strong> why each Port is selected</p>
+            <p><strong>Discovery:</strong> routing decision rights · carrier contracts · Port KPIs · contingency rules · escalation</p>
+          </div>
+          <div class="alr-hyp">
+            <div class="alr-hyp-tag">Discovery Hypothesis — Requires validation</div>
+            <div class="alr-hyp-title">Customs Governance</div>
+            <div class="alr-hyp-sig">Observed Signal: <strong>Customs Agent codes 1633 / 3345 split 52.4% / 47.6%</strong></div>
+            <p><strong>Hypothesis:</strong> there may be deliberate specialization or redundancy.</p>
+            <p class="alr-hyp-no"><strong>Data does not establish:</strong> broker names · contracts · performance · allocation rules</p>
+            <p><strong>Discovery:</strong> broker ownership · SLAs · pre-alert process · issue management · backup model</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 14 DATA QUALITY / ENTITY RESOLUTION -->
+    <div class="card">
+      <div class="card-header"><span class="accent">14</span> Data Quality / Entity Resolution Hypothesis — Requires Validation</div>
+      <div class="card-body">
+        <div style="padding:14px 18px;background:rgba(245,158,11,0.06);border:1px solid rgba(245,158,11,0.4);border-radius:8px;">
+          <div style="font-size:10px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;color:#b45309;">Data Quality / Entity Resolution Hypothesis — Requires validation</div>
+          <p style="font-size:12.5px;font-weight:700;color:var(--navy);line-height:1.65;margin-top:6px;">Panjiva shows Egypt as Shipment Origin while several Kiro records contain a United States shipper-country/address reference. AIOS preserves both source fields. Physical origin facility requires validation before facility-level commercial use.</p>
+          <div class="grid-2" style="gap:10px;margin-top:12px;">
+            <div style="padding:10px 14px;background:var(--surface);border:1px solid var(--border);border-radius:6px;">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);">Panjiva field · Shipment Origin</div>
+              <div style="font-size:15px;font-weight:800;color:var(--navy);margin-top:3px;">🇪🇬 Egypt</div>
+            </div>
+            <div style="padding:10px 14px;background:var(--surface);border:1px solid var(--border);border-radius:6px;">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);">Panjiva field · Shipper Country / Shipper Full Address</div>
+              <div style="font-size:15px;font-weight:800;color:var(--navy);margin-top:3px;">🇺🇸 United States <span style="font-size:10.5px;font-weight:600;color:var(--text-muted);">· on several Kiro records</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-2" style="gap:12px;margin-top:12px;">
+          <div style="padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:6px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#b45309;margin-bottom:5px;">Possible explanations — hypotheses only, all require validation</div>
+            <ul class="q-list" style="font-size:11px;line-height:1.75;color:var(--text-muted);">
+              <li>Corporate vs physical origin attribution</li>
+              <li>Intermediary</li>
+              <li>Source-data normalization</li>
+              <li>Entity-resolution issue</li>
+            </ul>
+          </div>
+          <div style="padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:6px;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--navy);margin-bottom:5px;">Governance applied</div>
+            <span style="font-size:11px;color:var(--text-muted);line-height:1.65;">Neither field is suppressed. Kiro is <strong>not relocated</strong>, no Egyptian address is fabricated, and Kiro routes keep <strong>Address not available in Panjiva</strong> at facility level.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 15 MULTIMODAL / ILM / CONTROL TOWER OPPORTUNITY -->
+    <div class="card">
+      <div class="card-header"><span class="accent">15</span> Multimodal &amp; ILM / Control Tower Opportunity</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:12px;">
+          <div style="padding:14px 18px;background:linear-gradient(135deg,rgba(0,180,216,0.08) 0%,rgba(13,43,94,0.04) 100%);border-left:3px solid var(--teal);border-radius:0 6px 6px 0;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal-dim);">AIOS Assessment</div>
+            <div style="font-size:19px;font-weight:800;color:var(--navy);line-height:1.3;margin-top:3px;">ILM / Control Tower: <span style="color:var(--teal-dim);">MEDIUM-HIGH</span></div>
+            <div style="font-size:10.5px;color:var(--text-muted);margin-top:4px;">Akzent positioned as a coordination layer.</div>
+          </div>
+          <div style="padding:14px 18px;background:rgba(13,43,94,0.04);border-left:3px solid var(--navy);border-radius:0 6px 6px 0;">
+            <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);">AIOS Assessment</div>
+            <div style="font-size:19px;font-weight:800;color:var(--navy);line-height:1.3;margin-top:3px;">Multimodal Opportunity: MEDIUM</div>
+            <div style="font-size:10.5px;color:#b45309;font-weight:700;margin-top:4px;">Not evidenced beyond Ocean in supplied data</div>
+          </div>
+        </div>
+
+        <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--navy);margin:16px 0 9px;">Credible ILM / Control Tower scope</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          <span class="alr-scope">Supplier readiness</span><span class="alr-scope">Shipment planning</span><span class="alr-scope">Booking coordination</span><span class="alr-scope">Carrier / forwarder coordination</span><span class="alr-scope">Customs milestones</span><span class="alr-scope">Port visibility</span><span class="alr-scope">Document control</span><span class="alr-scope">Exception management</span><span class="alr-scope">Centralized communication</span><span class="alr-scope">Trading Partner performance</span><span class="alr-scope">Route performance</span><span class="alr-scope">Gateway performance</span><span class="alr-scope">Contingency governance</span>
+        </div>
+
+        <div style="margin-top:14px;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:6px;">
+          <div style="font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-light);margin-bottom:5px;">Multimodal — unknowns for Discovery (no visible Air, Truck or Rail flows claimed)</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;">
+            <span class="hub-tag unknown">Domestic drayage</span><span class="hub-tag unknown">Urgent Air replenishment</span><span class="hub-tag unknown">Cross-border supplier activity</span><span class="hub-tag unknown">Truck / Rail legs outside the supplied dataset</span><span class="hub-tag unknown">Port-to-warehouse coordination</span>
+          </div>
+          <span style="font-size:10.5px;color:var(--text-muted);display:block;margin-top:8px;">Akzent has multimodal capability; these are conversation areas only. <strong style="color:#b45309;">This page does not imply that Grupo Alurem has no Control Tower or visibility capability.</strong></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 16 COMMERCIAL POSITIONING -->
+    <div class="card">
+      <div class="card-header"><span class="accent">16</span> Commercial Positioning</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:14px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:9px;">Position Akzent as</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+              <div style="padding:12px 14px;background:rgba(0,180,216,0.06);border:1px solid rgba(0,180,216,0.3);border-radius:7px;font-size:12.5px;font-weight:800;color:var(--navy);">Operational Complexity Partner</div>
+              <div style="padding:12px 14px;background:rgba(0,180,216,0.06);border:1px solid rgba(0,180,216,0.3);border-radius:7px;font-size:12.5px;font-weight:800;color:var(--navy);">Multimodal Coordination Partner</div>
+              <div style="padding:12px 14px;background:rgba(0,180,216,0.06);border:1px solid rgba(0,180,216,0.3);border-radius:7px;font-size:12.5px;font-weight:800;color:var(--navy);">Customs &amp; Visibility Partner</div>
+              <div style="padding:12px 14px;background:rgba(0,180,216,0.06);border:1px solid rgba(0,180,216,0.3);border-radius:7px;font-size:12.5px;font-weight:800;color:var(--navy);">ILM / Control Tower Partner</div>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--red);margin-bottom:9px;">Do not position Akzent as</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;">
+              <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);font-size:11px;padding:5px 10px;">✕ Transactional freight provider</span>
+              <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);font-size:11px;padding:5px 10px;">✕ Commodity transportation provider</span>
+              <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);font-size:11px;padding:5px 10px;">✕ Spot-rate provider</span>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:14px;padding:16px 20px;background:linear-gradient(135deg,rgba(13,43,94,0.05) 0%,rgba(0,180,216,0.06) 100%);border-left:3px solid var(--navy);border-radius:0 6px 6px 0;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);margin-bottom:7px;">Recommended commercial message</div>
+          <p style="font-size:13.5px;font-weight:700;color:var(--navy);line-height:1.7;max-width:1060px;">The visible import network is highly ocean-centric, with recurring supplier flows, two active Mexican Ports and split customs execution. Akzent’s strongest fit is to coordinate suppliers, ocean milestones, customs visibility and exceptions through one operational layer.</p>
+          <span style="font-size:10.5px;color:var(--text-muted);display:block;margin-top:6px;">A prospective conversation angle — <strong style="color:#b45309;">it does not imply that Akzent currently manages Grupo Alurem</strong>.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 17 DISCOVERY INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">17</span> Discovery Intelligence — Validate Unknowns, Not the Visible</div>
+      <div class="card-body" style="padding:12px 18px;">
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:#b45309;">Do not ask Grupo Alurem for principal visible modes, countries, Ports or routes — Panjiva already reveals them.</strong></span>
+      </div>
+      <div class="card-body">
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)">
+            <span>Orchestration ownership &amp; ocean capacity — Questions 1–2</span>
+            <span class="outreach-step-toggle">+</span>
+          </div>
+          <div class="outreach-step-body">
+            <ul class="q-list" style="font-size:11.5px;line-height:1.8;">
+              <li><strong>1.</strong> Who owns end-to-end import orchestration?</li>
+              <li><strong>2.</strong> Is ocean capacity contracted directly, via forwarders or supplier-controlled?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)">
+            <span>Port, customs &amp; exception governance — Questions 3–7</span>
+            <span class="outreach-step-toggle">+</span>
+          </div>
+          <div class="outreach-step-body">
+            <ul class="q-list" style="font-size:11.5px;line-height:1.8;">
+              <li><strong>3.</strong> What KPIs govern Altamira and Manzanillo performance?</li>
+              <li><strong>4.</strong> How are rollovers, demurrage, detention and document exceptions escalated?</li>
+              <li><strong>5.</strong> What determines Port selection?</li>
+              <li><strong>6.</strong> How are Customs Agent codes 1633 and 3345 allocated?</li>
+              <li><strong>7.</strong> Is there a formal backup broker / gateway / carrier model?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)">
+            <span>Supplier readiness, visibility &amp; performance review — Questions 8–11</span>
+            <span class="outreach-step-toggle">+</span>
+          </div>
+          <div class="outreach-step-body">
+            <ul class="q-list" style="font-size:11.5px;line-height:1.8;">
+              <li><strong>8.</strong> Who owns supplier readiness and document completeness?</li>
+              <li><strong>9.</strong> What visibility platform or Control Tower is used?</li>
+              <li><strong>10.</strong> Are supplier, route, broker and gateway performance reviewed centrally?</li>
+              <li><strong>11.</strong> Which exceptions or manual processes consume the most team time?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outreach-step">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)">
+            <span>Provider change, procurement &amp; Kiro — Questions 12–15</span>
+            <span class="outreach-step-toggle">+</span>
+          </div>
+          <div class="outreach-step-body">
+            <ul class="q-list" style="font-size:11.5px;line-height:1.8;">
+              <li><strong>12.</strong> What would have to improve for Grupo Alurem to add or change a logistics partner?</li>
+              <li><strong>13.</strong> What is the procurement / tender cycle and who approves providers?</li>
+              <li><strong>14.</strong> Is Kiro managed under a dedicated commercial or logistics arrangement?</li>
+              <li><strong>15.</strong> What is the actual physical Kiro origin facility for records where Panjiva shows Egypt as Shipment Origin but a U.S. shipper-country/address reference?</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 18 DATA AVAILABILITY -->
+    <div class="card">
+      <div class="card-header"><span class="accent">18</span> Data Availability &amp; Governance</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:14px;">
+          <div style="padding:14px 18px;background:rgba(0,180,216,0.05);border:1px solid rgba(0,180,216,0.3);border-radius:8px;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dim);margin-bottom:8px;">Available in the supplied Panjiva file</div>
+            <div style="display:flex;flex-wrap:wrap;gap:5px;">
+              <span class="hub-tag air">Shipment dates</span><span class="hub-tag air">Consignee</span><span class="hub-tag air">Consignee address field</span><span class="hub-tag air">Shipper / Trading Partner</span><span class="hub-tag air">Partial shipper geography</span><span class="hub-tag air">Shipment Origin</span><span class="hub-tag air">Port of Unlading</span><span class="hub-tag air">Transport Method</span><span class="hub-tag air">Customs Regime</span><span class="hub-tag air">Customs Agent code</span><span class="hub-tag air">TEU</span><span class="hub-tag air">Gross weight</span><span class="hub-tag air">CIF value</span><span class="hub-tag air">Freight value MXN</span><span class="hub-tag air">Exchange rate</span><span class="hub-tag air">Item Origin</span><span class="hub-tag air">HS Code</span><span class="hub-tag air">Goods Shipped</span><span class="hub-tag air">Quantity / unit</span><span class="hub-tag air">Item CIF value</span>
+            </div>
+          </div>
+          <div style="padding:14px 18px;background:rgba(245,158,11,0.05);border:1px solid rgba(245,158,11,0.32);border-radius:8px;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#b45309;margin-bottom:8px;">Missing / not supplied — never invented</div>
+            <div style="display:flex;flex-wrap:wrap;gap:5px;">
+              <span class="hub-tag unknown">Panjiva Exports</span><span class="hub-tag unknown">Export Core Routes</span><span class="hub-tag unknown">Carrier field</span><span class="hub-tag unknown">Incoterms</span><span class="hub-tag unknown">Explicit IMMEX field</span><span class="hub-tag unknown">Physical origin address for most Trading Partners</span><span class="hub-tag unknown">Destination city / postal code beyond the Panjiva fields</span><span class="hub-tag unknown">Provider contracts</span><span class="hub-tag unknown">KPI performance</span><span class="hub-tag unknown">Customer pain</span><span class="hub-tag unknown">Incumbent ownership</span><span class="hub-tag unknown">Capacity commitments</span><span class="hub-tag unknown">Akzent captured business</span>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:14px;padding:13px 18px;border-top:1px solid var(--border);background:var(--bg);border-radius:6px;">
+          <span style="font-size:10.5px;color:var(--text-muted);line-height:1.7;"><strong style="color:var(--navy);">Panjiva is the Visible Logistics Universe and the sole source for this LEAD analysis.</strong> Every figure is AIOS-finalized and rendered without recalculation, estimation, annualization or normalization. Evidence labels used on this page: <strong>Panjiva Fact</strong> · <strong>AIOS Calculation</strong> · <strong>AIOS Interpretation</strong> · <strong>Discovery Hypothesis — Requires validation</strong> · <strong>Data Quality / Entity Resolution Hypothesis — Requires validation</strong>. No Akzent performance metric, no Commercial Route Priority and no numerical Complexity Score is shown. Any future non-Panjiva location would carry the label <strong>AIOS-enriched location — Requires validation</strong>.</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 </main>
 
 <script>
@@ -71405,6 +72440,7 @@ const ACCOUNTS = [
   { id:'view-uflex-woven-bags', name:'UFLEX Woven Bags', sub:'UFLEX WOVEN BAGS S.A. DE C.V. · Target Account · LEAD · AA Priority Target · Flexible Packaging &amp; Woven Bag Manufacturing · Tampico, Tamaulipas · Relationship LEAD · AIOS Classification AA Priority Target · Operational Complexity HIGH · Source of truth Panjiva only · Visible Logistics Universe Mexico Imports and Exports · Imports 162 visible Shipments 07-Jan-2025 to 31-Jul-2026 · Exports 44 visible Shipments 06-Aug-2025 to 31-Jul-2026 · Panjiva export visibility begins 06-Aug-2025 so the 2025 export block is Historical Visible Export Structure Aug-Dec 2025 only and is never treated as a complete Previous Full Calendar Year · 2025 baseline Imports 94 · 2025 visible Exports 12 Aug-Dec only · Current YTD 01-Jan to 31-Jul-2026 total 100 Shipments · Imports 68 · Exports 32 · never annualized · Comparable Jan 1-Jul 31 actual-vs-actual Imports 40 to 68 +70.0% · CIF USD 13.145M to USD 1.512M -88.5% · Gross weight 549,116 kg to 179,933 kg -67.2% · Import modal share Air 37.5% to 52.9% Truck 22.5% to 36.8% Maritime 40.0% to 10.3% · No Jan-Jul 2025 exports visible so no export comparable-period trend and no export growth claim · Current YTD Import modes Air 36 (52.9%) Truck 25 (36.8%) Maritime 7 (10.3%) · Current YTD Export mode Truck 32 (100%) · 2025 Import modes Air 46 Maritime 26 Truck 22 · Aug-Dec 2025 Export mode Truck 12 · Current YTD Import Core Routes 13 to 80.9% · leading route 25.0% Pacificolor Reynosa Truck · no EXTREME ROUTE CONCENTRATION inbound · Current YTD Export Core Routes 1 to 84.4% EXTREME ROUTE CONCENTRATION · 2025 Import Core Routes 37 to 80.9% · leading route 7.4% Uflex Ltd. Packaging AICM Air · Aug-Dec 2025 Export Core Route 1 to 83.3% EXTREME ROUTE CONCENTRATION · Persisting Core Route across both visible export periods · Visible Import CIF USD 1.512M Current YTD and USD 17.335M in 2025 · Visible Export CIF USD 2.314M Current YTD and USD 311,902 in Aug-Dec 2025 · Import gross weight 179,933 kg Current YTD and 750,616 kg in 2025 · Export gross weight 424,701 kg Current YTD and 57,318 kg in Aug-Dec 2025 · Current YTD Import gateways Aeropuerto Internacional General Mariano Escobedo Apodaca Nuevo Leon Airport 28 (41.2%) Ciudad Reynosa Tamaulipas Border 24 (35.3%) Aeropuerto Internacional de la Ciudad de Mexico Airport 8 (11.8%) Altamira Tamaulipas Port 5 (7.4%) Manzanillo Colima Port 2 (2.9%) Ciudad Hidalgo Chiapas Border 1 (1.5%) · MTY Airport plus Reynosa 76.5% · Current YTD Export gateways Nuevo Laredo Tamaulipas 27 (84.4%) Reynosa Tamaulipas 5 (15.6%) · EXTREME EXPORT GATEWAY CONCENTRATION Nuevo Laredo · Import Core Route origins Pacificolor LLC 1547 W 2290 S Woods Cross Utah 84087 United States · Spilker Precision International GmbH Germany · Uflex Ltd. Packaging Division India · Shubhamin South Korea · Uflex Ltd. India · Rossi North America 3355 Martin Farm Road Suite 400 Suwanee Georgia 30024 United States · B &amp; B Verpackungstechnik GmbH Germany · Flex P. Films Egypt S.A.E. Panjiva address as supplied · Tex Year Industries Inc. Wuquan 6th Road Wugu District New Taipei City Taiwan 248 · Uflex Ltd. Cylinder Division India · Uflex Ltd. Packaging Division India Italy · B &amp; B Verpackungstechnik GmbH Austria Germany United States · Bb Verpackungstechnik GmbH Kupferstrasse 18 Hopsten Germany · common Import destination facility UFLEX Woven Bags 301 1a. Avenida Tamaulipas · Export Core Route UFLEX Woven Bags 1a. Avenida 301 Smith 89140 Tampico Tamps. Mexico to Nuevo Laredo to Uflex Packaging Inc. 55 Challenger Road Suite 203 Ridgefield Park NJ 07660 United States Truck 27 Shipments 7 active months 3.86 per month 0.91 per week 06-Jan to 31-Jul-2026 · Route persistence Pacificolor 2025 MTY Airport Air 3 Shipments to Current YTD Reynosa Truck 17 Shipments same named Trading Partner different visible gateway and mode cause not established · Spilker Germany to MTY Airport persists · Current YTD Import Trading Partners Pacificolor LLC 18 · Spilker Precision International GmbH 10 · Uflex Ltd. Packaging Division 8 · Shubhamin 4 · Rossi North America 4 · Uflex Ltd. 4 · B &amp; B Verpackungstechnik GmbH 3 · Top 3 concentration 52.9% · Top 5 concentration 64.7% · ranks 4-6 tied at 4 Shipments · Current YTD Export Trading Partner Uflex Packaging Inc. 32 of 32 operational presence 100% · shared Uflex naming so not automatically classified as an external Customer · Discovery Hypothesis visible Uflex-named Trading Partners may represent affiliate intercompany sourcing relationships requires validation · Panjiva does not establish corporate ownership structure transfer-pricing model procurement ownership logistics provider ownership or centralized versus local contracting · Current YTD Import Customs Agent codes 1488 24 · 3600 23 · 3752 9 · 3341 7 · 1637 3 · 3441 2 · Current YTD Export Customs Agent codes 1637 27 · 1488 5 · Customs Regime Final Import Export on all supplied Current YTD Shipments · no separate IMMEX field supplied so no IMMEX participation inferred · Current YTD Import HS 3926909999 flexographic plastic templates 17 (25.0%) · 8443999999 printing machine components 10 (14.7%) · 7607110100 laminated aluminum foil 5 (7.4%) · 3921909999 polypropylene rolls 4 (5.9%) · 3919100100 self-adhesive tape labels 4 (5.9%) · 2025 Import HS 8477809903 polypropylene bag manufacturing line 13 (13.8%) · 3920200501 BOPP film 9 (9.6%) · 3921909999 plastic polypropylene rolls 9 (9.6%) · 3902100100 polypropylene resins 7 (7.4%) · 8443999999 printing equipment parts 6 (6.4%) · Export HS 3923210100 BOLSAS PARA EMPACAR 12 of 12 (100%) Aug-Dec 2025 and 32 of 32 (100%) Current YTD · HS counts represent operational presence and are not additive · Data quality and entity resolution requires validation · entity name variants B &amp; B Verpackungstechnik GmbH / B&amp;B Verpackungstechnik / Bb Verpackungstechnik GmbH · Uflex Ltd. and its Packaging Cylinder Films and Engineering division labels preserved separately · Spilker shown with both Germany and United States geography · country-only facility precision · multi-country source geography such as Belgium Italy and India Taiwan preserved intact and never converted into additive country totals · short observation window routes at 7.00 Shipments per week must not be extrapolated · per-route cadence not supplied for the 2025 historical Import Core Route set so those columns are omitted rather than estimated · per-partner and per-customs-code percentage shares not supplied and not derived · Operational Complexity Partner · Multimodal Coordination Partner · Customs &amp; Visibility Partner · ILM / Control Tower Partner · Panjiva Visible Logistics Universe · Air · Ocean · Cross-Border · Customs · ILM / Control Tower', rel:'LEAD', cls:'AA', clsPill:'aa' },
   { id:'view-kus', name:'KUS Autopartes de México', sub:'Target Account &middot; LEAD &middot; AAA Strategic Target &middot; KUS AUTOPARTES DE M&Eacute;XICO S. DE R.L. DE C.V. &middot; Automotive Components &middot; Sensor / Measurement and Plastic Component Inputs &middot; Cd Gral Escobedo Nuevo Le&oacute;n &middot; Relationship LEAD &middot; AIOS Classification AAA &middot; Operational Complexity HIGH &middot; Source of truth Panjiva only &middot; Visible Logistics Universe Mexico Imports and Exports &middot; Current YTD 02-Jan to 31-Jul-2026 total 640 Shipments &middot; Exports 498 (77.8%) &middot; Imports 142 (22.2%) &middot; never annualized &middot; Previous Full Calendar Year 2025 total 966 Shipments &middot; Exports 729 (75.5%) &middot; Imports 237 (24.5%) &middot; visible 02-Jan to 30/26-Dec-2025 &middot; Comparable Jan-Jul actual-vs-actual total 616 to 640 +3.9% &middot; Imports 151 to 142 -6.0% &middot; Exports 465 to 498 +7.1% &middot; Visible CIF USD 37.55M to USD 37.07M -1.3% &middot; Current YTD visible CIF USD 37.07M &middot; gross weight 4.34M kg &middot; 2025 visible CIF USD 56.08M &middot; gross weight 7.48M kg &middot; Current YTD Import CIF USD 14.90M weight 2.02M kg &middot; Export CIF USD 22.17M weight 2.33M kg &middot; 2025 Import CIF USD 20.80M weight 3.58M kg &middot; Export CIF USD 35.28M weight 3.91M kg &middot; Current YTD Export modes Truck 438 Unknown 38 Maritime 20 Air 2 &middot; Current YTD Import modes Maritime 52 Air 41 Truck 34 Unknown 15 &middot; Air 28.9% of Current YTD Imports &middot; other per-mode percentage shares not supplied and not derived &middot; Unknown mode preserved and never redistributed &middot; Comparable modal Imports Maritime 65 to 52 Air 33 to 41 Truck 26 to 34 Unknown 27 to 15 &middot; Comparable modal Exports Truck 412 to 438 Maritime 15 to 20 Unknown 27 to 38 Air 11 to 2 &middot; Current YTD Import Core Routes 6 to 81.0% &middot; leading route 32.4% Tuen Mun Hong Kong Manzanillo Maritime &middot; Current YTD Export Core Routes 2 to 86.9% HIGH ROUTE CONCENTRATION &middot; 2025 Import Core Routes 8 to 81.4% &middot; leading route 21.9% Tuen Mun Manzanillo Maritime &middot; 2025 Export Core Routes 2 to 87.1% &middot; Current YTD Import gateways Manzanillo Colima Port 53 (37.3%) Nuevo Laredo Tamaulipas Border 46 (32.4%) General Mariano Escobedo Airport Apodaca 41 (28.9%) Colombia Nuevo Le&oacute;n Border 2 (1.4%) &middot; Current YTD Export gateways Nuevo Laredo Border 475 (95.4%) Altamira Port 19 (3.8%) Monterrey Panjiva gateway label 2 (0.4%) Manzanillo Port 1 (0.2%) San Felipe Panjiva gateway label 1 (0.2%) &middot; STRUCTURAL BORDER DEPENDENCY Nuevo Laredo &middot; principal Import Trading Partner Kusauto (Hong Kong) International Ltd. 120 of 142 84.5% &middot; principal Export Trading Partner Kus Americas Inc. 457 of 498 91.8% &middot; Current YTD Import Core Route origins Kusauto (Hong Kong) International Ltd. Tuen Mun Hong Kong &middot; Kusauto HK Tak Lee Industrial Centre Block B 8 Tsing Yeung Circuit Tuen Mun Hong Kong &middot; Kusauto HK China &middot; Trading Partner not available in Panjiva United States &middot; Trading Partner not available in Panjiva Canada United States &middot; Kusauto HK United States &middot; common Import destination facility KUS M&eacute;xico 310-B Manuel Barrag&aacute;n Nuevo Le&oacute;n &middot; exact Export origin KUS M&eacute;xico Manuel Barrag&aacute;n 310-B Joyas de Anahuac 66055 Cd Gral Escobedo N.L. Mexico &middot; Export Core Route 1 to Nuevo Laredo to Kus Americas Inc. 3350 Davie Rd Ste 203 Davie Florida 33314-1648 United States Truck 257 Shipments 51.6% 7 active months 36.71 per month 8.53 per week Jan 2 to Jul 31 &middot; Export Core Route 2 same Panjiva origin to Nuevo Laredo to Kus Americas Inc. United States country-level precision Truck 176 Shipments 35.3% 7 active months 25.14 per month 5.87 per week Jan 2 to Jul 30 &middot; DATA QUALITY ENTITY RESOLUTION HYPOTHESIS REQUIRES VALIDATION Panjiva identifies Kus Americas Inc. in both routes but one record set has an exact Davie Florida address and the other only country-level United States precision AIOS does not merge them &middot; Route persistence Tuen Mun Manzanillo persists as Import Core Route 1 &middot; Tak Lee Industrial Centre Nuevo Laredo persists &middot; China-level Kusauto Monterrey Airport persists as an Air Core Route &middot; KUS M&eacute;xico Nuevo Laredo Kus Americas remains the dominant Export corridor &middot; exact-address Kus Americas route share 71.3% in 2025 to 51.6% Current YTD &middot; country-level Kus Americas route share 15.8% to 35.3% &middot; no facility shift claimed because Panjiva address precision differs &middot; 2025 Import Core Routes Tuen Mun Manzanillo Maritime 52 21.9% &middot; AXA Centre 151 Gloucester Rd Wan Chai Hong Kong Manzanillo Maritime 36 15.2% &middot; Kusauto HK China Monterrey International Airport Air 33 13.9% &middot; Trading Partner unavailable United States Nuevo Laredo Truck Unknown 22 9.3% &middot; Tak Lee Industrial Centre Tuen Mun Nuevo Laredo Truck Unknown 21 8.9% &middot; GLOUSTER ROAD AXA CENTRE HONG KONG Nuevo Laredo Truck 13 5.5% &middot; Kusauto HK China Nuevo Laredo Unknown 9 3.8% SHORT OBSERVATION WINDOW 31.50 per week across Jul 29 to Jul 30 not evidence of sustained weekly capacity &middot; Kusauto HK China Felipe &Aacute;ngeles International Airport Air 7 3.0% cumulative 81.4% &middot; 2025 Export Core Routes KUS M&eacute;xico exact Escobedo address Nuevo Laredo Kus Americas Inc. exact Davie Florida address Truck 520 71.3% 12 active months 43.33 per month 10.14 per week Jan 2 to Dec 26 &middot; same Panjiva origin Nuevo Laredo Kus Americas Inc. United States country-level Truck 115 15.8% cumulative 87.1% 7 active months 16.43 per month 4.35 per week Jun 25 to Dec 26 &middot; Current YTD Import customs regimes Temporary Import transformation processing repair IMMEX 84 &middot; Final Import Export 27 &middot; Temporary Import Fixed Assets IMMEX 16 &middot; Virtual transfer temporary import virtual return regime 14 &middot; Regime change in fixed assets 1 &middot; Current YTD Export customs regimes Return of Goods IMMEX 459 &middot; Virtual transfer virtual return virtual export regime 38 &middot; Final Import Export 1 &middot; Import Customs Agent codes 1660 49 &middot; 1691 47 &middot; 3878 46 &middot; Export Customs Agent codes 3770 230 &middot; 3878 211 &middot; 3800 27 &middot; 3692 19 &middot; 3773 7 &middot; 1660 3 &middot; 1852 1 &middot; no broker names invented behind Customs Agent codes &middot; 2025 Import HS 9026100799 52 (21.9%) 8708999999 51 (21.5%) 3923100301 43 (18.1%) 7318160602 41 (17.3%) 3901200100 41 (17.3%) &middot; 2026 YTD Import HS 9026100799 33 (23.2%) 3923100301 29 (20.4%) 3901200100 23 (16.2%) 7318160602 22 (15.5%) 3926909906 20 (14.1%) &middot; 2025 Export HS 8708999999 493 (67.6%) 8421999999 233 (32.0%) 3923100301 179 (24.6%) 9026100799 85 (11.7%) 4016930499 41 (5.6%) &middot; 2026 YTD Export HS 8421999999 336 (67.5%) 3923100301 216 (43.4%) 8708999999 191 (38.4%) 9026100799 53 (10.6%) 3923500100 25 (5.0%) &middot; One Shipment may contain multiple HS Codes &middot; HS counts represent operational presence and are not additive &middot; per-code goods descriptions not supplied and not invented &middot; HS Portfolio Trend Current YTD Export operational presence shifts toward 8421999999 and 3923100301 while 8708999999 remains important at a lower visible presence share &middot; Import composition remains centered on sensor measurement automotive plastic components polymer inputs and fasteners &middot; Discovery hypothesis naming patterns may indicate affiliate intercompany structure REQUIRES VALIDATION not classified as confirmed affiliates &middot; entity and precision variants AXA Centre 151 Gloucester Rd Wan Chai versus GLOUSTER ROAD AXA CENTRE preserved verbatim &middot; Kusauto HK shown with both China and United States geography preserved on separate routes &middot; Monterrey and San Felipe shown as Panjiva gateway labels with no node type assigned &middot; gateway labels Monterrey International Airport and General Mariano Escobedo preserved per period &middot; no Wallet Penetration Coverage Account Intelligence Snapshot Akzent Captured Universe Akzent Revenue Gross Profit or Margin &middot; no Commercial Route Priority &middot; Operational Complexity Partner &middot; Multimodal Coordination Partner &middot; Customs &amp; Visibility Partner &middot; ILM / Control Tower Partner &middot; Panjiva Visible Logistics Universe &middot; Air &middot; Ocean &middot; Cross-Border &middot; Customs &middot; IMMEX &middot; ILM / Control Tower', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
   { id:'view-lankwitzer', name:'Lankwitzer', sub:'Lankwitzer &middot; Lankwitzer Lackfabrik GmbH &middot; Target Account &middot; LEAD &middot; AIOS Classification AA &middot; Strategic Fit AA &middot; Operational Complexity MEDIUM-HIGH &middot; no numerical Complexity Score &middot; International Exposure HIGH &middot; Modal Diversity MEDIUM-HIGH with data limitations &middot; Import Route Concentration EXTREME &middot; Outbound Network Fragmentation HIGH &middot; ILM / Control Tower Potential HIGH &middot; Commercial Positioning PRIORITY TARGET &middot; Industrial Coatings and Specialty Chemicals &middot; paints coatings polymer systems pigments solvents thinners &middot; Berlin Germany &middot; Haynauer Strasse 61-63 Berlin Berlin 12249 Germany &middot; Source of truth Panjiva only &middot; supplied source consisted of destination-country Panjiva import records &middot; 508 attributable Lankwitzer Shipments from 511 original records &middot; 3 records excluded from 2025 because Lankwitzer appeared only in Goods Shipped or matching text rather than as Shipper or Consignee &middot; directional methodology Lankwitzer as Consignee equals Import &middot; Lankwitzer as Shipper to a non-Lankwitzer Consignee equals visible outbound Shipment &middot; visible outbound Shipments evidenced through destination-country Panjiva import records &middot; not a complete direct export declaration universe &middot; Current YTD 01-Jan through 28-Jul-2026 total 128 Shipments &middot; Imports 102 (79.7%) &middot; visible outbound 26 (20.3%) &middot; never annualized &middot; visible Value USD 2.268M &middot; visible Weight 313,659 kg &middot; Previous Full Calendar Year 2025 total 380 Shipments &middot; Imports 318 (83.7%) &middot; visible outbound 62 (16.3%) &middot; visible Value USD 4.400M &middot; visible Weight 579,924 kg &middot; 2025 and 2026 never aggregated &middot; Comparable Jan 1 to Jul 28 actual-vs-actual total 224 to 128 -42.9% &middot; Imports 189 to 102 -46.0% &middot; visible outbound 35 to 26 -25.7% &middot; Observed Actual vs Observed Actual &middot; Panjiva shows lower visible Shipment activity in Current YTD across both directional structures with the largest reduction on the Import side &middot; the supplied data does not establish the cause &middot; not lost business not production decline not demand deterioration not provider change not sourcing change &middot; no run-rate no forecast no annualization &middot; Current YTD modes Transport Method not available 88 (68.8%) Air 21 (16.4%) Maritime 13 (10.2%) Unknown 4 (3.1%) Truck 2 (1.6%) &middot; 2025 modes Transport Method not available 301 (79.2%) Air 45 (11.8%) Maritime 26 (6.8%) Unknown 6 (1.6%) Truck 2 (0.5%) &middot; Panjiva confirms Air plus Maritime plus Truck presence but modal conclusions require caution because Transport Method is unavailable for 68.8% of Current YTD Shipments &middot; the known-mode subset is never presented as the complete Modal Mix &middot; Unknown preserved and never redistributed &middot; Gateway not available in Panjiva on every route &middot; no Port no Border no Airport no Customs Agent no Customs Regime no IMMEX no gateway concentration &middot; Current YTD Import Core Routes 1 route to 84.3% EXTREME ROUTE CONCENTRATION &middot; Route 1 Origin Facility Lankwitzer Lackfabrik Gmb H Haynauer Strasse 61-63 Berlin Berlin 12249 Germany &middot; Gateway not available in Panjiva &middot; Destination Facility Dp Lankvittser Ukraine Parkova St 14 Riasne-Ruske L&#39;vivs&#39;ka oblast Ukraine 81085 &middot; Mode Not available &middot; 86 Shipments &middot; 84.3% of Current YTD Imports &middot; cumulative 84.3% &middot; 5 Active Months &middot; 17.20 per Active Month &middot; 4.49 per Week &middot; First Visible Shipment January 17 2026 &middot; Last Visible Shipment May 30 2026 &middot; one route alone represents 84.3% of Current YTD Imports &middot; observed structural dependency not confirmed customer pain &middot; Current YTD visible outbound Core Routes 8 routes to 80.8% &middot; Route 1 Lankwitzer Lackfabrik Gmb H HOPPENSTEDTER STR. OSTERWIECK 38835 to Pinturas Y Recubrimientos Ravtech Sa De Cv Movimiento Obrero 226 El Lechugal 66376 Santa Catarina N.L. Mexico Air plus Maritime 8 Shipments 30.8% cumulative 30.8% 4 Active Months 2.00 per month 0.50 per week Mar 19 to Jul 9 2026 &middot; Route 2 Lankwitzer Lackfabrik Gmb H Address not available in Panjiva to Skf De Mexico Sa De Cv Puebla Puebla Iztacalco 08400 Ciudad de Mexico DF Mexico Air plus Unknown 6 Shipments 23.1% cumulative 53.8% 4 Active Months 1.50 per month 0.21 per week Jan 5 to Jul 20 2026 &middot; Route 3 Berlin to Tov Huala Klozhers Tekhnolohiya Ukraine Liniina St 18 Sumy Sums&#39;ka oblast Ukraine 40000 Mode Not available 2 Shipments 7.7% cumulative 61.5% 2 Active Months 1.00 per month 0.32 per week Apr 8 to May 21 2026 &middot; Route 4 Berlin to Dol Electric Co. Pvt. Ltd. R-43 Rabale Midc Rd MIDC Industrial Area Rabale Navi Mumbai Maharashtra 400701 India Air 1 Shipment 3.8% cumulative 65.4% Jan 24 2026 SHORT OBSERVATION WINDOW &middot; Route 5 Berlin to Emco Electrodyne Pvt. Ltd. D-87 Phase-7 Industrial Area Sahibzada Ajit Singh Nagar Punjab 160055 India Air 1 Shipment 3.8% cumulative 69.2% Feb 19 2026 SHORT OBSERVATION WINDOW &middot; Route 6 Berlin to Marelli Powertrain India Pvt. Ltd. Plot No.- 1 Subplot 25 and 32 Maruti Supplier Park Sec-3 A IMT Manesar Gurugram Haryana 122051 India Air 1 Shipment 3.8% cumulative 73.1% Jan 25 2026 SHORT OBSERVATION WINDOW &middot; Route 7 Berlin to Ola Cell Technologies Private Ltd. Regent Insignia Suite 414 3rd Floor 4th Block 17th Main 100 Feet Road Koramanga Bengaluru Karnataka 560034 India Maritime 1 Shipment 3.8% cumulative 76.9% Feb 21 2026 SHORT OBSERVATION WINDOW &middot; Route 8 Berlin to Skf De Mexico Sa De Cv Puebla Puebla Iztacalco 08400 Ciudad de Mexico DF Mexico Unknown 1 Shipment 3.8% cumulative 80.8% Jul 27 2026 SHORT OBSERVATION WINDOW &middot; Routes 4 to 8 show 7.00 per week across a single-day window &middot; Observed Route Cadence reflects the route own visible date window &middot; a short-window cadence is not evidence of sustained weekly capacity and must not be extrapolated into a forecast or normalized weekly volume &middot; Historical 2025 Import Core Route 1 route to 92.5% Berlin Lankwitzer Lackfabrik Gmb H to Gateway unavailable to Dp Lankvittser Ukraine 294 Shipments 92.5% cumulative 92.5% 12 Active Months 24.50 per month 5.97 per week Jan 11 to Dec 21 2025 EXTREME ROUTE CONCENTRATION &middot; Historical 2025 visible outbound Core Routes 15 routes to 80.6% of 62 Shipments &middot; SKF de Mexico origin address unavailable 10 16.1% &middot; Ravtech Mexico 5 8.1% cumulative 24.2% &middot; Kern Liebers India 4 6.5% cumulative 30.6% &middot; SKF de Mexico Berlin origin 4 6.5% cumulative 37.1% &middot; Tov Zavod Kobzarenka Ukraine 4 6.5% cumulative 43.5% &middot; Dakshin Foundry India 3 4.8% cumulative 48.4% &middot; Dol Electric India 3 4.8% cumulative 53.2% &middot; Stabilus United States 3 4.8% cumulative 58.1% &middot; Tov Huala Klozhers Ukraine 3 4.8% cumulative 62.9% &middot; Fras Le North America United States 2 3.2% cumulative 66.1% &middot; Marelli Powertrain India 2 3.2% cumulative 69.4% &middot; Ola Cell Technologies India 2 3.2% cumulative 72.6% &middot; Polmor Steel India 2 3.2% cumulative 75.8% &middot; Sanhe Lankwitzer to Lizhong Mexico 2 3.2% cumulative 79.0% &middot; Lankwitzer Shanghai to Ola Cell Technologies 1 1.6% cumulative 80.6% &middot; no route deleted &middot; Route Rank is factual &middot; no Commercial Route Priority &middot; Route persistence Berlin to Dp Lankvittser Ukraine Visible in both periods Persisting Core Route 2025 92.5% to Current YTD 84.3% &middot; the route remains an extreme concentration despite its lower visible Current YTD share &middot; Ravtech and SKF de Mexico remain material visible outbound relationships &middot; Current YTD Ravtech route 30.8% SKF leading route 23.1% combined 53.8% &middot; no cause invented for the structural change &middot; Current YTD HS Top 5 3208.90 Paints industrial coatings 23 (18.0%) &middot; 3208.20.03.01 Polymer-based paints coating preparations 11 (8.6%) &middot; 3208.20.03.99 Other acrylic vinyl paints coatings 11 (8.6%) &middot; 3814.00 Solvents thinners 11 (8.6%) &middot; 3208.10 Polyester-based paints coatings 10 (7.8%) &middot; 2025 HS Top 5 3208.90 Paints coatings based on synthetic or modified polymers 66 (17.4%) &middot; 3814.00 Organic solvents thinners 49 (12.9%) &middot; 3208.20 Acrylic vinyl polymer-based paints and coatings 38 (10.0%) &middot; 3212.90 Pigments coloring preparations 37 (9.7%) &middot; 3911.90 Specialized resins polymer materials 37 (9.7%) &middot; One Shipment may contain multiple HS Codes &middot; HS counts represent operational presence and are not additive &middot; HS Portfolio Trend the visible portfolio remains centered on industrial paints coatings polymer systems solvents thinners and associated coating chemistry &middot; no unsupported hazardous-material procedures inferred &middot; Current YTD Import-side Origin Partners Lankwitzer Lackfabrik Gmb H 101 Shipments 99.0% &middot; Lankwitzer USA LLC 1 Shipment 1.0% &middot; DISCOVERY HYPOTHESIS REQUIRES VALIDATION potential affiliate intercompany structure &middot; not automatically called external Suppliers &middot; Current YTD visible outbound Trading Partners Pinturas y Recubrimientos Ravtech 8 30.8% &middot; SKF de Mexico 7 26.9% &middot; Tov Huala Klozhers 2 7.7% &middot; Confab Industrial 1 3.8% &middot; Solvay Fluorides 1 3.8% &middot; Top 3 concentration 65.4% &middot; Top 5 concentration 73.1% &middot; Trading Partner concentration kept analytically separate from Route concentration &middot; Trading Partners terminology used throughout &middot; Geographic visible network evidence Germany Ukraine Mexico India United States China Brazil &middot; flag plus country name always &middot; structured Shipment Origin and Destination fields are incomplete on a material portion of the supplied Panjiva data &middot; no missing geography silently enriched &middot; Operational Complexity MEDIUM-HIGH driven by the coexistence of a highly concentrated recurring facility corridor and a substantially more distributed international outbound structure &middot; evidence 128 Current YTD Shipments international multi-country network extreme Import route concentration eight outbound Core Routes to 80% visible Air Maritime Truck multiple Lankwitzer facilities and entities multiple outbound Trading Partners specialized industrial coating chemical portfolio material modal-data limitations &middot; Signal A Import concentration 84.3% of Current YTD Imports on one Berlin to Ukraine facility route &middot; Signal B Outbound distribution eight routes to 80.8% &middot; Signal C Multimodal evidence Air Maritime Truck visible &middot; Signal D Affiliate structure multiple Lankwitzer-branded entities DISCOVERY HYPOTHESIS REQUIRES VALIDATION &middot; DATA QUALITY ENTITY RESOLUTION HYPOTHESIS REQUIRES VALIDATION entity variants Lankwitzer Lackfabrik Gmb H &middot; Lankwitzer Lackfabrik Gmb H Werk Ost &middot; Lankwitzer Lackfabrik Gmb H Werk Osterwieck &middot; Lankwitzer USA LLC &middot; Lankwitzer Mexico &middot; Dp Lankvittser Ukraine &middot; Sanhe Lankwitzer Industry Coating Co. Ltd. &middot; Lankwitzer Germany Premium Coatings (Shanghai) Co. &middot; facilities and legal entities never silently merged &middot; Core Routes never altered based on assumed corporate relationships &middot; ILM Control Tower Potential HIGH &middot; Shipment planning visibility supplier affiliate readiness booking coordination carrier coordination centralized milestone visibility document control exception management route performance facility visibility Trading Partner performance contingency governance multimodal coordination KPI governance &middot; never implies Lankwitzer currently lacks these capabilities &middot; Commercial Positioning Operational Complexity Partner Multimodal Coordination Partner Customs and Visibility Partner ILM Control Tower Partner &middot; not a transactional freight provider not a commodity trucking provider not a spot-rate provider &middot; Data available Shipment dates Shipper Consignee facility addresses on many records countries on many records Transport Method on a subset HS Codes Goods Shipped Weight Value entity information &middot; Missing or materially incomplete reliable Port Border Airport Customs Agent Customs Regime IMMEX Incoterms carrier complete Transport Method coverage paired direct export declaration dataset &middot; no Wallet no Penetration no Coverage no Account Intelligence Snapshot no Akzent Captured Universe no Akzent Revenue Gross Profit or Margin no Akzent performance metrics &middot; no evidence supplied that Akzent currently manages this account &middot; Panjiva Visible Logistics Universe &middot; Air &middot; Maritime &middot; Truck &middot; Multimodal &middot; International &middot; Extreme Route Concentration &middot; ILM Potential &middot; Control Tower', rel:'LEAD', cls:'AA', clsPill:'aa' },
+  { id:'view-alurem', name:'Grupo Alurem', sub:'Grupo Alurem &middot; Grupo Alurem, S.A. de C.V. &middot; Grupo Alurem Sa De Cv &middot; Target Account &middot; LEAD &middot; AIOS Classification AA &middot; Operational Complexity MEDIUM &middot; Panjiva Visible Logistics Universe &middot; Imports only &middot; Exports not available in supplied Panjiva file &middot; 21 Current YTD Import Shipments &middot; 100% Maritime &middot; Ocean &middot; Altamira &middot; Manzanillo &middot; Egypt &middot; China &middot; Greece &middot; Kiro Marble For Marble &amp; Granite &middot; granite &middot; marble &middot; natural stone &middot; Customs &middot; Supplier Coordination &middot; ILM / Control Tower &middot; Nuevo Le&oacute;n', rel:'LEAD', cls:'AA', clsPill:'aa' },
   { id:'view-jyrsa', name:'JYRSA PPE', sub:'JYRSA PPE S.A. de C.V. · Jyrsa Ppe Sa De Cv · Target Account · LEAD · AA Priority Target · Operational Complexity Medium-High · Panjiva Visible Logistics Universe · Personal Protective Equipment Industrial Safety Products · hearing protection earmuffs plugs · protective eyewear safety glasses · safety apparel · textile PPE lumbar supports · plastic safety industrial accessories · Ocean-Led Asia Sourcing · Manzanillo-Concentrated Inbound · Central American Export Corridor · 135 Current YTD Shipments · Imports 110 81.5% Jan 2 to Jul 29 2026 · Exports 25 18.5% Jan 9 to Jul 8 2026 · comparable Jan 1–Jul 29 actual vs actual 92 to 135 +46.7% · Imports 68 to 110 +61.8% · Exports 24 to 25 +4.2% · Import share +7.6 pp · Import Maritime 99 90.0% Truck 9 8.2% Air 2 1.8% · Export Truck 25 100.0% · 16 Import Core Routes 81.8% of 29 visible routes · 7 Export Core Routes 84.0% of 10 visible routes · EXTREME ROUTE CONCENTRATION does not apply · Top 3 Imports 40.0% Top 5 48.2% · Top 3 Exports 48.0% Top 5 68.0% · 2025 baseline 177 Shipments 137 Imports 40 Exports · 16 Import Core Routes 80.3% · 12 Export Core Routes 80.0% · visible CIF 2026 YTD Imports USD 2.548M Exports USD 0.500M total USD 3.048M · 2025 Imports USD 2.938M Exports USD 0.913M total USD 3.851M · gross weight 2026 YTD 735,479.91 kg imports 39,915.08 kg exports · 2025 741,279.98 kg imports 79,744.94 kg exports · Hangzhou Top Safe 20 18.2% · Shanghai H&amp;L Industry 14 12.7% · Ansafe Industrial Safety Products 10 9.1% · Nung Lai 8 7.3% · Radians Inc. 7 6.4% · Suzhou Rhz Textile Technology · Fujian Rds Foreign Trade · Guangzhou Junyue Foam Earplug · Shanghai East Best International · Dikamar Ind Proteccao Calcado · Ltld Esd · Pat Safety · Suzhou Weebitex · The Best Time Fuzhou · Sondel Sociedad Anonima 5 · Items Industriales 4 · Tecnofijaciones De Costa Rica 3 · Afalpi Medica Sociedad Anonima 2 · Equipos Comerciales Y Servicios Electricos 2 · Moreno Macay 2 · Manzanillo Colima Port 96 87.3% of imports · Nuevo Laredo Tamaulipas Border 7 6.4% · Aeropuerto Internacional General Mariano Escobedo Airport 3 · Veracruz Port 3 · AICM Airport 1 · Ciudad Hidalgo Chiapas Border 21 84.0% of exports · Nuevo Laredo Border 4 16.0% · Altamira 2025 exports · MTY Airport 2025 imports · China 90 81.8% · Taiwan 9 8.2% · United States 7 6.4% · Portugal 4 3.6% · Costa Rica 10 40.0% · Nicaragua 5 20.0% · Guatemala 4 16.0% · United States 4 16.0% · El Salvador 2 8.0% · Dominican Republic Honduras Bolivia 2025 · Customs Agent 1742 96 87.3% · 3614 · 3043 · 3403 · 3685 · 3950 21 84.0% · 3323 · 3923 · Final Import Export · HS 3926901100 hearing protection · 3926909999 plastic industrial safety articles · 6307909999 safety textile lumbar supports · 3926209900 protective apparel · 9004909900 safety glasses · HS counts non-additive · Radians Inc. two Panjiva address renderings not merged · Safety Co. Nicaragua S.A. Costa Rica destination conflict · Afalpi Sociedad Anonima vs Afalpi Medica Sociedad Anonima · Ferreteria Ochoa two separate records · data quality entity resolution hypothesis · Address not available in Panjiva · Ocean · Customs · Cross-Border · LATAM · Operational Complexity Partner · Multimodal Coordination Partner · Customs &amp; Visibility Partner · ILM / Control Tower Partner', rel:'LEAD', cls:'AA', clsPill:'aa' },
 ];
 const MODULES = [
