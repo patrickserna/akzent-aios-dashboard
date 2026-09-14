@@ -1299,6 +1299,112 @@ main {
   #view-victaulic .vic-conc-row { grid-template-columns: 1fr 52px; }
   #view-victaulic .vic-conc-row .vic-conc-lbl { grid-column: 1 / -1; }
 }
+/* LISI AUTOMOTIVE MONTERREY — scoped view components (#view-lisi only). */
+#view-lisi .num { text-align:right; }
+#view-lisi .lis-sublbl { font-size:10px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal-dim); margin-bottom:8px; }
+#view-lisi .lis-sublbl.muted { color:var(--text-light); }
+#view-lisi .lis-eyebrow { font-size:9px; font-weight:800; letter-spacing:1.3px; text-transform:uppercase; color:var(--teal-dim); }
+#view-lisi .lis-hero-sep { width:1px; height:64px; background:var(--border); }
+#view-lisi .lis-split { display:flex; height:14px; border-radius:7px; overflow:hidden; margin-top:8px; width:260px; max-width:100%; }
+#view-lisi .lis-assess { padding:10px 14px; background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--red); border-radius:0 6px 6px 0; }
+#view-lisi .lis-assess.soft { border-left-color:var(--teal); }
+#view-lisi .lis-assess b { display:block; font-size:16px; font-weight:800; color:var(--navy); letter-spacing:0.4px; margin-top:2px; }
+#view-lisi .lis-assess span { font-size:9px; font-weight:700; letter-spacing:1.1px; text-transform:uppercase; color:var(--text-muted); }
+#view-lisi .lis-bar { height:6px; background:#e6eaf1; border-radius:3px; overflow:hidden; }
+#view-lisi .lis-bar > div { height:100%; }
+#view-lisi .lis-stack { display:flex; height:12px; border-radius:6px; overflow:hidden; background:#e6eaf1; }
+#view-lisi .lis-stack > div { height:100%; }
+#view-lisi .lis-mode-muted { opacity:0.78; }
+#view-lisi .lis-mono { font-family:ui-monospace,Menlo,monospace; font-weight:700; color:var(--navy); }
+#view-lisi .lis-muted td { color:var(--text-muted); }
+#view-lisi .lis-note { margin-top:12px; padding:11px 15px; background:rgba(245,158,11,0.05); border-left:3px solid #f59e0b; border-radius:0 5px 5px 0; font-size:11px; color:var(--text-muted); line-height:1.65; }
+#view-lisi .lis-note-navy { margin-top:12px; padding:11px 15px; background:rgba(13,43,94,0.04); border-left:3px solid var(--navy); border-radius:0 5px 5px 0; font-size:11px; color:var(--text-muted); line-height:1.65; }
+#view-lisi .lis-micro { font-size:10.5px; font-weight:700; color:#92400e; margin-top:8px; }
+#view-lisi .lis-sig { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:14px; }
+#view-lisi .lis-sig > div { padding:10px 13px; border-radius:6px; font-size:11px; line-height:1.55; color:var(--text-muted); }
+#view-lisi .lis-sig b { display:block; font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; margin-bottom:3px; }
+#view-lisi .lis-sig .s1 { background:rgba(13,43,94,0.04); border-top:3px solid var(--navy); }
+#view-lisi .lis-sig .s1 b { color:var(--navy); }
+#view-lisi .lis-sig .s2 { background:rgba(0,180,216,0.05); border-top:3px solid var(--teal); }
+#view-lisi .lis-sig .s2 b { color:var(--teal-dim); }
+#view-lisi .lis-sig .s3 { background:rgba(245,158,11,0.05); border-top:3px solid #f59e0b; }
+#view-lisi .lis-sig .s3 b { color:#b45309; }
+#view-lisi .lis-route-table { font-size:10.5px; min-width:1420px; }
+#view-lisi .lis-route-table td { vertical-align:top; }
+#view-lisi .lis-rank { font-weight:800; color:var(--navy); text-align:right; }
+#view-lisi .lis-route-table .lis-ent { min-width:220px; max-width:300px; }
+#view-lisi .lis-route-table .lis-gwc { min-width:190px; max-width:240px; }
+#view-lisi .lis-route-table tbody tr:nth-child(-n+3) { background:rgba(0,180,216,0.04); }
+#view-lisi .lis-addr { font-size:9.5px; color:var(--text-light); font-style:italic; margin-top:2px; line-height:1.35; }
+#view-lisi .lis-addr-na { font-size:9.5px; color:#b45309; font-weight:700; margin-top:2px; }
+#view-lisi .lis-na-name { font-weight:800; color:#b45309; }
+#view-lisi .lis-aff { display:inline-block; font-size:8px; font-weight:800; letter-spacing:0.4px; text-transform:uppercase; color:var(--navy); background:rgba(13,43,94,0.07); border:1px dashed rgba(13,43,94,0.3); padding:0 5px; border-radius:3px; cursor:help; vertical-align:1px; }
+#view-lisi .lis-subj { display:inline-block; font-size:8px; font-weight:800; letter-spacing:0.4px; text-transform:uppercase; color:#92400e; background:rgba(245,158,11,0.1); border:1px dashed rgba(245,158,11,0.5); padding:0 5px; border-radius:3px; cursor:help; vertical-align:1px; }
+#view-lisi .lis-gw { font-size:9px; font-weight:800; white-space:nowrap; }
+#view-lisi .lis-gw-name { font-size:9.5px; color:var(--text-muted); margin-top:3px; line-height:1.35; }
+#view-lisi .lis-cum { min-width:70px; }
+#view-lisi .lis-cum-bar { height:4px; background:#e6eaf1; border-radius:2px; overflow:hidden; margin-top:3px; }
+#view-lisi .lis-cum-bar > div { height:100%; background:var(--teal); }
+#view-lisi .lis-dates { font-size:10px; color:var(--text-muted); white-space:nowrap; }
+#view-lisi .lis-covbar { height:28px; display:flex; border-radius:5px; overflow:hidden; border:1px solid var(--border); }
+#view-lisi .lis-covbar > div { display:flex; align-items:center; justify-content:center; font-size:9px; font-weight:800; color:#fff; white-space:nowrap; overflow:hidden; }
+#view-lisi .lis-route { border-radius:8px; overflow:hidden; background:var(--surface); }
+#view-lisi .lis-route-head { padding:9px 14px; background:rgba(13,43,94,0.05); display:flex; align-items:center; gap:6px; flex-wrap:wrap; border-bottom:1px solid var(--border); }
+#view-lisi .lis-route-share { font-size:11px; font-weight:800; color:var(--navy); }
+#view-lisi .lis-rank-pill { font-size:9.5px; font-weight:800; letter-spacing:0.8px; text-transform:uppercase; color:#fff; background:#64748b; padding:3px 9px; border-radius:3px; }
+#view-lisi .lis-rank-pill.r1 { background:var(--navy); }
+#view-lisi .lis-rank-pill.r2 { background:#1e4a8a; }
+#view-lisi .lis-rank-pill.r3 { background:var(--teal-dim); }
+#view-lisi .lis-hop { padding:8px 11px; background:var(--bg); border:1px solid var(--border); border-radius:6px; }
+#view-lisi .lis-hop-lbl { font-size:8.5px; font-weight:700; letter-spacing:1.1px; text-transform:uppercase; color:var(--teal-dim); }
+#view-lisi .lis-hop-name { font-size:12px; color:var(--navy); line-height:1.4; margin-top:2px; }
+#view-lisi .lis-hop-arrow { text-align:center; color:var(--text-light); font-size:13px; line-height:1.2; }
+#view-lisi .lis-dq-inline { font-size:9px; font-weight:700; color:#92400e; background:rgba(245,158,11,0.08); border-radius:3px; padding:2px 6px; margin-top:4px; cursor:help; }
+#view-lisi .lis-route-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin-top:11px; }
+#view-lisi .lis-route-stats b { display:block; font-size:18px; font-weight:800; color:var(--navy); line-height:1.15; }
+#view-lisi .lis-route-stats span { font-size:8.5px; color:var(--text-muted); letter-spacing:0.3px; text-transform:uppercase; }
+#view-lisi .lis-range { font-size:10.5px; color:var(--text-muted); margin-top:7px; }
+#view-lisi .lis-sus { padding:10px 13px; background:var(--surface); border:1px solid var(--border); border-radius:6px; }
+#view-lisi .lis-sus-top { display:flex; gap:6px; align-items:center; flex-wrap:wrap; }
+#view-lisi .lis-sus-name { font-size:12px; font-weight:800; color:var(--navy); margin-top:6px; line-height:1.35; }
+#view-lisi .lis-sus-stats { display:flex; gap:12px; flex-wrap:wrap; font-size:10px; color:var(--text-muted); margin-top:5px; }
+#view-lisi .lis-sus-stats b { color:var(--navy); font-size:13px; }
+#view-lisi .lis-conc-row { display:grid; grid-template-columns:170px 1fr 60px; gap:10px; align-items:center; margin-top:7px; }
+#view-lisi .lis-conc-lbl { font-size:10.5px; font-weight:700; color:var(--navy); }
+#view-lisi .lis-conc-bar { height:12px; background:#e6eaf1; border-radius:6px; overflow:hidden; display:flex; }
+#view-lisi .lis-conc-bar > div { height:100%; }
+#view-lisi .lis-conc-val { font-size:12px; font-weight:800; color:var(--navy); text-align:right; }
+#view-lisi .lis-list { margin:0; padding-left:0; list-style:none; font-size:11px; line-height:1.55; }
+#view-lisi .lis-list li { padding:5px 0; border-bottom:1px dashed var(--border); color:var(--navy); }
+#view-lisi .lis-list li:last-child { border-bottom:none; }
+#view-lisi .lis-hyp { padding:14px 16px; background:var(--surface); border:1px solid rgba(245,158,11,0.4); border-top:3px solid #f59e0b; border-radius:6px; font-size:11px; color:var(--text-muted); line-height:1.6; }
+#view-lisi .lis-hyp p { margin-top:7px; }
+#view-lisi .lis-hyp-tag { font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:#b45309; }
+#view-lisi .lis-hyp-title { font-size:14px; font-weight:800; color:var(--navy); margin-top:3px; }
+#view-lisi .lis-hyp-sig { font-size:11px; color:var(--navy); margin-top:5px; padding:6px 9px; background:rgba(13,43,94,0.04); border-radius:4px; }
+#view-lisi .lis-hyp-no { color:#92400e; }
+#view-lisi .lis-scope { display:inline-block; font-size:11px; font-weight:700; color:var(--navy); background:rgba(0,180,216,0.07); border:1px solid rgba(0,180,216,0.28); padding:5px 10px; border-radius:5px; }
+#view-lisi .lis-dq { display:grid; grid-template-columns:26px 1fr; gap:10px; padding:11px 14px; background:var(--surface); border:1px solid var(--border); border-radius:6px; }
+#view-lisi .lis-dq-n { width:24px; height:24px; border-radius:50%; background:#f59e0b; color:#fff; font-size:11px; font-weight:800; display:flex; align-items:center; justify-content:center; }
+#view-lisi .lis-dq-t { font-size:12px; font-weight:800; color:var(--navy); line-height:1.45; }
+#view-lisi .lis-dq-d { font-size:10.5px; color:var(--text-muted); line-height:1.55; margin-top:3px; }
+#view-lisi .lis-code { font-family:ui-monospace,Menlo,monospace; font-size:10.5px; background:rgba(13,43,94,0.05); padding:1px 5px; border-radius:3px; color:var(--navy); }
+@media (max-width: 900px) {
+  #view-lisi .grid-4 { grid-template-columns: repeat(2, 1fr) !important; }
+  #view-lisi .grid-2,
+  #view-lisi .grid-3,
+  #view-lisi .lis-trend-grid,
+  #view-lisi .lis-sig { grid-template-columns: 1fr !important; }
+  #view-lisi .lis-hero-sep { display: none; }
+  #view-lisi .lis-route-grid { grid-template-columns: 1fr !important; }
+  #view-lisi .lis-conc-row { grid-template-columns: 120px 1fr 52px; }
+}
+@media (max-width: 520px) {
+  #view-lisi .grid-4 { grid-template-columns: 1fr !important; }
+  #view-lisi .lis-route-stats { grid-template-columns: repeat(2, 1fr); }
+  #view-lisi .lis-conc-row { grid-template-columns: 1fr 52px; }
+  #view-lisi .lis-conc-row .lis-conc-lbl { grid-column: 1 / -1; }
+}
 @media print {
   .sidebar { display: none !important; }
   main { height: auto; overflow: visible; }
@@ -1860,6 +1966,39 @@ main {
   #view-victaulic .vic-opp-table { table-layout: fixed !important; width: 100% !important; min-width: 0 !important; }
   #view-victaulic .vic-opp-table td,
   #view-victaulic .vic-opp-table th { white-space: normal !important; overflow-wrap: anywhere; }
+  /* LISI AUTOMOTIVE MONTERREY — Current YTD stays primary; the complete 12-route Import and 5-route Export
+     Current YTD Core Route sets print in full, and both complete 2025 sets print as a compact Historical
+     Core Route Appendix. Scoped to #view-lisi so no other account is affected. */
+  #view-lisi .hub-table { font-size: 8.5px !important; min-width: 0 !important; }
+  #view-lisi .hub-table td,
+  #view-lisi .hub-table th { padding: 3px 5px !important; }
+  #view-lisi .hub-table tr { break-inside: avoid; }
+  #view-lisi [style*="overflow-x:auto"] { overflow: visible !important; }
+  #view-lisi .grid-2 > *,
+  #view-lisi .grid-3 > *,
+  #view-lisi .grid-4 > * { min-width: 0 !important; }
+  #view-lisi .lis-route-table { table-layout: auto !important; width: 100% !important; min-width: 0 !important; font-size: 7px !important; }
+  #view-lisi .lis-route-table td,
+  #view-lisi .lis-route-table th { padding: 2px 3px !important; white-space: normal !important; overflow-wrap: anywhere; }
+  #view-lisi .lis-route-table th { overflow-wrap: normal; word-break: keep-all; font-size: 6.5px !important; }
+  #view-lisi .lis-route-table .lis-ent,
+  #view-lisi .lis-route-table .lis-gwc { min-width: 0 !important; max-width: none !important; }
+  #view-lisi .lis-route-table .lis-addr,
+  #view-lisi .lis-route-table .lis-addr-na,
+  #view-lisi .lis-route-table .lis-gw-name,
+  #view-lisi .lis-route-table .lis-dq-inline { font-size: 6.5px !important; }
+  #view-lisi .lis-route-table .hub-tag { font-size: 6.5px !important; padding: 0 3px !important; }
+  #view-lisi .lis-route-table .lis-dates { white-space: normal !important; font-size: 6.5px !important; }
+  #view-lisi .lis-route-grid { grid-template-columns: 1fr 1fr !important; }
+  #view-lisi .lis-route,
+  #view-lisi .lis-hyp,
+  #view-lisi .lis-dq { break-inside: avoid; }
+  #view-lisi .hist-appendix { break-inside: auto; }
+  #view-lisi .outreach-step-body { display: block !important; height: auto !important; max-height: none !important; }
+  #view-lisi .hist-appendix .outreach-step-header { font-size: 10px; }
+  #view-lisi .lis-opp-table { table-layout: fixed !important; width: 100% !important; min-width: 0 !important; }
+  #view-lisi .lis-opp-table td,
+  #view-lisi .lis-opp-table th { white-space: normal !important; overflow-wrap: anywhere; }
   .page-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .card-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .positioning-box { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
@@ -2135,6 +2274,11 @@ main {
     </div>
     <div class="nav-item" onclick="showView('view-victaulic', this)">
       <span>◆</span> <span style="flex:1;">Victaulic de México</span>
+      <span class="recent-cls" style="background:rgba(245,158,11,0.2);color:#f59e0b;">LEAD</span>
+      <span class="recent-cls aaa">AAA</span>
+    </div>
+    <div class="nav-item" onclick="showView('view-lisi', this)">
+      <span>◆</span> <span style="flex:1;">LISI Automotive Monterrey</span>
       <span class="recent-cls" style="background:rgba(245,158,11,0.2);color:#f59e0b;">LEAD</span>
       <span class="recent-cls aaa">AAA</span>
     </div>
@@ -3913,6 +4057,38 @@ main {
         <span class="acct-tag">Customs</span>
         <span class="acct-tag">Supplier Orchestration</span>
         <span class="acct-tag">Control Tower</span>
+      </div>
+    </div>
+
+    <!-- LISI AUTOMOTIVE MONTERREY SA DE CV -->
+    <div class="account-card aaa" onclick="showViewById('view-lisi')">
+      <div class="account-card-header">
+        <div>
+          <div class="account-name">LISI Automotive Monterrey</div>
+          <div class="account-industry">Lisi Automotive Monterrey Sa De Cv · Automotive components visible trade profile · Monterrey air · Nuevo Laredo border · Altamira / Manzanillo ocean · Current YTD through Jul 31, 2026</div>
+        </div>
+        <div style="display:flex;gap:5px;align-items:center;flex-shrink:0;">
+          <span class="account-cls-badge lead">LEAD</span>
+          <span class="account-cls-badge aaa">AAA Strategic Account</span>
+        </div>
+      </div>
+      <div class="account-metrics" style="grid-template-columns:repeat(3,1fr);">
+        <div class="acct-metric"><div class="acct-metric-val">581</div><div class="acct-metric-lbl">YTD Shipments</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">347</div><div class="acct-metric-lbl">Imports</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">234</div><div class="acct-metric-lbl">Exports</div></div>
+      </div>
+      <div style="margin-top:8px;padding:7px 10px;background:rgba(0,180,216,0.06);border-left:3px solid var(--teal);border-radius:0 4px 4px 0;">
+        <div style="font-size:9px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:var(--teal-dim);">Observed Operational Signal · Operational Complexity HIGH</div>
+        <div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;margin-top:2px;">Import Core Routes <strong>12 → 81.0%</strong> · Export Core Routes <strong>5 → 82.5%</strong> · Air <strong>36.9%</strong> of YTD Imports</div>
+      </div>
+      <div class="account-tags">
+        <span class="acct-tag" style="background:rgba(245,158,11,0.12);color:#b45309;border-color:rgba(245,158,11,0.3);">LEAD</span>
+        <span class="acct-tag">Multimodal</span>
+        <span class="acct-tag">Cross-Border</span>
+        <span class="acct-tag">Air Freight</span>
+        <span class="acct-tag">IMMEX</span>
+        <span class="acct-tag">Customs</span>
+        <span class="acct-tag">ILM / Control Tower</span>
       </div>
     </div>
 
@@ -14539,6 +14715,16 @@ main {
               <td title="No AIOS Air rating supplied &middot; Air 1.7% of Current YTD Imports and 10.4% of Current YTD Exports" style="color:var(--text-light);">&mdash;</td>
               <td title="ILM / Control Tower Potential VERY HIGH"><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
               <td style="color:#b45309;font-weight:700;font-size:11px;">Border / Customs Control + Supplier Orchestration + ILM / Control Tower</td>
+            </tr>
+            <tr onclick="showViewById('view-lisi')" style="cursor:pointer;">
+              <td><strong>LISI Automotive Monterrey</strong> <span style="font-size:10px;font-weight:600;color:#b45309;background:rgba(245,158,11,0.12);padding:1px 5px;border-radius:3px;margin-left:4px;">LEAD</span></td>
+              <td><span class="cls-pill aaa">AAA</span></td>
+              <td style="color:var(--text-muted);" title="Lisi Automotive Monterrey Sa De Cv &middot; Relationship LEAD &middot; AIOS Classification AAA Strategic Account &middot; Operational Complexity HIGH &middot; Current YTD 2026-01-03 to 2026-07-31 &middot; 581 Shipments (347 Imports 59.7% / 234 Exports 40.3%) &middot; Jan-Jul observed actual vs actual 529 to 581 (+9.8%) &middot; Import Core Routes 12 = 81.0% &middot; Export Core Routes 5 = 82.5% &middot; Multimodal Exposure HIGH &middot; Cross-Border Exposure HIGH &middot; Air Freight Exposure HIGH &middot; Ocean Exposure MEANINGFUL &middot; Customs / IMMEX Sensitivity HIGH &middot; ILM / Control Tower Potential VERY HIGH">Automotive components visible trade profile &middot; 581 YTD Shipments &middot; Monterrey air / Nuevo Laredo / Altamira &middot; 12 Import Core Routes = 81.0% &middot; 5 Export Core Routes = 82.5%</td>
+              <td title="Cross-Border Exposure HIGH"><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td title="Ocean Exposure MEANINGFUL &middot; Maritime 18.7% of Current YTD Imports"><div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div></div></td>
+              <td title="Air Freight Exposure HIGH &middot; Air 36.9% of Current YTD Imports"><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td title="ILM / Control Tower Potential VERY HIGH"><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
+              <td style="color:#b45309;font-weight:700;font-size:11px;">Operational Complexity + Multimodal Coordination + Customs &amp; Visibility + ILM</td>
             </tr>
             <tr onclick="showViewById('view-productora-papel')" style="cursor:pointer;">
               <td><strong>Productora de Papel</strong> <span style="font-size:10px;font-weight:600;color:#b45309;background:rgba(245,158,11,0.12);padding:1px 5px;border-radius:3px;margin-left:4px;">LEAD</span></td>
@@ -73227,6 +73413,687 @@ main {
   </div>
 </div>
 
+<div id="view-lisi" class="view">
+  <div class="page-header">
+    <div class="page-header-left">
+      <div class="page-header-eyebrow">Target Account · LEAD · Panjiva Visible Logistics Universe</div>
+      <div class="page-header-title">LISI Automotive Monterrey</div>
+      <div class="page-header-sub">Lisi Automotive Monterrey Sa De Cv · Automotive components visible trade profile · Multimodal Imports &amp; Exports · Monterrey air · Nuevo Laredo border · Altamira / Manzanillo ocean · Current YTD 2026-01-03 → 2026-07-31</div>
+    </div>
+    <div class="page-header-meta">
+      <span class="classification-badge lead">LEAD</span>
+      <span class="classification-badge aaa">AAA</span>
+      <button class="print-btn" onclick="printView('view-lisi')">⬇ Export PDF</button>
+    </div>
+  </div>
+  <div class="content-body">
+
+    <!-- Identity strip — Relationship Status and AIOS Classification are never combined -->
+    <div class="card">
+      <div class="card-body" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:11px 18px;">
+        <span style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);">Relationship Status</span>
+        <span class="classification-badge lead">LEAD</span>
+        <span style="width:1px;height:20px;background:var(--border);"></span>
+        <span style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);">AIOS Classification</span>
+        <span class="classification-badge aaa">AAA</span>
+        <span style="font-size:11px;color:var(--text-muted);">Strategic Account</span>
+        <span style="width:1px;height:20px;background:var(--border);"></span>
+        <span style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);">Operational Complexity · Current YTD</span>
+        <span style="font-size:13px;font-weight:800;color:var(--navy);letter-spacing:0.5px;">HIGH</span>
+        <span style="flex:1;min-width:240px;font-size:10px;color:var(--text-muted);line-height:1.55;">
+          Independent dimensions — never collapsed into a single badge. Panjiva only. <strong style="color:#b45309;">No evidence has been supplied that Akzent currently manages LISI Automotive Monterrey.</strong>
+        </span>
+      </div>
+    </div>
+
+    <!-- 01 EXECUTIVE INTELLIGENCE — CURRENT OPERATING STATE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">01</span> Executive Intelligence — Current Operating State</div>
+      <div class="card-body" style="padding:16px 20px;background:linear-gradient(135deg,rgba(13,43,94,0.05) 0%,rgba(0,180,216,0.05) 100%);">
+        <div class="lis-eyebrow">Current YTD · 2026-01-03 → 2026-07-31 · observed, never annualized</div>
+        <div style="display:flex;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-top:6px;">
+          <div>
+            <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;">
+              <span style="font-size:50px;font-weight:800;color:var(--teal-dim);line-height:1;">581</span>
+              <span style="font-size:16px;font-weight:700;color:var(--navy);">visible Shipments</span>
+            </div>
+            <div class="lis-split" title="Imports 347 (59.7%) · Exports 234 (40.3%)"><div style="width:59.7%;background:var(--navy);"></div><div style="width:40.3%;background:var(--teal);"></div></div>
+            <div style="display:flex;gap:14px;margin-top:5px;font-size:11px;color:var(--text-muted);">
+              <span><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--navy);"></span> <strong style="color:var(--navy);">347</strong> Imports · 59.7%</span>
+              <span><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--teal);"></span> <strong style="color:var(--navy);">234</strong> Exports · 40.3%</span>
+            </div>
+          </div>
+          <span class="lis-hero-sep"></span>
+          <div>
+            <div class="lis-eyebrow">Jan–Jul trend · Observed Actual vs Observed Actual</div>
+            <div style="font-size:32px;font-weight:800;color:var(--teal-dim);line-height:1.1;">▲ +9.8%</div>
+            <div style="font-size:10px;color:var(--text-muted);">Shipments 529 → 581 · Imports +1.2% · Exports +25.8%</div>
+          </div>
+          <span class="lis-hero-sep"></span>
+          <div>
+            <div class="lis-eyebrow" style="color:var(--navy);">Operational Complexity</div>
+            <div style="font-size:26px;font-weight:800;color:var(--navy);line-height:1.2;">HIGH</div>
+            <div style="font-size:10px;color:var(--text-muted);">AIOS Interpretation · no numerical score</div>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:8px;margin-top:14px;">
+          <div class="stat-box" style="padding:10px 13px;background:var(--surface);border-left:3px solid var(--navy);"><div class="stat-label">Current YTD Import Core Routes</div><div style="font-size:22px;font-weight:800;color:var(--navy);line-height:1.2;">12 routes → 81.0%</div><div class="stat-sub">Top-3 routes 51.3% · Module 06</div></div>
+          <div class="stat-box" style="padding:10px 13px;background:var(--surface);border-left:3px solid var(--teal);"><div class="stat-label">Current YTD Export Core Routes</div><div style="font-size:22px;font-weight:800;color:var(--teal-dim);line-height:1.2;">5 routes → 82.5%</div><div class="stat-sub">Leading route alone 49.6% · Module 07</div></div>
+          <div class="stat-box" style="padding:10px 13px;background:var(--surface);border-left:3px solid #94a3b8;"><div class="stat-label">Visible CIF Value</div><div style="font-size:22px;font-weight:800;color:var(--navy);line-height:1.2;">USD 54.56M</div><div class="stat-sub">Panjiva-visible · not an Akzent figure</div></div>
+          <div class="stat-box" style="padding:10px 13px;background:var(--surface);border-left:3px solid #94a3b8;"><div class="stat-label">Visible Gross Weight</div><div style="font-size:22px;font-weight:800;color:var(--navy);line-height:1.2;">4.16M kg</div><div class="stat-sub">Panjiva-visible</div></div>
+        </div>
+
+        <div class="lis-sublbl" style="margin-top:14px;color:var(--navy);">AIOS Classification dimensions</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px;">
+          <div class="lis-assess"><span>Multimodal Exposure</span><b>HIGH</b></div>
+          <div class="lis-assess"><span>Cross-Border Exposure</span><b>HIGH</b></div>
+          <div class="lis-assess"><span>Air Freight Exposure</span><b>HIGH</b></div>
+          <div class="lis-assess soft"><span>Ocean Exposure</span><b>MEANINGFUL</b></div>
+          <div class="lis-assess"><span>Customs / IMMEX Sensitivity</span><b>HIGH</b></div>
+          <div class="lis-assess"><span>ILM / Control Tower Potential</span><b>VERY HIGH</b></div>
+        </div>
+
+        <div style="margin-top:14px;padding:14px 18px;background:var(--surface);border:1px solid rgba(13,43,94,0.18);border-left:3px solid var(--navy);border-radius:0 6px 6px 0;">
+          <div style="font-size:9px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;color:var(--navy);margin-bottom:6px;">Executive Thesis · AIOS Interpretation</div>
+          <p style="font-size:14px;font-weight:700;color:var(--navy);line-height:1.65;max-width:1080px;">The strongest Akzent positioning is not “freight rates.” It is multimodal coordination, border/customs visibility, exception management and ILM / Control Tower governance.</p>
+          <div class="grid-3" style="gap:10px;margin-top:10px;">
+            <div style="font-size:11px;color:var(--text-muted);line-height:1.55;"><strong style="color:var(--navy);display:block;">1 · Material inbound network breadth</strong>Imports require 12 Core Routes to cross 80% coverage — the inbound operating structure is not reducible to one or two lanes.</div>
+            <div style="font-size:11px;color:var(--text-muted);line-height:1.55;"><strong style="color:var(--navy);display:block;">2 · Concentrated outbound structure</strong>Five Export Core Routes cover 82.5%; the leading visible export route alone represents 49.6%.</div>
+            <div style="font-size:11px;color:var(--text-muted);line-height:1.55;"><strong style="color:var(--navy);display:block;">3 · True multimodal operating requirements</strong>Current imports: Air 36.9% · Truck 19.9% · Maritime 18.7% · Unknown 24.5%. Current exports: Truck 23.1% · Air 9.0% · Maritime 2.1% · Unknown 65.8%.</div>
+          </div>
+          <div style="font-size:10px;color:var(--text-muted);margin-top:8px;">Stated once on this page — later modules provide the evidence. Not a statement of customer pain.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 COMPARABLE-PERIOD TREND -->
+    <div class="card">
+      <div class="card-header"><span class="accent">02</span> Comparable-Period Trend — Jan–Jul 2025 Actual vs Jan–Jul 2026 Actual</div>
+      <div class="card-body">
+        <div class="lis-trend-grid" style="display:grid;grid-template-columns:minmax(260px,0.8fr) 1.3fr;gap:22px;">
+          <div style="padding:14px 18px;background:var(--bg);border:1px solid var(--border);border-radius:8px;">
+            <div class="lis-eyebrow">Shipments · observed actual vs observed actual</div>
+            <div style="margin-top:12px;">
+              <div style="display:flex;justify-content:space-between;align-items:baseline;"><span style="font-size:11px;font-weight:800;color:var(--navy);">Total Shipments</span><span style="font-size:13px;font-weight:800;color:var(--teal-dim);">▲ +9.8%</span></div>
+              <div class="lis-conc-row" style="grid-template-columns:78px 1fr 44px;margin-top:4px;"><div class="lis-conc-lbl" style="color:var(--text-light);font-size:9.5px;">Jan–Jul 2025</div><div class="lis-conc-bar"><div style="width:91.0%;background:#94a3b8;"></div></div><div class="lis-conc-val" style="color:var(--text-muted);">529</div></div>
+              <div class="lis-conc-row" style="grid-template-columns:78px 1fr 44px;margin-top:3px;"><div class="lis-conc-lbl" style="font-size:9.5px;">Jan–Jul 2026</div><div class="lis-conc-bar"><div style="width:100.0%;background:var(--teal);"></div></div><div class="lis-conc-val">581</div></div>
+            </div>
+            <div style="margin-top:12px;">
+              <div style="display:flex;justify-content:space-between;align-items:baseline;"><span style="font-size:11px;font-weight:800;color:var(--navy);">Imports</span><span style="font-size:13px;font-weight:800;color:var(--teal-dim);">▲ +1.2%</span></div>
+              <div class="lis-conc-row" style="grid-template-columns:78px 1fr 44px;margin-top:4px;"><div class="lis-conc-lbl" style="color:var(--text-light);font-size:9.5px;">Jan–Jul 2025</div><div class="lis-conc-bar"><div style="width:59.0%;background:#94a3b8;"></div></div><div class="lis-conc-val" style="color:var(--text-muted);">343</div></div>
+              <div class="lis-conc-row" style="grid-template-columns:78px 1fr 44px;margin-top:3px;"><div class="lis-conc-lbl" style="font-size:9.5px;">Jan–Jul 2026</div><div class="lis-conc-bar"><div style="width:59.7%;background:var(--teal);"></div></div><div class="lis-conc-val">347</div></div>
+            </div>
+            <div style="margin-top:12px;">
+              <div style="display:flex;justify-content:space-between;align-items:baseline;"><span style="font-size:11px;font-weight:800;color:var(--navy);">Exports</span><span style="font-size:13px;font-weight:800;color:var(--teal-dim);">▲ +25.8%</span></div>
+              <div class="lis-conc-row" style="grid-template-columns:78px 1fr 44px;margin-top:4px;"><div class="lis-conc-lbl" style="color:var(--text-light);font-size:9.5px;">Jan–Jul 2025</div><div class="lis-conc-bar"><div style="width:32.0%;background:#94a3b8;"></div></div><div class="lis-conc-val" style="color:var(--text-muted);">186</div></div>
+              <div class="lis-conc-row" style="grid-template-columns:78px 1fr 44px;margin-top:3px;"><div class="lis-conc-lbl" style="font-size:9.5px;">Jan–Jul 2026</div><div class="lis-conc-bar"><div style="width:40.3%;background:var(--teal);"></div></div><div class="lis-conc-val">234</div></div>
+            </div>
+          </div>
+          <div>
+            <div style="overflow-x:auto;">
+              <table class="hub-table" style="font-size:11px;">
+                <thead><tr><th>Metric</th><th class="num">Jan–Jul 2025</th><th class="num">Jan–Jul 2026</th><th class="num">Visible Change</th></tr></thead>
+                <tbody><tr style="background:rgba(0,180,216,0.05);"><td><strong>Total Shipments</strong></td><td class="num" style="color:var(--text-muted);">529</td><td class="num"><strong style="color:var(--navy);">581</strong></td><td class="num" style="font-weight:800;color:var(--teal-dim);">+9.8%</td></tr><tr><td><strong>Imports</strong></td><td class="num" style="color:var(--text-muted);">343</td><td class="num"><strong style="color:var(--navy);">347</strong></td><td class="num" style="font-weight:800;color:var(--teal-dim);">+1.2%</td></tr><tr><td><strong>Exports</strong></td><td class="num" style="color:var(--text-muted);">186</td><td class="num"><strong style="color:var(--navy);">234</strong></td><td class="num" style="font-weight:800;color:var(--teal-dim);">+25.8%</td></tr><tr><td><strong>Import CIF Value</strong></td><td class="num" style="color:var(--text-muted);">USD 22.57M</td><td class="num"><strong style="color:var(--navy);">USD 23.64M</strong></td><td class="num" style="font-weight:800;color:var(--teal-dim);">+4.7%</td></tr><tr><td><strong>Export CIF Value</strong></td><td class="num" style="color:var(--text-muted);">USD 29.52M</td><td class="num"><strong style="color:var(--navy);">USD 30.92M</strong></td><td class="num" style="font-weight:800;color:var(--teal-dim);">+4.7%</td></tr><tr><td><strong>Import Gross Weight</strong></td><td class="num" style="color:var(--text-muted);">2.08M kg</td><td class="num"><strong style="color:var(--navy);">2.38M kg</strong></td><td class="num" style="font-weight:800;color:var(--teal-dim);">+14.5%</td></tr><tr><td><strong>Export Gross Weight</strong></td><td class="num" style="color:var(--text-muted);">1.58M kg</td><td class="num"><strong style="color:var(--navy);">1.78M kg</strong></td><td class="num" style="font-weight:800;color:var(--teal-dim);">+12.3%</td></tr></tbody>
+              </table>
+            </div>
+            <div class="lis-note-navy"><strong style="color:var(--navy);">AIOS Interpretation:</strong> the strongest observed change is on the export side — visible Export Shipments increased <strong>25.8%</strong> in the comparable period. Imports are essentially stable by Shipment count at <strong>+1.2%</strong>, but visible inbound weight increased <strong>14.5%</strong> and visible CIF value increased <strong>4.7%</strong>.</div>
+            <div class="lis-note"><strong>Observed structural changes only.</strong> <strong style="color:#b45309;">Panjiva does not establish the business causes.</strong> No run-rate, forecast or annualization; 2025 Full Year is never compared directly with Current YTD as a trend.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 PERIOD ARCHITECTURE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">03</span> Period Architecture — Previous Full Calendar Year vs Current YTD</div>
+      <div class="card-body">
+        <div style="overflow-x:auto;">
+          <table class="hub-table" style="font-size:11px;">
+            <thead><tr><th>Period</th><th class="num">Total Shipments</th><th class="num">Imports</th><th class="num">Exports</th><th class="num">Visible CIF Value</th><th class="num">Visible Gross Weight</th></tr></thead>
+            <tbody>
+              <tr style="background:rgba(0,180,216,0.05);"><td><strong>2026 Current YTD</strong> · current operating state</td><td class="num"><strong style="color:var(--navy);">581</strong></td><td class="num"><strong>347</strong> · 59.7%</td><td class="num"><strong>234</strong> · 40.3%</td><td class="num"><strong>USD 54.56M</strong></td><td class="num"><strong>4.16M kg</strong></td></tr>
+              <tr class="lis-muted"><td>2025 Full Calendar Year · established visible operating structure</td><td class="num">901</td><td class="num">569 · 63.2%</td><td class="num">332 · 36.8%</td><td class="num">USD 93.97M</td><td class="num">6.70M kg</td></tr>
+            </tbody>
+            <tfoot><tr style="background:var(--bg);"><td colspan="6" style="font-size:10px;color:var(--text-muted);"><strong>Governance:</strong> 2025 and 2026 YTD are not aggregated and 2026 YTD is not annualized. Shown side by side for reference only — the only trend statement is the Jan–Jul comparison in Module 02.</td></tr></tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 MODAL INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">04</span> Modal Intelligence — Air · Truck · Maritime · Unknown</div>
+      <div class="card-body">
+        <div class="grid-4" style="gap:14px;">
+          <div class=""><div class="lis-sublbl">2026 YTD Imports · 347</div><div class="lis-stack"><div style="width:36.9%;background:var(--teal);" title="Air · 128 · 36.9%"></div><div style="width:24.5%;background:#9ca3af;" title="Unknown · 85 · 24.5%"></div><div style="width:19.9%;background:#f59e0b;" title="Truck · 69 · 19.9%"></div><div style="width:18.7%;background:var(--navy);" title="Maritime · 65 · 18.7%"></div></div><table class="hub-table" style="font-size:11px;margin-top:8px;"><thead><tr><th>Mode</th><th class="num">Shipments</th><th class="num">Share</th></tr></thead><tbody><tr><td><span class="hub-tag air">✈ Air</span></td><td class="num"><strong>128</strong></td><td class="num">36.9%</td></tr><tr><td><span class="hub-tag unknown" title="Transport method recorded as Unknown in Panjiva — AIOS does not infer the missing mode.">Unknown</span></td><td class="num"><strong>85</strong></td><td class="num">24.5%</td></tr><tr><td><span class="hub-tag truck">🚚 Truck</span></td><td class="num"><strong>69</strong></td><td class="num">19.9%</td></tr><tr><td><span class="hub-tag ocean">⚓ Maritime</span></td><td class="num"><strong>65</strong></td><td class="num">18.7%</td></tr></tbody></table></div>
+          <div class=""><div class="lis-sublbl">2026 YTD Exports · 234</div><div class="lis-stack"><div style="width:65.8%;background:#9ca3af;" title="Unknown · 154 · 65.8%"></div><div style="width:23.1%;background:#f59e0b;" title="Truck · 54 · 23.1%"></div><div style="width:9.0%;background:var(--teal);" title="Air · 21 · 9.0%"></div><div style="width:2.1%;background:var(--navy);" title="Maritime · 5 · 2.1%"></div></div><table class="hub-table" style="font-size:11px;margin-top:8px;"><thead><tr><th>Mode</th><th class="num">Shipments</th><th class="num">Share</th></tr></thead><tbody><tr><td><span class="hub-tag unknown" title="Transport method recorded as Unknown in Panjiva — AIOS does not infer the missing mode.">Unknown</span></td><td class="num"><strong>154</strong></td><td class="num">65.8%</td></tr><tr><td><span class="hub-tag truck">🚚 Truck</span></td><td class="num"><strong>54</strong></td><td class="num">23.1%</td></tr><tr><td><span class="hub-tag air">✈ Air</span></td><td class="num"><strong>21</strong></td><td class="num">9.0%</td></tr><tr><td><span class="hub-tag ocean">⚓ Maritime</span></td><td class="num"><strong>5</strong></td><td class="num">2.1%</td></tr></tbody></table></div>
+          <div class="lis-mode-muted"><div class="lis-sublbl muted">2025 Imports · 569 · historical</div><div class="lis-stack"><div style="width:31.8%;background:var(--teal);" title="Air · 181 · 31.8%"></div><div style="width:27.9%;background:#9ca3af;" title="Unknown · 159 · 27.9%"></div><div style="width:27.2%;background:#f59e0b;" title="Truck · 155 · 27.2%"></div><div style="width:13.0%;background:var(--navy);" title="Maritime · 74 · 13.0%"></div></div><table class="hub-table" style="font-size:11px;margin-top:8px;"><thead><tr><th>Mode</th><th class="num">Shipments</th><th class="num">Share</th></tr></thead><tbody><tr><td><span class="hub-tag air">✈ Air</span></td><td class="num"><strong>181</strong></td><td class="num">31.8%</td></tr><tr><td><span class="hub-tag unknown" title="Transport method recorded as Unknown in Panjiva — AIOS does not infer the missing mode.">Unknown</span></td><td class="num"><strong>159</strong></td><td class="num">27.9%</td></tr><tr><td><span class="hub-tag truck">🚚 Truck</span></td><td class="num"><strong>155</strong></td><td class="num">27.2%</td></tr><tr><td><span class="hub-tag ocean">⚓ Maritime</span></td><td class="num"><strong>74</strong></td><td class="num">13.0%</td></tr></tbody></table></div>
+          <div class="lis-mode-muted"><div class="lis-sublbl muted">2025 Exports · 332 · historical</div><div class="lis-stack"><div style="width:69.3%;background:#9ca3af;" title="Unknown · 230 · 69.3%"></div><div style="width:20.5%;background:#f59e0b;" title="Truck · 68 · 20.5%"></div><div style="width:6.3%;background:var(--teal);" title="Air · 21 · 6.3%"></div><div style="width:3.9%;background:var(--navy);" title="Maritime · 13 · 3.9%"></div></div><table class="hub-table" style="font-size:11px;margin-top:8px;"><thead><tr><th>Mode</th><th class="num">Shipments</th><th class="num">Share</th></tr></thead><tbody><tr><td><span class="hub-tag unknown" title="Transport method recorded as Unknown in Panjiva — AIOS does not infer the missing mode.">Unknown</span></td><td class="num"><strong>230</strong></td><td class="num">69.3%</td></tr><tr><td><span class="hub-tag truck">🚚 Truck</span></td><td class="num"><strong>68</strong></td><td class="num">20.5%</td></tr><tr><td><span class="hub-tag air">✈ Air</span></td><td class="num"><strong>21</strong></td><td class="num">6.3%</td></tr><tr><td><span class="hub-tag ocean">⚓ Maritime</span></td><td class="num"><strong>13</strong></td><td class="num">3.9%</td></tr></tbody></table></div>
+        </div>
+        <div class="lis-micro">A large share of Panjiva export records does not expose a reliable mode. <code class="lis-code">Unknown</code> is preserved exactly as recorded — AIOS does not infer the missing mode.</div>
+
+        <div class="grid-2" style="gap:18px;margin-top:18px;align-items:start;">
+          <div>
+            <div class="lis-sublbl">Comparable-period Import mode signal</div>
+            <div style="overflow-x:auto;"><table class="hub-table" style="font-size:11px;"><thead><tr><th>Mode</th><th class="num">Jan–Jul 2025</th><th class="num">2026 YTD</th></tr></thead><tbody><tr><td><span class="hub-tag air">✈ Air</span></td><td class="num" style="color:var(--text-muted);">107</td><td class="num"><strong style="color:var(--navy);">128</strong></td></tr><tr><td><span class="hub-tag truck">🚚 Truck</span></td><td class="num" style="color:var(--text-muted);">105</td><td class="num"><strong style="color:var(--navy);">69</strong></td></tr><tr><td><span class="hub-tag unknown" title="Transport method recorded as Unknown in Panjiva — AIOS does not infer the missing mode.">Unknown</span></td><td class="num" style="color:var(--text-muted);">90</td><td class="num"><strong style="color:var(--navy);">85</strong></td></tr><tr><td><span class="hub-tag ocean">⚓ Maritime</span></td><td class="num" style="color:var(--text-muted);">41</td><td class="num"><strong style="color:var(--navy);">65</strong></td></tr></tbody></table></div>
+          </div>
+          <div><div class="lis-sig" style="grid-template-columns:1fr;margin-top:0;"><div class="s1"><b>Observed Operational Signal</b>Visible Air and Maritime participation are higher in the current period, while Truck Shipments are lower.</div><div class="s2"><b>AIOS Interpretation</b>The current inbound network continues to require simultaneous air, ocean and cross-border operating capabilities.</div><div class="s3"><b>Discovery Validation</b>Whether modal allocation is centrally governed, whether providers are separated by mode and how expedite / contingency decisions are controlled.</div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 05 GATEWAY & GEOGRAPHIC INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">05</span> Gateway &amp; Geographic Intelligence — Current YTD</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:18px;">
+          <div><div class="lis-sublbl">Gateways · 2026 YTD Imports · 347</div><div style="overflow-x:auto;"><table class="hub-table" style="font-size:11px;"><thead><tr><th>Gateway</th><th class="num">Shipments</th><th class="num">Share</th><th></th></tr></thead><tbody><tr><td><span class="hub-tag air lis-gw">✈ Airport</span><div class="lis-gw-name">AEROPUERTO INTERNACIONAL GENERAL MARIANO ESCOBEDO, APODACA, NUEVO LEON.</div></td><td class="num"><strong>128</strong></td><td class="num">36.9%</td><td style="width:26%;"><div class="lis-bar"><div style="width:36.9%;background:var(--navy);"></div></div></td></tr><tr><td><span class="hub-tag unknown lis-gw">⛨ Customs/Gateway</span><div class="lis-gw-name">MONTERREY, GENERAL MARIANO ESCOBEDO, NUEVO LEON.</div></td><td class="num"><strong>83</strong></td><td class="num">23.9%</td><td style="width:26%;"><div class="lis-bar"><div style="width:23.9%;background:var(--navy);"></div></div></td></tr><tr><td><span class="hub-tag border lis-gw">🌉 Border</span><div class="lis-gw-name">NUEVO LAREDO, NUEVO LAREDO, TAMAULIPAS.</div></td><td class="num"><strong>69</strong></td><td class="num">19.9%</td><td style="width:26%;"><div class="lis-bar"><div style="width:19.9%;background:var(--navy);"></div></div></td></tr><tr><td><span class="hub-tag ocean lis-gw">⚓ Port</span><div class="lis-gw-name">ALTAMIRA, ALTAMIRA, TAMAULIPAS.</div></td><td class="num"><strong>51</strong></td><td class="num">14.7%</td><td style="width:26%;"><div class="lis-bar"><div style="width:14.7%;background:var(--navy);"></div></div></td></tr><tr><td><span class="hub-tag ocean lis-gw">⚓ Port</span><div class="lis-gw-name">MANZANILLO, MANZANILLO, COLIMA.</div></td><td class="num"><strong>14</strong></td><td class="num">4.0%</td><td style="width:26%;"><div class="lis-bar"><div style="width:4.0%;background:var(--navy);"></div></div></td></tr><tr><td><span class="hub-tag unknown lis-gw">⛨ Customs/Gateway</span><div class="lis-gw-name">PUEBLA, HEROICA PUEBLA DE ZARAGOZA, PUEBLA.</div></td><td class="num"><strong>2</strong></td><td class="num">0.6%</td><td style="width:26%;"><div class="lis-bar"><div style="width:0.6%;background:var(--navy);"></div></div></td></tr></tbody></table></div></div>
+          <div><div class="lis-sublbl">Principal visible gateways · 2026 YTD Exports</div><div style="overflow-x:auto;"><table class="hub-table" style="font-size:11px;"><thead><tr><th>Gateway</th><th class="num">Shipments</th><th></th></tr></thead><tbody><tr><td><span class="hub-tag unknown lis-gw">⛨ Customs/Gateway</span><div class="lis-gw-name">MONTERREY, GENERAL MARIANO ESCOBEDO, NUEVO LEON.</div></td><td class="num"><strong>123</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:100.0%;background:var(--teal);"></div></div></td></tr><tr><td><span class="hub-tag border lis-gw">🌉 Border</span><div class="lis-gw-name">NUEVO LAREDO, NUEVO LAREDO, TAMAULIPAS.</div></td><td class="num"><strong>46</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:37.4%;background:var(--teal);"></div></div></td></tr><tr><td><span class="hub-tag air lis-gw">✈ Airport</span><div class="lis-gw-name">AEROPUERTO INTERNACIONAL GENERAL MARIANO ESCOBEDO, APODACA, NUEVO LEON.</div></td><td class="num"><strong>21</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:17.1%;background:var(--teal);"></div></div></td></tr><tr><td><span class="hub-tag unknown lis-gw">⛨ Customs/Gateway</span><div class="lis-gw-name">COLOMBIA, COLOMBIA, NUEVO LEON.</div></td><td class="num"><strong>11</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:8.9%;background:var(--teal);"></div></div></td></tr><tr><td><span class="hub-tag unknown lis-gw">⛨ Customs/Gateway</span><div class="lis-gw-name">CIUDAD ACUÑA, CIUDAD ACUÑA, COAHUILA.</div></td><td class="num"><strong>8</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:6.5%;background:var(--teal);"></div></div></td></tr><tr><td><span class="hub-tag unknown lis-gw">⛨ Customs/Gateway</span><div class="lis-gw-name">PUEBLA, HEROICA PUEBLA DE ZARAGOZA, PUEBLA.</div></td><td class="num"><strong>7</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:5.7%;background:var(--teal);"></div></div></td></tr><tr><td><span class="hub-tag unknown lis-gw">⛨ Customs/Gateway</span><div class="lis-gw-name">GUADALAJARA, TLACOMULCO DE ZUÑIGA, JALISCO.</div></td><td class="num"><strong>7</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:5.7%;background:var(--teal);"></div></div></td></tr><tr><td><span class="hub-tag unknown lis-gw">⛨ Customs/Gateway</span><div class="lis-gw-name">QUERETARO, SANTIAGO DE QUERETARO, QUERETARO.</div></td><td class="num"><strong>6</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:4.9%;background:var(--teal);"></div></div></td></tr></tbody></table></div></div>
+        </div>
+        <div class="lis-note-navy"><strong style="color:var(--navy);">Operational signal:</strong> the visible inbound network is strongly concentrated around Monterrey / Mariano Escobedo air activity, Nuevo Laredo cross-border activity, Altamira ocean activity, and a smaller recurring Manzanillo ocean stream.<br>
+        Gateway names are rendered exactly as supplied. Visual labels: <span class="hub-tag air lis-gw">✈ Airport</span> where the name is an airport · <span class="hub-tag border lis-gw">🌉 Border</span> for Nuevo Laredo, which AIOS describes as cross-border · <span class="hub-tag ocean lis-gw">⚓ Port</span> for Altamira and Manzanillo, which AIOS describes as ocean gateways · otherwise a neutral <span class="hub-tag unknown lis-gw">⛨ Customs/Gateway</span>. <strong style="color:#b45309;">Where Panjiva mode is Unknown, no gateway is relabelled as Port / Airport / Border from a potentially suggestive name.</strong> The export gateway list is the supplied principal set, not an exhaustive list.</div>
+
+        <div class="grid-2" style="gap:18px;margin-top:20px;">
+          <div><div class="lis-sublbl">Import Origin Country Presence · 2026 YTD</div><div style="overflow-x:auto;"><table class="hub-table" style="font-size:11px;"><thead><tr><th>Country</th><th class="num">Shipments</th><th></th></tr></thead><tbody><tr><td>🇺🇸 United States</td><td class="num"><strong>114</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:100.0%;background:var(--navy);"></div></div></td></tr><tr><td>🇫🇷 France</td><td class="num"><strong>109</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:95.6%;background:var(--navy);"></div></div></td></tr><tr><td>🇨🇳 China</td><td class="num"><strong>57</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:50.0%;background:var(--navy);"></div></div></td></tr><tr><td>🇩🇪 Germany</td><td class="num"><strong>46</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:40.4%;background:var(--navy);"></div></div></td></tr><tr><td>🇲🇽 Mexico</td><td class="num"><strong>42</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:36.8%;background:var(--navy);"></div></div></td></tr><tr><td>🇪🇸 Spain</td><td class="num"><strong>11</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:9.6%;background:var(--navy);"></div></div></td></tr><tr><td>🇯🇵 Japan</td><td class="num"><strong>9</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:7.9%;background:var(--navy);"></div></div></td></tr><tr><td>🇹🇼 Taiwan</td><td class="num"><strong>2</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:1.8%;background:var(--navy);"></div></div></td></tr></tbody></table></div></div>
+          <div><div class="lis-sublbl">Export Destination Presence · 2026 YTD</div><div style="overflow-x:auto;"><table class="hub-table" style="font-size:11px;"><thead><tr><th>Country</th><th class="num">Shipments</th><th></th></tr></thead><tbody><tr><td>🇲🇽 Mexico</td><td class="num"><strong>142</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:100.0%;background:var(--teal);"></div></div></td></tr><tr><td>🇺🇸 United States</td><td class="num"><strong>68</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:47.9%;background:var(--teal);"></div></div></td></tr><tr><td>🇨🇳 China</td><td class="num"><strong>8</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:5.6%;background:var(--teal);"></div></div></td></tr><tr><td>🇫🇷 France</td><td class="num"><strong>6</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:4.2%;background:var(--teal);"></div></div></td></tr><tr><td>🇹🇷 Turkey</td><td class="num"><strong>4</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:2.8%;background:var(--teal);"></div></div></td></tr><tr><td>🇵🇱 Poland</td><td class="num"><strong>4</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:2.8%;background:var(--teal);"></div></div></td></tr><tr><td>France / United States</td><td class="num"><strong>1</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:0.7%;background:var(--teal);"></div></div></td></tr><tr><td>China / Mexico</td><td class="num"><strong>1</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:0.7%;background:var(--teal);"></div></div></td></tr></tbody></table></div></div>
+        </div>
+        <div class="lis-micro">Some Shipments identify more than one origin country — country-presence counts are not necessarily additive. The material Mexico presence inside a file labeled “Mexico Exports” is one reason entity / transaction attribution should be validated (Module 16).</div>
+      </div>
+    </div>
+
+    <!-- 06 CURRENT YTD IMPORT CORE ROUTES — COMPLETE >=80% · 12 ROUTES -->
+    <div class="card" id="lis-imp-core">
+      <div class="card-header"><span class="accent">06</span> Current YTD Import Core Routes — Complete ≥80% Set · 12 Routes</div>
+      <div class="card-body">
+        <div class="grid-4" style="gap:10px;">
+          <div class="stat-box"><div class="stat-label">Import Universe · Current YTD</div><div class="stat-value" style="font-size:26px;">347</div><div class="stat-sub">Shipments · directional denominator</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--navy);"><div class="stat-label">Stopping Point</div><div class="stat-value" style="font-size:26px;">12 <span style="font-size:14px;color:var(--text-muted);font-weight:700;">routes</span></div><div class="stat-sub">Smallest route set reaching ≥80%</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--navy);"><div class="stat-label">Cumulative Coverage</div><div class="stat-value" style="font-size:26px;">81.0%</div><div class="stat-sub">Reached at rank 12</div></div>
+          <div class="stat-box"><div class="stat-label">Destination Facility · every route</div><div style="font-size:12.5px;font-weight:800;color:var(--navy);line-height:1.35;margin-top:4px;">Lisi Automotive Monterrey Sa De Cv</div><div class="stat-sub" style="font-style:italic;">Import-file address precision: 110 San Sebastián, Nuevo León</div></div>
+        </div>
+        <div style="margin-top:14px;">
+          <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);margin-bottom:6px;">Cumulative coverage — Top-3 = 51.3% · ranks 4–12 close the set at 81.0%</div>
+          <div class="lis-covbar"><div style="width:23.9%;background:var(--navy);" title="Rank 1 · 23.9% of Current YTD Imports">#1 · 23.9%</div><div style="width:14.7%;background:#1e4a8a;" title="Rank 2 · 14.7% of Current YTD Imports">#2 · 14.7%</div><div style="width:12.7%;background:var(--teal-dim);" title="Rank 3 · 12.7% of Current YTD Imports">#3 · 12.7%</div><div style="width:29.7%;background:#7dd3e8;color:var(--navy);" title="Ranks 4–12 · cumulative 51.3% → 81.0%">Ranks 4–12 · cum. 81.0%</div><div style="flex:1;background:#e6eaf1;color:var(--text-light);" title="Outside the ≥80% Core Route set">outside set</div></div>
+        </div>
+        <div style="overflow-x:auto;margin-top:14px;border:1px solid var(--border);border-radius:6px;">
+          <table class="hub-table lis-route-table"><thead><tr><th class="num">#</th><th>Origin</th><th>Gateway</th><th>Destination</th><th>Mode</th><th class="num">Shipments</th><th class="num">Share</th><th class="num">Cum.</th><th class="num">Active Months</th><th class="num">/ Active Month</th><th class="num">/ Week</th><th>Visible Range</th></tr></thead><tbody><tr><td class="lis-rank">1</td><td class="lis-ent"><span class="lis-na-name">Shipper not available in Panjiva</span><div class="lis-addr-na">Address not available in Panjiva</div></td><td class="lis-gwc"><span class="hub-tag unknown lis-gw">⛨ Customs/Gateway</span><div class="lis-gw-name">MONTERREY, GENERAL MARIANO ESCOBEDO, NUEVO LEON.</div></td><td class="lis-ent"><strong>Lisi Automotive Monterrey Sa De Cv</strong><div class="lis-addr">110 San Sebastián, Nuevo León</div></td><td style="white-space:nowrap;"><span class="hub-tag unknown" title="Transport method recorded as Unknown in Panjiva — AIOS does not infer the missing mode.">Unknown</span></td><td class="num"><strong>83</strong></td><td class="num">23.9%</td><td class="num lis-cum"><strong>23.9%</strong><div class="lis-cum-bar"><div style="width:23.9%;"></div></div></td><td class="num">7</td><td class="num">11.86</td><td class="num">3.17</td><td class="lis-dates">2026-01-13 → 2026-07-14</td></tr><tr><td class="lis-rank">2</td><td class="lis-ent"><strong>Lisi Automotive Llc</strong> <span class="lis-aff" title="LISI-named entity — name match only. Panjiva does not establish affiliate / intercompany status, commercial ownership or contracting authority. Requires validation.">LISI-named</span><div class="lis-addr">Shiloh Dr, Laredo, TX 78045, USA</div></td><td class="lis-gwc"><span class="hub-tag ocean lis-gw">⚓ Port</span><div class="lis-gw-name">ALTAMIRA, ALTAMIRA, TAMAULIPAS.</div></td><td class="lis-ent"><strong>Lisi Automotive Monterrey Sa De Cv</strong><div class="lis-addr">110 San Sebastián, Nuevo León</div></td><td style="white-space:nowrap;"><span class="hub-tag ocean">⚓ Maritime</span></td><td class="num"><strong>51</strong></td><td class="num">14.7%</td><td class="num lis-cum"><strong>38.6%</strong><div class="lis-cum-bar"><div style="width:38.6%;"></div></div></td><td class="num">7</td><td class="num">7.29</td><td class="num">1.70</td><td class="lis-dates">2026-01-03 → 2026-07-31</td></tr><tr><td class="lis-rank">3</td><td class="lis-ent"><strong>Lisi Automotive Llc</strong> <span class="lis-aff" title="LISI-named entity — name match only. Panjiva does not establish affiliate / intercompany status, commercial ownership or contracting authority. Requires validation.">LISI-named</span><div class="lis-addr">Shiloh Dr, Laredo, TX 78045, USA</div></td><td class="lis-gwc"><span class="hub-tag border lis-gw">🌉 Border</span><div class="lis-gw-name">NUEVO LAREDO, NUEVO LAREDO, TAMAULIPAS.</div></td><td class="lis-ent"><strong>Lisi Automotive Monterrey Sa De Cv</strong><div class="lis-addr">110 San Sebastián, Nuevo León</div></td><td style="white-space:nowrap;"><span class="hub-tag truck">🚚 Truck</span></td><td class="num"><strong>44</strong></td><td class="num">12.7%</td><td class="num lis-cum"><strong>51.3%</strong><div class="lis-cum-bar"><div style="width:51.3%;"></div></div></td><td class="num">6</td><td class="num">7.33</td><td class="num">1.58</td><td class="lis-dates">2026-01-16 → 2026-07-29</td></tr><tr><td class="lis-rank">4</td><td class="lis-ent"><strong>Lisi Automotive Kkp Gmb H &amp; Co Kg</strong> <span class="lis-aff" title="LISI-named entity — name match only. Panjiva does not establish affiliate / intercompany status, commercial ownership or contracting authority. Requires validation.">LISI-named</span><div class="lis-addr-na">Address not available in Panjiva</div></td><td class="lis-gwc"><span class="hub-tag air lis-gw">✈ Airport</span><div class="lis-gw-name">AEROPUERTO INTERNACIONAL GENERAL MARIANO ESCOBEDO, APODACA, NUEVO LEON.</div></td><td class="lis-ent"><strong>Lisi Automotive Monterrey Sa De Cv</strong><div class="lis-addr">110 San Sebastián, Nuevo León</div></td><td style="white-space:nowrap;"><span class="hub-tag air">✈ Air</span></td><td class="num"><strong>25</strong></td><td class="num">7.2%</td><td class="num lis-cum"><strong>58.5%</strong><div class="lis-cum-bar"><div style="width:58.5%;"></div></div></td><td class="num">7</td><td class="num">3.57</td><td class="num">0.98</td><td class="lis-dates">2026-01-26 → 2026-07-22</td></tr><tr><td class="lis-rank">5</td><td class="lis-ent"><span class="lis-na-name">Shipper not available in Panjiva</span><div class="lis-addr-na">Address not available in Panjiva</div></td><td class="lis-gwc"><span class="hub-tag border lis-gw">🌉 Border</span><div class="lis-gw-name">NUEVO LAREDO, NUEVO LAREDO, TAMAULIPAS.</div></td><td class="lis-ent"><strong>Lisi Automotive Monterrey Sa De Cv</strong><div class="lis-addr">110 San Sebastián, Nuevo León</div></td><td style="white-space:nowrap;"><span class="hub-tag truck">🚚 Truck</span></td><td class="num"><strong>19</strong></td><td class="num">5.5%</td><td class="num lis-cum"><strong>64.0%</strong><div class="lis-cum-bar"><div style="width:64.0%;"></div></div></td><td class="num">5</td><td class="num">3.80</td><td class="num">0.76</td><td class="lis-dates">2026-02-06 → 2026-07-31</td></tr><tr><td class="lis-rank">6</td><td class="lis-ent"><strong>Lisi Automotive Llc</strong> <span class="lis-aff" title="LISI-named entity — name match only. Panjiva does not establish affiliate / intercompany status, commercial ownership or contracting authority. Requires validation.">LISI-named</span><div class="lis-addr">Shiloh Dr, Laredo, TX 78045, USA</div></td><td class="lis-gwc"><span class="hub-tag ocean lis-gw">⚓ Port</span><div class="lis-gw-name">MANZANILLO, MANZANILLO, COLIMA.</div></td><td class="lis-ent"><strong>Lisi Automotive Monterrey Sa De Cv</strong><div class="lis-addr">110 San Sebastián, Nuevo León</div></td><td style="white-space:nowrap;"><span class="hub-tag ocean">⚓ Maritime</span></td><td class="num"><strong>14</strong></td><td class="num">4.0%</td><td class="num lis-cum"><strong>68.0%</strong><div class="lis-cum-bar"><div style="width:68.0%;"></div></div></td><td class="num">6</td><td class="num">2.33</td><td class="num">0.48</td><td class="lis-dates">2026-01-08 → 2026-07-29</td></tr><tr><td class="lis-rank">7</td><td class="lis-ent"><strong>Suzhou Zhuny Precision Industrial Co., Ltd.</strong><div class="lis-addr-na">Address not available in Panjiva</div></td><td class="lis-gwc"><span class="hub-tag air lis-gw">✈ Airport</span><div class="lis-gw-name">AEROPUERTO INTERNACIONAL GENERAL MARIANO ESCOBEDO, APODACA, NUEVO LEON.</div></td><td class="lis-ent"><strong>Lisi Automotive Monterrey Sa De Cv</strong><div class="lis-addr">110 San Sebastián, Nuevo León</div></td><td style="white-space:nowrap;"><span class="hub-tag air">✈ Air</span></td><td class="num"><strong>14</strong></td><td class="num">4.0%</td><td class="num lis-cum"><strong>72.0%</strong><div class="lis-cum-bar"><div style="width:72.0%;"></div></div></td><td class="num">7</td><td class="num">2.00</td><td class="num">0.56</td><td class="lis-dates">2026-01-21 → 2026-07-14</td></tr><tr><td class="lis-rank">8</td><td class="lis-ent"><strong>Ld Mold Solution Ltd.</strong><div class="lis-addr-na">Address not available in Panjiva</div></td><td class="lis-gwc"><span class="hub-tag air lis-gw">✈ Airport</span><div class="lis-gw-name">AEROPUERTO INTERNACIONAL GENERAL MARIANO ESCOBEDO, APODACA, NUEVO LEON.</div></td><td class="lis-ent"><strong>Lisi Automotive Monterrey Sa De Cv</strong><div class="lis-addr">110 San Sebastián, Nuevo León</div></td><td style="white-space:nowrap;"><span class="hub-tag air">✈ Air</span></td><td class="num"><strong>8</strong></td><td class="num">2.3%</td><td class="num lis-cum"><strong>74.4%</strong><div class="lis-cum-bar"><div style="width:74.4%;"></div></div></td><td class="num">3</td><td class="num">2.67</td><td class="num">0.79</td><td class="lis-dates">2026-05-07 → 2026-07-16</td></tr><tr><td class="lis-rank">9</td><td class="lis-ent"><strong>Optech</strong><div class="lis-addr-na">Address not available in Panjiva</div></td><td class="lis-gwc"><span class="hub-tag air lis-gw">✈ Airport</span><div class="lis-gw-name">AEROPUERTO INTERNACIONAL GENERAL MARIANO ESCOBEDO, APODACA, NUEVO LEON.</div></td><td class="lis-ent"><strong>Lisi Automotive Monterrey Sa De Cv</strong><div class="lis-addr">110 San Sebastián, Nuevo León</div></td><td style="white-space:nowrap;"><span class="hub-tag air">✈ Air</span></td><td class="num"><strong>6</strong></td><td class="num">1.7%</td><td class="num lis-cum"><strong>76.1%</strong><div class="lis-cum-bar"><div style="width:76.1%;"></div></div></td><td class="num">4</td><td class="num">1.50</td><td class="num">0.26</td><td class="lis-dates">2026-01-14 → 2026-06-25</td></tr><tr><td class="lis-rank">10</td><td class="lis-ent"><strong>S.I.F.O. So.Ge.Com. Industrie</strong><div class="lis-addr-na">Address not available in Panjiva</div></td><td class="lis-gwc"><span class="hub-tag air lis-gw">✈ Airport</span><div class="lis-gw-name">AEROPUERTO INTERNACIONAL GENERAL MARIANO ESCOBEDO, APODACA, NUEVO LEON.</div></td><td class="lis-ent"><strong>Lisi Automotive Monterrey Sa De Cv</strong><div class="lis-addr">110 San Sebastián, Nuevo León</div></td><td style="white-space:nowrap;"><span class="hub-tag air">✈ Air</span></td><td class="num"><strong>6</strong></td><td class="num">1.7%</td><td class="num lis-cum"><strong>77.8%</strong><div class="lis-cum-bar"><div style="width:77.8%;"></div></div></td><td class="num">6</td><td class="num">1.00</td><td class="num">0.29</td><td class="lis-dates">2026-01-28 → 2026-06-23</td></tr><tr><td class="lis-rank">11</td><td class="lis-ent"><strong>Tivoly</strong><div class="lis-addr-na">Address not available in Panjiva</div></td><td class="lis-gwc"><span class="hub-tag air lis-gw">✈ Airport</span><div class="lis-gw-name">AEROPUERTO INTERNACIONAL GENERAL MARIANO ESCOBEDO, APODACA, NUEVO LEON.</div></td><td class="lis-ent"><strong>Lisi Automotive Monterrey Sa De Cv</strong><div class="lis-addr">110 San Sebastián, Nuevo León</div></td><td style="white-space:nowrap;"><span class="hub-tag air">✈ Air</span></td><td class="num"><strong>6</strong></td><td class="num">1.7%</td><td class="num lis-cum"><strong>79.5%</strong><div class="lis-cum-bar"><div style="width:79.5%;"></div></div></td><td class="num">4</td><td class="num">1.50</td><td class="num">0.29</td><td class="lis-dates">2026-03-03 → 2026-07-24</td></tr><tr><td class="lis-rank">12</td><td class="lis-ent"><strong>Gerbo France</strong><div class="lis-addr-na">Address not available in Panjiva</div></td><td class="lis-gwc"><span class="hub-tag air lis-gw">✈ Airport</span><div class="lis-gw-name">AEROPUERTO INTERNACIONAL GENERAL MARIANO ESCOBEDO, APODACA, NUEVO LEON.</div></td><td class="lis-ent"><strong>Lisi Automotive Monterrey Sa De Cv</strong><div class="lis-addr">110 San Sebastián, Nuevo León</div></td><td style="white-space:nowrap;"><span class="hub-tag air">✈ Air</span></td><td class="num"><strong>5</strong></td><td class="num">1.4%</td><td class="num lis-cum"><strong>81.0%</strong><div class="lis-cum-bar"><div style="width:81.0%;"></div></div></td><td class="num">4</td><td class="num">1.25</td><td class="num">0.24</td><td class="lis-dates">2026-02-23 → 2026-07-20</td></tr></tbody></table>
+        </div>
+        <div class="lis-note"><strong>Core Routes</strong> = the AIOS-finalized smallest route set reaching ≥80% of Current YTD Import Shipments — <strong style="color:#b45309;">never recalculated, re-ranked or truncated</strong>. Route rank is factual; no Commercial Route Priority is assigned. Selected visible origin address: Lisi Automotive Llc — Shiloh Dr, Laredo, TX 78045, USA; other Core Route origin facilities show <strong>Address not available in Panjiva</strong>. <strong>No missing addresses have been externally completed.</strong> The <span class="lis-aff">LISI-named</span> marker is a name match only — affiliate status is not established.</div>
+      </div>
+    </div>
+
+    <!-- 07 CURRENT YTD EXPORT CORE ROUTES — COMPLETE >=80% · 5 ROUTES -->
+    <div class="card" id="lis-exp-core">
+      <div class="card-header"><span class="accent">07</span> Current YTD Export Core Routes — Complete ≥80% Set · 5 Routes</div>
+      <div class="card-body">
+        <div class="grid-4" style="gap:10px;">
+          <div class="stat-box"><div class="stat-label">Export Universe · Current YTD</div><div class="stat-value" style="font-size:26px;">234</div><div class="stat-sub">Shipments · directional denominator</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">Stopping Point</div><div class="stat-value" style="font-size:26px;color:var(--teal-dim);">5 <span style="font-size:14px;color:var(--text-muted);font-weight:700;">routes</span></div><div class="stat-sub">Smallest route set reaching ≥80%</div></div>
+          <div class="stat-box" style="border-left:3px solid var(--teal);"><div class="stat-label">Cumulative Coverage</div><div class="stat-value" style="font-size:26px;color:var(--teal-dim);">82.5%</div><div class="stat-sub">Top-3 routes 76.1%</div></div>
+          <div class="stat-box"><div class="stat-label">Leading Export Route</div><div class="stat-value" style="font-size:26px;">49.6%</div><div class="stat-sub">116 Shipments · Monterrey gateway · consignee not available</div></div>
+        </div>
+        <div style="margin-top:14px;">
+          <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);margin-bottom:6px;">Cumulative coverage — ends at 82.5% on rank 5</div>
+          <div class="lis-covbar"><div style="width:49.6%;background:var(--navy);" title="Rank 1 · 49.6%">#1 · 49.6%</div><div style="width:19.7%;background:#1e4a8a;" title="Rank 2 · 19.7%">#2 · 19.7%</div><div style="width:6.8%;background:var(--teal-dim);" title="Rank 3 · 6.8%">#3</div><div style="width:3.4%;background:var(--teal);" title="Rank 4 · 3.4%">#4</div><div style="width:3.0%;background:#f59e0b;" title="Rank 5 · 3.0%">#5</div><div style="flex:1;background:#e6eaf1;color:var(--text-light);">outside set</div></div>
+        </div>
+        <div class="lis-route-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:12px;margin-top:16px;">
+          
+          <div class="lis-route" style="border:1px solid rgba(13,43,94,0.3);">
+            <div class="lis-route-head">
+              <span class="lis-rank-pill r1">Rank 1</span>
+              <span class="hub-tag unknown" title="Transport method recorded as Unknown in Panjiva — AIOS does not infer the missing mode.">Unknown</span>
+              <span style="flex:1;"></span>
+              <span class="lis-route-share">49.6% · cum. 49.6%</span>
+            </div>
+            <div style="padding:12px 14px;">
+              <div class="lis-hop"><div class="lis-hop-lbl">Origin</div><div class="lis-hop-name"><strong>Lisi Automotive Monterrey Sa De Cv</strong><div class="lis-addr">S. Sebastián 110, Zertuche, 67190 Guadalupe, N.L., Mexico</div></div></div>
+              <div class="lis-hop-arrow">↓</div>
+              <div class="lis-hop"><div class="lis-hop-lbl">Gateway</div><div class="lis-hop-name"><span class="hub-tag unknown lis-gw">⛨ Customs/Gateway</span> <span class="lis-gw-name" style="display:inline;">MONTERREY, GENERAL MARIANO ESCOBEDO, NUEVO LEON.</span></div></div>
+              <div class="lis-hop-arrow">↓</div>
+              <div class="lis-hop"><div class="lis-hop-lbl">Destination</div><div class="lis-hop-name"><span class="lis-na-name">Consignee not available in Panjiva</span><div class="lis-addr-na">Address not available in Panjiva</div></div></div>
+              <div class="lis-route-stats">
+                <div><b>116</b><span>Shipments</span></div>
+                <div><b>7</b><span>Active Months</span></div>
+                <div><b>16.57</b><span>/ Active Month</span></div>
+                <div><b>4.16</b><span>/ Week</span></div>
+              </div>
+              <div class="lis-range">Visible range <strong>2026-01-15 → 2026-07-28</strong></div>
+            </div>
+          </div>
+          <div class="lis-route" style="border:1px solid rgba(13,43,94,0.3);">
+            <div class="lis-route-head">
+              <span class="lis-rank-pill r2">Rank 2</span>
+              <span class="hub-tag truck">🚚 Truck</span>
+              <span style="flex:1;"></span>
+              <span class="lis-route-share">19.7% · cum. 69.2%</span>
+            </div>
+            <div style="padding:12px 14px;">
+              <div class="lis-hop"><div class="lis-hop-lbl">Origin</div><div class="lis-hop-name"><strong>Lisi Automotive Monterrey Sa De Cv</strong><div class="lis-addr">S. Sebastián 110, Zertuche, 67190 Guadalupe, N.L., Mexico</div></div></div>
+              <div class="lis-hop-arrow">↓</div>
+              <div class="lis-hop"><div class="lis-hop-lbl">Gateway</div><div class="lis-hop-name"><span class="hub-tag border lis-gw">🌉 Border</span> <span class="lis-gw-name" style="display:inline;">NUEVO LAREDO, NUEVO LAREDO, TAMAULIPAS.</span></div></div>
+              <div class="lis-hop-arrow">↓</div>
+              <div class="lis-hop"><div class="lis-hop-lbl">Destination</div><div class="lis-hop-name"><strong>Lisi Automotive Llc</strong> <span class="lis-aff" title="LISI-named entity — name match only. Panjiva does not establish affiliate / intercompany status, commercial ownership or contracting authority. Requires validation.">LISI-named</span><div class="lis-addr">Shiloh Dr, Laredo, TX 78045, USA</div></div></div>
+              <div class="lis-route-stats">
+                <div><b>46</b><span>Shipments</span></div>
+                <div><b>7</b><span>Active Months</span></div>
+                <div><b>6.57</b><span>/ Active Month</span></div>
+                <div><b>1.59</b><span>/ Week</span></div>
+              </div>
+              <div class="lis-range">Visible range <strong>2026-01-07 → 2026-07-28</strong></div>
+            </div>
+          </div>
+          <div class="lis-route" style="border:1px solid rgba(13,43,94,0.3);">
+            <div class="lis-route-head">
+              <span class="lis-rank-pill r3">Rank 3</span>
+              <span class="hub-tag air">✈ Air</span>
+              <span style="flex:1;"></span>
+              <span class="lis-route-share">6.8% · cum. 76.1%</span>
+            </div>
+            <div style="padding:12px 14px;">
+              <div class="lis-hop"><div class="lis-hop-lbl">Origin</div><div class="lis-hop-name"><strong>Lisi Automotive Monterrey Sa De Cv</strong><div class="lis-addr">S. Sebastián 110, Zertuche, 67190 Guadalupe, N.L., Mexico</div></div></div>
+              <div class="lis-hop-arrow">↓</div>
+              <div class="lis-hop"><div class="lis-hop-lbl">Gateway</div><div class="lis-hop-name"><span class="hub-tag air lis-gw">✈ Airport</span> <span class="lis-gw-name" style="display:inline;">AEROPUERTO INTERNACIONAL GENERAL MARIANO ESCOBEDO, APODACA, NUEVO LEON.</span></div></div>
+              <div class="lis-hop-arrow">↓</div>
+              <div class="lis-hop"><div class="lis-hop-lbl">Destination</div><div class="lis-hop-name"><strong>Lisi Automotive Kkp Gmb H &amp; Co Kg</strong> <span class="lis-aff" title="LISI-named entity — name match only. Panjiva does not establish affiliate / intercompany status, commercial ownership or contracting authority. Requires validation.">LISI-named</span><div class="lis-addr-na">Address not available in Panjiva</div></div></div>
+              <div class="lis-route-stats">
+                <div><b>16</b><span>Shipments</span></div>
+                <div><b>7</b><span>Active Months</span></div>
+                <div><b>2.29</b><span>/ Active Month</span></div>
+                <div><b>0.61</b><span>/ Week</span></div>
+              </div>
+              <div class="lis-range">Visible range <strong>2026-01-27 → 2026-07-30</strong></div>
+            </div>
+          </div>
+          <div class="lis-route" style="border:1px solid var(--border);">
+            <div class="lis-route-head">
+              <span class="lis-rank-pill r4">Rank 4</span>
+              <span class="hub-tag truck">🚚 Truck</span>
+              <span style="flex:1;"></span>
+              <span class="lis-route-share">3.4% · cum. 79.5%</span>
+            </div>
+            <div style="padding:12px 14px;">
+              <div class="lis-hop"><div class="lis-hop-lbl">Origin</div><div class="lis-hop-name"><strong>Lisi Automotive Monterrey Sa De Cv</strong><div class="lis-addr">S. Sebastián 110, Zertuche, 67190 Guadalupe, N.L., Mexico</div></div></div>
+              <div class="lis-hop-arrow">↓</div>
+              <div class="lis-hop"><div class="lis-hop-lbl">Gateway</div><div class="lis-hop-name"><span class="hub-tag unknown lis-gw">⛨ Customs/Gateway</span> <span class="lis-gw-name" style="display:inline;">CIUDAD ACUÑA, CIUDAD ACUÑA, COAHUILA.</span></div></div>
+              <div class="lis-hop-arrow">↓</div>
+              <div class="lis-hop"><div class="lis-hop-lbl">Destination</div><div class="lis-hop-name"><strong>Lisi Automotive Kkp Gmb H &amp; Co Kg</strong> <span class="lis-aff" title="LISI-named entity — name match only. Panjiva does not establish affiliate / intercompany status, commercial ownership or contracting authority. Requires validation.">LISI-named</span><div class="lis-addr-na">Address not available in Panjiva</div></div></div>
+              <div class="lis-route-stats">
+                <div><b>8</b><span>Shipments</span></div>
+                <div><b>2</b><span>Active Months</span></div>
+                <div><b>4.00</b><span>/ Active Month</span></div>
+                <div><b>1.30</b><span>/ Week</span></div>
+              </div>
+              <div class="lis-range">Visible range <strong>2026-02-06 → 2026-03-20</strong></div>
+            </div>
+          </div>
+          <div class="lis-route" style="border:1px solid var(--border);">
+            <div class="lis-route-head">
+              <span class="lis-rank-pill r5">Rank 5</span>
+              <span class="hub-tag unknown" title="Transport method recorded as Unknown in Panjiva — AIOS does not infer the missing mode.">Unknown</span>
+              <span style="flex:1;"></span>
+              <span class="lis-route-share">3.0% · cum. 82.5%</span>
+            </div>
+            <div style="padding:12px 14px;">
+              <div class="lis-hop"><div class="lis-hop-lbl">Origin</div><div class="lis-hop-name"><strong>A. Schulman De Mexico S.A. De C.V.</strong><div class="lis-addr">Manuel E. Izaguirre, No.13, Despacho 304 – Ciudad Satélite, Naucalpan Mexico State 53100, Mexico</div></div></div>
+              <div class="lis-hop-arrow">↓</div>
+              <div class="lis-hop"><div class="lis-hop-lbl">Gateway</div><div class="lis-hop-name"><span class="hub-tag unknown lis-gw">⛨ Customs/Gateway</span> <span class="lis-gw-name" style="display:inline;">GUADALAJARA, TLACOMULCO DE ZUÑIGA, JALISCO.</span></div></div>
+              <div class="lis-hop-arrow">↓</div>
+              <div class="lis-hop"><div class="lis-hop-lbl">Destination</div><div class="lis-hop-name"><strong>Lisi Automotive Monterrey Sa De Cv</strong><div class="lis-addr">Kalos, 67205 Guadalupe, N.L., Mexico</div></div><div class="lis-dq-inline" title="The account entity appears in this transaction role inside the supplied Mexico Exports universe. Preserved as supplied — see Module 16.">⚠ Account entity appears as consignee in the Export file — preserved, see Module 16</div></div>
+              <div class="lis-route-stats">
+                <div><b>7</b><span>Shipments</span></div>
+                <div><b>6</b><span>Active Months</span></div>
+                <div><b>1.17</b><span>/ Active Month</span></div>
+                <div><b>0.28</b><span>/ Week</span></div>
+              </div>
+              <div class="lis-range">Visible range <strong>2026-01-19 → 2026-07-14</strong></div>
+            </div>
+          </div>
+        </div>
+        <div class="lis-note">Rank 5 is a record in the supplied Mexico Exports universe in which <strong>Lisi Automotive Monterrey Sa De Cv</strong> appears as the <strong>consignee</strong> and <strong>A. Schulman De Mexico S.A. De C.V.</strong> as the shipper — rendered exactly as supplied, <strong style="color:#b45309;">not removed or reclassified</strong>. See the Data Quality / Entity Resolution Hypothesis in Module 16. Destinations reading <strong>Consignee not available in Panjiva</strong> show Address not available in Panjiva.</div>
+      </div>
+    </div>
+
+    <!-- 08 ROUTE CONCENTRATION & FREQUENCY -->
+    <div class="card">
+      <div class="card-header"><span class="accent">08</span> Route Concentration &amp; Observed Route Cadence</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:18px;">
+          <div style="padding:14px 18px;background:rgba(13,43,94,0.04);border:1px solid rgba(13,43,94,0.16);border-radius:8px;">
+            <div class="lis-eyebrow" style="color:var(--navy);">Imports · 43 distinct visible routes in 2026 YTD</div>
+            <div style="font-size:24px;font-weight:800;color:var(--navy);margin-top:4px;">12 Core Routes → 81.0%</div>
+            <div class="lis-conc-row"><div class="lis-conc-lbl">Leading route</div><div class="lis-conc-bar"><div style="width:23.9%;background:var(--navy);"></div></div><div class="lis-conc-val">23.9%</div></div>
+            <div class="lis-conc-row"><div class="lis-conc-lbl">Top-3 routes</div><div class="lis-conc-bar"><div style="width:51.3%;background:#1e4a8a;"></div></div><div class="lis-conc-val">51.3%</div></div>
+            <div class="lis-conc-row"><div class="lis-conc-lbl">Core Route set (12)</div><div class="lis-conc-bar"><div style="width:81.0%;background:var(--teal-dim);"></div></div><div class="lis-conc-val">81.0%</div></div>
+            <div style="font-size:10.5px;color:var(--text-muted);margin-top:8px;">No single route exceeds 80% — <strong>no EXTREME ROUTE CONCENTRATION</strong>.</div>
+          </div>
+          <div style="padding:14px 18px;background:rgba(0,180,216,0.05);border:1px solid rgba(0,180,216,0.3);border-radius:8px;">
+            <div class="lis-eyebrow">Exports · 14 distinct visible routes in 2026 YTD</div>
+            <div style="font-size:24px;font-weight:800;color:var(--teal-dim);margin-top:4px;">5 Core Routes → 82.5%</div>
+            <div class="lis-conc-row"><div class="lis-conc-lbl">Leading route</div><div class="lis-conc-bar"><div style="width:49.6%;background:var(--navy);"></div></div><div class="lis-conc-val">49.6%</div></div>
+            <div class="lis-conc-row"><div class="lis-conc-lbl">Top-3 routes</div><div class="lis-conc-bar"><div style="width:76.1%;background:#1e4a8a;"></div></div><div class="lis-conc-val">76.1%</div></div>
+            <div class="lis-conc-row"><div class="lis-conc-lbl">Core Route set (5)</div><div class="lis-conc-bar"><div style="width:82.5%;background:var(--teal-dim);"></div></div><div class="lis-conc-val">82.5%</div></div>
+            <div style="font-size:10.5px;color:var(--text-muted);margin-top:8px;">Substantially more concentrated than the import structure.</div>
+          </div>
+        </div>
+        <div class="lis-note-navy">The visible inbound structure combines recurring high-frequency unknown-mode records, recurring ocean via Altamira, recurring truck via Nuevo Laredo, recurring air via Monterrey, and smaller specialized air-origin routes.</div>
+
+        <div class="lis-sublbl" style="margin-top:18px;">Core Routes visible in all 7 Current YTD months</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px;">
+          <div class="lis-sus"><div class="lis-sus-top"><span class="lis-rank-pill r1">Import · Rank 1</span> <span class="hub-tag unknown" title="Transport method recorded as Unknown in Panjiva — AIOS does not infer the missing mode.">Unknown</span></div><div class="lis-sus-name">Shipper not available in Panjiva → Monterrey</div><div class="lis-sus-stats"><span><b>83</b> Shipments</span><span><b>11.86</b> / Active Month</span><span><b>3.17</b> / Week</span></div><div class="lis-range">2026-01-13 → 2026-07-14</div></div><div class="lis-sus"><div class="lis-sus-top"><span class="lis-rank-pill r2">Import · Rank 2</span> <span class="hub-tag ocean">⚓ Maritime</span></div><div class="lis-sus-name">Lisi Automotive Llc → Altamira</div><div class="lis-sus-stats"><span><b>51</b> Shipments</span><span><b>7.29</b> / Active Month</span><span><b>1.70</b> / Week</span></div><div class="lis-range">2026-01-03 → 2026-07-31</div></div><div class="lis-sus"><div class="lis-sus-top"><span class="lis-rank-pill r9">Import · Rank 4</span> <span class="hub-tag air">✈ Air</span></div><div class="lis-sus-name">Lisi Automotive Kkp Gmb H &amp; Co Kg → Aeropuerto Internacional General Mariano Escobedo</div><div class="lis-sus-stats"><span><b>25</b> Shipments</span><span><b>3.57</b> / Active Month</span><span><b>0.98</b> / Week</span></div><div class="lis-range">2026-01-26 → 2026-07-22</div></div><div class="lis-sus"><div class="lis-sus-top"><span class="lis-rank-pill r9">Import · Rank 7</span> <span class="hub-tag air">✈ Air</span></div><div class="lis-sus-name">Suzhou Zhuny Precision Industrial Co., Ltd. → Aeropuerto Internacional General Mariano Escobedo</div><div class="lis-sus-stats"><span><b>14</b> Shipments</span><span><b>2.00</b> / Active Month</span><span><b>0.56</b> / Week</span></div><div class="lis-range">2026-01-21 → 2026-07-14</div></div><div class="lis-sus"><div class="lis-sus-top"><span class="lis-rank-pill r1">Export · Rank 1</span> <span class="hub-tag unknown" title="Transport method recorded as Unknown in Panjiva — AIOS does not infer the missing mode.">Unknown</span></div><div class="lis-sus-name">Consignee not available in Panjiva → Monterrey</div><div class="lis-sus-stats"><span><b>116</b> Shipments</span><span><b>16.57</b> / Active Month</span><span><b>4.16</b> / Week</span></div><div class="lis-range">2026-01-15 → 2026-07-28</div></div><div class="lis-sus"><div class="lis-sus-top"><span class="lis-rank-pill r2">Export · Rank 2</span> <span class="hub-tag truck">🚚 Truck</span></div><div class="lis-sus-name">Lisi Automotive Llc → Nuevo Laredo</div><div class="lis-sus-stats"><span><b>46</b> Shipments</span><span><b>6.57</b> / Active Month</span><span><b>1.59</b> / Week</span></div><div class="lis-range">2026-01-07 → 2026-07-28</div></div><div class="lis-sus"><div class="lis-sus-top"><span class="lis-rank-pill r3">Export · Rank 3</span> <span class="hub-tag air">✈ Air</span></div><div class="lis-sus-name">Lisi Automotive Kkp Gmb H &amp; Co Kg → Aeropuerto Internacional General Mariano Escobedo</div><div class="lis-sus-stats"><span><b>16</b> Shipments</span><span><b>2.29</b> / Active Month</span><span><b>0.61</b> / Week</span></div><div class="lis-range">2026-01-27 → 2026-07-30</div></div>
+        </div>
+        <div class="lis-note"><strong>Observed Route Cadence</strong> uses each route's own first-to-last visible date range and is <strong style="color:#b45309;">not annualized</strong> or normalized across routes. No Current YTD Core Route has a visible window shorter than four weeks, so no SHORT OBSERVATION WINDOW safeguard applies.</div>
+      </div>
+    </div>
+
+    <!-- 09 ROUTE PERSISTENCE / CHANGE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">09</span> Route Persistence &amp; Change — 2025 vs Current YTD Core Route Sets</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:18px;">
+          <div>
+            <div class="lis-sublbl" style="color:var(--navy);">Imports · Current YTD Core Route set (12)</div>
+            <div class="lis-conc-bar" style="height:18px;" title="9 Persisting · 3 Newly visible"><div style="width:75%;background:var(--navy);"></div><div style="width:25%;background:var(--teal);"></div></div>
+            <div class="lis-sublbl" style="margin-top:12px;color:var(--navy);">Visible in both 2025 and 2026 Core Route sets · 9</div><ul class="lis-list"><li>Unknown shipper → Monterrey gateway → LISI Monterrey</li><li>LISI Automotive LLC → Altamira → LISI Monterrey</li><li>LISI Automotive LLC → Nuevo Laredo → LISI Monterrey</li><li>LISI Automotive KKP → Monterrey Airport → LISI Monterrey</li><li>Unknown shipper → Nuevo Laredo → LISI Monterrey</li><li>LISI Automotive LLC → Manzanillo → LISI Monterrey</li><li>Suzhou Zhuny → Monterrey Airport → LISI Monterrey</li><li>LD Mold Solution → Monterrey Airport → LISI Monterrey</li><li>Tivoly → Monterrey Airport → LISI Monterrey</li></ul>
+            <div class="lis-sublbl" style="margin-top:12px;">Newly visible in Current YTD Core Route set · 3</div><ul class="lis-list"><li>Optech → Monterrey Airport → LISI Monterrey</li><li>S.I.F.O. So.Ge.Com. Industrie → Monterrey Airport → LISI Monterrey</li><li>Gerbo France → Monterrey Airport → LISI Monterrey</li></ul>
+            <div class="lis-sublbl muted" style="margin-top:12px;">2025 Core Routes not in the Current YTD Core Route set · 3</div><div class="lis-muted" style="opacity:0.8;"><ul class="lis-list"><li>Ets Couturier → Monterrey Airport → LISI Monterrey</li><li>LISI Automotive Hi Vol Inc. → Nuevo Laredo → LISI Monterrey</li><li>Ningbo Deke Precision Molding → Monterrey Airport → LISI Monterrey</li></ul></div>
+          </div>
+          <div>
+            <div class="lis-sublbl" style="color:var(--navy);">Exports · Current YTD Core Route set (5)</div>
+            <div class="lis-conc-bar" style="height:18px;" title="3 Persisting · 2 Newly visible"><div style="width:60%;background:var(--navy);"></div><div style="width:40%;background:var(--teal);"></div></div>
+            <div class="lis-sublbl" style="margin-top:12px;color:var(--navy);">Persisting Core Routes · 3</div><ul class="lis-list"><li>LISI Monterrey → Monterrey gateway → unknown consignee</li><li>LISI Monterrey → Nuevo Laredo → LISI Automotive LLC</li><li>LISI Monterrey → Monterrey Airport → LISI Automotive KKP</li></ul>
+            <div class="lis-sublbl" style="margin-top:12px;">Newly visible in Current YTD Core Route set · 2</div><ul class="lis-list"><li>LISI Monterrey → Ciudad Acuña → LISI Automotive KKP</li><li>A. Schulman Mexico → Guadalajara → LISI Monterrey</li></ul>
+            <div class="lis-sublbl muted" style="margin-top:12px;">2025 Core Routes not in the Current YTD Core Route set · 2</div><div style="opacity:0.8;"><ul class="lis-list"><li>Channel Prime Alliance de Mexico → Colombia, NL → LISI Monterrey</li><li>Faurecia Sistemas Automotrices → Puebla → LISI Automotive Monterrey</li></ul></div>
+          </div>
+        </div>
+        <div class="lis-note">“Newly visible in Current YTD Core Route set” does <strong>not</strong> mean a new supplier or first-ever route, and a 2025 Core Route outside the Current YTD set may still carry visible Current YTD Shipments. <strong style="color:#b45309;">No route ending, supplier change or provider change is claimed.</strong> The A. Schulman Mexico → Guadalajara → LISI Monterrey route reinforces the need to validate entity / transaction attribution in the Panjiva export universe.</div>
+      </div>
+    </div>
+
+    <!-- 10 HS INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">10</span> HS Intelligence — Top 5 HS Codes by Period &amp; Direction</div>
+      <div class="card-body">
+        <div style="padding:10px 14px;background:rgba(245,158,11,0.06);border-left:3px solid #f59e0b;border-radius:0 5px 5px 0;margin-bottom:14px;">
+          <span style="font-size:11.5px;font-weight:700;color:#92400e;">One Shipment may contain multiple HS Codes. HS counts represent operational presence and are not additive.</span>
+        </div>
+        <div class="grid-2" style="gap:18px;">
+          <div><div class="lis-sublbl">2026 YTD Imports — Top 5</div><div style="overflow-x:auto;"><table class="hub-table" style="font-size:11px;"><thead><tr><th class="num">Rank</th><th>HS Code</th><th>Visible product signal</th><th class="num">Operational Presence</th><th class="num">% Shipments</th></tr></thead><tbody><tr><td class="num">1</td><td><span class="lis-mono">8708309999</span></td><td>Parts for electric brakes; nuts / screws</td><td class="num"><strong>44</strong></td><td class="num">12.7%</td></tr><tr><td class="num">2</td><td><span class="lis-mono">7307920200</span></td><td>Pipe fittings / nipples</td><td class="num"><strong>35</strong></td><td class="num">10.1%</td></tr><tr><td class="num">3</td><td><span class="lis-mono">8409919999</span></td><td>Parts for gasoline injectors</td><td class="num"><strong>31</strong></td><td class="num">8.9%</td></tr><tr><td class="num">4</td><td><span class="lis-mono">3907100502</span></td><td>Polyacetal / trioxane copolymer resins</td><td class="num"><strong>25</strong></td><td class="num">7.2%</td></tr><tr><td class="num">5</td><td><span class="lis-mono">8708309901</span></td><td>Pins / guides associated with braking mechanisms</td><td class="num"><strong>22</strong></td><td class="num">6.3%</td></tr></tbody></table></div></div>
+          <div><div class="lis-sublbl">2026 YTD Exports — Top 5</div><div style="overflow-x:auto;"><table class="hub-table" style="font-size:11px;"><thead><tr><th class="num">Rank</th><th>HS Code</th><th>Visible product signal</th><th class="num">Operational Presence</th><th class="num">% Shipments</th></tr></thead><tbody><tr><td class="num">1</td><td><span class="lis-mono">7307920200</span></td><td>Pipe fittings / nipples</td><td class="num"><strong>81</strong></td><td class="num">34.6%</td></tr><tr><td class="num">2</td><td><span class="lis-mono">8409919999</span></td><td>Gasoline injector parts</td><td class="num"><strong>38</strong></td><td class="num">16.2%</td></tr><tr><td class="num">3</td><td><span class="lis-mono">3926909906</span></td><td>Automotive-use plastic manufactures</td><td class="num"><strong>22</strong></td><td class="num">9.4%</td></tr><tr><td class="num">4</td><td><span class="lis-mono">8501101004</span></td><td>Electric motors / automotive seat motors</td><td class="num"><strong>14</strong></td><td class="num">6.0%</td></tr><tr><td class="num">5</td><td><span class="lis-mono">8538900100</span></td><td>Molded parts</td><td class="num"><strong>13</strong></td><td class="num">5.6%</td></tr></tbody></table></div></div>
+        </div>
+        <div class="grid-2" style="gap:18px;margin-top:16px;">
+          <div><div class="lis-sublbl muted">2025 Imports — Top 5 · historical</div><div style="overflow-x:auto;"><table class="hub-table lis-muted" style="font-size:11px;"><thead><tr><th>HS Code</th><th class="num">Operational Presence</th><th class="num">Share</th></tr></thead><tbody><tr><td><span class="lis-mono">8708309999</span></td><td class="num"><strong>69</strong></td><td class="num">12.1%</td></tr><tr><td><span class="lis-mono">8409919999</span></td><td class="num"><strong>58</strong></td><td class="num">10.2%</td></tr><tr><td><span class="lis-mono">7307920200</span></td><td class="num"><strong>47</strong></td><td class="num">8.3%</td></tr><tr><td><span class="lis-mono">3907100501</span></td><td class="num"><strong>40</strong></td><td class="num">7.0%</td></tr><tr><td><span class="lis-mono">3907100502</span></td><td class="num"><strong>40</strong></td><td class="num">7.0%</td></tr></tbody></table></div></div>
+          <div><div class="lis-sublbl muted">2025 Exports — Top 5 · historical</div><div style="overflow-x:auto;"><table class="hub-table lis-muted" style="font-size:11px;"><thead><tr><th>HS Code</th><th class="num">Operational Presence</th><th class="num">Share</th></tr></thead><tbody><tr><td><span class="lis-mono">8409919999</span></td><td class="num"><strong>45</strong></td><td class="num">13.6%</td></tr><tr><td><span class="lis-mono">7307920200</span></td><td class="num"><strong>43</strong></td><td class="num">13.0%</td></tr><tr><td><span class="lis-mono">8538900100</span></td><td class="num"><strong>36</strong></td><td class="num">10.8%</td></tr><tr><td><span class="lis-mono">9401999901</span></td><td class="num"><strong>25</strong></td><td class="num">7.5%</td></tr><tr><td><span class="lis-mono">8501101004</span></td><td class="num"><strong>24</strong></td><td class="num">7.2%</td></tr></tbody></table></div></div>
+        </div>
+        <div class="lis-note-navy"><strong style="color:var(--navy);">HS Portfolio Trend:</strong> the most material visible portfolio shift is the increased operational presence of <span class="lis-mono">7307920200</span> in exports — from <strong>13.0%</strong> of 2025 Export Shipments to <strong>34.6%</strong> of 2026 YTD Export Shipments. <strong style="color:#b45309;">This does not establish the commercial reason for the shift.</strong></div>
+      </div>
+    </div>
+
+    <!-- 11 TRADING PARTNER INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">11</span> Trading Partner Intelligence — Current YTD</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:18px;">
+          <div><div class="lis-sublbl">Current YTD Import Trading Partners</div><div style="overflow-x:auto;"><table class="hub-table" style="font-size:11px;"><thead><tr><th>Trading Partner</th><th class="num">Shipments</th><th></th></tr></thead><tbody><tr><td><strong>Lisi Automotive Llc</strong> <span class="lis-aff" title="LISI-named entity — name match only. Panjiva does not establish affiliate / intercompany status, commercial ownership or contracting authority. Requires validation.">LISI-named</span></td><td class="num"><strong>109</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:100.0%;background:var(--navy);"></div></div></td></tr><tr><td><span class="lis-na-name">Not available in Panjiva</span></td><td class="num"><strong>102</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:93.6%;background:var(--navy);"></div></div></td></tr><tr><td><strong>Lisi Automotive Kkp Gmb H &amp; Co Kg</strong> <span class="lis-aff" title="LISI-named entity — name match only. Panjiva does not establish affiliate / intercompany status, commercial ownership or contracting authority. Requires validation.">LISI-named</span></td><td class="num"><strong>25</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:22.9%;background:var(--navy);"></div></div></td></tr><tr><td><strong>Suzhou Zhuny Precision Industrial Co., Ltd.</strong></td><td class="num"><strong>14</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:12.8%;background:var(--navy);"></div></div></td></tr><tr><td><strong>Ld Mold Solution Ltd.</strong></td><td class="num"><strong>8</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:7.3%;background:var(--navy);"></div></div></td></tr><tr><td><strong>Tivoly</strong></td><td class="num"><strong>6</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:5.5%;background:var(--navy);"></div></div></td></tr><tr><td><strong>Optech</strong></td><td class="num"><strong>6</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:5.5%;background:var(--navy);"></div></div></td></tr><tr><td><strong>S.I.F.O. So.Ge.Com. Industrie</strong></td><td class="num"><strong>6</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:5.5%;background:var(--navy);"></div></div></td></tr></tbody></table></div></div>
+          <div><div class="lis-sublbl">Current YTD Export Trading Partners</div><div style="overflow-x:auto;"><table class="hub-table" style="font-size:11px;"><thead><tr><th>Trading Partner</th><th class="num">Shipments</th><th></th></tr></thead><tbody><tr><td><span class="lis-na-name">Not available in Panjiva</span></td><td class="num"><strong>116</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:100.0%;background:var(--teal);"></div></div></td></tr><tr><td><strong>Lisi Automotive Llc</strong> <span class="lis-aff" title="LISI-named entity — name match only. Panjiva does not establish affiliate / intercompany status, commercial ownership or contracting authority. Requires validation.">LISI-named</span></td><td class="num"><strong>47</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:40.5%;background:var(--teal);"></div></div></td></tr><tr><td><strong>Lisi Automotive Kkp Gmb H &amp; Co Kg</strong> <span class="lis-aff" title="LISI-named entity — name match only. Panjiva does not establish affiliate / intercompany status, commercial ownership or contracting authority. Requires validation.">LISI-named</span></td><td class="num"><strong>28</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:24.1%;background:var(--teal);"></div></div></td></tr><tr><td><strong>Lisi Automotive Monterrey Sa De Cv</strong> <span class="lis-subj" title="The account entity appears in this transaction role inside the supplied Mexico Exports universe. Preserved as supplied — see Module 16.">Account entity name</span></td><td class="num"><strong>24</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:20.7%;background:var(--teal);"></div></div></td></tr><tr><td><strong>Lisi Automotive Monterrey S.A. De C.V.</strong> <span class="lis-subj" title="The account entity appears in this transaction role inside the supplied Mexico Exports universe. Preserved as supplied — see Module 16.">Account entity name</span></td><td class="num"><strong>13</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:11.2%;background:var(--teal);"></div></div></td></tr><tr><td><strong>Gerbo France</strong></td><td class="num"><strong>5</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:4.3%;background:var(--teal);"></div></div></td></tr><tr><td><strong>Leoni Wiring Systems Inc.</strong></td><td class="num"><strong>1</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:0.9%;background:var(--teal);"></div></div></td></tr></tbody></table></div></div>
+        </div>
+        <div class="lis-note-navy"><strong style="color:var(--navy);">AIOS Interpretation:</strong> there is a strong visible affiliate / intercompany pattern around the LISI network. The repeated LISI entities appear potentially affiliated, so AIOS does <strong>not</strong> automatically classify them as independent external Suppliers. Panjiva alone does not establish commercial ownership, transfer-pricing structure, provider ownership, procurement governance, or whether logistics contracts are centralized — <strong>handled through Discovery, not assumed.</strong></div>
+        <div class="lis-note">Trading Partner names are rendered exactly as supplied; name variants are <strong>not merged</strong>. <span class="lis-subj">Account entity name</span> marks the account's own name appearing as an Export Trading Partner — see Module 16.</div>
+      </div>
+    </div>
+
+    <!-- 12 CUSTOMS / IMMEX INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">12</span> Customs · Regime · IMMEX Intelligence — 2026 YTD</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:12px;">
+          <div style="padding:14px 18px;background:linear-gradient(135deg,rgba(13,43,94,0.05) 0%,rgba(0,180,216,0.06) 100%);border-left:3px solid var(--navy);border-radius:0 6px 6px 0;">
+            <div class="lis-eyebrow" style="color:var(--navy);">Explicit “IMMEX” regime description · Imports</div>
+            <div style="font-size:30px;font-weight:800;color:var(--navy);line-height:1.15;margin-top:4px;">138 <span style="font-size:14px;color:var(--text-muted);">Shipments · 39.8%</span></div>
+          </div>
+          <div style="padding:14px 18px;background:linear-gradient(135deg,rgba(0,180,216,0.06) 0%,rgba(13,43,94,0.04) 100%);border-left:3px solid var(--teal);border-radius:0 6px 6px 0;">
+            <div class="lis-eyebrow">Explicit “IMMEX” regime description · Exports</div>
+            <div style="font-size:30px;font-weight:800;color:var(--teal-dim);line-height:1.15;margin-top:4px;">70 <span style="font-size:14px;color:var(--text-muted);">Shipments · 29.9%</span></div>
+          </div>
+        </div>
+        <div class="grid-2" style="gap:18px;margin-top:16px;">
+          <div><div class="lis-sublbl">2026 YTD Imports — Principal Regimes</div><div style="overflow-x:auto;"><table class="hub-table" style="font-size:11px;"><thead><tr><th>Customs Regime</th><th class="num">Shipments</th><th></th></tr></thead><tbody><tr><td><strong>Temporary Import Of Goods Subject To Transformation, Processing Or Repair (IMMEX)</strong></td><td class="num"><strong>128</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:100.0%;background:var(--navy);"></div></div></td></tr><tr><td>Final Import / Export</td><td class="num"><strong>124</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:96.9%;background:var(--navy);"></div></div></td></tr><tr><td>Transfer Of Goods / temporary virtual structures</td><td class="num"><strong>85</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:66.4%;background:var(--navy);"></div></div></td></tr><tr><td><strong>Temporary Import Fixed Assets (IMMEX)</strong></td><td class="num"><strong>10</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:7.8%;background:var(--navy);"></div></div></td></tr></tbody></table></div></div>
+          <div><div class="lis-sublbl">2026 YTD Exports — Principal Regimes</div><div style="overflow-x:auto;"><table class="hub-table" style="font-size:11px;"><thead><tr><th>Customs Regime</th><th class="num">Shipments</th><th></th></tr></thead><tbody><tr><td>Transfer Of Goods / virtual structures</td><td class="num"><strong>154</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:100.0%;background:var(--teal);"></div></div></td></tr><tr><td><strong>Return Of Goods (IMMEX)</strong></td><td class="num"><strong>70</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:45.5%;background:var(--teal);"></div></div></td></tr><tr><td>Final Import / Export</td><td class="num"><strong>5</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:3.2%;background:var(--teal);"></div></div></td></tr><tr><td>Luxury Goods For Export Processing / Processing / Repair</td><td class="num"><strong>5</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:3.2%;background:var(--teal);"></div></div></td></tr></tbody></table></div></div>
+        </div>
+        <div class="grid-2" style="gap:18px;margin-top:16px;">
+          <div><div class="lis-sublbl">2026 YTD Imports — Principal Customs Agent codes</div><div style="overflow-x:auto;"><table class="hub-table" style="font-size:11px;"><thead><tr><th>Customs Agent code</th><th class="num">Shipments</th><th></th></tr></thead><tbody><tr><td><span class="lis-mono">1660</span></td><td class="num"><strong>211</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:100.0%;background:var(--navy);"></div></div></td></tr><tr><td><span class="lis-mono">1672</span></td><td class="num"><strong>69</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:32.7%;background:var(--navy);"></div></div></td></tr><tr><td><span class="lis-mono">3341</span></td><td class="num"><strong>65</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:30.8%;background:var(--navy);"></div></div></td></tr><tr><td><span class="lis-mono">1890</span></td><td class="num"><strong>2</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:0.9%;background:var(--navy);"></div></div></td></tr></tbody></table></div></div>
+          <div><div class="lis-sublbl">2026 YTD Exports — Principal Customs Agent codes</div><div style="overflow-x:auto;"><table class="hub-table" style="font-size:11px;"><thead><tr><th>Customs Agent code</th><th class="num">Shipments</th><th></th></tr></thead><tbody><tr><td><span class="lis-mono">1660</span></td><td class="num"><strong>138</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:100.0%;background:var(--teal);"></div></div></td></tr><tr><td><span class="lis-mono">1672</span></td><td class="num"><strong>46</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:33.3%;background:var(--teal);"></div></div></td></tr><tr><td><span class="lis-mono">3483</span></td><td class="num"><strong>11</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:8.0%;background:var(--teal);"></div></div></td></tr><tr><td><span class="lis-mono">3895</span></td><td class="num"><strong>8</strong></td><td style="width:26%;"><div class="lis-bar"><div style="width:5.8%;background:var(--teal);"></div></div></td></tr><tr><td style="color:var(--text-muted);font-style:italic;">Additional visible codes at lower volumes</td><td class="num" style="color:var(--text-light);">—</td><td></td></tr></tbody></table></div></div>
+        </div>
+        <div class="lis-sig"><div class="s1"><b>Observed Operational Signal</b>Customs Agent code <strong>1660</strong> is the dominant visible code in both directions.</div><div class="s2"><b>AIOS Interpretation</b>A credible Discovery topic around customs governance, performance measurement, escalation and contingency. <strong>It does not prove the company has a customs problem.</strong></div><div class="s3"><b>Discovery Validation</b>Broker ownership, backup model, SLAs, escalation and risk governance.</div></div>
+        <div class="lis-note">Regime labels are rendered as supplied. Customs Agent entries are Panjiva codes — <strong style="color:#b45309;">AIOS does not infer the company name behind any code.</strong></div>
+      </div>
+    </div>
+
+    <!-- 13 OPERATIONAL COMPLEXITY -->
+    <div class="card">
+      <div class="card-header"><span class="accent">13</span> Operational Complexity — HIGH</div>
+      <div class="card-body">
+        <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+          <div style="font-size:30px;font-weight:800;color:var(--navy);letter-spacing:1px;">HIGH</div>
+          <div style="font-size:10.5px;color:var(--text-muted);">AIOS Assessment supported by Current YTD evidence · no numerical Complexity Score</div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;">
+          <span class="hub-tag ocean">581 visible Shipments in seven months</span>
+          <span class="hub-tag ocean">347 Imports / 234 Exports</span>
+          <span class="hub-tag ocean">43 distinct visible Import routes</span>
+          <span class="hub-tag ocean">14 distinct visible Export routes</span>
+          <span class="hub-tag ocean">12 Import Core Routes required for ≥80%</span>
+          <span class="hub-tag air">Air + Truck + Maritime + Unknown-mode activity</span>
+          <span class="hub-tag ocean">Multiple countries</span>
+          <span class="hub-tag border">Recurrent Nuevo Laredo cross-border traffic</span>
+          <span class="hub-tag ocean">Recurrent Altamira and Manzanillo ocean traffic</span>
+          <span class="hub-tag air">Substantial Monterrey airport activity</span>
+          <span class="hub-tag ocean">Multiple Trading Partners</span>
+          <span class="hub-tag truck">Meaningful explicit IMMEX activity</span>
+          <span class="hub-tag truck">Multiple Customs Agent codes</span>
+          <span class="hub-tag unknown">Visible affiliate / entity-complexity signals</span>
+          <span class="hub-tag ocean">Materially different inbound and outbound concentration structures</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 14 PAIN / OPPORTUNITY MAPPING -->
+    <div class="card">
+      <div class="card-header"><span class="accent">14</span> Pain / Opportunity Mapping — Signal · Interpretation · Validation</div>
+      <div class="card-body" style="padding:0;">
+        <div style="overflow-x:auto;">
+          <table class="hub-table lis-opp-table" style="font-size:11px;min-width:960px;">
+            <thead><tr>
+              <th style="width:15%;">Theme</th>
+              <th style="width:27%;">Observed Operational Signal <span style="font-weight:600;color:var(--text-light);">— Panjiva Fact</span></th>
+              <th style="width:27%;">AIOS Interpretation</th>
+              <th style="width:31%;">Discovery Validation <span style="font-weight:600;color:var(--text-light);">— must be confirmed</span></th>
+            </tr></thead>
+            <tbody>
+              <tr><td><strong style="color:var(--navy);">1 · Multimodal coordination</strong></td><td>Current imports use Air, Truck and Maritime recurrently and span airport, border and port gateways.</td><td style="color:var(--text-muted);">Cross-modal coordination and exception visibility could have significant operational value.</td><td style="color:var(--text-muted);">Whether modes are managed under one governance structure or separate providers / internal teams, and how exceptions are escalated.</td></tr>
+              <tr><td><strong style="color:var(--navy);">2 · Cross-border control</strong></td><td>Nuevo Laredo is a major recurring inbound and outbound gateway.</td><td style="color:var(--text-muted);">Border milestone visibility, customs coordination and exception management are credible Akzent value propositions.</td><td style="color:var(--text-muted);">Provider model, carrier capacity structure, crossing strategy, customs ownership, SLA performance and contingency options.</td></tr>
+              <tr><td><strong style="color:var(--navy);">3 · Air-freight governance</strong></td><td>Air represents 36.9% of Current YTD Imports.</td><td style="color:var(--text-muted);">Air is not a marginal mode in the visible network; its frequency warrants a strategic conversation around critical materials, expedite governance and supplier readiness.</td><td style="color:var(--text-muted);">Which flows are planned vs expedited, approval rules, premium-freight KPIs and root-cause governance.</td></tr>
+              <tr><td><strong style="color:var(--navy);">4 · Ocean coordination</strong></td><td>Altamira and Manzanillo recur in the inbound Core Route structure.</td><td style="color:var(--text-muted);">Ocean visibility, booking coordination, milestone control and port exception management are credible opportunities.</td><td style="color:var(--text-muted);">Carrier / forwarder structure, allocation model, booking ownership, detention / demurrage exposure and escalation process.</td></tr>
+              <tr><td><strong style="color:var(--navy);">5 · Customs &amp; IMMEX visibility</strong></td><td>Explicit IMMEX regimes and concentrated Customs Agent codes are visible.</td><td style="color:var(--text-muted);">Customs milestones and compliance-sensitive operating visibility could be valuable as part of a Control Tower layer.</td><td style="color:var(--text-muted);">Customs governance, broker KPIs, backup structure, document ownership and escalation process.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="padding:12px 18px;border-top:1px solid var(--border);">
+          <span style="font-size:11px;color:var(--text-muted);line-height:1.65;">The three layers stay separate. <strong style="color:#b45309;">Interpretations are not confirmed pain</strong>, and this page never states that LISI currently lacks any capability.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 15 DISCOVERY HYPOTHESES -->
+    <div class="card">
+      <div class="card-header"><span class="accent">15</span> Discovery Hypotheses — Requires Validation</div>
+      <div class="card-body">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:12px;">
+          <div class="lis-hyp">
+            <div class="lis-hyp-tag">Discovery Hypothesis — Requires validation</div>
+            <div class="lis-hyp-title">Affiliate / Intercompany Operating Model</div>
+            <div class="lis-hyp-sig"><strong>Observed signal:</strong> LISI Automotive LLC and LISI Automotive KKP appear prominently on both inbound and outbound routes.</div>
+            <p><strong>Hypothesis:</strong> a meaningful portion of the network may be affiliate / intercompany traffic.</p>
+            <p class="lis-hyp-no"><strong>Panjiva does not establish:</strong> corporate control, contracting ownership, incoterm ownership or freight procurement authority.</p>
+            <p><strong>Why it matters:</strong> the commercial entry point could sit above the individual Monterrey plant.</p>
+            <p><strong>Validate:</strong> who controls international logistics procurement, whether contracts are regional/global, and what decisions remain local.</p>
+          </div>
+          <div class="lis-hyp">
+            <div class="lis-hyp-tag">Discovery Hypothesis — Requires validation</div>
+            <div class="lis-hyp-title">Air-Freight Operating Model</div>
+            <div class="lis-hyp-sig"><strong>Observed signal:</strong> 128 Current YTD Import Shipments are Air.</div>
+            <p><strong>Hypothesis:</strong> the network may have meaningful expedite / continuity-management requirements.</p>
+            <p class="lis-hyp-no"><strong>Panjiva does not establish:</strong> urgency, production disruption or premium-freight cause.</p>
+            <p><strong>Validate:</strong> planned vs exception air freight, authorization process, KPI governance and provider performance.</p>
+          </div>
+          <div class="lis-hyp">
+            <div class="lis-hyp-tag">Discovery Hypothesis — Requires validation</div>
+            <div class="lis-hyp-title">Customs Governance</div>
+            <div class="lis-hyp-sig"><strong>Observed signal:</strong> Customs Agent code 1660 dominates visible import and export activity.</div>
+            <p><strong>Hypothesis:</strong> customs governance may be relatively concentrated.</p>
+            <p class="lis-hyp-no"><strong>Panjiva does not establish:</strong> contract structure, performance quality or contingency readiness.</p>
+            <p><strong>Validate:</strong> broker ownership, backup model, SLAs, escalation and risk governance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 16 DATA QUALITY / ENTITY RESOLUTION -->
+    <div class="card">
+      <div class="card-header"><span class="accent">16</span> Data Quality / Entity Resolution Hypothesis — Requires Validation</div>
+      <div class="card-body">
+        <div style="font-size:10px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;color:#b45309;margin-bottom:10px;">DATA QUALITY / ENTITY RESOLUTION HYPOTHESIS — REQUIRES VALIDATION</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:10px;">
+          <div class="lis-dq"><div class="lis-dq-n">1</div><div><div class="lis-dq-t">Panjiva Export attribution · account entity as consignee</div><div class="lis-dq-d">The supplied “Mexico Exports” universe includes visible records in which <strong>Lisi Automotive Monterrey appears as consignee rather than shipper</strong> — e.g. Current YTD Export Core Route #5, A. Schulman De Mexico → Guadalajara → Lisi Automotive Monterrey. The Panjiva search universe may include records matched to LISI Automotive Monterrey in different transaction roles. <strong>AIOS has not silently removed or reclassified those records.</strong></div></div></div>
+          <div class="lis-dq"><div class="lis-dq-n">2</div><div><div class="lis-dq-t">Shipper not available in Panjiva</div><div class="lis-dq-d">Current YTD Import Core Routes #1 (83 Shipments) and #5 (19) carry no shipper identity; 102 Current YTD Import Shipments show the Trading Partner as Not available in Panjiva.</div></div></div>
+          <div class="lis-dq"><div class="lis-dq-n">3</div><div><div class="lis-dq-t">Consignee not available in Panjiva</div><div class="lis-dq-d">Current YTD Export Core Route #1 — 116 Shipments, 49.6% of Exports — carries no consignee identity.</div></div></div>
+          <div class="lis-dq"><div class="lis-dq-n">4</div><div><div class="lis-dq-t"><code class="lis-code">Unknown</code> transport method remains Unknown</div><div class="lis-dq-d">85 Current YTD Imports (24.5%) and 154 Current YTD Exports (65.8%). Never redistributed or inferred as any mode.</div></div></div>
+          <div class="lis-dq"><div class="lis-dq-n">5</div><div><div class="lis-dq-t">Account address renderings differ by file</div><div class="lis-dq-d">Import file: <em>110 San Sebastián, Nuevo León</em>. Export file: <em>S. Sebastián 110, Zertuche, 67190 Guadalupe, N.L., Mexico</em>; the A. Schulman route destination reads <em>Kalos, 67205 Guadalupe, N.L., Mexico</em>. Rendered as supplied — not merged or corrected.</div></div></div>
+          <div class="lis-dq"><div class="lis-dq-n">6</div><div><div class="lis-dq-t">Country fields can hold multiple countries per Shipment</div><div class="lis-dq-d">Country-presence counts are not necessarily additive; combined entries (France / United States, China / Mexico) are preserved intact.</div></div></div>
+        </div>
+        <div class="lis-note">These limitations must remain visible and <strong style="color:#b45309;">must not be enriched without validation</strong>.</div>
+      </div>
+    </div>
+
+    <!-- 17 ILM / CONTROL TOWER OPPORTUNITY & COMMERCIAL POSITIONING -->
+    <div class="card">
+      <div class="card-header"><span class="accent">17</span> ILM / Control Tower Opportunity &amp; Commercial Positioning</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:14px;">
+          <div>
+            <div class="lis-sublbl">Primary position</div>
+            <div style="padding:12px 14px;background:rgba(0,180,216,0.06);border:1px solid rgba(0,180,216,0.3);border-radius:7px;background:linear-gradient(135deg,rgba(13,43,94,0.07) 0%,rgba(0,180,216,0.08) 100%);border-color:rgba(13,43,94,0.3);">
+              <div style="font-size:16px;font-weight:800;color:var(--navy);">Operational Complexity Partner</div>
+              <div style="font-size:11px;color:var(--text-muted);margin-top:3px;">The visible network is large enough and structurally diverse enough to justify an operational-governance conversation.</div>
+            </div>
+            <div class="lis-sublbl" style="margin-top:12px;">Secondary positions</div>
+            <div style="display:grid;gap:8px;">
+              <div style="padding:12px 14px;background:rgba(0,180,216,0.06);border:1px solid rgba(0,180,216,0.3);border-radius:7px;"><div style="font-size:12.5px;font-weight:800;color:var(--navy);">Multimodal Coordination Partner</div><div style="font-size:10.5px;color:var(--text-muted);margin-top:2px;">Air + Truck + Ocean are all operationally meaningful.</div></div>
+              <div style="padding:12px 14px;background:rgba(0,180,216,0.06);border:1px solid rgba(0,180,216,0.3);border-radius:7px;"><div style="font-size:12.5px;font-weight:800;color:var(--navy);">Customs &amp; Visibility Partner</div><div style="font-size:10.5px;color:var(--text-muted);margin-top:2px;">Nuevo Laredo, IMMEX regimes and customs-agent concentration create a credible control / visibility discussion.</div></div>
+              <div style="padding:12px 14px;background:rgba(0,180,216,0.06);border:1px solid rgba(0,180,216,0.3);border-radius:7px;"><div style="font-size:12.5px;font-weight:800;color:var(--navy);">ILM / Control Tower Partner</div><div style="font-size:10.5px;color:var(--text-muted);margin-top:2px;">The route, Trading Partner, gateway and customs structure supports centralized orchestration.</div></div>
+            </div>
+          </div>
+          <div>
+            <div style="padding:12px 14px;background:linear-gradient(135deg,rgba(0,180,216,0.08) 0%,rgba(13,43,94,0.04) 100%);border-left:3px solid var(--teal);border-radius:0 6px 6px 0;">
+              <div class="lis-eyebrow">AIOS Assessment</div>
+              <div style="font-size:17px;font-weight:800;color:var(--navy);margin-top:2px;">ILM / Control Tower Potential: <span style="color:var(--red);">VERY HIGH</span></div>
+              <div style="font-size:11px;color:var(--text-muted);margin-top:4px;">Akzent should be positioned as a <strong style="color:var(--navy);">coordination and visibility layer</strong>, not merely a carrier or forwarder.</div>
+            </div>
+            <div class="lis-sublbl" style="margin-top:14px;color:var(--red);">Do not lead with</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;">
+              <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);font-size:11px;padding:5px 10px;">✕ Spot pricing</span>
+              <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);font-size:11px;padding:5px 10px;">✕ Generic freight forwarding</span>
+              <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);font-size:11px;padding:5px 10px;">✕ Transactional trucking</span>
+              <span class="hub-tag" style="background:rgba(232,0,45,0.07);color:var(--red);font-size:11px;padding:5px 10px;">✕ “We can quote your lanes”</span>
+            </div>
+          </div>
+        </div>
+        <div class="lis-sublbl" style="margin-top:18px;color:var(--navy);">Credible Akzent conversation areas</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          <span class="lis-scope">Supplier / Trading Partner readiness</span><span class="lis-scope">Booking coordination</span><span class="lis-scope">Cross-border milestones</span><span class="lis-scope">Port milestones</span><span class="lis-scope">Airport milestones</span><span class="lis-scope">Document control</span><span class="lis-scope">Customs milestone visibility</span><span class="lis-scope">Multimodal exception management</span><span class="lis-scope">Centralized escalation</span><span class="lis-scope">Carrier / provider performance</span><span class="lis-scope">Core Route performance</span><span class="lis-scope">Gateway dependency monitoring</span><span class="lis-scope">Facility visibility</span><span class="lis-scope">Contingency governance</span>
+        </div>
+        <div class="lis-note">Conversation areas only — <strong style="color:#b45309;">this page never implies that LISI lacks these capabilities today</strong>, and does not imply that Akzent currently manages the account.</div>
+      </div>
+    </div>
+
+    <!-- 18 DISCOVERY INTELLIGENCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">18</span> Discovery Intelligence — Validate What Panjiva Cannot Establish</div>
+      <div class="card-body" style="padding:12px 18px;">
+        <span style="font-size:11px;color:var(--text-muted);line-height:1.6;"><strong style="color:#b45309;">Do not ask the prospect to identify principal visible gateways, modes or countries that Panjiva already establishes.</strong></span>
+      </div>
+      <div class="card-body">
+        <div class="outreach-step"><div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Ownership &amp; contracting — Questions 1–2</span><span class="outreach-step-toggle">+</span></div><div class="outreach-step-body"><ul class="q-list" style="font-size:11.5px;line-height:1.8;"><li><strong>1.</strong> Who owns logistics strategy and procurement across LISI Monterrey, LISI Automotive LLC and LISI Automotive KKP?</li><li><strong>2.</strong> Are provider contracts local, regional or global?</li></ul></div></div><div class="outreach-step"><div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Modal governance &amp; air freight — Questions 3–5</span><span class="outreach-step-toggle">+</span></div><div class="outreach-step-body"><ul class="q-list" style="font-size:11.5px;line-height:1.8;"><li><strong>3.</strong> How are Air, Truck and Ocean providers governed across modes?</li><li><strong>4.</strong> What percentage of air freight is planned versus exception / expedite?</li><li><strong>5.</strong> What KPIs govern premium freight and exception reduction?</li></ul></div></div><div class="outreach-step"><div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Border &amp; ocean control — Questions 6–8</span><span class="outreach-step-toggle">+</span></div><div class="outreach-step-body"><ul class="q-list" style="font-size:11.5px;line-height:1.8;"><li><strong>6.</strong> Who owns Nuevo Laredo crossing performance and escalation?</li><li><strong>7.</strong> What border contingency model exists?</li><li><strong>8.</strong> How are Altamira and Manzanillo bookings, milestones and exceptions coordinated?</li></ul></div></div><div class="outreach-step"><div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Customs, IMMEX &amp; visibility — Questions 9–11</span><span class="outreach-step-toggle">+</span></div><div class="outreach-step-body"><ul class="q-list" style="font-size:11.5px;line-height:1.8;"><li><strong>9.</strong> How are customs brokers measured and what backup structure exists?</li><li><strong>10.</strong> Who owns IMMEX documentation and exception escalation?</li><li><strong>11.</strong> Is shipment visibility centralized or distributed across plants / providers?</li></ul></div></div><div class="outreach-step"><div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Supplier readiness &amp; decision criteria — Questions 12–15</span><span class="outreach-step-toggle">+</span></div><div class="outreach-step-body"><ul class="q-list" style="font-size:11.5px;line-height:1.8;"><li><strong>12.</strong> How are supplier readiness failures detected and escalated?</li><li><strong>13.</strong> What are the principal logistics decision criteria beyond price?</li><li><strong>14.</strong> When do provider reviews / procurement cycles occur?</li><li><strong>15.</strong> What would need to be demonstrably better for LISI to change or add a logistics coordination partner?</li></ul></div></div>
+      </div>
+    </div>
+
+    <!-- 19 HISTORICAL 2025 CORE ROUTES — COMPLETE >=80% · PROGRESSIVE DISCLOSURE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">19</span> Previous Full Calendar Year 2025 Core Routes — Complete ≥80% Sets</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:12px;">
+          <div class="stat-box" style="border-left:3px solid #94a3b8;"><div class="stat-label">2025 Import Core Routes · 569 Imports</div><div class="stat-value" style="font-size:22px;color:var(--text-muted);">12 <span style="font-size:13px;font-weight:700;">routes = 81.4%</span></div></div>
+          <div class="stat-box" style="border-left:3px solid #94a3b8;"><div class="stat-label">2025 Export Core Routes · 332 Exports</div><div class="stat-value" style="font-size:22px;color:var(--text-muted);">5 <span style="font-size:13px;font-weight:700;">routes = 80.4%</span></div></div>
+        </div>
+        <div class="outreach-step hist-appendix" style="margin-top:14px;">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>View complete 2025 Import Core Route set — 12 Routes / 81.4% of 569 Imports</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body" style="padding:0;">
+            <div style="padding:10px 16px;background:var(--bg);border-bottom:1px solid var(--border);"><div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-light);">Historical Core Route Appendix — 2025 Imports · Complete ≥80% Set · all 12 routes preserved</div></div>
+            <div style="overflow-x:auto;"><table class="hub-table lis-hist-table lis-muted" style="font-size:11px;"><thead><tr><th class="num">#</th><th>Origin</th><th>Gateway</th><th>Destination</th><th class="num">Shipments</th><th class="num">Share</th><th class="num">Cum.</th></tr></thead><tbody><tr><td class="lis-rank">1</td><td>Unknown shipper</td><td><span class="hub-tag unknown lis-gw">⛨ Customs/Gateway</span><div class="lis-gw-name">Monterrey</div></td><td>LISI Monterrey</td><td class="num"><strong>148</strong></td><td class="num">26.0%</td><td class="num lis-cum"><strong>26.0%</strong><div class="lis-cum-bar"><div style="width:26.0%;background:#94a3b8;"></div></div></td></tr><tr><td class="lis-rank">2</td><td>LISI Automotive LLC</td><td><span class="hub-tag border lis-gw">🌉 Border</span><div class="lis-gw-name">Nuevo Laredo</div></td><td>LISI Monterrey</td><td class="num"><strong>111</strong></td><td class="num">19.5%</td><td class="num lis-cum"><strong>45.5%</strong><div class="lis-cum-bar"><div style="width:45.5%;background:#94a3b8;"></div></div></td></tr><tr><td class="lis-rank">3</td><td>LISI Automotive LLC</td><td><span class="hub-tag ocean lis-gw">⚓ Port</span><div class="lis-gw-name">Altamira</div></td><td>LISI Monterrey</td><td class="num"><strong>56</strong></td><td class="num">9.8%</td><td class="num lis-cum"><strong>55.4%</strong><div class="lis-cum-bar"><div style="width:55.4%;background:#94a3b8;"></div></div></td></tr><tr><td class="lis-rank">4</td><td>LISI Automotive KKP</td><td><span class="hub-tag air lis-gw">✈ Airport</span><div class="lis-gw-name">Monterrey Airport</div></td><td>LISI Monterrey</td><td class="num"><strong>36</strong></td><td class="num">6.3%</td><td class="num lis-cum"><strong>61.7%</strong><div class="lis-cum-bar"><div style="width:61.7%;background:#94a3b8;"></div></div></td></tr><tr><td class="lis-rank">5</td><td>Unknown shipper</td><td><span class="hub-tag border lis-gw">🌉 Border</span><div class="lis-gw-name">Nuevo Laredo</div></td><td>LISI Monterrey</td><td class="num"><strong>23</strong></td><td class="num">4.0%</td><td class="num lis-cum"><strong>65.7%</strong><div class="lis-cum-bar"><div style="width:65.7%;background:#94a3b8;"></div></div></td></tr><tr><td class="lis-rank">6</td><td>LD Mold Solution</td><td><span class="hub-tag air lis-gw">✈ Airport</span><div class="lis-gw-name">Monterrey Airport</div></td><td>LISI Monterrey</td><td class="num"><strong>21</strong></td><td class="num">3.7%</td><td class="num lis-cum"><strong>69.4%</strong><div class="lis-cum-bar"><div style="width:69.4%;background:#94a3b8;"></div></div></td></tr><tr><td class="lis-rank">7</td><td>LISI Automotive LLC</td><td><span class="hub-tag ocean lis-gw">⚓ Port</span><div class="lis-gw-name">Manzanillo</div></td><td>LISI Monterrey</td><td class="num"><strong>14</strong></td><td class="num">2.5%</td><td class="num lis-cum"><strong>71.9%</strong><div class="lis-cum-bar"><div style="width:71.9%;background:#94a3b8;"></div></div></td></tr><tr><td class="lis-rank">8</td><td>Suzhou Zhuny</td><td><span class="hub-tag air lis-gw">✈ Airport</span><div class="lis-gw-name">Monterrey Airport</div></td><td>LISI Monterrey</td><td class="num"><strong>14</strong></td><td class="num">2.5%</td><td class="num lis-cum"><strong>74.3%</strong><div class="lis-cum-bar"><div style="width:74.3%;background:#94a3b8;"></div></div></td></tr><tr><td class="lis-rank">9</td><td>Ets Couturier</td><td><span class="hub-tag air lis-gw">✈ Airport</span><div class="lis-gw-name">Monterrey Airport</div></td><td>LISI Monterrey</td><td class="num"><strong>11</strong></td><td class="num">1.9%</td><td class="num lis-cum"><strong>76.3%</strong><div class="lis-cum-bar"><div style="width:76.3%;background:#94a3b8;"></div></div></td></tr><tr><td class="lis-rank">10</td><td>LISI Automotive Hi Vol Inc.</td><td><span class="hub-tag border lis-gw">🌉 Border</span><div class="lis-gw-name">Nuevo Laredo</div></td><td>LISI Monterrey</td><td class="num"><strong>10</strong></td><td class="num">1.8%</td><td class="num lis-cum"><strong>78.0%</strong><div class="lis-cum-bar"><div style="width:78.0%;background:#94a3b8;"></div></div></td></tr><tr><td class="lis-rank">11</td><td>Tivoly</td><td><span class="hub-tag air lis-gw">✈ Airport</span><div class="lis-gw-name">Monterrey Airport</div></td><td>LISI Monterrey</td><td class="num"><strong>10</strong></td><td class="num">1.8%</td><td class="num lis-cum"><strong>79.8%</strong><div class="lis-cum-bar"><div style="width:79.8%;background:#94a3b8;"></div></div></td></tr><tr><td class="lis-rank">12</td><td>Ningbo Deke Precision Molding</td><td><span class="hub-tag air lis-gw">✈ Airport</span><div class="lis-gw-name">Monterrey Airport</div></td><td>LISI Monterrey</td><td class="num"><strong>9</strong></td><td class="num">1.6%</td><td class="num lis-cum"><strong>81.4%</strong><div class="lis-cum-bar"><div style="width:81.4%;background:#94a3b8;"></div></div></td></tr></tbody></table></div>
+          </div>
+        </div>
+        <div class="outreach-step hist-appendix">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>View complete 2025 Export Core Route set — 5 Routes / 80.4% of 332 Exports</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body" style="padding:0;">
+            <div style="padding:10px 16px;background:var(--bg);border-bottom:1px solid var(--border);"><div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-light);">Historical Core Route Appendix — 2025 Exports · Complete ≥80% Set · all 5 routes preserved</div></div>
+            <div style="overflow-x:auto;"><table class="hub-table lis-hist-table lis-muted" style="font-size:11px;"><thead><tr><th class="num">#</th><th>Origin</th><th>Gateway</th><th>Destination</th><th class="num">Shipments</th><th class="num">Share</th><th class="num">Cum.</th></tr></thead><tbody><tr><td class="lis-rank">1</td><td>LISI Monterrey</td><td><span class="hub-tag unknown lis-gw">⛨ Customs/Gateway</span><div class="lis-gw-name">Monterrey gateway</div></td><td>Unknown consignee</td><td class="num"><strong>171</strong></td><td class="num">51.5%</td><td class="num lis-cum"><strong>51.5%</strong><div class="lis-cum-bar"><div style="width:51.5%;background:#94a3b8;"></div></div></td></tr><tr><td class="lis-rank">2</td><td>LISI Monterrey</td><td><span class="hub-tag border lis-gw">🌉 Border</span><div class="lis-gw-name">Nuevo Laredo</div></td><td>LISI Automotive LLC</td><td class="num"><strong>59</strong></td><td class="num">17.8%</td><td class="num lis-cum"><strong>69.3%</strong><div class="lis-cum-bar"><div style="width:69.3%;background:#94a3b8;"></div></div></td></tr><tr><td class="lis-rank">3</td><td>LISI Monterrey</td><td><span class="hub-tag air lis-gw">✈ Airport</span><div class="lis-gw-name">Monterrey Airport</div></td><td>LISI Automotive KKP</td><td class="num"><strong>13</strong></td><td class="num">3.9%</td><td class="num lis-cum"><strong>73.2%</strong><div class="lis-cum-bar"><div style="width:73.2%;background:#94a3b8;"></div></div></td></tr><tr><td class="lis-rank">4</td><td>Channel Prime Alliance de Mexico</td><td><span class="hub-tag unknown lis-gw">⛨ Customs/Gateway</span><div class="lis-gw-name">Colombia, NL</div></td><td>LISI Monterrey</td><td class="num"><strong>12</strong></td><td class="num">3.6%</td><td class="num lis-cum"><strong>76.8%</strong><div class="lis-cum-bar"><div style="width:76.8%;background:#94a3b8;"></div></div></td></tr><tr><td class="lis-rank">5</td><td>Faurecia Sistemas Automotrices</td><td><span class="hub-tag unknown lis-gw">⛨ Customs/Gateway</span><div class="lis-gw-name">Puebla</div></td><td>LISI Automotive Monterrey</td><td class="num"><strong>12</strong></td><td class="num">3.6%</td><td class="num lis-cum"><strong>80.4%</strong><div class="lis-cum-bar"><div style="width:80.4%;background:#94a3b8;"></div></div></td></tr></tbody></table></div>
+          </div>
+        </div>
+        <div class="lis-note">Historical context only — visually subordinate, collapsed on screen, <strong>printed in full</strong>, never aggregated with Current YTD. Route names are rendered in the abbreviated form supplied. The 2025 sets were delivered without Mode, Active Months, route cadence, visible date ranges or addresses; AIOS notes historical frequency was calculated, but those values are <strong>not in this delivery</strong> and are not reconstructed here.</div>
+      </div>
+    </div>
+
+    <!-- 20 FINAL AIOS VERDICT -->
+    <div class="card">
+      <div class="card-header"><span class="accent">20</span> Final AIOS Verdict</div>
+      <div class="card-body" style="background:linear-gradient(135deg,rgba(13,43,94,0.05) 0%,rgba(0,180,216,0.05) 100%);">
+        <p style="font-size:15px;font-weight:800;color:var(--navy);line-height:1.6;">LISI Automotive Monterrey is a AAA LEAD with HIGH Operational Complexity and VERY HIGH ILM / Control Tower potential.</p>
+        <div class="lis-sublbl" style="margin-top:10px;color:var(--navy);">The commercial case is built on observed structure</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          <span class="lis-scope">581 Current YTD Shipments</span><span class="lis-scope">+9.8% comparable visible Shipment activity</span><span class="lis-scope">+25.8% comparable Export Shipments</span><span class="lis-scope">12 Import Core Routes required for ≥80%</span><span class="lis-scope">5 Export Core Routes required for ≥80%</span><span class="lis-scope">Major air exposure</span><span class="lis-scope">Recurring Nuevo Laredo cross-border</span><span class="lis-scope">Recurring Altamira / Manzanillo ocean</span><span class="lis-scope">IMMEX-visible operating activity</span><span class="lis-scope">Customs-agent concentration</span><span class="lis-scope">Multinational Trading Partner structure</span><span class="lis-scope">Recurring affiliate-like LISI relationships</span>
+        </div>
+        <div style="margin-top:14px;padding:12px 16px;background:var(--surface);border-left:3px solid var(--teal);border-radius:0 6px 6px 0;font-size:12.5px;font-weight:700;color:var(--navy);line-height:1.6;">Akzent should enter through control, coordination, visibility and exception governance, then develop an ILM / Control Tower thesis if Discovery confirms organizational fit.</div>
+      </div>
+    </div>
+
+    <!-- 21 DATA AVAILABILITY -->
+    <div class="card">
+      <div class="card-header"><span class="accent">21</span> Data Availability &amp; Governance</div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:14px;">
+          <div style="padding:14px 18px;background:rgba(0,180,216,0.05);border:1px solid rgba(0,180,216,0.3);border-radius:8px;">
+            <div class="lis-sublbl">Available in supplied Panjiva files</div>
+            <div style="display:flex;flex-wrap:wrap;gap:5px;">
+              <span class="hub-tag air">Shipment dates</span><span class="hub-tag air">Import / Export files</span><span class="hub-tag air">Shipper / Consignee entities</span><span class="hub-tag air">Selected addresses</span><span class="hub-tag air">Cities / regions where present</span><span class="hub-tag air">Origin / destination geography</span><span class="hub-tag air">Gateways</span><span class="hub-tag air">Mode</span><span class="hub-tag air">Customs Regime</span><span class="hub-tag air">Customs Agent code</span><span class="hub-tag air">Value</span><span class="hub-tag air">Weight</span><span class="hub-tag air">TEU where present</span><span class="hub-tag air">HS Codes</span><span class="hub-tag air">Commodities</span><span class="hub-tag air">Shipment quantities / units</span><span class="hub-tag air">Visible item-level value</span><span class="hub-tag air">IMMEX-related regime descriptions</span>
+            </div>
+          </div>
+          <div style="padding:14px 18px;background:rgba(245,158,11,0.05);border:1px solid rgba(245,158,11,0.32);border-radius:8px;">
+            <div class="lis-sublbl" style="color:#b45309;">Not reliably available for every Shipment · do not infer</div>
+            <div style="display:flex;flex-wrap:wrap;gap:5px;">
+              <span class="hub-tag unknown">Shipper identity</span><span class="hub-tag unknown">Consignee identity</span><span class="hub-tag unknown">Exact addresses</span><span class="hub-tag unknown">Transport mode</span><span class="hub-tag unknown">Complete corporate relationship information</span><span class="hub-tag unknown">Underlying provider / carrier ownership</span><span class="hub-tag unknown">Contracts / SLAs</span><span class="hub-tag unknown">Causes of modal usage</span><span class="hub-tag unknown">Customer pain</span><span class="hub-tag unknown">Decision rights</span>
+            </div>
+          </div>
+        </div>
+        <div class="lis-note-navy">Any future enrichment beyond Panjiva must be labeled <strong style="color:var(--navy);">AIOS-enriched location — Requires validation</strong>, or otherwise <strong style="color:var(--navy);">Requires validation</strong>. No enrichment has been applied on this page.</div>
+        <div style="margin-top:14px;padding:13px 18px;border-top:1px solid var(--border);background:var(--bg);border-radius:6px;">
+          <span style="font-size:10.5px;color:var(--text-muted);line-height:1.7;"><strong style="color:var(--navy);">Panjiva is the Visible Logistics Universe and the sole source for this LEAD analysis.</strong> Every figure is AIOS-finalized and rendered without recalculation, estimation, annualization or normalization. No Akzent commercial or financial performance metric is shown and nothing implies that Akzent currently manages the account; no Commercial Route Priority and no numerical Complexity Score is created.</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 </main>
 
 <script>
@@ -73318,6 +74185,7 @@ const ACCOUNTS = [
   { id:'view-lankwitzer', name:'Lankwitzer', sub:'Lankwitzer &middot; Lankwitzer Lackfabrik GmbH &middot; Target Account &middot; LEAD &middot; AIOS Classification AA &middot; Strategic Fit AA &middot; Operational Complexity MEDIUM-HIGH &middot; no numerical Complexity Score &middot; International Exposure HIGH &middot; Modal Diversity MEDIUM-HIGH with data limitations &middot; Import Route Concentration EXTREME &middot; Outbound Network Fragmentation HIGH &middot; ILM / Control Tower Potential HIGH &middot; Commercial Positioning PRIORITY TARGET &middot; Industrial Coatings and Specialty Chemicals &middot; paints coatings polymer systems pigments solvents thinners &middot; Berlin Germany &middot; Haynauer Strasse 61-63 Berlin Berlin 12249 Germany &middot; Source of truth Panjiva only &middot; supplied source consisted of destination-country Panjiva import records &middot; 508 attributable Lankwitzer Shipments from 511 original records &middot; 3 records excluded from 2025 because Lankwitzer appeared only in Goods Shipped or matching text rather than as Shipper or Consignee &middot; directional methodology Lankwitzer as Consignee equals Import &middot; Lankwitzer as Shipper to a non-Lankwitzer Consignee equals visible outbound Shipment &middot; visible outbound Shipments evidenced through destination-country Panjiva import records &middot; not a complete direct export declaration universe &middot; Current YTD 01-Jan through 28-Jul-2026 total 128 Shipments &middot; Imports 102 (79.7%) &middot; visible outbound 26 (20.3%) &middot; never annualized &middot; visible Value USD 2.268M &middot; visible Weight 313,659 kg &middot; Previous Full Calendar Year 2025 total 380 Shipments &middot; Imports 318 (83.7%) &middot; visible outbound 62 (16.3%) &middot; visible Value USD 4.400M &middot; visible Weight 579,924 kg &middot; 2025 and 2026 never aggregated &middot; Comparable Jan 1 to Jul 28 actual-vs-actual total 224 to 128 -42.9% &middot; Imports 189 to 102 -46.0% &middot; visible outbound 35 to 26 -25.7% &middot; Observed Actual vs Observed Actual &middot; Panjiva shows lower visible Shipment activity in Current YTD across both directional structures with the largest reduction on the Import side &middot; the supplied data does not establish the cause &middot; not lost business not production decline not demand deterioration not provider change not sourcing change &middot; no run-rate no forecast no annualization &middot; Current YTD modes Transport Method not available 88 (68.8%) Air 21 (16.4%) Maritime 13 (10.2%) Unknown 4 (3.1%) Truck 2 (1.6%) &middot; 2025 modes Transport Method not available 301 (79.2%) Air 45 (11.8%) Maritime 26 (6.8%) Unknown 6 (1.6%) Truck 2 (0.5%) &middot; Panjiva confirms Air plus Maritime plus Truck presence but modal conclusions require caution because Transport Method is unavailable for 68.8% of Current YTD Shipments &middot; the known-mode subset is never presented as the complete Modal Mix &middot; Unknown preserved and never redistributed &middot; Gateway not available in Panjiva on every route &middot; no Port no Border no Airport no Customs Agent no Customs Regime no IMMEX no gateway concentration &middot; Current YTD Import Core Routes 1 route to 84.3% EXTREME ROUTE CONCENTRATION &middot; Route 1 Origin Facility Lankwitzer Lackfabrik Gmb H Haynauer Strasse 61-63 Berlin Berlin 12249 Germany &middot; Gateway not available in Panjiva &middot; Destination Facility Dp Lankvittser Ukraine Parkova St 14 Riasne-Ruske L&#39;vivs&#39;ka oblast Ukraine 81085 &middot; Mode Not available &middot; 86 Shipments &middot; 84.3% of Current YTD Imports &middot; cumulative 84.3% &middot; 5 Active Months &middot; 17.20 per Active Month &middot; 4.49 per Week &middot; First Visible Shipment January 17 2026 &middot; Last Visible Shipment May 30 2026 &middot; one route alone represents 84.3% of Current YTD Imports &middot; observed structural dependency not confirmed customer pain &middot; Current YTD visible outbound Core Routes 8 routes to 80.8% &middot; Route 1 Lankwitzer Lackfabrik Gmb H HOPPENSTEDTER STR. OSTERWIECK 38835 to Pinturas Y Recubrimientos Ravtech Sa De Cv Movimiento Obrero 226 El Lechugal 66376 Santa Catarina N.L. Mexico Air plus Maritime 8 Shipments 30.8% cumulative 30.8% 4 Active Months 2.00 per month 0.50 per week Mar 19 to Jul 9 2026 &middot; Route 2 Lankwitzer Lackfabrik Gmb H Address not available in Panjiva to Skf De Mexico Sa De Cv Puebla Puebla Iztacalco 08400 Ciudad de Mexico DF Mexico Air plus Unknown 6 Shipments 23.1% cumulative 53.8% 4 Active Months 1.50 per month 0.21 per week Jan 5 to Jul 20 2026 &middot; Route 3 Berlin to Tov Huala Klozhers Tekhnolohiya Ukraine Liniina St 18 Sumy Sums&#39;ka oblast Ukraine 40000 Mode Not available 2 Shipments 7.7% cumulative 61.5% 2 Active Months 1.00 per month 0.32 per week Apr 8 to May 21 2026 &middot; Route 4 Berlin to Dol Electric Co. Pvt. Ltd. R-43 Rabale Midc Rd MIDC Industrial Area Rabale Navi Mumbai Maharashtra 400701 India Air 1 Shipment 3.8% cumulative 65.4% Jan 24 2026 SHORT OBSERVATION WINDOW &middot; Route 5 Berlin to Emco Electrodyne Pvt. Ltd. D-87 Phase-7 Industrial Area Sahibzada Ajit Singh Nagar Punjab 160055 India Air 1 Shipment 3.8% cumulative 69.2% Feb 19 2026 SHORT OBSERVATION WINDOW &middot; Route 6 Berlin to Marelli Powertrain India Pvt. Ltd. Plot No.- 1 Subplot 25 and 32 Maruti Supplier Park Sec-3 A IMT Manesar Gurugram Haryana 122051 India Air 1 Shipment 3.8% cumulative 73.1% Jan 25 2026 SHORT OBSERVATION WINDOW &middot; Route 7 Berlin to Ola Cell Technologies Private Ltd. Regent Insignia Suite 414 3rd Floor 4th Block 17th Main 100 Feet Road Koramanga Bengaluru Karnataka 560034 India Maritime 1 Shipment 3.8% cumulative 76.9% Feb 21 2026 SHORT OBSERVATION WINDOW &middot; Route 8 Berlin to Skf De Mexico Sa De Cv Puebla Puebla Iztacalco 08400 Ciudad de Mexico DF Mexico Unknown 1 Shipment 3.8% cumulative 80.8% Jul 27 2026 SHORT OBSERVATION WINDOW &middot; Routes 4 to 8 show 7.00 per week across a single-day window &middot; Observed Route Cadence reflects the route own visible date window &middot; a short-window cadence is not evidence of sustained weekly capacity and must not be extrapolated into a forecast or normalized weekly volume &middot; Historical 2025 Import Core Route 1 route to 92.5% Berlin Lankwitzer Lackfabrik Gmb H to Gateway unavailable to Dp Lankvittser Ukraine 294 Shipments 92.5% cumulative 92.5% 12 Active Months 24.50 per month 5.97 per week Jan 11 to Dec 21 2025 EXTREME ROUTE CONCENTRATION &middot; Historical 2025 visible outbound Core Routes 15 routes to 80.6% of 62 Shipments &middot; SKF de Mexico origin address unavailable 10 16.1% &middot; Ravtech Mexico 5 8.1% cumulative 24.2% &middot; Kern Liebers India 4 6.5% cumulative 30.6% &middot; SKF de Mexico Berlin origin 4 6.5% cumulative 37.1% &middot; Tov Zavod Kobzarenka Ukraine 4 6.5% cumulative 43.5% &middot; Dakshin Foundry India 3 4.8% cumulative 48.4% &middot; Dol Electric India 3 4.8% cumulative 53.2% &middot; Stabilus United States 3 4.8% cumulative 58.1% &middot; Tov Huala Klozhers Ukraine 3 4.8% cumulative 62.9% &middot; Fras Le North America United States 2 3.2% cumulative 66.1% &middot; Marelli Powertrain India 2 3.2% cumulative 69.4% &middot; Ola Cell Technologies India 2 3.2% cumulative 72.6% &middot; Polmor Steel India 2 3.2% cumulative 75.8% &middot; Sanhe Lankwitzer to Lizhong Mexico 2 3.2% cumulative 79.0% &middot; Lankwitzer Shanghai to Ola Cell Technologies 1 1.6% cumulative 80.6% &middot; no route deleted &middot; Route Rank is factual &middot; no Commercial Route Priority &middot; Route persistence Berlin to Dp Lankvittser Ukraine Visible in both periods Persisting Core Route 2025 92.5% to Current YTD 84.3% &middot; the route remains an extreme concentration despite its lower visible Current YTD share &middot; Ravtech and SKF de Mexico remain material visible outbound relationships &middot; Current YTD Ravtech route 30.8% SKF leading route 23.1% combined 53.8% &middot; no cause invented for the structural change &middot; Current YTD HS Top 5 3208.90 Paints industrial coatings 23 (18.0%) &middot; 3208.20.03.01 Polymer-based paints coating preparations 11 (8.6%) &middot; 3208.20.03.99 Other acrylic vinyl paints coatings 11 (8.6%) &middot; 3814.00 Solvents thinners 11 (8.6%) &middot; 3208.10 Polyester-based paints coatings 10 (7.8%) &middot; 2025 HS Top 5 3208.90 Paints coatings based on synthetic or modified polymers 66 (17.4%) &middot; 3814.00 Organic solvents thinners 49 (12.9%) &middot; 3208.20 Acrylic vinyl polymer-based paints and coatings 38 (10.0%) &middot; 3212.90 Pigments coloring preparations 37 (9.7%) &middot; 3911.90 Specialized resins polymer materials 37 (9.7%) &middot; One Shipment may contain multiple HS Codes &middot; HS counts represent operational presence and are not additive &middot; HS Portfolio Trend the visible portfolio remains centered on industrial paints coatings polymer systems solvents thinners and associated coating chemistry &middot; no unsupported hazardous-material procedures inferred &middot; Current YTD Import-side Origin Partners Lankwitzer Lackfabrik Gmb H 101 Shipments 99.0% &middot; Lankwitzer USA LLC 1 Shipment 1.0% &middot; DISCOVERY HYPOTHESIS REQUIRES VALIDATION potential affiliate intercompany structure &middot; not automatically called external Suppliers &middot; Current YTD visible outbound Trading Partners Pinturas y Recubrimientos Ravtech 8 30.8% &middot; SKF de Mexico 7 26.9% &middot; Tov Huala Klozhers 2 7.7% &middot; Confab Industrial 1 3.8% &middot; Solvay Fluorides 1 3.8% &middot; Top 3 concentration 65.4% &middot; Top 5 concentration 73.1% &middot; Trading Partner concentration kept analytically separate from Route concentration &middot; Trading Partners terminology used throughout &middot; Geographic visible network evidence Germany Ukraine Mexico India United States China Brazil &middot; flag plus country name always &middot; structured Shipment Origin and Destination fields are incomplete on a material portion of the supplied Panjiva data &middot; no missing geography silently enriched &middot; Operational Complexity MEDIUM-HIGH driven by the coexistence of a highly concentrated recurring facility corridor and a substantially more distributed international outbound structure &middot; evidence 128 Current YTD Shipments international multi-country network extreme Import route concentration eight outbound Core Routes to 80% visible Air Maritime Truck multiple Lankwitzer facilities and entities multiple outbound Trading Partners specialized industrial coating chemical portfolio material modal-data limitations &middot; Signal A Import concentration 84.3% of Current YTD Imports on one Berlin to Ukraine facility route &middot; Signal B Outbound distribution eight routes to 80.8% &middot; Signal C Multimodal evidence Air Maritime Truck visible &middot; Signal D Affiliate structure multiple Lankwitzer-branded entities DISCOVERY HYPOTHESIS REQUIRES VALIDATION &middot; DATA QUALITY ENTITY RESOLUTION HYPOTHESIS REQUIRES VALIDATION entity variants Lankwitzer Lackfabrik Gmb H &middot; Lankwitzer Lackfabrik Gmb H Werk Ost &middot; Lankwitzer Lackfabrik Gmb H Werk Osterwieck &middot; Lankwitzer USA LLC &middot; Lankwitzer Mexico &middot; Dp Lankvittser Ukraine &middot; Sanhe Lankwitzer Industry Coating Co. Ltd. &middot; Lankwitzer Germany Premium Coatings (Shanghai) Co. &middot; facilities and legal entities never silently merged &middot; Core Routes never altered based on assumed corporate relationships &middot; ILM Control Tower Potential HIGH &middot; Shipment planning visibility supplier affiliate readiness booking coordination carrier coordination centralized milestone visibility document control exception management route performance facility visibility Trading Partner performance contingency governance multimodal coordination KPI governance &middot; never implies Lankwitzer currently lacks these capabilities &middot; Commercial Positioning Operational Complexity Partner Multimodal Coordination Partner Customs and Visibility Partner ILM Control Tower Partner &middot; not a transactional freight provider not a commodity trucking provider not a spot-rate provider &middot; Data available Shipment dates Shipper Consignee facility addresses on many records countries on many records Transport Method on a subset HS Codes Goods Shipped Weight Value entity information &middot; Missing or materially incomplete reliable Port Border Airport Customs Agent Customs Regime IMMEX Incoterms carrier complete Transport Method coverage paired direct export declaration dataset &middot; no Wallet no Penetration no Coverage no Account Intelligence Snapshot no Akzent Captured Universe no Akzent Revenue Gross Profit or Margin no Akzent performance metrics &middot; no evidence supplied that Akzent currently manages this account &middot; Panjiva Visible Logistics Universe &middot; Air &middot; Maritime &middot; Truck &middot; Multimodal &middot; International &middot; Extreme Route Concentration &middot; ILM Potential &middot; Control Tower', rel:'LEAD', cls:'AA', clsPill:'aa' },
   { id:'view-alurem', name:'Grupo Alurem', sub:'Grupo Alurem &middot; Grupo Alurem, S.A. de C.V. &middot; Grupo Alurem Sa De Cv &middot; Target Account &middot; LEAD &middot; AIOS Classification AA &middot; Operational Complexity MEDIUM &middot; Panjiva Visible Logistics Universe &middot; Imports only &middot; Exports not available in supplied Panjiva file &middot; 21 Current YTD Import Shipments &middot; 100% Maritime &middot; Ocean &middot; Altamira &middot; Manzanillo &middot; Egypt &middot; China &middot; Greece &middot; Kiro Marble For Marble &amp; Granite &middot; granite &middot; marble &middot; natural stone &middot; Customs &middot; Supplier Coordination &middot; ILM / Control Tower &middot; Nuevo Le&oacute;n', rel:'LEAD', cls:'AA', clsPill:'aa' },
   { id:'view-victaulic', name:'Victaulic de México', sub:'Victaulic de M&eacute;xico &middot; Victaulic de M&eacute;xico S. de R.L. de C.V. &middot; Victaulic De Mexico S. De R.L. De C.V. &middot; Target Account &middot; LEAD &middot; AIOS Classification AAA Strategic Target &middot; Operational Complexity HIGH &middot; Panjiva Visible Logistics Universe &middot; Industrial / manufacturing visible trade profile &middot; Current YTD 2026-01-01 to 2026-07-31 453 Shipments &middot; Imports 290 &middot; Exports 163 &middot; Jan-Jul 527 to 453 -14.0% &middot; Import Core Routes 37 to 80.3% &middot; Export Core Routes 5 to 81.6% &middot; Cross-Border Exposure Very High &middot; Customs / IMMEX Sensitivity Very High &middot; ILM / Control Tower Potential Very High &middot; Truck &middot; Air &middot; Unknown &middot; Puente Internacional Zaragoza-Isleta &middot; Ciudad Ju&aacute;rez &middot; Nuevo Laredo &middot; San Jer&oacute;nimo-Santa Teresa &middot; Chihuahua &middot; Victaulic Co. &middot; Desma Usa &middot; Coatings For Industry &middot; Machinery + Planning &middot; Robert Sinto &middot; Mcmaster Carr &middot; Lynar Corporation &middot; Kalischatarra &middot; valve parts &middot; rubber gaskets &middot; couplings &middot; flanges &middot; molds &middot; Return Of Goods (Immex) &middot; Customs Agent 3633 &middot; 1612 &middot; Cross-Border &middot; IMMEX &middot; Customs &middot; Supplier Orchestration &middot; ILM / Control Tower', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
+  { id:'view-lisi', name:'LISI Automotive Monterrey', sub:'LISI Automotive Monterrey &middot; Lisi Automotive Monterrey Sa De Cv &middot; Lisi Automotive Monterrey S.A. De C.V. &middot; Target Account &middot; LEAD &middot; AIOS Classification AAA Strategic Account &middot; Operational Complexity HIGH &middot; Panjiva Visible Logistics Universe &middot; Automotive components visible trade profile &middot; Current YTD 2026-01-03 to 2026-07-31 581 Shipments &middot; Imports 347 &middot; Exports 234 &middot; Jan-Jul 529 to 581 +9.8% &middot; Exports +25.8% &middot; Import Core Routes 12 to 81.0% &middot; Export Core Routes 5 to 82.5% &middot; Multimodal Exposure High &middot; Cross-Border Exposure High &middot; Air Freight Exposure High &middot; Ocean Exposure Meaningful &middot; Customs / IMMEX Sensitivity High &middot; ILM / Control Tower Potential Very High &middot; Air &middot; Truck &middot; Maritime &middot; Unknown &middot; Aeropuerto Internacional General Mariano Escobedo &middot; Monterrey &middot; Nuevo Laredo &middot; Altamira &middot; Manzanillo &middot; Ciudad Acu&ntilde;a &middot; Guadalajara &middot; Lisi Automotive Llc &middot; Lisi Automotive Kkp &middot; Suzhou Zhuny &middot; Ld Mold Solution &middot; Optech &middot; S.I.F.O. &middot; Tivoly &middot; Gerbo France &middot; A. Schulman &middot; brake parts &middot; pipe fittings &middot; gasoline injector parts &middot; polyacetal resins &middot; seat motors &middot; IMMEX &middot; Customs Agent 1660 &middot; 1672 &middot; Multimodal &middot; Cross-Border &middot; Air Freight &middot; Customs &middot; ILM / Control Tower', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
   { id:'view-jyrsa', name:'JYRSA PPE', sub:'JYRSA PPE S.A. de C.V. · Jyrsa Ppe Sa De Cv · Target Account · LEAD · AA Priority Target · Operational Complexity Medium-High · Panjiva Visible Logistics Universe · Personal Protective Equipment Industrial Safety Products · hearing protection earmuffs plugs · protective eyewear safety glasses · safety apparel · textile PPE lumbar supports · plastic safety industrial accessories · Ocean-Led Asia Sourcing · Manzanillo-Concentrated Inbound · Central American Export Corridor · 135 Current YTD Shipments · Imports 110 81.5% Jan 2 to Jul 29 2026 · Exports 25 18.5% Jan 9 to Jul 8 2026 · comparable Jan 1–Jul 29 actual vs actual 92 to 135 +46.7% · Imports 68 to 110 +61.8% · Exports 24 to 25 +4.2% · Import share +7.6 pp · Import Maritime 99 90.0% Truck 9 8.2% Air 2 1.8% · Export Truck 25 100.0% · 16 Import Core Routes 81.8% of 29 visible routes · 7 Export Core Routes 84.0% of 10 visible routes · EXTREME ROUTE CONCENTRATION does not apply · Top 3 Imports 40.0% Top 5 48.2% · Top 3 Exports 48.0% Top 5 68.0% · 2025 baseline 177 Shipments 137 Imports 40 Exports · 16 Import Core Routes 80.3% · 12 Export Core Routes 80.0% · visible CIF 2026 YTD Imports USD 2.548M Exports USD 0.500M total USD 3.048M · 2025 Imports USD 2.938M Exports USD 0.913M total USD 3.851M · gross weight 2026 YTD 735,479.91 kg imports 39,915.08 kg exports · 2025 741,279.98 kg imports 79,744.94 kg exports · Hangzhou Top Safe 20 18.2% · Shanghai H&amp;L Industry 14 12.7% · Ansafe Industrial Safety Products 10 9.1% · Nung Lai 8 7.3% · Radians Inc. 7 6.4% · Suzhou Rhz Textile Technology · Fujian Rds Foreign Trade · Guangzhou Junyue Foam Earplug · Shanghai East Best International · Dikamar Ind Proteccao Calcado · Ltld Esd · Pat Safety · Suzhou Weebitex · The Best Time Fuzhou · Sondel Sociedad Anonima 5 · Items Industriales 4 · Tecnofijaciones De Costa Rica 3 · Afalpi Medica Sociedad Anonima 2 · Equipos Comerciales Y Servicios Electricos 2 · Moreno Macay 2 · Manzanillo Colima Port 96 87.3% of imports · Nuevo Laredo Tamaulipas Border 7 6.4% · Aeropuerto Internacional General Mariano Escobedo Airport 3 · Veracruz Port 3 · AICM Airport 1 · Ciudad Hidalgo Chiapas Border 21 84.0% of exports · Nuevo Laredo Border 4 16.0% · Altamira 2025 exports · MTY Airport 2025 imports · China 90 81.8% · Taiwan 9 8.2% · United States 7 6.4% · Portugal 4 3.6% · Costa Rica 10 40.0% · Nicaragua 5 20.0% · Guatemala 4 16.0% · United States 4 16.0% · El Salvador 2 8.0% · Dominican Republic Honduras Bolivia 2025 · Customs Agent 1742 96 87.3% · 3614 · 3043 · 3403 · 3685 · 3950 21 84.0% · 3323 · 3923 · Final Import Export · HS 3926901100 hearing protection · 3926909999 plastic industrial safety articles · 6307909999 safety textile lumbar supports · 3926209900 protective apparel · 9004909900 safety glasses · HS counts non-additive · Radians Inc. two Panjiva address renderings not merged · Safety Co. Nicaragua S.A. Costa Rica destination conflict · Afalpi Sociedad Anonima vs Afalpi Medica Sociedad Anonima · Ferreteria Ochoa two separate records · data quality entity resolution hypothesis · Address not available in Panjiva · Ocean · Customs · Cross-Border · LATAM · Operational Complexity Partner · Multimodal Coordination Partner · Customs &amp; Visibility Partner · ILM / Control Tower Partner', rel:'LEAD', cls:'AA', clsPill:'aa' },
 ];
 const MODULES = [
