@@ -2151,6 +2151,55 @@ main {
 #view-pipsa .pip-phase > div:nth-child(4) { border-top-color:var(--teal); }
 #view-pipsa .pip-phase b { display:block; font-size:9px; font-weight:800; letter-spacing:1.1px; text-transform:uppercase; color:var(--teal-dim); }
 #view-pipsa .pip-phase strong { display:block; font-size:13px; color:var(--navy); margin:2px 0 4px; }
+/* CORPORACIÓN PIPSA — Logistics Shared Wallet (provisional reference) + Two Wallets comparison (#view-pipsa only). */
+#view-pipsa .pip-prov { display:inline-block; font-size:8.5px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; color:#92400e; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.45); padding:1px 6px; border-radius:3px; white-space:nowrap; cursor:help; vertical-align:2px; }
+#view-pipsa .pip-micro-prov { font-size:9.5px; color:var(--text-light); line-height:1.5; margin-top:6px; }
+#view-pipsa .pip-trio { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:16px; }
+#view-pipsa .pip-trio > div { padding:12px 16px; background:var(--surface); border:1px solid var(--border); border-radius:0 6px 6px 0; }
+#view-pipsa .pip-trio .q { font-size:9px; font-weight:800; letter-spacing:1.1px; text-transform:uppercase; }
+#view-pipsa .pip-trio .n { font-size:30px; font-weight:800; line-height:1.1; margin-top:4px; }
+#view-pipsa .pip-trio .s { font-size:10.5px; color:var(--text-muted); line-height:1.5; margin-top:3px; }
+#view-pipsa .pip-lw { display:grid; grid-template-columns:minmax(0,1.65fr) minmax(230px,0.75fr); gap:16px; }
+#view-pipsa .pip-lw-main { padding:16px 18px; background:var(--surface); border:1px solid rgba(13,43,94,0.18); border-top:3px solid #10b981; border-radius:8px; }
+#view-pipsa .pip-lw-head { display:flex; align-items:flex-end; gap:22px; flex-wrap:wrap; }
+#view-pipsa .pip-lw-head .big { font-size:48px; font-weight:800; color:#047857; line-height:1; }
+#view-pipsa .pip-lw-kpi b { display:block; font-size:22px; font-weight:800; color:var(--navy); line-height:1.1; }
+#view-pipsa .pip-lw-kpi span { font-size:9.5px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:var(--text-muted); }
+#view-pipsa .pip-units { margin-top:14px; }
+#view-pipsa .pip-units svg { width:100%; height:auto; display:block; }
+#view-pipsa .pip-units-key { display:flex; gap:14px; flex-wrap:wrap; font-size:10px; color:var(--text-muted); margin-top:6px; }
+#view-pipsa .pip-sw { display:inline-block; width:9px; height:9px; border-radius:2px; margin-right:4px; vertical-align:-1px; }
+#view-pipsa .pip-econ { padding:14px 16px; background:rgba(16,185,129,0.04); border:1px solid rgba(16,185,129,0.35); border-radius:8px; }
+#view-pipsa .pip-dirs { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px; }
+#view-pipsa .pip-dir { padding:12px 16px; background:var(--surface); border:1px solid var(--border); border-radius:8px; }
+#view-pipsa .pip-dir-top { display:flex; justify-content:space-between; align-items:baseline; gap:8px; flex-wrap:wrap; }
+#view-pipsa .pip-dir-top .t { font-size:13px; font-weight:800; color:var(--navy); letter-spacing:0.4px; text-transform:uppercase; }
+#view-pipsa .pip-dir-top .p { font-size:26px; font-weight:800; color:#047857; line-height:1; }
+#view-pipsa .pip-dir-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:6px; margin-top:10px; }
+#view-pipsa .pip-dir-stats b { display:block; font-size:18px; font-weight:800; color:var(--navy); line-height:1.15; }
+#view-pipsa .pip-dir-stats span { font-size:8.5px; color:var(--text-muted); letter-spacing:0.3px; text-transform:uppercase; }
+#view-pipsa .pip-lwbar { position:relative; height:14px; background:#dbe3ee; border-radius:4px; margin-top:10px; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-pipsa .pip-lwbar .mk { position:absolute; left:0; top:-3px; bottom:-3px; min-width:4px; background:#10b981; border-radius:2px; box-shadow:0 0 0 2px rgba(16,185,129,0.25); -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-pipsa .pip-lwbar .fill { position:absolute; left:0; top:0; bottom:0; border-radius:4px 0 0 4px; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-pipsa .pip-lwbar .rest { position:absolute; top:0; bottom:0; right:0; border-radius:0 4px 4px 0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-pipsa .pip-dir-msg { font-size:10.5px; font-weight:700; margin-top:8px; line-height:1.5; }
+#view-pipsa .pip-vs { display:grid; grid-template-columns:1fr 44px 1fr; gap:10px; align-items:stretch; margin-top:16px; }
+#view-pipsa .pip-vs-p { padding:14px 18px; border-radius:8px; background:var(--surface); border:1px solid var(--border); }
+#view-pipsa .pip-vs-p.l { border-top:3px solid #10b981; }
+#view-pipsa .pip-vs-p.c { border-top:3px solid var(--teal); }
+#view-pipsa .pip-vs-p .h { font-size:10px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--navy); }
+#view-pipsa .pip-vs-p .n { font-size:40px; font-weight:800; line-height:1.05; margin-top:4px; }
+#view-pipsa .pip-vs-p .d { font-size:11px; color:var(--text-muted); line-height:1.55; margin-top:4px; }
+#view-pipsa .pip-vs-ne { display:flex; align-items:center; justify-content:center; font-size:26px; font-weight:800; color:var(--text-light); }
+#view-pipsa .pip-story { display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin-top:12px; }
+#view-pipsa .pip-story span.s { font-size:11px; font-weight:800; color:var(--navy); background:var(--surface); border:1px solid var(--border); padding:5px 10px; border-radius:5px; }
+#view-pipsa .pip-story span.a { color:var(--text-light); font-weight:800; }
+#view-pipsa .pip-wexp { grid-column:1 / -1; padding:14px 18px !important; background:linear-gradient(135deg,rgba(16,185,129,0.1) 0%,rgba(0,180,216,0.06) 100%) !important; border:1.5px solid rgba(16,185,129,0.55) !important; }
+@media (max-width: 900px) {
+  #view-pipsa .pip-trio, #view-pipsa .pip-lw, #view-pipsa .pip-dirs { grid-template-columns:1fr; }
+  #view-pipsa .pip-vs { grid-template-columns:1fr; }
+  #view-pipsa .pip-vs-ne { transform:rotate(90deg); height:26px; }
+}
 @media (max-width: 900px) {
   #view-pipsa .pip-phase { grid-template-columns:1fr 1fr; }
   #view-pipsa .pip-tl-row { grid-template-columns:1fr; gap:4px; }
@@ -2340,7 +2389,7 @@ main {
   #view-austin-bacis .aub-flow .aub-hop-arrow { transform:none !important; }
   /* CORPORACIÓN PIPSA — Current YTD stays primary; the complete 2-route Import and 3-route Export Current YTD Core Route
      sets print in full, and both complete 2025 sets (2 Import / 2 Export) print expanded as a compact Historical Core
-     Route Appendix. Customs Shared Wallet bars and the Wallet Data Alignment timeline keep their colours. Scoped to #view-pipsa. */
+     Route Appendix. Customs Shared Wallet bars and the Logistics Shared Wallet unit grid keep their colours. Scoped to #view-pipsa. */
   #view-pipsa .hub-table { font-size: 8.5px !important; min-width: 0 !important; }
   #view-pipsa .hub-table td,
   #view-pipsa .hub-table th { padding: 3px 5px !important; }
@@ -2383,6 +2432,8 @@ main {
   #view-pipsa .pip-tl-track, #view-pipsa .pip-tl-bar, #view-pipsa .pip-tl-gap, #view-pipsa .pip-stack > div { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
   #view-pipsa .pip-phase { grid-template-columns:repeat(4,1fr) !important; }
   #view-pipsa .pip-cw-panel, #view-pipsa .pip-ws, #view-pipsa .pip-phase > div { break-inside: avoid; }
+  #view-pipsa .pip-units svg, #view-pipsa .pip-lwbar, #view-pipsa .pip-lwbar > div { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  #view-pipsa .pip-lw-main, #view-pipsa .pip-econ, #view-pipsa .pip-dir, #view-pipsa .pip-vs-p, #view-pipsa .pip-trio > div { break-inside: avoid; }
 
   /* ACCUDYN DE MEXICO historical appendix — complete but visually secondary in print.
      Scoped to #view-accudyn .hist-appendix so no other account is affected. */
@@ -3742,7 +3793,7 @@ main {
     </div>
 
     <!-- Corporación Pipsa -->
-    <div class="account-card aaa" onclick="showViewById('view-pipsa')" title="Corporación Pipsa is a CLIENT with a very high-volume, 99.9% Truck cross-border + IMMEX network through Colombia, Nuevo León. Panjiva shows 2,770 visible Shipments in 2026 YTD through Jul 31; Akzent captured 2 Export Truck Shipments (Jan–Aug 2026). Akzent customs patents 3468/1930 handle 90.8% of visible Current YTD Shipments. Exact freight Penetration is not calculable because periods do not match.">
+    <div class="account-card aaa" onclick="showViewById('view-pipsa')" title="Corporación Pipsa is a CLIENT with a very high-volume, 99.9% Truck cross-border + IMMEX network through Colombia, Nuevo León. Panjiva shows 2,770 visible Shipments in 2026 YTD through Jul 31; Akzent captured 2 Export Truck Shipments (Jan–Aug 2026). Logistics Shared Wallet: 0.07% provisional captured / visible reference (2 vs 2,770; periods not fully aligned). Customs Shared Wallet: Akzent patents 3468/1930 on 90.8% of visible Current YTD Shipments. The two wallets are never combined.">
       <div class="account-card-header">
         <div>
           <div class="account-name">Corporación Pipsa</div>
@@ -3755,9 +3806,9 @@ main {
       </div>
       <div class="account-metrics" style="grid-template-columns:repeat(4,1fr);">
         <div class="acct-metric"><div class="acct-metric-val">2,770</div><div class="acct-metric-lbl">Visible YTD Shipments</div></div>
-        <div class="acct-metric"><div class="acct-metric-val">2</div><div class="acct-metric-lbl">Captured · Jan–Aug</div></div>
-        <div class="acct-metric"><div class="acct-metric-val">90.8%</div><div class="acct-metric-lbl">Customs Share</div></div>
-        <div class="acct-metric"><div class="acct-metric-val">99.9%</div><div class="acct-metric-lbl">Truck</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">0.07%</div><div class="acct-metric-lbl">Logistics Wallet · prov.</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">90.8%</div><div class="acct-metric-lbl">Customs Wallet</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">$341.17</div><div class="acct-metric-lbl">Captured GP</div></div>
       </div>
       <div style="margin-top:8px;padding:7px 10px;background:rgba(16,185,129,0.06);border-left:3px solid #10b981;border-radius:0 4px 4px 0;">
         <div style="font-size:9px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:#047857;">CLIENT Wallet Thesis</div>
@@ -11512,21 +11563,25 @@ main {
           </div>
         </div>
 
-        <div class="grid-2" style="gap:10px;margin-top:16px;">
-          <div style="padding:12px 16px;background:var(--surface);border:1px solid rgba(16,185,129,0.35);border-left:3px solid #10b981;border-radius:0 6px 6px 0;">
-            <div class="pip-eyebrow" style="color:#047857;"><span class="pip-src ak">Akzent</span> Captured footprint · Jan–Aug 2026</div>
-            <div style="display:flex;gap:22px;flex-wrap:wrap;align-items:baseline;margin-top:6px;">
-              <div><div style="font-size:28px;font-weight:800;color:var(--navy);line-height:1;">2</div><div style="font-size:10px;color:var(--text-muted);">Export Truck Shipments</div></div>
-              <div><div style="font-size:22px;font-weight:800;color:var(--navy);line-height:1;">$341.17</div><div style="font-size:10px;color:var(--text-muted);">Gross Profit</div></div>
-              <div><div style="font-size:22px;font-weight:800;color:var(--navy);line-height:1;">$170.59</div><div style="font-size:10px;color:var(--text-muted);">GP / Shipment</div></div>
-            </div>
+        <div class="pip-trio">
+          <div style="border-left:3px solid #10b981;">
+            <div class="q" style="color:#047857;">Logistics Shared Wallet <span class="pip-prov" title="Akzent summary covers Jan–Aug 2026; supplied Panjiva data ends Jul 31, 2026. Captured / visible percentages are reference values, not exact matched-period Shipment Penetration until Akzent Shipment dates are aligned.">Provisional reference · periods not fully aligned</span></div>
+            <div class="n" style="color:#047857;">0.07%</div>
+            <div class="s"><strong style="color:var(--navy);">Provisional captured / visible reference</strong><br>2 Akzent Shipments vs 2,770 Panjiva visible Shipments</div>
+            <div class="pip-micro-prov">Periods not fully aligned · Akzent Jan–Aug vs Panjiva through Jul 31</div>
           </div>
-          <div style="padding:12px 16px;background:var(--surface);border:1px dashed rgba(245,158,11,0.6);border-left:3px solid #f59e0b;border-radius:0 6px 6px 0;">
-            <div class="pip-eyebrow" style="color:#b45309;">Exact freight Penetration / Wallet</div>
-            <div style="font-size:18px;font-weight:800;color:#92400e;line-height:1.3;margin-top:4px;">Not calculable from supplied data</div>
-            <div style="font-size:10.5px;color:var(--text-muted);line-height:1.55;margin-top:3px;">Periods do not match: Panjiva ends Jul 31; Akzent is aggregated Jan–Aug with no Shipment dates or routes. See Module 03.</div>
+          <div style="border-left:3px solid var(--teal);">
+            <div class="q" style="color:var(--teal-dim);">Customs Shared Wallet</div>
+            <div class="n" style="color:var(--teal-dim);">90.8%</div>
+            <div class="s"><strong style="color:var(--navy);">Akzent patents 3468 + 1930</strong><br>2,516 of 2,770 Panjiva visible Shipments · patent-based</div>
+          </div>
+          <div style="border-left:3px solid var(--navy);">
+            <div class="q" style="color:var(--navy);"><span class="pip-src ak">Akzent</span> Captured Gross Profit · Jan–Aug 2026</div>
+            <div class="n" style="color:var(--navy);">$341.17</div>
+            <div class="s"><strong style="color:var(--navy);">2 Export Truck Shipments</strong> · $170.59 GP / Shipment<br>Revenue not provided · Margin not calculable</div>
           </div>
         </div>
+        <div style="font-size:10px;color:var(--text-muted);margin-top:6px;">Three different questions — freight captured, customs patents used, Profit on captured freight. <strong>Never combined.</strong></div>
 
         <div style="margin-top:14px;padding:14px 18px;background:var(--surface);border:1px solid rgba(13,43,94,0.18);border-left:3px solid var(--navy);border-radius:0 6px 6px 0;">
           <div style="font-size:9px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;color:var(--navy);margin-bottom:6px;">Primary Thesis · AIOS Interpretation</div>
@@ -11534,7 +11589,6 @@ main {
         </div>
 
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:8px;margin-top:14px;">
-          <div class="stat-box" style="padding:10px 13px;background:var(--surface);border-left:3px solid var(--teal);"><div class="stat-label">Customs Share · Current YTD</div><div style="font-size:20px;font-weight:800;color:var(--teal-dim);line-height:1.2;">90.8%</div><div class="stat-sub">Akzent patents 3468/1930 · 2,516 of 2,770 · patent-based, not freight Penetration (Module 04)</div></div>
           <div class="stat-box" style="padding:10px 13px;background:var(--surface);border-left:3px solid var(--navy);"><div class="stat-label">Principal gateway</div><div style="font-size:20px;font-weight:800;color:var(--navy);line-height:1.2;">🌉 Colombia, NL</div><div class="stat-sub">1,732 of 1,736 Imports · 784 of 1,034 Exports</div></div>
           <div class="stat-box" style="padding:10px 13px;background:var(--surface);border-left:3px solid var(--navy);"><div class="stat-label">Customs regime</div><div style="font-size:20px;font-weight:800;color:var(--navy);line-height:1.2;">IMMEX</div><div class="stat-sub">IMMEX temporary import 99.8% · Return of Goods (IMMEX) 100%</div></div>
           <div class="stat-box" style="padding:10px 13px;background:var(--surface);border-left:3px solid #94a3b8;"><div class="stat-label">Comparable Jan–Jul</div><div style="font-size:20px;font-weight:800;color:var(--navy);line-height:1.2;">+1.3%</div><div class="stat-sub">2,734 → 2,770 Shipments · Exports +13.8% · Imports −4.9%</div></div>
@@ -11559,45 +11613,95 @@ main {
           <div>
             <div class="pip-sublbl" style="color:#047857;"><span class="pip-src ak">Akzent</span> Captured Business · Jan–Aug 2026</div>
             <table class="pip-kv">
-              <tr><td>Akzent Captured Shipments</td><td>2</td></tr>
-              <tr><td>Captured Service</td><td>Export Truck: 2</td></tr>
+              <tr><td>Logistics Shared Wallet</td><td style="color:#047857;">0.07% <span class="pip-prov">provisional reference</span></td></tr>
+              <tr><td>Akzent Captured Shipments</td><td>2 <span style="font-weight:600;color:var(--text-muted);">· Export Truck</span></td></tr>
+              <tr><td>Panjiva Visible Shipments</td><td>2,770</td></tr>
+              <tr><td>Visible Uncaptured Reference</td><td>2,768</td></tr>
+              <tr><td>Customs Shared Wallet</td><td style="color:var(--teal-dim);">90.8%</td></tr>
               <tr><td>Gross Profit</td><td>$341.17</td></tr>
               <tr><td>GP / Shipment</td><td>$170.59</td></tr>
               <tr class="gap"><td>Revenue</td><td>Not provided</td></tr>
-              <tr class="gap"><td>Margin</td><td>Not calculable — Revenue not provided</td></tr>
-              <tr class="gap"><td>Exact Shipment Penetration</td><td>Not calculable</td></tr>
-              <tr class="gap"><td>Exact Wallet / Coverage</td><td>Not calculable</td></tr>
+              <tr class="gap"><td>Margin</td><td>Not calculable</td></tr>
             </table>
+            <div class="pip-micro-prov">Akzent summary covers Jan–Aug 2026; supplied Panjiva data ends Jul 31, 2026. Captured / visible percentages are reference values, not exact matched-period Shipment Penetration until Akzent Shipment dates are aligned.</div>
           </div>
         </div>
-        <div class="pip-note"><strong>Data note:</strong> Panjiva ends Jul 31; Akzent is aggregated Jan–Aug without Shipment dates or routes. The supplied Akzent screenshot shows Pipsa as a <strong>New Client</strong>, with the 2025 Profit field shown as “--”.</div>
+        <div class="pip-note-navy"><strong style="color:var(--navy);">Data note:</strong> the Akzent summary is aggregated Jan–Aug without Shipment dates or routes. The supplied Akzent screenshot shows Pipsa as a <strong>New Client</strong>, with the 2025 Profit field shown as “--”.</div>
       </div>
     </div>
 
-    <!-- 03 WALLET DATA ALIGNMENT -->
-    <div class="card" style="border-top:3px solid #f59e0b;">
-      <div class="card-header"><span class="accent">03</span> Wallet Data Alignment — Visible vs Captured</div>
+    <!-- 03 LOGISTICS SHARED WALLET -->
+    <div class="card" style="border-top:3px solid #10b981;">
+      <div class="card-header"><span class="accent">03</span> Logistics Shared Wallet — Akzent Captured vs Panjiva Visible</div>
       <div class="card-body">
-        <div style="font-size:11.5px;color:var(--text-muted);line-height:1.6;margin-bottom:6px;"><strong style="color:var(--navy);">Why no freight Penetration is published:</strong> the two universes do not cover the same observed window, so AIOS will not create a false matching-period denominator.</div>
-        <div class="pip-tl">
-          <div class="pip-tl-months"><div></div><div>Jan</div><div>Feb</div><div>Mar</div><div>Apr</div><div>May</div><div>Jun</div><div>Jul</div><div>Aug</div></div>
-          <div class="pip-tl-row"><div class="pip-tl-lbl">Panjiva visible universe<span>Shipment-level · 2026-01-02 → 2026-07-31</span></div>
-            <div class="pip-tl-track"><div class="pip-tl-bar" style="left:0.41%;width:86.83%;background:var(--navy);">2,770 Shipments · dated · routed</div><div class="pip-tl-gap" style="left:87.24%;right:0;" title="August 2026 is not in the Panjiva observation window"></div></div></div>
-          <div class="pip-tl-row"><div class="pip-tl-lbl" style="color:#047857;">Akzent captured summary<span>Aggregated · Jan–Aug 2026 · no Shipment dates</span></div>
-            <div class="pip-tl-track"><div class="pip-tl-bar ak" style="left:0;width:100%;">2 Export Truck Shipments · dates not supplied</div></div></div>
+        <div style="font-size:12.5px;font-weight:700;color:var(--navy);margin-bottom:12px;">How much of Pipsa’s visible logistics universe is currently captured by Akzent?</div>
+        <div class="pip-lw">
+          <div class="pip-lw-main">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;"><div class="pip-eyebrow" style="color:#047857;">Total Logistics Shared Wallet</div><span class="pip-prov" title="Akzent summary covers Jan–Aug 2026; supplied Panjiva data ends Jul 31, 2026. Captured / visible percentages are reference values, not exact matched-period Shipment Penetration until Akzent Shipment dates are aligned.">Provisional Logistics Shared Wallet Reference</span></div>
+            <div class="pip-lw-head" style="margin-top:8px;">
+              <div><div class="big">0.07%</div><div style="font-size:10px;color:var(--text-muted);margin-top:3px;">Provisional captured share</div></div>
+              <div class="pip-lw-kpi"><b>2,770</b><span><span class="pip-src pj">Panjiva</span> Visible Universe</span></div>
+              <div class="pip-lw-kpi"><b style="color:#047857;">2</b><span><span class="pip-src ak">Akzent</span> Captured</span></div>
+              <div class="pip-lw-kpi"><b>2,768</b><span>Visible Uncaptured Reference</span></div>
+            </div>
+            <div class="pip-units"><svg viewBox="0 0 700 198" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="2,770 squares, one per Panjiva visible Shipment: 1,736 Imports and 1,034 Exports; 2 squares highlighted for Akzent captured Export Truck Shipments"><defs><pattern id="pipU-imp" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="6" height="6" rx="1" fill="#b6c3d8"/></pattern><pattern id="pipU-exp" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="6" height="6" rx="1" fill="#9fd9e8"/></pattern></defs><rect x="0" y="0" width="700" height="119" fill="url(#pipU-imp)"/><rect x="0" y="119" width="252" height="7" fill="url(#pipU-imp)"/><rect x="252" y="119" width="448" height="7" fill="url(#pipU-exp)"/><rect x="0" y="126" width="700" height="63" fill="url(#pipU-exp)"/><rect x="0" y="189" width="490" height="7" fill="url(#pipU-exp)"/><rect x="252" y="119" width="6" height="6" rx="1" fill="#047857"/><rect x="259" y="119" width="6" height="6" rx="1" fill="#047857"/><circle cx="259" cy="122" r="12" fill="none" stroke="#10b981" stroke-width="2"/></svg></div>
+            <div class="pip-units-key"><span><span class="pip-sw" style="background:#b6c3d8;"></span>Panjiva visible Imports · 1,736</span><span><span class="pip-sw" style="background:#9fd9e8;"></span>Panjiva visible Exports · 1,034</span><span><span class="pip-sw" style="background:#047857;"></span><strong style="color:#047857;">Akzent captured · 2 Export Truck</strong> (circled)</span><span style="color:var(--text-light);">1 square = 1 Shipment · drawn to scale</span></div>
+            <div class="pip-micro-prov">Akzent summary covers Jan–Aug 2026; supplied Panjiva data ends Jul 31, 2026. Captured / visible percentages are reference values, not exact matched-period Shipment Penetration until Akzent Shipment dates are aligned.</div>
+          </div>
+          <div class="pip-econ">
+            <div class="pip-eyebrow" style="color:#047857;"><span class="pip-src ak">Akzent</span> Captured economics · Jan–Aug 2026</div>
+            <table class="pip-kv" style="margin-top:6px;">
+              <tr><td>Captured Shipments</td><td>2</td></tr>
+              <tr><td>Gross Profit</td><td style="font-size:18px;">$341.17</td></tr>
+              <tr><td>GP / Shipment</td><td>$170.59</td></tr>
+              <tr class="gap"><td>Revenue</td><td>Not provided</td></tr>
+              <tr class="gap"><td>Margin</td><td>Not calculable</td></tr>
+            </table>
+            <div class="pip-micro-prov">Profit applies only to the supplied Akzent captured business. No Revenue, Margin, whitespace Profit or Profit Wallet is estimated.</div>
+          </div>
         </div>
-        <div style="font-size:10px;color:#92400e;font-weight:700;margin-top:6px;">Hatched August = outside the Panjiva window. Without Shipment dates, AIOS cannot tell whether either Akzent Shipment falls inside Jan 2 – Jul 31.</div>
 
-        <div class="grid-3" style="gap:12px;margin-top:16px;">
-          <div class="pip-sus"><div class="pip-sublbl" style="color:#047857;margin-bottom:6px;">Captured · Akzent Fact</div>
-            <table class="pip-kv"><tr><td>Captured</td><td>2 Export Truck · Jan–Aug 2026</td></tr><tr><td>GP</td><td>$341.17</td></tr><tr><td>GP / Shipment</td><td>$170.59</td></tr></table></div>
-          <div class="pip-sus"><div class="pip-sublbl" style="color:#b45309;margin-bottom:6px;">Pending period alignment</div>
-            <table class="pip-kv"><tr class="gap"><td>Exact Penetration</td><td><span class="pip-pending">Pending period alignment</span></td></tr><tr class="gap"><td>Exact Coverage</td><td><span class="pip-pending">Pending period alignment</span></td></tr><tr class="gap"><td>Revenue</td><td>Not provided</td></tr><tr class="gap"><td>Margin</td><td>Not calculable</td></tr></table></div>
-          <div class="pip-sus"><div class="pip-sublbl" style="margin-bottom:6px;">Data required to finalize Wallet</div>
-            <div style="font-size:10.5px;color:var(--text-muted);line-height:1.5;margin-bottom:4px;">The two Akzent Shipment records, with:</div>
-            <ul class="pip-list" style="margin-top:4px;"><li>Shipment date</li><li>Origin facility · gateway · destination facility</li><li>Mode · service</li><li>Revenue · GP</li></ul></div>
+        <div class="pip-dirs">
+          <div class="pip-dir">
+            <div class="pip-dir-top"><span class="t">Imports</span><span><span class="p">0.00%</span> <span style="font-size:9.5px;color:var(--text-muted);">provisional captured / visible</span></span></div>
+            <div class="pip-dir-stats">
+              <div><b>1,736</b><span>Panjiva Visible</span></div>
+              <div><b style="color:#047857;">0</b><span>Akzent Captured</span></div>
+              <div><b>1,736</b><span>Visible Uncaptured Reference</span></div>
+            </div>
+            <div class="pip-lwbar"></div>
+            <div class="pip-dir-msg" style="color:#b45309;">No captured Import freight activity in the supplied Akzent summary.</div><div class="pip-micro-prov">Applies only to the supplied Jan–Aug 2026 Akzent summary.</div>
+          </div>
+          <div class="pip-dir">
+            <div class="pip-dir-top"><span class="t">Exports</span><span><span class="p">0.19%</span> <span style="font-size:9.5px;color:var(--text-muted);">provisional captured / visible</span></span></div>
+            <div class="pip-dir-stats">
+              <div><b>1,034</b><span>Panjiva Visible</span></div>
+              <div><b style="color:#047857;">2</b><span>Akzent Captured</span></div>
+              <div><b>1,032</b><span>Visible Uncaptured Reference</span></div>
+            </div>
+            <div class="pip-lwbar"><div class="mk" style="width:0.19%;" title="Akzent captured 2 · 0.19% (marker drawn at minimum visible width)"></div></div>
+            <div class="pip-dir-msg" style="color:#047857;">Existing Akzent foothold: <span class="hub-tag truck">🚚 Export Truck</span></div><div class="pip-micro-prov">Green marker drawn at minimum visible width; to scale it is 0.19% of the bar.</div>
+          </div>
         </div>
-        <div class="pip-note-navy">Once supplied, AIOS can calculate exact Shipment Penetration, Revenue / GP / Margin, route-level capture, Core Route capture and route / service whitespace at the highest reliable common precision. <strong>Until then this page publishes no freight Penetration, Coverage or Wallet percentage.</strong></div>
+
+        <div class="pip-sublbl" style="margin-top:20px;">Two different wallets</div>
+        <div class="pip-vs" style="margin-top:4px;">
+          <div class="pip-vs-p l">
+            <div class="h">Logistics Shared Wallet <span class="pip-prov" title="Akzent summary covers Jan–Aug 2026; supplied Panjiva data ends Jul 31, 2026. Captured / visible percentages are reference values, not exact matched-period Shipment Penetration until Akzent Shipment dates are aligned.">Provisional reference · periods not fully aligned</span></div>
+            <div class="n" style="color:#047857;">0.07%</div>
+            <div class="pip-lwbar"><div class="mk" style="width:0.07%;" title="2 of 2,770 · marker drawn at minimum visible width"></div></div>
+            <div class="d"><strong style="color:var(--navy);">2 Akzent freight Shipments</strong> vs <strong style="color:var(--navy);">2,770</strong> Panjiva visible Shipments · provisional captured / visible reference</div>
+            <div class="pip-micro-prov">Green marker drawn at minimum visible width; to scale it is 0.07% of the bar.</div>
+          </div>
+          <div class="pip-vs-ne">≠</div>
+          <div class="pip-vs-p c">
+            <div class="h">Customs Shared Wallet</div>
+            <div class="n" style="color:var(--teal-dim);">90.8%</div>
+            <div class="pip-lwbar"><div class="fill" style="width:90.8%;background:var(--teal);"></div><div class="rest" style="width:9.2%;background:#f59e0b;"></div></div>
+            <div class="d"><strong style="color:var(--navy);">2,516 Shipments</strong> using Akzent-owned patents <span class="pip-mono">3468</span> + <span class="pip-mono">1930</span> vs <strong style="color:var(--navy);">2,770</strong> Panjiva visible Shipments · other patents <strong style="color:#b45309;">254 Shipments / 9.2%</strong></div>
+          </div>
+        </div>
+        <div class="pip-note-navy"><strong style="color:var(--navy);">AIOS Interpretation:</strong> <strong>Akzent has a very high share of Pipsa’s visible customs activity while capturing only a very small portion of its visible freight activity.</strong> The 90.8% is patent-based Customs Share — it is <strong>not</strong> freight Penetration, and the two percentages are never combined into a single Wallet calculation.</div>
       </div>
     </div>
 
@@ -11680,22 +11784,25 @@ main {
             <p class="o"><b>Observed</b>254 Current YTD Shipments use other patents (9.2%): 71 Imports (4.1%) · 183 Exports (17.7%). 250 of them are Patent 3541.</p>
             <p class="i"><b>AIOS Interpretation</b>Export customs is the clearest remaining patent-based whitespace.</p>
             <p class="v"><b>Discovery Validation</b>Is the allocation contractually fixed, route-specific, performance-driven, contingency-based or commercially contestable?</p></div>
-          <div class="pip-ws" style="border-top:3px solid var(--navy);"><div class="pip-ws-title">Cross-Border Gap — primary expansion domain</div>
-            <p class="o"><b>Observed</b>Panjiva: 2,766 Truck Shipments Current YTD (through Jul 31). Akzent: 2 Export Truck Shipments (Jan–Aug).</p>
-            <p class="i"><b>AIOS Interpretation</b>Cross-border is the primary expansion domain.</p>
-            <p class="v"><b>Discovery Validation</b>Exact route capture and Penetration require Akzent Shipment-level dates and routes.</p></div>
-          <div class="pip-ws"><div class="pip-ws-title">Import Whitespace</div>
-            <p class="o"><b>Observed</b>No Akzent Imports in the supplied Jan–Aug summary vs 1,736 Panjiva Imports through Jul 31.</p>
-            <p class="i"><b>AIOS Interpretation</b>Inbound cross-border coordination is a major visible whitespace area.</p>
-            <p class="v"><b>Discovery Validation</b>Confirm whether other Akzent LOBs or non-GL services exist outside the supplied screenshot.</p></div>
-          <div class="pip-ws"><div class="pip-ws-title">Export Whitespace</div>
-            <p class="o"><b>Observed</b>2 Akzent Export Truck Shipments (Jan–Aug) vs 1,034 Panjiva Exports through Jul 31.</p>
-            <p class="i"><b>AIOS Interpretation</b>Visible export scale materially exceeds captured activity.</p>
-            <p class="v"><b>Discovery Validation</b>Align dates and routes before publishing any percentage.</p></div>
+          <div class="pip-ws" style="border-top:3px solid #10b981;"><div class="pip-ws-title">Logistics Whitespace — Total</div>
+            <div style="font-size:22px;font-weight:800;color:var(--navy);line-height:1.1;margin-top:2px;">2,768 <span style="font-size:10px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;">Visible Uncaptured Reference</span></div>
+            <p class="o"><b>Observed Operational Signal</b>Panjiva shows 2,770 visible Shipments through Jul 31, while the supplied Akzent Jan–Aug summary shows 2 captured Shipments.</p>
+            <p class="i"><b>AIOS Interpretation</b>Akzent’s captured freight footprint is extremely small relative to Pipsa’s visible logistics universe.</p>
+            <p class="v"><b>Discovery Validation</b>Incumbent freight providers · provider allocation · contracts · tender cycles · dedicated capacity · route ownership · procurement ownership · service performance · decision criteria · willingness to shift freight.</p></div>
+          <div class="pip-ws" style="border-top:3px solid var(--navy);"><div class="pip-ws-title">Import Logistics Whitespace</div>
+            <div style="font-size:22px;font-weight:800;color:var(--navy);line-height:1.1;margin-top:2px;">1,736 <span style="font-size:10px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;">Visible Uncaptured Reference</span></div>
+            <p class="o"><b>Observed Operational Signal</b>0 Akzent Import Shipments in the supplied Jan–Aug summary vs 1,736 visible Panjiva Imports through Jul 31.</p>
+            <p class="i"><b>AIOS Interpretation</b>Inbound cross-border freight is the largest visible directional whitespace.</p>
+            <p class="v"><b>Discovery Validation</b>Incumbent provider allocation, contracts, capacity, decision rights, and whether Akzent can expand from its customs position into freight execution.</p></div>
+          <div class="pip-ws" style="border-top:3px solid var(--teal-dim);"><div class="pip-ws-title">Export Logistics Whitespace</div>
+            <div style="font-size:22px;font-weight:800;color:var(--navy);line-height:1.1;margin-top:2px;">1,032 <span style="font-size:10px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;">Visible Uncaptured Reference</span></div>
+            <p class="o"><b>Observed Operational Signal</b>2 Akzent Export Truck Shipments vs 1,034 visible Panjiva Exports · provisional captured / visible reference <strong style="color:#047857;">0.19%</strong>.</p>
+            <p class="i"><b>AIOS Interpretation</b>Export Truck is Akzent’s existing freight foothold, but captured activity remains very small relative to the visible export universe.</p></div>
           <div class="pip-ws" style="background:var(--bg);"><div class="pip-ws-title" style="color:var(--text-muted);">Ocean / Air</div>
             <p class="o"><b>Observed</b>🚢 Ocean: only 4 Current YTD Panjiva Import Shipments. ✈ Air: not visible.</p>
             <p class="i"><b>AIOS Interpretation</b>Not the primary wallet thesis based on supplied data.</p></div>
         </div>
+        <div class="pip-note">Visible Uncaptured References are Shipment counts, <strong style="color:#b45309;">not a statement that these Shipments are commercially winnable</strong>; commercial contestability remains Discovery Validation. Logistics references are provisional — periods not fully aligned.</div>
       </div>
     </div>
 
@@ -12053,15 +12160,17 @@ main {
       <div class="card-header"><span class="accent">19</span> Commercial Positioning</div>
       <div class="card-body">
         <div style="padding:12px 16px;background:rgba(16,185,129,0.05);border-left:3px solid #10b981;border-radius:0 6px 6px 0;margin-bottom:14px;">
-          <div class="pip-eyebrow" style="color:#047857;">Primary Commercial Thesis · CLIENT</div>
-          <div style="font-size:13px;font-weight:700;color:var(--navy);line-height:1.6;margin-top:3px;">Expand from the existing <strong>Export Truck foothold</strong> into cross-border orchestration, inbound coordination, customs visibility, exception management and route-level governance.</div>
+          <div class="pip-eyebrow" style="color:#047857;">Primary Commercial Thesis · CLIENT · AIOS Interpretation</div>
+          <div style="font-size:13px;font-weight:700;color:var(--navy);line-height:1.6;margin-top:3px;">Akzent already participates deeply in Pipsa’s visible customs activity through patents 3468 and 1930, while its captured freight footprint remains minimal. The primary wallet-expansion opportunity is therefore to convert existing customs proximity and operational visibility into a larger share of Pipsa’s cross-border freight network, subject to validation of incumbents, contracts, capacity, decision rights and willingness to change.</div>
+          <div style="font-size:10px;color:var(--text-muted);margin-top:5px;">Customs participation does not by itself give Akzent control of the freight decision.</div>
+          <div class="pip-story"><span class="s" style="border-color:rgba(0,180,216,0.45);">Strong customs position · 90.8%</span><span class="a">→</span><span class="s" style="border-color:rgba(16,185,129,0.5);">Very low freight capture · 0.07% prov.</span><span class="a">→</span><span class="s">Measurable logistics whitespace · 2,768</span><span class="a">→</span><span class="s">Discovery</span><span class="a">→</span><span class="s" style="background:rgba(16,185,129,0.1);border-color:#10b981;color:#047857;">Wallet expansion</span></div>
         </div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px;">
           <div style="padding:12px 14px;border-radius:7px;background:linear-gradient(135deg,rgba(13,43,94,0.07) 0%,rgba(0,180,216,0.08) 100%);border:1px solid rgba(13,43,94,0.3);"><div style="font-size:13px;font-weight:800;color:var(--navy);">Operational Complexity Partner</div></div>
           <div style="padding:12px 14px;background:rgba(0,180,216,0.06);border:1px solid rgba(0,180,216,0.3);border-radius:7px;"><div style="font-size:12.5px;font-weight:800;color:var(--navy);">Customs &amp; Visibility Partner</div></div>
           <div style="padding:12px 14px;background:rgba(0,180,216,0.06);border:1px solid rgba(0,180,216,0.3);border-radius:7px;"><div style="font-size:12.5px;font-weight:800;color:var(--navy);">ILM / Control Tower Partner</div></div>
           <div style="padding:12px 14px;background:var(--surface);border:1px solid var(--border);border-radius:7px;"><div style="font-size:12.5px;font-weight:800;color:var(--navy);">Multimodal Coordination Partner</div><div style="font-size:10.5px;color:var(--text-muted);margin-top:2px;">Where relevant</div></div>
-          <div style="padding:12px 14px;background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.35);border-radius:7px;"><div style="font-size:12.5px;font-weight:800;color:var(--navy);">Wallet Expansion Partner</div><div style="font-size:10.5px;color:var(--text-muted);margin-top:2px;">Because Pipsa is a CLIENT</div></div>
+          <div class="pip-wexp" style="border-radius:7px;"><div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;"><span class="pip-client">CLIENT</span><span style="font-size:15px;font-weight:800;color:var(--navy);">Wallet Expansion Partner</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;line-height:1.55;">Primary role for Pipsa — grow from a 0.07% provisional Logistics Shared Wallet reference alongside a 90.8% Customs Shared Wallet, subject to Discovery Validation.</div></div>
         </div>
         <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;align-items:center;">
           <span class="pip-sublbl" style="color:var(--red);margin:0 6px 0 0;">Do not lead with</span>
@@ -12076,10 +12185,10 @@ main {
       <div class="card-header"><span class="accent">20</span> Expansion Roadmap</div>
       <div class="card-body">
         <div class="pip-phase">
-          <div><b>Phase 1</b><strong>Validate captured footprint</strong>Obtain the two Akzent Shipment records and match them to Panjiva route precision.</div>
-          <div><b>Phase 2</b><strong>Cross-border expansion</strong>Target recurring Colombia, NL Import / Export flows and validate the Nuevo Laredo outbound opportunity.</div>
-          <div><b>Phase 3</b><strong>Customs &amp; visibility</strong>Explore IMMEX milestone visibility, customs escalation and exception governance.</div>
-          <div><b>Phase 4</b><strong>ILM / Control Tower</strong>Only after governance pain, ownership and decision rights are validated — centralize route, partner, customs and KPI visibility.</div>
+          <div><b>Phase 1</b><strong>Validate Logistics Wallet</strong>Confirm the dates and route identity of the 2 Akzent Export Truck Shipments and whether both fall inside the Panjiva Jan–Jul observation window. Map origin, gateway, destination, service, Revenue if available, and GP.</div>
+          <div><b>Phase 2</b><strong>Freight Wallet Expansion</strong>Prioritize discovery around the visible cross-border freight universe — 1,736 Imports · 1,034 Exports · Colombia, Nuevo León · Nuevo Laredo outbound · recurring Core Routes. Use the existing customs relationship as a discovery advantage, not as proof of freight ownership.</div>
+          <div><b>Phase 3</b><strong>Customs &amp; Visibility</strong>IMMEX milestone visibility, customs escalation and exception governance — and target the remaining <strong style="display:inline;font-size:11px;margin:0;">254 other-patent Shipments / 9.2%</strong> Customs Whitespace, subject to commercial validation.</div>
+          <div><b>Phase 4</b><strong>ILM / Control Tower</strong>Position only after governance pain, ownership, decision rights, KPI requirements and willingness to centralize visibility are validated.</div>
         </div>
       </div>
     </div>
@@ -12093,11 +12202,19 @@ main {
             <ul class="pip-list pip-avail" style="margin-top:6px;"><li>Shipment dates, parties, partial facility addresses</li><li>Countries, gateways, modes</li><li>Customs regimes and Customs Agent codes</li><li>Weight, value, HS Codes, goods descriptions and related Shipment fields</li></ul></div>
           <div class="pip-sus"><div class="pip-sus-top"><span class="pip-src ak">Available in Akzent screenshot</span></div>
             <ul class="pip-list pip-avail" style="margin-top:6px;"><li>Jan–Aug 2026 Shipment counts by service / direction</li><li>Profit 2026 · Profit 2025 display (“--”)</li><li>Profit change label · Profit / Shipment</li><li>Status shown: New Client</li></ul></div>
-          <div class="pip-sus"><div class="pip-sus-top"><span class="pip-subj">Missing for exact CLIENT Wallet</span></div>
-            <ul class="pip-list pip-miss" style="margin-top:6px;"><li>Akzent Shipment dates</li><li>Akzent route fields</li><li>Revenue</li><li>Route-level GP</li></ul></div>
+          <div class="pip-sus"><div class="pip-sus-top"><span class="pip-src ak">Available for Logistics Shared Wallet reference</span></div>
+            <ul class="pip-list pip-avail" style="margin-top:6px;"><li>Akzent captured Shipment count</li><li>Akzent direction · Akzent mode</li><li>Panjiva visible Shipment universe</li><li>Panjiva Import / Export universe</li><li>Akzent Profit · Akzent GP / Shipment</li></ul></div>
+        </div>
+        <div class="grid-3" style="gap:14px;margin-top:14px;">
+          <div class="pip-sus"><div class="pip-sus-top"><span class="pip-subj">Missing for exact matched-period Penetration</span></div>
+            <ul class="pip-list pip-miss" style="margin-top:6px;"><li>Akzent Shipment dates</li></ul></div>
+          <div class="pip-sus"><div class="pip-sus-top"><span class="pip-subj">Missing for route-level Wallet</span></div>
+            <ul class="pip-list pip-miss" style="margin-top:6px;"><li>Akzent origin facility</li><li>Akzent gateway</li><li>Akzent destination facility</li></ul></div>
+          <div class="pip-sus"><div class="pip-sus-top"><span class="pip-subj">Missing for financial Wallet</span></div>
+            <ul class="pip-list pip-miss" style="margin-top:6px;"><li>Revenue</li><li>Route-level GP</li></ul></div>
         </div>
         <div style="margin-top:14px;padding:12px 16px;border-top:1px solid var(--border);background:var(--bg);border-radius:6px;">
-          <span style="font-size:10.5px;color:var(--text-muted);line-height:1.7;"><strong style="color:var(--navy);">Every figure is AIOS-finalized</strong> and rendered without recalculation, estimation or annualization. Panjiva and Akzent periods are kept separate. <strong style="color:#b45309;">Exact Coverage, Penetration, Margin and Core Route capture are not published</strong> until Akzent Shipment-level data is supplied. Customs Share is patent-based and never presented as freight Penetration.</span>
+          <span style="font-size:10.5px;color:var(--text-muted);line-height:1.7;"><strong style="color:var(--navy);">Every figure is AIOS-finalized</strong> and rendered without recalculation, estimation or annualization. Panjiva and Akzent periods are kept separate. <strong style="color:var(--navy);">Logistics Shared Wallet reference is available. Exact matched-period Shipment Penetration and route-level Wallet remain pending data alignment.</strong> Margin is not calculable without Revenue. Customs Share is patent-based and never presented as freight Penetration.</span>
         </div>
       </div>
     </div>
@@ -16478,7 +16595,7 @@ main {
             <tr onclick="showViewById('view-pipsa')" style="cursor:pointer;">
               <td><strong>Corporación Pipsa</strong> <span style="font-size:10px;font-weight:600;color:#10b981;background:rgba(16,185,129,0.1);padding:1px 5px;border-radius:3px;margin-left:4px;">CLIENT</span></td>
               <td><span class="cls-pill aaa">AAA</span></td>
-              <td style="color:var(--text-muted);" title="Corporación Pipsa · Relationship CLIENT · AIOS Classification AAA · Operational Complexity High · Panjiva Current YTD 2026-01-02 to 2026-07-31 · 2,770 visible Shipments (1,736 Imports / 1,034 Exports) · Truck 99.9% · Import Core Routes 2 = 95.9% · Export Core Routes 3 = 82.8% · Akzent captured Jan–Aug 2026: 2 Export Truck Shipments, GP $341.17 · Customs Share (Akzent patents 3468/1930) 90.8% · Exact freight Penetration not calculable — periods do not match">Lead recycling / refined lead &middot; 2,770 Current YTD Shipments &middot; Truck 99.9% &middot; Colombia NL &middot; Customs Share 90.8% &middot; Captured 2 Export Truck (Jan–Aug)</td>
+              <td style="color:var(--text-muted);" title="Corporación Pipsa · Relationship CLIENT · AIOS Classification AAA · Operational Complexity High · Panjiva Current YTD 2026-01-02 to 2026-07-31 · 2,770 visible Shipments (1,736 Imports / 1,034 Exports) · Truck 99.9% · Import Core Routes 2 = 95.9% · Export Core Routes 3 = 82.8% · Akzent captured Jan–Aug 2026: 2 Export Truck Shipments, GP $341.17 · Logistics Shared Wallet 0.07% provisional reference (2 vs 2,770 · Imports 0.00% · Exports 0.19% · periods not fully aligned) · Customs Shared Wallet (Akzent patents 3468/1930) 90.8% — separate wallets">Lead recycling / refined lead &middot; 2,770 Current YTD Shipments &middot; Truck 99.9% &middot; Logistics Shared Wallet 0.07% (provisional) &middot; Customs Shared Wallet 90.8% &middot; Captured GP $341.17</td>
               <td style="color:var(--text-light);" title="No AIOS Cross-Border rating supplied · Truck = 2,766 of 2,770 Current YTD Shipments (99.9%) · Colombia, NL 1,732 Imports / 784 Exports · Nuevo Laredo 250 Exports">—</td>
               <td style="color:var(--text-light);" title="No AIOS Ocean rating supplied · Maritime = 4 Current YTD Import Shipments via Manzanillo">—</td>
               <td style="color:var(--text-light);" title="No AIOS Air rating supplied · Air not visible">—</td>
@@ -77926,7 +78043,7 @@ const ACCOUNTS = [
   { id:'view-termolita', name:'Termolita',                 sub:'Industrial Minerals / Expanded Perlite Exporter · Santa Catarina, Nuevo León', rel:'LEAD',   cls:'AA',   clsPill:'aa'  },
   { id:'view-vamasa',    name:'Vamasa S.A. de C.V.',       sub:'Dental / Medical-Dental Supplies · Specialized Healthcare Distribution · Mexico', rel:'LEAD',   cls:'AA',   clsPill:'aa'  },
   { id:'view-inx',       name:'INX International Mexico',   sub:'Industrial Chemicals / Printing Inks / Coatings · Cross-Border Supply Chain', rel:'LEAD',   cls:'AA',   clsPill:'aa'  },
-  { id:'view-pipsa',     name:'Corporación Pipsa',         sub:'Corporaci&oacute;n Pipsa S.A. de C.V. &middot; CLIENT &middot; AIOS Classification AAA &middot; Operational Complexity High &middot; Metals recycling / lead processing &middot; Garc&iacute;a, Nuevo Le&oacute;n &middot; Panjiva Current YTD 2026-01-02 to 2026-07-31 2,770 Shipments &middot; 1,736 Imports &middot; 1,034 Exports &middot; Truck 99.9% &middot; Import Core Routes 2 to 95.9% &middot; Export Core Routes 3 to 82.8% &middot; Colombia NL &middot; Nuevo Laredo &middot; Manzanillo &middot; United States &middot; China &middot; Lead Metal Trading LLC &middot; Corpipsa LLC &middot; Glencore Ltd. &middot; IMMEX &middot; waste lead-acid batteries &middot; refined lead &middot; Akzent captured 2 Export Truck Shipments Jan-Aug 2026 &middot; GP $341.17 &middot; Customs Shared Wallet &middot; Customs Share 90.8% &middot; patents 3468 1930 3541 &middot; Wallet Data Alignment &middot; Cross-Border &middot; Customs &amp; Visibility &middot; ILM / Control Tower', rel:'CLIENT', cls:'AAA', clsPill:'aaa' },
+  { id:'view-pipsa',     name:'Corporación Pipsa',         sub:'Corporaci&oacute;n Pipsa S.A. de C.V. &middot; CLIENT &middot; AIOS Classification AAA &middot; Operational Complexity High &middot; Metals recycling / lead processing &middot; Garc&iacute;a, Nuevo Le&oacute;n &middot; Panjiva Current YTD 2026-01-02 to 2026-07-31 2,770 Shipments &middot; 1,736 Imports &middot; 1,034 Exports &middot; Truck 99.9% &middot; Import Core Routes 2 to 95.9% &middot; Export Core Routes 3 to 82.8% &middot; Colombia NL &middot; Nuevo Laredo &middot; Manzanillo &middot; United States &middot; China &middot; Lead Metal Trading LLC &middot; Corpipsa LLC &middot; Glencore Ltd. &middot; IMMEX &middot; waste lead-acid batteries &middot; refined lead &middot; Akzent captured 2 Export Truck Shipments Jan-Aug 2026 &middot; GP $341.17 &middot; Logistics Shared Wallet 0.07% provisional reference &middot; Visible Uncaptured Reference 2,768 &middot; Customs Shared Wallet &middot; Customs Share 90.8% &middot; patents 3468 1930 3541 &middot; Cross-Border &middot; Customs &amp; Visibility &middot; ILM / Control Tower', rel:'CLIENT', cls:'AAA', clsPill:'aaa' },
   { id:'view-lodi',      name:'Industrias Automotrices Lodi', sub:'Automotive Components / Industrial Manufacturing · Cross-Border Multimodal Operation', rel:'LEAD',   cls:'AA',   clsPill:'aa'  },
   { id:'view-organizacion-industrial-vega', name:'Organización Industrial Vega', sub:'Industrial Manufacturing · Battery Components · Plastics · Monterrey, Nuevo León', rel:'LEAD',   cls:'AA',   clsPill:'aa'  },
   { id:'view-wbtm',      name:'WBTM S. de R.L. de C.V.',   sub:'Automotive Seating / Interiors / Components · IMMEX · Korea–Mexico–USA', rel:'LEAD',   cls:'AAA',  clsPill:'aaa' },
