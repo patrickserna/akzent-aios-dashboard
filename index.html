@@ -2151,6 +2151,24 @@ main {
 #view-pipsa .pip-phase > div:nth-child(4) { border-top-color:var(--teal); }
 #view-pipsa .pip-phase b { display:block; font-size:9px; font-weight:800; letter-spacing:1.1px; text-transform:uppercase; color:var(--teal-dim); }
 #view-pipsa .pip-phase strong { display:block; font-size:13px; color:var(--navy); margin:2px 0 4px; }
+/* CORPORACIÓN PIPSA — Other Patents × Gateway drill-down (#view-pipsa only). */
+#view-pipsa .pip-pgw { margin-top:18px; padding:14px 16px; background:rgba(245,158,11,0.03); border:1px solid rgba(245,158,11,0.35); border-top:3px solid #f59e0b; border-radius:8px; }
+#view-pipsa .pip-pgw-grid { display:grid; grid-template-columns:minmax(0,1.6fr) minmax(0,1fr); gap:12px; margin-top:12px; }
+#view-pipsa .pip-pgw-grid.even { grid-template-columns:1fr 1fr; margin-top:4px; }
+#view-pipsa .pip-pgw-card { padding:12px 14px; background:var(--surface); border:1px solid var(--border); border-radius:7px; }
+#view-pipsa .pip-pgw-card.main { border:1.5px solid rgba(245,158,11,0.55); box-shadow:0 1px 0 rgba(245,158,11,0.2); }
+#view-pipsa .pip-pgw-kpis { display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:8px; margin-top:10px; }
+#view-pipsa .pip-pgw-kpis.sm { grid-template-columns:1fr; }
+#view-pipsa .pip-pgw-kpis b { display:block; font-size:30px; font-weight:800; color:#b45309; line-height:1.05; }
+#view-pipsa .pip-pgw-kpis.sm b { font-size:22px; }
+#view-pipsa .pip-pgw-kpis div + div b { font-size:22px; color:var(--navy); }
+#view-pipsa .pip-pgw-kpis span { font-size:9px; font-weight:700; letter-spacing:0.4px; text-transform:uppercase; color:var(--text-muted); }
+#view-pipsa .pip-pgw-h { font-size:12px; font-weight:800; color:var(--navy); }
+#view-pipsa .pip-pgw-cols { font-size:9px; font-weight:700; letter-spacing:0.4px; text-transform:uppercase; color:var(--text-light); margin:4px 0 8px; }
+#view-pipsa .pip-pgw-pend { padding:10px 12px; background:repeating-linear-gradient(135deg,rgba(245,158,11,0.05) 0,rgba(245,158,11,0.05) 6px,transparent 6px,transparent 12px); border:1px dashed rgba(245,158,11,0.55); border-radius:6px; }
+#view-pipsa .pip-pgw-pend .t { font-size:11.5px; font-weight:800; color:#92400e; margin-top:6px; line-height:1.4; }
+#view-pipsa .pip-pgw-pend .d { font-size:10px; color:var(--text-muted); margin-top:3px; line-height:1.5; }
+@media (max-width: 900px) { #view-pipsa .pip-pgw-grid, #view-pipsa .pip-pgw-grid.even { grid-template-columns:1fr; } }
 /* CORPORACIÓN PIPSA — Logistics Shared Wallet (provisional reference) + Two Wallets comparison (#view-pipsa only). */
 #view-pipsa .pip-prov { display:inline-block; font-size:8.5px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; color:#92400e; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.45); padding:1px 6px; border-radius:3px; white-space:nowrap; cursor:help; vertical-align:2px; }
 #view-pipsa .pip-micro-prov { font-size:9.5px; color:var(--text-light); line-height:1.5; margin-top:6px; }
@@ -2434,6 +2452,9 @@ main {
   #view-pipsa .pip-cw-panel, #view-pipsa .pip-ws, #view-pipsa .pip-phase > div { break-inside: avoid; }
   #view-pipsa .pip-units svg, #view-pipsa .pip-lwbar, #view-pipsa .pip-lwbar > div { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
   #view-pipsa .pip-lw-main, #view-pipsa .pip-econ, #view-pipsa .pip-dir, #view-pipsa .pip-vs-p, #view-pipsa .pip-trio > div { break-inside: avoid; }
+  #view-pipsa .pip-pgw-card, #view-pipsa .pip-pgw .pip-ws { break-inside: avoid; }
+  #view-pipsa .pip-pgw-grid { grid-template-columns:1.6fr 1fr !important; }
+  #view-pipsa .pip-pgw-grid.even { grid-template-columns:1fr 1fr !important; }
 
   /* ACCUDYN DE MEXICO historical appendix — complete but visually secondary in print.
      Scoped to #view-accudyn .hist-appendix so no other account is affected. */
@@ -12078,6 +12099,56 @@ main {
 <tr><td><span class="pip-mono">1930</span> <span class="pip-src ak">Akzent patent</span></td><td class="num"><strong>25</strong></td><td class="num">2.4%</td><td style="width:26%;"><div class="pip-bar"><div style="width:3.0%;background:var(--teal-dim);"></div></div></td></tr>
 </tbody></table></div></div></div>
         </div>
+        <!-- 15b OTHER PATENTS — GATEWAY / CUSTOMS OFFICE BREAKDOWN -->
+        <div class="pip-pgw">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap;">
+            <div class="pip-sublbl" style="margin:0;color:#b45309;">Other Patents — Gateway / Customs Office Breakdown</div>
+            <div style="font-size:10px;color:var(--text-muted);">Drill-down of the <strong style="color:#b45309;">254 Shipments / 9.2%</strong> Current YTD Customs Whitespace · not a new Wallet denominator</div>
+          </div>
+          <div style="font-size:11.5px;font-weight:700;color:var(--navy);margin-top:6px;">Through which customs gateways / customs offices are the Shipments handled by other patents moving?</div>
+
+          <div class="pip-pgw-grid">
+            <div class="pip-pgw-card main">
+              <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;"><span class="pip-mono" style="font-size:15px;">PATENT 3541</span><span class="pip-src ai">Other patent</span><span style="font-size:10px;color:var(--text-muted);">250 of 254 Current YTD other-patent Shipments</span></div>
+              <div class="pip-pgw-kpis">
+                <div><b>250</b><span>Current YTD Shipments with other patent</span></div>
+                <div><b>67</b><span>Imports</span></div>
+                <div><b>183</b><span>Exports</span></div>
+              </div>
+              <div class="pip-sublbl" style="margin:12px 0 4px;">Gateway / customs office distribution</div>
+              <div class="pip-pgw-pend"><span class="pip-pending">Pending AIOS cross-tab</span><div class="t">Patent × Gateway relationship requires source-level Panjiva Shipment data.</div><div class="d">Gateway values are not populated. Module 08 gateway totals and patent totals are separate aggregates, and matching totals are <strong>never</strong> used to assign a gateway to a patent.</div></div>
+            </div>
+            <div class="pip-pgw-card">
+              <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;"><span class="pip-mono" style="font-size:13px;">PATENT 3954</span><span class="pip-src ai">Other patent</span></div>
+              <div class="pip-pgw-kpis sm"><div><b>4</b><span>Current YTD Import Shipments</span></div></div>
+              <div class="pip-sublbl" style="margin:10px 0 4px;">Gateway / customs office</div>
+              <div class="pip-pgw-pend"><span class="pip-pending">Pending AIOS cross-tab</span><div class="t">Patent × Gateway relationship requires source-level Panjiva Shipment data.</div><div class="d">No gateway is shown until AIOS supplies it explicitly.</div></div>
+            </div>
+          </div>
+
+          <div class="pip-sublbl" style="margin-top:14px;">Akzent patents 3468 / 1930 vs other patents · by gateway</div>
+          <div class="pip-pgw-grid even">
+            <div class="pip-pgw-card"><div class="pip-pgw-h">Import Customs Wallet by Gateway</div>
+              <div class="pip-pgw-cols">Gateway / Customs Office · Akzent Patents 3468/1930 · Other Patents · Other-Patent Share</div>
+              <div class="pip-pgw-pend"><span class="pip-pending">Pending AIOS cross-tab</span><div class="t">Patent × Gateway relationship requires source-level Panjiva Shipment data.</div><div class="d">Supplied direction totals only: Akzent patents 1,665 · other patents 71 (4.1%).</div></div></div>
+            <div class="pip-pgw-card"><div class="pip-pgw-h">Export Customs Wallet by Gateway</div>
+              <div class="pip-pgw-cols">Gateway / Customs Office · Akzent Patents 3468/1930 · Other Patents · Other-Patent Share</div>
+              <div class="pip-pgw-pend"><span class="pip-pending">Pending AIOS cross-tab</span><div class="t">Patent × Gateway relationship requires source-level Panjiva Shipment data.</div><div class="d">Supplied direction totals only: Akzent patents 851 · other patents 183 (17.7%).</div></div></div>
+          </div>
+
+          <div class="grid-3" style="gap:10px;margin-top:14px;">
+            <div class="pip-ws" style="border-top:3px solid var(--navy);"><div class="pip-ws-title" style="font-size:11px;letter-spacing:0.8px;text-transform:uppercase;">Observed Operational Signal</div>
+              <p>Patent 3541 accounts for 250 of 254 Current YTD other-patent Shipments (67 Imports · 183 Exports); Patent 3954 accounts for 4 Imports.</p>
+              <p><strong style="color:#b45309;">Where</strong> these Shipments cross is not yet established — the Patent × Gateway cross-tab has not been supplied.</p></div>
+            <div class="pip-ws" style="border-top:3px solid var(--teal-dim);"><div class="pip-ws-title" style="font-size:11px;letter-spacing:0.8px;text-transform:uppercase;">AIOS Interpretation</div>
+              <p><span class="pip-pending" style="font-size:10px;">Pending finalized cross-tab</span></p>
+              <p>Neither interpretation is selected yet: whether the remaining Customs Whitespace overlaps an existing Akzent customs geography, or is concentrated outside the principal Akzent patent footprint.</p></div>
+            <div class="pip-ws" style="border-top:3px solid #f59e0b;"><div class="pip-ws-title" style="font-size:11px;letter-spacing:0.8px;text-transform:uppercase;">Discovery Validation</div>
+              <ol class="pip-qlist" style="font-size:10.5px;line-height:1.5;padding-left:18px;"><li>Why is another patent assigned at this gateway?</li><li>Is patent allocation gateway-specific?</li><li>Is it Trading Partner-specific?</li><li>Is it Import / Export-specific?</li><li>Is there a contractual agency assignment?</li><li>Is the allocation driven by IMMEX structure?</li><li>Is it contingency / backup coverage?</li><li>Is it related to customs specialization?</li><li>Is it related to operating hours or capacity?</li><li>Is it incumbent-provider allocation?</li><li>Who controls the customs-agent decision?</li><li>Can additional Shipments be migrated to patents 3468 / 1930?</li></ol></div>
+          </div>
+          <div class="pip-note"><strong>Governance:</strong> once supplied, Panjiva can establish <strong>where</strong> other patents are used. It cannot establish <strong>why</strong> Pipsa allocated Shipments to another patent — that remains Discovery Validation. The Customs Shared Wallet (Module 04) and Logistics Shared Wallet (Module 03) are unchanged.</div>
+        </div>
+
         <div class="pip-note-navy"><strong style="color:var(--navy);">Observed Signal:</strong> IMMEX-related regimes dominate both directions. Customs Agent ownership (Akzent patents 3468 / 1930) is the user-confirmed mapping used for the Customs Shared Wallet in Module 04.</div>
         <div class="pip-note">Panjiva provides Customs Agent codes, not validated company names — <strong style="color:#b45309;">AIOS does not invent the companies behind other patent codes</strong>.</div>
       </div>
