@@ -3286,17 +3286,279 @@ main {
   #view-borgwarner .bw-route-table th { position:static; }
   #view-borgwarner .bw-route-table { min-width:0; font-size:8.5px; }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   AIOS · COLLAPSIBLE SIDEBAR + EXPORT CONTROLS
+   Presentation only. Expanded (220px) remains the default; the
+   collapsed rail is opt-in and persisted in localStorage.
+═══════════════════════════════════════════════════════════════ */
+:root { --aios-rail-w: 60px; }
+html.aios-sb-collapsed { --sidebar-w: var(--aios-rail-w); }
+.sidebar { overflow-x: hidden; }
+html.aios-sb-ready .sidebar { transition: width 0.2s ease, min-width 0.2s ease; }
+@media (prefers-reduced-motion: reduce) { html.aios-sb-ready .sidebar { transition: none; } }
+
+.sidebar-logo { position: relative; }
+.aios-logo-glyph { display: none; }
+.aios-sb-toggle {
+  position: absolute;
+  top: 18px;
+  right: 12px;
+  width: 26px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px;
+  color: rgba(255,255,255,0.55);
+  cursor: pointer;
+  transition: all 0.15s;
+  padding: 0;
+}
+.aios-sb-toggle:hover { background: rgba(255,255,255,0.12); border-color: rgba(0,180,216,0.55); color: var(--teal); }
+.aios-sb-toggle svg { transition: transform 0.2s ease; }
+.aios-sb-toggle:focus-visible,
+#cmd-trigger:focus-visible,
+.sidebar .nav-item:focus-visible,
+.aios-sb-foot-btn:focus-visible { outline: 2px solid var(--teal); outline-offset: -2px; }
+
+/* Account initials — visible only in the collapsed rail */
+.aios-nav-abbr { display: none; }
+
+/* Global export — persistent sidebar footer, away from account-level actions */
+.aios-sb-foot {
+  position: sticky;
+  bottom: 0;
+  margin-top: auto;
+  padding: 10px 12px 12px;
+  background: var(--navy);
+  border-top: 1px solid rgba(255,255,255,0.07);
+}
+.aios-sb-foot-btn {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  padding: 7px 10px;
+  background: none;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 6px;
+  color: rgba(255,255,255,0.6);
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.aios-sb-foot-btn:hover { border-color: var(--teal); color: var(--teal); background: rgba(0,180,216,0.06); }
+.aios-sb-foot-btn svg { flex-shrink: 0; }
+.aios-sb-foot-text { display: flex; flex-direction: column; min-width: 0; }
+.aios-sb-foot-title { font-size: 11px; font-weight: 600; white-space: nowrap; }
+.aios-sb-foot-sub { font-size: 9px; letter-spacing: 0.3px; color: rgba(255,255,255,0.32); white-space: nowrap; }
+
+/* ── Collapsed rail ── */
+html.aios-sb-collapsed .sidebar-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 0 12px;
+}
+html.aios-sb-collapsed .logo-mark,
+html.aios-sb-collapsed .logo-sub { display: none; }
+html.aios-sb-collapsed .aios-logo-glyph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  border: 1px solid rgba(0,180,216,0.45);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1;
+}
+html.aios-sb-collapsed .aios-sb-toggle { position: static; }
+html.aios-sb-collapsed .aios-sb-toggle svg { transform: rotate(180deg); }
+
+html.aios-sb-collapsed #cmd-trigger {
+  width: 36px;
+  margin: 12px auto 0;
+  padding: 8px 0;
+  justify-content: center;
+}
+html.aios-sb-collapsed #cmd-trigger-text,
+html.aios-sb-collapsed #cmd-trigger-kbd { display: none; }
+
+html.aios-sb-collapsed .nav-section { padding: 10px 0 2px; }
+html.aios-sb-collapsed .nav-label,
+html.aios-sb-collapsed .aios-nav-recents { display: none; }
+html.aios-sb-collapsed .sidebar .nav-item {
+  justify-content: center;
+  gap: 0;
+  padding: 6px 0;
+}
+html.aios-sb-collapsed .sidebar .nav-item > .aios-nav-text,
+html.aios-sb-collapsed .sidebar .nav-item > .recent-cls { display: none; }
+html.aios-sb-collapsed .sidebar .nav-item > .aios-nav-icon { font-size: 14px; line-height: 20px; }
+html.aios-sb-collapsed .sidebar .nav-item.aios-nav-account > .aios-nav-icon { display: none; }
+html.aios-sb-collapsed .sidebar .nav-item.aios-nav-account > .aios-nav-abbr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 32px;
+  height: 22px;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 2px solid rgba(255,255,255,0.25);
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: rgba(255,255,255,0.72);
+}
+.aios-nav-abbr.aaa { border-bottom-color: #ff6b6b !important; }
+.aios-nav-abbr.aa  { border-bottom-color: var(--teal) !important; }
+.aios-nav-abbr.aap { border-bottom-color: #5bb8d4 !important; }
+.aios-nav-abbr.client::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 0 1.5px var(--navy);
+}
+html.aios-sb-collapsed .sidebar .nav-item.active > .aios-nav-abbr {
+  color: #fff;
+  background: rgba(0,180,216,0.18);
+  border-color: rgba(0,180,216,0.6);
+}
+html.aios-sb-collapsed .aios-sb-foot { padding: 10px 0 12px; display: flex; justify-content: center; }
+html.aios-sb-collapsed .aios-sb-foot-btn { width: 36px; padding: 8px 0; justify-content: center; }
+html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
+
+/* Rail tooltip — fixed so the scrolling sidebar never clips it */
+#aios-sb-tip {
+  position: fixed;
+  z-index: 10000;
+  max-width: 280px;
+  padding: 6px 10px;
+  background: #0a1f45;
+  color: #fff;
+  border: 1px solid rgba(0,180,216,0.35);
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(10,18,35,0.28);
+  font-size: 11.5px;
+  font-weight: 500;
+  line-height: 1.4;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-2px, -50%);
+  transition: opacity 0.12s, transform 0.12s;
+}
+#aios-sb-tip.show { opacity: 1; transform: translate(0, -50%); }
+#aios-sb-tip .aios-tip-meta { display: block; font-size: 9.5px; font-weight: 700; letter-spacing: 0.6px; color: var(--teal); margin-top: 2px; }
+
+/* Account-level export — sits with the existing print action in each Target Detail View */
+.aios-export-btn { display: inline-flex; align-items: center; gap: 6px; font-family: inherit; white-space: nowrap; }
+.aios-export-btn svg { flex-shrink: 0; }
+.aios-export-btn[aria-busy="true"] { opacity: 0.6; cursor: progress; }
+@media (max-width: 700px) { .aios-export-btn { white-space: normal; text-align: left; } }
+
+/* Full-export confirmation */
+.aios-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10001;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 16vh 16px 16px;
+  background: rgba(10,18,35,0.62);
+  backdrop-filter: blur(3px);
+}
+.aios-modal-box {
+  width: 440px;
+  max-width: 100%;
+  background: var(--surface);
+  border-radius: 10px;
+  border-top: 3px solid var(--red);
+  box-shadow: 0 24px 64px rgba(0,0,0,0.28);
+  overflow: hidden;
+}
+.aios-modal-body { padding: 20px 22px 16px; }
+.aios-modal-eyebrow { font-size: 9px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: var(--red); margin-bottom: 6px; }
+.aios-modal-title { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+.aios-modal-text { font-size: 12.5px; line-height: 1.6; color: var(--text-muted); }
+.aios-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 12px 22px;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+.aios-btn {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.aios-btn-secondary { background: var(--surface); border: 1px solid var(--border); color: var(--navy); }
+.aios-btn-secondary:hover { border-color: var(--navy); }
+.aios-btn-primary { background: var(--navy); border: 1px solid var(--navy); color: #fff; }
+.aios-btn-primary:hover { background: var(--navy-light); }
+.aios-btn:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+
+.aios-toast {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 10002;
+  max-width: min(360px, calc(100vw - 32px));
+  padding: 10px 14px;
+  background: var(--navy);
+  color: #fff;
+  border-left: 3px solid var(--red);
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(10,18,35,0.3);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+@media print {
+  .aios-sb-toggle, .aios-sb-foot, .aios-export-btn, #aios-sb-tip, .aios-modal, .aios-toast { display: none !important; }
+}
 </style>
+<script>
+/* AIOS · Sidebar state — applied before first paint so a collapsed rail never flashes open. */
+(function () {
+  try { if (window.localStorage && localStorage.getItem('aios-sidebar-collapsed') === '1') document.documentElement.classList.add('aios-sb-collapsed'); } catch (e) {}
+})();
+</script>
 </head>
 <body>
 
 <!-- ═══════════════════════════════════════════
      SIDEBAR
 ════════════════════════════════════════════ -->
-<nav class="sidebar">
+<nav class="sidebar" id="aios-sidebar" aria-label="Akzent Intelligence OS navigation">
   <div class="sidebar-logo">
     <div class="logo-mark">akzent</div>
     <div class="logo-sub">Intelligence OS</div>
+    <div class="aios-logo-glyph" aria-hidden="true">a</div>
+    <button type="button" id="aios-sb-toggle" class="aios-sb-toggle" onclick="aiosToggleSidebar()" aria-label="Collapse sidebar" aria-controls="aios-sidebar" aria-expanded="true" title="Collapse sidebar">
+      <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false"><path d="M10 3.5 5.5 8 10 12.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
   </div>
 
   <button id="cmd-trigger" onclick="openPalette()">
@@ -3617,6 +3879,13 @@ main {
     <div class="nav-item" onclick="showView('view-outreach', this)">
       <span>◑</span> Outreach Library
     </div>
+  </div>
+
+  <div class="aios-sb-foot">
+    <button type="button" id="aios-export-full" class="aios-sb-foot-btn" onclick="aiosExportFullDashboard()" aria-label="Export full Akzent Intelligence OS" data-aios-tip="Export Full AIOS · internal copy, all accounts">
+      <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true" focusable="false"><path d="M8 2.5v7.2M4.8 6.6 8 9.8l3.2-3.2M3 12.8h10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="aios-sb-foot-text"><span class="aios-sb-foot-title">Export Full AIOS</span><span class="aios-sb-foot-sub">Internal · all accounts</span></span>
+    </button>
   </div>
 </nav>
 
@@ -79821,6 +80090,600 @@ document.addEventListener('keydown', function(e) {
     </div>
   </div>
 </div>
+
+<script>
+/* ═══════════════════════════════════════════════════════════════
+   AIOS · COLLAPSIBLE SIDEBAR + HTML EXPORT
+   Presentation / deployment only — nothing here reads, derives or
+   alters account intelligence.
+
+   Account export is an information-isolation boundary: the report is
+   BUILT from an allowlist (one pristine Target Detail View, the style
+   rules that view can use, and generic report helpers). It is never
+   produced by hiding the rest of the application.
+═══════════════════════════════════════════════════════════════ */
+
+/* Pristine source snapshot, taken synchronously as parsing ends and
+   before any DOMContentLoaded rendering mutates the document. Runtime-only
+   state (rail class, restored-view hints) is lifted out first so neither
+   export can inherit it by accident. */
+var AIOS_BOOT = (function () {
+  var root = document.documentElement;
+  var boot = {
+    view: root.getAttribute('data-aios-initial-view'),
+    sidebar: root.getAttribute('data-aios-initial-sidebar'),
+    source: ''
+  };
+  root.removeAttribute('data-aios-initial-view');
+  root.removeAttribute('data-aios-initial-sidebar');
+  var collapsed = root.classList.contains('aios-sb-collapsed');
+  root.classList.remove('aios-sb-collapsed');
+  if (root.getAttribute('class') === '') root.removeAttribute('class');
+  try { boot.source = '<!DOCTYPE html>\n' + root.outerHTML; } catch (e) { boot.source = ''; }
+  if (collapsed) root.classList.add('aios-sb-collapsed');
+  return boot;
+})();
+
+var AIOS_SB_KEY = 'aios-sidebar-collapsed';
+var AIOS_DOCTYPE_HTML = '<!DOCTYPE html>\n<html';
+
+function aiosAccountById(id) {
+  for (var i = 0; i < ACCOUNTS.length; i++) if (ACCOUNTS[i].id === id) return ACCOUNTS[i];
+  return null;
+}
+function aiosDecodeEntities(s) {
+  var t = document.createElement('textarea');
+  t.innerHTML = String(s);
+  return t.value;
+}
+function aiosEscapeHtml(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+function aiosActiveViewId() {
+  var v = document.querySelector('#main-scroll > .view.active');
+  return v ? v.id : null;
+}
+function aiosToast(msg) {
+  var t = document.createElement('div');
+  t.className = 'aios-toast';
+  t.setAttribute('role', 'alert');
+  t.textContent = msg;
+  document.body.appendChild(t);
+  setTimeout(function () { if (t.parentNode) t.parentNode.removeChild(t); }, 4200);
+}
+
+/* ── SIDEBAR RAIL ── */
+function aiosSidebarPref() {
+  try {
+    var v = window.localStorage ? localStorage.getItem(AIOS_SB_KEY) : null;
+    return v === '1' ? true : (v === '0' ? false : null);
+  } catch (e) { return null; }
+}
+function aiosIsSidebarCollapsed() {
+  return document.documentElement.classList.contains('aios-sb-collapsed');
+}
+function aiosApplySidebarState(collapsed) {
+  document.documentElement.classList.toggle('aios-sb-collapsed', collapsed);
+  var t = document.getElementById('aios-sb-toggle');
+  if (t) {
+    var label = collapsed ? 'Expand sidebar' : 'Collapse sidebar';
+    t.setAttribute('aria-label', label);
+    t.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+    t.setAttribute('data-aios-tip', label);
+    if (collapsed) t.removeAttribute('title'); else t.setAttribute('title', label);
+  }
+  aiosHideTip();
+}
+function aiosToggleSidebar() {
+  var next = !aiosIsSidebarCollapsed();
+  aiosApplySidebarState(next);
+  try { localStorage.setItem(AIOS_SB_KEY, next ? '1' : '0'); } catch (e) {}
+}
+
+/* Compact rail marker built from the display name (presentation only). */
+function aiosInitials(name) {
+  var STOP = { de:1, del:1, la:1, las:1, los:1, el:1, y:1, and:1, the:1, of:1, sa:1, cv:1, rl:1,
+               s:1, a:1, c:1, v:1, r:1, l:1, inc:1, llc:1, ltd:1, co:1 };
+  var words = String(name).normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/\([^)]*\)/g, ' ').split(/[^A-Za-z0-9]+/)
+    .filter(function (w) { return w && !STOP[w.toLowerCase()]; });
+  if (words.length > 1) {
+    var trimmed = words.filter(function (w) { return w.toLowerCase() !== 'mexico'; });
+    if (trimmed.length) words = trimmed;
+  }
+  if (!words.length) return '•';
+  return (words.length > 1 ? words[0].charAt(0) + words[1].charAt(0) : words[0].slice(0, 2)).toUpperCase();
+}
+
+function aiosDecorateSidebar() {
+  var sidebar = document.getElementById('aios-sidebar');
+  if (!sidebar) return;
+
+  Array.prototype.forEach.call(sidebar.querySelectorAll('.nav-item'), function (item) {
+    if (item.getAttribute('data-aios-tip')) return;
+    /* Wrap bare label text so it can be hidden in the rail. */
+    Array.prototype.slice.call(item.childNodes).forEach(function (n) {
+      if (n.nodeType === 3 && n.nodeValue.trim()) {
+        var s = document.createElement('span');
+        s.className = 'aios-nav-text';
+        s.textContent = n.nodeValue.trim();
+        item.replaceChild(s, n);
+      }
+    });
+    var first = item.firstElementChild;
+    Array.prototype.forEach.call(item.children, function (el) {
+      if (el.tagName !== 'SPAN' || el.classList.contains('recent-cls') || el.classList.contains('aios-nav-text')) return;
+      if (el === first && el.textContent.trim().length <= 2) el.classList.add('aios-nav-icon');
+      else el.classList.add('aios-nav-text');
+    });
+
+    var label = Array.prototype.map.call(item.querySelectorAll('.aios-nav-text'), function (s) {
+      return s.textContent.trim();
+    }).join(' ').trim();
+    var pills = Array.prototype.map.call(item.querySelectorAll('.recent-cls'), function (p) {
+      return p.textContent.trim();
+    }).filter(Boolean);
+
+    var m = (item.getAttribute('onclick') || '').match(/showView(?:ById)?\('([^']+)'/);
+    var acc = m ? aiosAccountById(m[1]) : null;
+    if (acc) {
+      item.classList.add('aios-nav-account');
+      var clsPill = item.querySelector('.recent-cls.aaa, .recent-cls.aa, .recent-cls.aap');
+      var abbr = document.createElement('span');
+      abbr.className = 'aios-nav-abbr ' + (clsPill ? clsPill.classList[1] : (acc.clsPill || ''));
+      if (pills.indexOf('CLIENT') !== -1) abbr.classList.add('client');
+      abbr.setAttribute('aria-hidden', 'true');
+      abbr.textContent = aiosInitials(label || aiosDecodeEntities(acc.name));
+      item.insertBefore(abbr, first ? first.nextSibling : item.firstChild);
+    }
+
+    item.setAttribute('data-aios-tip', label);
+    if (pills.length) item.setAttribute('data-aios-tip-meta', pills.join(' · '));
+    item.setAttribute('aria-label', label + (pills.length ? ' — ' + pills.join(', ') : ''));
+    item.setAttribute('role', 'link');
+    if (!item.hasAttribute('tabindex')) item.setAttribute('tabindex', '0');
+  });
+
+  var recents = document.getElementById('sidebar-recents');
+  var recentsSection = recents && recents.closest('.nav-section');
+  if (recentsSection) recentsSection.classList.add('aios-nav-recents');
+
+  var trigger = document.getElementById('cmd-trigger');
+  if (trigger) {
+    trigger.setAttribute('data-aios-tip', 'Search accounts');
+    trigger.setAttribute('data-aios-tip-meta', '⌘K');
+    trigger.setAttribute('aria-label', 'Search accounts');
+  }
+
+  /* Keyboard activation for the existing nav items (click handlers untouched). */
+  sidebar.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var item = e.target.closest && e.target.closest('.nav-item');
+    if (!item || item !== e.target) return;
+    e.preventDefault();
+    item.click();
+  });
+
+  sidebar.addEventListener('mouseover', function (e) {
+    var el = e.target.closest && e.target.closest('[data-aios-tip]');
+    if (el && sidebar.contains(el) && el !== aiosTipFor) aiosShowTip(el);
+  });
+  sidebar.addEventListener('mouseout', function (e) {
+    if (!aiosTipFor) return;
+    if (!e.relatedTarget || !aiosTipFor.contains(e.relatedTarget)) aiosHideTip();
+  });
+  sidebar.addEventListener('focusin', function (e) {
+    var el = e.target.closest && e.target.closest('[data-aios-tip]');
+    if (el) aiosShowTip(el);
+  });
+  sidebar.addEventListener('focusout', aiosHideTip);
+  sidebar.addEventListener('scroll', aiosHideTip, { passive: true });
+}
+
+var aiosTipEl = null, aiosTipFor = null;
+function aiosShowTip(el) {
+  if (!aiosIsSidebarCollapsed()) return;
+  var text = el.getAttribute('data-aios-tip');
+  if (!text) return;
+  if (!aiosTipEl) {
+    aiosTipEl = document.createElement('div');
+    aiosTipEl.id = 'aios-sb-tip';
+    aiosTipEl.setAttribute('role', 'tooltip');
+    document.body.appendChild(aiosTipEl);
+  }
+  aiosTipEl.textContent = text;
+  var meta = el.getAttribute('data-aios-tip-meta');
+  if (meta) {
+    var s = document.createElement('span');
+    s.className = 'aios-tip-meta';
+    s.textContent = meta;
+    aiosTipEl.appendChild(s);
+  }
+  var r = el.getBoundingClientRect();
+  var sb = document.getElementById('aios-sidebar').getBoundingClientRect();
+  aiosTipEl.style.left = (sb.right + 8) + 'px';
+  aiosTipEl.style.top = Math.max(18, Math.min(window.innerHeight - 18, r.top + r.height / 2)) + 'px';
+  aiosTipEl.classList.add('show');
+  aiosTipFor = el;
+}
+function aiosHideTip() {
+  if (aiosTipEl) aiosTipEl.classList.remove('show');
+  aiosTipFor = null;
+}
+
+/* ── DOWNLOAD ── */
+function aiosDownload(html, filename) {
+  var blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  a.rel = 'noopener';
+  a.style.display = 'none';
+  document.body.appendChild(a);
+  a.click();
+  a.parentNode.removeChild(a);
+  setTimeout(function () { URL.revokeObjectURL(url); }, 4000);
+}
+
+/* ═══ ACCOUNT EXPORT — single-account isolation boundary ═══ */
+
+/* Generic, data-free report interactions a Target Detail View may call.
+   Anything a view calls that is not here and not defined by the view's own
+   scripts is stripped from the report rather than shipped. */
+var AIOS_EXPORT_HELPERS = { toggleAccordion: 1, toggleMethodModule: 1, setTerniumRailMode: 1 };
+var AIOS_APP_CALL = /(^|[^\w$.])(showView|showViewById|paletteGo|openPalette|closePalette|setCategory|renderPalette|aios[A-Z][\w$]*)\s*\(/;
+var AIOS_JS_WORDS = { 'if':1, 'for':1, 'while':1, 'switch':1, 'return':1, 'function':1, 'typeof':1, 'new':1, 'catch':1 };
+
+function aiosAccountFilename(name) {
+  var base = String(name).normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .toUpperCase().replace(/&/g, ' AND ').replace(/[^A-Z0-9]+/g, '_').replace(/^_+|_+$/g, '');
+  return 'AIOS_' + (base || 'ACCOUNT') + '.html';
+}
+
+function aiosSanitizeAccountView(view, viewId) {
+  var doc = view.ownerDocument;
+
+  /* 1 · Comments never travel — not even this account's own build notes. */
+  var walker = doc.createTreeWalker(view, NodeFilter.SHOW_COMMENT, null);
+  var comments = [];
+  while (walker.nextNode()) comments.push(walker.currentNode);
+  comments.forEach(function (c) { c.parentNode.removeChild(c); });
+
+  /* 2 · Runtime-only controls. */
+  Array.prototype.forEach.call(view.querySelectorAll('.aios-export-btn'), function (el) { el.parentNode.removeChild(el); });
+
+  /* 3 · Inline handlers: keep report interactions, drop every application route. */
+  var ownFns = {};
+  Array.prototype.forEach.call(view.querySelectorAll('script'), function (s) {
+    var re = /function\s+([A-Za-z_$][\w$]*)/g, m;
+    while ((m = re.exec(s.textContent))) ownFns[m[1]] = 1;
+  });
+  var needed = {};
+  Array.prototype.forEach.call(view.querySelectorAll('*'), function (el) {
+    Array.prototype.slice.call(el.attributes).forEach(function (attr) {
+      if (attr.name.indexOf('on') !== 0) return;
+      var code = attr.value;
+      if (AIOS_APP_CALL.test(code)) { el.removeAttribute(attr.name); return; }
+      var re = /(^|[^\w$.])([A-Za-z_$][\w$]*)\s*\(/g, m, ok = true, calls = [];
+      while ((m = re.exec(code))) {
+        var fn = m[2];
+        if (AIOS_JS_WORDS[fn] || ownFns[fn]) continue;
+        if (fn === 'printView' || AIOS_EXPORT_HELPERS[fn]) { calls.push(fn); continue; }
+        ok = false;
+      }
+      if (!ok) {
+        console.warn('[AIOS] Account export: removed unsupported handler on', el.tagName, attr.name);
+        el.removeAttribute(attr.name);
+        return;
+      }
+      calls.forEach(function (fn) { needed[fn] = 1; });
+    });
+  });
+
+  /* 4 · Links: only in-report anchors and external references survive. */
+  Array.prototype.forEach.call(view.querySelectorAll('[href]'), function (el) {
+    var href = (el.getAttribute('href') || '').trim();
+    if (/^javascript:/i.test(href) || /view-[\w-]+/.test(href) ||
+        (href.charAt(0) === '#' && href.length > 1 && !view.querySelector('[id="' + href.slice(1).replace(/"/g, '') + '"]'))) {
+      el.removeAttribute('href');
+    }
+  });
+
+  view.classList.add('active', 'print-target');
+  return Object.keys(needed);
+}
+
+/* Paren-aware split of a selector list. */
+function aiosSplitSelectors(sel) {
+  var out = [], depth = 0, cur = '';
+  for (var i = 0; i < sel.length; i++) {
+    var ch = sel.charAt(i);
+    if (ch === '(' || ch === '[') depth++;
+    else if (ch === ')' || ch === ']') depth--;
+    if (ch === ',' && depth === 0) { out.push(cur.trim()); cur = ''; }
+    else cur += ch;
+  }
+  if (cur.trim()) out.push(cur.trim());
+  return out;
+}
+function aiosForeignViewRef(text, viewId) {
+  var re = /view-[\w-]+/g, m;
+  while ((m = re.exec(text))) {
+    var id = m[0];
+    if (id !== viewId && document.getElementById(id) && document.getElementById(id).classList.contains('view')) return true;
+  }
+  return false;
+}
+/* Application chrome (navigation, palette, rail, dialogs) never styles a report. */
+var AIOS_CHROME_SELECTOR = /#cmd-|\.cmd-|\.sidebar|#sidebar-|\.nav-(?:item|label|section|divider|badge)|\.recent-|\.logo-(?:mark|sub)|#main-scroll|\.acct-section|\.rel-tab|\.aios-(?:sb|nav|logo|modal|btn|toast|export-btn)|#aios-/;
+
+/* Serializes the master stylesheet through the CSSOM (comments are never
+   carried) and keeps only rules that do not target another view or the
+   application chrome. */
+function aiosFilterRules(rules, viewId) {
+  var out = [];
+  for (var i = 0; i < rules.length; i++) {
+    var r = rules[i];
+    if (typeof CSSStyleRule !== 'undefined' && r instanceof CSSStyleRule) {
+      var all = aiosSplitSelectors(r.selectorText);
+      var keep = all.filter(function (s) { return !aiosForeignViewRef(s, viewId) && !AIOS_CHROME_SELECTOR.test(s); });
+      if (!keep.length) continue;
+      out.push(keep.length === all.length ? r.cssText : keep.join(', ') + ' { ' + r.style.cssText + ' }');
+    } else if (typeof CSSMediaRule !== 'undefined' && r instanceof CSSMediaRule) {
+      var inner = aiosFilterRules(r.cssRules, viewId);
+      if (inner) out.push('@media ' + r.media.mediaText + ' {\n' + inner + '\n}');
+    } else if (typeof CSSSupportsRule !== 'undefined' && r instanceof CSSSupportsRule) {
+      var sup = aiosFilterRules(r.cssRules, viewId);
+      if (sup) out.push('@supports ' + r.conditionText + ' {\n' + sup + '\n}');
+    } else if (!aiosForeignViewRef(r.cssText, viewId)) {
+      out.push(r.cssText);
+    }
+  }
+  return out.join('\n');
+}
+function aiosBuildAccountCss(viewId) {
+  var sheet = null;
+  for (var i = 0; i < document.styleSheets.length; i++) {
+    var s = document.styleSheets[i];
+    if (s.ownerNode && s.ownerNode.tagName === 'STYLE') { sheet = s; break; }
+  }
+  if (!sheet) throw new Error('AIOS stylesheet not found');
+  return aiosFilterRules(sheet.cssRules, viewId);
+}
+
+var AIOS_REPORT_CSS = [
+  'body.aios-report { display: block; min-height: 100vh; }',
+  '.aios-report-banner { background: #081d42; color: #fff; padding: 12px 32px; display: flex; align-items: center; justify-content: space-between; gap: 10px 20px; flex-wrap: wrap; border-bottom: 1px solid rgba(255,255,255,0.08); -webkit-print-color-adjust: exact; print-color-adjust: exact; }',
+  '.aios-report-brand { display: flex; align-items: baseline; gap: 6px 14px; flex-wrap: wrap; min-width: 0; }',
+  '.aios-report-mark { font-size: 18px; font-weight: 200; letter-spacing: 3px; }',
+  '.aios-report-os { font-size: 9px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--teal); }',
+  '.aios-report-kind { font-size: 11px; color: rgba(255,255,255,0.7); }',
+  '.aios-report-kind b { color: #fff; font-weight: 700; }',
+  '.aios-report-scope { font-size: 9px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: rgba(255,255,255,0.5); border: 1px solid rgba(255,255,255,0.16); border-radius: 4px; padding: 3px 8px; white-space: nowrap; }',
+  '.aios-report-toc { background: var(--surface); border-bottom: 1px solid var(--border); padding: 0 32px; }',
+  '.aios-report-toc summary { cursor: pointer; padding: 10px 0; font-size: 10px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--navy); }',
+  '.aios-report-toc summary:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }',
+  '.aios-report-toc ol { list-style: none; columns: 3 240px; column-gap: 28px; padding: 0 0 14px; }',
+  '.aios-report-toc li { break-inside: avoid; padding: 3px 0; font-size: 11.5px; line-height: 1.4; }',
+  '.aios-report-toc a { color: var(--text-muted); text-decoration: none; }',
+  '.aios-report-toc a:hover, .aios-report-toc a:focus-visible { color: var(--teal-dim); text-decoration: underline; }',
+  '[id^="aios-sec-"] { scroll-margin-top: 12px; }',
+  '.aios-report-foot { padding: 18px 32px 28px; font-size: 10px; line-height: 1.6; color: var(--text-light); text-align: center; }',
+  '@media (max-width: 700px) {',
+  '  .aios-report-banner, .aios-report-toc, .aios-report-foot { padding-left: 16px; padding-right: 16px; }',
+  '  .aios-report .page-header { flex-wrap: wrap; gap: 12px; padding: 20px 16px; }',
+  '  .aios-report .page-header-meta { align-items: flex-start; }',
+  '}',
+  '@media print {',
+  '  .aios-report-toc { display: none !important; }',
+  '  .aios-report-foot { padding: 12px 0 0; }',
+  '}'
+].join('\n');
+
+function aiosBuildToc(view) {
+  var items = [], n = 0;
+  Array.prototype.forEach.call(view.querySelectorAll('.card > .card-header'), function (h) {
+    if (h.closest('.outreach-step-body')) return;
+    var text = h.textContent.replace(/\s+/g, ' ').trim();
+    if (!text) return;
+    var card = h.parentNode;
+    if (!card.id) card.id = 'aios-sec-' + (++n);
+    if (text.length > 96) text = text.slice(0, 93) + '…';
+    items.push('<li><a href="#' + aiosEscapeHtml(card.id) + '">' + aiosEscapeHtml(text) + '</a></li>');
+  });
+  if (items.length < 2) return '';
+  return '<details class="aios-report-toc"><summary>Report sections · ' + items.length + '</summary><ol>' +
+         items.join('') + '</ol></details>';
+}
+
+/* Fail closed: the report must not reference any other view, the master
+   dataset, or the application shell. */
+function aiosAssertIsolation(html, viewId) {
+  var leaks = [];
+  var ids = ACCOUNTS.map(function (a) { return a.id; })
+    .concat(MODULES.map(function (m) { return m.id; }), ['view-home']);
+  ids.forEach(function (id) {
+    if (id === viewId) return;
+    if (new RegExp('(?<![\\w-])' + id.replace(/-/g, '\\-') + '(?![\\w-])').test(html)) leaks.push(id);
+  });
+  [/\b(?:const|var|let)\s+(?:ACCOUNTS|MODULES)\b/, /RELATIONSHIP_OVERRIDES|NAME_ALIASES|INDUSTRY_BY_ID|MANDATE_LABELS/,
+   /id="(?:cmd-overlay|aios-sidebar|acct-sections|account-grid-source|main-scroll)"/, /AIOS_BOOT|aiosBuildAccountExport/]
+    .forEach(function (re) { if (re.test(html)) leaks.push(String(re)); });
+  if (leaks.length) throw new Error('Isolation check failed: ' + leaks.join(', '));
+}
+
+function aiosBuildAccountExport(viewId) {
+  var acc = aiosAccountById(viewId);
+  if (!acc) throw new Error('Not an account view: ' + viewId);
+  if (!AIOS_BOOT.source) throw new Error('Source snapshot unavailable');
+
+  /* Parse the pristine source and lift out ONLY the selected view. */
+  var srcDoc = new DOMParser().parseFromString(AIOS_BOOT.source, 'text/html');
+  var src = srcDoc.getElementById(viewId);
+  if (!src || !src.classList.contains('view')) throw new Error('View not found in source: ' + viewId);
+  var reportDoc = document.implementation.createHTMLDocument('');
+  var view = reportDoc.importNode(src, true);
+  srcDoc = src = null;
+
+  var helpers = aiosSanitizeAccountView(view, viewId);
+  var toc = aiosBuildToc(view);
+  var css = aiosBuildAccountCss(viewId);
+  var name = aiosDecodeEntities(acc.name);
+  var today = new Date();
+  var stamp = today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2);
+
+  var js = ['function printView() { window.print(); }'];
+  helpers.forEach(function (fn) {
+    if (fn !== 'printView' && typeof window[fn] === 'function') js.push(window[fn].toString());
+  });
+
+  var html = '<!DOCTYPE html>\n<html lang="en">\n<head>\n' +
+    '<meta charset="UTF-8">\n' +
+    '<meta name="viewport" content="width=device-width, initial-scale=1.0">\n' +
+    '<meta name="robots" content="noindex, nofollow">\n' +
+    '<title>' + aiosEscapeHtml(name) + ' · Account Intelligence Report · Akzent Intelligence OS</title>\n' +
+    '<style>\n' + css.replace(/<\/style/gi, '<\\/style') + '\n</style>\n' +
+    '<style>\n' + AIOS_REPORT_CSS + '\n</style>\n' +
+    '</head>\n<body class="aios-report">\n' +
+    '<header class="aios-report-banner">' +
+      '<div class="aios-report-brand"><span class="aios-report-mark">akzent</span>' +
+      '<span class="aios-report-os">Akzent Intelligence OS</span>' +
+      '<span class="aios-report-kind">Account Intelligence Report · <b>' + aiosEscapeHtml(name) + '</b></span></div>' +
+      '<span class="aios-report-scope">Single-account report</span>' +
+    '</header>\n' +
+    toc + '\n' +
+    view.outerHTML + '\n' +
+    '<footer class="aios-report-foot">Akzent Intelligence OS · Account Intelligence Report · ' + aiosEscapeHtml(name) +
+      ' · Exported ' + stamp + '. This file contains this account only.</footer>\n' +
+    '<script>\n' + js.join('\n\n').replace(/<\/script/gi, '<\\/script') + '\n<\/script>\n' +
+    '</body>\n</html>\n';
+
+  aiosAssertIsolation(html, viewId);
+  return { html: html, filename: aiosAccountFilename(name) };
+}
+
+function aiosExportCurrentAccount(trigger) {
+  var activeId = aiosActiveViewId();
+  var owner = trigger && trigger.closest ? trigger.closest('.view') : null;
+  var viewId = owner ? owner.id : activeId;
+  if (!viewId || viewId !== activeId || !aiosAccountById(viewId)) {
+    aiosToast('Unable to identify the active account for export.');
+    return;
+  }
+  if (trigger) { trigger.disabled = true; trigger.setAttribute('aria-busy', 'true'); }
+  setTimeout(function () {
+    try {
+      var out = aiosBuildAccountExport(viewId);
+      aiosDownload(out.html, out.filename);
+    } catch (e) {
+      console.error('[AIOS] Account export failed:', e);
+      aiosToast('Unable to generate the account export. The dashboard was not modified.');
+    } finally {
+      if (trigger) { trigger.disabled = false; trigger.removeAttribute('aria-busy'); }
+    }
+  }, 30);
+}
+
+function aiosInjectAccountExportControls() {
+  var ICON = '<svg viewBox="0 0 16 16" width="11" height="11" aria-hidden="true" focusable="false"><path d="M8 2.5v7.2M4.8 6.6 8 9.8l3.2-3.2M3 12.8h10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  ACCOUNTS.forEach(function (acc) {
+    var view = document.getElementById(acc.id);
+    if (!view || !view.classList.contains('view') || view.querySelector('.aios-export-btn')) return;
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'print-btn aios-export-btn';
+    btn.setAttribute('aria-label', 'Export this account as HTML');
+    btn.title = 'Standalone HTML report containing only this account';
+    btn.innerHTML = ICON + '<span>Export This Account</span>';
+    btn.addEventListener('click', function () { aiosExportCurrentAccount(btn); });
+    var print = view.querySelector('.page-header .print-btn');
+    if (print && print.parentNode) print.parentNode.insertBefore(btn, print.nextSibling);
+    else {
+      var host = view.querySelector('.page-header-meta') || view.querySelector('.page-header');
+      if (host) host.appendChild(btn);
+    }
+  });
+}
+
+/* ═══ FULL AIOS EXPORT — internal, all accounts ═══ */
+function aiosBuildFullExport() {
+  var src = AIOS_BOOT.source;
+  if (!src || src.indexOf(AIOS_DOCTYPE_HTML) !== 0) throw new Error('Source snapshot unavailable');
+  var attrs = '';
+  var active = aiosActiveViewId();
+  if (active && /^view-[\w-]+$/.test(active)) attrs += ' data-aios-initial-view="' + active + '"';
+  attrs += ' data-aios-initial-sidebar="' + (aiosIsSidebarCollapsed() ? 'collapsed' : 'expanded') + '"';
+  return AIOS_DOCTYPE_HTML + attrs + src.slice(AIOS_DOCTYPE_HTML.length);
+}
+
+function aiosRunFullExport() {
+  try {
+    aiosDownload(aiosBuildFullExport(), 'akzent_intelligence_os.html');
+  } catch (e) {
+    console.error('[AIOS] Full export failed:', e);
+    aiosToast('Unable to generate the Full AIOS export. The dashboard was not modified.');
+  }
+}
+
+function aiosExportFullDashboard() {
+  if (document.getElementById('aios-full-confirm')) return;
+  var prevFocus = document.activeElement;
+  var wrap = document.createElement('div');
+  wrap.className = 'aios-modal';
+  wrap.id = 'aios-full-confirm';
+  wrap.innerHTML =
+    '<div class="aios-modal-box" role="alertdialog" aria-modal="true" aria-labelledby="aios-full-confirm-title" aria-describedby="aios-full-confirm-text">' +
+      '<div class="aios-modal-body">' +
+        '<div class="aios-modal-eyebrow">Internal · All accounts</div>' +
+        '<div class="aios-modal-title" id="aios-full-confirm-title">Export Full AIOS</div>' +
+        '<p class="aios-modal-text" id="aios-full-confirm-text">This export contains all accounts currently stored in Akzent Intelligence OS. Continue?</p>' +
+      '</div>' +
+      '<div class="aios-modal-actions">' +
+        '<button type="button" class="aios-btn aios-btn-secondary" data-aios-act="cancel">Cancel</button>' +
+        '<button type="button" class="aios-btn aios-btn-primary" data-aios-act="confirm">Export Full AIOS</button>' +
+      '</div>' +
+    '</div>';
+
+  function close() {
+    document.removeEventListener('keydown', onKey, true);
+    if (wrap.parentNode) wrap.parentNode.removeChild(wrap);
+    if (prevFocus && prevFocus.focus) prevFocus.focus();
+  }
+  function onKey(e) {
+    if (e.key === 'Escape') { e.preventDefault(); e.stopPropagation(); close(); return; }
+    if (e.key === 'Tab') {
+      var btns = wrap.querySelectorAll('button');
+      var i = Array.prototype.indexOf.call(btns, document.activeElement);
+      e.preventDefault();
+      btns[(i + (e.shiftKey ? btns.length - 1 : 1)) % btns.length].focus();
+    }
+  }
+  wrap.addEventListener('click', function (e) {
+    var act = e.target.closest ? e.target.closest('[data-aios-act]') : null;
+    if (e.target === wrap || (act && act.getAttribute('data-aios-act') === 'cancel')) { close(); return; }
+    if (act && act.getAttribute('data-aios-act') === 'confirm') { close(); aiosRunFullExport(); }
+  });
+  document.addEventListener('keydown', onKey, true);
+  document.body.appendChild(wrap);
+  wrap.querySelector('[data-aios-act="cancel"]').focus();
+}
+
+/* ── BOOT ── (registered after the core DOMContentLoaded handler) */
+document.addEventListener('DOMContentLoaded', function () {
+  aiosDecorateSidebar();
+  aiosInjectAccountExportControls();
+  var pref = aiosSidebarPref();
+  aiosApplySidebarState(pref !== null ? pref : AIOS_BOOT.sidebar === 'collapsed');
+  if (AIOS_BOOT.view && AIOS_BOOT.view !== 'view-home') {
+    var restored = document.getElementById(AIOS_BOOT.view);
+    if (restored && restored.classList.contains('view')) showViewById(AIOS_BOOT.view);
+  }
+  requestAnimationFrame(function () {
+    requestAnimationFrame(function () { document.documentElement.classList.add('aios-sb-ready'); });
+  });
+});
+</script>
 
 </body>
 </html>
