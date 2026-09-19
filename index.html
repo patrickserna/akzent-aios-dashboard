@@ -3518,6 +3518,276 @@ main {
   #view-haldex .hdx-tri .cus .wv { font-size:42px; }
 }
 
+/* KITCHEN EQUIPMENT DE SAN LUIS — scoped view components (#view-kitchen only). Customs CLIENT / Logistics Cross-Sell. */
+#view-kitchen .num { text-align:right; }
+#view-kitchen .kes-sublbl { font-size:10px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal-dim); margin-bottom:8px; }
+#view-kitchen .kes-sublbl.muted { color:var(--text-light); }
+#view-kitchen .kes-eyebrow { font-size:9px; font-weight:800; letter-spacing:1.3px; text-transform:uppercase; color:var(--teal-dim); }
+#view-kitchen .kes-src { display:inline-block; font-size:8.5px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; padding:1px 6px; border-radius:3px; vertical-align:1px; }
+#view-kitchen .kes-src.pj { color:var(--navy); background:rgba(13,43,94,0.08); }
+#view-kitchen .kes-src.ak { color:#047857; background:rgba(16,185,129,0.12); }
+#view-kitchen .kes-calc { display:inline-block; font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--teal-dim); border:1px solid rgba(0,180,216,0.45); padding:1px 6px; border-radius:3px; }
+#view-kitchen .kes-mono { font-family:ui-monospace,Menlo,monospace; font-weight:700; color:var(--navy); }
+#view-kitchen .kes-muted td { color:var(--text-muted); }
+
+/* Chapters */
+#view-kitchen .kes-chapter { margin:26px 0 12px; padding:16px 22px; border-radius:8px; color:#fff; background:linear-gradient(120deg,var(--navy) 0%,#1e4a8a 100%); position:relative; overflow:hidden; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-kitchen .kes-chapter:first-of-type { margin-top:8px; }
+#view-kitchen .kes-chapter::after { content:""; position:absolute; right:0; top:0; bottom:0; width:6px; background:var(--teal); }
+#view-kitchen .kes-chapter.exec::after { background:#10b981; }
+#view-kitchen .kes-chapter.cus { background:linear-gradient(120deg,#0b4f63 0%,#0e7490 100%); }
+#view-kitchen .kes-chapter.cus::after { background:#f59e0b; }
+#view-kitchen .kes-chapter.syn { background:linear-gradient(120deg,#064e3b 0%,#047857 100%); }
+#view-kitchen .kes-chapter-n { font-size:9.5px; font-weight:800; letter-spacing:2px; text-transform:uppercase; opacity:0.75; }
+#view-kitchen .kes-chapter-t { font-size:22px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; line-height:1.2; margin-top:2px; }
+#view-kitchen .kes-chapter-s { font-size:11.5px; font-weight:600; opacity:0.85; margin-top:3px; }
+#view-kitchen .kes-chapnav { display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-top:14px; }
+#view-kitchen .kes-chapnav > span { font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-light); }
+#view-kitchen .kes-chapnav button { font:inherit; font-size:11px; font-weight:800; color:var(--navy); background:var(--surface); border:1px solid var(--border); border-radius:5px; padding:6px 11px; cursor:pointer; }
+#view-kitchen .kes-chapnav button:hover { border-color:var(--teal); color:var(--teal-dim); }
+
+/* Executive viewport */
+#view-kitchen .kes-hero { display:grid; grid-template-columns:1.15fr 1fr 1fr; gap:14px; align-items:stretch; }
+#view-kitchen .kes-hero > div { padding:13px 16px; background:var(--surface); border:1px solid var(--border); border-radius:7px; }
+#view-kitchen .kes-hero .k { font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-kitchen .kes-hero .v { font-size:34px; font-weight:800; color:var(--navy); line-height:1.1; margin-top:2px; }
+#view-kitchen .kes-hero .v small { font-size:12px; font-weight:700; color:var(--text-muted); }
+#view-kitchen .kes-hero .s { font-size:10.5px; color:var(--text-muted); line-height:1.55; margin-top:5px; }
+#view-kitchen .kes-split { display:flex; height:14px; border-radius:7px; overflow:hidden; margin-top:8px; }
+#view-kitchen .kes-split > div { height:100%; }
+#view-kitchen .kes-delta { font-size:22px; font-weight:800; line-height:1.15; }
+#view-kitchen .kes-delta.dn { color:#b91c1c; }
+#view-kitchen .kes-delta.up { color:#047857; }
+#view-kitchen .kes-trendrow { display:flex; gap:14px; flex-wrap:wrap; margin-top:7px; }
+#view-kitchen .kes-trendrow div { font-size:10.5px; color:var(--text-muted); }
+#view-kitchen .kes-trendrow b { display:block; font-size:15px; font-weight:800; }
+
+/* The two-wallet asymmetry — the signature visual of this account */
+#view-kitchen .kes-asym { display:grid; grid-template-columns:1fr 46px 1fr; gap:10px; align-items:center; margin-top:4px; }
+#view-kitchen .kes-asym > div.w { padding:16px 18px; border-radius:8px; border:1.5px solid var(--border); background:var(--surface); }
+#view-kitchen .kes-asym .w.log { border-top:4px solid #94a3b8; }
+#view-kitchen .kes-asym .w.cus { border-top:4px solid var(--teal); background:rgba(0,180,216,0.04); }
+#view-kitchen .kes-asym .wk { font-size:9.5px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); }
+#view-kitchen .kes-asym .wv { font-size:52px; font-weight:800; line-height:1.05; margin-top:2px; letter-spacing:-1px; }
+#view-kitchen .kes-asym .log .wv { color:#64748b; }
+#view-kitchen .kes-asym .cus .wv { color:var(--teal-dim); }
+#view-kitchen .kes-asym .wf { font-size:11px; color:var(--text-muted); margin-top:3px; line-height:1.5; }
+#view-kitchen .kes-asym .wbar { height:10px; border-radius:5px; background:#e6eaf1; overflow:hidden; margin-top:10px; }
+#view-kitchen .kes-asym .wbar > div { height:100%; }
+#view-kitchen .kes-asym .vs { text-align:center; font-size:11px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-light); }
+#view-kitchen .kes-asym-note { margin-top:12px; padding:11px 15px; background:rgba(13,43,94,0.04); border-left:3px solid var(--navy); border-radius:0 5px 5px 0; font-size:11px; color:var(--text-muted); line-height:1.65; }
+
+/* Signal / Interpretation / Discovery — always three visually separate layers */
+#view-kitchen .kes-sig { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:14px; }
+#view-kitchen .kes-sig > div { padding:12px 15px; border-radius:6px; font-size:11px; line-height:1.6; color:var(--text-muted); }
+#view-kitchen .kes-sig b { display:block; font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; margin-bottom:4px; }
+#view-kitchen .kes-sig .s1 { background:rgba(13,43,94,0.04); border-top:3px solid var(--navy); }
+#view-kitchen .kes-sig .s1 b { color:var(--navy); }
+#view-kitchen .kes-sig .s2 { background:rgba(0,180,216,0.05); border-top:3px solid var(--teal); }
+#view-kitchen .kes-sig .s2 b { color:var(--teal-dim); }
+#view-kitchen .kes-sig .s3 { background:rgba(245,158,11,0.05); border-top:3px solid #f59e0b; }
+#view-kitchen .kes-sig .s3 b { color:#b45309; }
+
+/* Notes */
+#view-kitchen .kes-note { margin-top:12px; padding:11px 15px; background:rgba(245,158,11,0.05); border-left:3px solid #f59e0b; border-radius:0 5px 5px 0; font-size:11px; color:var(--text-muted); line-height:1.65; }
+#view-kitchen .kes-note-navy { margin-top:12px; padding:11px 15px; background:rgba(13,43,94,0.04); border-left:3px solid var(--navy); border-radius:0 5px 5px 0; font-size:11px; color:var(--text-muted); line-height:1.65; }
+#view-kitchen .kes-note-na { margin-top:12px; padding:11px 15px; background:rgba(148,163,184,0.09); border-left:3px solid #94a3b8; border-radius:0 5px 5px 0; font-size:11px; color:var(--text-muted); line-height:1.65; }
+
+/* Progressive-disclosure ladder */
+#view-kitchen .kes-ladder { display:flex; flex-wrap:wrap; gap:5px; align-items:center; font-size:10px; font-weight:800; letter-spacing:0.4px; text-transform:uppercase; color:var(--navy); }
+#view-kitchen .kes-ladder span { background:var(--surface); border:1px solid var(--border); padding:3px 9px; border-radius:4px; }
+#view-kitchen .kes-ladder i { font-style:normal; color:var(--text-light); }
+
+/* Bar rows (modes, gateways, geography, partners, HS) */
+#view-kitchen .kes-rows { display:flex; flex-direction:column; gap:7px; }
+#view-kitchen .kes-row { display:grid; grid-template-columns:minmax(170px,1.5fr) 1fr 108px; gap:10px; align-items:center; padding:5px 0; border-bottom:1px solid var(--border); }
+#view-kitchen .kes-row:last-child { border-bottom:none; }
+#view-kitchen .kes-row .lbl { font-size:11.5px; font-weight:700; color:var(--navy); line-height:1.4; word-break:break-word; }
+#view-kitchen .kes-row .lbl em { display:block; font-style:normal; font-size:9.5px; font-weight:600; color:var(--text-muted); }
+#view-kitchen .kes-row .bar { height:9px; border-radius:5px; background:#e6eaf1; overflow:hidden; }
+#view-kitchen .kes-row .bar > div { height:100%; }
+#view-kitchen .kes-row .val { text-align:right; font-size:12px; font-weight:800; color:var(--navy); white-space:nowrap; }
+#view-kitchen .kes-row .val span { font-size:10px; font-weight:700; color:var(--text-muted); margin-left:4px; }
+
+/* Route tables */
+#view-kitchen .kes-route-table { width:100%; min-width:1160px; border-collapse:collapse; font-size:11px; }
+#view-kitchen .kes-route-table td:nth-child(2),
+#view-kitchen .kes-route-table td:nth-child(4) { min-width:150px; }
+#view-kitchen .kes-route-table td:nth-child(3) { min-width:190px; }
+#view-kitchen .kes-route-table th { position:sticky; top:0; z-index:2; background:var(--navy); color:#fff; font-size:8.5px; font-weight:800; letter-spacing:0.7px; text-transform:uppercase; padding:8px 7px; text-align:left; white-space:nowrap; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-kitchen .kes-route-table th.num { text-align:right; }
+#view-kitchen .kes-route-table td { padding:7px; border-bottom:1px solid var(--border); vertical-align:top; }
+#view-kitchen .kes-route-table tbody tr:hover { background:rgba(0,180,216,0.04); }
+#view-kitchen .kes-rank { width:34px; }
+#view-kitchen .kes-rank-pill { display:inline-block; min-width:26px; text-align:center; font-size:10px; font-weight:800; color:var(--navy); background:rgba(13,43,94,0.07); border-radius:4px; padding:2px 5px; }
+#view-kitchen .kes-ent strong { font-size:11px; font-weight:700; color:var(--navy); line-height:1.35; display:block; }
+#view-kitchen .kes-ent .kes-na { font-size:9.5px; font-weight:600; color:var(--text-light); font-style:italic; }
+#view-kitchen .kes-ent .kes-self { display:inline-block; font-size:8px; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--navy); background:rgba(13,43,94,0.07); padding:1px 5px; border-radius:3px; margin-top:3px; }
+#view-kitchen .kes-gw-name { font-size:9.5px; color:var(--text-muted); line-height:1.4; margin-top:3px; word-break:break-word; }
+#view-kitchen .kes-cum { min-width:78px; }
+#view-kitchen .kes-cum-bar { height:4px; border-radius:2px; background:#e6eaf1; overflow:hidden; margin-top:3px; }
+#view-kitchen .kes-cum-bar > div { height:100%; background:var(--teal); }
+#view-kitchen .kes-dates { font-size:9.5px; color:var(--text-muted); white-space:nowrap; }
+#view-kitchen .kes-scroll { overflow-x:auto; max-height:640px; overflow-y:auto; border:1px solid var(--border); border-radius:6px; }
+
+/* Patent components */
+#view-kitchen .kes-pat { display:inline-block; font-size:10px; font-weight:800; letter-spacing:0.5px; padding:2px 7px; border-radius:4px; white-space:nowrap; }
+#view-kitchen .kes-pat.ak { color:#fff; background:var(--teal-dim); }
+#view-kitchen .kes-pat.ot { color:#92400e; background:rgba(245,158,11,0.16); border:1px solid rgba(245,158,11,0.4); }
+#view-kitchen .kes-pat.off { color:var(--text-light); background:rgba(148,163,184,0.15); border:1px dashed rgba(148,163,184,0.7); }
+#view-kitchen .kes-gwr { display:grid; grid-template-columns:minmax(190px,1.4fr) 1fr 150px; gap:12px; align-items:center; padding:8px 0; border-bottom:1px solid var(--border); }
+#view-kitchen .kes-gwr:last-child { border-bottom:none; }
+#view-kitchen .kes-gwr .kes-cw-lbl { font-size:11.5px; font-weight:700; color:var(--navy); line-height:1.4; word-break:break-word; }
+#view-kitchen .kes-gwr .kes-cw-sub { font-size:9.5px; color:var(--text-muted); margin-top:2px; }
+#view-kitchen .kes-cw-bar { display:flex; height:16px; border-radius:8px; overflow:hidden; background:#e6eaf1; }
+#view-kitchen .kes-cw-bar > div { height:100%; }
+#view-kitchen .kes-cw-ak { background:var(--teal); }
+#view-kitchen .kes-cw-ot { background:#f59e0b; }
+#view-kitchen .kes-cw-legend { text-align:right; font-size:10px; color:var(--text-muted); white-space:nowrap; }
+#view-kitchen .kes-cw-legend b { display:block; font-size:15px; font-weight:800; color:var(--navy); }
+#view-kitchen .kes-gwr.hot { background:rgba(0,180,216,0.05); border-radius:6px; padding:10px 10px; border-bottom:none; margin-bottom:4px; }
+#view-kitchen .kes-gwr.hot .kes-cw-bar { height:22px; }
+#view-kitchen .kes-gwr.zero .kes-cw-legend b { color:#b45309; }
+#view-kitchen .kes-gwr.small { opacity:0.72; }
+#view-kitchen .kes-gwr.small .kes-cw-lbl { font-size:10.5px; }
+#view-kitchen .kes-gwr.small .kes-cw-bar { height:9px; }
+
+/* Materiality scale — keeps a 100% share on small volume from overpowering larger volumes */
+#view-kitchen .kes-matbar { height:6px; border-radius:3px; background:#e6eaf1; overflow:hidden; margin-top:4px; }
+#view-kitchen .kes-matbar > div { height:100%; background:var(--navy); opacity:0.55; }
+#view-kitchen .kes-matlbl { font-size:8.5px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:var(--text-light); margin-top:3px; }
+
+/* Deep dives */
+#view-kitchen .kes-dd { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+#view-kitchen .kes-dd > div { padding:13px 16px; background:var(--surface); border:1px solid var(--border); border-top:3px solid #f59e0b; border-radius:7px; }
+#view-kitchen .kes-dd .h { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+#view-kitchen .kes-dd .n { font-size:26px; font-weight:800; color:var(--navy); line-height:1.1; }
+#view-kitchen .kes-dd .n small { font-size:10px; font-weight:700; color:var(--text-muted); }
+#view-kitchen .kes-dd .g { font-size:10.5px; color:var(--navy); font-weight:700; margin-top:5px; line-height:1.5; }
+#view-kitchen .kes-dd .w { font-size:10px; color:var(--text-muted); margin-top:4px; line-height:1.5; }
+#view-kitchen .kes-dd .tp { font-size:10px; color:var(--text-muted); margin-top:6px; line-height:1.6; }
+#view-kitchen .kes-dd .tp em { font-style:normal; color:var(--navy); font-weight:700; }
+#view-kitchen .kes-dd .tp.na { color:var(--text-light); font-style:italic; }
+
+/* Profit provenance */
+#view-kitchen .kes-prov { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+#view-kitchen .kes-prov > div { padding:14px 17px; background:rgba(148,163,184,0.07); border:1px dashed rgba(148,163,184,0.7); border-radius:7px; }
+#view-kitchen .kes-prov .k { font-size:9.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-kitchen .kes-prov .v { font-size:19px; font-weight:800; color:#64748b; margin-top:3px; line-height:1.2; }
+#view-kitchen .kes-prov .s { font-size:10.5px; color:var(--text-muted); margin-top:4px; line-height:1.55; }
+
+/* Positioning */
+#view-kitchen .kes-pos { display:grid; grid-template-columns:repeat(5,1fr); gap:9px; }
+#view-kitchen .kes-pos > div { padding:12px 13px; background:var(--surface); border:1px solid var(--border); border-top:3px solid #10b981; border-radius:7px; }
+#view-kitchen .kes-pos b { display:block; font-size:11.5px; font-weight:800; color:var(--navy); line-height:1.35; }
+#view-kitchen .kes-pos span { display:block; font-size:10px; color:var(--text-muted); margin-top:4px; line-height:1.5; }
+
+#view-kitchen .kes-dlist { margin:6px 0 0 16px; padding:0; font-size:11px; color:var(--text-muted); line-height:1.75; }
+#view-kitchen .kes-dlist li { margin:2px 0; }
+#view-kitchen .kes-dlist b { color:var(--navy); }
+
+@media (max-width: 1100px) {
+  #view-kitchen .kes-pos { grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width: 900px) {
+  #view-kitchen .kes-hero, #view-kitchen .kes-sig, #view-kitchen .kes-dd,
+  #view-kitchen .kes-prov, #view-kitchen .kes-pos { grid-template-columns:1fr; }
+  #view-kitchen .kes-asym { grid-template-columns:1fr; }
+  #view-kitchen .kes-asym .vs { padding:4px 0; }
+  #view-kitchen .kes-row { grid-template-columns:1fr 92px; }
+  #view-kitchen .kes-row .bar { grid-column:1 / -1; }
+  #view-kitchen .kes-gwr { grid-template-columns:1fr; }
+  #view-kitchen .kes-gwr .kes-cw-legend { text-align:left; }
+}
+/* Print: every table and appendix opens in full, scroll containers release. */
+@media print {
+  #view-kitchen .kes-scroll { overflow:visible !important; max-height:none !important; border:none; }
+  #view-kitchen .kes-route-table th { position:static; }
+  #view-kitchen .kes-route-table { min-width:0; font-size:8.5px; }
+}
+/* Customs-client additions — customs chapter prominence, triple wallet, HS presence matrix */
+#view-kitchen .kes-chapter.cus { box-shadow:0 0 0 2px rgba(245,158,11,0.35); }
+#view-kitchen .kes-chapter .kes-prim { display:inline-block; margin-top:8px; font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; background:#f59e0b; color:#1f2937; padding:3px 9px; border-radius:4px; }
+#view-kitchen .kes-tri { display:grid; grid-template-columns:1fr 1.35fr 0.8fr; gap:12px; align-items:stretch; margin-top:4px; }
+#view-kitchen .kes-tri > div { padding:15px 17px; border-radius:8px; border:1.5px solid var(--border); background:var(--surface); }
+#view-kitchen .kes-tri .log { border-top:4px solid #94a3b8; }
+#view-kitchen .kes-tri .cus { border:2px solid var(--teal); border-top:5px solid var(--teal); background:rgba(0,180,216,0.05); }
+#view-kitchen .kes-tri .pro { border-style:dashed; background:rgba(148,163,184,0.06); }
+#view-kitchen .kes-tri .wk { font-size:9.5px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); }
+#view-kitchen .kes-tri .wv { font-size:46px; font-weight:800; line-height:1.05; margin-top:3px; letter-spacing:-1px; }
+#view-kitchen .kes-tri .log .wv { color:#64748b; }
+#view-kitchen .kes-tri .cus .wv { color:var(--teal-dim); font-size:58px; }
+#view-kitchen .kes-tri .pro .wv { font-size:15px; font-weight:800; color:#64748b; letter-spacing:0; line-height:1.35; margin-top:8px; }
+#view-kitchen .kes-tri .wf { font-size:11px; color:var(--text-muted); margin-top:4px; line-height:1.55; }
+#view-kitchen .kes-tri .wbar { height:10px; border-radius:5px; background:#e6eaf1; overflow:hidden; margin-top:10px; display:flex; }
+#view-kitchen .kes-tri .wbar > div { height:100%; }
+#view-kitchen .kes-thesis { margin-top:16px; padding:15px 19px; border-radius:8px; background:linear-gradient(120deg,rgba(13,43,94,0.05),rgba(0,180,216,0.07)); border-left:4px solid var(--teal); font-size:13px; line-height:1.65; color:var(--navy); font-weight:600; }
+#view-kitchen .kes-thesis b { font-weight:800; }
+#view-kitchen .kes-dir { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+#view-kitchen .kes-dir > div { padding:13px 16px; border:1px solid var(--border); border-radius:7px; background:var(--surface); }
+#view-kitchen .kes-dir .k { font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-kitchen .kes-dir .v { font-size:30px; font-weight:800; color:var(--teal-dim); line-height:1.1; margin-top:2px; }
+#view-kitchen .kes-dir .v.nv { color:var(--navy); }
+#view-kitchen .kes-dir .s { font-size:10.5px; color:var(--text-muted); line-height:1.55; margin-top:5px; }
+#view-kitchen .kes-hs { width:100%; border-collapse:collapse; font-size:11.5px; }
+#view-kitchen .kes-hs th { background:var(--navy); color:#fff; font-size:8.5px; font-weight:800; letter-spacing:0.7px; text-transform:uppercase; padding:8px; text-align:center; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-kitchen .kes-hs th:first-child { text-align:left; }
+#view-kitchen .kes-hs td { padding:7px 8px; border-bottom:1px solid var(--border); text-align:center; }
+#view-kitchen .kes-hs td:first-child { text-align:left; }
+#view-kitchen .kes-hs .y { color:var(--teal-dim); font-weight:800; }
+#view-kitchen .kes-hs .n { color:var(--text-light); font-size:10px; }
+#view-kitchen .kes-cp { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+#view-kitchen .kes-cp > div { padding:11px 14px; border:1px solid var(--border); border-radius:7px; background:var(--surface); font-size:10.5px; color:var(--text-muted); line-height:1.55; }
+#view-kitchen .kes-cp b { display:block; font-size:11.5px; color:var(--navy); font-weight:700; margin-bottom:3px; }
+#view-kitchen .kes-cp .r { font-size:9px; font-weight:800; letter-spacing:0.8px; text-transform:uppercase; color:var(--teal-dim); }
+#view-kitchen .kes-ov { display:inline-block; font-size:11px; font-weight:800; letter-spacing:0.8px; text-transform:uppercase; color:#b45309; background:rgba(245,158,11,0.12); border:1px solid rgba(245,158,11,0.45); padding:4px 10px; border-radius:5px; }
+@media (max-width: 900px) {
+  #view-kitchen .kes-tri, #view-kitchen .kes-dir, #view-kitchen .kes-cp { grid-template-columns:1fr; }
+  #view-kitchen .kes-2col { grid-template-columns:1fr !important; }
+}
+@media print {
+  #view-kitchen .kes-tri .cus .wv { font-size:42px; }
+}
+/* KITCHEN EQUIPMENT additions — relationship strip, priorities, discovery, modal bars */
+#view-kitchen .kes-rel { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; }
+#view-kitchen .kes-rel > div { padding:10px 13px; border:1px solid var(--border); border-radius:7px; background:var(--surface); }
+#view-kitchen .kes-rel .k { font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-kitchen .kes-rel .v { font-size:13px; font-weight:800; color:var(--navy); margin-top:3px; line-height:1.3; }
+#view-kitchen .kes-rel .v.on { color:#047857; }
+#view-kitchen .kes-rel .v.off { color:#64748b; }
+#view-kitchen .kes-rel .v.x { color:var(--teal-dim); }
+#view-kitchen .kes-flow { display:flex; flex-wrap:wrap; align-items:center; gap:6px; font-size:11px; font-weight:800; color:var(--navy); }
+#view-kitchen .kes-flow span { background:var(--surface); border:1px solid var(--border); padding:4px 10px; border-radius:5px; }
+#view-kitchen .kes-flow i { font-style:normal; color:var(--text-light); }
+#view-kitchen .kes-sigc { display:grid; grid-template-columns:1.4fr 1fr; gap:12px; }
+#view-kitchen .kes-sigc > div { padding:15px 17px; border:1px solid var(--border); border-radius:8px; background:var(--surface); border-top:4px solid var(--navy); }
+#view-kitchen .kes-sigc .n { font-size:40px; font-weight:800; color:var(--navy); line-height:1.05; margin-top:10px; }
+#view-kitchen .kes-sigc .n small { font-size:12px; font-weight:700; color:var(--text-muted); }
+#view-kitchen .kes-sigc .s { font-size:10.5px; color:var(--text-muted); line-height:1.55; margin-top:6px; }
+#view-kitchen .kes-prio { counter-reset:kp; list-style:none; margin:0; padding:0; display:grid; gap:8px; }
+#view-kitchen .kes-prio li { counter-increment:kp; display:grid; grid-template-columns:34px 1fr auto; gap:12px; align-items:center; padding:10px 14px; border:1px solid var(--border); border-radius:7px; background:var(--surface); font-size:12px; color:var(--navy); font-weight:700; line-height:1.45; }
+#view-kitchen .kes-prio li::before { content:counter(kp); display:flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:50%; background:var(--navy); color:#fff; font-size:12px; font-weight:800; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-kitchen .kes-prio li em { font-style:normal; font-size:9px; font-weight:800; letter-spacing:0.8px; text-transform:uppercase; padding:3px 8px; border-radius:4px; white-space:nowrap; }
+#view-kitchen .kes-prio li em.c { color:var(--teal-dim); background:rgba(0,180,216,0.1); }
+#view-kitchen .kes-prio li em.l { color:#475569; background:rgba(148,163,184,0.18); }
+#view-kitchen .kes-dq { display:grid; grid-template-columns:repeat(3,1fr); gap:9px; }
+#view-kitchen .kes-dq > div { padding:11px 14px; border:1px solid var(--border); border-left:3px solid #f59e0b; border-radius:0 7px 7px 0; background:var(--surface); font-size:11.5px; font-weight:700; color:var(--navy); line-height:1.5; }
+#view-kitchen .kes-dq > div span { display:block; font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:#b45309; margin-bottom:3px; }
+#view-kitchen .kes-gwi { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-top:14px; }
+#view-kitchen .kes-gwi > div { padding:11px 14px; border:1px solid var(--border); border-top:3px solid var(--teal); border-radius:7px; background:var(--surface); }
+#view-kitchen .kes-gwi > div.z { border-top-color:#f59e0b; }
+#view-kitchen .kes-gwi b { display:block; font-size:11.5px; font-weight:800; color:var(--navy); }
+#view-kitchen .kes-gwi span { display:block; font-size:10.5px; color:var(--text-muted); line-height:1.55; margin-top:4px; }
+@media (max-width: 1100px) {
+  #view-kitchen .kes-rel { grid-template-columns:repeat(3,1fr); }
+  #view-kitchen .kes-gwi, #view-kitchen .kes-dq { grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width: 900px) {
+  #view-kitchen .kes-rel, #view-kitchen .kes-sigc, #view-kitchen .kes-gwi, #view-kitchen .kes-dq { grid-template-columns:1fr; }
+  #view-kitchen .kes-prio li { grid-template-columns:34px 1fr; }
+  #view-kitchen .kes-prio li em { grid-column:2; justify-self:start; }
+}
+
 /* ═══════════════════════════════════════════════════════════════
    AIOS · COLLAPSIBLE SIDEBAR + EXPORT CONTROLS
    Presentation only. Expanded (220px) remains the default; the
@@ -4083,6 +4353,10 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
     </div>
     <div class="nav-item" onclick="showView('view-haldex', this)" title="HALDEX Products de Mexico · Customs Agency CLIENT · AIOS Classification not supplied">
       <span>◆</span> <span style="flex:1;">HALDEX Products de Mexico</span>
+      <span class="recent-cls" style="background:rgba(16,185,129,0.2);color:#34d399;">CLIENT</span>
+    </div>
+    <div class="nav-item" onclick="showView('view-kitchen', this)" title="Kitchen Equipment de San Luis · Customs CLIENT / Logistics Cross-Sell · AIOS Classification not supplied">
+      <span>◆</span> <span style="flex:1;">Kitchen Equipment de San Luis</span>
       <span class="recent-cls" style="background:rgba(16,185,129,0.2);color:#34d399;">CLIENT</span>
     </div>
   </div>
@@ -4668,6 +4942,37 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
         <span class="acct-tag">Nuevo Laredo</span>
         <span class="acct-tag">MTY Airport</span>
         <span class="acct-tag">Customs Shared Wallet</span>
+      </div>
+    </div>
+
+    <!-- Kitchen Equipment de San Luis -->
+    <div class="account-card" onclick="showViewById('view-kitchen')" title="Kitchen Equipment de San Luis is an Akzent/Arcatek Customs Agency CLIENT. Akzent handles no logistics/freight for the account: Akzent Captured Freight Shipments = 0, Logistics Wallet 0.0%. Panjiva shows 1,458 visible Shipments in 2026 YTD Jan–Jul (401 Imports / 1,057 Exports). Akzent patent 3468 accounts for 731 of them — a 50.1% Customs Wallet (Imports 19.7%, Exports 61.7%). Other-Patent Reference 727 Shipments. Profit not calculable from supplied sources.">
+      <div class="account-card-header">
+        <div>
+          <div class="account-name">Kitchen Equipment de San Luis</div>
+          <div class="account-industry">Customs CLIENT · Logistics Cross-Sell · 2026 YTD Jan–Jul</div>
+        </div>
+        <div style="display:flex;gap:5px;align-items:center;flex-shrink:0;">
+          <span class="account-cls-badge client">CLIENT</span>
+        </div>
+      </div>
+      <div class="account-metrics" style="grid-template-columns:repeat(4,1fr);">
+        <div class="acct-metric"><div class="acct-metric-val">1,458</div><div class="acct-metric-lbl">Visible YTD Shipments</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">0.0%</div><div class="acct-metric-lbl">Logistics Wallet</div></div>
+        <div class="acct-metric"><div class="acct-metric-val" style="color:var(--teal-dim);">50.1%</div><div class="acct-metric-lbl">Customs Wallet</div></div>
+        <div class="acct-metric"><div class="acct-metric-val" style="font-size:15px;color:var(--text-light);">n/a</div><div class="acct-metric-lbl">Profit</div></div>
+      </div>
+      <div style="margin-top:8px;padding:7px 10px;background:rgba(0,180,216,0.06);border-left:3px solid var(--teal);border-radius:0 4px 4px 0;">
+        <div style="font-size:9px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:var(--teal-dim);">Customs CLIENT / Logistics Cross-Sell</div>
+        <div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;margin-top:2px;">731 of 1,458 YTD Shipments on Akzent patents &mdash; 92.4% at Nuevo Laredo, no Akzent freight</div>
+      </div>
+      <div class="account-tags">
+        <span class="acct-tag" style="background:rgba(16,185,129,0.15);color:#10b981;border-color:rgba(16,185,129,0.3);">CLIENT</span>
+        <span class="acct-tag">Customs Agency</span>
+        <span class="acct-tag">Nuevo Laredo</span>
+        <span class="acct-tag">Colombia NL</span>
+        <span class="acct-tag">Logistics Cross-Sell</span>
+        <span class="acct-tag">Customs Wallet Expansion</span>
       </div>
     </div>
 
@@ -14242,6 +14547,406 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
   </div>
 </div>
 
+<!-- ══ KITCHEN EQUIPMENT DE SAN LUIS VIEW — AIOS CUSTOMS CLIENT / LOGISTICS CROSS-SELL ══ -->
+<div id="view-kitchen" class="view">
+  <div class="page-header">
+    <div class="page-header-left">
+      <div class="page-header-eyebrow">CLIENT Account · Customs Agency CLIENT · Executive Summary · Logistics Intelligence · Customs Agency Intelligence · Commercial Synthesis</div>
+      <div class="page-header-title">Kitchen Equipment de San Luis</div>
+      <div class="page-header-sub">Existing Customs Client with Logistics Cross-Sell and Customs Wallet Expansion Opportunity · FY2025 and 2026 YTD Jan–Jul</div>
+    </div>
+    <div class="page-header-meta">
+      <span class="classification-badge client">CLIENT</span>
+      <button class="print-btn" onclick="printView('view-kitchen')">⬇ Export PDF</button>
+    </div>
+  </div>
+  <div class="content-body">
+
+    <!-- Identity strip -->
+    <div class="card" style="border-top:3px solid #10b981;">
+      <div class="card-body" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:11px 18px;">
+        <span style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);">Commercial Status</span>
+        <span style="font-size:12.5px;font-weight:800;color:var(--teal-dim);letter-spacing:0.5px;">CUSTOMS CLIENT / LOGISTICS CROSS-SELL</span>
+        <span style="width:1px;height:20px;background:var(--border);"></span>
+        <span style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);">Akzent/Arcatek Customs Patents</span>
+        <span class="kes-pat ak">3468</span><span class="kes-pat ak" title="Akzent/Arcatek proprietary patent — zero visible Shipments for this account in the Panjiva dataset">1930</span>
+        <span style="width:1px;height:20px;background:var(--border);"></span>
+        <span style="font-size:10.5px;color:var(--navy);line-height:1.5;"><span class="kes-src pj">Panjiva</span> Source period Jan 2, 2025 – Jul 31, 2026 · FY2025 = Jan 1–Dec 31, 2025 · 2026 YTD = Jan 1–Jul 31, 2026</span>
+        <span style="flex:1;min-width:220px;font-size:10px;color:var(--text-muted);line-height:1.55;"><strong style="color:var(--navy);">Akzent currently handles no logistics/freight for this account.</strong> Akzent Captured Freight Shipments = 0 <span class="kes-src ak">Akzent Fact</span>. Customs and Logistics wallets are completely independent; customs patents never imply freight capture. 2026 YTD is never annualized.</span>
+      </div>
+    </div>
+
+    <div class="kes-chapter exec" id="kes-ch-1">
+      <div class="kes-chapter-n">Chapter 1</div>
+      <div class="kes-chapter-t">Executive Account Summary</div>
+      <div class="kes-chapter-s">CLIENT · customs relationship active · logistics relationship none</div>
+      <div class="kes-chapnav"><span>Jump to</span>
+        <button type="button" onclick="document.getElementById('kes-ch-2').scrollIntoView({behavior:'smooth'});">Logistics Intelligence</button>
+        <button type="button" onclick="document.getElementById('kes-ch-3').scrollIntoView({behavior:'smooth'});">Customs Agency Intelligence</button>
+        <button type="button" onclick="document.getElementById('kes-ch-4').scrollIntoView({behavior:'smooth'});">Commercial Synthesis</button>
+      </div>
+    </div>
+
+    <!-- 01 EXECUTIVE VIEWPORT -->
+    <div class="card" style="border-top:3px solid #10b981;">
+      <div class="card-header"><span class="accent">01</span> Executive Viewport — Relationship, Dual Wallet, Scale, Profit</div>
+      <div class="card-body">
+        <div class="kes-rel">
+          <div><div class="k">Relationship</div><div class="v on">CLIENT</div></div>
+          <div><div class="k">Customs relationship</div><div class="v on">Active · patent 3468</div></div>
+          <div><div class="k">Logistics relationship</div><div class="v off">None · 0 freight Shipments</div></div>
+          <div><div class="k">Profit</div><div class="v off">Not calculable</div></div>
+          <div><div class="k">Primary relationship expansion</div><div class="v x">Customs + Logistics Cross-Sell</div></div>
+        </div>
+
+        <div class="kes-thesis">Akzent already owns a meaningful portion of Kitchen Equipment's <b>customs wallet — 50.1%</b> in 2026 YTD, and <b>92.4% at Nuevo Laredo</b> — but currently owns <b>0% of its logistics wallet</b>. The expansion opportunity is both <b>deeper customs penetration</b> and <b>logistics cross-selling</b>, without assuming that visible Panjiva whitespace is automatically winnable.</div>
+
+        <div style="margin-top:18px;">
+          <div class="kes-sublbl">Two independent wallets — never combined · 2026 YTD Jan–Jul</div>
+          <div class="kes-tri">
+            <div class="log">
+              <div class="wk">Logistics Wallet</div>
+              <div class="wv">0.0%</div>
+              <div class="wbar"><div style="width:0%;"></div></div>
+              <div class="wf">0 Akzent Captured Freight Shipments of 1,458 Panjiva Visible Logistics Reference Shipments. <span class="kes-calc">AIOS Calculation</span><br>Visible Uncaptured Reference: 1,458 — not automatically winnable.</div>
+            </div>
+            <div class="cus">
+              <div class="wk" style="color:var(--teal-dim);">Customs Wallet — the active CLIENT relationship</div>
+              <div class="wv">50.1%</div>
+              <div class="wbar"><div style="width:50.1%;background:var(--teal);"></div><div style="width:49.9%;background:#f59e0b;"></div></div>
+              <div class="wf"><strong style="color:var(--navy);">731 Akzent Patent Shipments</strong> of 1,458 visible customs Shipments · <strong style="color:#b45309;">727 Other-Patent Reference</strong> <span class="kes-calc">AIOS Calculation</span></div>
+            </div>
+            <div class="pro">
+              <div class="wk">Profit</div>
+              <div class="wv">Not calculable from supplied sources</div>
+              <div class="wf">Panjiva shows the customs universe and patent usage, not Akzent/Arcatek profit. Not estimated.</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:18px;" class="kes-hero">
+          <div>
+            <div class="k"><span class="kes-src pj">Panjiva</span> Visible Shipments · 2026 YTD</div>
+            <div class="v">1,458</div>
+            <div class="kes-split">
+              <div style="width:27.5%;background:var(--navy);" title="401 Imports"></div>
+              <div style="width:72.5%;background:var(--teal);" title="1,057 Exports"></div>
+            </div>
+            <div class="s"><strong style="color:var(--navy);">401 Imports</strong> &nbsp;·&nbsp; <strong style="color:var(--teal-dim);">1,057 Exports</strong></div>
+          </div>
+          <div>
+            <div class="k">Customs Captured · Akzent patents</div>
+            <div class="v" style="color:var(--teal-dim);">731</div>
+            <div class="s">All visible 2026 YTD Akzent patent Shipments are under <strong style="color:var(--navy);">3468</strong>. Customs capture only — not freight.</div>
+          </div>
+          <div>
+            <div class="k">Other-Patent Reference</div>
+            <div class="v" style="color:#b45309;">727</div>
+            <div class="s">Shipments cleared under 23 external patents. A reference for discovery, <strong style="color:var(--navy);">not winnable volume</strong>.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 EXECUTIVE THESIS -->
+    <div class="card">
+      <div class="card-header"><span class="accent">02</span> Executive Thesis — Observed Signal, AIOS Interpretation and Discovery Validation are separate layers</div>
+      <div class="card-body">
+        <div class="kes-sig">
+          <div class="s1"><b>Observed Signal</b>1,458 visible 2026 YTD Shipments. 731 use Akzent patent 3468 (50.1%). Import Customs Wallet 19.7%; Export Customs Wallet 61.7%. Nuevo Laredo Gateway Customs Wallet 92.4%; Colombia 20.1%; Altamira and Manzanillo 0.0%. Akzent Captured Freight Shipments = 0.</div>
+          <div class="s2"><b>AIOS Interpretation</b>An existing customs client with a <strong>logistics cross-sell</strong> and <strong>customs wallet expansion</strong> opportunity. The customs relationship provides a logical discovery path into cross-border freight procurement.</div>
+          <div class="s3"><b>Discovery Validation</b>Who owns freight versus customs procurement, why import and Colombia customs volume sits on other patents, and which visible Shipments are recurring, addressable freight.</div>
+        </div>
+        <div class="kes-note-navy">Nothing in the Interpretation or Discovery layer is a confirmed customer fact. Visible Uncaptured Reference and Other-Patent Reference describe <strong>where to look</strong>, not what is winnable.</div>
+      </div>
+    </div>
+
+    <div class="kes-chapter " id="kes-ch-2">
+      <div class="kes-chapter-n">Chapter 2</div>
+      <div class="kes-chapter-t">Logistics Intelligence</div>
+      <div class="kes-chapter-s">Panjiva Visible Universe only · Akzent Captured Freight Shipments = 0 · cross-sell whitespace, not existing business</div>
+    </div>
+
+    <!-- 03 LOGISTICS WALLET -->
+    <div class="card">
+      <div class="card-header"><span class="accent">03</span> Logistics Wallet — Visible Reference, not Captured Business</div>
+      <div class="card-body">
+        <div class="kes-note-na" style="margin-top:0;margin-bottom:14px;"><strong>Akzent Captured Freight Shipments = 0. Kitchen Equipment de San Luis is a Customs Agency CLIENT. No Panjiva Shipment on this page is Akzent freight, and customs patent 3468 is never read as freight capture.</strong></div>
+        <div style="overflow-x:auto;"><table class="hub-table" style="font-size:11.5px;">
+          <thead><tr><th>Period</th><th class="num">Panjiva Visible Logistics Reference</th><th class="num">Akzent Captured Freight Shipments</th><th class="num">Logistics Wallet</th><th class="num">Visible Uncaptured Reference</th></tr></thead>
+          <tbody>
+            <tr class="kes-muted"><td>FY2025 · Jan 1–Dec 31, 2025</td><td class="num kes-mono">2,612</td><td class="num kes-mono">0</td><td class="num"><strong>0.0%</strong></td><td class="num kes-mono">2,612</td></tr>
+            <tr style="background:rgba(148,163,184,0.07);"><td><strong>2026 YTD · Jan 1–Jul 31, 2026</strong></td><td class="num"><strong>1,458</strong></td><td class="num"><strong>0</strong></td><td class="num"><strong style="font-size:15px;color:#64748b;">0.0%</strong></td><td class="num"><strong>1,458</strong></td></tr>
+          </tbody></table></div>
+        <div class="kes-note-navy">Commercial status: <strong>CUSTOMS CLIENT / LOGISTICS CROSS-SELL</strong>. The 0.0% Logistics Wallet is a relationship fact, not a performance score. <strong>Visible Uncaptured Reference is not automatically winnable business.</strong></div>
+      </div>
+    </div>
+
+    <!-- 04 SCALE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">04</span> Panjiva Visible Universe — FY2025 and 2026 YTD kept separate</div>
+      <div class="card-body">
+        <div style="overflow-x:auto;"><table class="hub-table" style="font-size:12px;">
+          <thead><tr><th>Period</th><th class="num">Imports</th><th class="num">Exports</th><th class="num">Total Visible Shipments</th><th class="num">Visible CIF Goods Value</th><th class="num">Gross Weight</th><th class="num">TEU field aggregate</th></tr></thead>
+          <tbody>
+            <tr class="kes-muted"><td>FY2025 · Jan 1–Dec 31, 2025</td><td class="num kes-mono">709</td><td class="num kes-mono">1,903</td><td class="num kes-mono">2,612</td><td class="num kes-mono">≈ USD 125.94M</td><td class="num" style="color:var(--text-light);">not supplied</td><td class="num" style="color:var(--text-light);">not supplied</td></tr>
+            <tr style="background:rgba(0,180,216,0.05);"><td><strong>2026 YTD · Jan 1–Jul 31, 2026</strong></td><td class="num"><strong>401</strong></td><td class="num"><strong>1,057</strong></td><td class="num"><strong style="font-size:14px;">1,458</strong></td><td class="num"><strong>≈ USD 68.15M</strong></td><td class="num"><strong>≈ 7.46M kg</strong></td><td class="num"><strong>≈ 670.0</strong></td></tr>
+          </tbody></table></div>
+        <div class="kes-note"><strong>CIF Goods Value is merchandise value.</strong> It is not freight spend, logistics spend, Akzent revenue, wallet value or profit.</div>
+
+        <div class="kes-sublbl" style="margin-top:18px;">Like-for-like · Jan–Jul 2025 vs Jan–Jul 2026</div>
+        <div style="overflow-x:auto;"><table class="hub-table" style="font-size:12px;">
+          <thead><tr><th>Window</th><th class="num">Visible Shipments</th></tr></thead>
+          <tbody>
+            <tr><td>Jan–Jul 2025</td><td class="num kes-mono">1,600</td></tr>
+            <tr style="background:rgba(0,180,216,0.05);"><td><strong>Jan–Jul 2026 · 2026 YTD</strong></td><td class="num"><strong>1,458</strong></td></tr>
+            <tr><td><strong>Observed change</strong></td><td class="num"><strong style="color:#b91c1c;font-size:14px;">−8.9%</strong></td></tr>
+          </tbody></table></div>
+        <div class="kes-note-navy">YoY change is measured on the <strong>Jan–Jul window only</strong>. FY2025 (2,612) is never compared with 2026 YTD (1,458) as growth, and 2026 YTD is never annualized.</div>
+      </div>
+    </div>
+
+    <!-- 05 MODAL PROFILE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">05</span> Modal Profile — 2026 YTD</div>
+      <div class="card-body">
+        <div class="kes-sublbl">Transport method · 1,458 Shipments</div>
+        <div class="kes-rows"><div class="kes-row"><div class="lbl">🚚 Truck</div><div class="bar"><div style="width:100.0%;background:var(--navy);"></div></div><div class="val">794 <span>54.5%</span></div></div><div class="kes-row"><div class="lbl">✈ Air</div><div class="bar"><div style="width:23.0%;background:var(--teal);"></div></div><div class="val">183 <span>12.6%</span></div></div><div class="kes-row"><div class="lbl">⚓ Maritime</div><div class="bar"><div style="width:14.4%;background:#0e7490;"></div></div><div class="val">114 <span>7.8%</span></div></div><div class="kes-row"><div class="lbl">— Unknown / unspecified</div><div class="bar"><div style="width:46.2%;background:#94a3b8;"></div></div><div class="val">367 <span>25.2%</span></div></div></div>
+        <div class="kes-note-navy"><strong>Unknown / unspecified (367 Shipments, 25.2%) is a Panjiva source state</strong>, not a mode. It is not redistributed into Truck, Air or Maritime.</div>
+      </div>
+    </div>
+
+    <!-- 06 CORE LOGISTICS SIGNALS -->
+    <div class="card" style="border-top:3px solid var(--navy);">
+      <div class="card-header"><span class="accent">06</span> Core Routes — strongest visible logistics signals · 2026 YTD</div>
+      <div class="card-body">
+        <div class="kes-eyebrow" style="margin-bottom:10px;"><span class="kes-src pj">Panjiva</span> Visible signals only · not Akzent freight · not declared available or winnable</div>
+        <div class="kes-sigc">
+          <div>
+            <div class="kes-sublbl" style="margin-bottom:6px;">Primary signal</div>
+            <div class="kes-flow"><span>Export</span><i>→</i><span>United States</span><i>→</i><span>Nuevo Laredo</span><i>→</i><span>🚚 Truck</span></div>
+            <div class="n">524 <small>Shipments · ≈ 35.9% of the 2026 YTD Panjiva universe</small></div>
+            <div class="s">The single largest visible flow in the account's network.</div>
+          </div>
+          <div style="border-top-color:var(--teal);">
+            <div class="kes-sublbl" style="margin-bottom:6px;">Additional major signal</div>
+            <div class="kes-flow"><span>Export</span><i>→</i><span>Canada</span><i>→</i><span>Nuevo Laredo</span><i>→</i><span>🚚 Truck</span></div>
+            <div class="n">128 <small>Shipments</small></div>
+            <div class="s">Second visible cross-border export flow through the same gateway.</div>
+          </div>
+        </div>
+        <div class="kes-note-na"><strong>These Shipments are not Akzent freight.</strong> Akzent Captured Freight = 0. The signals are not stated as available or winnable, and no logistics wallet dollars are calculated. A complete ≥80% Core Route set was not part of the AIOS delivery for this account.</div>
+      </div>
+    </div>
+
+    <!-- 07 LOGISTICS WHITESPACE -->
+    <div class="card" style="border-top:3px solid #94a3b8;">
+      <div class="card-header"><span class="accent">07</span> Logistics Whitespace — Visible Uncaptured Reference · 2026 YTD</div>
+      <div class="card-body">
+        <div class="kes-dir">
+          <div><div class="k">Panjiva Visible Reference</div><div class="v nv">1,458</div><div class="s">All visible 2026 YTD Shipments.</div></div>
+          <div><div class="k">Akzent Captured Freight</div><div class="v nv" style="color:#64748b;">0</div><div class="s">Logistics Wallet 0.0%.</div></div>
+          <div><div class="k">Visible Uncaptured Reference</div><div class="v nv">1,458</div><div class="s">Not automatically winnable business.</div></div>
+        </div>
+        <div class="kes-sig">
+          <div class="s1"><b>Observed Signal</b>0 Akzent freight Shipments. The largest visible flow is Export → United States → Nuevo Laredo → Truck (524), followed by Export → Canada → Nuevo Laredo → Truck (128).</div>
+          <div class="s2"><b>AIOS Interpretation</b>The existing customs relationship provides a logical discovery path into cross-border freight procurement and logistics cross-selling.</div>
+          <div class="s3"><b>Discovery Validation</b>Which providers move the Nuevo Laredo freight today, who owns freight procurement, and which visible Shipments are recurring freight opportunities versus non-addressable transactions.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="kes-chapter cus" id="kes-ch-3">
+      <div class="kes-chapter-n">Chapter 3</div>
+      <div class="kes-chapter-t">Customs Agency Intelligence</div>
+      <div class="kes-chapter-s">The active CLIENT relationship · Akzent/Arcatek Patents 3468 + 1930 · Panjiva Customs Agent field</div><div class="kes-prim">Active relationship chapter</div>
+    </div>
+
+    <!-- 08 CUSTOMS WALLET -->
+    <div class="card" style="border-top:3px solid var(--teal);">
+      <div class="card-header"><span class="accent">08</span> Customs Wallet — FY2025, 2026 YTD and like-for-like</div>
+      <div class="card-body">
+        <div style="overflow-x:auto;"><table class="hub-table" style="font-size:11.5px;">
+          <thead><tr><th>Period</th><th class="num">Supported Customs Universe</th><th class="num">Akzent Patent Shipments</th><th class="num">Other-Patent Reference</th><th class="num">Customs Wallet</th></tr></thead>
+          <tbody>
+            <tr class="kes-muted"><td>FY2025 · Jan 1–Dec 31, 2025</td><td class="num kes-mono">2,612</td><td class="num kes-mono">1,192</td><td class="num kes-mono">1,420</td><td class="num"><strong>45.6%</strong></td></tr>
+            <tr style="background:rgba(0,180,216,0.06);"><td><strong>2026 YTD · Jan 1–Jul 31, 2026</strong></td><td class="num"><strong>1,458</strong></td><td class="num"><strong>731</strong></td><td class="num"><strong style="color:#b45309;">727</strong></td><td class="num"><strong style="color:var(--teal-dim);font-size:16px;">50.1%</strong></td></tr>
+          </tbody></table></div>
+
+        <div class="kes-sublbl" style="margin-top:18px;">Like-for-like trend · Jan–Jul</div>
+        <div style="overflow-x:auto;"><table class="hub-table" style="font-size:11.5px;">
+          <thead><tr><th>Window</th><th class="num">Visible Shipments</th><th class="num">Akzent Customs Captured</th><th class="num">Customs Wallet</th></tr></thead>
+          <tbody>
+            <tr><td>Jan–Jul 2025</td><td class="num kes-mono">1,600</td><td class="num kes-mono">750</td><td class="num"><strong>46.9%</strong></td></tr>
+            <tr style="background:rgba(0,180,216,0.06);"><td><strong>Jan–Jul 2026</strong></td><td class="num"><strong>1,458</strong></td><td class="num"><strong>731</strong></td><td class="num"><strong style="color:var(--teal-dim);">50.1%</strong></td></tr>
+            <tr><td><strong>Observed change</strong></td><td class="num"><strong style="color:#b91c1c;">−8.9%</strong></td><td class="num"><strong style="color:#b91c1c;">−2.5%</strong></td><td class="num"><strong style="color:#047857;font-size:14px;">+3.3 pp</strong></td></tr>
+          </tbody></table></div>
+        <div class="kes-sig">
+          <div class="s1"><b>Observed Signal</b>Visible Shipments −8.9%, Akzent Customs Captured Shipments −2.5%, Customs Wallet +3.3 percentage points (Jan–Jul 2025 vs Jan–Jul 2026).</div>
+          <div class="s2"><b>AIOS Interpretation</b>Akzent customs penetration increased even though the visible shipment universe declined. This is customs share, <strong>not logistics growth</strong>.</div>
+          <div class="s3"><b>Discovery Validation</b>Whether the share gain reflects allocation decisions, gateway mix or product mix.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 09 IMPORT VS EXPORT -->
+    <div class="card" style="border-top:3px solid var(--teal);">
+      <div class="card-header"><span class="accent">09</span> Import vs Export Customs Wallet — 2026 YTD</div>
+      <div class="card-body">
+        <div style="overflow-x:auto;"><table class="hub-table" style="font-size:11.5px;">
+          <thead><tr><th>Direction</th><th class="num">Visible</th><th class="num">Akzent Patents</th><th class="num">Other-Patent Reference</th><th class="num">Customs Wallet</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Imports</strong></td><td class="num kes-mono">401</td><td class="num kes-mono">79</td><td class="num kes-mono" style="color:#b45309;">322</td><td class="num"><strong style="color:#b45309;font-size:14px;">19.7%</strong></td></tr>
+            <tr><td><strong>Exports</strong></td><td class="num kes-mono">1,057</td><td class="num kes-mono">652</td><td class="num kes-mono" style="color:#b45309;">405</td><td class="num"><strong style="color:var(--teal-dim);font-size:14px;">61.7%</strong></td></tr>
+            <tr style="background:rgba(0,180,216,0.06);"><td><strong>Total</strong></td><td class="num"><strong>1,458</strong></td><td class="num"><strong>731</strong></td><td class="num"><strong style="color:#b45309;">727</strong></td><td class="num"><strong style="color:var(--teal-dim);font-size:16px;">50.1%</strong></td></tr>
+          </tbody></table></div>
+        <div class="kes-rows" style="margin-top:12px;">
+          <div class="kes-row"><div class="lbl">Exports<em>1,057 visible · 652 Akzent · 405 Other</em></div><div class="kes-cw-bar" style="width:100%;"><div class="kes-cw-ak" style="width:61.7%;"></div><div class="kes-cw-ot" style="width:38.3%;"></div></div><div class="val">61.7%</div></div>
+          <div class="kes-row"><div class="lbl">Imports<em>401 visible · 79 Akzent · 322 Other</em></div><div class="kes-cw-bar" style="width:37.9%;"><div class="kes-cw-ak" style="width:19.7%;"></div><div class="kes-cw-ot" style="width:80.3%;"></div></div><div class="val">19.7%</div></div>
+        </div>
+        <div class="kes-note"><strong>Observed Signal — structural asymmetry:</strong> Akzent has significantly stronger customs penetration on Exports (61.7%) than Imports (19.7%). The reason is <strong>not claimed</strong> and requires discovery validation. Bar length scales with directional volume.</div>
+      </div>
+    </div>
+
+    <!-- 10 PATENT INTELLIGENCE -->
+    <div class="card" style="border-top:3px solid #f59e0b;">
+      <div class="card-header"><span class="accent">10</span> Patent Intelligence and External Patent Concentration — 2026 YTD</div>
+      <div class="card-body">
+        <div class="kes-dir">
+          <div><div class="k">Distinct customs patents visible</div><div class="v nv">24</div><div class="s">Akzent 3468 plus 23 external patents.</div></div>
+          <div><div class="k">Akzent proprietary patents</div><div class="v">3468 · 1930</div><div class="s">3468: <strong style="color:var(--navy);">731</strong> Shipments · 1930: <strong style="color:var(--navy);">0</strong> visible Shipments — retained as an Akzent/Arcatek patent.</div></div>
+          <div><div class="k">Other-Patent Reference</div><div class="v" style="color:#b45309;">727</div><div class="s">Shipments under external patents.</div></div>
+        </div>
+        <div class="kes-rows" style="margin-top:16px;">
+          <div class="kes-row"><div class="lbl"><span class="kes-pat ak" title="Akzent/Arcatek proprietary patent">3468</span> &nbsp;<span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:var(--teal-dim);">AKZENT PATENT</span></div><div class="bar"><div style="width:100%;background:var(--teal);"></div></div><div class="val">731</div></div>
+          <div class="kes-row"><div class="lbl"><span class="kes-pat ot" title="External patent — the company behind it is not identified">3483</span> &nbsp;<span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:#b45309;">EXTERNAL PATENT</span></div><div class="bar"><div style="width:47.9%;background:#f59e0b;"></div></div><div class="val">350 <span>≈48% of 727</span></div></div>
+          <div class="kes-row"><div class="lbl"><span class="kes-pat ot">22 other external patents</span></div><div class="bar"><div style="width:51.6%;background:#fcd34d;"></div></div><div class="val">377</div></div>
+          <div class="kes-row"><div class="lbl"><span class="kes-pat ak" title="Akzent/Arcatek proprietary patent">1930</span> &nbsp;<span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:var(--teal-dim);">AKZENT PATENT</span></div><div class="bar"><div style="width:0%;"></div></div><div class="val">0</div></div>
+        </div>
+        <div class="kes-note"><strong>Patent 3483 — 350 Shipments, ≈48% of the 727 Other-Patent Reference.</strong> External patent concentration requiring discovery validation. The company behind any external patent is not identified.</div>
+      </div>
+    </div>
+
+    <!-- 11 PATENT × GATEWAY -->
+    <div class="card" style="border-top:3px solid var(--teal);">
+      <div class="card-header"><span class="accent">11</span> Patent × Gateway — Akzent/Arcatek operational gateways · 2026 YTD</div>
+      <div class="card-body">
+        <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin-bottom:12px;font-size:10px;font-weight:700;color:var(--text-muted);">
+          <span><span style="display:inline-block;width:12px;height:12px;border-radius:3px;background:var(--teal);vertical-align:-2px;"></span> Akzent Patent Shipments</span>
+          <span><span style="display:inline-block;width:12px;height:12px;border-radius:3px;background:#f59e0b;vertical-align:-2px;"></span> Other Patent</span>
+          <span><span style="display:inline-block;width:12px;height:6px;border-radius:3px;background:var(--navy);opacity:0.55;vertical-align:0;"></span> Gateway materiality — bar width scales with visible gateway volume</span>
+        </div>
+        <div class="kes-sublbl">Observed Signal</div>
+        <div class="kes-gwr hot"><div><div class="kes-cw-lbl">Nuevo Laredo</div><div class="kes-cw-sub">706 visible · 652 Akzent Patent · 54 Other Patent</div></div><div><div class="kes-cw-bar" style="width:100.0%;min-width:34px;"><div class="kes-cw-ak" style="width:92.4%;"></div><div class="kes-cw-ot" style="width:7.6%;"></div></div><div class="kes-matbar" style="width:100.0%;min-width:34px;"><div style="width:100%;"></div></div><div class="kes-matlbl">Gateway materiality — 706 of 706 Shipments at the largest highlighted gateway</div></div><div class="kes-cw-legend"><b>92.4%</b>Gateway Customs Wallet<br><span style="color:#b45309;font-weight:700;">54 Other-Patent Reference</span></div></div><div class="kes-gwr hot"><div><div class="kes-cw-lbl">Colombia</div><div class="kes-cw-sub">393 visible · 79 Akzent Patent · 314 Other Patent</div></div><div><div class="kes-cw-bar" style="width:55.7%;min-width:34px;"><div class="kes-cw-ak" style="width:20.1%;"></div><div class="kes-cw-ot" style="width:79.9%;"></div></div><div class="kes-matbar" style="width:55.7%;min-width:34px;"><div style="width:100%;"></div></div><div class="kes-matlbl">Gateway materiality — 393 of 706 Shipments at the largest highlighted gateway</div></div><div class="kes-cw-legend"><b>20.1%</b>Gateway Customs Wallet<br><span style="color:#b45309;font-weight:700;">314 Other-Patent Reference</span></div></div><div class="kes-gwr zero"><div><div class="kes-cw-lbl">Altamira</div><div class="kes-cw-sub">42 visible · 0 Akzent Patent · 42 Other Patent</div></div><div><div class="kes-cw-bar" style="width:5.9%;min-width:34px;"><div class="kes-cw-ak" style="width:0.0%;"></div><div class="kes-cw-ot" style="width:100.0%;"></div></div><div class="kes-matbar" style="width:5.9%;min-width:34px;"><div style="width:100%;"></div></div><div class="kes-matlbl">Gateway materiality — 42 of 706 Shipments at the largest highlighted gateway</div></div><div class="kes-cw-legend"><b>0.0%</b>Gateway Customs Wallet<br><span style="color:#b45309;font-weight:700;">42 Other-Patent Reference</span></div></div><div class="kes-gwr zero"><div><div class="kes-cw-lbl">Manzanillo</div><div class="kes-cw-sub">45 visible · 0 Akzent Patent · 45 Other Patent</div></div><div><div class="kes-cw-bar" style="width:6.4%;min-width:34px;"><div class="kes-cw-ak" style="width:0.0%;"></div><div class="kes-cw-ot" style="width:100.0%;"></div></div><div class="kes-matbar" style="width:6.4%;min-width:34px;"><div style="width:100%;"></div></div><div class="kes-matlbl">Gateway materiality — 45 of 706 Shipments at the largest highlighted gateway</div></div><div class="kes-cw-legend"><b>0.0%</b>Gateway Customs Wallet<br><span style="color:#b45309;font-weight:700;">45 Other-Patent Reference</span></div></div>
+        <div style="overflow-x:auto;margin-top:14px;"><table class="hub-table" style="font-size:11.5px;"><thead><tr><th>Gateway</th><th class="num">Visible Shipments</th><th class="num">Akzent Patent Shipments</th><th class="num">Other Patent</th><th class="num">Gateway Customs Wallet</th></tr></thead><tbody><tr><td><strong style="color:var(--navy);">Nuevo Laredo</strong></td><td class="num kes-mono">706</td><td class="num kes-mono">652</td><td class="num kes-mono" style="color:#b45309;">54</td><td class="num"><strong style="color:var(--teal-dim);font-size:13px;">92.4%</strong></td></tr><tr><td><strong style="color:var(--navy);">Colombia</strong></td><td class="num kes-mono">393</td><td class="num kes-mono">79</td><td class="num kes-mono" style="color:#b45309;">314</td><td class="num"><strong style="color:var(--teal-dim);font-size:13px;">20.1%</strong></td></tr><tr><td><strong style="color:var(--navy);">Altamira</strong></td><td class="num kes-mono">42</td><td class="num kes-mono">0</td><td class="num kes-mono" style="color:#b45309;">42</td><td class="num"><strong style="color:#b45309;font-size:13px;">0.0%</strong></td></tr><tr><td><strong style="color:var(--navy);">Manzanillo</strong></td><td class="num kes-mono">45</td><td class="num kes-mono">0</td><td class="num kes-mono" style="color:#b45309;">45</td><td class="num"><strong style="color:#b45309;font-size:13px;">0.0%</strong></td></tr></tbody></table></div>
+        <div class="kes-note-navy">The four highlighted gateways cover 1,186 of the 1,458 visible 2026 YTD Shipments; the remaining 272 move through other gateways and are outside this highlighted set.</div>
+
+        <div class="kes-sublbl" style="margin-top:18px;">AIOS Interpretation</div>
+        <div class="kes-gwi">
+          <div><b>Nuevo Laredo</b><span>High existing customs penetration. Protect and expand relationship.</span></div>
+          <div class="z"><b>Colombia</b><span>Material customs whitespace despite existing Akzent/Arcatek operating capability.</span></div>
+          <div class="z"><b>Altamira</b><span>Visible customs whitespace and existing Akzent/Arcatek operating capability.</span></div>
+          <div class="z"><b>Manzanillo</b><span>Visible customs whitespace and existing Akzent/Arcatek operating capability.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12 CUSTOMS WHITESPACE -->
+    <div class="card" style="border-top:3px solid #f59e0b;">
+      <div class="card-header"><span class="accent">12</span> Customs Whitespace — Other-Patent Reference · 2026 YTD</div>
+      <div class="card-body">
+        <div class="kes-dir">
+          <div><div class="k">Visible Universe</div><div class="v nv">1,458</div><div class="s">Captured through Akzent patents: <strong style="color:var(--navy);">731</strong></div></div>
+          <div><div class="k">Import Other-Patent Reference</div><div class="v" style="color:#b45309;">322</div><div class="s">of 401 Imports</div></div>
+          <div><div class="k">Export Other-Patent Reference</div><div class="v" style="color:#b45309;">405</div><div class="s">of 1,057 Exports</div></div>
+        </div>
+        <div style="margin:14px 0 4px;"><span class="kes-ov">Other-Patent Reference ≠ winnable volume</span></div>
+        <div class="kes-note">The 727 Other-Patent Reference Shipments describe customs activity handled under external patents. They are a <strong>reference for discovery</strong>, not winnable volume, and no economics are extrapolated across them.</div>
+      </div>
+    </div>
+
+    <div class="kes-chapter syn" id="kes-ch-4">
+      <div class="kes-chapter-n">Chapter 4</div>
+      <div class="kes-chapter-t">Commercial Synthesis</div>
+      <div class="kes-chapter-s">Observed Signal → AIOS Interpretation → Discovery Validation</div>
+    </div>
+
+    <!-- 13 PROFIT -->
+    <div class="card">
+      <div class="card-header"><span class="accent">13</span> Profit — Not calculable from supplied sources</div>
+      <div class="card-body">
+        <div class="kes-prov">
+          <div><div class="k">Status</div><div class="v">NOT CALCULABLE</div><div class="s">Panjiva identifies the visible customs universe and customs patent usage but does not provide Akzent/Arcatek actual profit for the account.</div></div>
+          <div><div class="k">Not produced</div><div class="v" style="font-size:14px;">Profit estimate · average profit per Shipment · GP extrapolation into whitespace · Profit Wallet · freight spend estimate</div><div class="s">CIF merchandise value is never converted into logistics revenue.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 14 COMMERCIAL PRIORITIES -->
+    <div class="card" style="border-top:3px solid #10b981;">
+      <div class="card-header"><span class="accent">14</span> Commercial Priorities — Existing Customs Client with Logistics Cross-Sell and Customs Wallet Expansion Opportunity</div>
+      <div class="card-body">
+        <ol class="kes-prio">
+          <li>Protect the high customs penetration at Nuevo Laredo (92.4%).<em class="c">Customs</em></li>
+          <li>Investigate the low customs penetration at Colombia (20.1%).<em class="c">Customs</em></li>
+          <li>Validate why Altamira and Manzanillo show visible activity but zero Akzent patent capture in 2026 YTD.<em class="c">Customs</em></li>
+          <li>Expand the Customs Import Wallet, currently 19.7%.<em class="c">Customs</em></li>
+          <li>Use the existing customs relationship to open freight discovery.<em class="l">Logistics cross-sell</em></li>
+          <li>Prioritize discovery around the high-volume Export → USA → Nuevo Laredo → Truck flow.<em class="l">Logistics cross-sell</em></li>
+          <li>Understand procurement ownership for customs versus freight before assigning any logistics opportunity.<em class="l">Logistics cross-sell</em></li>
+        </ol>
+        <div class="kes-note-navy">Priorities are shown without financial values. None of them is a confirmed opportunity.</div>
+      </div>
+    </div>
+
+    <!-- 15 DISCOVERY -->
+    <div class="card" style="border-top:3px solid #f59e0b;">
+      <div class="card-header"><span class="accent">15</span> Discovery Questions</div>
+      <div class="card-body">
+        <div class="kes-dq">
+          <div><span>Procurement</span>Who owns freight procurement versus customs procurement?</div>
+          <div><span>Freight</span>Which providers currently manage the cross-border freight associated with the Nuevo Laredo flows?</div>
+          <div><span>Customs</span>Why is Akzent customs penetration materially lower on imports than exports?</div>
+          <div><span>Customs</span>Why is Colombia customs volume fragmented across other patents?</div>
+          <div><span>Customs</span>What determines customs-agent allocation by gateway?</div>
+          <div><span>Customs</span>Why does Akzent show zero 2026 YTD patent capture at Altamira and Manzanillo?</div>
+          <div><span>Procurement</span>Are freight and customs awarded separately?</div>
+          <div><span>Freight</span>Are carrier/forwarder decisions centralized, plant-specific, lane-specific, or gateway-specific?</div>
+          <div><span>Freight</span>Which visible Panjiva Shipments represent recurring freight opportunities versus non-addressable transactions?</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 16 INFORMATION GOVERNANCE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">16</span> Information Governance — Observed Signal · AIOS Interpretation · Discovery Validation</div>
+      <div class="card-body">
+        <div class="kes-sig">
+          <div class="s1"><b>Observed Signal</b><ul class="kes-dlist" style="margin-left:14px;"><li>1,458 visible 2026 YTD Shipments; 2,612 in FY2025</li><li>731 on Akzent patent 3468 — 50.1% Customs Wallet</li><li>Imports 19.7% · Exports 61.7%</li><li>Nuevo Laredo 92.4% · Colombia 20.1% · Altamira 0.0% · Manzanillo 0.0%</li><li>727 Other-Patent Reference; patent 3483 = 350</li><li>0 Akzent freight Shipments — Logistics Wallet 0.0%</li><li>Export → USA → Nuevo Laredo → Truck: 524 Shipments</li></ul></div>
+          <div class="s2"><b>AIOS Interpretation</b>Akzent already owns a meaningful portion of the customs wallet, especially at Nuevo Laredo, but 0% of the logistics wallet. Expansion is both <strong>deeper customs penetration</strong> and <strong>logistics cross-selling</strong>.<br><br>This is interpretation, never a confirmed customer fact.</div>
+          <div class="s3"><b>Discovery Validation</b>Procurement ownership for freight versus customs, current freight providers, gateway allocation rules, and the addressability of visible Shipments. Reliable Panjiva facts are not re-asked of the customer.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 17 DATA AVAILABILITY -->
+    <div class="card">
+      <div class="card-header"><span class="accent">17</span> Data Availability</div>
+      <div class="card-body">
+        <div style="overflow-x:auto;"><table class="hub-table" style="font-size:11px;">
+          <thead><tr><th>Status</th><th>Items</th></tr></thead>
+          <tbody>
+            <tr><td><strong style="color:#047857;">Available</strong></td><td>Panjiva Imports and Exports Jan 2, 2025 – Jul 31, 2026 · transport method · gateways · Customs Agent / patent · CIF goods value · gross weight · TEU field · supplied Akzent relationship information (Customs Agency CLIENT, zero freight capture, patents 3468 + 1930)</td></tr>
+            <tr><td><strong style="color:var(--teal-dim);">Calculable</strong></td><td>visible scale · like-for-like Jan–Jul trend · Logistics Wallet = 0.0% · Customs Wallet by period, direction and gateway · Other-Patent Reference · Visible Uncaptured Reference</td></tr>
+            <tr><td><strong style="color:#b45309;">Missing</strong></td><td>Akzent/Arcatek profit, revenue and margin for the account · freight spend · identity of external patent holders · validated reasons for customs-agent allocation · addressability of visible Shipments · complete ≥80% Core Route set</td></tr>
+            <tr class="kes-muted"><td><strong>Not produced</strong></td><td>Profit estimate · Profit Wallet · logistics wallet dollars · annualized 2026 figures</td></tr>
+          </tbody></table></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <!-- ══ INDUSTRIAS AUTOMOTRICES LODI VIEW ══ -->
 <div id="view-lodi" class="view">
   <div class="page-header">
@@ -18641,6 +19346,16 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
               <td style="color:var(--text-light);" title="No AIOS Air rating supplied &middot; Export Core Route via MTY Airport is Air (22 Shipments)">&mdash;</td>
               <td style="color:var(--text-light);" title="No AIOS ILM rating supplied &middot; ILM / Control Tower is part of the AIOS Commercial Positioning">&mdash;</td>
               <td style="color:#10b981;font-weight:700;font-size:11px;">CLIENT Wallet Expansion &middot; Customs &amp; Visibility + Operational Complexity + ILM / Control Tower</td>
+            </tr>
+            <tr onclick="showViewById('view-kitchen')" style="cursor:pointer;">
+              <td><strong>Kitchen Equipment de San Luis</strong> <span style="font-size:10px;font-weight:600;color:#10b981;background:rgba(16,185,129,0.1);padding:1px 5px;border-radius:3px;margin-left:4px;">CLIENT</span></td>
+              <td><span style="color:var(--text-light);" title="AIOS Classification not supplied for this account">&mdash;</span></td>
+              <td style="color:var(--text-muted);" title="Kitchen Equipment de San Luis · Relationship CLIENT · Customs CLIENT / Logistics Cross-Sell · Akzent Captured Freight Shipments = 0 · Panjiva 2026 YTD Jan–Jul · 1,458 visible Shipments (401 Imports / 1,057 Exports) · Jan–Jul like-for-like −8.9% · Customs Wallet 50.1% (731 / 1,458) · Imports 19.7% · Exports 61.7% · Other-Patent Reference 727 · Nuevo Laredo Gateway Customs Wallet 92.4%">Kitchen Equipment &middot; Customs CLIENT</td>
+              <td style="color:var(--text-light);" title="No AIOS Cross-Border rating supplied &middot; strongest visible signal: Export → United States → Nuevo Laredo → Truck, 524 Shipments 2026 YTD (Panjiva only, not Akzent freight)">&mdash;</td>
+              <td style="color:var(--text-light);" title="No AIOS Ocean rating supplied &middot; Maritime 114 Shipments 2026 YTD (7.8%)">&mdash;</td>
+              <td style="color:var(--text-light);" title="No AIOS Air rating supplied &middot; Air 183 Shipments 2026 YTD (12.6%)">&mdash;</td>
+              <td style="color:var(--text-light);" title="No AIOS ILM rating supplied">&mdash;</td>
+              <td style="color:#10b981;font-weight:700;font-size:11px;">Customs Wallet Expansion &middot; Logistics Cross-Sell Discovery</td>
             </tr>
             <tr>
               <td><strong>Industrias Automotrices Lodi</strong> <span style="font-size:10px;font-weight:600;color:#b45309;background:rgba(245,158,11,0.12);padding:1px 5px;border-radius:3px;margin-left:4px;">LEAD</span></td>
@@ -80086,6 +80801,7 @@ const ACCOUNTS = [
   { id:'view-pipsa',     name:'Corporación Pipsa',         sub:'Corporaci&oacute;n Pipsa S.A. de C.V. &middot; CLIENT &middot; AIOS Classification AAA &middot; Operational Complexity High &middot; Metals recycling / lead processing &middot; Garc&iacute;a, Nuevo Le&oacute;n &middot; Panjiva Current YTD 2026-01-02 to 2026-07-31 2,770 Shipments &middot; 1,736 Imports &middot; 1,034 Exports &middot; Truck 99.9% &middot; Import Core Routes 2 to 95.9% &middot; Export Core Routes 3 to 82.8% &middot; Colombia NL &middot; Nuevo Laredo &middot; Manzanillo &middot; United States &middot; China &middot; Lead Metal Trading LLC &middot; Corpipsa LLC &middot; Glencore Ltd. &middot; IMMEX &middot; waste lead-acid batteries &middot; refined lead &middot; Akzent captured 2 Export Truck Shipments Jan-Aug 2026 &middot; GP $341.17 &middot; Logistics Shared Wallet 0.07% provisional reference &middot; Visible Uncaptured Reference 2,768 &middot; Customs Shared Wallet &middot; Customs Share 90.8% &middot; patents 3468 1930 3541 3954 &middot; Patent &times; Gateway &middot; Customs Wallet by Gateway &middot; Nuevo Laredo Export Customs 26.8% &middot; Customs Agency Intelligence &middot; Cross-Border &middot; Customs &amp; Visibility &middot; ILM / Control Tower', rel:'CLIENT', cls:'AAA', clsPill:'aaa' },
   { id:'view-borgwarner', name:'BorgWarner PDS Irapuato', sub:'BorgWarner PDS Irapuato S de RL de CV &middot; CLIENT &middot; AIOS Classification AAA &middot; Operational Complexity High &middot; Automotive components &middot; Irapuato Guanajuato &middot; Panjiva Current YTD 2026-01-01 to 2026-07-31 1,240 Shipments &middot; 888 Imports &middot; 352 Exports &middot; equivalent-period -20.3% &middot; 2025 Full Year 2,479 &middot; Truck &middot; Air &middot; Maritime &middot; Double Stack Rail &middot; Unknown mode &middot; Import Core Routes 48 to 80.2% &middot; Export Core Routes 9 to 80.7% &middot; Nuevo Laredo &middot; Puebla &middot; Quer&eacute;taro &middot; Manzanillo &middot; Altamira &middot; Colombia NL &middot; Piedras Negras &middot; Tijuana &middot; AIFA &middot; AICM &middot; Guadalajara &middot; China &middot; United States &middot; South Korea &middot; Germany &middot; Japan &middot; BorgWarner PDS Anderson &middot; Freudenberg FST &middot; Hyundai Transys &middot; General Motors &middot; Woodbridge &middot; Niagara Lasalle &middot; Akzent captured freight 0 Shipments &middot; Logistics Shared Wallet 0.0% &middot; Visible Uncaptured Reference 1,240 &middot; Customs Shared Wallet 34.5% &middot; Imports 36.6% &middot; Exports 29.3% &middot; patents 3468 1930 &middot; 1930 not visible &middot; Other Patents 3076 3164 1944 3415 1680 1777 3770 3904 &middot; Patent &times; Gateway &middot; Customs Wallet by Gateway &middot; Other-Patent Customs Whitespace 812 &middot; IMMEX &middot; Customs Agency Intelligence &middot; Multimodal Coordination &middot; Customs &amp; Visibility &middot; ILM / Control Tower', rel:'CLIENT', cls:'AAA', clsPill:'aaa' },
   { id:'view-haldex',     name:'HALDEX Products de Mexico', sub:'HALDEX Products de Mexico S.A. de C.V. &middot; CLIENT &middot; Customs Agency CLIENT &middot; no Akzent-managed freight &middot; AIOS Classification not supplied &middot; Auto components &middot; Apodaca Nuevo Le&oacute;n &middot; Panjiva Current YTD Jan&ndash;Jul 2026 416 Shipments &middot; 287 Imports &middot; 129 Exports &middot; equivalent-period -61.2% &middot; 2025 Full Year 1,835 &middot; Logistics Shared Wallet 0.0% &middot; Customs Shared Wallet 76.4% &middot; Akzent Patents 3468 1930 &middot; Other Patent 3438 3772 1890 3727 &middot; Other-Patent Reference 98 &middot; Import Core Routes 3 to 83.6% &middot; Export Core Routes 8 to 83.7% &middot; Colombia NL &middot; Nuevo Laredo &middot; MTY Airport &middot; Monterrey &middot; Altamira &middot; Manzanillo &middot; L&aacute;zaro C&aacute;rdenas &middot; Puebla &middot; Kansas City &middot; Patent &times; Gateway &middot; Customs Wallet by Gateway &middot; Customs Whitespace &middot; Customs &amp; Visibility &middot; ILM / Control Tower', rel:'CLIENT', cls:'&mdash;', clsPill:'' },
+  { id:'view-kitchen',    name:'Kitchen Equipment de San Luis', sub:'Kitchen Equipment de San Luis S.A. de C.V. &middot; CLIENT &middot; Customs Agency CLIENT &middot; Customs CLIENT / Logistics Cross-Sell &middot; no Akzent-managed freight &middot; AIOS Classification not supplied &middot; Kitchen equipment &middot; Panjiva 2026 YTD Jan&ndash;Jul 1,458 Shipments &middot; 401 Imports &middot; 1,057 Exports &middot; FY2025 2,612 Shipments &middot; Logistics Wallet 0.0% &middot; Customs Wallet 50.1% &middot; Import Customs Wallet 19.7% &middot; Export Customs Wallet 61.7% &middot; Akzent Patents 3468 1930 &middot; External patent 3483 &middot; Other-Patent Reference 727 &middot; Nuevo Laredo &middot; Colombia NL &middot; Altamira &middot; Manzanillo &middot; Export USA Nuevo Laredo Truck &middot; Export Canada Nuevo Laredo Truck &middot; Patent &times; Gateway &middot; Customs Whitespace &middot; Logistics Cross-Sell &middot; Discovery', rel:'CLIENT', cls:'&mdash;', clsPill:'' },
   { id:'view-lodi',      name:'Industrias Automotrices Lodi', sub:'Automotive Components / Industrial Manufacturing · Cross-Border Multimodal Operation', rel:'LEAD',   cls:'AA',   clsPill:'aa'  },
   { id:'view-organizacion-industrial-vega', name:'Organización Industrial Vega', sub:'Industrial Manufacturing · Battery Components · Plastics · Monterrey, Nuevo León', rel:'LEAD',   cls:'AA',   clsPill:'aa'  },
   { id:'view-wbtm',      name:'WBTM S. de R.L. de C.V.',   sub:'Automotive Seating / Interiors / Components · IMMEX · Korea–Mexico–USA', rel:'LEAD',   cls:'AAA',  clsPill:'aaa' },
@@ -80250,6 +80966,7 @@ var INDUSTRY_BY_ID = {
   'view-inx':'Industrial', 'view-pipsa':'Industrial', 'view-lodi':'Auto',
   'view-borgwarner':'Auto',
   'view-haldex':'Auto',
+  'view-kitchen':'Industrial',
   'view-organizacion-industrial-vega':'Industrial', 'view-wbtm':'Auto', 'view-vamasa':'Medical',
   'view-palmex':'Food', 'view-star':'Food', 'view-termolita':'Industrial',
   'view-sanfer-salud-animal':'Animal Health', 'view-saintgobain':'Industrial', 'view-brahm':'Industrial',
