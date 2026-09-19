@@ -5450,6 +5450,609 @@ main {
 #view-phinia .phn-yes { display:inline-block; font-size:9px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; color:#047857; background:rgba(16,185,129,0.12); padding:1px 6px; border-radius:3px; }
 #view-phinia .phn-no { display:inline-block; font-size:9px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; color:var(--text-light); background:var(--bg); border:1px solid var(--border); padding:1px 6px; border-radius:3px; }
 
+/* LINCOLN ELECTRIC MAQUINAS S DE RL — scoped view components (#view-lincoln-electric only). AIOS Analysis 19-Sep-2026 · Relationship Not Fully Validated · 8-chapter seller report. */
+#view-lincoln-electric .num { text-align:right; }
+#view-lincoln-electric .lec-sublbl { font-size:10px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal-dim); margin-bottom:8px; }
+#view-lincoln-electric .lec-sublbl.muted { color:var(--text-light); }
+#view-lincoln-electric .lec-eyebrow { font-size:9px; font-weight:800; letter-spacing:1.3px; text-transform:uppercase; color:var(--teal-dim); }
+#view-lincoln-electric .lec-src { display:inline-block; font-size:8.5px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; padding:1px 6px; border-radius:3px; vertical-align:1px; }
+#view-lincoln-electric .lec-src.pj { color:var(--navy); background:rgba(13,43,94,0.08); }
+#view-lincoln-electric .lec-src.ak { color:#047857; background:rgba(16,185,129,0.12); }
+#view-lincoln-electric .lec-calc { display:inline-block; font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--teal-dim); border:1px solid rgba(0,180,216,0.45); padding:1px 6px; border-radius:3px; }
+#view-lincoln-electric .lec-mono { font-family:ui-monospace,Menlo,monospace; font-weight:700; color:var(--navy); }
+#view-lincoln-electric .lec-muted td { color:var(--text-muted); }
+
+/* Chapters */
+#view-lincoln-electric .lec-chapter { margin:26px 0 12px; padding:16px 22px; border-radius:8px; color:#fff; background:linear-gradient(120deg,var(--navy) 0%,#1e4a8a 100%); position:relative; overflow:hidden; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-lincoln-electric .lec-chapter:first-of-type { margin-top:8px; }
+#view-lincoln-electric .lec-chapter::after { content:""; position:absolute; right:0; top:0; bottom:0; width:6px; background:var(--teal); }
+#view-lincoln-electric .lec-chapter.exec::after { background:#10b981; }
+#view-lincoln-electric .lec-chapter.cus { background:linear-gradient(120deg,#0b4f63 0%,#0e7490 100%); }
+#view-lincoln-electric .lec-chapter.cus::after { background:#f59e0b; }
+#view-lincoln-electric .lec-chapter.syn { background:linear-gradient(120deg,#064e3b 0%,#047857 100%); }
+#view-lincoln-electric .lec-chapter-n { font-size:9.5px; font-weight:800; letter-spacing:2px; text-transform:uppercase; opacity:0.75; }
+#view-lincoln-electric .lec-chapter-t { font-size:22px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; line-height:1.2; margin-top:2px; }
+#view-lincoln-electric .lec-chapter-s { font-size:11.5px; font-weight:600; opacity:0.85; margin-top:3px; }
+#view-lincoln-electric .lec-chapnav { display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-top:14px; }
+#view-lincoln-electric .lec-chapnav > span { font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-light); }
+#view-lincoln-electric .lec-chapnav button { font:inherit; font-size:11px; font-weight:800; color:var(--navy); background:var(--surface); border:1px solid var(--border); border-radius:5px; padding:6px 11px; cursor:pointer; }
+#view-lincoln-electric .lec-chapnav button:hover { border-color:var(--teal); color:var(--teal-dim); }
+
+/* Executive viewport */
+#view-lincoln-electric .lec-hero { display:grid; grid-template-columns:1.15fr 1fr 1fr; gap:14px; align-items:stretch; }
+#view-lincoln-electric .lec-hero > div { padding:13px 16px; background:var(--surface); border:1px solid var(--border); border-radius:7px; }
+#view-lincoln-electric .lec-hero .k { font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-lincoln-electric .lec-hero .v { font-size:34px; font-weight:800; color:var(--navy); line-height:1.1; margin-top:2px; }
+#view-lincoln-electric .lec-hero .v small { font-size:12px; font-weight:700; color:var(--text-muted); }
+#view-lincoln-electric .lec-hero .s { font-size:10.5px; color:var(--text-muted); line-height:1.55; margin-top:5px; }
+#view-lincoln-electric .lec-split { display:flex; height:14px; border-radius:7px; overflow:hidden; margin-top:8px; }
+#view-lincoln-electric .lec-split > div { height:100%; }
+#view-lincoln-electric .lec-delta { font-size:22px; font-weight:800; line-height:1.15; }
+#view-lincoln-electric .lec-delta.dn { color:#b91c1c; }
+#view-lincoln-electric .lec-delta.up { color:#047857; }
+#view-lincoln-electric .lec-trendrow { display:flex; gap:14px; flex-wrap:wrap; margin-top:7px; }
+#view-lincoln-electric .lec-trendrow div { font-size:10.5px; color:var(--text-muted); }
+#view-lincoln-electric .lec-trendrow b { display:block; font-size:15px; font-weight:800; }
+
+/* The two-wallet asymmetry — the signature visual of this account */
+#view-lincoln-electric .lec-asym { display:grid; grid-template-columns:1fr 46px 1fr; gap:10px; align-items:center; margin-top:4px; }
+#view-lincoln-electric .lec-asym > div.w { padding:16px 18px; border-radius:8px; border:1.5px solid var(--border); background:var(--surface); }
+#view-lincoln-electric .lec-asym .w.log { border-top:4px solid #94a3b8; }
+#view-lincoln-electric .lec-asym .w.cus { border-top:4px solid var(--teal); background:rgba(0,180,216,0.04); }
+#view-lincoln-electric .lec-asym .wk { font-size:9.5px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); }
+#view-lincoln-electric .lec-asym .wv { font-size:52px; font-weight:800; line-height:1.05; margin-top:2px; letter-spacing:-1px; }
+#view-lincoln-electric .lec-asym .log .wv { color:#64748b; }
+#view-lincoln-electric .lec-asym .cus .wv { color:var(--teal-dim); }
+#view-lincoln-electric .lec-asym .wf { font-size:11px; color:var(--text-muted); margin-top:3px; line-height:1.5; }
+#view-lincoln-electric .lec-asym .wbar { height:10px; border-radius:5px; background:#e6eaf1; overflow:hidden; margin-top:10px; }
+#view-lincoln-electric .lec-asym .wbar > div { height:100%; }
+#view-lincoln-electric .lec-asym .vs { text-align:center; font-size:11px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-light); }
+#view-lincoln-electric .lec-asym-note { margin-top:12px; padding:11px 15px; background:rgba(13,43,94,0.04); border-left:3px solid var(--navy); border-radius:0 5px 5px 0; font-size:11px; color:var(--text-muted); line-height:1.65; }
+
+/* Signal / Interpretation / Discovery — always three visually separate layers */
+#view-lincoln-electric .lec-sig { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:14px; }
+#view-lincoln-electric .lec-sig > div { padding:12px 15px; border-radius:6px; font-size:11px; line-height:1.6; color:var(--text-muted); }
+#view-lincoln-electric .lec-sig b { display:block; font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; margin-bottom:4px; }
+#view-lincoln-electric .lec-sig .s1 { background:rgba(13,43,94,0.04); border-top:3px solid var(--navy); }
+#view-lincoln-electric .lec-sig .s1 b { color:var(--navy); }
+#view-lincoln-electric .lec-sig .s2 { background:rgba(0,180,216,0.05); border-top:3px solid var(--teal); }
+#view-lincoln-electric .lec-sig .s2 b { color:var(--teal-dim); }
+#view-lincoln-electric .lec-sig .s3 { background:rgba(245,158,11,0.05); border-top:3px solid #f59e0b; }
+#view-lincoln-electric .lec-sig .s3 b { color:#b45309; }
+
+/* Notes */
+#view-lincoln-electric .lec-note { margin-top:12px; padding:11px 15px; background:rgba(245,158,11,0.05); border-left:3px solid #f59e0b; border-radius:0 5px 5px 0; font-size:11px; color:var(--text-muted); line-height:1.65; }
+#view-lincoln-electric .lec-note-navy { margin-top:12px; padding:11px 15px; background:rgba(13,43,94,0.04); border-left:3px solid var(--navy); border-radius:0 5px 5px 0; font-size:11px; color:var(--text-muted); line-height:1.65; }
+#view-lincoln-electric .lec-note-na { margin-top:12px; padding:11px 15px; background:rgba(148,163,184,0.09); border-left:3px solid #94a3b8; border-radius:0 5px 5px 0; font-size:11px; color:var(--text-muted); line-height:1.65; }
+
+/* Progressive-disclosure ladder */
+#view-lincoln-electric .lec-ladder { display:flex; flex-wrap:wrap; gap:5px; align-items:center; font-size:10px; font-weight:800; letter-spacing:0.4px; text-transform:uppercase; color:var(--navy); }
+#view-lincoln-electric .lec-ladder span { background:var(--surface); border:1px solid var(--border); padding:3px 9px; border-radius:4px; }
+#view-lincoln-electric .lec-ladder i { font-style:normal; color:var(--text-light); }
+
+/* Bar rows (modes, gateways, geography, partners, HS) */
+#view-lincoln-electric .lec-rows { display:flex; flex-direction:column; gap:7px; }
+#view-lincoln-electric .lec-row { display:grid; grid-template-columns:minmax(170px,1.5fr) 1fr 108px; gap:10px; align-items:center; padding:5px 0; border-bottom:1px solid var(--border); }
+#view-lincoln-electric .lec-row:last-child { border-bottom:none; }
+#view-lincoln-electric .lec-row .lbl { font-size:11.5px; font-weight:700; color:var(--navy); line-height:1.4; word-break:break-word; }
+#view-lincoln-electric .lec-row .lbl em { display:block; font-style:normal; font-size:9.5px; font-weight:600; color:var(--text-muted); }
+#view-lincoln-electric .lec-row .bar { height:9px; border-radius:5px; background:#e6eaf1; overflow:hidden; }
+#view-lincoln-electric .lec-row .bar > div { height:100%; }
+#view-lincoln-electric .lec-row .val { text-align:right; font-size:12px; font-weight:800; color:var(--navy); white-space:nowrap; }
+#view-lincoln-electric .lec-row .val span { font-size:10px; font-weight:700; color:var(--text-muted); margin-left:4px; }
+
+/* Route tables */
+#view-lincoln-electric .lec-route-table { width:100%; min-width:1160px; border-collapse:collapse; font-size:11px; }
+#view-lincoln-electric .lec-route-table td:nth-child(2),
+#view-lincoln-electric .lec-route-table td:nth-child(4) { min-width:150px; }
+#view-lincoln-electric .lec-route-table td:nth-child(3) { min-width:190px; }
+#view-lincoln-electric .lec-route-table th { position:sticky; top:0; z-index:2; background:var(--navy); color:#fff; font-size:8.5px; font-weight:800; letter-spacing:0.7px; text-transform:uppercase; padding:8px 7px; text-align:left; white-space:nowrap; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-lincoln-electric .lec-route-table th.num { text-align:right; }
+#view-lincoln-electric .lec-route-table td { padding:7px; border-bottom:1px solid var(--border); vertical-align:top; }
+#view-lincoln-electric .lec-route-table tbody tr:hover { background:rgba(0,180,216,0.04); }
+#view-lincoln-electric .lec-rank { width:34px; }
+#view-lincoln-electric .lec-rank-pill { display:inline-block; min-width:26px; text-align:center; font-size:10px; font-weight:800; color:var(--navy); background:rgba(13,43,94,0.07); border-radius:4px; padding:2px 5px; }
+#view-lincoln-electric .lec-ent strong { font-size:11px; font-weight:700; color:var(--navy); line-height:1.35; display:block; }
+#view-lincoln-electric .lec-ent .lec-na { font-size:9.5px; font-weight:600; color:var(--text-light); font-style:italic; }
+#view-lincoln-electric .lec-ent .lec-self { display:inline-block; font-size:8px; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--navy); background:rgba(13,43,94,0.07); padding:1px 5px; border-radius:3px; margin-top:3px; }
+#view-lincoln-electric .lec-gw-name { font-size:9.5px; color:var(--text-muted); line-height:1.4; margin-top:3px; word-break:break-word; }
+#view-lincoln-electric .lec-cum { min-width:78px; }
+#view-lincoln-electric .lec-cum-bar { height:4px; border-radius:2px; background:#e6eaf1; overflow:hidden; margin-top:3px; }
+#view-lincoln-electric .lec-cum-bar > div { height:100%; background:var(--teal); }
+#view-lincoln-electric .lec-dates { font-size:9.5px; color:var(--text-muted); white-space:nowrap; }
+#view-lincoln-electric .lec-scroll { overflow-x:auto; max-height:640px; overflow-y:auto; border:1px solid var(--border); border-radius:6px; }
+
+/* Patent components */
+#view-lincoln-electric .lec-pat { display:inline-block; font-size:10px; font-weight:800; letter-spacing:0.5px; padding:2px 7px; border-radius:4px; white-space:nowrap; }
+#view-lincoln-electric .lec-pat.ak { color:#fff; background:var(--teal-dim); }
+#view-lincoln-electric .lec-pat.ot { color:#92400e; background:rgba(245,158,11,0.16); border:1px solid rgba(245,158,11,0.4); }
+#view-lincoln-electric .lec-pat.off { color:var(--text-light); background:rgba(148,163,184,0.15); border:1px dashed rgba(148,163,184,0.7); }
+#view-lincoln-electric .lec-gwr { display:grid; grid-template-columns:minmax(190px,1.4fr) 1fr 150px; gap:12px; align-items:center; padding:8px 0; border-bottom:1px solid var(--border); }
+#view-lincoln-electric .lec-gwr:last-child { border-bottom:none; }
+#view-lincoln-electric .lec-gwr .lec-cw-lbl { font-size:11.5px; font-weight:700; color:var(--navy); line-height:1.4; word-break:break-word; }
+#view-lincoln-electric .lec-gwr .lec-cw-sub { font-size:9.5px; color:var(--text-muted); margin-top:2px; }
+#view-lincoln-electric .lec-cw-bar { display:flex; height:16px; border-radius:8px; overflow:hidden; background:#e6eaf1; }
+#view-lincoln-electric .lec-cw-bar > div { height:100%; }
+#view-lincoln-electric .lec-cw-ak { background:var(--teal); }
+#view-lincoln-electric .lec-cw-ot { background:#f59e0b; }
+#view-lincoln-electric .lec-cw-legend { text-align:right; font-size:10px; color:var(--text-muted); white-space:nowrap; }
+#view-lincoln-electric .lec-cw-legend b { display:block; font-size:15px; font-weight:800; color:var(--navy); }
+#view-lincoln-electric .lec-gwr.hot { background:rgba(0,180,216,0.05); border-radius:6px; padding:10px 10px; border-bottom:none; margin-bottom:4px; }
+#view-lincoln-electric .lec-gwr.hot .lec-cw-bar { height:22px; }
+#view-lincoln-electric .lec-gwr.zero .lec-cw-legend b { color:#b45309; }
+#view-lincoln-electric .lec-gwr.small { opacity:0.72; }
+#view-lincoln-electric .lec-gwr.small .lec-cw-lbl { font-size:10.5px; }
+#view-lincoln-electric .lec-gwr.small .lec-cw-bar { height:9px; }
+
+/* Materiality scale — keeps a 100% share on small volume from overpowering larger volumes */
+#view-lincoln-electric .lec-matbar { height:6px; border-radius:3px; background:#e6eaf1; overflow:hidden; margin-top:4px; }
+#view-lincoln-electric .lec-matbar > div { height:100%; background:var(--navy); opacity:0.55; }
+#view-lincoln-electric .lec-matlbl { font-size:8.5px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:var(--text-light); margin-top:3px; }
+
+/* Deep dives */
+#view-lincoln-electric .lec-dd { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+#view-lincoln-electric .lec-dd > div { padding:13px 16px; background:var(--surface); border:1px solid var(--border); border-top:3px solid #f59e0b; border-radius:7px; }
+#view-lincoln-electric .lec-dd .h { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+#view-lincoln-electric .lec-dd .n { font-size:26px; font-weight:800; color:var(--navy); line-height:1.1; }
+#view-lincoln-electric .lec-dd .n small { font-size:10px; font-weight:700; color:var(--text-muted); }
+#view-lincoln-electric .lec-dd .g { font-size:10.5px; color:var(--navy); font-weight:700; margin-top:5px; line-height:1.5; }
+#view-lincoln-electric .lec-dd .w { font-size:10px; color:var(--text-muted); margin-top:4px; line-height:1.5; }
+#view-lincoln-electric .lec-dd .tp { font-size:10px; color:var(--text-muted); margin-top:6px; line-height:1.6; }
+#view-lincoln-electric .lec-dd .tp em { font-style:normal; color:var(--navy); font-weight:700; }
+#view-lincoln-electric .lec-dd .tp.na { color:var(--text-light); font-style:italic; }
+
+/* Profit provenance */
+#view-lincoln-electric .lec-prov { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+#view-lincoln-electric .lec-prov > div { padding:14px 17px; background:rgba(148,163,184,0.07); border:1px dashed rgba(148,163,184,0.7); border-radius:7px; }
+#view-lincoln-electric .lec-prov .k { font-size:9.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-lincoln-electric .lec-prov .v { font-size:19px; font-weight:800; color:#64748b; margin-top:3px; line-height:1.2; }
+#view-lincoln-electric .lec-prov .s { font-size:10.5px; color:var(--text-muted); margin-top:4px; line-height:1.55; }
+
+/* Positioning */
+#view-lincoln-electric .lec-pos { display:grid; grid-template-columns:repeat(5,1fr); gap:9px; }
+#view-lincoln-electric .lec-pos > div { padding:12px 13px; background:var(--surface); border:1px solid var(--border); border-top:3px solid #10b981; border-radius:7px; }
+#view-lincoln-electric .lec-pos b { display:block; font-size:11.5px; font-weight:800; color:var(--navy); line-height:1.35; }
+#view-lincoln-electric .lec-pos span { display:block; font-size:10px; color:var(--text-muted); margin-top:4px; line-height:1.5; }
+
+#view-lincoln-electric .lec-dlist { margin:6px 0 0 16px; padding:0; font-size:11px; color:var(--text-muted); line-height:1.75; }
+#view-lincoln-electric .lec-dlist li { margin:2px 0; }
+#view-lincoln-electric .lec-dlist b { color:var(--navy); }
+
+@media (max-width: 1100px) {
+  #view-lincoln-electric .lec-pos { grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width: 900px) {
+  #view-lincoln-electric .lec-hero, #view-lincoln-electric .lec-sig, #view-lincoln-electric .lec-dd,
+  #view-lincoln-electric .lec-prov, #view-lincoln-electric .lec-pos { grid-template-columns:1fr; }
+  #view-lincoln-electric .lec-asym { grid-template-columns:1fr; }
+  #view-lincoln-electric .lec-asym .vs { padding:4px 0; }
+  #view-lincoln-electric .lec-row { grid-template-columns:1fr 92px; }
+  #view-lincoln-electric .lec-row .bar { grid-column:1 / -1; }
+  #view-lincoln-electric .lec-gwr { grid-template-columns:1fr; }
+  #view-lincoln-electric .lec-gwr .lec-cw-legend { text-align:left; }
+}
+/* Print: every table and appendix opens in full, scroll containers release. */
+@media print {
+  #view-lincoln-electric .lec-scroll { overflow:visible !important; max-height:none !important; border:none; }
+  #view-lincoln-electric .lec-route-table th { position:static; }
+  #view-lincoln-electric .lec-route-table { min-width:0; font-size:8.5px; }
+}
+/* Customs-client additions — customs chapter prominence, triple wallet, HS presence matrix */
+#view-lincoln-electric .lec-chapter.cus { box-shadow:0 0 0 2px rgba(245,158,11,0.35); }
+#view-lincoln-electric .lec-chapter .lec-prim { display:inline-block; margin-top:8px; font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; background:#f59e0b; color:#1f2937; padding:3px 9px; border-radius:4px; }
+#view-lincoln-electric .lec-tri { display:grid; grid-template-columns:1fr 1.35fr 0.8fr; gap:12px; align-items:stretch; margin-top:4px; }
+#view-lincoln-electric .lec-tri > div { padding:15px 17px; border-radius:8px; border:1.5px solid var(--border); background:var(--surface); }
+#view-lincoln-electric .lec-tri .log { border-top:4px solid #94a3b8; }
+#view-lincoln-electric .lec-tri .cus { border:2px solid var(--teal); border-top:5px solid var(--teal); background:rgba(0,180,216,0.05); }
+#view-lincoln-electric .lec-tri .pro { border-style:dashed; background:rgba(148,163,184,0.06); }
+#view-lincoln-electric .lec-tri .wk { font-size:9.5px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); }
+#view-lincoln-electric .lec-tri .wv { font-size:46px; font-weight:800; line-height:1.05; margin-top:3px; letter-spacing:-1px; }
+#view-lincoln-electric .lec-tri .log .wv { color:#64748b; }
+#view-lincoln-electric .lec-tri .cus .wv { color:var(--teal-dim); font-size:58px; }
+#view-lincoln-electric .lec-tri .pro .wv { font-size:15px; font-weight:800; color:#64748b; letter-spacing:0; line-height:1.35; margin-top:8px; }
+#view-lincoln-electric .lec-tri .wf { font-size:11px; color:var(--text-muted); margin-top:4px; line-height:1.55; }
+#view-lincoln-electric .lec-tri .wbar { height:10px; border-radius:5px; background:#e6eaf1; overflow:hidden; margin-top:10px; display:flex; }
+#view-lincoln-electric .lec-tri .wbar > div { height:100%; }
+#view-lincoln-electric .lec-thesis { margin-top:16px; padding:15px 19px; border-radius:8px; background:linear-gradient(120deg,rgba(13,43,94,0.05),rgba(0,180,216,0.07)); border-left:4px solid var(--teal); font-size:13px; line-height:1.65; color:var(--navy); font-weight:600; }
+#view-lincoln-electric .lec-thesis b { font-weight:800; }
+#view-lincoln-electric .lec-dir { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+#view-lincoln-electric .lec-dir > div { padding:13px 16px; border:1px solid var(--border); border-radius:7px; background:var(--surface); }
+#view-lincoln-electric .lec-dir .k { font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-lincoln-electric .lec-dir .v { font-size:30px; font-weight:800; color:var(--teal-dim); line-height:1.1; margin-top:2px; }
+#view-lincoln-electric .lec-dir .v.nv { color:var(--navy); }
+#view-lincoln-electric .lec-dir .s { font-size:10.5px; color:var(--text-muted); line-height:1.55; margin-top:5px; }
+#view-lincoln-electric .lec-hs { width:100%; border-collapse:collapse; font-size:11.5px; }
+#view-lincoln-electric .lec-hs th { background:var(--navy); color:#fff; font-size:8.5px; font-weight:800; letter-spacing:0.7px; text-transform:uppercase; padding:8px; text-align:center; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-lincoln-electric .lec-hs th:first-child { text-align:left; }
+#view-lincoln-electric .lec-hs td { padding:7px 8px; border-bottom:1px solid var(--border); text-align:center; }
+#view-lincoln-electric .lec-hs td:first-child { text-align:left; }
+#view-lincoln-electric .lec-hs .y { color:var(--teal-dim); font-weight:800; }
+#view-lincoln-electric .lec-hs .n { color:var(--text-light); font-size:10px; }
+#view-lincoln-electric .lec-cp { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+#view-lincoln-electric .lec-cp > div { padding:11px 14px; border:1px solid var(--border); border-radius:7px; background:var(--surface); font-size:10.5px; color:var(--text-muted); line-height:1.55; }
+#view-lincoln-electric .lec-cp b { display:block; font-size:11.5px; color:var(--navy); font-weight:700; margin-bottom:3px; }
+#view-lincoln-electric .lec-cp .r { font-size:9px; font-weight:800; letter-spacing:0.8px; text-transform:uppercase; color:var(--teal-dim); }
+#view-lincoln-electric .lec-ov { display:inline-block; font-size:11px; font-weight:800; letter-spacing:0.8px; text-transform:uppercase; color:#b45309; background:rgba(245,158,11,0.12); border:1px solid rgba(245,158,11,0.45); padding:4px 10px; border-radius:5px; }
+@media (max-width: 900px) {
+  #view-lincoln-electric .lec-tri, #view-lincoln-electric .lec-dir, #view-lincoln-electric .lec-cp { grid-template-columns:1fr; }
+  #view-lincoln-electric .lec-2col { grid-template-columns:1fr !important; }
+}
+@media print {
+  #view-lincoln-electric .lec-tri .cus .wv { font-size:42px; }
+}
+/* Customs-client additions (II) — relationship strip, priorities, discovery, modal bars */
+#view-lincoln-electric .lec-rel { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; }
+#view-lincoln-electric .lec-rel > div { padding:10px 13px; border:1px solid var(--border); border-radius:7px; background:var(--surface); }
+#view-lincoln-electric .lec-rel .k { font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-lincoln-electric .lec-rel .v { font-size:13px; font-weight:800; color:var(--navy); margin-top:3px; line-height:1.3; }
+#view-lincoln-electric .lec-rel .v.on { color:#047857; }
+#view-lincoln-electric .lec-rel .v.off { color:#64748b; }
+#view-lincoln-electric .lec-rel .v.x { color:var(--teal-dim); }
+#view-lincoln-electric .lec-flow { display:flex; flex-wrap:wrap; align-items:center; gap:6px; font-size:11px; font-weight:800; color:var(--navy); }
+#view-lincoln-electric .lec-flow span { background:var(--surface); border:1px solid var(--border); padding:4px 10px; border-radius:5px; }
+#view-lincoln-electric .lec-flow i { font-style:normal; color:var(--text-light); }
+#view-lincoln-electric .lec-sigc { display:grid; grid-template-columns:1.4fr 1fr; gap:12px; }
+#view-lincoln-electric .lec-sigc > div { padding:15px 17px; border:1px solid var(--border); border-radius:8px; background:var(--surface); border-top:4px solid var(--navy); }
+#view-lincoln-electric .lec-sigc .n { font-size:40px; font-weight:800; color:var(--navy); line-height:1.05; margin-top:10px; }
+#view-lincoln-electric .lec-sigc .n small { font-size:12px; font-weight:700; color:var(--text-muted); }
+#view-lincoln-electric .lec-sigc .s { font-size:10.5px; color:var(--text-muted); line-height:1.55; margin-top:6px; }
+#view-lincoln-electric .lec-prio { counter-reset:lp; list-style:none; margin:0; padding:0; display:grid; gap:8px; }
+#view-lincoln-electric .lec-prio li { counter-increment:lp; display:grid; grid-template-columns:34px 1fr auto; gap:12px; align-items:center; padding:10px 14px; border:1px solid var(--border); border-radius:7px; background:var(--surface); font-size:12px; color:var(--navy); font-weight:700; line-height:1.45; }
+#view-lincoln-electric .lec-prio li::before { content:counter(lp); display:flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:50%; background:var(--navy); color:#fff; font-size:12px; font-weight:800; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-lincoln-electric .lec-prio li em { font-style:normal; font-size:9px; font-weight:800; letter-spacing:0.8px; text-transform:uppercase; padding:3px 8px; border-radius:4px; white-space:nowrap; }
+#view-lincoln-electric .lec-prio li em.c { color:var(--teal-dim); background:rgba(0,180,216,0.1); }
+#view-lincoln-electric .lec-prio li em.l { color:#475569; background:rgba(148,163,184,0.18); }
+#view-lincoln-electric .lec-dq { display:grid; grid-template-columns:repeat(3,1fr); gap:9px; }
+#view-lincoln-electric .lec-dq > div { padding:11px 14px; border:1px solid var(--border); border-left:3px solid #f59e0b; border-radius:0 7px 7px 0; background:var(--surface); font-size:11.5px; font-weight:700; color:var(--navy); line-height:1.5; }
+#view-lincoln-electric .lec-dq > div span { display:block; font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:#b45309; margin-bottom:3px; }
+#view-lincoln-electric .lec-gwi { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-top:14px; }
+#view-lincoln-electric .lec-gwi > div { padding:11px 14px; border:1px solid var(--border); border-top:3px solid var(--teal); border-radius:7px; background:var(--surface); }
+#view-lincoln-electric .lec-gwi > div.z { border-top-color:#f59e0b; }
+#view-lincoln-electric .lec-gwi b { display:block; font-size:11.5px; font-weight:800; color:var(--navy); }
+#view-lincoln-electric .lec-gwi span { display:block; font-size:10.5px; color:var(--text-muted); line-height:1.55; margin-top:4px; }
+@media (max-width: 1100px) {
+  #view-lincoln-electric .lec-rel { grid-template-columns:repeat(3,1fr); }
+  #view-lincoln-electric .lec-gwi, #view-lincoln-electric .lec-dq { grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width: 900px) {
+  #view-lincoln-electric .lec-rel, #view-lincoln-electric .lec-sigc, #view-lincoln-electric .lec-gwi, #view-lincoln-electric .lec-dq { grid-template-columns:1fr; }
+  #view-lincoln-electric .lec-prio li { grid-template-columns:34px 1fr; }
+  #view-lincoln-electric .lec-prio li em { grid-column:2; justify-self:start; }
+}
+/* Deep-lane components — provenance tags, lane concentration, corridor cards, TP × Lane, persistence, matrix, roadmap */
+#view-lincoln-electric .lec-src.ai { color:var(--teal-dim); background:rgba(0,180,216,0.1); }
+#view-lincoln-electric .lec-src.dv { color:#b45309; background:rgba(245,158,11,0.13); }
+#view-lincoln-electric .lec-src.ca { color:var(--teal-dim); background:transparent; border:1px solid rgba(0,180,216,0.45); }
+#view-lincoln-electric .lec-micro { font-size:10px; font-style:italic; color:var(--text-muted); margin-top:6px; }
+#view-lincoln-electric .lec-badges { display:flex; gap:6px; align-items:center; }
+#view-lincoln-electric .lec-dw { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+#view-lincoln-electric .lec-dw > div { padding:16px 18px; border-radius:9px; border:1.5px solid var(--border); background:var(--surface); }
+#view-lincoln-electric .lec-dw .log { border-top:5px solid #94a3b8; }
+#view-lincoln-electric .lec-dw .cus { border-top:5px solid var(--teal); background:rgba(0,180,216,0.04); }
+#view-lincoln-electric .lec-dw .t { font-size:10px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); }
+#view-lincoln-electric .lec-dw .big { font-size:50px; font-weight:800; line-height:1.05; letter-spacing:-1px; margin-top:4px; }
+#view-lincoln-electric .lec-dw .log .big { color:#64748b; }
+#view-lincoln-electric .lec-dw .cus .big { color:var(--teal-dim); }
+#view-lincoln-electric .lec-dw .eq { font-size:13px; font-weight:800; color:var(--navy); margin-top:2px; }
+#view-lincoln-electric .lec-dw .lab { margin-top:12px; font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-light); border-top:1px dashed var(--border); padding-top:8px; }
+#view-lincoln-electric .lec-conc { position:relative; margin:30px 0 26px; }
+#view-lincoln-electric .lec-conc-bar { display:flex; height:30px; border-radius:6px; overflow:hidden; background:#e6eaf1; }
+#view-lincoln-electric .lec-conc-bar > div { height:100%; border-right:1.5px solid #fff; display:flex; align-items:center; justify-content:center; font-size:9.5px; font-weight:800; color:#fff; overflow:hidden; white-space:nowrap; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-lincoln-electric .lec-conc-mk { position:absolute; top:-22px; bottom:-22px; border-left:2px dashed var(--navy); }
+#view-lincoln-electric .lec-conc-mk span { position:absolute; top:0; left:4px; font-size:9px; font-weight:800; color:var(--navy); white-space:nowrap; background:var(--surface); padding:0 3px; }
+#view-lincoln-electric .lec-conc-mk.b span { top:auto; bottom:0; }
+#view-lincoln-electric .lec-kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+#view-lincoln-electric .lec-kpis > div { padding:12px 15px; border:1px solid var(--border); border-radius:7px; background:var(--surface); }
+#view-lincoln-electric .lec-kpis .k { font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-lincoln-electric .lec-kpis .v { font-size:28px; font-weight:800; color:var(--navy); line-height:1.1; margin-top:2px; }
+#view-lincoln-electric .lec-kpis .v small { font-size:11px; color:var(--text-muted); font-weight:700; }
+#view-lincoln-electric .lec-kpis .s { font-size:10.5px; color:var(--text-muted); line-height:1.5; margin-top:4px; }
+#view-lincoln-electric .lec-legend { display:flex; gap:14px; flex-wrap:wrap; font-size:10px; font-weight:700; color:var(--text-muted); }
+#view-lincoln-electric .lec-legend i { display:inline-block; width:11px; height:11px; border-radius:3px; vertical-align:-1px; margin-right:4px; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-lincoln-electric .lec-cor { border:1px solid var(--border); border-radius:10px; background:var(--surface); overflow:hidden; margin-bottom:16px; break-inside:avoid; }
+#view-lincoln-electric .lec-cor.key { border:2px solid var(--teal); box-shadow:0 0 0 4px rgba(0,180,216,0.10); }
+#view-lincoln-electric .lec-cor-h { display:flex; align-items:center; gap:12px; flex-wrap:wrap; padding:13px 18px; background:rgba(13,43,94,0.04); border-bottom:1px solid var(--border); }
+#view-lincoln-electric .lec-cor.key .lec-cor-h { background:rgba(0,180,216,0.08); }
+#view-lincoln-electric .lec-cor-id { width:34px; height:34px; border-radius:8px; background:var(--navy); color:#fff; font-size:15px; font-weight:800; display:flex; align-items:center; justify-content:center; flex-shrink:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-lincoln-electric .lec-cor.key .lec-cor-id { background:var(--teal-dim); }
+#view-lincoln-electric .lec-cor-t { font-size:15px; font-weight:800; color:var(--navy); line-height:1.3; }
+#view-lincoln-electric .lec-cor-w { font-size:8.5px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); }
+#view-lincoln-electric .lec-cor-flag { margin-left:auto; font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:#fff; background:var(--teal-dim); padding:4px 10px; border-radius:4px; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-lincoln-electric .lec-cor-g { display:grid; grid-template-columns:0.9fr 1.35fr 1.35fr 1.1fr; }
+#view-lincoln-electric .lec-cor-g > div { padding:13px 16px; border-right:1px solid var(--border); }
+#view-lincoln-electric .lec-cor-g > div:last-child { border-right:none; }
+#view-lincoln-electric .lec-cor-g .k { font-size:8.5px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal-dim); margin-bottom:6px; }
+#view-lincoln-electric .lec-cor-g .n { font-size:30px; font-weight:800; color:var(--navy); line-height:1.05; }
+#view-lincoln-electric .lec-cor-g .n small { font-size:11px; font-weight:700; color:var(--text-muted); }
+#view-lincoln-electric .lec-cor-g .s { font-size:10.5px; color:var(--text-muted); line-height:1.55; margin-top:4px; }
+#view-lincoln-electric .lec-cor-g .s b { color:var(--navy); }
+#view-lincoln-electric .lec-cad { width:100%; border-collapse:collapse; font-size:10.5px; }
+#view-lincoln-electric .lec-cad td { padding:3px 4px; border-bottom:1px solid var(--border); color:var(--text-muted); }
+#view-lincoln-electric .lec-cad td:first-child { color:var(--navy); font-weight:700; }
+#view-lincoln-electric .lec-cad td.r { text-align:right; white-space:nowrap; font-weight:800; color:var(--navy); }
+#view-lincoln-electric .lec-cad tr:last-child td { border-bottom:none; }
+#view-lincoln-electric .lec-pos { display:flex; flex-direction:column; gap:6px; }
+#view-lincoln-electric .lec-pos span { display:block; font-size:10.5px; font-weight:700; padding:6px 9px; border-radius:5px; line-height:1.4; }
+#view-lincoln-electric .lec-pos .lu { background:rgba(148,163,184,0.14); color:#475569; border-left:3px solid #94a3b8; }
+#view-lincoln-electric .lec-pos .ca { background:rgba(0,180,216,0.1); color:var(--teal-dim); border-left:3px solid var(--teal); }
+#view-lincoln-electric .lec-pos .co { background:rgba(245,158,11,0.1); color:#92400e; border-left:3px solid #f59e0b; }
+#view-lincoln-electric .lec-pos span em { display:block; font-style:normal; font-size:8px; font-weight:800; letter-spacing:1px; text-transform:uppercase; opacity:0.75; }
+#view-lincoln-electric .lec-cor .lec-sig { margin:0; padding:0 16px 16px; }
+#view-lincoln-electric .lec-tpl { width:100%; min-width:900px; border-collapse:collapse; font-size:11px; }
+#view-lincoln-electric .lec-tpl th { background:var(--navy); color:#fff; font-size:8.5px; font-weight:800; letter-spacing:0.7px; text-transform:uppercase; padding:8px; text-align:left; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-lincoln-electric .lec-tpl td { padding:9px 8px; border-bottom:1px solid var(--border); vertical-align:top; }
+#view-lincoln-electric .lec-tpl tr.grp td { background:rgba(13,43,94,0.04); font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--navy); padding:6px 8px; }
+#view-lincoln-electric .lec-tpl .var td { background:rgba(148,163,184,0.06); }
+#view-lincoln-electric .lec-tag { display:inline-block; font-size:8px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; padding:1px 5px; border-radius:3px; margin-left:4px; vertical-align:1px; }
+#view-lincoln-electric .lec-tag.af { color:var(--navy); background:rgba(13,43,94,0.08); }
+#view-lincoln-electric .lec-tag.sv { color:#92400e; background:rgba(245,158,11,0.14); }
+#view-lincoln-electric .lec-tag.self { color:var(--navy); background:rgba(13,43,94,0.07); }
+#view-lincoln-electric .lec-shift { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+#view-lincoln-electric .lec-shift > div { padding:14px 16px; border:1px solid var(--border); border-radius:8px; background:var(--surface); }
+#view-lincoln-electric .lec-shift .row { display:grid; grid-template-columns:118px 1fr 118px; gap:10px; align-items:center; margin-top:10px; }
+#view-lincoln-electric .lec-shift .row .l { font-size:10.5px; font-weight:800; color:var(--navy); }
+#view-lincoln-electric .lec-shift .row .r { font-size:11px; font-weight:800; color:var(--navy); text-align:right; white-space:nowrap; }
+#view-lincoln-electric .lec-dots { display:flex; flex-wrap:wrap; gap:3px; }
+#view-lincoln-electric .lec-dots i { width:11px; height:11px; border-radius:2px; background:var(--navy); -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-lincoln-electric .lec-dots.h i { background:#94a3b8; }
+#view-lincoln-electric .lec-h2c { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+#view-lincoln-electric .lec-h2c > div { border:1px solid var(--border); border-radius:8px; background:var(--surface); overflow:hidden; }
+#view-lincoln-electric .lec-h2c h4 { margin:0; padding:10px 14px; font-size:13px; font-weight:800; color:#fff; background:var(--navy); -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-lincoln-electric .lec-h2c > div.adj h4 { background:var(--teal-dim); }
+#view-lincoln-electric .lec-h2c > div.low h4 { background:#b45309; }
+#view-lincoln-electric .lec-h2c dl { margin:0; padding:10px 14px 12px; }
+#view-lincoln-electric .lec-h2c dt { font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-light); margin-top:8px; }
+#view-lincoln-electric .lec-h2c dt:first-child { margin-top:0; }
+#view-lincoln-electric .lec-h2c dd { margin:2px 0 0; font-size:11px; color:var(--text-muted); line-height:1.5; }
+#view-lincoln-electric .lec-h2c dd.i { color:var(--teal-dim); font-weight:700; }
+#view-lincoln-electric .lec-h2c dd.d { color:#b45309; }
+#view-lincoln-electric .lec-lad { display:flex; flex-direction:column; gap:10px; }
+#view-lincoln-electric .lec-lad > div { display:grid; grid-template-columns:130px 1fr; gap:14px; align-items:start; padding:11px 14px; border:1px solid var(--border); border-radius:7px; background:var(--surface); }
+#view-lincoln-electric .lec-lad .k { font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal-dim); padding-top:3px; }
+#view-lincoln-electric .lec-chips { display:flex; flex-wrap:wrap; gap:6px; }
+#view-lincoln-electric .lec-chips span { font-size:11px; font-weight:700; color:var(--navy); background:rgba(13,43,94,0.05); border:1px solid var(--border); padding:4px 9px; border-radius:5px; }
+#view-lincoln-electric .lec-chips span b { font-weight:800; margin-left:4px; }
+#view-lincoln-electric .lec-hs { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+#view-lincoln-electric .lec-hs > div { border:1px solid var(--border); border-radius:7px; padding:11px 14px; background:var(--surface); }
+#view-lincoln-electric .lec-hs > div.hist { opacity:0.8; }
+#view-lincoln-electric .lec-hs table { width:100%; border-collapse:collapse; font-size:11px; margin-top:6px; }
+#view-lincoln-electric .lec-hs td { padding:4px 0; border-bottom:1px solid var(--border); }
+#view-lincoln-electric .lec-hs td.r { text-align:right; font-weight:800; color:var(--navy); }
+#view-lincoln-electric .lec-adj { display:grid; grid-template-columns:1.5fr 1fr 1fr; gap:12px; }
+#view-lincoln-electric .lec-adj > div { border:1px solid var(--border); border-radius:9px; background:var(--surface); padding:15px 17px; }
+#view-lincoln-electric .lec-adj > div.key { border:2px solid var(--teal); background:rgba(0,180,216,0.04); }
+#view-lincoln-electric .lec-adj h4 { margin:0 0 4px; font-size:14px; font-weight:800; color:var(--navy); }
+#view-lincoln-electric .lec-adj .sub { font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--teal-dim); }
+#view-lincoln-electric .lec-adj .two { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin:12px 0; }
+#view-lincoln-electric .lec-adj .two > div { padding:9px 11px; border-radius:6px; background:var(--bg); }
+#view-lincoln-electric .lec-adj .two .k { font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-lincoln-electric .lec-adj .two .v { font-size:22px; font-weight:800; line-height:1.15; margin-top:2px; }
+#view-lincoln-electric .lec-adj .two .v small { font-size:10px; font-weight:700; color:var(--text-muted); }
+#view-lincoln-electric .lec-adj p { font-size:11px; color:var(--text-muted); line-height:1.6; margin:6px 0 0; }
+#view-lincoln-electric .lec-adj p b { color:var(--navy); }
+#view-lincoln-electric .lec-mx { width:100%; border-collapse:separate; border-spacing:0 6px; font-size:11.5px; }
+#view-lincoln-electric .lec-mx th { font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); text-align:left; padding:0 12px; }
+#view-lincoln-electric .lec-mx td { padding:11px 12px; background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+#view-lincoln-electric .lec-mx td:first-child { border-left:1px solid var(--border); border-radius:7px 0 0 7px; font-weight:800; color:var(--navy); font-size:12.5px; }
+#view-lincoln-electric .lec-mx td:last-child { border-right:1px solid var(--border); border-radius:0 7px 7px 0; color:var(--text-muted); }
+#view-lincoln-electric .lec-mx tr.key td { background:rgba(0,180,216,0.06); border-color:rgba(0,180,216,0.5); }
+#view-lincoln-electric .lec-cell { display:inline-block; font-size:10px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; padding:4px 9px; border-radius:4px; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-lincoln-electric .lec-cell.u { color:#475569; background:rgba(148,163,184,0.18); }
+#view-lincoln-electric .lec-cell.a { color:#fff; background:var(--teal-dim); }
+#view-lincoln-electric .lec-cell.o { color:#92400e; background:rgba(245,158,11,0.16); border:1px solid rgba(245,158,11,0.4); }
+#view-lincoln-electric .lec-dm { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; }
+#view-lincoln-electric .lec-dm > div { border:1px solid var(--border); border-top:3px solid #f59e0b; border-radius:7px; background:var(--surface); padding:12px 14px; }
+#view-lincoln-electric .lec-dm > div.key { border-top-color:var(--teal); background:rgba(0,180,216,0.04); }
+#view-lincoln-electric .lec-dm b { display:block; font-size:12px; font-weight:800; color:var(--navy); margin-bottom:6px; }
+#view-lincoln-electric .lec-dm ul { margin:0; padding-left:15px; font-size:10.5px; color:var(--text-muted); line-height:1.6; }
+#view-lincoln-electric .lec-road { display:grid; grid-template-columns:repeat(5,1fr); gap:0; counter-reset:rp; }
+#view-lincoln-electric .lec-road > div { position:relative; padding:14px 16px 14px 18px; border:1px solid var(--border); border-left:none; background:var(--surface); }
+#view-lincoln-electric .lec-road > div:first-child { border-left:1px solid var(--border); border-radius:8px 0 0 8px; border-top:4px solid var(--teal); }
+#view-lincoln-electric .lec-road > div:last-child { border-radius:0 8px 8px 0; }
+#view-lincoln-electric .lec-road > div { border-top:4px solid #94a3b8; }
+#view-lincoln-electric .lec-road > div:nth-child(2) { border-top-color:var(--teal); }
+#view-lincoln-electric .lec-road .p { font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal-dim); }
+#view-lincoln-electric .lec-road .t { font-size:12.5px; font-weight:800; color:var(--navy); line-height:1.35; margin-top:3px; }
+#view-lincoln-electric .lec-road .d { font-size:10.5px; color:var(--text-muted); line-height:1.55; margin-top:6px; }
+#view-lincoln-electric .lec-road .d ul { margin:4px 0 0; padding-left:14px; }
+#view-lincoln-electric .lec-hist { opacity:0.92; }
+#view-lincoln-electric .lec-hist .lec-route-table th { background:#475569; }
+#view-lincoln-electric .lec-sig.one { grid-template-columns:1fr; }
+#view-lincoln-electric .lec-sigl { counter-reset:sg; list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:6px 16px; }
+#view-lincoln-electric .lec-sigl li { counter-increment:sg; display:grid; grid-template-columns:24px 1fr; gap:8px; font-size:11.5px; color:var(--navy); font-weight:600; line-height:1.45; padding:5px 0; border-bottom:1px solid var(--border); }
+#view-lincoln-electric .lec-sigl li::before { content:counter(sg); font-size:10px; font-weight:800; color:var(--text-muted); text-align:right; }
+@media (max-width: 1100px) {
+  #view-lincoln-electric .lec-cor-g { grid-template-columns:1fr 1fr; }
+  #view-lincoln-electric .lec-cor-g > div:nth-child(2) { border-right:none; }
+  #view-lincoln-electric .lec-cor-g > div:nth-child(-n+2) { border-bottom:1px solid var(--border); }
+  #view-lincoln-electric .lec-h2c, #view-lincoln-electric .lec-hs, #view-lincoln-electric .lec-kpis { grid-template-columns:repeat(2,1fr); }
+  #view-lincoln-electric .lec-dm { grid-template-columns:repeat(2,1fr); }
+  #view-lincoln-electric .lec-road { grid-template-columns:1fr; }
+  #view-lincoln-electric .lec-road > div, #view-lincoln-electric .lec-road > div:first-child, #view-lincoln-electric .lec-road > div:last-child { border:1px solid var(--border); border-top:4px solid #94a3b8; border-radius:8px; margin-bottom:8px; }
+  #view-lincoln-electric .lec-road > div:nth-child(-n+2) { border-top-color:var(--teal); }
+  #view-lincoln-electric .lec-adj { grid-template-columns:1fr; }
+}
+@media (max-width: 900px) {
+  #view-lincoln-electric .lec-dw, #view-lincoln-electric .lec-cor-g, #view-lincoln-electric .lec-shift, #view-lincoln-electric .lec-h2c,
+  #view-lincoln-electric .lec-hs, #view-lincoln-electric .lec-kpis, #view-lincoln-electric .lec-dm, #view-lincoln-electric .lec-sigl { grid-template-columns:1fr; }
+  #view-lincoln-electric .lec-cor-g > div { border-right:none; border-bottom:1px solid var(--border); }
+  #view-lincoln-electric .lec-lad > div { grid-template-columns:1fr; gap:6px; }
+  #view-lincoln-electric .lec-shift .row { grid-template-columns:1fr; }
+  #view-lincoln-electric .lec-shift .row .r { text-align:left; }
+  #view-lincoln-electric .lec-cor-flag { margin-left:0; }
+}
+@media print {
+  #view-lincoln-electric .lec-tpl { min-width:0; font-size:9px; }
+  #view-lincoln-electric .lec-cor, #view-lincoln-electric .lec-adj > div, #view-lincoln-electric .lec-h2c > div { break-inside:avoid; }
+  #view-lincoln-electric .lec-dw .big { font-size:40px; }
+}
+/* Editorial-compression layer (8-chapter seller report) */
+#view-lincoln-electric .lec-nav { position:sticky; margin:0; top:0; z-index:20; display:flex; gap:4px; flex-wrap:wrap; padding:8px 32px; background:rgba(255,255,255,0.97); border-bottom:1px solid var(--border); box-shadow:0 2px 8px rgba(13,43,94,0.06); }
+#view-lincoln-electric .lec-nav a { font-size:11px; font-weight:700; color:var(--navy); text-decoration:none; padding:6px 10px; border-radius:5px; white-space:nowrap; }
+#view-lincoln-electric .lec-nav a b { font-size:9px; color:var(--teal-dim); margin-right:5px; }
+#view-lincoln-electric .lec-nav a:hover, #view-lincoln-electric .lec-nav a:focus-visible { background:rgba(0,180,216,0.1); }
+#view-lincoln-electric section.lec-chapter { scroll-margin-top:56px; }
+#view-lincoln-electric .lec-lane, #view-lincoln-electric [id^="lec-lane-"], #view-lincoln-electric .card { scroll-margin-top:56px; }
+#view-lincoln-electric .card-header .lec-src { margin-left:6px; background:#fff; border:none; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-lincoln-electric .lec-relline { display:flex; flex-wrap:wrap; align-items:center; gap:8px 10px; font-size:12.5px; color:var(--navy); }
+#view-lincoln-electric .lec-relline .sep { width:1px; height:18px; background:var(--border); }
+#view-lincoln-electric .lec-relline .k { font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); }
+#view-lincoln-electric .lec-jump { display:grid; grid-template-columns:auto 1fr 1fr 1fr; gap:10px; align-items:stretch; margin-top:16px; }
+#view-lincoln-electric .lec-jump .k { align-self:center; font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); max-width:120px; }
+#view-lincoln-electric .lec-jump a { display:block; padding:10px 14px; border:1px solid var(--border); border-left:4px solid var(--navy); border-radius:6px; text-decoration:none; font-size:10.5px; color:var(--text-muted); background:var(--surface); }
+#view-lincoln-electric .lec-jump a.key { border-left-color:var(--teal); background:rgba(0,180,216,0.05); }
+#view-lincoln-electric .lec-jump a b { display:block; font-size:13px; color:var(--navy); }
+#view-lincoln-electric .lec-ev { margin-top:14px; border:1px solid var(--border); border-radius:7px; background:rgba(13,43,94,0.02); }
+#view-lincoln-electric .lec-ev > summary { cursor:pointer; padding:10px 14px; font-size:10.5px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; color:var(--navy); list-style:none; }
+#view-lincoln-electric .lec-ev > summary::-webkit-details-marker { display:none; }
+#view-lincoln-electric .lec-ev > summary::before { content:"+"; display:inline-block; width:16px; color:var(--teal-dim); font-weight:800; }
+#view-lincoln-electric .lec-ev[open] > summary::before { content:"−"; }
+#view-lincoln-electric .lec-ev > summary:focus-visible { outline:2px solid var(--teal); outline-offset:2px; }
+#view-lincoln-electric .lec-ev-b { padding:0 14px 14px; }
+#view-lincoln-electric .lec-lanenav { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:16px; }
+#view-lincoln-electric .lec-lanenav a { font-size:11px; font-weight:800; color:var(--navy); text-decoration:none; border:1px solid var(--border); border-radius:5px; padding:6px 11px; background:var(--surface); }
+#view-lincoln-electric .lec-lanenav a.key { border-color:var(--teal); color:var(--teal-dim); background:rgba(0,180,216,0.06); }
+#view-lincoln-electric .lec-lane-g { display:grid; grid-template-columns:1fr 1.45fr 1.25fr; }
+#view-lincoln-electric .lec-lane-g > div { padding:13px 16px; border-right:1px solid var(--border); border-bottom:1px solid var(--border); }
+#view-lincoln-electric .lec-lane-g > div:nth-child(3) { border-right:none; }
+#view-lincoln-electric .lec-lane-g > div:nth-child(4) { grid-column:1 / 3; }
+#view-lincoln-electric .lec-lane-g > div.pos { border-right:none; }
+#view-lincoln-electric .lec-lane-g .k { font-size:8.5px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal-dim); margin-bottom:6px; }
+#view-lincoln-electric .lec-lane-g .n { font-size:30px; font-weight:800; color:var(--navy); line-height:1.05; }
+#view-lincoln-electric .lec-lane-g .n small { font-size:11px; font-weight:700; color:var(--text-muted); }
+#view-lincoln-electric .lec-lane-g .s { font-size:10.5px; color:var(--text-muted); line-height:1.6; margin-top:4px; }
+#view-lincoln-electric .lec-lane-g .s b { color:var(--navy); }
+#view-lincoln-electric .lec-lane .lec-sig { margin:0; padding:14px 16px 16px; }
+#view-lincoln-electric .lec-lane .lec-cad td.r { font-weight:600; }
+#view-lincoln-electric .lec-lane .lec-cad td.r b { font-weight:800; color:var(--navy); }
+#view-lincoln-electric .lec-lane .lec-pos { flex-direction:row; flex-wrap:wrap; }
+#view-lincoln-electric .lec-2col > div, #view-lincoln-electric .lec-lane-g > div, #view-lincoln-electric .lec-kpis > div { min-width:0; }
+#view-lincoln-electric .lec-conc-mk.r span { left:auto; right:4px; }
+#view-lincoln-electric .lec-q { margin:2px 0 0; padding-left:17px; font-size:11px; line-height:1.6; }
+#view-lincoln-electric .lec-q li { margin:2px 0; }
+#view-lincoln-electric .lec-chips a { font-size:11px; font-weight:700; color:var(--navy); background:rgba(13,43,94,0.05); border:1px solid var(--border); padding:4px 9px; border-radius:5px; text-decoration:none; }
+#view-lincoln-electric .lec-chips a:hover { border-color:var(--teal); }
+#view-lincoln-electric .lec-cwg tr.grp td, #view-lincoln-electric .lec-tpl tr.grp td { background:rgba(13,43,94,0.04); font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--navy); }
+#view-lincoln-electric .lec-opd { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; }
+#view-lincoln-electric .lec-opd > div { padding:11px 13px; border:1px solid var(--border); border-top:3px solid #f59e0b; border-radius:7px; background:var(--surface); }
+#view-lincoln-electric .lec-opd b { display:block; font-size:13px; color:var(--navy); margin-top:7px; }
+#view-lincoln-electric .lec-opd span:not(.lec-pat) { display:block; font-size:10.5px; color:var(--text-muted); line-height:1.5; margin-top:3px; }
+#view-lincoln-electric .lec-puebla { padding:12px 15px; border:1px solid rgba(245,158,11,0.45); border-radius:7px; background:rgba(245,158,11,0.05); }
+#view-lincoln-electric .lec-puebla .s { font-size:11px; color:var(--text-muted); line-height:1.6; }
+#view-lincoln-electric .lec-sq { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+#view-lincoln-electric .lec-sq > div { padding:14px 17px; border-radius:8px; border:1px solid var(--border); }
+#view-lincoln-electric .lec-sq .has { border-top:4px solid var(--teal); background:rgba(0,180,216,0.04); }
+#view-lincoln-electric .lec-sq .not { border-top:4px solid #94a3b8; background:rgba(148,163,184,0.06); }
+#view-lincoln-electric .lec-sq .k { font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); }
+#view-lincoln-electric .lec-sq b { display:block; font-size:16px; color:var(--navy); margin-top:4px; }
+#view-lincoln-electric .lec-sq span { display:block; font-size:11px; color:var(--text-muted); line-height:1.6; margin-top:4px; }
+#view-lincoln-electric .lec-mx a { color:var(--navy); text-decoration:none; }
+#view-lincoln-electric .lec-mx a:hover { color:var(--teal-dim); text-decoration:underline; }
+#view-lincoln-electric .lec-steps { display:grid; grid-template-columns:repeat(5,1fr); gap:8px; }
+#view-lincoln-electric .lec-steps > div { padding:10px 12px; border:1px solid var(--border); border-top:3px solid #94a3b8; border-radius:6px; font-size:10.5px; color:var(--text-muted); line-height:1.55; background:var(--surface); }
+#view-lincoln-electric .lec-steps > div:nth-child(-n+2) { border-top-color:var(--teal); }
+#view-lincoln-electric .lec-steps b { display:block; font-size:11px; color:var(--navy); margin-bottom:3px; }
+#view-lincoln-electric .lec-guide { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+#view-lincoln-electric .lec-guide > div { border:1px solid var(--border); border-top:4px solid #f59e0b; border-radius:8px; padding:14px 16px; background:var(--surface); break-inside:avoid; }
+#view-lincoln-electric .lec-guide > div.key { border:2px solid var(--teal); border-top-width:5px; background:rgba(0,180,216,0.04); }
+#view-lincoln-electric .lec-guide h4 { display:flex; justify-content:space-between; align-items:baseline; margin:0 0 8px; font-size:16px; font-weight:800; color:var(--navy); }
+#view-lincoln-electric .lec-guide h4 a { font-size:10px; font-weight:700; color:var(--teal-dim); text-decoration:none; }
+#view-lincoln-electric .lec-guide .k { font-size:8.5px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); margin-top:8px; }
+#view-lincoln-electric .lec-guide ul.know { margin:4px 0 0; padding-left:15px; font-size:11.5px; font-weight:700; color:var(--navy); line-height:1.6; }
+#view-lincoln-electric .lec-guide .lec-q { font-size:11.5px; color:var(--text); }
+#view-lincoln-electric .lec-micro a, #view-lincoln-electric .lec-note-navy a, #view-lincoln-electric .lec-sq a { color:var(--teal-dim); }
+@media (max-width: 1100px) {
+  #view-lincoln-electric .lec-opd, #view-lincoln-electric .lec-steps { grid-template-columns:repeat(2,1fr); }
+  #view-lincoln-electric .lec-guide { grid-template-columns:1fr; }
+}
+@media (max-width: 900px) {
+  #view-lincoln-electric .lec-nav { padding:6px 12px; }
+  #view-lincoln-electric .lec-lane-g, #view-lincoln-electric .lec-jump, #view-lincoln-electric .lec-sq, #view-lincoln-electric .lec-opd, #view-lincoln-electric .lec-steps { grid-template-columns:1fr; }
+  #view-lincoln-electric .lec-lane-g > div, #view-lincoln-electric .lec-lane-g > div:nth-child(4) { grid-column:auto; border-right:none; }
+  #view-lincoln-electric .lec-jump .k { max-width:none; }
+  #view-lincoln-electric .lec-kpis, #view-lincoln-electric .lec-2col { grid-template-columns:1fr !important; }
+}
+@media (max-width: 700px) {
+  #view-lincoln-electric .content-body { padding:16px; }
+}
+@media print {
+  #view-lincoln-electric .lec-nav { display:none !important; }
+  #view-lincoln-electric .lec-ev > summary::before { content:""; }
+  #view-lincoln-electric .lec-lane, #view-lincoln-electric .lec-guide > div { break-inside:avoid; }
+}
+
+/* Refresh additions — governance strip, status pills, PJ provenance, overlap principle */
+#view-lincoln-electric .lec-gov { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+#view-lincoln-electric .lec-gov > div { padding:10px 13px; border:1px solid var(--border); border-radius:7px; background:var(--surface); min-width:0; }
+#view-lincoln-electric .lec-gov > div.wide { grid-column:span 2; }
+#view-lincoln-electric .lec-gov .k { font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-lincoln-electric .lec-gov .v { font-size:13px; font-weight:800; color:var(--navy); margin-top:3px; line-height:1.35; }
+#view-lincoln-electric .lec-gov .v small { display:block; font-size:10px; font-weight:600; color:var(--text-muted); margin-top:2px; }
+#view-lincoln-electric .lec-nv { display:inline-block; font-size:10px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; color:#b45309; background:rgba(245,158,11,0.12); border:1px solid rgba(245,158,11,0.45); padding:3px 8px; border-radius:4px; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-lincoln-electric .lec-na-pill { display:inline-block; font-size:10px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; color:#475569; background:rgba(148,163,184,0.16); border:1px dashed rgba(148,163,184,0.8); padding:3px 8px; border-radius:4px; }
+#view-lincoln-electric .lec-dw .log .big.txt { font-size:28px; letter-spacing:0; line-height:1.2; margin-top:8px; }
+#view-lincoln-electric .lec-dw .log dl { margin:12px 0 0; display:grid; grid-template-columns:1fr auto; gap:6px 12px; font-size:11px; }
+#view-lincoln-electric .lec-dw .log dt { color:var(--text-muted); font-weight:700; }
+#view-lincoln-electric .lec-dw .log dd { margin:0; text-align:right; }
+#view-lincoln-electric .lec-principle { display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-top:12px; padding:12px 16px; border:2px solid #f59e0b; border-radius:8px; background:rgba(245,158,11,0.05); }
+#view-lincoln-electric .lec-principle b { font-size:18px; font-weight:800; color:#b45309; letter-spacing:0.3px; }
+#view-lincoln-electric .lec-principle span { font-size:11px; color:var(--text-muted); line-height:1.6; flex:1; min-width:220px; }
+#view-lincoln-electric .lec-obs { list-style:none; margin:0; padding:0; }
+#view-lincoln-electric .lec-obs li { position:relative; padding:6px 0 6px 18px; border-bottom:1px solid var(--border); font-size:11.5px; color:var(--navy); line-height:1.5; }
+#view-lincoln-electric .lec-obs li:last-child { border-bottom:none; }
+#view-lincoln-electric .lec-obs li::before { content:""; position:absolute; left:2px; top:12px; width:7px; height:7px; border-radius:2px; background:var(--navy); }
+#view-lincoln-electric .lec-obs li.chg::before { background:#f59e0b; }
+#view-lincoln-electric .lec-obs li.new::before { background:var(--teal); }
+#view-lincoln-electric .lec-da { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+#view-lincoln-electric .lec-da > div { padding:12px 14px; border:1px solid var(--border); border-radius:7px; background:var(--surface); border-top:3px solid var(--navy); }
+#view-lincoln-electric .lec-da > div.c { border-top-color:var(--teal); }
+#view-lincoln-electric .lec-da > div.x { border-top-color:#94a3b8; background:rgba(148,163,184,0.06); }
+#view-lincoln-electric .lec-da > div.d { border-top-color:#f59e0b; }
+#view-lincoln-electric .lec-da b { display:block; font-size:10px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--navy); margin-bottom:6px; }
+#view-lincoln-electric .lec-da ul { margin:0; padding-left:15px; font-size:10.5px; color:var(--text-muted); line-height:1.6; }
+#view-lincoln-electric .lec-dq-g { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+#view-lincoln-electric .lec-dq-g > div { border:1px solid var(--border); border-top:4px solid #f59e0b; border-radius:8px; padding:13px 16px; background:var(--surface); break-inside:avoid; }
+#view-lincoln-electric .lec-dq-g h4 { display:flex; justify-content:space-between; align-items:baseline; gap:8px; margin:0 0 6px; font-size:13px; font-weight:800; color:var(--navy); }
+#view-lincoln-electric .lec-dq-g h4 a { font-size:10px; font-weight:700; color:var(--teal-dim); text-decoration:none; white-space:nowrap; }
+#view-lincoln-electric .lec-dq-g ol { margin:0; padding-left:22px; font-size:12px; color:var(--text); line-height:1.6; }
+#view-lincoln-electric .lec-dq-g ol li { margin:3px 0; }
+#view-lincoln-electric .lec-dq-g ol li::marker { font-weight:800; color:#b45309; }
+#view-lincoln-electric .page-header .lec-nv { font-size:11px; }
+#view-lincoln-electric .lec-sig.two { grid-template-columns:repeat(2,1fr); }
+#view-lincoln-electric .lec-hs.two { grid-template-columns:1fr 1fr; }
+@media (max-width: 1100px) {
+  #view-lincoln-electric .lec-da { grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width: 900px) {
+  #view-lincoln-electric .lec-gov, #view-lincoln-electric .lec-da, #view-lincoln-electric .lec-dq-g { grid-template-columns:1fr; }
+  #view-lincoln-electric .lec-gov > div.wide { grid-column:auto; }
+  #view-lincoln-electric .lec-sig.two, #view-lincoln-electric .lec-hs.two { grid-template-columns:1fr; }
+}
+
+/* LINCOLN ELECTRIC refresh additions — five-corridor jump strip, gateway titles */
+#view-lincoln-electric .lec-jump.five { grid-template-columns:repeat(5,1fr); }
+#view-lincoln-electric .lec-jump.five .k { grid-column:1 / -1; max-width:none; }
+#view-lincoln-electric .lec-gwt { cursor:help; }
+#view-lincoln-electric .lec-da-sm { font-size:10px; color:var(--text-muted); }
+@media (max-width: 1100px) { #view-lincoln-electric .lec-jump.five { grid-template-columns:repeat(3,1fr); } }
+@media (max-width: 900px) { #view-lincoln-electric .lec-jump.five { grid-template-columns:1fr; } }
+/* Lincoln Electric additions — compact route tables and persistence tags */
+#view-lincoln-electric .lec-tp { width:100%; border-collapse:collapse; }
+#view-lincoln-electric .lec-tp td { padding:4px 8px; font-size:11.5px; border-bottom:1px solid var(--border); }
+#view-lincoln-electric .lec-tp td.r { text-align:right; font-weight:800; color:var(--navy); font-family:ui-monospace,Menlo,monospace; }
+#view-lincoln-electric .lec-yes { display:inline-block; font-size:9px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; color:#047857; background:rgba(16,185,129,0.12); padding:1px 6px; border-radius:3px; }
+#view-lincoln-electric .lec-no { display:inline-block; font-size:9px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; color:var(--text-light); background:var(--bg); border:1px solid var(--border); padding:1px 6px; border-radius:3px; }
+
+/* Lincoln Electric additions — deep-dive cards */
+#view-lincoln-electric .lec-dd { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+#view-lincoln-electric .lec-dd > div { padding:12px 14px; border:1px solid var(--border); border-top:3px solid #f59e0b; border-radius:7px; background:var(--surface); font-size:11px; line-height:1.6; color:var(--text-muted); }
+#view-lincoln-electric .lec-dd ul { margin:6px 0 0; padding-left:16px; }
+#view-lincoln-electric .lec-dd .n { font-size:22px; font-weight:800; color:#b45309; line-height:1.1; margin-top:4px; }
+#view-lincoln-electric .lec-dd .n small { font-size:11px; color:var(--text-muted); font-weight:700; }
+#view-lincoln-electric .lec-tpna { color:var(--text-muted); font-style:italic; }
+@media (max-width: 900px) { #view-lincoln-electric .lec-dd { grid-template-columns:1fr; } }
+@media print { #view-lincoln-electric .lec-dd > div { break-inside:avoid; } }
+
 /* LIEBHERR MONTERREY — scoped view components (#view-liebherr only). Customs CLIENT / Logistics Wallet Expansion + Deep Lane Intelligence. */
 #view-liebherr .num { text-align:right; }
 #view-liebherr .lbh-sublbl { font-size:10px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal-dim); margin-bottom:8px; }
@@ -6555,6 +7158,10 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
       <span>◆</span> <span style="flex:1;">PHINIA Componentes Mexico</span>
       <span class="recent-cls" style="background:rgba(245,158,11,0.2);color:#fbbf24;">NOT VALIDATED</span>
     </div>
+    <div class="nav-item" onclick="showView('view-lincoln-electric', this)" title="Lincoln Electric Maquinas S De Rl · Relationship Not Fully Validated · AIOS Classification Not Assigned · Analysis Date 19-Sep-2026">
+      <span>◆</span> <span style="flex:1;">Lincoln Electric Maquinas S De Rl</span>
+      <span class="recent-cls" style="background:rgba(245,158,11,0.2);color:#fbbf24;">NOT VALIDATED</span>
+    </div>
     <div class="nav-item" onclick="showView('view-liebherr', this)" title="Liebherr Monterrey · CLIENT (Customs relationship) · AIOS Classification AAA">
       <span>◆</span> <span style="flex:1;">Liebherr Monterrey</span>
       <span class="recent-cls" style="background:rgba(16,185,129,0.2);color:#34d399;">CLIENT</span>
@@ -6761,27 +7368,33 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
       </div>
     </div>
 
-    <!-- Lincoln Electric México -->
-    <div class="account-card aaa" onclick="showViewById('view-lincoln-electric')">
+    <!-- Lincoln Electric Maquinas S De Rl -->
+    <div class="account-card" onclick="showViewById('view-lincoln-electric')" title="Lincoln Electric Maquinas S De Rl · AIOS Analysis 19-Sep-2026 · Relationship Not Fully Validated · Arcatek Customs and Akzent Logistics Service Relationships Not Validated · AIOS Classification not assigned. Current YTD PJ Visible Universe 1,114 Shipments (Imports 630, Exports 484, Jan 1 – Jul 31, 2026), −1.9% vs Jan 1 – Jul 31, 2025 (1,136). Customs Shared Wallet 38.2% (426 / 1,114) on Arcatek Patent 3468 · Import 44.6% · Export 30.0%. Logistics Shared Wallet Not Calculable. Captured Logistics Profit Not Available.">
       <div class="account-card-header">
         <div>
-          <div class="account-name">Lincoln Electric México</div>
-          <div class="account-industry">Industrial Manufacturing · Welding Equipment</div>
+          <div class="account-name">Lincoln Electric Maquinas S De Rl</div>
+          <div class="account-industry">Relationship Not Fully Validated · Analysis Date 19-Sep-2026 · Current YTD 2026</div>
         </div>
-        <span class="account-cls-badge aaa">AAA</span>
+        <div style="display:flex;gap:5px;align-items:center;flex-shrink:0;">
+          <span class="account-cls-badge" style="color:var(--text-light);" title="AIOS Classification: Not assigned — relationship/internal capture not fully validated">&mdash;</span>
+        </div>
       </div>
-      <div class="account-metrics">
-        <div class="acct-metric"><div class="acct-metric-val">1,235</div><div class="acct-metric-lbl">2026 YTD</div></div>
-        <div class="acct-metric"><div class="acct-metric-val">697 / 538</div><div class="acct-metric-lbl">Imp / Exp</div></div>
-        <div class="acct-metric"><div class="acct-metric-val">AAA</div><div class="acct-metric-lbl">AIOS Fit</div></div>
+      <div class="account-metrics" style="grid-template-columns:repeat(4,1fr);">
+        <div class="acct-metric"><div class="acct-metric-val">1,114</div><div class="acct-metric-lbl">PJ YTD Shipments</div></div>
+        <div class="acct-metric"><div class="acct-metric-val" style="color:#b91c1c;">&minus;1.9%</div><div class="acct-metric-lbl">vs Jan&ndash;Jul 2025</div></div>
+        <div class="acct-metric"><div class="acct-metric-val" style="color:var(--teal-dim);">38.2%</div><div class="acct-metric-lbl">Customs Wallet</div></div>
+        <div class="acct-metric"><div class="acct-metric-val" style="font-size:12px;color:var(--text-light);">Not Calculable</div><div class="acct-metric-lbl">Logistics Wallet</div></div>
+      </div>
+      <div style="margin-top:8px;padding:7px 10px;background:rgba(245,158,11,0.06);border-left:3px solid #f59e0b;border-radius:0 4px 4px 0;">
+        <div style="font-size:9px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:#b45309;">Relationship Not Fully Validated</div>
+        <div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;margin-top:2px;">Top three gateways = 88.0% &mdash; Colombia &middot; Nuevo Laredo &middot; MTY Airport</div>
       </div>
       <div class="account-tags">
-        <span class="acct-tag" style="background:rgba(245,158,11,0.12);color:#b45309;border-color:rgba(245,158,11,0.3);">LEAD</span>
-        <span class="acct-tag">Nuevo Laredo</span>
         <span class="acct-tag">Colombia NL</span>
-        <span class="acct-tag">Air urgency</span>
-        <span class="acct-tag">Welding equipment</span>
-        <span class="acct-tag">ILM fit</span>
+        <span class="acct-tag">Nuevo Laredo</span>
+        <span class="acct-tag">MTY Airport</span>
+        <span class="acct-tag">Customs Shared Wallet</span>
+        <span class="acct-tag">Discovery Required</span>
       </div>
     </div>
 
@@ -9647,463 +10260,382 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
   </script>
 </div>
 
-<!-- ══ LINCOLN ELECTRIC MÉXICO VIEW ══ -->
+<!-- ══ LINCOLN ELECTRIC MAQUINAS S DE RL VIEW — AIOS Analysis 19-Sep-2026 · 8-chapter seller report (Executive · Network · Core Routes · Lane Intelligence · Customs · Historical · Commercial · Discovery) ══ -->
 <div id="view-lincoln-electric" class="view">
   <div class="page-header">
     <div class="page-header-left">
-      <div class="page-header-eyebrow">Target Account · LEAD · Panjiva Visible Universe</div>
-      <div class="page-header-title">Lincoln Electric México</div>
-      <div class="page-header-sub">Industrial Manufacturing · Welding Equipment · Cross-Border &amp; Multimodal Operations</div>
+      <div class="page-header-eyebrow">Account Intelligence · Relationship Not Fully Validated · Analysis Date 19-Sep-2026</div>
+      <div class="page-header-title">Lincoln Electric Maquinas S De Rl</div>
+      <div class="page-header-sub">Current YTD Jan 1 – Jul 31, 2026 · PJ Visible Universe 1,114 Shipments · Imports 630 · Exports 484</div>
     </div>
     <div class="page-header-meta">
-      <span class="classification-badge lead">LEAD</span>
-      <span class="classification-badge aaa">AAA</span>
+      <span class="lec-nv">Relationship Not Fully Validated</span>
       <button class="print-btn" onclick="printView('view-lincoln-electric')">⬇ Export PDF</button>
     </div>
   </div>
+  <nav class="lec-nav" data-aios-own-toc aria-label="Report chapters"><a href="#lec-ch-1"><b>01</b>Executive</a><a href="#lec-ch-2"><b>02</b>Network</a><a href="#lec-ch-3"><b>03</b>Core Routes</a><a href="#lec-ch-4"><b>04</b>Lane Intelligence</a><a href="#lec-ch-5"><b>05</b>Customs</a><a href="#lec-ch-6"><b>06</b>Historical</a><a href="#lec-ch-7"><b>07</b>Commercial</a><a href="#lec-ch-8"><b>08</b>Discovery</a></nav>
   <div class="content-body">
 
-    <!-- LEAD source banner -->
-    <div class="card">
-      <div class="card-body" style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
-        <span class="classification-badge lead">LEAD</span>
-        <span style="font-size:12px;color:var(--text-muted);line-height:1.6;">
-          <strong style="color:var(--navy);">Relationship Status: LEAD (pre-commercial).</strong> Account not operated by Akzent. All analysis is built exclusively on <strong>Panjiva Imports &amp; Exports</strong> as the visible universe — no Akzent shipment data is included, and no coverage, wallet, revenue, gross profit, margin or penetration is calculated. The <strong>AIOS AAA</strong> classification reflects strategic fit and operational complexity — it is shown separately from and is independent of the LEAD relationship badge.
-        </span>
-      </div>
-    </div>
-
-    <!-- 01 Executive Intelligence Summary -->
-    <div class="card">
-      <div class="card-header"><span class="accent">01</span> Executive Intelligence Summary — Panjiva Intelligence</div>
+    <section class="lec-chapter exec" id="lec-ch-1">
+      <div class="lec-chapter-n">Chapter 01</div>
+      <div class="lec-chapter-t">Executive Account Summary</div>
+      <div class="lec-chapter-s">Where does this account stand? · 30–60 second read</div>
+    </section>
+    <div class="card" style="border-top:3px solid #f59e0b;">
+      <div class="card-header">LINCOLN ELECTRIC MAQUINAS S DE RL — Account Governance · Analysis Date 19-Sep-2026</div>
       <div class="card-body">
-        <p style="font-size:13px;line-height:1.7;">Lincoln Electric México shows a <strong>highly strategic industrial operation</strong> with strong cross-border exposure, multimodal execution, high customs sensitivity and a technical HS portfolio centered on welding equipment, machine parts, electrical cables, connectors, terminals and consumables.</p>
-        <p style="font-size:13px;line-height:1.7;margin-top:10px;">The visible Panjiva universe shows <strong>3,091 Shipments in 2025</strong> and <strong>1,235 Shipments in 2026 YTD</strong> through May 30, 2026. Current-year activity remains import-led but export share increased from 39.6% in 2025 to 43.6% in 2026 YTD.</p>
-        <div style="background:rgba(245,158,11,0.05);border-left:3px solid #f59e0b;border-radius:0 6px 6px 0;padding:12px 16px;margin-top:12px;">
-          <strong style="font-size:11px;color:#b45309;text-transform:uppercase;letter-spacing:1px;">⚡ AIOS Verdict — Source: Panjiva</strong>
-          <p style="font-size:12px;color:var(--text);line-height:1.6;margin-top:4px;">This is not a transactional freight opportunity. The account should be positioned around <strong>operational complexity, customs visibility, supplier coordination, air escalation governance and ILM / Control Tower potential.</strong></p>
+        <div class="lec-gov">
+          <div><div class="k">Relationship</div><div class="v"><span class="lec-nv">Relationship Not Fully Validated</span></div></div>
+          <div><div class="k">Service Relationship · Arcatek Customs</div><div class="v"><span class="lec-nv">Not Validated</span></div></div>
+          <div><div class="k">Service Relationship · Akzent Logistics</div><div class="v"><span class="lec-nv">Not Validated</span></div></div>
+          <div><div class="k">AIOS Classification</div><div class="v">Not assigned<small>Relationship / internal capture not fully validated</small></div></div>
+          <div class="wide"><div class="k">Relationship basis</div><div class="v">Patent 3468 in PJ is operational evidence only<small>It does not establish or change the commercial Relationship or Service Relationship status.</small></div></div>
+        </div>
+        <div class="lec-micro">This analysis contains PJ Shipment data only. <strong>Missing internal data is not zero Captured Business.</strong></div>
+
+        <div class="lec-hero" style="margin-top:14px;">
+          <div>
+            <div class="k">Current YTD PJ Visible Universe · <span class="lec-src pj">PJ Fact</span></div>
+            <div class="v">1,114 <small>Shipments · Jan 1 – Jul 31, 2026</small></div>
+            <div class="lec-split"><div style="width:56.6%;background:var(--navy);" title="Imports 630 — 56.6%"></div><div style="width:43.4%;background:var(--teal);" title="Exports 484 — 43.4%"></div></div>
+            <div class="s"><strong style="color:var(--navy);">Imports: 630 | 56.6%</strong> &nbsp;·&nbsp; <strong style="color:var(--teal-dim);">Exports: 484 | 43.4%</strong></div>
+          </div>
+          <div>
+            <div class="k">Equivalent-period change · <span class="lec-src ca">AIOS Calculation</span></div>
+            <div class="lec-delta dn">−1.9%</div>
+            <div class="s" style="margin-top:2px;">Total vs Jan 1 – Jul 31, 2025 (1,136 → 1,114 Shipments)</div>
+            <div class="lec-trendrow"><div><b style="color:#b91c1c;">−8.2%</b>Imports · 686 → 630</div><div><b style="color:#047857;">+7.6%</b>Exports · 450 → 484</div></div>
+          </div>
+          <div>
+            <div class="k">Previous Full Calendar Year · <span class="lec-src pj">PJ Fact</span></div>
+            <div class="v" style="color:#64748b;">1,863 <small>Shipments · 2025</small></div>
+            <div class="s">Imports 1,126 · Exports 737. Historical context only — never aggregated with Current YTD; Current YTD is never annualized.</div>
+          </div>
+        </div>
+
+        <div class="lec-dw" style="margin-top:14px;">
+          <div class="cus">
+            <div class="t" style="color:var(--teal-dim);">Customs Shared Wallet · Current YTD</div>
+            <div class="big">38.2%</div>
+            <div class="eq">426 / 1,114 Shipments on Arcatek Patent 3468</div>
+            <div class="lec-rows" style="margin-top:10px;">
+              <div class="lec-row"><div class="lbl">Import Customs Shared Wallet<em>281 / 630 Shipments</em></div><div class="lec-cw-bar"><div class="lec-cw-ak" style="width:44.6%;"></div><div class="lec-cw-ot" style="width:55.4%;"></div></div><div class="val">44.6%</div></div>
+              <div class="lec-row"><div class="lbl">Export Customs Shared Wallet<em>145 / 484 Shipments</em></div><div class="lec-cw-bar" style="width:76.8%;"><div class="lec-cw-ak" style="width:30.0%;"></div><div class="lec-cw-ot" style="width:70.0%;"></div></div><div class="val">30.0%</div></div>
+            </div>
+            <div class="lec-legend" style="margin-top:8px;"><span><i style="background:var(--teal);"></i>Arcatek Patent</span><span><i style="background:#f59e0b;"></i>Other Patent</span></div>
+            <div class="lab"><span class="lec-src pj">PJ Fact</span> + <span class="lec-src ak">Akzent Fact · Arcatek Patent Ownership</span> + <span class="lec-src ca">AIOS Calculation</span> · Export bar length scaled to 484 vs 630 Imports</div>
+          </div>
+          <div class="log">
+            <div class="t">Logistics Shared Wallet</div>
+            <div class="big txt">Not Calculable</div>
+            <dl>
+              <dt>Captured Logistics Shipments</dt><dd><span class="lec-na-pill">Not Available</span></dd>
+              <dt>Logistics Wallet Alignment</dt><dd><span class="lec-na-pill">Not Calculable</span></dd>
+              <dt>Captured Logistics Profit</dt><dd><span class="lec-na-pill">Not Available</span></dd>
+            </dl>
+            <div class="s" style="font-size:11px;color:var(--text-muted);margin-top:10px;line-height:1.55;">No Logistics whitespace is calculated from the absence of internal data. <strong style="color:var(--navy);">Missing internal data ≠ zero Captured Business.</strong></div>
+            <div class="lab">Deactivated — not estimated, not extrapolated</div>
+          </div>
+        </div>
+        <div class="lec-micro">Two separate concepts: the Customs Shared Wallet is <strong>Customs Wallet intelligence, not evidence of Akzent Logistics freight capture</strong>, and no combined Wallet exists. Arcatek-owned Customs Patents are 3468 + 1930; Patent 1930 is not visible in the supplied PJ universe. Patent allocation, FY2025 Customs Wallet and the 688 Other-Patent Shipments are detailed in <a href="#lec-ch-5">Chapter 05</a>.</div>
+
+        <div class="lec-sublbl" style="margin-top:18px;">Executive Conclusion</div>
+        <div class="lec-thesis" style="margin-top:4px;">PJ shows a <strong>1,114-Shipment</strong> Current YTD network with material cross-border, air and maritime structures, <strong>88.0%</strong> concentrated in three gateways — Colombia, Nuevo Laredo and MTY Airport. Arcatek Patent 3468 is operationally visible on <strong>426 Shipments</strong>; <strong>688 Shipments</strong> use Other Patents. The relationship, the Arcatek service scope and any Akzent Logistics capture remain <strong>unvalidated</strong>, so the Logistics Shared Wallet is Not Calculable and nothing visible is presented as winnable.</div>
+
+        <div class="lec-jump" style="grid-template-columns:auto 1fr 1fr 1fr 1fr;">
+          <span class="k">The four operating corridors</span>
+          <a href="#lec-lane-1" class="key"><b>1 · Maquila Principal → Torreon</b>385 Imports · 61.1% · Colombia + Nuevo Laredo</a>
+          <a href="#lec-lane-2"><b>2 · Torreon → MTY Airport</b>235 Exports · 48.6% · Air · Patent 3577</a>
+          <a href="#lec-lane-3"><b>3 · Torreon → Harris / Colombia</b>93 Exports · 19.2% · Patent 3468</a>
+          <a href="#lec-lane-4"><b>4 · Manzanillo → Torreon</b>58 Imports · 9.2% · Maritime</a>
         </div>
       </div>
     </div>
 
-    <!-- Panjiva Visibility Metrics -->
-    <div class="grid-4">
-      <div class="stat-box"><div class="stat-label">Total Panjiva Shipments</div><div class="stat-value">4,326</div><div class="stat-sub">2025 + 2026 YTD visible universe</div></div>
-      <div class="stat-box"><div class="stat-label">2026 YTD Shipments</div><div class="stat-value">1,235</div><div class="stat-sub">Through May 30, 2026</div></div>
-      <div class="stat-box"><div class="stat-label">2026 YTD Imports</div><div class="stat-value">697</div><div class="stat-sub">Import share 56.4%</div></div>
-      <div class="stat-box"><div class="stat-label">2026 YTD Exports</div><div class="stat-value teal">538</div><div class="stat-sub">Export share 43.6%</div></div>
-    </div>
-
-    <div class="card" style="margin-top:0;">
-      <div class="card-body" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
-        <div>
-          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);">2026 YTD Visible Trade Value</div>
-          <div style="font-size:26px;font-weight:800;color:var(--navy);">USD 84.94M</div>
-        </div>
-        <div style="font-size:11px;color:var(--text-muted);max-width:420px;line-height:1.6;">
-          1,235 Shipments · 9,670.67 t gross weight · 901.25 TEU · multimodal · multi-origin. Values derived from Panjiva Imports &amp; Exports declared data — not Akzent revenue.
-        </div>
-      </div>
-    </div>
-
-    <!-- 02 Shipment Intelligence by Period -->
+    <section class="lec-chapter " id="lec-ch-2">
+      <div class="lec-chapter-n">Chapter 02</div>
+      <div class="lec-chapter-t">Network Snapshot</div>
+      <div class="lec-chapter-s">What does the current operating structure look like? · Current YTD 2026</div>
+    </section>
     <div class="card">
-      <div class="card-header"><span class="accent">02</span> Shipment Intelligence by Period</div>
-      <div class="card-body" style="padding:0;">
-        <table class="network-table">
-          <thead>
-            <tr><th>Period</th><th>Shipments</th><th>Imports</th><th>Exports</th><th>USD Value</th><th>Gross Weight</th><th>TEU</th></tr>
-          </thead>
+      <div class="card-header">Gateways, Direction and Modes · <span class="lec-src pj">PJ Fact</span> · shares <span class="lec-src ca">AIOS Calculation</span></div>
+      <div class="card-body">
+        <div class="lec-kpis">
+          <div><div class="k">Top three gateways</div><div class="v">88.0% <small>of 1,114</small></div><div class="s">Colombia · Nuevo Laredo · MTY Airport</div></div>
+          <div><div class="k">Colombia, Nuevo Leon</div><div class="v">393 <small>35.3%</small></div></div>
+          <div><div class="k">Nuevo Laredo, Tamaulipas</div><div class="v">313 <small>28.1%</small></div></div>
+          <div><div class="k">MTY Airport</div><div class="v">274 <small>24.6%</small></div></div>
+        </div>
+        <div style="display:grid;grid-template-columns:1.25fr 0.75fr;gap:26px;margin-top:16px;" class="lec-2col">
+          <div><div class="lec-sublbl">Principal gateways — all 1,114 Shipments</div><div class="lec-rows"><div class="lec-row"><div class="lbl">Colombia, Nuevo Leon</div><div class="bar"><div style="width:100.0%;background:var(--navy);"></div></div><div class="val">393 <span>35.3%</span></div></div><div class="lec-row"><div class="lbl">Nuevo Laredo, Tamaulipas</div><div class="bar"><div style="width:79.6%;background:var(--teal);"></div></div><div class="val">313 <span>28.1%</span></div></div><div class="lec-row"><div class="lbl">Aeropuerto Internacional General Mariano Escobedo</div><div class="bar"><div style="width:69.7%;background:#7c3aed;"></div></div><div class="val">274 <span>24.6%</span></div></div><div class="lec-row"><div class="lbl">Manzanillo, Colima</div><div class="bar"><div style="width:19.1%;background:#b45309;"></div></div><div class="val">75 <span>6.7%</span></div></div><div class="lec-row"><div class="lbl">Altamira, Tamaulipas</div><div class="bar"><div style="width:5.1%;background:#64748b;"></div></div><div class="val">20 <span>1.8%</span></div></div><div class="lec-row"><div class="lbl">Other</div><div class="bar"><div style="width:9.9%;background:#94a3b8;"></div></div><div class="val">39 <span>3.5%</span></div></div></div></div>
+          <div><div class="lec-sublbl">2026 YTD modes</div>
+            <div style="overflow-x:auto;"><table class="hub-table lec-cwg" style="font-size:11.5px;"><thead><tr><th>Mode</th><th class="num">Shipments</th><th class="num">Share</th><th class="num">vs Jan–Jul 2025</th></tr></thead><tbody><tr><td><span class="hub-tag unknown" title="Transport method recorded as Unknown in PJ — AIOS does not infer the missing mode.">Unknown</span></td><td class="num lec-mono">428</td><td class="num">38.4%</td><td class="num"><strong style="color:#b91c1c;">−8.9%</strong></td></tr><tr><td><span class="hub-tag truck">🚚 Truck</span></td><td class="num lec-mono">317</td><td class="num">28.5%</td><td class="num"><strong style="color:#b91c1c;">−6.8%</strong></td></tr><tr><td><span class="hub-tag air">✈ Air</span></td><td class="num lec-mono">274</td><td class="num">24.6%</td><td class="num"><strong style="color:#047857;">+30.5%</strong></td></tr><tr><td><span class="hub-tag ocean">🚢 Maritime</span></td><td class="num lec-mono">95</td><td class="num">8.5%</td><td class="num"><strong style="color:#b91c1c;">−18.1%</strong></td></tr></tbody></table></div>
+            <div class="lec-micro">Unknown is the mode as recorded in PJ; AIOS does not infer the missing mode. Mode shares are row shares of 1,114 Shipments.</div>
+          </div>
+        </div>
+        <div class="lec-sig"><div class="s1"><b>Observed Operational Signal</b>The visible operation combines material cross-border, air and maritime structures concentrated in Colombia, Nuevo Laredo and MTY Airport.</div><div class="s2"><b>AIOS Interpretation</b>The pattern supports a cross-border / multimodal coordination environment with materially different gateway structures by direction and Trading Partner.</div><div class="s3"><b>Discovery Validation</b>Validate gateway allocation rules, operating ownership, SLA / visibility requirements, incumbents, and freight-vs-customs decision rights.</div></div>
+        <details class="lec-ev"><summary>Supporting evidence · HS operational presence — Top 5, Current YTD</summary><div class="lec-ev-b"><div class="lec-note" style="margin:0 0 12px;"><strong>One Shipment may contain multiple HS Codes. HS counts represent operational presence and are not additive.</strong></div><div style="overflow-x:auto;max-width:720px;"><table class="hub-table lec-cwg" style="font-size:11.5px;"><thead><tr><th>HS Code</th><th class="num">Shipment Operational Presence</th><th>Representative PJ Description</th></tr></thead><tbody><tr><td class="lec-mono">9802000100</td><td class="num lec-mono">253</td><td>Conectores electricos / related processing entries</td></tr><tr><td class="lec-mono">8544429904</td><td class="num lec-mono">245</td><td>Cableado para conduccion electrica</td></tr><tr><td class="lec-mono">8515909900</td><td class="num lec-mono">204</td><td>Partes para maquinas de soldar</td></tr><tr><td class="lec-mono">8544429999</td><td class="num lec-mono">191</td><td>Cableado para conduccion electrica</td></tr><tr><td class="lec-mono">8536909999</td><td class="num lec-mono">166</td><td>Terminales</td></tr></tbody></table></div></div></details>
+      </div>
+    </div>
+
+    <section class="lec-chapter " id="lec-ch-3">
+      <div class="lec-chapter-n">Chapter 03</div>
+      <div class="lec-chapter-t">Core Routes</div>
+      <div class="lec-chapter-s">Which routes make up ≥80% of each direction? · the mathematical evidence base for Lane Intelligence</div>
+    </section>
+    <div class="card">
+      <div class="card-header">Core Route Concentration · Current YTD · <span class="lec-src ca">AIOS Calculation</span></div>
+      <div class="card-body">
+        <div class="lec-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:26px;">
+          <div>
+            <div class="lec-sublbl">Imports · 5 routes · 535 / 630 Shipments = 84.9%</div>
+            <div class="lec-conc"><div class="lec-conc-bar"><div style="width:35.397%;background:var(--navy);" title="Route 1 · Colombia · 223 Shipments">R1</div><div style="width:25.714%;background:var(--teal);" title="Route 2 · Nuevo Laredo · 162 Shipments">R2</div><div style="width:9.206%;background:#b45309;" title="Route 3 · Manzanillo · 58 Shipments">R3</div><div style="width:7.619%;background:var(--navy);" title="Route 4 · Colombia · 48 Shipments">R4</div><div style="width:6.984%;background:var(--teal);" title="Route 5 · Nuevo Laredo · 44 Shipments">R5</div></div><div class="lec-conc-mk" style="left:61.10%;"><span>Routes 1–2 · 61.1%</span></div><div class="lec-conc-mk b r" style="left:84.90%;"><span>Core · 84.9%</span></div></div>
+          </div>
+          <div>
+            <div class="lec-sublbl">Exports · 6 routes · 397 / 484 Shipments = 82.0%</div>
+            <div class="lec-conc"><div class="lec-conc-bar"><div style="width:48.554%;background:#7c3aed;" title="Route 1 · MTY Airport · 235 Shipments">R1</div><div style="width:19.215%;background:var(--navy);" title="Route 2 · Colombia · 93 Shipments">R2</div><div style="width:4.752%;background:var(--teal);" title="Route 3 · Nuevo Laredo · 23 Shipments"></div><div style="width:3.512%;background:var(--teal);" title="Route 4 · Nuevo Laredo · 17 Shipments"></div><div style="width:3.099%;background:var(--teal);" title="Route 5 · Nuevo Laredo · 15 Shipments"></div><div style="width:2.893%;background:#7c3aed;" title="Route 6 · MTY Airport · 14 Shipments"></div></div><div class="lec-conc-mk" style="left:48.60%;"><span>Route 1 · 48.6%</span></div><div class="lec-conc-mk b r" style="left:82.00%;"><span>Core · 82.0%</span></div></div>
+          </div>
+        </div>
+        <div class="lec-legend" style="margin-top:12px;"><span><i style="background:var(--navy);"></i>Colombia</span><span><i style="background:var(--teal);"></i>Nuevo Laredo</span><span><i style="background:#7c3aed;"></i>MTY Airport</span><span><i style="background:#b45309;"></i>Manzanillo</span><span><i style="background:#e6eaf1;border:1px solid var(--border);"></i>Outside the Core set</span></div>
+        <div class="lec-micro">Core Routes are the complete minimum route sets reaching ≥80% of Shipments, separately by direction. Frequency uses each route's own observed window. Every route is rendered exactly as supplied by AIOS.</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">Current YTD Import Core Routes — 5 routes · 84.9% of 630 Imports · <span class="lec-src pj">PJ Fact</span> + <span class="lec-src ca">AIOS Calculation</span></div>
+      <div class="card-body">
+        <div class="lec-scroll"><table class="lec-route-table"><thead><tr><th>Rank</th><th>Origin</th><th>Gateway</th><th>Destination</th><th>Mode</th><th class="num">Shipments</th><th class="num">Import Share</th><th class="num">Cumulative</th><th class="num">Active Months</th><th class="num">Shipments / Active Month</th><th class="num">Shipments / Week</th><th>First</th><th>Last</th></tr></thead><tbody><tr><td class="lec-rank"><span class="lec-rank-pill">1</span></td><td><div class="lec-ent"><strong>Lincoln Maquila Principal Llcq</strong></div></td><td><strong class="lec-gwt" style="color:var(--navy);">Colombia</strong></td><td><div class="lec-ent"><strong>Lincoln Electric Maquinas S De Rl</strong><span class="lec-tag self">Account facility</span></div></td><td><span class="hub-tag unknown" title="Transport method recorded as Unknown in PJ — AIOS does not infer the missing mode.">Unknown</span></td><td class="num lec-mono">223</td><td class="num">35.4%</td><td class="num lec-cum"><strong>35.4%</strong><div class="lec-cum-bar"><div style="width:35.40%;"></div></div></td><td class="num">7</td><td class="num">31.9</td><td class="num"><strong>8.26</strong></td><td class="lec-dates">2026-01-09</td><td class="lec-dates">2026-07-16</td></tr><tr><td class="lec-rank"><span class="lec-rank-pill">2</span></td><td><div class="lec-ent"><strong>Lincoln Maquila Principal Llcq</strong></div></td><td><strong class="lec-gwt" style="color:var(--navy);">Nuevo Laredo</strong></td><td><div class="lec-ent"><strong>Lincoln Electric Maquinas S De Rl</strong><span class="lec-tag self">Account facility</span></div></td><td><span class="hub-tag truck">🚚 Truck</span></td><td class="num lec-mono">162</td><td class="num">25.7%</td><td class="num lec-cum"><strong>61.1%</strong><div class="lec-cum-bar"><div style="width:61.10%;"></div></div></td><td class="num">7</td><td class="num">23.1</td><td class="num"><strong>5.48</strong></td><td class="lec-dates">2026-01-05</td><td class="lec-dates">2026-07-30</td></tr><tr><td class="lec-rank"><span class="lec-rank-pill">3</span></td><td><div class="lec-ent"><strong>Lincoln Maquila Principal Llc</strong></div></td><td><strong class="lec-gwt" style="color:var(--navy);">Manzanillo</strong></td><td><div class="lec-ent"><strong>Lincoln Electric Maquinas S De Rl</strong><span class="lec-tag self">Account facility</span></div></td><td><span class="hub-tag ocean">🚢 Maritime</span></td><td class="num lec-mono">58</td><td class="num">9.2%</td><td class="num lec-cum"><strong>70.3%</strong><div class="lec-cum-bar"><div style="width:70.30%;"></div></div></td><td class="num">7</td><td class="num">8.3</td><td class="num"><strong>1.95</strong></td><td class="lec-dates">2026-01-05</td><td class="lec-dates">2026-07-31</td></tr><tr><td class="lec-rank"><span class="lec-rank-pill">4</span></td><td><div class="lec-ent"><strong>The Harris Products Group</strong></div></td><td><strong class="lec-gwt" style="color:var(--navy);">Colombia</strong></td><td><div class="lec-ent"><strong>Lincoln Electric Maquinas S De Rl</strong><span class="lec-tag self">Account facility</span></div></td><td><span class="hub-tag unknown" title="Transport method recorded as Unknown in PJ — AIOS does not infer the missing mode.">Unknown</span></td><td class="num lec-mono">48</td><td class="num">7.6%</td><td class="num lec-cum"><strong>77.9%</strong><div class="lec-cum-bar"><div style="width:77.90%;"></div></div></td><td class="num">7</td><td class="num">6.9</td><td class="num"><strong>1.83</strong></td><td class="lec-dates">2026-01-12</td><td class="lec-dates">2026-07-14</td></tr><tr><td class="lec-rank"><span class="lec-rank-pill">5</span></td><td><div class="lec-ent"><strong>The Harris Products Group</strong></div></td><td><strong class="lec-gwt" style="color:var(--navy);">Nuevo Laredo</strong></td><td><div class="lec-ent"><strong>Lincoln Electric Maquinas S De Rl</strong><span class="lec-tag self">Account facility</span></div></td><td><span class="hub-tag truck">🚚 Truck</span></td><td class="num lec-mono">44</td><td class="num">7.0%</td><td class="num lec-cum"><strong>84.9%</strong><div class="lec-cum-bar"><div style="width:84.90%;"></div></div></td><td class="num">7</td><td class="num">6.3</td><td class="num"><strong>1.49</strong></td><td class="lec-dates">2026-01-05</td><td class="lec-dates">2026-07-30</td></tr></tbody></table></div>
+        <div class="lec-micro">Origin names are rendered as they appear in PJ (Route 3 shows "Lincoln Maquila Principal Llc"; Routes 1–2 show "Llcq").</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">Current YTD Export Core Routes — 6 routes · 82.0% of 484 Exports · <span class="lec-src pj">PJ Fact</span> + <span class="lec-src ca">AIOS Calculation</span></div>
+      <div class="card-body">
+        <div class="lec-scroll"><table class="lec-route-table"><thead><tr><th>Rank</th><th>Origin</th><th>Gateway</th><th>Destination</th><th>Mode</th><th class="num">Shipments</th><th class="num">Export Share</th><th class="num">Cumulative</th><th class="num">Active Months</th><th class="num">Shipments / Active Month</th><th class="num">Shipments / Week</th><th>First</th><th>Last</th></tr></thead><tbody><tr><td class="lec-rank"><span class="lec-rank-pill">1</span></td><td><div class="lec-ent"><strong>Lincoln Electric Maquinas S De Rl</strong><span class="lec-tag self">Account facility</span></div></td><td><strong class="lec-gwt" style="color:var(--navy);">MTY Airport</strong></td><td><div class="lec-ent"><strong>Lincoln Maquila Principal Llcq</strong></div></td><td><span class="hub-tag air">✈ Air</span></td><td class="num lec-mono">235</td><td class="num">48.6%</td><td class="num lec-cum"><strong>48.6%</strong><div class="lec-cum-bar"><div style="width:48.60%;"></div></div></td><td class="num">7</td><td class="num">33.6</td><td class="num"><strong>7.80</strong></td><td class="lec-dates">2026-01-02</td><td class="lec-dates">2026-07-31</td></tr><tr><td class="lec-rank"><span class="lec-rank-pill">2</span></td><td><div class="lec-ent"><strong>Lincoln Electric Maquinas S De Rl</strong><span class="lec-tag self">Account facility</span></div></td><td><strong class="lec-gwt" style="color:var(--navy);">Colombia</strong></td><td><div class="lec-ent"><strong>The Harris Products Group</strong></div></td><td><span class="hub-tag unknown" title="Transport method recorded as Unknown in PJ — AIOS does not infer the missing mode.">Unknown</span></td><td class="num lec-mono">93</td><td class="num">19.2%</td><td class="num lec-cum"><strong>67.8%</strong><div class="lec-cum-bar"><div style="width:67.80%;"></div></div></td><td class="num">7</td><td class="num">13.3</td><td class="num"><strong>3.30</strong></td><td class="lec-dates">2026-01-13</td><td class="lec-dates">2026-07-28</td></tr><tr><td class="lec-rank"><span class="lec-rank-pill">3</span></td><td><div class="lec-ent"><strong>Lincoln Electric Maquinas S De Rl</strong><span class="lec-tag self">Account facility</span></div></td><td><strong class="lec-gwt" style="color:var(--navy);">Nuevo Laredo</strong></td><td><div class="lec-ent"><strong>The Harris Products Group</strong></div></td><td><span class="hub-tag truck">🚚 Truck</span></td><td class="num lec-mono">23</td><td class="num">4.8%</td><td class="num lec-cum"><strong>72.5%</strong><div class="lec-cum-bar"><div style="width:72.50%;"></div></div></td><td class="num">7</td><td class="num">3.3</td><td class="num"><strong>0.88</strong></td><td class="lec-dates">2026-01-22</td><td class="lec-dates">2026-07-22</td></tr><tr><td class="lec-rank"><span class="lec-rank-pill">4</span></td><td><div class="lec-ent"><strong>Lincoln Electric Maquinas S De Rl</strong><span class="lec-tag self">Account facility</span></div></td><td><strong class="lec-gwt" style="color:var(--navy);">Nuevo Laredo</strong></td><td><div class="lec-ent"><span class="lec-tpna">Trading Partner not available in PJ</span></div></td><td><span class="hub-tag truck">🚚 Truck</span></td><td class="num lec-mono">17</td><td class="num">3.5%</td><td class="num lec-cum"><strong>76.0%</strong><div class="lec-cum-bar"><div style="width:76.00%;"></div></div></td><td class="num">6</td><td class="num">2.8</td><td class="num"><strong>0.57</strong></td><td class="lec-dates">2026-01-02</td><td class="lec-dates">2026-07-29</td></tr><tr><td class="lec-rank"><span class="lec-rank-pill">5</span></td><td><div class="lec-ent"><strong>Lincoln Electric Maquinas S De Rl</strong><span class="lec-tag self">Account facility</span></div></td><td><strong class="lec-gwt" style="color:var(--navy);">Nuevo Laredo</strong></td><td><div class="lec-ent"><strong>Welding Cuttin Tools &amp; Accesories A Lincoln Electric Co.</strong></div></td><td><span class="hub-tag truck">🚚 Truck</span></td><td class="num lec-mono">15</td><td class="num">3.1%</td><td class="num lec-cum"><strong>79.1%</strong><div class="lec-cum-bar"><div style="width:79.10%;"></div></div></td><td class="num">7</td><td class="num">2.1</td><td class="num"><strong>0.51</strong></td><td class="lec-dates">2026-01-07</td><td class="lec-dates">2026-07-31</td></tr><tr><td class="lec-rank"><span class="lec-rank-pill">6</span></td><td><div class="lec-ent"><strong>Lincoln Electric Maquinas S De Rl</strong><span class="lec-tag self">Account facility</span></div></td><td><strong class="lec-gwt" style="color:var(--navy);">MTY Airport</strong></td><td><div class="lec-ent"><strong>Lincoln Electric Co Of Canada Lp Toronto Distribution Cente</strong></div></td><td><span class="hub-tag air">✈ Air</span></td><td class="num lec-mono">14</td><td class="num">2.9%</td><td class="num lec-cum"><strong>82.0%</strong><div class="lec-cum-bar"><div style="width:82.00%;"></div></div></td><td class="num">6</td><td class="num">2.3</td><td class="num"><strong>0.59</strong></td><td class="lec-dates">2026-01-19</td><td class="lec-dates">2026-07-02</td></tr></tbody></table></div>
+        <div class="lec-micro">Trading Partner names are rendered as they appear in PJ. FY2025 Core Route structure is in <a href="#lec-ch-6">Chapter 06</a>.</div>
+      </div>
+    </div>
+
+    <section class="lec-chapter " id="lec-ch-4">
+      <div class="lec-chapter-n">Chapter 04</div>
+      <div class="lec-chapter-t">Lane Intelligence</div>
+      <div class="lec-chapter-s">How do the operating corridors behave? · one Lane Card per corridor</div>
+    </section>
+    <div class="card" style="border-top:3px solid var(--navy);">
+      <div class="card-body">
+        <div class="lec-note-navy" style="margin-top:0;margin-bottom:16px;">Each corridor is built from the Core Routes in <a href="#lec-ch-3">Chapter 03</a>: Scale · Frequency · Network Structure · Persistence · Customs and Logistics position, then three separate layers — <strong>Observed Operational Signal</strong> → <strong>AIOS Interpretation</strong> → <strong>Discovery Validation</strong>. Logistics capture is Not Validated in every corridor. Corridor 1 customs figures are gateway-level, not route-level.</div>
+        <div class="lec-lanenav"><a href="#lec-lane-1" class="key">1 · Maquila Principal → Torreon</a><a href="#lec-lane-2">2 · MTY Airport export-air</a><a href="#lec-lane-3">3 · Harris / Colombia</a><a href="#lec-lane-4">4 · Manzanillo ocean</a></div>
+    <div class="lec-cor lec-lane" id="lec-lane-1">
+      <div class="lec-cor-h"><div class="lec-cor-id">1</div><div><div class="lec-cor-w">Corridor 1 · largest Import corridor · cross-border</div><div class="lec-cor-t">Lincoln Maquila Principal / Colombia + Nuevo Laredo → Torreon</div></div></div>
+      <div class="lec-lane-g">
+        <div><div class="k">Scale / Share</div><div class="n">385 <small>Import Shipments</small></div><div class="s"><b>61.1%</b> of all YTD Imports</div></div>
+        <div><div class="k">Frequency</div><table class="lec-cad"><tr><td>Colombia route · Shipments / week</td><td class="r"><b>8.26</b></td></tr><tr><td>Colombia route · Shipments / active month</td><td class="r">31.9</td></tr><tr><td>Nuevo Laredo route · Shipments / week</td><td class="r"><b>5.48</b></td></tr><tr><td>Nuevo Laredo route · Shipments / active month</td><td class="r">23.1</td></tr></table></div>
+        <div><div class="k">Network Structure</div><div class="s">Import Core Routes 1 (Colombia · Unknown · 223) and 2 (Nuevo Laredo · Truck · 162)</div></div>
+        <div><div class="k">Persistence</div><div class="s">Both structures are visible historically and remain material in Current YTD — see <a href="#lec-ch-6">Chapter 06</a>.</div></div>
+        <div class="pos"><div class="k">Customs Position · Logistics Position</div><div class="lec-pos"><span class="ca"><em>Customs · PJ</em>Gateway level: Colombia Imports 97.9% Arcatek</span><span class="co"><em>Customs · PJ</em>Gateway level: Nuevo Laredo Imports 0.0% Arcatek</span><span class="lu"><em>Logistics</em>Logistics capture · Not Validated</span></div></div>
+      </div>
+      <div class="lec-sig"><div class="s1"><b>Observed Operational Signal</b>A high-frequency cross-border corridor is distributed between Colombia and Nuevo Laredo.</div><div class="s2"><b>AIOS Interpretation</b>The corridor represents a material cross-border coordination domain where gateway selection, visibility, freight / customs handoffs and operating continuity matter.</div><div class="s3"><b>Discovery Validation</b>Confirm Colombia-vs-Nuevo-Laredo allocation logic, freight ownership, procurement / tender structure, SLA, contingency and decision rights.</div></div>
+    </div>
+    <div class="lec-cor lec-lane" id="lec-lane-2">
+      <div class="lec-cor-h"><div class="lec-cor-id">2</div><div><div class="lec-cor-w">Corridor 2 · dominant Export lane · air</div><div class="lec-cor-t">Torreon → Lincoln Maquila Principal / MTY Airport</div></div></div>
+      <div class="lec-lane-g">
+        <div><div class="k">Scale / Share</div><div class="n">235 <small>Core Route Shipments</small></div><div class="s"><b>48.6%</b> of all YTD Exports</div></div>
+        <div><div class="k">Frequency</div><table class="lec-cad"><tr><td>Shipments / active month</td><td class="r">33.6</td></tr><tr><td>Shipments / week</td><td class="r"><b>7.80</b></td></tr><tr><td>Active months</td><td class="r">7</td></tr><tr><td>Observed</td><td class="r">2026-01-02 → 2026-07-31</td></tr></table></div>
+        <div><div class="k">Network Structure</div><div class="s">Export Core Route 1 · MTY Airport · Air</div></div>
+        <div><div class="k">Persistence</div><div class="s">Visible in FY2025 at 310 Shipments / 42.1% of Exports — see <a href="#lec-ch-6">Chapter 06</a>.</div></div>
+        <div class="pos"><div class="k">Customs Position · Logistics Position</div><div class="lec-pos"><span class="co"><em>Customs · PJ</em>Patent 3577 handles the 235 principal facility-lane Shipments within 258 Patent-3577 YTD Exports through MTY Airport</span><span class="lu"><em>Logistics</em>Logistics capture · Not Validated</span></div></div>
+      </div>
+      <div class="lec-sig"><div class="s1"><b>Observed Operational Signal</b>The dominant Export lane is a persistent, high-frequency air structure using an Other Patent.</div><div class="s2"><b>AIOS Interpretation</b>The main visible export-air flow represents a distinct operational domain outside the visible Arcatek-owned Patent footprint.</div><div class="s3"><b>Discovery Validation</b>Determine why Patent 3577 is allocated to this air structure, who controls that allocation, and whether customs and freight decisions are linked or separate.</div></div>
+    </div>
+    <div class="lec-cor lec-lane" id="lec-lane-3">
+      <div class="lec-cor-h"><div class="lec-cor-id">3</div><div><div class="lec-cor-w">Corridor 3 · persistent Export corridor · inside the visible Patent 3468 footprint</div><div class="lec-cor-t">Torreon → Harris / Colombia</div></div></div>
+      <div class="lec-lane-g">
+        <div><div class="k">Scale / Share</div><div class="n">93 <small>Core Route Shipments</small></div><div class="s"><b>19.2%</b> of YTD Exports</div></div>
+        <div><div class="k">Frequency</div><table class="lec-cad"><tr><td>Shipments / week</td><td class="r"><b>3.30</b></td></tr><tr><td>Shipments / active month</td><td class="r">13.3</td></tr><tr><td>Active months</td><td class="r">7</td></tr><tr><td>Observed</td><td class="r">2026-01-13 → 2026-07-28</td></tr></table></div>
+        <div><div class="k">Network Structure</div><div class="s">Export Core Route 2 · Colombia · Unknown mode in PJ</div></div>
+        <div><div class="k">Persistence</div><div class="s">Visible in FY2025 at 154 Shipments / 20.9% of Exports — see <a href="#lec-ch-6">Chapter 06</a>.</div></div>
+        <div class="pos"><div class="k">Customs Position · Logistics Position</div><div class="lec-pos"><span class="ca"><em>Customs · PJ</em>Colombia Export = 106 total Shipments / 106 Patent 3468 / 100% Arcatek Customs Share</span><span class="lu"><em>Logistics</em>Logistics capture · Not Validated</span></div></div>
+      </div>
+      <div class="lec-sig"><div class="s1"><b>Observed Operational Signal</b>Persistent corridor with visible Arcatek-owned Patent participation at the gateway.</div><div class="s2"><b>AIOS Interpretation</b>This is a domain where Arcatek patent participation is operationally visible in PJ, while the underlying commercial relationship still requires internal validation.</div><div class="s3"><b>Discovery Validation</b>Confirm actual Arcatek scope, freight ownership, and whether customs / logistics coordination is integrated.</div></div>
+    </div>
+    <div class="lec-cor lec-lane" id="lec-lane-4">
+      <div class="lec-cor-h"><div class="lec-cor-id">4</div><div><div class="lec-cor-w">Corridor 4 · recurring ocean Import structure</div><div class="lec-cor-t">Manzanillo → Torreon</div></div></div>
+      <div class="lec-lane-g">
+        <div><div class="k">Scale / Share</div><div class="n">58 <small>Core Route Import Shipments</small></div><div class="s"><b>9.2%</b> of YTD Imports</div></div>
+        <div><div class="k">Frequency</div><table class="lec-cad"><tr><td>Mode</td><td class="r">Maritime</td></tr><tr><td>Shipments / week</td><td class="r"><b>1.95</b></td></tr><tr><td>Shipments / active month</td><td class="r">8.3</td></tr><tr><td>Observed</td><td class="r">2026-01-05 → 2026-07-31</td></tr></table></div>
+        <div><div class="k">Network Structure</div><div class="s">Import Core Route 3 · Lincoln Maquila Principal Llc · Manzanillo</div></div>
+        <div><div class="k">Persistence</div><div class="s">Visible in FY2025 at 88 Shipments / 7.8% of Imports — see <a href="#lec-ch-6">Chapter 06</a>.</div></div>
+        <div class="pos"><div class="k">Customs Position · Logistics Position</div><div class="lec-pos"><span class="co"><em>Customs · PJ</em>Manzanillo has 74 YTD Imports and zero visible Arcatek-owned Patent Shipments</span><span class="lu"><em>Logistics</em>Logistics capture · Not Validated</span></div></div>
+      </div>
+      <div class="lec-sig"><div class="s1"><b>Observed Operational Signal</b>Recurring maritime structure outside the visible Patent 3468 footprint.</div><div class="s2"><b>AIOS Interpretation</b>This is a separate ocean-to-inland operating domain where customs assignment and multimodal coordination require validation.</div><div class="s3"><b>Discovery Validation</b>Validate customs assignment, ocean procurement, inland handoff, visibility requirements and commercial contestability.</div></div>
+    </div>
+
+      </div>
+    </div>
+
+    <section class="lec-chapter cus" id="lec-ch-5">
+      <div class="lec-chapter-n">Chapter 05</div>
+      <div class="lec-chapter-t">Customs Intelligence</div>
+      <div class="lec-chapter-s">How is the PJ-supported customs universe allocated? · Patent ownership, Customs Wallet and gateway allocation</div><div class="lec-prim">Customs Shared Wallet ≠ Logistics Wallet</div>
+    </section>
+    <div class="card" style="border-top:3px solid var(--teal);">
+      <div class="card-header">Customs Shared Wallet by period · <span class="lec-src pj">PJ Fact</span> + <span class="lec-src ak">Akzent Fact · Arcatek Patent Ownership</span> + <span class="lec-src ca">AIOS Calculation</span></div>
+      <div class="card-body">
+        <div class="lec-kpis">
+          <div><div class="k">Arcatek-owned Patents</div><div class="v" style="font-size:20px;"><span class="lec-pat ak" title="ARCATEK PATENT">3468</span> <span class="lec-pat ak" title="ARCATEK PATENT">1930</span></div><div class="s">3468 visible in PJ · 1930 not visible in the supplied PJ universe</div></div>
+          <div><div class="k">Customs Shared Wallet · 2026 YTD</div><div class="v" style="color:var(--teal-dim);">38.2%</div><div class="s">426 / 1,114 Shipments</div></div>
+          <div><div class="k">Other-Patent Shipments · 2026 YTD</div><div class="v" style="color:#b45309;">688</div><div class="s">Not identified · not competitors by default</div></div>
+          <div><div class="k">Customs Shared Wallet · FY2025</div><div class="v" style="color:#64748b;">41.0%</div><div class="s">763 / 1,863 Shipments</div></div>
+        </div>
+        <div style="overflow-x:auto;margin-top:14px;max-width:760px;"><table class="hub-table lec-cwg" style="font-size:11.5px;">
+          <thead><tr><th>Period</th><th class="num">Total</th><th class="num">Import Customs Share</th><th class="num">Export Customs Share</th></tr></thead>
           <tbody>
-            <tr><td><strong>2025</strong></td><td>3,091</td><td>1,867</td><td>1,224</td><td>USD 213.97M</td><td>24,490.46 t</td><td>2,305.29</td></tr>
-            <tr><td><strong>2026 YTD</strong></td><td>1,235</td><td>697</td><td>538</td><td>USD 84.94M</td><td>9,670.67 t</td><td>901.25</td></tr>
-          </tbody>
-        </table>
-        <div style="padding:10px 14px;font-size:11px;color:var(--text-muted);line-height:1.5;">2026 YTD data runs through May 30, 2026. 2025 is the previous full calendar year.</div>
+            <tr><td><strong>2026 YTD</strong> · Jan 1 – Jul 31</td><td class="num"><strong>426 / 1,114 = 38.2%</strong></td><td class="num">281 / 630 = 44.6%</td><td class="num">145 / 484 = 30.0%</td></tr>
+            <tr class="lec-muted"><td>FY2025 · Full Calendar Year</td><td class="num">763 / 1,863 = 41.0%</td><td class="num">511 / 1,126 = 45.4%</td><td class="num">252 / 737 = 34.2%</td></tr>
+          </tbody></table></div>
+        <div class="lec-micro">Period-specific visible shares of different period lengths — not an equivalent-period comparison, not a Logistics Wallet, and no causal explanation is implied for the difference.</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">Material Patent Portfolio and Customs Wallet by Gateway · 2026 YTD · <span class="lec-src pj">PJ Fact</span> + <span class="lec-src ca">AIOS Calculation</span></div>
+      <div class="card-body">
+        <div class="lec-2col" style="display:grid;grid-template-columns:0.95fr 1.05fr;gap:26px;">
+          <div>
+            <div class="lec-sublbl">Material Patent Portfolio · 1,114 Shipments</div>
+            <div style="overflow-x:auto;"><table class="hub-table lec-cwg" style="font-size:11.5px;">
+              <thead><tr><th>Patent</th><th>Ownership</th><th class="num">Shipments</th><th class="num">Share</th><th>Volume</th></tr></thead>
+              <tbody><tr><td><span class="lec-pat ak" title="ARCATEK PATENT">3468</span></td><td><span style="font-size:9.5px;font-weight:800;letter-spacing:0.6px;color:var(--teal-dim);">ARCATEK PATENT</span></td><td class="num lec-mono">426</td><td class="num">38.2%</td><td style="width:28%;"><div class="lec-matbar" style="margin:0;"><div style="width:100.0%;background:var(--teal);opacity:1;"></div></div></td></tr><tr><td><span class="lec-pat ot" title="OTHER PATENT — the company behind it is not identified">3577</span></td><td><span style="font-size:9.5px;font-weight:800;letter-spacing:0.6px;color:#b45309;">OTHER PATENT</span></td><td class="num lec-mono">258</td><td class="num">23.2%</td><td style="width:28%;"><div class="lec-matbar" style="margin:0;"><div style="width:60.6%;background:#f59e0b;opacity:1;"></div></div></td></tr><tr><td><span class="lec-pat ot" title="OTHER PATENT — the company behind it is not identified">1858</span></td><td><span style="font-size:9.5px;font-weight:800;letter-spacing:0.6px;color:#b45309;">OTHER PATENT</span></td><td class="num lec-mono">198</td><td class="num">17.8%</td><td style="width:28%;"><div class="lec-matbar" style="margin:0;"><div style="width:46.5%;background:#f59e0b;opacity:1;"></div></div></td></tr><tr><td><span class="lec-pat ot" title="OTHER PATENT — the company behind it is not identified">1672</span></td><td><span style="font-size:9.5px;font-weight:800;letter-spacing:0.6px;color:#b45309;">OTHER PATENT</span></td><td class="num lec-mono">80</td><td class="num">7.2%</td><td style="width:28%;"><div class="lec-matbar" style="margin:0;"><div style="width:18.8%;background:#f59e0b;opacity:1;"></div></div></td></tr><tr><td><span class="lec-pat ot" title="OTHER PATENT — the company behind it is not identified">3622</span></td><td><span style="font-size:9.5px;font-weight:800;letter-spacing:0.6px;color:#b45309;">OTHER PATENT</span></td><td class="num lec-mono">77</td><td class="num">6.9%</td><td style="width:28%;"><div class="lec-matbar" style="margin:0;"><div style="width:18.1%;background:#f59e0b;opacity:1;"></div></div></td></tr><tr><td><span class="lec-pat ot" title="OTHER PATENT — the company behind it is not identified">1710</span></td><td><span style="font-size:9.5px;font-weight:800;letter-spacing:0.6px;color:#b45309;">OTHER PATENT</span></td><td class="num lec-mono">19</td><td class="num">1.7%</td><td style="width:28%;"><div class="lec-matbar" style="margin:0;"><div style="width:4.5%;background:#f59e0b;opacity:1;"></div></div></td></tr><tr><td><span class="lec-pat ot" title="OTHER PATENT — the company behind it is not identified">3600</span></td><td><span style="font-size:9.5px;font-weight:800;letter-spacing:0.6px;color:#b45309;">OTHER PATENT</span></td><td class="num lec-mono">14</td><td class="num">1.3%</td><td style="width:28%;"><div class="lec-matbar" style="margin:0;"><div style="width:3.3%;background:#f59e0b;opacity:1;"></div></div></td></tr><tr><td><span style="font-size:11px;font-weight:700;color:var(--text-muted);">Remaining Other Patents</span></td><td><span style="font-size:9.5px;font-weight:800;letter-spacing:0.6px;color:#b45309;">OTHER PATENT</span></td><td class="num lec-mono">42</td><td class="num">3.8%</td><td style="width:28%;"><div class="lec-matbar" style="margin:0;"><div style="width:9.9%;background:#f59e0b;opacity:1;"></div></div></td></tr><tr><td><span class="lec-pat ak" title="ARCATEK PATENT">1930</span></td><td><span style="font-size:9.5px;font-weight:800;letter-spacing:0.6px;color:var(--teal-dim);">ARCATEK PATENT</span></td><td colspan="3" style="font-size:10.5px;color:var(--text-muted);">Not visible in the supplied PJ universe</td></tr></tbody></table></div>
+            <div class="lec-micro">The companies behind Other Patents are not identified.</div>
+          </div>
+          <div>
+            <div class="lec-sublbl">Customs Wallet by Gateway</div>
+            <div style="overflow-x:auto;"><table class="hub-table lec-cwg" style="font-size:11.5px;">
+              <thead><tr><th>Gateway / Direction</th><th class="num">Total</th><th class="num">Arcatek Patents</th><th class="num">Other Patents</th><th class="num">Arcatek Customs Share</th><th style="width:20%;">Volume</th></tr></thead>
+              <tbody><tr style="background:rgba(0,180,216,0.06);"><td><strong class="lec-gwt" style="color:var(--navy);">Colombia / Import</strong></td><td class="num lec-mono"><strong>287</strong></td><td class="num lec-mono">281</td><td class="num lec-mono" style="color:#b45309;">6</td><td class="num"><strong style="color:var(--teal-dim);">97.9%</strong></td><td><div class="lec-cw-bar" style="width:100.0%;min-width:10px;height:10px;"><div class="lec-cw-ak" style="width:97.9%;"></div><div class="lec-cw-ot" style="width:2.1%;"></div></div></td></tr><tr style="background:rgba(0,180,216,0.06);"><td><strong class="lec-gwt" style="color:var(--navy);">Colombia / Export</strong></td><td class="num lec-mono"><strong>106</strong></td><td class="num lec-mono">106</td><td class="num lec-mono" style="color:#b45309;">0</td><td class="num"><strong style="color:var(--teal-dim);">100.0%</strong></td><td><div class="lec-cw-bar" style="width:36.9%;min-width:10px;height:10px;"><div class="lec-cw-ak" style="width:100.0%;"></div><div class="lec-cw-ot" style="width:0.0%;"></div></div></td></tr><tr><td><strong class="lec-gwt" style="color:var(--navy);">Nuevo Laredo / Import</strong></td><td class="num lec-mono"><strong>247</strong></td><td class="num lec-mono">0</td><td class="num lec-mono" style="color:#b45309;">247</td><td class="num"><strong style="color:#b45309;">0.0%</strong></td><td><div class="lec-cw-bar" style="width:86.1%;min-width:10px;height:10px;"><div class="lec-cw-ak" style="width:0.0%;"></div><div class="lec-cw-ot" style="width:100.0%;"></div></div></td></tr><tr style="background:rgba(0,180,216,0.06);"><td><strong class="lec-gwt" style="color:var(--navy);">Nuevo Laredo / Export</strong></td><td class="num lec-mono"><strong>66</strong></td><td class="num lec-mono">39</td><td class="num lec-mono" style="color:#b45309;">27</td><td class="num"><strong style="color:var(--teal-dim);">59.1%</strong></td><td><div class="lec-cw-bar" style="width:23.0%;min-width:10px;height:10px;"><div class="lec-cw-ak" style="width:59.1%;"></div><div class="lec-cw-ot" style="width:40.9%;"></div></div></td></tr><tr><td><strong class="lec-gwt" style="color:var(--navy);">MTY Airport / Export</strong></td><td class="num lec-mono"><strong>271</strong></td><td class="num lec-mono">0</td><td class="num lec-mono" style="color:#b45309;">271</td><td class="num"><strong style="color:#b45309;">0.0%</strong></td><td><div class="lec-cw-bar" style="width:94.4%;min-width:10px;height:10px;"><div class="lec-cw-ak" style="width:0.0%;"></div><div class="lec-cw-ot" style="width:100.0%;"></div></div></td></tr><tr><td><strong class="lec-gwt" style="color:var(--navy);">Manzanillo / Import</strong></td><td class="num lec-mono"><strong>74</strong></td><td class="num lec-mono">0</td><td class="num lec-mono" style="color:#b45309;">74</td><td class="num"><strong style="color:#b45309;">0.0%</strong></td><td><div class="lec-cw-bar" style="width:25.8%;min-width:10px;height:10px;"><div class="lec-cw-ak" style="width:0.0%;"></div><div class="lec-cw-ot" style="width:100.0%;"></div></div></td></tr><tr><td><strong class="lec-gwt" style="color:var(--navy);">Altamira / Import</strong></td><td class="num lec-mono"><strong>19</strong></td><td class="num lec-mono">0</td><td class="num lec-mono" style="color:#b45309;">19</td><td class="num"><strong style="color:#b45309;">0.0%</strong></td><td><div class="lec-cw-bar" style="width:6.6%;min-width:10px;height:10px;"><div class="lec-cw-ak" style="width:0.0%;"></div><div class="lec-cw-ot" style="width:100.0%;"></div></div></td></tr></tbody></table></div>
+            <div class="lec-micro">Volume bar length scales with gateway-direction Shipments (287 = largest).</div>
+          </div>
+        </div>
+        <details class="lec-ev"><summary>Supporting evidence · Patent × Direction × Gateway — material evidence</summary><div class="lec-ev-b"><div style="overflow-x:auto;max-width:760px;"><table class="hub-table lec-cwg" style="font-size:11.5px;"><thead><tr><th>Patent</th><th>Direction / Gateway</th><th class="num">Shipments</th><th>Note</th></tr></thead><tbody><tr style="background:rgba(0,180,216,0.06);"><td rowspan="3"><span class="lec-pat ak" title="ARCATEK PATENT">3468</span></td><td>Import / Colombia</td><td class="num lec-mono">281</td><td rowspan="3" style="font-size:10.5px;color:var(--text-muted);"></td></tr><tr style="background:rgba(0,180,216,0.06);"><td>Export / Colombia</td><td class="num lec-mono">106</td></tr><tr style="background:rgba(0,180,216,0.06);"><td>Export / Nuevo Laredo</td><td class="num lec-mono">39</td></tr><tr><td rowspan="1"><span class="lec-pat ot" title="OTHER PATENT — the company behind it is not identified">3577</span></td><td>Export / MTY Airport</td><td class="num lec-mono">258</td><td rowspan="1" style="font-size:10.5px;color:var(--text-muted);">100% of Patent 3577 activity · 53.3% of all YTD Exports</td></tr><tr><td rowspan="2"><span class="lec-pat ot" title="OTHER PATENT — the company behind it is not identified">1858</span></td><td>Import / Nuevo Laredo</td><td class="num lec-mono">192</td><td rowspan="2" style="font-size:10.5px;color:var(--text-muted);"></td></tr><tr><td>Import / Colombia</td><td class="num lec-mono">6</td></tr><tr><td rowspan="2"><span class="lec-pat ot" title="OTHER PATENT — the company behind it is not identified">1672</span></td><td>Import / Nuevo Laredo</td><td class="num lec-mono">55</td><td rowspan="2" style="font-size:10.5px;color:var(--text-muted);"></td></tr><tr><td>Export / Nuevo Laredo</td><td class="num lec-mono">25</td></tr><tr><td rowspan="3"><span class="lec-pat ot" title="OTHER PATENT — the company behind it is not identified">3622</span></td><td>Import / Manzanillo</td><td class="num lec-mono">74</td><td rowspan="3" style="font-size:10.5px;color:var(--text-muted);"></td></tr><tr><td>Export / Veracruz</td><td class="num lec-mono">2</td></tr><tr><td>Export / Manzanillo</td><td class="num lec-mono">1</td></tr></tbody></table></div></div></details>
+        <details class="lec-ev"><summary>Supporting evidence · Material Other Patent deep dive — 3577 · 1858 · 1672 · 3622</summary><div class="lec-ev-b"><div class="lec-dd"><div><span class="lec-pat ot" title="OTHER PATENT — the company behind it is not identified">3577</span> <span style="font-size:9.5px;font-weight:800;letter-spacing:0.6px;color:#b45309;">OTHER PATENT</span><div class="n">258 <small>Exports</small></div><ul><li>100% MTY Airport</li><li>235 Shipments identify Lincoln Maquila Principal Llcq as destination</li><li>Visible Jan 2 – Jul 31 across all seven months</li></ul></div><div><span class="lec-pat ot" title="OTHER PATENT — the company behind it is not identified">1858</span> <span style="font-size:9.5px;font-weight:800;letter-spacing:0.6px;color:#b45309;">OTHER PATENT</span><div class="n">198 <small>Imports</small></div><ul><li>192 Nuevo Laredo / 6 Colombia</li><li>168 identify Lincoln Maquila Principal Llcq as origin</li><li>Visible Jan 5 – Jul 30 across all seven months</li></ul></div><div><span class="lec-pat ot" title="OTHER PATENT — the company behind it is not identified">1672</span> <span style="font-size:9.5px;font-weight:800;letter-spacing:0.6px;color:#b45309;">OTHER PATENT</span><div class="n">80 <small>Shipments</small></div><ul><li>55 Imports / 25 Exports</li><li>100% Nuevo Laredo</li><li>The Harris Products Group = 44 Imports and 23 Exports</li><li>Visible across all seven months</li></ul></div><div><span class="lec-pat ot" title="OTHER PATENT — the company behind it is not identified">3622</span> <span style="font-size:9.5px;font-weight:800;letter-spacing:0.6px;color:#b45309;">OTHER PATENT</span><div class="n">77 <small>Shipments</small></div><ul><li>74 Imports</li><li>Manzanillo dominates the Patent</li><li>58 Imports identify Lincoln Maquila Principal Llc and 16 identify The Harris Products Group</li></ul></div></div></div></details>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">Customs Geographic Overlap · <span class="lec-src ca">AIOS Calculation</span></div>
+      <div class="card-body">
+        <div class="lec-kpis" style="grid-template-columns:repeat(3,1fr);">
+          <div><div class="k">Other-Patent Shipments</div><div class="v" style="color:#b45309;">688</div><div class="s">2026 YTD</div></div>
+          <div><div class="k">At gateways where Patent 3468 also operates</div><div class="v" style="color:#b45309;">280</div><div class="s">Other-Patent Shipments</div></div>
+          <div><div class="k">Overlap share</div><div class="v">40.7%</div><div class="s">280 / 688</div></div>
+        </div>
+        <div class="lec-principle"><b>Overlap does not establish commercial availability or migration potential. AIOS establishes WHERE; Discovery validates WHY.</b><span>Other-Patent volume and customs overlap are reference only — never winnable business by default.</span></div>
       </div>
     </div>
 
-    <!-- 03 Trend Intelligence -->
+    <section class="lec-chapter " id="lec-ch-6">
+      <div class="lec-chapter-n">Chapter 06</div>
+      <div class="lec-chapter-t">Historical Intelligence</div>
+      <div class="lec-chapter-s">What persisted and what changed? · FY2025 is context, never aggregated with Current YTD</div>
+    </section>
     <div class="card">
-      <div class="card-header"><span class="accent">03</span> Trend Intelligence</div>
+      <div class="card-header">Visible universe by period · <span class="lec-src pj">PJ Fact</span> + <span class="lec-src ca">AIOS Calculation</span></div>
       <div class="card-body">
-        <ul class="q-list" style="font-size:13px;line-height:1.7;">
-          <li>Total visible volume remains high. 2026 YTD shows 1,235 Shipments through May 30.</li>
-          <li>Imports remain the majority of the operation, but export share increased from 39.6% in 2025 to 43.6% in 2026 YTD.</li>
-          <li>Air share increased from 12.0% in 2025 to 16.4% in 2026 YTD.</li>
-          <li>Truck remains the dominant visible mode.</li>
-          <li>Maritime activity remains relevant through Manzanillo, Veracruz and Altamira.</li>
-          <li>Customs exposure remains concentrated around Nuevo Laredo, Colombia NL and major port / airport nodes.</li>
+        <div style="overflow-x:auto;"><table class="hub-table" style="font-size:11.5px;">
+          <thead><tr><th>Period</th><th class="num">Imports</th><th class="num">Exports</th><th class="num">Total</th></tr></thead>
+          <tbody>
+            <tr class="lec-muted"><td>Previous Full Calendar Year · FY2025</td><td class="num">1,126</td><td class="num">737</td><td class="num">1,863</td></tr>
+            <tr class="lec-muted"><td>Jan 1 – Jul 31, 2025 · comparable period</td><td class="num">686</td><td class="num">450</td><td class="num">1,136</td></tr>
+            <tr><td><strong>Current YTD 2026</strong> · Jan 1 – Jul 31</td><td class="num"><strong>630</strong></td><td class="num"><strong>484</strong></td><td class="num"><strong>1,114</strong></td></tr>
+            <tr><td><strong>Comparable change</strong></td><td class="num"><strong style="color:#b91c1c;">−8.2%</strong></td><td class="num"><strong style="color:#047857;">+7.6%</strong></td><td class="num"><strong style="color:#b91c1c;">−1.9%</strong></td></tr>
+          </tbody></table></div>
+        <div class="lec-micro">Comparable modal changes (Jan–Jul 2026 vs Jan–Jul 2025): Air +30.5% · Truck −6.8% · Maritime −18.1% · Unknown −8.9%. No cause is inferred.</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">Persistence and structural change · <span class="lec-src ca">AIOS Calculation</span></div>
+      <div class="card-body">
+        <div class="lec-shift">
+          <div>
+            <b style="font-size:12px;color:var(--navy);">Import Core Routes</b>
+            <div class="row"><div class="l">FY2025</div><div class="lec-dots h"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="r">7 routes → 84.1%</div></div>
+            <div class="row"><div class="l">Current YTD</div><div class="lec-dots"><i></i><i></i><i></i><i></i><i></i></div><div class="r">5 routes → 84.9%</div></div>
+          </div>
+          <div>
+            <b style="font-size:12px;color:var(--navy);">Export Core Routes</b>
+            <div class="row"><div class="l">FY2025</div><div class="lec-dots h"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="r">6 routes → 80.1%</div></div>
+            <div class="row"><div class="l">Current YTD</div><div class="lec-dots"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="r">6 routes → 82.0%</div></div>
+          </div>
+        </div>
+        <div class="lec-micro">1 square = 1 Core Route. Coverage is of each period's own directional universe.</div>
+        <ul class="lec-obs" style="margin-top:12px;">
+          <li>The major Current YTD corridors have historical persistence.</li>
+          <li class="chg">The main export-air route increased directional concentration from <strong>42.1%</strong> FY2025 to <strong>48.6%</strong> YTD2026.</li>
+          <li class="chg">The two principal Lincoln Maquila import routes increased jointly from <strong>47.8%</strong> of FY2025 Imports to <strong>61.1%</strong> of YTD2026 Imports.</li>
         </ul>
+        <div class="lec-note-na">Structural observations only — no cause is inferred.</div>
+        <div style="margin-top:10px;" class="lec-hist">
+        <details class="lec-ev"><summary>Principal FY2025 Import structures</summary><div class="lec-ev-b"><div style="overflow-x:auto;max-width:640px;"><table class="hub-table lec-cwg" style="font-size:11.5px;"><thead><tr><th>Structure</th><th class="num">Shipments</th><th class="num">FY2025 Import Share</th></tr></thead><tbody><tr><td>Lincoln Maquila Principal → Colombia → Lincoln Electric</td><td class="num lec-mono">344</td><td class="num">30.6%</td></tr><tr><td>Lincoln Maquila Principal → Nuevo Laredo → Lincoln Electric</td><td class="num lec-mono">194</td><td class="num">17.2%</td></tr><tr><td>Harris → Nuevo Laredo → Lincoln Electric</td><td class="num lec-mono">97</td><td class="num">8.6%</td></tr><tr><td>Lincoln Maquila Principal → Manzanillo → Lincoln Electric</td><td class="num lec-mono">88</td><td class="num">7.8%</td></tr><tr><td>Harris → Colombia → Lincoln Electric</td><td class="num lec-mono">88</td><td class="num">7.8%</td></tr></tbody></table></div><div class="lec-micro">Principal structures of the FY2025 Import Core Route set (7 routes · 84.1% coverage).</div></div></details>
+        <details class="lec-ev"><summary>Principal FY2025 Export structures</summary><div class="lec-ev-b"><div style="overflow-x:auto;max-width:640px;"><table class="hub-table lec-cwg" style="font-size:11.5px;"><thead><tr><th>Structure</th><th class="num">Shipments</th><th class="num">FY2025 Export Share</th></tr></thead><tbody><tr><td>Lincoln Electric → MTY Airport → Lincoln Maquila Principal</td><td class="num lec-mono">310</td><td class="num">42.1%</td></tr><tr><td>Lincoln Electric → Colombia → Harris</td><td class="num lec-mono">154</td><td class="num">20.9%</td></tr><tr><td>Lincoln Electric → Nuevo Laredo → Harris</td><td class="num lec-mono">50</td><td class="num">6.8%</td></tr><tr><td>Lincoln Electric → Nuevo Laredo → <span class=lec-tpna>Trading Partner not available in PJ</span></td><td class="num lec-mono">44</td><td class="num">6.0%</td></tr></tbody></table></div><div class="lec-micro">Principal structures of the FY2025 Export Core Route set (6 routes · 80.1% coverage).</div></div></details>
+        </div>
       </div>
     </div>
 
-    <!-- 04 Modal Mix -->
+    <section class="lec-chapter syn" id="lec-ch-7">
+      <div class="lec-chapter-n">Chapter 07</div>
+      <div class="lec-chapter-t">Commercial Synthesis</div>
+      <div class="lec-chapter-s">What does this mean commercially? · concise — evidence lives in Chapters 02–06</div>
+    </section>
     <div class="card">
-      <div class="card-header"><span class="accent">04</span> Modal Mix — 2026 YTD</div>
+      <div class="card-header">Commercial Synthesis</div>
       <div class="card-body">
-        <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;">1,235 total Shipments · imports + exports</div>
-        <div class="modal-bar"><div class="modal-bar-label"><strong>Truck 🛣</strong><span>523 · 42.3%</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:100%"></div></div></div>
-        <div class="modal-bar"><div class="modal-bar-label"><strong>Unknown ❔</strong><span>378 · 30.6%</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:72%"></div></div></div>
-        <div class="modal-bar"><div class="modal-bar-label"><strong>Air ✈</strong><span>203 · 16.4%</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:39%"></div></div></div>
-        <div class="modal-bar"><div class="modal-bar-label"><strong>Maritime 🚢</strong><span>131 · 10.6%</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:25%"></div></div></div>
-        <div style="margin-top:12px;padding:10px;background:rgba(245,158,11,0.05);border-radius:5px;border:1px solid rgba(245,158,11,0.15);">
-          <strong style="font-size:11px;color:#b45309;">Interpretation:</strong>
-          <span style="font-size:11px;color:var(--text-muted);"> Air activity is materially relevant and should be treated as an operational pressure signal, not only as a freight mode.</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="grid-2">
-      <div class="card">
-        <div class="card-header"><span class="accent">05</span> Modal Mix — Imports</div>
-        <div class="card-body">
-          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;">697 import Shipments</div>
-          <div class="modal-bar"><div class="modal-bar-label"><strong>Truck 🛣</strong><span>394</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:100%"></div></div></div>
-          <div class="modal-bar"><div class="modal-bar-label"><strong>Unknown ❔</strong><span>208</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:53%"></div></div></div>
-          <div class="modal-bar"><div class="modal-bar-label"><strong>Maritime 🚢</strong><span>77</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:20%"></div></div></div>
-          <div class="modal-bar"><div class="modal-bar-label"><strong>Air ✈</strong><span>18</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:5%"></div></div></div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header"><span class="accent">06</span> Modal Mix — Exports</div>
-        <div class="card-body">
-          <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;">538 export Shipments</div>
-          <div class="modal-bar"><div class="modal-bar-label"><strong>Air ✈</strong><span>185</span></div><div class="bar-track"><div class="bar-fill bar-red" style="width:100%"></div></div></div>
-          <div class="modal-bar"><div class="modal-bar-label"><strong>Unknown ❔</strong><span>170</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:92%"></div></div></div>
-          <div class="modal-bar"><div class="modal-bar-label"><strong>Truck 🛣</strong><span>129</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:70%"></div></div></div>
-          <div class="modal-bar"><div class="modal-bar-label"><strong>Maritime 🚢</strong><span>54</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:29%"></div></div></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 07 / 08 Import / Export Breakdown -->
-    <div class="grid-2">
-      <div class="card">
-        <div class="card-header"><span class="accent">07</span> Import Breakdown — 2026 YTD</div>
-        <div class="card-body">
-          <div class="grid-2" style="gap:10px;margin-bottom:12px;">
-            <div class="stat-box"><div class="stat-label">Import Shipments</div><div class="stat-value">697</div></div>
-            <div class="stat-box"><div class="stat-label">USD Value</div><div class="stat-value" style="font-size:18px;">USD 36.87M</div></div>
-          </div>
-          <table class="network-table">
-            <tbody>
-              <tr><td><strong>Gross Weight</strong></td><td style="text-align:right;">3,776.64 t</td></tr>
-              <tr><td><strong>Dominant Mode</strong></td><td style="text-align:right;">Truck</td></tr>
-              <tr><td><strong>Main Nodes</strong></td><td style="text-align:right;">Nuevo Laredo · Colombia NL · Manzanillo</td></tr>
-            </tbody>
-          </table>
-          <div style="margin-top:12px;padding:10px;background:rgba(13,43,94,0.04);border-radius:5px;border:1px solid var(--border);">
-            <strong style="font-size:11px;color:var(--navy);">Insight:</strong>
-            <span style="font-size:11px;color:var(--text-muted);"> Imports are truck-dominant through Nuevo Laredo and Colombia NL, with maritime sourcing via Manzanillo — a strong fit for cross-border control and customs visibility.</span>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header"><span class="accent">08</span> Export Breakdown — 2026 YTD</div>
-        <div class="card-body">
-          <div class="grid-2" style="gap:10px;margin-bottom:12px;">
-            <div class="stat-box"><div class="stat-label">Export Shipments</div><div class="stat-value teal">538</div></div>
-            <div class="stat-box"><div class="stat-label">USD Value</div><div class="stat-value" style="font-size:18px;">USD 48.07M</div></div>
-          </div>
-          <table class="network-table">
-            <tbody>
-              <tr><td><strong>Gross Weight</strong></td><td style="text-align:right;">5,894.02 t</td></tr>
-              <tr><td><strong>Dominant Mode</strong></td><td style="text-align:right;">Air</td></tr>
-              <tr><td><strong>Main Nodes</strong></td><td style="text-align:right;">Monterrey · Veracruz · Ciudad Hidalgo</td></tr>
-            </tbody>
-          </table>
-          <div style="margin-top:12px;padding:10px;background:rgba(245,158,11,0.05);border-radius:5px;border:1px solid rgba(245,158,11,0.15);">
-            <strong style="font-size:11px;color:#b45309;">Insight:</strong>
-            <span style="font-size:11px;color:var(--text-muted);"> Exports lead on air through Monterrey and reach LATAM via Ciudad Hidalgo — a signal of urgency and time-sensitive distribution requiring air escalation governance.</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 09 Customs / Port Intelligence -->
-    <div class="card">
-      <div class="card-header"><span class="accent">09</span> Customs / Port Intelligence — 2026 YTD</div>
-      <div class="card-body">
-        <table class="hub-table">
-          <thead>
-            <tr><th>Customs / Port</th><th>Shipments</th><th>Modal Profile</th><th>Operational Signal</th></tr>
-          </thead>
-          <tbody>
-            <tr style="background:rgba(245,158,11,0.03);">
-              <td><strong>Nuevo Laredo, Tamaulipas</strong></td><td>390</td><td><span class="hub-tag border">Truck</span></td><td>Main cross-border import node.</td>
-            </tr>
-            <tr>
-              <td><strong>Colombia, Nuevo León</strong></td><td>202</td><td><span class="hub-tag border">Truck</span></td><td>Strategic border gateway.</td>
-            </tr>
-            <tr>
-              <td><strong>Monterrey</strong></td><td>184</td><td><span class="hub-tag air">Air</span></td><td>Major export / air-linked operational node.</td>
-            </tr>
-            <tr>
-              <td><strong>Veracruz</strong></td><td>95</td><td><span class="hub-tag ocean">Maritime</span></td><td>Export and maritime activity.</td>
-            </tr>
-            <tr>
-              <td><strong>Ciudad Hidalgo</strong></td><td>83</td><td><span class="hub-tag border">Border</span></td><td>LATAM / Central America export signal.</td>
-            </tr>
-            <tr>
-              <td><strong>Manzanillo, Colima</strong></td><td>62 import + 36 export</td><td><span class="hub-tag ocean">Maritime</span></td><td>Ocean gateway.</td>
-            </tr>
-            <tr>
-              <td><strong>Altamira, Tamaulipas</strong></td><td>15</td><td><span class="hub-tag ocean">Maritime</span></td><td>Maritime diversification.</td>
-            </tr>
-            <tr style="background:rgba(245,158,11,0.03);">
-              <td><strong>AICM / AIFA / MTY Airport</strong></td><td>18+</td><td><span class="hub-tag air">Air</span></td><td>Urgent / time-sensitive activity.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- 10 Top 5 HS Codes 2026 YTD -->
-    <div class="card">
-      <div class="card-header"><span class="accent">10</span> Top 5 HS Codes — 2026 YTD</div>
-      <div class="card-body">
-        <div style="margin-bottom:12px;padding:10px;background:rgba(245,158,11,0.05);border-radius:5px;border:1px solid rgba(245,158,11,0.15);">
-          <strong style="font-size:11px;color:#b45309;">Note:</strong>
-          <span style="font-size:11px;color:var(--text-muted);"> HS counts represent operational presence. One Shipment may contain multiple HS Codes, so HS counts are not additive.</span>
-        </div>
-        <table class="network-table">
-          <thead>
-            <tr><th>HS Code</th><th>Presence</th><th>Product Interpretation</th><th>AIOS Interpretation</th></tr>
-          </thead>
-          <tbody>
-            <tr><td><strong>8515909900</strong></td><td>1,449</td><td>Parts for welding machines</td><td style="color:var(--text-muted);">Dominant technical category; strong production and SKU complexity.</td></tr>
-            <tr><td><strong>9802000100</strong></td><td>1,180</td><td>Special-regime / returned / processed goods behavior</td><td style="color:var(--text-muted);">High customs-regime sensitivity and documentation workload.</td></tr>
-            <tr><td><strong>8544429904</strong></td><td>413</td><td>Electric cables and harnesses</td><td style="color:var(--text-muted);">Assembly and continuity sensitivity.</td></tr>
-            <tr><td><strong>8536909999</strong></td><td>310</td><td>Terminals and electrical connectors</td><td style="color:var(--text-muted);">Classification and component-flow complexity.</td></tr>
-            <tr><td><strong>8544429999</strong></td><td>308</td><td>Insulated cables and electrical wiring</td><td style="color:var(--text-muted);">Reinforces technical manufacturing profile.</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- 11 Geographic Intelligence -->
-    <div class="card">
-      <div class="card-header"><span class="accent">11</span> Geographic Intelligence — Main Countries / Country Fields 2026 YTD</div>
-      <div class="card-body">
-        <div class="modal-bar"><div class="modal-bar-label"><strong>🇺🇸 United States</strong><span>323 Shipments</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:100%"></div></div></div>
-        <div class="modal-bar"><div class="modal-bar-label"><strong>🇲🇽 Mexico</strong><span>306 Shipments</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:95%"></div></div></div>
-        <div class="modal-bar"><div class="modal-bar-label"><strong>🇨🇳 China</strong><span>87 Shipments</span></div><div class="bar-track"><div class="bar-fill bar-navy" style="width:27%"></div></div></div>
-        <div class="modal-bar"><div class="modal-bar-label"><strong>🇳🇮 Nicaragua</strong><span>36 Shipments</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:11%"></div></div></div>
-        <div class="modal-bar"><div class="modal-bar-label"><strong>🇨🇦 Canada</strong><span>34 Shipments</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:11%"></div></div></div>
-        <div class="modal-bar"><div class="modal-bar-label"><strong>🇨🇳🇺🇸 China · United States</strong><span>30 Shipments</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:9%"></div></div></div>
-        <div class="modal-bar"><div class="modal-bar-label"><strong>🇵🇪 Peru</strong><span>29 Shipments</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:9%"></div></div></div>
-        <div class="modal-bar"><div class="modal-bar-label"><strong>🇬🇹 Guatemala</strong><span>21 Shipments</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:7%"></div></div></div>
-        <div class="modal-bar"><div class="modal-bar-label"><strong>🇨🇷 Costa Rica</strong><span>21 Shipments</span></div><div class="bar-track"><div class="bar-fill bar-gray" style="width:7%"></div></div></div>
-        <div style="margin-top:12px;padding:10px;background:rgba(13,43,94,0.04);border-radius:5px;border:1px solid var(--border);">
-          <strong style="font-size:11px;color:var(--navy);">Geographic read:</strong>
-          <span style="font-size:11px;color:var(--text-muted);"> Lincoln Electric México operates across a North America + Asia + LATAM footprint — combining inbound supply, intragroup activity, domestic / virtual flows and outbound distribution. This increases complexity across documentation, customs, mode coordination and visibility.</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- 12 / 13 Supplier / Customer Intelligence -->
-    <div class="grid-2">
-      <div class="card">
-        <div class="card-header"><span class="accent">12</span> Top Import Suppliers — 2026 YTD</div>
-        <div class="card-body" style="padding:0;">
-          <table class="network-table">
-            <thead><tr><th>Supplier</th><th>Shipments</th></tr></thead>
-            <tbody>
-              <tr style="background:rgba(13,43,94,0.02);"><td><strong>Lincoln Maquila Principal LLCQ</strong></td><td>277</td></tr>
-              <tr><td>The Lincoln Electric Co.</td><td>199</td></tr>
-              <tr><td>The Harris Products Group</td><td>78</td></tr>
-              <tr><td>Lincoln Maquila Principal LLC</td><td>47</td></tr>
-              <tr><td>The Shanghai Lincoln Electric Co., Ltd.</td><td>11</td></tr>
-              <tr><td>Lincoln Electric Máquinas S. de R.L. de C.V.</td><td>7</td></tr>
-              <tr><td>Lincoln Electric Co. of Canada LP</td><td>6</td></tr>
-              <tr><td>Elco Enterprises Inc.</td><td>5</td></tr>
-              <tr><td>Lincoln Electric Manufactura S.A. de C.V.</td><td>5</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header"><span class="accent">13</span> Top Export Customers / Consignees — 2026 YTD</div>
-        <div class="card-body" style="padding:0;">
-          <table class="network-table">
-            <thead><tr><th>Customer / Consignee</th><th>Shipments</th></tr></thead>
-            <tbody>
-              <tr style="background:rgba(13,43,94,0.02);"><td><strong>Lincoln Maquila Principal LLCQ</strong></td><td>157</td></tr>
-              <tr><td>The Harris Products Group</td><td>75</td></tr>
-              <tr><td>Casa McGregor S.A.</td><td>36</td></tr>
-              <tr><td>Corporación La Sirena S.A.</td><td>19</td></tr>
-              <tr><td>Huemura Sociedad Anónima Cerrada</td><td>18</td></tr>
-              <tr><td>Lincoln Electric Máquinas S. de R.L. de C.V.</td><td>17</td></tr>
-              <tr><td>Aceros Carazo Reimers S.A.</td><td>13</td></tr>
-              <tr><td>Lincoln Maquila Principal LLC</td><td>12</td></tr>
-              <tr><td>Industrias John Deere S. de R.L. de C.V.</td><td>10</td></tr>
-              <tr><td>Lincoln Electric Co. of Canada LP Toronto Distribution Center</td><td>10</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-body">
-        <div style="font-size:12px;color:var(--text-muted);line-height:1.6;">
-          The counterparty network shows strong intragroup and affiliate activity, including Lincoln Maquila Principal LLCQ, The Lincoln Electric Co., The Harris Products Group, Lincoln Maquila Principal LLC, Lincoln Electric Co. of Canada LP, Lincoln Electric Máquinas and Lincoln Electric Manufactura. The export network also includes regional and industrial customers such as Casa McGregor, Corporación La Sirena, Huemura, Aceros Carazo Reimers and Industrias John Deere.
-          <br><br>
-          <strong style="color:var(--navy);">AIOS interpretation:</strong> the account likely requires coordination across intragroup entities, suppliers, distributors, industrial customers and regional markets. This creates a strong fit for Control Tower visibility, exception management and standardized operational communication.
-        </div>
-      </div>
-    </div>
-
-    <!-- 14 Operational Signal → Pain Mapping -->
-    <div class="card">
-      <div class="card-header"><span class="accent">14</span> Operational Signal → Pain Mapping</div>
-      <div class="card-body">
-        <div class="signal-grid">
-          <div class="signal-item high"><div class="signal-title">Customs Documentation Pressure</div><div class="signal-prob high">HIGH</div><div class="signal-desc">Heavy use of IMMEX, returns, transfers and special-regime behavior creates documentation and compliance sensitivity.</div></div>
-          <div class="signal-item high"><div class="signal-title">Cross-Border Visibility</div><div class="signal-prob high">HIGH</div><div class="signal-desc">Nuevo Laredo and Colombia NL dominate the import footprint.</div></div>
-          <div class="signal-item"><div class="signal-title">Air Escalation Governance</div><div class="signal-prob medium-high">MEDIUM-HIGH</div><div class="signal-desc">Air share increased in 2026 YTD and is especially relevant in exports.</div></div>
-          <div class="signal-item high"><div class="signal-title">Multimodal Fragmentation</div><div class="signal-prob high">HIGH</div><div class="signal-desc">Truck, air, maritime, ports, borders and airports require coordinated execution.</div></div>
-          <div class="signal-item high"><div class="signal-title">Technical SKU / HS Complexity</div><div class="signal-prob high">HIGH</div><div class="signal-desc">Welding machine parts, cables, terminals, connectors and consumables create high classification and SKU control requirements.</div></div>
-          <div class="signal-item high"><div class="signal-title">Supplier / Counterparty Coordination</div><div class="signal-prob high">HIGH</div><div class="signal-desc">Multiple Lincoln-related entities and regional customers require structured communication.</div></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 15 Akzent Fit Scoring -->
-    <div class="card">
-      <div class="card-header"><span class="accent">15</span> Akzent Fit Scoring</div>
-      <div class="card-body">
-        <div class="fit-score-grid">
-          <div class="fit-score-item"><div class="fit-score-name">Strategic Fit</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:98%"></div></div><div class="fit-score-pct">AAA</div></div></div>
-          <div class="fit-score-item"><div class="fit-score-name">Cross-Border Fit</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:96%"></div></div><div class="fit-score-pct">VERY HIGH</div></div></div>
-          <div class="fit-score-item"><div class="fit-score-name">Customs Fit</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:97%"></div></div><div class="fit-score-pct">VERY HIGH</div></div></div>
-          <div class="fit-score-item"><div class="fit-score-name">ILM / Control Tower Potential</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:98%"></div></div><div class="fit-score-pct">VERY HIGH</div></div></div>
-          <div class="fit-score-item"><div class="fit-score-name">Commercial Attractiveness</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill high" style="width:95%"></div></div><div class="fit-score-pct">VERY HIGH</div></div></div>
-          <div class="fit-score-item"><div class="fit-score-name">Operational Complexity</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:85%"></div></div><div class="fit-score-pct">HIGH</div></div></div>
-          <div class="fit-score-item"><div class="fit-score-name">Air Fit</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:84%"></div></div><div class="fit-score-pct">HIGH</div></div></div>
-          <div class="fit-score-item"><div class="fit-score-name">Ocean Fit</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:82%"></div></div><div class="fit-score-pct">HIGH</div></div></div>
-          <div class="fit-score-item"><div class="fit-score-name">Supplier Coordination Fit</div><div class="fit-score-bar-row"><div class="fit-score-bar"><div class="fit-score-bar-fill" style="width:85%"></div></div><div class="fit-score-pct">HIGH</div></div></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 16 AIOS Classification -->
-    <div class="card">
-      <div class="card-header"><span class="accent">16</span> AIOS Classification</div>
-      <div class="card-body">
-        <div class="card-body" style="padding:0 0 14px 0;display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
-          <span style="font-size:11px;color:var(--text-muted);">Relationship Status</span>
-          <span class="classification-badge lead">LEAD</span>
-          <span style="font-size:11px;color:var(--text-muted);margin-left:8px;">AIOS Classification</span>
-          <span class="classification-badge aaa">AAA</span>
-        </div>
-        <table class="network-table">
-          <thead><tr><th>Variable</th><th>Result</th></tr></thead>
-          <tbody>
-            <tr><td><strong>Strategic Fit</strong></td><td><span class="cls-pill aaa">AAA</span></td></tr>
-            <tr><td><strong>Operational Complexity</strong></td><td>High</td></tr>
-            <tr><td><strong>Modal Diversity</strong></td><td>High</td></tr>
-            <tr><td><strong>Cross-Border Exposure</strong></td><td>Very High</td></tr>
-            <tr><td><strong>Ocean Exposure</strong></td><td>High</td></tr>
-            <tr><td><strong>Air Exposure</strong></td><td>High</td></tr>
-            <tr><td><strong>Customs Sensitivity</strong></td><td>Very High</td></tr>
-            <tr><td><strong>Supplier Coordination Need</strong></td><td>High</td></tr>
-            <tr><td><strong>ILM / Control Tower Potential</strong></td><td>Very High</td></tr>
-            <tr><td><strong>Commercial Attractiveness</strong></td><td>Very High</td></tr>
-            <tr style="background:rgba(245,158,11,0.04);"><td><strong>Account Priority</strong></td><td style="color:#b45309;font-weight:700;">Priority Target</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- 17 Commercial Positioning -->
-    <div class="card">
-      <div class="card-header"><span class="accent">17</span> Commercial Positioning</div>
-      <div class="card-body">
-        <div class="positioning-box">
-          <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,0.6);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;">Entry Angle</div>
-          <p style="font-size:13px;line-height:1.6;color:#fff;">Position Akzent as Lincoln Electric México's <strong style="color:var(--teal);">Operational Complexity Partner, Multimodal Coordination Partner, Customs &amp; Visibility Partner and ILM / Control Tower Partner.</strong></p>
-          <div class="positioning-example">"Based on the public logistics footprint, Lincoln Electric appears to operate a highly technical, multimodal and customs-sensitive supply chain across Mexico, the U.S., Asia and LATAM. Operations with this profile typically face pressure around border visibility, customs readiness, supplier coordination, urgent air Shipments and exception management. Akzent's value would be to help structure control, visibility and execution consistency across those flows — not just quote freight."</div>
-          <div class="capability-tags">
-            <span class="cap-tag">Cross-Border</span>
-            <span class="cap-tag">Customs</span>
-            <span class="cap-tag">Air Urgency</span>
-            <span class="cap-tag">Ocean Visibility</span>
-            <span class="cap-tag">Supplier Coordination</span>
-            <span class="cap-tag">ILM / Control Tower</span>
-            <span class="cap-tag">HS / SKU Visibility</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 18 Discovery Questions -->
-    <div class="card">
-      <div class="card-header"><span class="accent">18</span> Discovery Questions</div>
-      <div class="card-body">
-        <div class="outreach-step">
-          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Customs / IMMEX / Regime Control</span><span class="outreach-step-toggle">+</span></div>
-          <div class="outreach-step-body"><ul class="q-list">
-            <li>How centralized is customs documentation control across Lincoln Electric México's import and export activity?</li>
-            <li>Which customs nodes create the most operational pressure today?</li>
-            <li>How much manual follow-up is required for IMMEX, returns, transfers and special-regime Shipments?</li>
-            <li>Where do documentation issues most often create delays?</li>
+        <div class="lec-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:22px;">
+          <div><div class="lec-sublbl">What is established</div><ul class="lec-obs">
+            <li class="new"><span class="lec-src pj">PJ Fact</span> 1,114-Shipment Current YTD visible network with material cross-border, air and maritime structures; top three gateways = 88.0%.</li>
+            <li class="new"><span class="lec-src ak">Akzent Fact · Arcatek Patent Ownership</span> Arcatek-owned Customs Patents are 3468 + 1930.</li>
+            <li class="new"><span class="lec-src ca">AIOS Calculation</span> Patent 3468 on 426 Shipments · Customs Shared Wallet 38.2% (Import 44.6% · Export 30.0%) · 688 Other-Patent Shipments · 280 overlap gateways with visible Patent 3468 activity.</li>
+          </ul></div>
+          <div><div class="lec-sublbl">What is not established</div><ul class="lec-obs">
+            <li class="chg">Commercial Relationship · Arcatek and Akzent Logistics Service Relationships</li>
+            <li class="chg">Captured Logistics Shipments · Logistics Shared Wallet · Logistics whitespace</li>
+            <li class="chg">Captured Logistics Revenue · Profit / GP · Margin</li>
+            <li class="chg">Other-Patent volume or PJ-visible freight as winnable business</li>
           </ul></div>
         </div>
-        <div class="outreach-step">
-          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Cross-Border</span><span class="outreach-step-toggle">+</span></div>
-          <div class="outreach-step-body"><ul class="q-list">
-            <li>How are Nuevo Laredo and Colombia NL currently managed?</li>
-            <li>Are broker, carrier and internal teams coordinated through one control point?</li>
-            <li>How quickly does the team detect and escalate border exceptions?</li>
-            <li>Are there recurring delays tied to pre-alerts, documentation, capacity or customs inspection?</li>
-          </ul></div>
-        </div>
-        <div class="outreach-step">
-          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Air Freight / Urgency</span><span class="outreach-step-toggle">+</span></div>
-          <div class="outreach-step-body"><ul class="q-list">
-            <li>What normally triggers air Shipments?</li>
-            <li>Are air Shipments planned, customer-driven or caused by operational exceptions?</li>
-            <li>Is there visibility into root causes of premium freight?</li>
-            <li>Would a proactive air escalation desk reduce response time and cost leakage?</li>
-          </ul></div>
-        </div>
-        <div class="outreach-step">
-          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Supplier / Counterparty Coordination</span><span class="outreach-step-toggle">+</span></div>
-          <div class="outreach-step-body"><ul class="q-list">
-            <li>How are U.S., China, Canada and intragroup suppliers coordinated before shipment readiness?</li>
-            <li>Are supplier milestones visible before cargo is handed to the carrier?</li>
-            <li>Where does the team lose visibility: supplier release, customs, carrier pickup, border, port, airport or delivery?</li>
-            <li>Is communication centralized or distributed across multiple teams?</li>
-          </ul></div>
-        </div>
-        <div class="outreach-step">
-          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>ILM / Control Tower</span><span class="outreach-step-toggle">+</span></div>
-          <div class="outreach-step-body"><ul class="q-list">
-            <li>Is there a single operational dashboard across imports, exports, customs, air, ocean and cross-border?</li>
-            <li>Are exceptions managed proactively or reactively?</li>
-            <li>Which KPIs matter most: on-time release, customs clearance, border crossing, air reduction or documentation accuracy?</li>
-            <li>Would Lincoln Electric benefit from an external control tower coordinating suppliers, brokers, carriers and internal stakeholders?</li>
-          </ul></div>
-        </div>
+        <div class="lec-note-navy"><strong><span class="lec-src ai">AIOS Interpretation</span></strong> — The visible network presents material operational complexity across high-frequency cross-border corridors, a concentrated export-air structure, and a recurring ocean import structure.</div>
+        <div class="lec-sublbl" style="margin-top:16px;">Commercial Positioning</div>
+        <div class="lec-chips"><span>Operational Complexity</span><span>Multimodal Coordination</span><span>Cross-Border Coordination</span><span>Ocean Coordination</span><span>Customs &amp; Visibility</span><span>ILM / Control Tower</span></div>
+        <div class="lec-note"><strong>Do not position this account as transactional freight.</strong> Other-Patent volume and PJ-visible freight are not stated as winnable.</div>
       </div>
     </div>
 
-    <!-- 19 Strategic Expansion Trajectory -->
-    <div class="card">
-      <div class="card-header"><span class="accent">19</span> Strategic Expansion Trajectory</div>
+    <section class="lec-chapter syn" id="lec-ch-8">
+      <div class="lec-chapter-n">Chapter 08</div>
+      <div class="lec-chapter-t">Seller Discovery Guide</div>
+      <div class="lec-chapter-s">Use before or during the account conversation · questions about unknowns, not PJ Facts</div>
+    </section>
+    <div class="card" style="border-top:3px solid #f59e0b;">
+      <div class="card-header">Seller Discovery Guide · <span class="lec-src dv">Discovery Validation</span></div>
       <div class="card-body">
-        <div class="phase-grid">
-          <div class="phase-card"><div class="phase-num">Phase 1</div><div class="phase-title">Diagnostic Entry</div><ul class="phase-items"><li>Cross-border visibility</li><li>Customs documentation review</li><li>Nuevo Laredo / Colombia focus</li><li>Air trigger mapping</li></ul></div>
-          <div class="phase-card"><div class="phase-num">Phase 2</div><div class="phase-title">Tactical Control</div><ul class="phase-items"><li>Shipment visibility by lane and customs node</li><li>Broker / carrier synchronization</li><li>Exception escalation</li><li>Air governance</li></ul></div>
-          <div class="phase-card"><div class="phase-num">Phase 3</div><div class="phase-title">Multimodal Expansion</div><ul class="phase-items"><li>Maritime visibility</li><li>Port-to-plant coordination</li><li>LATAM export support</li><li>KPI governance</li></ul></div>
-          <div class="phase-card"><div class="phase-num">Phase 4</div><div class="phase-title">ILM / Control Tower</div><ul class="phase-items"><li>Supplier coordination</li><li>Customs document governance</li><li>Multimodal exception management</li><li>Continuous improvement</li></ul></div>
+        <div class="lec-dq-g">
+          <div><h4>Cross-border allocation and control<a href="#lec-lane-1">Corridor 1 →</a></h4><ol start="1"><li>How is the Colombia-versus-Nuevo-Laredo allocation determined for the Lincoln Maquila Principal and Harris flows?</li><li>Who controls freight procurement and customs allocation across the Torreon-US network?</li></ol></div>
+          <div><h4>Patent allocation logic<a href="#lec-ch-5">Customs →</a></h4><ol start="3"><li>What explains the Patent 3577 allocation on the dominant MTY Airport export-air structure?</li><li>Are Patent allocations driven by gateway, direction, legal entity, customs regime, contract, specialization or contingency?</li></ol></div>
+          <div><h4>Ocean flow and visibility<a href="#lec-lane-4">Corridor 4 →</a></h4><ol start="5"><li>Who owns the Manzanillo ocean flow and inland handoff into Torreon?</li><li>What visibility, SLA, exception-management and control-tower requirements exist across air, truck, ocean and customs?</li></ol></div>
+          <div><h4>Capture and decision rights<a href="#lec-ch-7">Commercial →</a></h4><ol start="7"><li>Does Akzent Logistics currently capture any Shipments in these corridors? If yes, which services and lanes?</li><li>When are incumbents, allocations and tenders reviewed, and who holds decision rights?</li></ol></div>
         </div>
+        <div class="lec-micro">Do not ask the account to rediscover reliable PJ Facts (volumes, gateways, Patents). Discovery focuses on the relationship, service ownership, freight capture, decision rights, patent allocation logic, incumbents and tender timing.</div>
+        <details class="lec-ev"><summary>Data availability and governance</summary><div class="lec-ev-b"><div class="lec-da">
+          <div><b>Available · PJ</b><ul><li>PJ Shipment-level Imports and Exports</li><li>Shipment dates · directions · modes · facilities / Trading Partners where supplied · gateways</li><li>Customs Regime · Customs Agent / Patent · HS · goods descriptions</li><li>Akzent Fact: Arcatek-owned Patents = 3468 + 1930</li></ul></div>
+          <div class="c"><b>AIOS Calculations</b><ul><li>Visible scale · direction mix · equivalent-period trend · modes · gateways</li><li>Core Routes · route frequency · persistence</li><li>Customs Shared Wallet · Patent portfolio · Patent × Direction × Gateway · Customs Wallet by Gateway</li><li>Material Other Patent deep dives · geographic customs overlap · HS operational presence</li></ul></div>
+          <div class="x"><b>Unavailable / deactivated</b><ul><li>Confirmed commercial relationship · confirmed Arcatek and Akzent Logistics service relationships</li><li>Captured Logistics Shipments · Logistics Shared Wallet · Logistics whitespace</li><li>Captured Logistics Revenue · Profit / GP · Margin · financial expansion analysis</li></ul></div>
+          <div class="d"><b>Governance</b><ul><li>No YTD annualization · FY2025 and 2026 YTD kept separate</li><li>No relationship inferred from Patent 3468 visibility</li><li>No Other Patent assigned to a company · no visible volume labeled winnable</li></ul></div>
+        </div></div></details>
       </div>
     </div>
 
   </div>
+  <script>
+  /* Printing opens every Lincoln Electric evidence panel, then restores the reader's state. */
+  window.addEventListener('beforeprint', function () { document.querySelectorAll('#view-lincoln-electric details.lec-ev:not([open])').forEach(function (d) { d.setAttribute('open', ''); d.setAttribute('data-lec-print', '1'); }); });
+  window.addEventListener('afterprint', function () { document.querySelectorAll('#view-lincoln-electric details.lec-ev[data-lec-print]').forEach(function (d) { d.removeAttribute('open'); d.removeAttribute('data-lec-print'); }); });
+  </script>
 </div>
 
 <!-- ══ MARQUARDT MEXICO VIEW ══ -->
@@ -21067,15 +21599,15 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
               <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
               <td style="color:#b45309;font-weight:700;font-size:11px;">★ PRIORITY TARGET</td>
             </tr>
-            <tr>
-              <td><strong>Lincoln Electric México</strong> <span style="font-size:10px;font-weight:600;color:#b45309;background:rgba(245,158,11,0.12);padding:1px 5px;border-radius:3px;margin-left:4px;">LEAD</span></td>
-              <td><span class="cls-pill aaa">AAA</span></td>
-              <td style="color:var(--text-muted);">Industrial Manufacturing / Welding Equipment</td>
-              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
-              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot"></div></div></td>
-              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot"></div></div></td>
-              <td><div class="dots"><div class="dot filled high"></div><div class="dot filled high"></div><div class="dot filled high"></div></div></td>
-              <td style="color:#b45309;font-weight:700;font-size:11px;">★ LEAD</td>
+            <tr onclick="showViewById('view-lincoln-electric')" style="cursor:pointer;">
+              <td><strong>Lincoln Electric Maquinas S De Rl</strong> <span style="font-size:10px;font-weight:600;color:#b45309;background:rgba(245,158,11,0.12);padding:1px 5px;border-radius:3px;margin-left:4px;" title="Relationship Not Fully Validated">NOT VALIDATED</span></td>
+              <td><span style="color:var(--text-light);" title="AIOS Classification: Not assigned">&mdash;</span></td>
+              <td style="color:var(--text-muted);" title="LINCOLN ELECTRIC MAQUINAS S DE RL &middot; Analysis Date 2026-09-19 &middot; Relationship: Relationship Not Fully Validated &middot; Arcatek Customs Service Status: Not Validated &middot; Akzent Logistics Service Status: Not Validated &middot; AIOS Classification: Not assigned &mdash; relationship/internal capture not fully validated &middot; PJ Visible Shipments YTD: 1,114 &middot; Imports: 630 &middot; Exports: 484 &middot; Jan&ndash;Jul 2025: 1,136 &middot; Logistics Shared Wallet: Not Calculable &middot; Customs Shared Wallet: 38.2% &middot; Customs Import Wallet: 44.6% &middot; Customs Export Wallet: 30.0% &middot; Captured Logistics Profit: Not Available">Relationship Not Fully Validated</td>
+              <td style="color:var(--text-light);" title="No AIOS Cross-Border rating supplied">&mdash;</td>
+              <td style="color:var(--text-light);" title="No AIOS Ocean rating supplied">&mdash;</td>
+              <td style="color:var(--text-light);" title="No AIOS Air rating supplied">&mdash;</td>
+              <td style="color:var(--text-light);" title="No AIOS ILM rating supplied">&mdash;</td>
+              <td style="color:#b45309;font-weight:700;font-size:11px;">Discovery Required &middot; Relationship Not Fully Validated</td>
             </tr>
             <tr>
               <td><strong>Marquardt Mexico</strong> <span style="font-size:10px;font-weight:600;color:#b45309;background:rgba(245,158,11,0.12);padding:1px 5px;border-radius:3px;margin-left:4px;">LEAD</span></td>
@@ -82914,7 +83446,7 @@ const ACCOUNTS = [
   { id:'view-techniplas',name:'Techniplas + DMP Monterrey', sub:'Automotive / Plastics / Industrial Components · Strategic Expansion Client', rel:'CLIENT', cls:'AAA',  clsPill:'aaa' },
   { id:'view-saen',      name:'Servicios Agregados de Energía', sub:'Industrial Energy / Technical Components / Instrumentation · Air Whitespace', rel:'CLIENT', cls:'AA',   clsPill:'aa'  },
   { id:'view-liebherr',  name:'Liebherr Monterrey',       sub:'Industrial Machinery / Heavy Equipment &middot; CLIENT &middot; Customs relationship &middot; Wallet Expansion &middot; 2026 YTD 275 Shipments &middot; 199 Imports &middot; 76 Exports &middot; Logistics Wallet 0.0% &middot; Customs Wallet 25.5% &middot; Akzent Patents 3468 1930 &middot; Manzanillo &middot; Altamira &middot; Colombia &middot; Nuevo Laredo &middot; Monterrey Air &middot; Core Routes &middot; Lane Intelligence &middot; Corridor Intelligence &middot; Wuxi Paike &middot; Zhangjiagang &middot; Liebherr USA &middot; Patent 1944 &middot; Patent 3694 &middot; Patent 3577 &middot; Discovery',         rel:'CLIENT', cls:'AAA',  clsPill:'aaa' },
-  { id:'view-lincoln-electric', name:'Lincoln Electric México', sub:'Industrial Manufacturing · Welding Equipment · Electrical Components', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
+  { id:'view-lincoln-electric', name:'Lincoln Electric Maquinas S De Rl', sub:'LINCOLN ELECTRIC MAQUINAS S DE RL &middot; Relationship Not Fully Validated &middot; Arcatek Customs Not Validated &middot; Akzent Logistics Not Validated &middot; AIOS Classification Not Assigned &middot; Analysis Date 19-Sep-2026 &middot; PJ Current YTD 1,114 Shipments &middot; 630 Imports &middot; 484 Exports &middot; equivalent-period -1.9% &middot; FY2025 1,863 &middot; Customs Shared Wallet 38.2% &middot; Arcatek Patent 3468 &middot; Other Patents 3577 1858 1672 3622 &middot; Logistics Shared Wallet Not Calculable &middot; Import Core Routes 5 to 84.9% &middot; Export Core Routes 6 to 82.0% &middot; Colombia NL &middot; Nuevo Laredo &middot; MTY Airport &middot; Manzanillo &middot; Altamira &middot; Torreon &middot; Lincoln Maquila Principal &middot; The Harris Products Group &middot; Welding &middot; Electrical Cable &middot; Customs Wallet by Gateway &middot; Discovery Required', rel:'CLIENT', cls:'&mdash;', clsPill:'' },
   { id:'view-johnson',   name:'Johnson Controls Enterprises Mexico', sub:'Automotive / Battery Manufacturing / Energy Storage · Cross-Border &amp; Multimodal Operations', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
   { id:'view-daltile',   name:'Dal-Tile Mexico',           sub:'Ceramic Manufacturing / Building Materials / Household Durables · Nuevo León, MX', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
   { id:'view-smp',       name:'SMP Automotive Systems',   sub:'Tier 1 Automotive Supplier',                    rel:'LEAD',   cls:'AAA',  clsPill:'aaa' },
@@ -83047,7 +83579,7 @@ var NAME_ALIASES = {
   'technoherramental': 'technoherramental', 'tecnoherramental': 'technoherramental',
   'corporacion pipsa': 'corporacion pipsa', 'pipsa': 'corporacion pipsa',
   'vistamex': 'vistamex', 'vista mex': 'vistamex', 'servicios vistamex': 'vistamex',
-  'lincoln electric': 'lincoln electric',
+  'lincoln electric': 'lincoln electric', 'lincoln electric maquinas s de rl': 'lincoln electric', 'lincoln electric maquinas': 'lincoln electric',
   'sanfer salud animal': 'sanfer salud animal', 'sanfer': 'grupo sanfer',
   /* kick-off leads */
   'alfagomma': 'alfagomma',
