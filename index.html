@@ -4857,6 +4857,599 @@ main {
 #view-kitchen .kes-da-sm { font-size:10px; color:var(--text-muted); }
 @media (max-width: 1100px) { #view-kitchen .kes-jump.five { grid-template-columns:repeat(3,1fr); } }
 @media (max-width: 900px) { #view-kitchen .kes-jump.five { grid-template-columns:1fr; } }
+/* PHINIA COMPONENTES MEXICO — scoped view components (#view-phinia only). AIOS Analysis 19-Sep-2026 · Relationship Not Fully Validated · 8-chapter seller report. */
+#view-phinia .num { text-align:right; }
+#view-phinia .phn-sublbl { font-size:10px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal-dim); margin-bottom:8px; }
+#view-phinia .phn-sublbl.muted { color:var(--text-light); }
+#view-phinia .phn-eyebrow { font-size:9px; font-weight:800; letter-spacing:1.3px; text-transform:uppercase; color:var(--teal-dim); }
+#view-phinia .phn-src { display:inline-block; font-size:8.5px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; padding:1px 6px; border-radius:3px; vertical-align:1px; }
+#view-phinia .phn-src.pj { color:var(--navy); background:rgba(13,43,94,0.08); }
+#view-phinia .phn-src.ak { color:#047857; background:rgba(16,185,129,0.12); }
+#view-phinia .phn-calc { display:inline-block; font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--teal-dim); border:1px solid rgba(0,180,216,0.45); padding:1px 6px; border-radius:3px; }
+#view-phinia .phn-mono { font-family:ui-monospace,Menlo,monospace; font-weight:700; color:var(--navy); }
+#view-phinia .phn-muted td { color:var(--text-muted); }
+
+/* Chapters */
+#view-phinia .phn-chapter { margin:26px 0 12px; padding:16px 22px; border-radius:8px; color:#fff; background:linear-gradient(120deg,var(--navy) 0%,#1e4a8a 100%); position:relative; overflow:hidden; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-phinia .phn-chapter:first-of-type { margin-top:8px; }
+#view-phinia .phn-chapter::after { content:""; position:absolute; right:0; top:0; bottom:0; width:6px; background:var(--teal); }
+#view-phinia .phn-chapter.exec::after { background:#10b981; }
+#view-phinia .phn-chapter.cus { background:linear-gradient(120deg,#0b4f63 0%,#0e7490 100%); }
+#view-phinia .phn-chapter.cus::after { background:#f59e0b; }
+#view-phinia .phn-chapter.syn { background:linear-gradient(120deg,#064e3b 0%,#047857 100%); }
+#view-phinia .phn-chapter-n { font-size:9.5px; font-weight:800; letter-spacing:2px; text-transform:uppercase; opacity:0.75; }
+#view-phinia .phn-chapter-t { font-size:22px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; line-height:1.2; margin-top:2px; }
+#view-phinia .phn-chapter-s { font-size:11.5px; font-weight:600; opacity:0.85; margin-top:3px; }
+#view-phinia .phn-chapnav { display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-top:14px; }
+#view-phinia .phn-chapnav > span { font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-light); }
+#view-phinia .phn-chapnav button { font:inherit; font-size:11px; font-weight:800; color:var(--navy); background:var(--surface); border:1px solid var(--border); border-radius:5px; padding:6px 11px; cursor:pointer; }
+#view-phinia .phn-chapnav button:hover { border-color:var(--teal); color:var(--teal-dim); }
+
+/* Executive viewport */
+#view-phinia .phn-hero { display:grid; grid-template-columns:1.15fr 1fr 1fr; gap:14px; align-items:stretch; }
+#view-phinia .phn-hero > div { padding:13px 16px; background:var(--surface); border:1px solid var(--border); border-radius:7px; }
+#view-phinia .phn-hero .k { font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-phinia .phn-hero .v { font-size:34px; font-weight:800; color:var(--navy); line-height:1.1; margin-top:2px; }
+#view-phinia .phn-hero .v small { font-size:12px; font-weight:700; color:var(--text-muted); }
+#view-phinia .phn-hero .s { font-size:10.5px; color:var(--text-muted); line-height:1.55; margin-top:5px; }
+#view-phinia .phn-split { display:flex; height:14px; border-radius:7px; overflow:hidden; margin-top:8px; }
+#view-phinia .phn-split > div { height:100%; }
+#view-phinia .phn-delta { font-size:22px; font-weight:800; line-height:1.15; }
+#view-phinia .phn-delta.dn { color:#b91c1c; }
+#view-phinia .phn-delta.up { color:#047857; }
+#view-phinia .phn-trendrow { display:flex; gap:14px; flex-wrap:wrap; margin-top:7px; }
+#view-phinia .phn-trendrow div { font-size:10.5px; color:var(--text-muted); }
+#view-phinia .phn-trendrow b { display:block; font-size:15px; font-weight:800; }
+
+/* The two-wallet asymmetry — the signature visual of this account */
+#view-phinia .phn-asym { display:grid; grid-template-columns:1fr 46px 1fr; gap:10px; align-items:center; margin-top:4px; }
+#view-phinia .phn-asym > div.w { padding:16px 18px; border-radius:8px; border:1.5px solid var(--border); background:var(--surface); }
+#view-phinia .phn-asym .w.log { border-top:4px solid #94a3b8; }
+#view-phinia .phn-asym .w.cus { border-top:4px solid var(--teal); background:rgba(0,180,216,0.04); }
+#view-phinia .phn-asym .wk { font-size:9.5px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); }
+#view-phinia .phn-asym .wv { font-size:52px; font-weight:800; line-height:1.05; margin-top:2px; letter-spacing:-1px; }
+#view-phinia .phn-asym .log .wv { color:#64748b; }
+#view-phinia .phn-asym .cus .wv { color:var(--teal-dim); }
+#view-phinia .phn-asym .wf { font-size:11px; color:var(--text-muted); margin-top:3px; line-height:1.5; }
+#view-phinia .phn-asym .wbar { height:10px; border-radius:5px; background:#e6eaf1; overflow:hidden; margin-top:10px; }
+#view-phinia .phn-asym .wbar > div { height:100%; }
+#view-phinia .phn-asym .vs { text-align:center; font-size:11px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-light); }
+#view-phinia .phn-asym-note { margin-top:12px; padding:11px 15px; background:rgba(13,43,94,0.04); border-left:3px solid var(--navy); border-radius:0 5px 5px 0; font-size:11px; color:var(--text-muted); line-height:1.65; }
+
+/* Signal / Interpretation / Discovery — always three visually separate layers */
+#view-phinia .phn-sig { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:14px; }
+#view-phinia .phn-sig > div { padding:12px 15px; border-radius:6px; font-size:11px; line-height:1.6; color:var(--text-muted); }
+#view-phinia .phn-sig b { display:block; font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; margin-bottom:4px; }
+#view-phinia .phn-sig .s1 { background:rgba(13,43,94,0.04); border-top:3px solid var(--navy); }
+#view-phinia .phn-sig .s1 b { color:var(--navy); }
+#view-phinia .phn-sig .s2 { background:rgba(0,180,216,0.05); border-top:3px solid var(--teal); }
+#view-phinia .phn-sig .s2 b { color:var(--teal-dim); }
+#view-phinia .phn-sig .s3 { background:rgba(245,158,11,0.05); border-top:3px solid #f59e0b; }
+#view-phinia .phn-sig .s3 b { color:#b45309; }
+
+/* Notes */
+#view-phinia .phn-note { margin-top:12px; padding:11px 15px; background:rgba(245,158,11,0.05); border-left:3px solid #f59e0b; border-radius:0 5px 5px 0; font-size:11px; color:var(--text-muted); line-height:1.65; }
+#view-phinia .phn-note-navy { margin-top:12px; padding:11px 15px; background:rgba(13,43,94,0.04); border-left:3px solid var(--navy); border-radius:0 5px 5px 0; font-size:11px; color:var(--text-muted); line-height:1.65; }
+#view-phinia .phn-note-na { margin-top:12px; padding:11px 15px; background:rgba(148,163,184,0.09); border-left:3px solid #94a3b8; border-radius:0 5px 5px 0; font-size:11px; color:var(--text-muted); line-height:1.65; }
+
+/* Progressive-disclosure ladder */
+#view-phinia .phn-ladder { display:flex; flex-wrap:wrap; gap:5px; align-items:center; font-size:10px; font-weight:800; letter-spacing:0.4px; text-transform:uppercase; color:var(--navy); }
+#view-phinia .phn-ladder span { background:var(--surface); border:1px solid var(--border); padding:3px 9px; border-radius:4px; }
+#view-phinia .phn-ladder i { font-style:normal; color:var(--text-light); }
+
+/* Bar rows (modes, gateways, geography, partners, HS) */
+#view-phinia .phn-rows { display:flex; flex-direction:column; gap:7px; }
+#view-phinia .phn-row { display:grid; grid-template-columns:minmax(170px,1.5fr) 1fr 108px; gap:10px; align-items:center; padding:5px 0; border-bottom:1px solid var(--border); }
+#view-phinia .phn-row:last-child { border-bottom:none; }
+#view-phinia .phn-row .lbl { font-size:11.5px; font-weight:700; color:var(--navy); line-height:1.4; word-break:break-word; }
+#view-phinia .phn-row .lbl em { display:block; font-style:normal; font-size:9.5px; font-weight:600; color:var(--text-muted); }
+#view-phinia .phn-row .bar { height:9px; border-radius:5px; background:#e6eaf1; overflow:hidden; }
+#view-phinia .phn-row .bar > div { height:100%; }
+#view-phinia .phn-row .val { text-align:right; font-size:12px; font-weight:800; color:var(--navy); white-space:nowrap; }
+#view-phinia .phn-row .val span { font-size:10px; font-weight:700; color:var(--text-muted); margin-left:4px; }
+
+/* Route tables */
+#view-phinia .phn-route-table { width:100%; min-width:1160px; border-collapse:collapse; font-size:11px; }
+#view-phinia .phn-route-table td:nth-child(2),
+#view-phinia .phn-route-table td:nth-child(4) { min-width:150px; }
+#view-phinia .phn-route-table td:nth-child(3) { min-width:190px; }
+#view-phinia .phn-route-table th { position:sticky; top:0; z-index:2; background:var(--navy); color:#fff; font-size:8.5px; font-weight:800; letter-spacing:0.7px; text-transform:uppercase; padding:8px 7px; text-align:left; white-space:nowrap; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-phinia .phn-route-table th.num { text-align:right; }
+#view-phinia .phn-route-table td { padding:7px; border-bottom:1px solid var(--border); vertical-align:top; }
+#view-phinia .phn-route-table tbody tr:hover { background:rgba(0,180,216,0.04); }
+#view-phinia .phn-rank { width:34px; }
+#view-phinia .phn-rank-pill { display:inline-block; min-width:26px; text-align:center; font-size:10px; font-weight:800; color:var(--navy); background:rgba(13,43,94,0.07); border-radius:4px; padding:2px 5px; }
+#view-phinia .phn-ent strong { font-size:11px; font-weight:700; color:var(--navy); line-height:1.35; display:block; }
+#view-phinia .phn-ent .phn-na { font-size:9.5px; font-weight:600; color:var(--text-light); font-style:italic; }
+#view-phinia .phn-ent .phn-self { display:inline-block; font-size:8px; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--navy); background:rgba(13,43,94,0.07); padding:1px 5px; border-radius:3px; margin-top:3px; }
+#view-phinia .phn-gw-name { font-size:9.5px; color:var(--text-muted); line-height:1.4; margin-top:3px; word-break:break-word; }
+#view-phinia .phn-cum { min-width:78px; }
+#view-phinia .phn-cum-bar { height:4px; border-radius:2px; background:#e6eaf1; overflow:hidden; margin-top:3px; }
+#view-phinia .phn-cum-bar > div { height:100%; background:var(--teal); }
+#view-phinia .phn-dates { font-size:9.5px; color:var(--text-muted); white-space:nowrap; }
+#view-phinia .phn-scroll { overflow-x:auto; max-height:640px; overflow-y:auto; border:1px solid var(--border); border-radius:6px; }
+
+/* Patent components */
+#view-phinia .phn-pat { display:inline-block; font-size:10px; font-weight:800; letter-spacing:0.5px; padding:2px 7px; border-radius:4px; white-space:nowrap; }
+#view-phinia .phn-pat.ak { color:#fff; background:var(--teal-dim); }
+#view-phinia .phn-pat.ot { color:#92400e; background:rgba(245,158,11,0.16); border:1px solid rgba(245,158,11,0.4); }
+#view-phinia .phn-pat.off { color:var(--text-light); background:rgba(148,163,184,0.15); border:1px dashed rgba(148,163,184,0.7); }
+#view-phinia .phn-gwr { display:grid; grid-template-columns:minmax(190px,1.4fr) 1fr 150px; gap:12px; align-items:center; padding:8px 0; border-bottom:1px solid var(--border); }
+#view-phinia .phn-gwr:last-child { border-bottom:none; }
+#view-phinia .phn-gwr .phn-cw-lbl { font-size:11.5px; font-weight:700; color:var(--navy); line-height:1.4; word-break:break-word; }
+#view-phinia .phn-gwr .phn-cw-sub { font-size:9.5px; color:var(--text-muted); margin-top:2px; }
+#view-phinia .phn-cw-bar { display:flex; height:16px; border-radius:8px; overflow:hidden; background:#e6eaf1; }
+#view-phinia .phn-cw-bar > div { height:100%; }
+#view-phinia .phn-cw-ak { background:var(--teal); }
+#view-phinia .phn-cw-ot { background:#f59e0b; }
+#view-phinia .phn-cw-legend { text-align:right; font-size:10px; color:var(--text-muted); white-space:nowrap; }
+#view-phinia .phn-cw-legend b { display:block; font-size:15px; font-weight:800; color:var(--navy); }
+#view-phinia .phn-gwr.hot { background:rgba(0,180,216,0.05); border-radius:6px; padding:10px 10px; border-bottom:none; margin-bottom:4px; }
+#view-phinia .phn-gwr.hot .phn-cw-bar { height:22px; }
+#view-phinia .phn-gwr.zero .phn-cw-legend b { color:#b45309; }
+#view-phinia .phn-gwr.small { opacity:0.72; }
+#view-phinia .phn-gwr.small .phn-cw-lbl { font-size:10.5px; }
+#view-phinia .phn-gwr.small .phn-cw-bar { height:9px; }
+
+/* Materiality scale — keeps a 100% share on small volume from overpowering larger volumes */
+#view-phinia .phn-matbar { height:6px; border-radius:3px; background:#e6eaf1; overflow:hidden; margin-top:4px; }
+#view-phinia .phn-matbar > div { height:100%; background:var(--navy); opacity:0.55; }
+#view-phinia .phn-matlbl { font-size:8.5px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:var(--text-light); margin-top:3px; }
+
+/* Deep dives */
+#view-phinia .phn-dd { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+#view-phinia .phn-dd > div { padding:13px 16px; background:var(--surface); border:1px solid var(--border); border-top:3px solid #f59e0b; border-radius:7px; }
+#view-phinia .phn-dd .h { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+#view-phinia .phn-dd .n { font-size:26px; font-weight:800; color:var(--navy); line-height:1.1; }
+#view-phinia .phn-dd .n small { font-size:10px; font-weight:700; color:var(--text-muted); }
+#view-phinia .phn-dd .g { font-size:10.5px; color:var(--navy); font-weight:700; margin-top:5px; line-height:1.5; }
+#view-phinia .phn-dd .w { font-size:10px; color:var(--text-muted); margin-top:4px; line-height:1.5; }
+#view-phinia .phn-dd .tp { font-size:10px; color:var(--text-muted); margin-top:6px; line-height:1.6; }
+#view-phinia .phn-dd .tp em { font-style:normal; color:var(--navy); font-weight:700; }
+#view-phinia .phn-dd .tp.na { color:var(--text-light); font-style:italic; }
+
+/* Profit provenance */
+#view-phinia .phn-prov { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+#view-phinia .phn-prov > div { padding:14px 17px; background:rgba(148,163,184,0.07); border:1px dashed rgba(148,163,184,0.7); border-radius:7px; }
+#view-phinia .phn-prov .k { font-size:9.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-phinia .phn-prov .v { font-size:19px; font-weight:800; color:#64748b; margin-top:3px; line-height:1.2; }
+#view-phinia .phn-prov .s { font-size:10.5px; color:var(--text-muted); margin-top:4px; line-height:1.55; }
+
+/* Positioning */
+#view-phinia .phn-pos { display:grid; grid-template-columns:repeat(5,1fr); gap:9px; }
+#view-phinia .phn-pos > div { padding:12px 13px; background:var(--surface); border:1px solid var(--border); border-top:3px solid #10b981; border-radius:7px; }
+#view-phinia .phn-pos b { display:block; font-size:11.5px; font-weight:800; color:var(--navy); line-height:1.35; }
+#view-phinia .phn-pos span { display:block; font-size:10px; color:var(--text-muted); margin-top:4px; line-height:1.5; }
+
+#view-phinia .phn-dlist { margin:6px 0 0 16px; padding:0; font-size:11px; color:var(--text-muted); line-height:1.75; }
+#view-phinia .phn-dlist li { margin:2px 0; }
+#view-phinia .phn-dlist b { color:var(--navy); }
+
+@media (max-width: 1100px) {
+  #view-phinia .phn-pos { grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width: 900px) {
+  #view-phinia .phn-hero, #view-phinia .phn-sig, #view-phinia .phn-dd,
+  #view-phinia .phn-prov, #view-phinia .phn-pos { grid-template-columns:1fr; }
+  #view-phinia .phn-asym { grid-template-columns:1fr; }
+  #view-phinia .phn-asym .vs { padding:4px 0; }
+  #view-phinia .phn-row { grid-template-columns:1fr 92px; }
+  #view-phinia .phn-row .bar { grid-column:1 / -1; }
+  #view-phinia .phn-gwr { grid-template-columns:1fr; }
+  #view-phinia .phn-gwr .phn-cw-legend { text-align:left; }
+}
+/* Print: every table and appendix opens in full, scroll containers release. */
+@media print {
+  #view-phinia .phn-scroll { overflow:visible !important; max-height:none !important; border:none; }
+  #view-phinia .phn-route-table th { position:static; }
+  #view-phinia .phn-route-table { min-width:0; font-size:8.5px; }
+}
+/* Customs-client additions — customs chapter prominence, triple wallet, HS presence matrix */
+#view-phinia .phn-chapter.cus { box-shadow:0 0 0 2px rgba(245,158,11,0.35); }
+#view-phinia .phn-chapter .phn-prim { display:inline-block; margin-top:8px; font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; background:#f59e0b; color:#1f2937; padding:3px 9px; border-radius:4px; }
+#view-phinia .phn-tri { display:grid; grid-template-columns:1fr 1.35fr 0.8fr; gap:12px; align-items:stretch; margin-top:4px; }
+#view-phinia .phn-tri > div { padding:15px 17px; border-radius:8px; border:1.5px solid var(--border); background:var(--surface); }
+#view-phinia .phn-tri .log { border-top:4px solid #94a3b8; }
+#view-phinia .phn-tri .cus { border:2px solid var(--teal); border-top:5px solid var(--teal); background:rgba(0,180,216,0.05); }
+#view-phinia .phn-tri .pro { border-style:dashed; background:rgba(148,163,184,0.06); }
+#view-phinia .phn-tri .wk { font-size:9.5px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); }
+#view-phinia .phn-tri .wv { font-size:46px; font-weight:800; line-height:1.05; margin-top:3px; letter-spacing:-1px; }
+#view-phinia .phn-tri .log .wv { color:#64748b; }
+#view-phinia .phn-tri .cus .wv { color:var(--teal-dim); font-size:58px; }
+#view-phinia .phn-tri .pro .wv { font-size:15px; font-weight:800; color:#64748b; letter-spacing:0; line-height:1.35; margin-top:8px; }
+#view-phinia .phn-tri .wf { font-size:11px; color:var(--text-muted); margin-top:4px; line-height:1.55; }
+#view-phinia .phn-tri .wbar { height:10px; border-radius:5px; background:#e6eaf1; overflow:hidden; margin-top:10px; display:flex; }
+#view-phinia .phn-tri .wbar > div { height:100%; }
+#view-phinia .phn-thesis { margin-top:16px; padding:15px 19px; border-radius:8px; background:linear-gradient(120deg,rgba(13,43,94,0.05),rgba(0,180,216,0.07)); border-left:4px solid var(--teal); font-size:13px; line-height:1.65; color:var(--navy); font-weight:600; }
+#view-phinia .phn-thesis b { font-weight:800; }
+#view-phinia .phn-dir { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+#view-phinia .phn-dir > div { padding:13px 16px; border:1px solid var(--border); border-radius:7px; background:var(--surface); }
+#view-phinia .phn-dir .k { font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-phinia .phn-dir .v { font-size:30px; font-weight:800; color:var(--teal-dim); line-height:1.1; margin-top:2px; }
+#view-phinia .phn-dir .v.nv { color:var(--navy); }
+#view-phinia .phn-dir .s { font-size:10.5px; color:var(--text-muted); line-height:1.55; margin-top:5px; }
+#view-phinia .phn-hs { width:100%; border-collapse:collapse; font-size:11.5px; }
+#view-phinia .phn-hs th { background:var(--navy); color:#fff; font-size:8.5px; font-weight:800; letter-spacing:0.7px; text-transform:uppercase; padding:8px; text-align:center; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-phinia .phn-hs th:first-child { text-align:left; }
+#view-phinia .phn-hs td { padding:7px 8px; border-bottom:1px solid var(--border); text-align:center; }
+#view-phinia .phn-hs td:first-child { text-align:left; }
+#view-phinia .phn-hs .y { color:var(--teal-dim); font-weight:800; }
+#view-phinia .phn-hs .n { color:var(--text-light); font-size:10px; }
+#view-phinia .phn-cp { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+#view-phinia .phn-cp > div { padding:11px 14px; border:1px solid var(--border); border-radius:7px; background:var(--surface); font-size:10.5px; color:var(--text-muted); line-height:1.55; }
+#view-phinia .phn-cp b { display:block; font-size:11.5px; color:var(--navy); font-weight:700; margin-bottom:3px; }
+#view-phinia .phn-cp .r { font-size:9px; font-weight:800; letter-spacing:0.8px; text-transform:uppercase; color:var(--teal-dim); }
+#view-phinia .phn-ov { display:inline-block; font-size:11px; font-weight:800; letter-spacing:0.8px; text-transform:uppercase; color:#b45309; background:rgba(245,158,11,0.12); border:1px solid rgba(245,158,11,0.45); padding:4px 10px; border-radius:5px; }
+@media (max-width: 900px) {
+  #view-phinia .phn-tri, #view-phinia .phn-dir, #view-phinia .phn-cp { grid-template-columns:1fr; }
+  #view-phinia .phn-2col { grid-template-columns:1fr !important; }
+}
+@media print {
+  #view-phinia .phn-tri .cus .wv { font-size:42px; }
+}
+/* Customs-client additions (II) — relationship strip, priorities, discovery, modal bars */
+#view-phinia .phn-rel { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; }
+#view-phinia .phn-rel > div { padding:10px 13px; border:1px solid var(--border); border-radius:7px; background:var(--surface); }
+#view-phinia .phn-rel .k { font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-phinia .phn-rel .v { font-size:13px; font-weight:800; color:var(--navy); margin-top:3px; line-height:1.3; }
+#view-phinia .phn-rel .v.on { color:#047857; }
+#view-phinia .phn-rel .v.off { color:#64748b; }
+#view-phinia .phn-rel .v.x { color:var(--teal-dim); }
+#view-phinia .phn-flow { display:flex; flex-wrap:wrap; align-items:center; gap:6px; font-size:11px; font-weight:800; color:var(--navy); }
+#view-phinia .phn-flow span { background:var(--surface); border:1px solid var(--border); padding:4px 10px; border-radius:5px; }
+#view-phinia .phn-flow i { font-style:normal; color:var(--text-light); }
+#view-phinia .phn-sigc { display:grid; grid-template-columns:1.4fr 1fr; gap:12px; }
+#view-phinia .phn-sigc > div { padding:15px 17px; border:1px solid var(--border); border-radius:8px; background:var(--surface); border-top:4px solid var(--navy); }
+#view-phinia .phn-sigc .n { font-size:40px; font-weight:800; color:var(--navy); line-height:1.05; margin-top:10px; }
+#view-phinia .phn-sigc .n small { font-size:12px; font-weight:700; color:var(--text-muted); }
+#view-phinia .phn-sigc .s { font-size:10.5px; color:var(--text-muted); line-height:1.55; margin-top:6px; }
+#view-phinia .phn-prio { counter-reset:lp; list-style:none; margin:0; padding:0; display:grid; gap:8px; }
+#view-phinia .phn-prio li { counter-increment:lp; display:grid; grid-template-columns:34px 1fr auto; gap:12px; align-items:center; padding:10px 14px; border:1px solid var(--border); border-radius:7px; background:var(--surface); font-size:12px; color:var(--navy); font-weight:700; line-height:1.45; }
+#view-phinia .phn-prio li::before { content:counter(lp); display:flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:50%; background:var(--navy); color:#fff; font-size:12px; font-weight:800; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-phinia .phn-prio li em { font-style:normal; font-size:9px; font-weight:800; letter-spacing:0.8px; text-transform:uppercase; padding:3px 8px; border-radius:4px; white-space:nowrap; }
+#view-phinia .phn-prio li em.c { color:var(--teal-dim); background:rgba(0,180,216,0.1); }
+#view-phinia .phn-prio li em.l { color:#475569; background:rgba(148,163,184,0.18); }
+#view-phinia .phn-dq { display:grid; grid-template-columns:repeat(3,1fr); gap:9px; }
+#view-phinia .phn-dq > div { padding:11px 14px; border:1px solid var(--border); border-left:3px solid #f59e0b; border-radius:0 7px 7px 0; background:var(--surface); font-size:11.5px; font-weight:700; color:var(--navy); line-height:1.5; }
+#view-phinia .phn-dq > div span { display:block; font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:#b45309; margin-bottom:3px; }
+#view-phinia .phn-gwi { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-top:14px; }
+#view-phinia .phn-gwi > div { padding:11px 14px; border:1px solid var(--border); border-top:3px solid var(--teal); border-radius:7px; background:var(--surface); }
+#view-phinia .phn-gwi > div.z { border-top-color:#f59e0b; }
+#view-phinia .phn-gwi b { display:block; font-size:11.5px; font-weight:800; color:var(--navy); }
+#view-phinia .phn-gwi span { display:block; font-size:10.5px; color:var(--text-muted); line-height:1.55; margin-top:4px; }
+@media (max-width: 1100px) {
+  #view-phinia .phn-rel { grid-template-columns:repeat(3,1fr); }
+  #view-phinia .phn-gwi, #view-phinia .phn-dq { grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width: 900px) {
+  #view-phinia .phn-rel, #view-phinia .phn-sigc, #view-phinia .phn-gwi, #view-phinia .phn-dq { grid-template-columns:1fr; }
+  #view-phinia .phn-prio li { grid-template-columns:34px 1fr; }
+  #view-phinia .phn-prio li em { grid-column:2; justify-self:start; }
+}
+/* Deep-lane components — provenance tags, lane concentration, corridor cards, TP × Lane, persistence, matrix, roadmap */
+#view-phinia .phn-src.ai { color:var(--teal-dim); background:rgba(0,180,216,0.1); }
+#view-phinia .phn-src.dv { color:#b45309; background:rgba(245,158,11,0.13); }
+#view-phinia .phn-src.ca { color:var(--teal-dim); background:transparent; border:1px solid rgba(0,180,216,0.45); }
+#view-phinia .phn-micro { font-size:10px; font-style:italic; color:var(--text-muted); margin-top:6px; }
+#view-phinia .phn-badges { display:flex; gap:6px; align-items:center; }
+#view-phinia .phn-dw { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+#view-phinia .phn-dw > div { padding:16px 18px; border-radius:9px; border:1.5px solid var(--border); background:var(--surface); }
+#view-phinia .phn-dw .log { border-top:5px solid #94a3b8; }
+#view-phinia .phn-dw .cus { border-top:5px solid var(--teal); background:rgba(0,180,216,0.04); }
+#view-phinia .phn-dw .t { font-size:10px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); }
+#view-phinia .phn-dw .big { font-size:50px; font-weight:800; line-height:1.05; letter-spacing:-1px; margin-top:4px; }
+#view-phinia .phn-dw .log .big { color:#64748b; }
+#view-phinia .phn-dw .cus .big { color:var(--teal-dim); }
+#view-phinia .phn-dw .eq { font-size:13px; font-weight:800; color:var(--navy); margin-top:2px; }
+#view-phinia .phn-dw .lab { margin-top:12px; font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-light); border-top:1px dashed var(--border); padding-top:8px; }
+#view-phinia .phn-conc { position:relative; margin:30px 0 26px; }
+#view-phinia .phn-conc-bar { display:flex; height:30px; border-radius:6px; overflow:hidden; background:#e6eaf1; }
+#view-phinia .phn-conc-bar > div { height:100%; border-right:1.5px solid #fff; display:flex; align-items:center; justify-content:center; font-size:9.5px; font-weight:800; color:#fff; overflow:hidden; white-space:nowrap; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-phinia .phn-conc-mk { position:absolute; top:-22px; bottom:-22px; border-left:2px dashed var(--navy); }
+#view-phinia .phn-conc-mk span { position:absolute; top:0; left:4px; font-size:9px; font-weight:800; color:var(--navy); white-space:nowrap; background:var(--surface); padding:0 3px; }
+#view-phinia .phn-conc-mk.b span { top:auto; bottom:0; }
+#view-phinia .phn-kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+#view-phinia .phn-kpis > div { padding:12px 15px; border:1px solid var(--border); border-radius:7px; background:var(--surface); }
+#view-phinia .phn-kpis .k { font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-phinia .phn-kpis .v { font-size:28px; font-weight:800; color:var(--navy); line-height:1.1; margin-top:2px; }
+#view-phinia .phn-kpis .v small { font-size:11px; color:var(--text-muted); font-weight:700; }
+#view-phinia .phn-kpis .s { font-size:10.5px; color:var(--text-muted); line-height:1.5; margin-top:4px; }
+#view-phinia .phn-legend { display:flex; gap:14px; flex-wrap:wrap; font-size:10px; font-weight:700; color:var(--text-muted); }
+#view-phinia .phn-legend i { display:inline-block; width:11px; height:11px; border-radius:3px; vertical-align:-1px; margin-right:4px; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-phinia .phn-cor { border:1px solid var(--border); border-radius:10px; background:var(--surface); overflow:hidden; margin-bottom:16px; break-inside:avoid; }
+#view-phinia .phn-cor.key { border:2px solid var(--teal); box-shadow:0 0 0 4px rgba(0,180,216,0.10); }
+#view-phinia .phn-cor-h { display:flex; align-items:center; gap:12px; flex-wrap:wrap; padding:13px 18px; background:rgba(13,43,94,0.04); border-bottom:1px solid var(--border); }
+#view-phinia .phn-cor.key .phn-cor-h { background:rgba(0,180,216,0.08); }
+#view-phinia .phn-cor-id { width:34px; height:34px; border-radius:8px; background:var(--navy); color:#fff; font-size:15px; font-weight:800; display:flex; align-items:center; justify-content:center; flex-shrink:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-phinia .phn-cor.key .phn-cor-id { background:var(--teal-dim); }
+#view-phinia .phn-cor-t { font-size:15px; font-weight:800; color:var(--navy); line-height:1.3; }
+#view-phinia .phn-cor-w { font-size:8.5px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); }
+#view-phinia .phn-cor-flag { margin-left:auto; font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:#fff; background:var(--teal-dim); padding:4px 10px; border-radius:4px; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-phinia .phn-cor-g { display:grid; grid-template-columns:0.9fr 1.35fr 1.35fr 1.1fr; }
+#view-phinia .phn-cor-g > div { padding:13px 16px; border-right:1px solid var(--border); }
+#view-phinia .phn-cor-g > div:last-child { border-right:none; }
+#view-phinia .phn-cor-g .k { font-size:8.5px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal-dim); margin-bottom:6px; }
+#view-phinia .phn-cor-g .n { font-size:30px; font-weight:800; color:var(--navy); line-height:1.05; }
+#view-phinia .phn-cor-g .n small { font-size:11px; font-weight:700; color:var(--text-muted); }
+#view-phinia .phn-cor-g .s { font-size:10.5px; color:var(--text-muted); line-height:1.55; margin-top:4px; }
+#view-phinia .phn-cor-g .s b { color:var(--navy); }
+#view-phinia .phn-cad { width:100%; border-collapse:collapse; font-size:10.5px; }
+#view-phinia .phn-cad td { padding:3px 4px; border-bottom:1px solid var(--border); color:var(--text-muted); }
+#view-phinia .phn-cad td:first-child { color:var(--navy); font-weight:700; }
+#view-phinia .phn-cad td.r { text-align:right; white-space:nowrap; font-weight:800; color:var(--navy); }
+#view-phinia .phn-cad tr:last-child td { border-bottom:none; }
+#view-phinia .phn-pos { display:flex; flex-direction:column; gap:6px; }
+#view-phinia .phn-pos span { display:block; font-size:10.5px; font-weight:700; padding:6px 9px; border-radius:5px; line-height:1.4; }
+#view-phinia .phn-pos .lu { background:rgba(148,163,184,0.14); color:#475569; border-left:3px solid #94a3b8; }
+#view-phinia .phn-pos .ca { background:rgba(0,180,216,0.1); color:var(--teal-dim); border-left:3px solid var(--teal); }
+#view-phinia .phn-pos .co { background:rgba(245,158,11,0.1); color:#92400e; border-left:3px solid #f59e0b; }
+#view-phinia .phn-pos span em { display:block; font-style:normal; font-size:8px; font-weight:800; letter-spacing:1px; text-transform:uppercase; opacity:0.75; }
+#view-phinia .phn-cor .phn-sig { margin:0; padding:0 16px 16px; }
+#view-phinia .phn-tpl { width:100%; min-width:900px; border-collapse:collapse; font-size:11px; }
+#view-phinia .phn-tpl th { background:var(--navy); color:#fff; font-size:8.5px; font-weight:800; letter-spacing:0.7px; text-transform:uppercase; padding:8px; text-align:left; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-phinia .phn-tpl td { padding:9px 8px; border-bottom:1px solid var(--border); vertical-align:top; }
+#view-phinia .phn-tpl tr.grp td { background:rgba(13,43,94,0.04); font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--navy); padding:6px 8px; }
+#view-phinia .phn-tpl .var td { background:rgba(148,163,184,0.06); }
+#view-phinia .phn-tag { display:inline-block; font-size:8px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; padding:1px 5px; border-radius:3px; margin-left:4px; vertical-align:1px; }
+#view-phinia .phn-tag.af { color:var(--navy); background:rgba(13,43,94,0.08); }
+#view-phinia .phn-tag.sv { color:#92400e; background:rgba(245,158,11,0.14); }
+#view-phinia .phn-tag.self { color:var(--navy); background:rgba(13,43,94,0.07); }
+#view-phinia .phn-shift { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+#view-phinia .phn-shift > div { padding:14px 16px; border:1px solid var(--border); border-radius:8px; background:var(--surface); }
+#view-phinia .phn-shift .row { display:grid; grid-template-columns:118px 1fr 118px; gap:10px; align-items:center; margin-top:10px; }
+#view-phinia .phn-shift .row .l { font-size:10.5px; font-weight:800; color:var(--navy); }
+#view-phinia .phn-shift .row .r { font-size:11px; font-weight:800; color:var(--navy); text-align:right; white-space:nowrap; }
+#view-phinia .phn-dots { display:flex; flex-wrap:wrap; gap:3px; }
+#view-phinia .phn-dots i { width:11px; height:11px; border-radius:2px; background:var(--navy); -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-phinia .phn-dots.h i { background:#94a3b8; }
+#view-phinia .phn-h2c { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+#view-phinia .phn-h2c > div { border:1px solid var(--border); border-radius:8px; background:var(--surface); overflow:hidden; }
+#view-phinia .phn-h2c h4 { margin:0; padding:10px 14px; font-size:13px; font-weight:800; color:#fff; background:var(--navy); -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-phinia .phn-h2c > div.adj h4 { background:var(--teal-dim); }
+#view-phinia .phn-h2c > div.low h4 { background:#b45309; }
+#view-phinia .phn-h2c dl { margin:0; padding:10px 14px 12px; }
+#view-phinia .phn-h2c dt { font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-light); margin-top:8px; }
+#view-phinia .phn-h2c dt:first-child { margin-top:0; }
+#view-phinia .phn-h2c dd { margin:2px 0 0; font-size:11px; color:var(--text-muted); line-height:1.5; }
+#view-phinia .phn-h2c dd.i { color:var(--teal-dim); font-weight:700; }
+#view-phinia .phn-h2c dd.d { color:#b45309; }
+#view-phinia .phn-lad { display:flex; flex-direction:column; gap:10px; }
+#view-phinia .phn-lad > div { display:grid; grid-template-columns:130px 1fr; gap:14px; align-items:start; padding:11px 14px; border:1px solid var(--border); border-radius:7px; background:var(--surface); }
+#view-phinia .phn-lad .k { font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal-dim); padding-top:3px; }
+#view-phinia .phn-chips { display:flex; flex-wrap:wrap; gap:6px; }
+#view-phinia .phn-chips span { font-size:11px; font-weight:700; color:var(--navy); background:rgba(13,43,94,0.05); border:1px solid var(--border); padding:4px 9px; border-radius:5px; }
+#view-phinia .phn-chips span b { font-weight:800; margin-left:4px; }
+#view-phinia .phn-hs { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+#view-phinia .phn-hs > div { border:1px solid var(--border); border-radius:7px; padding:11px 14px; background:var(--surface); }
+#view-phinia .phn-hs > div.hist { opacity:0.8; }
+#view-phinia .phn-hs table { width:100%; border-collapse:collapse; font-size:11px; margin-top:6px; }
+#view-phinia .phn-hs td { padding:4px 0; border-bottom:1px solid var(--border); }
+#view-phinia .phn-hs td.r { text-align:right; font-weight:800; color:var(--navy); }
+#view-phinia .phn-adj { display:grid; grid-template-columns:1.5fr 1fr 1fr; gap:12px; }
+#view-phinia .phn-adj > div { border:1px solid var(--border); border-radius:9px; background:var(--surface); padding:15px 17px; }
+#view-phinia .phn-adj > div.key { border:2px solid var(--teal); background:rgba(0,180,216,0.04); }
+#view-phinia .phn-adj h4 { margin:0 0 4px; font-size:14px; font-weight:800; color:var(--navy); }
+#view-phinia .phn-adj .sub { font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--teal-dim); }
+#view-phinia .phn-adj .two { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin:12px 0; }
+#view-phinia .phn-adj .two > div { padding:9px 11px; border-radius:6px; background:var(--bg); }
+#view-phinia .phn-adj .two .k { font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-phinia .phn-adj .two .v { font-size:22px; font-weight:800; line-height:1.15; margin-top:2px; }
+#view-phinia .phn-adj .two .v small { font-size:10px; font-weight:700; color:var(--text-muted); }
+#view-phinia .phn-adj p { font-size:11px; color:var(--text-muted); line-height:1.6; margin:6px 0 0; }
+#view-phinia .phn-adj p b { color:var(--navy); }
+#view-phinia .phn-mx { width:100%; border-collapse:separate; border-spacing:0 6px; font-size:11.5px; }
+#view-phinia .phn-mx th { font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); text-align:left; padding:0 12px; }
+#view-phinia .phn-mx td { padding:11px 12px; background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+#view-phinia .phn-mx td:first-child { border-left:1px solid var(--border); border-radius:7px 0 0 7px; font-weight:800; color:var(--navy); font-size:12.5px; }
+#view-phinia .phn-mx td:last-child { border-right:1px solid var(--border); border-radius:0 7px 7px 0; color:var(--text-muted); }
+#view-phinia .phn-mx tr.key td { background:rgba(0,180,216,0.06); border-color:rgba(0,180,216,0.5); }
+#view-phinia .phn-cell { display:inline-block; font-size:10px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; padding:4px 9px; border-radius:4px; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-phinia .phn-cell.u { color:#475569; background:rgba(148,163,184,0.18); }
+#view-phinia .phn-cell.a { color:#fff; background:var(--teal-dim); }
+#view-phinia .phn-cell.o { color:#92400e; background:rgba(245,158,11,0.16); border:1px solid rgba(245,158,11,0.4); }
+#view-phinia .phn-dm { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; }
+#view-phinia .phn-dm > div { border:1px solid var(--border); border-top:3px solid #f59e0b; border-radius:7px; background:var(--surface); padding:12px 14px; }
+#view-phinia .phn-dm > div.key { border-top-color:var(--teal); background:rgba(0,180,216,0.04); }
+#view-phinia .phn-dm b { display:block; font-size:12px; font-weight:800; color:var(--navy); margin-bottom:6px; }
+#view-phinia .phn-dm ul { margin:0; padding-left:15px; font-size:10.5px; color:var(--text-muted); line-height:1.6; }
+#view-phinia .phn-road { display:grid; grid-template-columns:repeat(5,1fr); gap:0; counter-reset:rp; }
+#view-phinia .phn-road > div { position:relative; padding:14px 16px 14px 18px; border:1px solid var(--border); border-left:none; background:var(--surface); }
+#view-phinia .phn-road > div:first-child { border-left:1px solid var(--border); border-radius:8px 0 0 8px; border-top:4px solid var(--teal); }
+#view-phinia .phn-road > div:last-child { border-radius:0 8px 8px 0; }
+#view-phinia .phn-road > div { border-top:4px solid #94a3b8; }
+#view-phinia .phn-road > div:nth-child(2) { border-top-color:var(--teal); }
+#view-phinia .phn-road .p { font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal-dim); }
+#view-phinia .phn-road .t { font-size:12.5px; font-weight:800; color:var(--navy); line-height:1.35; margin-top:3px; }
+#view-phinia .phn-road .d { font-size:10.5px; color:var(--text-muted); line-height:1.55; margin-top:6px; }
+#view-phinia .phn-road .d ul { margin:4px 0 0; padding-left:14px; }
+#view-phinia .phn-hist { opacity:0.92; }
+#view-phinia .phn-hist .phn-route-table th { background:#475569; }
+#view-phinia .phn-sig.one { grid-template-columns:1fr; }
+#view-phinia .phn-sigl { counter-reset:sg; list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:6px 16px; }
+#view-phinia .phn-sigl li { counter-increment:sg; display:grid; grid-template-columns:24px 1fr; gap:8px; font-size:11.5px; color:var(--navy); font-weight:600; line-height:1.45; padding:5px 0; border-bottom:1px solid var(--border); }
+#view-phinia .phn-sigl li::before { content:counter(sg); font-size:10px; font-weight:800; color:var(--text-muted); text-align:right; }
+@media (max-width: 1100px) {
+  #view-phinia .phn-cor-g { grid-template-columns:1fr 1fr; }
+  #view-phinia .phn-cor-g > div:nth-child(2) { border-right:none; }
+  #view-phinia .phn-cor-g > div:nth-child(-n+2) { border-bottom:1px solid var(--border); }
+  #view-phinia .phn-h2c, #view-phinia .phn-hs, #view-phinia .phn-kpis { grid-template-columns:repeat(2,1fr); }
+  #view-phinia .phn-dm { grid-template-columns:repeat(2,1fr); }
+  #view-phinia .phn-road { grid-template-columns:1fr; }
+  #view-phinia .phn-road > div, #view-phinia .phn-road > div:first-child, #view-phinia .phn-road > div:last-child { border:1px solid var(--border); border-top:4px solid #94a3b8; border-radius:8px; margin-bottom:8px; }
+  #view-phinia .phn-road > div:nth-child(-n+2) { border-top-color:var(--teal); }
+  #view-phinia .phn-adj { grid-template-columns:1fr; }
+}
+@media (max-width: 900px) {
+  #view-phinia .phn-dw, #view-phinia .phn-cor-g, #view-phinia .phn-shift, #view-phinia .phn-h2c,
+  #view-phinia .phn-hs, #view-phinia .phn-kpis, #view-phinia .phn-dm, #view-phinia .phn-sigl { grid-template-columns:1fr; }
+  #view-phinia .phn-cor-g > div { border-right:none; border-bottom:1px solid var(--border); }
+  #view-phinia .phn-lad > div { grid-template-columns:1fr; gap:6px; }
+  #view-phinia .phn-shift .row { grid-template-columns:1fr; }
+  #view-phinia .phn-shift .row .r { text-align:left; }
+  #view-phinia .phn-cor-flag { margin-left:0; }
+}
+@media print {
+  #view-phinia .phn-tpl { min-width:0; font-size:9px; }
+  #view-phinia .phn-cor, #view-phinia .phn-adj > div, #view-phinia .phn-h2c > div { break-inside:avoid; }
+  #view-phinia .phn-dw .big { font-size:40px; }
+}
+/* Editorial-compression layer (8-chapter seller report) */
+#view-phinia .phn-nav { position:sticky; margin:0; top:0; z-index:20; display:flex; gap:4px; flex-wrap:wrap; padding:8px 32px; background:rgba(255,255,255,0.97); border-bottom:1px solid var(--border); box-shadow:0 2px 8px rgba(13,43,94,0.06); }
+#view-phinia .phn-nav a { font-size:11px; font-weight:700; color:var(--navy); text-decoration:none; padding:6px 10px; border-radius:5px; white-space:nowrap; }
+#view-phinia .phn-nav a b { font-size:9px; color:var(--teal-dim); margin-right:5px; }
+#view-phinia .phn-nav a:hover, #view-phinia .phn-nav a:focus-visible { background:rgba(0,180,216,0.1); }
+#view-phinia section.phn-chapter { scroll-margin-top:56px; }
+#view-phinia .phn-lane, #view-phinia [id^="phn-lane-"], #view-phinia .card { scroll-margin-top:56px; }
+#view-phinia .card-header .phn-src { margin-left:6px; background:#fff; border:none; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-phinia .phn-relline { display:flex; flex-wrap:wrap; align-items:center; gap:8px 10px; font-size:12.5px; color:var(--navy); }
+#view-phinia .phn-relline .sep { width:1px; height:18px; background:var(--border); }
+#view-phinia .phn-relline .k { font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); }
+#view-phinia .phn-jump { display:grid; grid-template-columns:auto 1fr 1fr 1fr; gap:10px; align-items:stretch; margin-top:16px; }
+#view-phinia .phn-jump .k { align-self:center; font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); max-width:120px; }
+#view-phinia .phn-jump a { display:block; padding:10px 14px; border:1px solid var(--border); border-left:4px solid var(--navy); border-radius:6px; text-decoration:none; font-size:10.5px; color:var(--text-muted); background:var(--surface); }
+#view-phinia .phn-jump a.key { border-left-color:var(--teal); background:rgba(0,180,216,0.05); }
+#view-phinia .phn-jump a b { display:block; font-size:13px; color:var(--navy); }
+#view-phinia .phn-ev { margin-top:14px; border:1px solid var(--border); border-radius:7px; background:rgba(13,43,94,0.02); }
+#view-phinia .phn-ev > summary { cursor:pointer; padding:10px 14px; font-size:10.5px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; color:var(--navy); list-style:none; }
+#view-phinia .phn-ev > summary::-webkit-details-marker { display:none; }
+#view-phinia .phn-ev > summary::before { content:"+"; display:inline-block; width:16px; color:var(--teal-dim); font-weight:800; }
+#view-phinia .phn-ev[open] > summary::before { content:"−"; }
+#view-phinia .phn-ev > summary:focus-visible { outline:2px solid var(--teal); outline-offset:2px; }
+#view-phinia .phn-ev-b { padding:0 14px 14px; }
+#view-phinia .phn-lanenav { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:16px; }
+#view-phinia .phn-lanenav a { font-size:11px; font-weight:800; color:var(--navy); text-decoration:none; border:1px solid var(--border); border-radius:5px; padding:6px 11px; background:var(--surface); }
+#view-phinia .phn-lanenav a.key { border-color:var(--teal); color:var(--teal-dim); background:rgba(0,180,216,0.06); }
+#view-phinia .phn-lane-g { display:grid; grid-template-columns:1fr 1.45fr 1.25fr; }
+#view-phinia .phn-lane-g > div { padding:13px 16px; border-right:1px solid var(--border); border-bottom:1px solid var(--border); }
+#view-phinia .phn-lane-g > div:nth-child(3) { border-right:none; }
+#view-phinia .phn-lane-g > div:nth-child(4) { grid-column:1 / 3; }
+#view-phinia .phn-lane-g > div.pos { border-right:none; }
+#view-phinia .phn-lane-g .k { font-size:8.5px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal-dim); margin-bottom:6px; }
+#view-phinia .phn-lane-g .n { font-size:30px; font-weight:800; color:var(--navy); line-height:1.05; }
+#view-phinia .phn-lane-g .n small { font-size:11px; font-weight:700; color:var(--text-muted); }
+#view-phinia .phn-lane-g .s { font-size:10.5px; color:var(--text-muted); line-height:1.6; margin-top:4px; }
+#view-phinia .phn-lane-g .s b { color:var(--navy); }
+#view-phinia .phn-lane .phn-sig { margin:0; padding:14px 16px 16px; }
+#view-phinia .phn-lane .phn-cad td.r { font-weight:600; }
+#view-phinia .phn-lane .phn-cad td.r b { font-weight:800; color:var(--navy); }
+#view-phinia .phn-lane .phn-pos { flex-direction:row; flex-wrap:wrap; }
+#view-phinia .phn-2col > div, #view-phinia .phn-lane-g > div, #view-phinia .phn-kpis > div { min-width:0; }
+#view-phinia .phn-conc-mk.r span { left:auto; right:4px; }
+#view-phinia .phn-q { margin:2px 0 0; padding-left:17px; font-size:11px; line-height:1.6; }
+#view-phinia .phn-q li { margin:2px 0; }
+#view-phinia .phn-chips a { font-size:11px; font-weight:700; color:var(--navy); background:rgba(13,43,94,0.05); border:1px solid var(--border); padding:4px 9px; border-radius:5px; text-decoration:none; }
+#view-phinia .phn-chips a:hover { border-color:var(--teal); }
+#view-phinia .phn-cwg tr.grp td, #view-phinia .phn-tpl tr.grp td { background:rgba(13,43,94,0.04); font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--navy); }
+#view-phinia .phn-opd { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; }
+#view-phinia .phn-opd > div { padding:11px 13px; border:1px solid var(--border); border-top:3px solid #f59e0b; border-radius:7px; background:var(--surface); }
+#view-phinia .phn-opd b { display:block; font-size:13px; color:var(--navy); margin-top:7px; }
+#view-phinia .phn-opd span:not(.phn-pat) { display:block; font-size:10.5px; color:var(--text-muted); line-height:1.5; margin-top:3px; }
+#view-phinia .phn-puebla { padding:12px 15px; border:1px solid rgba(245,158,11,0.45); border-radius:7px; background:rgba(245,158,11,0.05); }
+#view-phinia .phn-puebla .s { font-size:11px; color:var(--text-muted); line-height:1.6; }
+#view-phinia .phn-sq { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+#view-phinia .phn-sq > div { padding:14px 17px; border-radius:8px; border:1px solid var(--border); }
+#view-phinia .phn-sq .has { border-top:4px solid var(--teal); background:rgba(0,180,216,0.04); }
+#view-phinia .phn-sq .not { border-top:4px solid #94a3b8; background:rgba(148,163,184,0.06); }
+#view-phinia .phn-sq .k { font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); }
+#view-phinia .phn-sq b { display:block; font-size:16px; color:var(--navy); margin-top:4px; }
+#view-phinia .phn-sq span { display:block; font-size:11px; color:var(--text-muted); line-height:1.6; margin-top:4px; }
+#view-phinia .phn-mx a { color:var(--navy); text-decoration:none; }
+#view-phinia .phn-mx a:hover { color:var(--teal-dim); text-decoration:underline; }
+#view-phinia .phn-steps { display:grid; grid-template-columns:repeat(5,1fr); gap:8px; }
+#view-phinia .phn-steps > div { padding:10px 12px; border:1px solid var(--border); border-top:3px solid #94a3b8; border-radius:6px; font-size:10.5px; color:var(--text-muted); line-height:1.55; background:var(--surface); }
+#view-phinia .phn-steps > div:nth-child(-n+2) { border-top-color:var(--teal); }
+#view-phinia .phn-steps b { display:block; font-size:11px; color:var(--navy); margin-bottom:3px; }
+#view-phinia .phn-guide { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+#view-phinia .phn-guide > div { border:1px solid var(--border); border-top:4px solid #f59e0b; border-radius:8px; padding:14px 16px; background:var(--surface); break-inside:avoid; }
+#view-phinia .phn-guide > div.key { border:2px solid var(--teal); border-top-width:5px; background:rgba(0,180,216,0.04); }
+#view-phinia .phn-guide h4 { display:flex; justify-content:space-between; align-items:baseline; margin:0 0 8px; font-size:16px; font-weight:800; color:var(--navy); }
+#view-phinia .phn-guide h4 a { font-size:10px; font-weight:700; color:var(--teal-dim); text-decoration:none; }
+#view-phinia .phn-guide .k { font-size:8.5px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); margin-top:8px; }
+#view-phinia .phn-guide ul.know { margin:4px 0 0; padding-left:15px; font-size:11.5px; font-weight:700; color:var(--navy); line-height:1.6; }
+#view-phinia .phn-guide .phn-q { font-size:11.5px; color:var(--text); }
+#view-phinia .phn-micro a, #view-phinia .phn-note-navy a, #view-phinia .phn-sq a { color:var(--teal-dim); }
+@media (max-width: 1100px) {
+  #view-phinia .phn-opd, #view-phinia .phn-steps { grid-template-columns:repeat(2,1fr); }
+  #view-phinia .phn-guide { grid-template-columns:1fr; }
+}
+@media (max-width: 900px) {
+  #view-phinia .phn-nav { padding:6px 12px; }
+  #view-phinia .phn-lane-g, #view-phinia .phn-jump, #view-phinia .phn-sq, #view-phinia .phn-opd, #view-phinia .phn-steps { grid-template-columns:1fr; }
+  #view-phinia .phn-lane-g > div, #view-phinia .phn-lane-g > div:nth-child(4) { grid-column:auto; border-right:none; }
+  #view-phinia .phn-jump .k { max-width:none; }
+  #view-phinia .phn-kpis, #view-phinia .phn-2col { grid-template-columns:1fr !important; }
+}
+@media (max-width: 700px) {
+  #view-phinia .content-body { padding:16px; }
+}
+@media print {
+  #view-phinia .phn-nav { display:none !important; }
+  #view-phinia .phn-ev > summary::before { content:""; }
+  #view-phinia .phn-lane, #view-phinia .phn-guide > div { break-inside:avoid; }
+}
+
+/* Refresh additions — governance strip, status pills, PJ provenance, overlap principle */
+#view-phinia .phn-gov { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+#view-phinia .phn-gov > div { padding:10px 13px; border:1px solid var(--border); border-radius:7px; background:var(--surface); min-width:0; }
+#view-phinia .phn-gov > div.wide { grid-column:span 2; }
+#view-phinia .phn-gov .k { font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-phinia .phn-gov .v { font-size:13px; font-weight:800; color:var(--navy); margin-top:3px; line-height:1.35; }
+#view-phinia .phn-gov .v small { display:block; font-size:10px; font-weight:600; color:var(--text-muted); margin-top:2px; }
+#view-phinia .phn-nv { display:inline-block; font-size:10px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; color:#b45309; background:rgba(245,158,11,0.12); border:1px solid rgba(245,158,11,0.45); padding:3px 8px; border-radius:4px; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-phinia .phn-na-pill { display:inline-block; font-size:10px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; color:#475569; background:rgba(148,163,184,0.16); border:1px dashed rgba(148,163,184,0.8); padding:3px 8px; border-radius:4px; }
+#view-phinia .phn-dw .log .big.txt { font-size:28px; letter-spacing:0; line-height:1.2; margin-top:8px; }
+#view-phinia .phn-dw .log dl { margin:12px 0 0; display:grid; grid-template-columns:1fr auto; gap:6px 12px; font-size:11px; }
+#view-phinia .phn-dw .log dt { color:var(--text-muted); font-weight:700; }
+#view-phinia .phn-dw .log dd { margin:0; text-align:right; }
+#view-phinia .phn-principle { display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-top:12px; padding:12px 16px; border:2px solid #f59e0b; border-radius:8px; background:rgba(245,158,11,0.05); }
+#view-phinia .phn-principle b { font-size:18px; font-weight:800; color:#b45309; letter-spacing:0.3px; }
+#view-phinia .phn-principle span { font-size:11px; color:var(--text-muted); line-height:1.6; flex:1; min-width:220px; }
+#view-phinia .phn-obs { list-style:none; margin:0; padding:0; }
+#view-phinia .phn-obs li { position:relative; padding:6px 0 6px 18px; border-bottom:1px solid var(--border); font-size:11.5px; color:var(--navy); line-height:1.5; }
+#view-phinia .phn-obs li:last-child { border-bottom:none; }
+#view-phinia .phn-obs li::before { content:""; position:absolute; left:2px; top:12px; width:7px; height:7px; border-radius:2px; background:var(--navy); }
+#view-phinia .phn-obs li.chg::before { background:#f59e0b; }
+#view-phinia .phn-obs li.new::before { background:var(--teal); }
+#view-phinia .phn-da { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+#view-phinia .phn-da > div { padding:12px 14px; border:1px solid var(--border); border-radius:7px; background:var(--surface); border-top:3px solid var(--navy); }
+#view-phinia .phn-da > div.c { border-top-color:var(--teal); }
+#view-phinia .phn-da > div.x { border-top-color:#94a3b8; background:rgba(148,163,184,0.06); }
+#view-phinia .phn-da > div.d { border-top-color:#f59e0b; }
+#view-phinia .phn-da b { display:block; font-size:10px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--navy); margin-bottom:6px; }
+#view-phinia .phn-da ul { margin:0; padding-left:15px; font-size:10.5px; color:var(--text-muted); line-height:1.6; }
+#view-phinia .phn-dq-g { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+#view-phinia .phn-dq-g > div { border:1px solid var(--border); border-top:4px solid #f59e0b; border-radius:8px; padding:13px 16px; background:var(--surface); break-inside:avoid; }
+#view-phinia .phn-dq-g h4 { display:flex; justify-content:space-between; align-items:baseline; gap:8px; margin:0 0 6px; font-size:13px; font-weight:800; color:var(--navy); }
+#view-phinia .phn-dq-g h4 a { font-size:10px; font-weight:700; color:var(--teal-dim); text-decoration:none; white-space:nowrap; }
+#view-phinia .phn-dq-g ol { margin:0; padding-left:22px; font-size:12px; color:var(--text); line-height:1.6; }
+#view-phinia .phn-dq-g ol li { margin:3px 0; }
+#view-phinia .phn-dq-g ol li::marker { font-weight:800; color:#b45309; }
+#view-phinia .page-header .phn-nv { font-size:11px; }
+#view-phinia .phn-sig.two { grid-template-columns:repeat(2,1fr); }
+#view-phinia .phn-hs.two { grid-template-columns:1fr 1fr; }
+@media (max-width: 1100px) {
+  #view-phinia .phn-da { grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width: 900px) {
+  #view-phinia .phn-gov, #view-phinia .phn-da, #view-phinia .phn-dq-g { grid-template-columns:1fr; }
+  #view-phinia .phn-gov > div.wide { grid-column:auto; }
+  #view-phinia .phn-sig.two, #view-phinia .phn-hs.two { grid-template-columns:1fr; }
+}
+
+/* PHINIA refresh additions — five-corridor jump strip, gateway titles */
+#view-phinia .phn-jump.five { grid-template-columns:repeat(5,1fr); }
+#view-phinia .phn-jump.five .k { grid-column:1 / -1; max-width:none; }
+#view-phinia .phn-gwt { cursor:help; }
+#view-phinia .phn-da-sm { font-size:10px; color:var(--text-muted); }
+@media (max-width: 1100px) { #view-phinia .phn-jump.five { grid-template-columns:repeat(3,1fr); } }
+@media (max-width: 900px) { #view-phinia .phn-jump.five { grid-template-columns:1fr; } }
+/* PHINIA additions — compact route tables and persistence tags */
+#view-phinia .phn-tp { width:100%; border-collapse:collapse; }
+#view-phinia .phn-tp td { padding:4px 8px; font-size:11.5px; border-bottom:1px solid var(--border); }
+#view-phinia .phn-tp td.r { text-align:right; font-weight:800; color:var(--navy); font-family:ui-monospace,Menlo,monospace; }
+#view-phinia .phn-yes { display:inline-block; font-size:9px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; color:#047857; background:rgba(16,185,129,0.12); padding:1px 6px; border-radius:3px; }
+#view-phinia .phn-no { display:inline-block; font-size:9px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; color:var(--text-light); background:var(--bg); border:1px solid var(--border); padding:1px 6px; border-radius:3px; }
+
 /* LIEBHERR MONTERREY — scoped view components (#view-liebherr only). Customs CLIENT / Logistics Wallet Expansion + Deep Lane Intelligence. */
 #view-liebherr .num { text-align:right; }
 #view-liebherr .lbh-sublbl { font-size:10px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal-dim); margin-bottom:8px; }
@@ -5958,6 +6551,10 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
       <span>◆</span> <span style="flex:1;">Kitchen Equipment de San Luis</span>
       <span class="recent-cls" style="background:rgba(245,158,11,0.2);color:#fbbf24;">NOT VALIDATED</span>
     </div>
+    <div class="nav-item" onclick="showView('view-phinia', this)" title="PHINIA Componentes Mexico · Relationship Not Fully Validated · Analysis Date 19-Sep-2026">
+      <span>◆</span> <span style="flex:1;">PHINIA Componentes Mexico</span>
+      <span class="recent-cls" style="background:rgba(245,158,11,0.2);color:#fbbf24;">NOT VALIDATED</span>
+    </div>
     <div class="nav-item" onclick="showView('view-liebherr', this)" title="Liebherr Monterrey · CLIENT (Customs relationship) · AIOS Classification AAA">
       <span>◆</span> <span style="flex:1;">Liebherr Monterrey</span>
       <span class="recent-cls" style="background:rgba(16,185,129,0.2);color:#34d399;">CLIENT</span>
@@ -6580,6 +7177,36 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
         <span class="acct-tag">Nuevo Laredo</span>
         <span class="acct-tag">Colombia NL</span>
         <span class="acct-tag">Export-led</span>
+        <span class="acct-tag">Customs Shared Wallet</span>
+        <span class="acct-tag">Discovery Required</span>
+      </div>
+    </div>
+
+    <!-- PHINIA Componentes Mexico -->
+    <div class="account-card" onclick="showViewById('view-phinia')" title="PHINIA Componentes Mexico · AIOS Analysis 19-Sep-2026 · Relationship Not Fully Validated · Arcatek Customs and Akzent Logistics Service Relationships Not Validated. Current YTD PJ Visible Universe 107 Shipments (Imports 23, Exports 84, through 21-Jul-2026), −20.1% vs the equivalent 2025 period (134). Customs Shared Wallet 15.9% (17 / 107) on Arcatek Patent 3468 · Import 73.9% (17 / 23) · Export 0.0% (0 / 84). Logistics Shared Wallet Not Calculable — no authorized Akzent Captured Business dataset. Captured Logistics Profit Not Available.">
+      <div class="account-card-header">
+        <div>
+          <div class="account-name">PHINIA Componentes Mexico</div>
+          <div class="account-industry">Relationship Not Fully Validated · Analysis Date 19-Sep-2026 · Current YTD 2026</div>
+        </div>
+        <div style="display:flex;gap:5px;align-items:center;flex-shrink:0;">
+          <span class="account-cls-badge" style="color:var(--text-light);" title="AIOS Classification: Relationship Not Fully Validated — customs participation visible, logistics relationship unvalidated">&mdash;</span>
+        </div>
+      </div>
+      <div class="account-metrics" style="grid-template-columns:repeat(4,1fr);">
+        <div class="acct-metric"><div class="acct-metric-val">107</div><div class="acct-metric-lbl">PJ YTD Shipments</div></div>
+        <div class="acct-metric"><div class="acct-metric-val" style="color:#b91c1c;">&minus;20.1%</div><div class="acct-metric-lbl">vs Jan&ndash;Jul 21, 2025</div></div>
+        <div class="acct-metric"><div class="acct-metric-val" style="color:var(--teal-dim);">15.9%</div><div class="acct-metric-lbl">Customs Wallet</div></div>
+        <div class="acct-metric"><div class="acct-metric-val" style="font-size:12px;color:var(--text-light);">Not Calculable</div><div class="acct-metric-lbl">Logistics Wallet</div></div>
+      </div>
+      <div style="margin-top:8px;padding:7px 10px;background:rgba(245,158,11,0.06);border-left:3px solid #f59e0b;border-radius:0 4px 4px 0;">
+        <div style="font-size:9px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:#b45309;">Relationship Not Fully Validated</div>
+        <div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;margin-top:2px;">17 / 23 Imports on Arcatek Patent 3468 (Colombia) &mdash; 0 / 84 Exports</div>
+      </div>
+      <div class="account-tags">
+        <span class="acct-tag">Colombia NL</span>
+        <span class="acct-tag">Export-led</span>
+        <span class="acct-tag">8 Export gateways</span>
         <span class="acct-tag">Customs Shared Wallet</span>
         <span class="acct-tag">Discovery Required</span>
       </div>
@@ -16086,6 +16713,360 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
   </script>
 </div>
 
+<!-- ══ PHINIA COMPONENTES MEXICO VIEW — AIOS Analysis 19-Sep-2026 · 8-chapter seller report (Executive · Network · Core Routes · Lane Intelligence · Customs · Historical · Commercial · Discovery) ══ -->
+<div id="view-phinia" class="view">
+  <div class="page-header">
+    <div class="page-header-left">
+      <div class="page-header-eyebrow">Account Intelligence · Relationship Not Fully Validated · Analysis Date 19-Sep-2026</div>
+      <div class="page-header-title">PHINIA Componentes Mexico</div>
+      <div class="page-header-sub">PHINIA COMPONENTES MEXICO · Current YTD 2026 through 21-Jul · PJ Visible Universe 107 Shipments</div>
+    </div>
+    <div class="page-header-meta">
+      <span class="phn-nv">Relationship Not Fully Validated</span>
+      <button class="print-btn" onclick="printView('view-phinia')">⬇ Export PDF</button>
+    </div>
+  </div>
+  <nav class="phn-nav" data-aios-own-toc aria-label="Report chapters"><a href="#phn-ch-1"><b>01</b>Executive</a><a href="#phn-ch-2"><b>02</b>Network</a><a href="#phn-ch-3"><b>03</b>Core Routes</a><a href="#phn-ch-4"><b>04</b>Lane Intelligence</a><a href="#phn-ch-5"><b>05</b>Customs</a><a href="#phn-ch-6"><b>06</b>Historical</a><a href="#phn-ch-7"><b>07</b>Commercial</a><a href="#phn-ch-8"><b>08</b>Discovery</a></nav>
+  <div class="content-body">
+
+    <section class="phn-chapter exec" id="phn-ch-1">
+      <div class="phn-chapter-n">Chapter 01</div>
+      <div class="phn-chapter-t">Executive Account Summary</div>
+      <div class="phn-chapter-s">Where does this account stand? · 30–60 second read</div>
+    </section>
+    <div class="card" style="border-top:3px solid #f59e0b;">
+      <div class="card-header">PHINIA COMPONENTES MEXICO — Account Governance · Analysis Date 19-Sep-2026</div>
+      <div class="card-body">
+        <div class="phn-gov">
+          <div><div class="k">Relationship</div><div class="v"><span class="phn-nv">Relationship Not Fully Validated</span></div></div>
+          <div><div class="k">Service Relationship · Arcatek Customs</div><div class="v"><span class="phn-nv">Not Validated</span></div></div>
+          <div><div class="k">Service Relationship · Akzent Logistics</div><div class="v"><span class="phn-nv">Not Validated</span></div></div>
+          <div><div class="k">AIOS Classification</div><div class="v">Relationship Not Fully Validated<small>Customs participation visible, logistics relationship unvalidated</small></div></div>
+          <div class="wide"><div class="k">Relationship basis</div><div class="v">PJ alone cannot establish commercial Relationship status<small>No authorized PHINIA internal Captured Business dataset was available in the supplied / account-accessible materials.</small></div></div>
+        </div>
+        <div class="phn-micro">This analysis contains PJ Shipment data only. <strong>Missing internal data is not zero Captured Business.</strong></div>
+
+        <div class="phn-hero" style="margin-top:14px;">
+          <div>
+            <div class="k">Current PJ Visible Universe · <span class="phn-src pj">PJ Fact</span></div>
+            <div class="v">107 <small>Shipments · YTD through 21-Jul-2026</small></div>
+            <div class="phn-split"><div style="width:21.5%;background:var(--navy);" title="Imports 23 — 21.5%"></div><div style="width:78.5%;background:var(--teal);" title="Exports 84 — 78.5%"></div></div>
+            <div class="s"><strong style="color:var(--navy);">Imports: 23 | 21.5%</strong> &nbsp;·&nbsp; <strong style="color:var(--teal-dim);">Exports: 84 | 78.5%</strong><br>Current YTD 2026 through 21-Jul overall · last visible Import Shipment 15-Jul-2026</div>
+          </div>
+          <div>
+            <div class="k">Equivalent-period change · <span class="phn-src ca">AIOS Calculation</span></div>
+            <div class="phn-delta dn">−20.1%</div>
+            <div class="s" style="margin-top:2px;">Total vs Jan 1–Jul 21, 2025 (134 → 107)</div>
+            <div class="phn-trendrow"><div><b style="color:var(--navy);">Flat</b>Imports · 23 → 23</div><div><b style="color:#b91c1c;">−24.3%</b>Exports · 111 → 84</div></div>
+            <div class="phn-micro">The decline is entirely on the Export side. No cause is established by the supplied data — detail in <a href="#phn-ch-6">Chapter 06</a>.</div>
+          </div>
+          <div>
+            <div class="k">Previous Full Calendar Year · <span class="phn-src pj">PJ Fact</span></div>
+            <div class="v" style="color:#64748b;">225 <small>Shipments · 2025</small></div>
+            <div class="s">Imports 39 · Exports 186 · 2025 Full Year. Historical structure only — never aggregated with Current YTD; Current YTD is never annualized.</div>
+          </div>
+        </div>
+
+        <div class="phn-dw" style="margin-top:14px;">
+          <div class="cus">
+            <div class="t" style="color:var(--teal-dim);">Customs Shared Wallet · Current YTD</div>
+            <div class="big">15.9%</div>
+            <div class="eq">17 / 107 Shipments on Arcatek Patent 3468 · PJ-supported customs universe</div>
+            <div class="phn-rows" style="margin-top:10px;">
+              <div class="phn-row"><div class="lbl">Import Customs Wallet<em>17 / 23 Shipments</em></div><div class="phn-cw-bar" style="width:27.4%;"><div class="phn-cw-ak" style="width:73.9%;"></div><div class="phn-cw-ot" style="width:26.1%;"></div></div><div class="val">73.9%</div></div>
+              <div class="phn-row"><div class="lbl">Export Customs Wallet<em>0 / 84 Shipments</em></div><div class="phn-cw-bar"><div class="phn-cw-ak" style="width:0%;"></div><div class="phn-cw-ot" style="width:100%;"></div></div><div class="val">0.0%</div></div>
+            </div>
+            <div class="phn-legend" style="margin-top:8px;"><span><i style="background:var(--teal);"></i>Arcatek Patent</span><span><i style="background:#f59e0b;"></i>Other Patent</span></div>
+            <div class="lab"><span class="phn-src pj">PJ Fact</span> + <span class="phn-src ak">Arcatek Patent Ownership</span> + <span class="phn-src ca">AIOS Calculation</span> · Import bar length scaled to 23 vs 84 Exports · 2025 Full Year: 11.1% (25 / 225) — a different period length, not an equivalent-period comparison</div>
+          </div>
+          <div class="log">
+            <div class="t">Logistics Shared Wallet</div>
+            <div class="big txt">Not Calculable</div>
+            <dl>
+              <dt>Captured Logistics Shipments</dt><dd><span class="phn-na-pill">Not Available</span></dd>
+              <dt>Logistics Wallet Alignment</dt><dd><span class="phn-na-pill">Not Calculable</span></dd>
+              <dt>Captured Logistics Profit</dt><dd><span class="phn-na-pill">Not Available</span></dd>
+            </dl>
+            <div class="s" style="font-size:11px;color:var(--text-muted);margin-top:10px;line-height:1.55;">No authorized Akzent Logistics Captured Business dataset was supplied. <strong style="color:var(--navy);">Missing internal data ≠ zero Captured Business.</strong></div>
+            <div class="lab">Deactivated — not estimated, not extrapolated</div>
+          </div>
+        </div>
+        <div class="phn-micro">Two separate concepts: the Customs Shared Wallet is <strong>Customs Wallet intelligence, not evidence of Akzent Logistics freight capture</strong>, and no combined Wallet exists. Arcatek-owned Customs Patents are 3468 + 1930; Patent 1930 has 0 visible current Shipments. Current Other-Patent reference: 90 Shipments — allocation detail in <a href="#phn-ch-5">Chapter 05</a>.</div>
+
+        <div class="phn-sublbl" style="margin-top:18px;">Executive Thesis · <span class="phn-src ai">AIOS Interpretation</span></div>
+        <div class="phn-thesis" style="margin-top:4px;">PJ reveals a <strong>107-Shipment</strong> current visible universe dominated by Exports, with a distributed export-side gateway / Trading Partner structure and a highly concentrated Import structure. Arcatek Patent 3468 is visibly present on <strong>17 current Shipments</strong>, all Imports through Colombia, Nuevo León, while the entire visible Export universe and six Import Shipments use Other Patents. The strongest validated commercial intelligence is therefore <strong>where customs participation exists and where Other-Patent activity is concentrated</strong>. Logistics participation cannot be quantified until authorized internal Captured Business is supplied or the relationship status is otherwise validated.</div>
+
+        <div class="phn-jump">
+          <span class="k">The three operating corridors</span>
+          <a href="#phn-lane-a" class="key"><b>A · Colombia / Borgwarner</b>17 Imports · 73.9% · Patent 3468</a>
+          <a href="#phn-lane-b"><b>B · Monterrey / Hyundai Wia</b>6 Imports · 26.1% · Patent 1637</a>
+          <a href="#phn-lane-c"><b>C · Distributed Export network</b>84 Exports · 8 gateways · 9 Core Routes</a>
+        </div>
+      </div>
+    </div>
+
+    <section class="phn-chapter " id="phn-ch-2">
+      <div class="phn-chapter-n">Chapter 02</div>
+      <div class="phn-chapter-t">Network Snapshot</div>
+      <div class="phn-chapter-s">What does the current operating structure look like? · Current YTD</div>
+    </section>
+    <div class="card">
+      <div class="card-header">Direction and Gateways · <span class="phn-src pj">PJ Fact</span> · shares <span class="phn-src ca">AIOS Calculation</span></div>
+      <div class="card-body">
+        <div class="phn-kpis">
+          <div><div class="k">Current Imports</div><div class="v">23 <small>Shipments · 21.5%</small></div><div class="s">2 visible gateways</div></div>
+          <div><div class="k">Current Exports</div><div class="v">84 <small>Shipments · 78.5%</small></div><div class="s">8 visible gateways</div></div>
+          <div><div class="k">Import · Colombia, NL</div><div class="v">17 <small>73.9% of Imports</small></div></div>
+          <div><div class="k">Export · Colombia</div><div class="v">25 <small>29.8% of Exports</small></div></div>
+        </div>
+        <div class="phn-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:16px;">
+          <div><div class="phn-sublbl">Import gateways — all 23 Shipments</div><div class="phn-rows"><div class="phn-row"><div class="lbl">Colombia, Nuevo León</div><div class="bar"><div style="width:68.0%;background:var(--navy);"></div></div><div class="val">17 <span>73.9%</span></div></div><div class="phn-row"><div class="lbl">Monterrey / General Mariano Escobedo</div><div class="bar"><div style="width:24.0%;background:#64748b;"></div></div><div class="val">6 <span>26.1%</span></div></div></div></div>
+          <div><div class="phn-sublbl">Export gateways — all 84 Shipments</div><div class="phn-rows"><div class="phn-row"><div class="lbl">Colombia</div><div class="bar"><div style="width:100.0%;background:var(--navy);"></div></div><div class="val">25 <span>29.8%</span></div></div><div class="phn-row"><div class="lbl">Monterrey</div><div class="bar"><div style="width:48.0%;background:#64748b;"></div></div><div class="val">12 <span>14.3%</span></div></div><div class="phn-row"><div class="lbl">Nuevo Laredo</div><div class="bar"><div style="width:48.0%;background:#64748b;"></div></div><div class="val">12 <span>14.3%</span></div></div><div class="phn-row"><div class="lbl">Ciudad Juárez</div><div class="bar"><div style="width:44.0%;background:#64748b;"></div></div><div class="val">11 <span>13.1%</span></div></div><div class="phn-row"><div class="lbl">Nogales</div><div class="bar"><div style="width:36.0%;background:#64748b;"></div></div><div class="val">9 <span>10.7%</span></div></div><div class="phn-row"><div class="lbl">Ciudad de México</div><div class="bar"><div style="width:28.0%;background:#64748b;"></div></div><div class="val">7 <span>8.3%</span></div></div><div class="phn-row"><div class="lbl">San Luis Potosí</div><div class="bar"><div style="width:24.0%;background:#64748b;"></div></div><div class="val">6 <span>7.1%</span></div></div><div class="phn-row"><div class="lbl">Toluca</div><div class="bar"><div style="width:8.0%;background:#64748b;"></div></div><div class="val">2 <span>2.4%</span></div></div></div></div>
+        </div>
+        <div class="phn-micro">Gateway bars share one scale (25 = largest) so the small Import universe is not visually inflated. <strong>Transport Method is overwhelmingly recorded as Unknown by PJ</strong>; modal analysis therefore cannot support a reliable multimodal share conclusion, and no mode is inferred. Customs allocation per gateway is in <a href="#phn-ch-5">Chapter 05</a>.</div>
+        <div class="phn-sig"><div class="s1"><b>Observed Operational Signal</b>Imports operate through only two visible gateways; Exports are distributed across eight current gateways.</div><div class="s2"><b>AIOS Interpretation</b>Customs / network coordination requirements differ materially by direction: concentrated on the Import side and geographically distributed on the Export side.</div><div class="s3"><b>Discovery Validation</b>Validate operating ownership, gateway allocation rules, incumbent structures and which Shipments represent commercially addressable activity.</div></div>
+        <details class="phn-ev"><summary>Supporting evidence · HS operational presence — Top 5, Current YTD</summary><div class="phn-ev-b"><div class="phn-note" style="margin:0 0 12px;"><strong>One Shipment may contain multiple HS Codes. HS counts represent operational presence and are not additive.</strong></div><div style="max-width:420px;"><table class="phn-tp"><tr><td class="phn-mono">8511900602</td><td class="r">32</td></tr><tr><td class="phn-mono">8511509104</td><td class="r">21</td></tr><tr><td class="phn-mono">8483400902</td><td class="r">20</td></tr><tr><td class="phn-mono">8541100199</td><td class="r">20</td></tr><tr><td class="phn-mono">8536909999</td><td class="r">19</td></tr></table></div><div class="phn-micro">Goods descriptions visibly include automotive electrical / mechanical components — alternators, starter motors, solenoids, rectifiers and related components — while other records include metal / component inputs. No product-market conclusion is inferred from these codes.</div></div></details>
+      </div>
+    </div>
+
+    <section class="phn-chapter " id="phn-ch-3">
+      <div class="phn-chapter-n">Chapter 03</div>
+      <div class="phn-chapter-t">Core Routes</div>
+      <div class="phn-chapter-s">Which routes make up ≥80% of each direction? · the evidence base for Lane Intelligence</div>
+    </section>
+    <div class="card">
+      <div class="card-header">Core Route Concentration · Current YTD · <span class="phn-src ca">AIOS Calculation</span></div>
+      <div class="card-body">
+        <div class="phn-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:26px;">
+          <div>
+            <div class="phn-sublbl">Imports · 2 routes · 23 / 23 Shipments = 100.0%</div>
+            <div class="phn-conc"><div class="phn-conc-bar"><div style="width:73.913%;background:var(--navy);" title="Route 1 · Colombia, Nuevo León · 17 Shipments">R1</div><div style="width:26.087%;background:#64748b;" title="Route 2 · Monterrey / General Mariano Escobedo · 6 Shipments">R2</div></div><div class="phn-conc-mk r" style="left:73.90%;"><span>Route 1 · 73.9%</span></div></div>
+          </div>
+          <div>
+            <div class="phn-sublbl">Exports · 9 routes · 69 / 84 Shipments = 82.1%</div>
+            <div class="phn-conc"><div class="phn-conc-bar"><div style="width:13.095%;background:var(--teal);" title="Route 1 · Ciudad Juárez · 11 Shipments">R1</div><div style="width:13.095%;background:#64748b;" title="Route 2 · Monterrey · 11 Shipments">R2</div><div style="width:10.714%;background:#7c3aed;" title="Route 3 · Nogales · 9 Shipments">R3</div><div style="width:8.333%;background:#475569;" title="Route 4 · Nuevo Laredo · 7 Shipments">R4</div><div style="width:8.333%;background:#94a3b8;" title="Route 5 · Ciudad de México · 7 Shipments">R5</div><div style="width:8.333%;background:var(--navy);" title="Route 6 · Colombia · 7 Shipments">R6</div><div style="width:7.143%;background:var(--navy);" title="Route 7 · Colombia · 6 Shipments">R7</div><div style="width:7.143%;background:#b45309;" title="Route 8 · San Luis Potosí · 6 Shipments">R8</div><div style="width:5.952%;background:#475569;" title="Route 9 · Nuevo Laredo · 5 Shipments">R9</div></div><div class="phn-conc-mk" style="left:26.20%;"><span>Routes 1–2 · 26.2%</span></div><div class="phn-conc-mk b r" style="left:82.10%;"><span>Core · 82.1%</span></div></div>
+          </div>
+        </div>
+        <div class="phn-legend" style="margin-top:12px;"><span><i style="background:var(--navy);"></i>Colombia</span><span><i style="background:#64748b;"></i>Monterrey</span><span><i style="background:var(--teal);"></i>Ciudad Juárez</span><span><i style="background:#7c3aed;"></i>Nogales</span><span><i style="background:#475569;"></i>Nuevo Laredo</span><span><i style="background:#94a3b8;"></i>Ciudad de México</span><span><i style="background:#b45309;"></i>San Luis Potosí</span><span><i style="background:#e6eaf1;border:1px solid var(--border);"></i>Outside the Core set</span></div>
+        <div class="phn-micro">Core Routes are the smallest route sets reaching ≥80% cumulative Shipments separately by direction and period. Frequency uses each route's own observed window. Two routes carry all Imports; nine are needed to exceed 80% of Exports — the directional asymmetry named in the Executive Thesis.</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">Current Import Core Routes — 2 routes · 23 Shipments · 100.0% of 23 Imports · <span class="phn-src pj">PJ Fact</span> + <span class="phn-src ca">AIOS Calculation</span></div>
+      <div class="card-body">
+        <div class="phn-scroll"><table class="phn-route-table"><thead><tr><th>Rank</th><th>Account Facility</th><th>Gateway</th><th>Trading Partner</th><th class="num">Shipments</th><th class="num">% Import</th><th class="num">Cum. %</th><th class="num">Active Months</th><th class="num">Shipments / Active Month</th><th class="num">Shipments / Week</th><th>Visible Window</th></tr></thead><tbody><tr><td class="phn-rank"><span class="phn-rank-pill">1</span></td><td><div class="phn-ent"><strong>PHINIA Componentes Mexico</strong><span class="phn-tag self">Account facility</span><div class="phn-na">Address not available in PJ</div></div></td><td><strong class="phn-gwt" style="color:var(--navy);">Colombia, Nuevo León</strong></td><td><div class="phn-ent"><strong>Borgwarner Comercializadora PDS</strong></div></td><td class="num phn-mono">17</td><td class="num">73.9%</td><td class="num phn-cum"><strong>73.9%</strong><div class="phn-cum-bar"><div style="width:73.90%;"></div></div></td><td class="num">7</td><td class="num">2.43</td><td class="num"><strong>0.62</strong></td><td class="phn-dates">Jan 5 → Jul 15, 2026</td></tr><tr><td class="phn-rank"><span class="phn-rank-pill">2</span></td><td><div class="phn-ent"><strong>PHINIA Componentes Mexico</strong><span class="phn-tag self">Account facility</span><div class="phn-na">Address not available in PJ</div></div></td><td><strong class="phn-gwt" style="color:var(--navy);">Monterrey / General Mariano Escobedo</strong></td><td><div class="phn-ent"><strong>Hyundai Wia Mexico</strong></div></td><td class="num phn-mono">6</td><td class="num">26.1%</td><td class="num phn-cum"><strong>100.0%</strong><div class="phn-cum-bar"><div style="width:100.00%;"></div></div></td><td class="num">6</td><td class="num">1.00</td><td class="num"><strong>0.24</strong></td><td class="phn-dates">Jan 16 → Jul 7, 2026</td></tr></tbody></table></div>
+        <div class="phn-micro">Rendered in the route order supplied by AIOS. Facility precision is constrained: PJ does not provide a reliable PHINIA facility address, and AIOS does not invent or enrich the missing location.</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">Current Export Core Routes — 9 routes · 69 Shipments · 82.1% of 84 Exports · <span class="phn-src pj">PJ Fact</span> + <span class="phn-src ca">AIOS Calculation</span></div>
+      <div class="card-body">
+        <div class="phn-scroll"><table class="phn-route-table"><thead><tr><th>Rank</th><th>Origin / Trading Partner</th><th>Gateway</th><th>Destination</th><th class="num">Shipments</th><th class="num">% Export</th><th class="num">Cum. %</th><th class="num">Active Months</th><th class="num">Shipments / Active Month</th><th class="num">Shipments / Week</th></tr></thead><tbody><tr><td class="phn-rank"><span class="phn-rank-pill">1</span></td><td><div class="phn-ent"><strong>Reynoso International Systems</strong></div></td><td><strong class="phn-gwt" style="color:var(--navy);">Ciudad Juárez</strong></td><td><div class="phn-ent"><strong>PHINIA Componentes Mexico</strong><span class="phn-tag self">Account facility</span><div class="phn-na">Address not available in PJ</div></div></td><td class="num phn-mono">11</td><td class="num">13.1%</td><td class="num phn-cum"><strong>13.1%</strong><div class="phn-cum-bar"><div style="width:13.10%;"></div></div></td><td class="num">6</td><td class="num">1.83</td><td class="num"><strong>0.51</strong></td></tr><tr><td class="phn-rank"><span class="phn-rank-pill">2</span></td><td><div class="phn-ent"><strong>Steel Technologies de Mexico</strong></div></td><td><strong class="phn-gwt" style="color:var(--navy);">Monterrey</strong></td><td><div class="phn-ent"><strong>PHINIA Componentes Mexico</strong><span class="phn-tag self">Account facility</span><div class="phn-na">Address not available in PJ</div></div></td><td class="num phn-mono">11</td><td class="num">13.1%</td><td class="num phn-cum"><strong>26.2%</strong><div class="phn-cum-bar"><div style="width:26.20%;"></div></div></td><td class="num">7</td><td class="num">1.57</td><td class="num"><strong>0.40</strong></td></tr><tr><td class="phn-rank"><span class="phn-rank-pill">3</span></td><td><div class="phn-ent"><strong>Maquilas Teta Kawi</strong></div></td><td><strong class="phn-gwt" style="color:var(--navy);">Nogales</strong></td><td><div class="phn-ent"><strong>PHINIA Componentes Mexico</strong><span class="phn-tag self">Account facility</span><div class="phn-na">Address not available in PJ</div></div></td><td class="num phn-mono">9</td><td class="num">10.7%</td><td class="num phn-cum"><strong>36.9%</strong><div class="phn-cum-bar"><div style="width:36.90%;"></div></div></td><td class="num">7</td><td class="num">1.29</td><td class="num"><strong>0.36</strong></td></tr><tr><td class="phn-rank"><span class="phn-rank-pill">4</span></td><td><div class="phn-ent"><strong>Tempel de Mexico</strong></div></td><td><strong class="phn-gwt" style="color:var(--navy);">Nuevo Laredo</strong></td><td><div class="phn-ent"><strong>PHINIA Componentes Mexico</strong><span class="phn-tag self">Account facility</span><div class="phn-na">Address not available in PJ</div></div></td><td class="num phn-mono">7</td><td class="num">8.3%</td><td class="num phn-cum"><strong>45.2%</strong><div class="phn-cum-bar"><div style="width:45.20%;"></div></div></td><td class="num">7</td><td class="num">1.00</td><td class="num"><strong>0.27</strong></td></tr><tr><td class="phn-rank"><span class="phn-rank-pill">5</span></td><td><div class="phn-ent"><strong>Facil N.A. de Mexico</strong></div></td><td><strong class="phn-gwt" style="color:var(--navy);">Ciudad de México</strong></td><td><div class="phn-ent"><strong>PHINIA Componentes Mexico</strong><span class="phn-tag self">Account facility</span><div class="phn-na">Address not available in PJ</div></div></td><td class="num phn-mono">7</td><td class="num">8.3%</td><td class="num phn-cum"><strong>53.6%</strong><div class="phn-cum-bar"><div style="width:53.60%;"></div></div></td><td class="num">7</td><td class="num">1.00</td><td class="num"><strong>0.27</strong></td></tr><tr><td class="phn-rank"><span class="phn-rank-pill">6</span></td><td><div class="phn-ent"><strong>Kern Liebers Mexico</strong></div></td><td><strong class="phn-gwt" style="color:var(--navy);">Colombia</strong></td><td><div class="phn-ent"><strong>PHINIA Componentes Mexico</strong><span class="phn-tag self">Account facility</span><div class="phn-na">Address not available in PJ</div></div></td><td class="num phn-mono">7</td><td class="num">8.3%</td><td class="num phn-cum"><strong>61.9%</strong><div class="phn-cum-bar"><div style="width:61.90%;"></div></div></td><td class="num">7</td><td class="num">1.00</td><td class="num"><strong>0.28</strong></td></tr><tr><td class="phn-rank"><span class="phn-rank-pill">7</span></td><td><div class="phn-ent"><strong>KWD Industrias</strong></div></td><td><strong class="phn-gwt" style="color:var(--navy);">Colombia</strong></td><td><div class="phn-ent"><strong>PHINIA Componentes Mexico</strong><span class="phn-tag self">Account facility</span><div class="phn-na">Address not available in PJ</div></div></td><td class="num phn-mono">6</td><td class="num">7.1%</td><td class="num phn-cum"><strong>69.0%</strong><div class="phn-cum-bar"><div style="width:69.00%;"></div></div></td><td class="num">6</td><td class="num">1.00</td><td class="num"><strong>0.24</strong></td></tr><tr><td class="phn-rank"><span class="phn-rank-pill">8</span></td><td><div class="phn-ent"><strong>Wieland Metal Services</strong></div></td><td><strong class="phn-gwt" style="color:var(--navy);">San Luis Potosí</strong></td><td><div class="phn-ent"><strong>PHINIA Componentes Mexico</strong><span class="phn-tag self">Account facility</span><div class="phn-na">Address not available in PJ</div></div></td><td class="num phn-mono">6</td><td class="num">7.1%</td><td class="num phn-cum"><strong>76.2%</strong><div class="phn-cum-bar"><div style="width:76.20%;"></div></div></td><td class="num">6</td><td class="num">1.00</td><td class="num"><strong>0.24</strong></td></tr><tr><td class="phn-rank"><span class="phn-rank-pill">9</span></td><td><div class="phn-ent"><strong>Juntas Especiales</strong></div></td><td><strong class="phn-gwt" style="color:var(--navy);">Nuevo Laredo</strong></td><td><div class="phn-ent"><strong>PHINIA Componentes Mexico</strong><span class="phn-tag self">Account facility</span><div class="phn-na">Address not available in PJ</div></div></td><td class="num phn-mono">5</td><td class="num">6.0%</td><td class="num phn-cum"><strong>82.1%</strong><div class="phn-cum-bar"><div style="width:82.10%;"></div></div></td><td class="num">5</td><td class="num">1.00</td><td class="num"><strong>0.29</strong></td></tr></tbody></table></div>
+        <div class="phn-micro">Rendered exactly as supplied: Origin / Trading Partner → Gateway → PHINIA Componentes Mexico. The destination facility address is not consistently available in PJ. Per-route visible windows were not supplied for Export Core Routes. 2025 Full Year Core Routes are in <a href="#phn-ch-6">Chapter 06</a>.</div>
+      </div>
+    </div>
+
+    <section class="phn-chapter " id="phn-ch-4">
+      <div class="phn-chapter-n">Chapter 04</div>
+      <div class="phn-chapter-t">Lane Intelligence</div>
+      <div class="phn-chapter-s">How do the operating corridors behave? · one Lane Card per corridor</div>
+    </section>
+    <div class="card" style="border-top:3px solid var(--navy);">
+      <div class="card-body">
+        <div class="phn-note-navy" style="margin-top:0;margin-bottom:16px;">Each corridor has one Lane Card built from the Core Routes in <a href="#phn-ch-3">Chapter 03</a>: Scale · Frequency · Network Structure · Persistence · Customs and Logistics position, then three separate layers — <strong>Observed Operational Signal</strong> → <strong>AIOS Interpretation</strong> → <strong>Discovery Validation</strong>. Logistics capture is Not Validated in every corridor because no internal Akzent Logistics dataset was supplied.</div>
+        <div class="phn-lanenav"><a href="#phn-lane-a" class="key">A · Colombia / Borgwarner</a><a href="#phn-lane-b">B · Monterrey / Hyundai Wia</a><a href="#phn-lane-c">C · Distributed Export network</a></div>
+    <div class="phn-cor phn-lane" id="phn-lane-a">
+      <div class="phn-cor-h"><div class="phn-cor-id">A</div><div><div class="phn-cor-w">Corridor A · largest Import corridor · inside the Arcatek footprint</div><div class="phn-cor-t">Colombia, Nuevo León · Borgwarner Comercializadora PDS</div></div></div>
+      <div class="phn-lane-g">
+        <div><div class="k">Scale / Share</div><div class="n">17 <small>Import Shipments</small></div><div class="s"><b>73.9%</b> of current Imports</div></div>
+        <div><div class="k">Frequency</div><table class="phn-cad"><tr><td>Shipments / active month</td><td class="r">2.43</td></tr><tr><td>Shipments / week</td><td class="r"><b>0.62</b></td></tr><tr><td>Active months</td><td class="r">7</td></tr><tr><td>Visible window</td><td class="r">Jan 5 → Jul 15, 2026</td></tr></table></div>
+        <div><div class="k">Network Structure</div><div class="s"><b>Gateway:</b> Colombia, Nuevo León<br><b>Trading Partner:</b> Borgwarner Comercializadora PDS<br>Import Core Route 1</div></div>
+        <div><div class="k">Persistence</div><div class="s">Same structural corridor visible in 2025, when PHINIA → Colombia → Borgwarner represented <b>25 Shipments</b> (64.1% of 2025 Imports).</div></div>
+        <div class="pos"><div class="k">Customs Position · Logistics Position</div><div class="phn-pos"><span class="ca"><em>Customs · PJ</em>Arcatek Patent 3468 on 17 / 17 · 100%</span><span class="lu"><em>Logistics</em>Logistics capture · Not Validated</span></div></div>
+      </div>
+      <div class="phn-sig"><div class="s1"><b>Observed Operational Signal</b>The largest current Import corridor is also fully within the visible Arcatek customs footprint.</div><div class="s2"><b>AIOS Interpretation</b>This is the clearest demonstrated customs operating position in the account.</div><div class="s3"><b>Discovery Validation</b><ol class="phn-q"><li>Service scope</li><li>Decision rights</li><li>SLA / visibility requirements</li><li>Whether logistics participation exists around the same operating corridor</li></ol></div></div>
+    </div>
+    <div class="phn-cor phn-lane" id="phn-lane-b">
+      <div class="phn-cor-h"><div class="phn-cor-id">B</div><div><div class="phn-cor-w">Corridor B · second Import corridor · outside the Arcatek footprint</div><div class="phn-cor-t">Monterrey / General Mariano Escobedo · Hyundai Wia Mexico</div></div></div>
+      <div class="phn-lane-g">
+        <div><div class="k">Scale / Share</div><div class="n">6 <small>Import Shipments</small></div><div class="s"><b>26.1%</b> of current Imports</div></div>
+        <div><div class="k">Frequency</div><table class="phn-cad"><tr><td>Shipments / active month</td><td class="r">1.00</td></tr><tr><td>Shipments / week</td><td class="r"><b>0.24</b></td></tr><tr><td>Active months</td><td class="r">6</td></tr><tr><td>Visible window</td><td class="r">Jan 16 → Jul 7, 2026</td></tr></table></div>
+        <div><div class="k">Network Structure</div><div class="s"><b>Gateway:</b> Monterrey / General Mariano Escobedo<br><b>Trading Partner:</b> Hyundai Wia Mexico<br>Import Core Route 2</div></div>
+        <div><div class="k">Persistence</div><div class="s">Structure also visible in 2025 with <b>11 Shipments</b> (28.2% of 2025 Imports).</div></div>
+        <div class="pos"><div class="k">Customs Position · Logistics Position</div><div class="phn-pos"><span class="co"><em>Customs · PJ</em>Other Patent 1637 on 6 / 6</span><span class="ca"><em>Customs · PJ</em>Arcatek Customs Share · 0%</span><span class="lu"><em>Logistics</em>Logistics capture · Not Validated</span></div></div>
+      </div>
+      <div class="phn-sig"><div class="s1"><b>Observed Operational Signal</b>The entire visible current corridor sits outside Patents 3468 / 1930, despite another PHINIA Import corridor using 3468.</div><div class="s2"><b>AIOS Interpretation</b>Customs allocation is segmented by corridor / gateway / Trading Partner in the visible data.</div><div class="s3"><b>Discovery Validation</b><ol class="phn-q"><li>Why Patent 1637 is used: allocation policy, Trading Partner influence, contractual arrangement, specialization, regime requirements, contingency or another reason</li></ol></div></div>
+    </div>
+    <div class="phn-cor phn-lane" id="phn-lane-c">
+      <div class="phn-cor-h"><div class="phn-cor-id">C</div><div><div class="phn-cor-w">Corridor C · multi-partner, multi-gateway</div><div class="phn-cor-t">Distributed Export network · 8 gateways</div></div></div>
+      <div class="phn-lane-g">
+        <div><div class="k">Scale / Share</div><div class="n">84 <small>Export Shipments</small></div><div class="s"><b>78.5%</b> of current Shipments · 9 routes to reach <b>82.1%</b></div></div>
+        <div><div class="k">Frequency</div><table class="phn-cad"><tr><td>Route 1 · Reynoso International Systems · Ciudad Juárez</td><td class="r">11 · <b>0.51 / wk</b></td></tr><tr><td>Route 2 · Steel Technologies de Mexico · Monterrey</td><td class="r">11 · <b>0.40 / wk</b></td></tr><tr><td>Route 3 · Maquilas Teta Kawi · Nogales</td><td class="r">9 · <b>0.36 / wk</b></td></tr><tr><td>Routes 4–9</td><td class="r">1.00 / active month each</td></tr></table></div>
+        <div><div class="k">Network Structure</div><div class="s">The two largest routes each represent only <b>13.1%</b>. Gateways: Colombia 25 · Monterrey 12 · Nuevo Laredo 12 · Ciudad Juárez 11 · Nogales 9 · Ciudad de México 7 · San Luis Potosí 6 · Toluca 2.</div></div>
+        <div><div class="k">Persistence</div><div class="s">Eight of nine current Export Core structures were also in the 2025 Export Core set. Reynoso International Systems / Ciudad Juárez is the notable current Core structure outside it — a visibility observation, not evidence of business won, lost or transferred.</div></div>
+        <div class="pos"><div class="k">Customs Position · Logistics Position</div><div class="phn-pos"><span class="co"><em>Customs · PJ</em>Every Export gateway · Other Patents · 84 / 84</span><span class="ca"><em>Customs · PJ</em>Arcatek Customs Share · 0.0%</span><span class="lu"><em>Logistics</em>Logistics capture · Not Validated</span></div></div>
+      </div>
+      <div class="phn-sig"><div class="s1"><b>Observed Operational Signal</b>Current Exports span multiple Trading Partners and eight gateways, with no single route dominating the directional universe.</div><div class="s2"><b>AIOS Interpretation</b>The visible structure supports a coordination / visibility conversation more strongly than a single-lane transactional freight proposition.</div><div class="s3"><b>Discovery Validation</b><ol class="phn-q"><li>Freight decision rights</li><li>Allocation by Trading Partner / gateway</li><li>Incumbent forwarders / carriers</li><li>Tender cycle</li><li>Control-tower requirements</li><li>Which portions — if any — are commercially contestable</li></ol></div></div>
+    </div>
+
+      </div>
+    </div>
+
+    <section class="phn-chapter cus" id="phn-ch-5">
+      <div class="phn-chapter-n">Chapter 05</div>
+      <div class="phn-chapter-t">Customs Intelligence</div>
+      <div class="phn-chapter-s">How is the PJ-supported customs universe allocated? · Patent ownership, Customs Wallet and gateway allocation</div><div class="phn-prim">Customs Shared Wallet ≠ Logistics Wallet</div>
+    </section>
+    <div class="card" style="border-top:3px solid var(--teal);">
+      <div class="card-header">Customs Shared Wallet · <span class="phn-src pj">PJ Fact</span> + <span class="phn-src ak">Arcatek Patent Ownership</span> + <span class="phn-src ca">AIOS Calculation</span></div>
+      <div class="card-body">
+        <div class="phn-kpis">
+          <div><div class="k">Customs Shared Wallet · Current YTD</div><div class="v" style="color:var(--teal-dim);">15.9%</div><div class="s">17 / 107 Shipments</div></div>
+          <div><div class="k">Import Customs Wallet</div><div class="v">73.9%</div><div class="s">17 / 23 Shipments</div></div>
+          <div><div class="k">Export Customs Wallet</div><div class="v">0.0%</div><div class="s">0 / 84 Shipments</div></div>
+          <div><div class="k">Arcatek-owned Patents</div><div class="v" style="font-size:20px;"><span class="phn-pat ak" title="ARCATEK PATENT">3468</span> <span class="phn-pat ak" title="ARCATEK PATENT">1930</span></div><div class="s">3468: 17 Shipments · 1930: 0 visible</div></div>
+        </div>
+        <div class="phn-micro">Supported customs universe: 107 Shipments (Patent 3468: 17 · Other Patents: 90). 2025 Full Year reference: 25 / 225 = 11.1% · Imports 25 / 39 = 64.1% · Exports 0 / 186 = 0.0% — a period-specific visible share, not a Logistics Wallet and not proof of relationship change.</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">Current Patent Portfolio and Customs Wallet by Gateway · <span class="phn-src pj">PJ Fact</span> + <span class="phn-src ca">AIOS Calculation</span></div>
+      <div class="card-body">
+        <div class="phn-2col" style="display:grid;grid-template-columns:0.9fr 1.1fr;gap:26px;">
+          <div>
+            <div class="phn-sublbl">Current Patent Portfolio — all visible patents · 107 Shipments</div>
+            <div style="overflow-x:auto;"><table class="hub-table phn-cwg" style="font-size:11.5px;">
+              <thead><tr><th>Patent</th><th>Ownership</th><th class="num">Shipments</th><th>Volume</th></tr></thead>
+              <tbody><tr><td><span class="phn-pat ak" title="ARCATEK PATENT">3468</span></td><td><span style="font-size:9.5px;font-weight:800;letter-spacing:0.6px;color:var(--teal-dim);">ARCATEK PATENT</span></td><td class="num phn-mono">17</td><td style="width:34%;"><div class="phn-matbar" style="margin:0;"><div style="width:68.0%;background:var(--teal);opacity:1;"></div></div></td></tr><tr><td><span class="phn-pat ak" title="ARCATEK PATENT">1930</span></td><td><span style="font-size:9.5px;font-weight:800;letter-spacing:0.6px;color:var(--teal-dim);">ARCATEK PATENT</span></td><td class="num phn-mono">0</td><td colspan="1" style="font-size:10.5px;color:var(--text-muted);">Not visible in the current PJ data</td></tr><tr><td><span class="phn-pat ot" title="OTHER PATENT — the company behind it is not identified">3483</span></td><td><span style="font-size:9.5px;font-weight:800;letter-spacing:0.6px;color:#b45309;">OTHER PATENT</span></td><td class="num phn-mono">25</td><td style="width:34%;"><div class="phn-matbar" style="margin:0;"><div style="width:100.0%;background:#f59e0b;opacity:1;"></div></div></td></tr><tr><td><span class="phn-pat ot" title="OTHER PATENT — the company behind it is not identified">3438</span></td><td><span style="font-size:9.5px;font-weight:800;letter-spacing:0.6px;color:#b45309;">OTHER PATENT</span></td><td class="num phn-mono">11</td><td style="width:34%;"><div class="phn-matbar" style="margin:0;"><div style="width:44.0%;background:#f59e0b;opacity:1;"></div></div></td></tr><tr><td><span class="phn-pat ot" title="OTHER PATENT — the company behind it is not identified">3842</span></td><td><span style="font-size:9.5px;font-weight:800;letter-spacing:0.6px;color:#b45309;">OTHER PATENT</span></td><td class="num phn-mono">11</td><td style="width:34%;"><div class="phn-matbar" style="margin:0;"><div style="width:44.0%;background:#f59e0b;opacity:1;"></div></div></td></tr><tr><td><span class="phn-pat ot" title="OTHER PATENT — the company behind it is not identified">1653</span></td><td><span style="font-size:9.5px;font-weight:800;letter-spacing:0.6px;color:#b45309;">OTHER PATENT</span></td><td class="num phn-mono">9</td><td style="width:34%;"><div class="phn-matbar" style="margin:0;"><div style="width:36.0%;background:#f59e0b;opacity:1;"></div></div></td></tr><tr><td><span class="phn-pat ot" title="OTHER PATENT — the company behind it is not identified">3147</span></td><td><span style="font-size:9.5px;font-weight:800;letter-spacing:0.6px;color:#b45309;">OTHER PATENT</span></td><td class="num phn-mono">7</td><td style="width:34%;"><div class="phn-matbar" style="margin:0;"><div style="width:28.0%;background:#f59e0b;opacity:1;"></div></div></td></tr><tr><td><span class="phn-pat ot" title="OTHER PATENT — the company behind it is not identified">3264</span></td><td><span style="font-size:9.5px;font-weight:800;letter-spacing:0.6px;color:#b45309;">OTHER PATENT</span></td><td class="num phn-mono">7</td><td style="width:34%;"><div class="phn-matbar" style="margin:0;"><div style="width:28.0%;background:#f59e0b;opacity:1;"></div></div></td></tr><tr><td><span class="phn-pat ot" title="OTHER PATENT — the company behind it is not identified">1637</span></td><td><span style="font-size:9.5px;font-weight:800;letter-spacing:0.6px;color:#b45309;">OTHER PATENT</span></td><td class="num phn-mono">6</td><td style="width:34%;"><div class="phn-matbar" style="margin:0;"><div style="width:24.0%;background:#f59e0b;opacity:1;"></div></div></td></tr><tr><td><span class="phn-pat ot" title="OTHER PATENT — the company behind it is not identified">1628</span></td><td><span style="font-size:9.5px;font-weight:800;letter-spacing:0.6px;color:#b45309;">OTHER PATENT</span></td><td class="num phn-mono">6</td><td style="width:34%;"><div class="phn-matbar" style="margin:0;"><div style="width:24.0%;background:#f59e0b;opacity:1;"></div></div></td></tr><tr><td><span class="phn-pat ot" title="OTHER PATENT — the company behind it is not identified">3430</span></td><td><span style="font-size:9.5px;font-weight:800;letter-spacing:0.6px;color:#b45309;">OTHER PATENT</span></td><td class="num phn-mono">5</td><td style="width:34%;"><div class="phn-matbar" style="margin:0;"><div style="width:20.0%;background:#f59e0b;opacity:1;"></div></div></td></tr><tr><td><span class="phn-pat ot" title="OTHER PATENT — the company behind it is not identified">3744</span></td><td><span style="font-size:9.5px;font-weight:800;letter-spacing:0.6px;color:#b45309;">OTHER PATENT</span></td><td class="num phn-mono">2</td><td style="width:34%;"><div class="phn-matbar" style="margin:0;"><div style="width:8.0%;background:#f59e0b;opacity:1;"></div></div></td></tr><tr><td><span class="phn-pat ot" title="OTHER PATENT — the company behind it is not identified">3727</span></td><td><span style="font-size:9.5px;font-weight:800;letter-spacing:0.6px;color:#b45309;">OTHER PATENT</span></td><td class="num phn-mono">1</td><td style="width:34%;"><div class="phn-matbar" style="margin:0;"><div style="width:4.0%;background:#f59e0b;opacity:1;"></div></div></td></tr></tbody></table></div>
+            <div class="phn-micro">AIOS does not assign companies to Other Patents without validation. Other Patents are not competitors by default.</div>
+          </div>
+          <div>
+            <div class="phn-sublbl">Customs Wallet by Gateway — all gateways</div>
+            <div style="overflow-x:auto;"><table class="hub-table phn-cwg" style="font-size:11.5px;">
+              <thead><tr><th>Gateway</th><th class="num">Arcatek</th><th class="num">Other</th><th class="num">Total</th><th class="num">Arcatek Customs Share</th><th style="width:22%;">Volume</th></tr></thead>
+              <tbody><tr class="grp"><td colspan="6">Imports</td></tr><tr style="background:rgba(0,180,216,0.06);"><td><strong class="phn-gwt" style="color:var(--navy);">Colombia, Nuevo León</strong></td><td class="num phn-mono">17</td><td class="num phn-mono" style="color:#b45309;">0</td><td class="num phn-mono"><strong>17</strong></td><td class="num"><strong style="color:var(--teal-dim);">100%</strong></td><td><div class="phn-cw-bar" style="width:68.0%;min-width:10px;height:10px;"><div class="phn-cw-ak" style="width:100.0%;"></div><div class="phn-cw-ot" style="width:0.0%;"></div></div></td></tr><tr><td><strong class="phn-gwt" style="color:var(--navy);">Monterrey / General Mariano Escobedo</strong></td><td class="num phn-mono">0</td><td class="num phn-mono" style="color:#b45309;">6</td><td class="num phn-mono"><strong>6</strong></td><td class="num"><strong style="color:#b45309;">0%</strong></td><td><div class="phn-cw-bar" style="width:24.0%;min-width:10px;height:10px;"><div class="phn-cw-ak" style="width:0.0%;"></div><div class="phn-cw-ot" style="width:100.0%;"></div></div></td></tr><tr class="grp"><td colspan="6">Exports</td></tr><tr><td><strong class="phn-gwt" style="color:var(--navy);">Colombia</strong></td><td class="num phn-mono">0</td><td class="num phn-mono" style="color:#b45309;">25</td><td class="num phn-mono"><strong>25</strong></td><td class="num"><strong style="color:#b45309;">0%</strong></td><td><div class="phn-cw-bar" style="width:100.0%;min-width:10px;height:10px;"><div class="phn-cw-ak" style="width:0.0%;"></div><div class="phn-cw-ot" style="width:100.0%;"></div></div></td></tr><tr><td><strong class="phn-gwt" style="color:var(--navy);">Monterrey</strong></td><td class="num phn-mono">0</td><td class="num phn-mono" style="color:#b45309;">12</td><td class="num phn-mono"><strong>12</strong></td><td class="num"><strong style="color:#b45309;">0%</strong></td><td><div class="phn-cw-bar" style="width:48.0%;min-width:10px;height:10px;"><div class="phn-cw-ak" style="width:0.0%;"></div><div class="phn-cw-ot" style="width:100.0%;"></div></div></td></tr><tr><td><strong class="phn-gwt" style="color:var(--navy);">Nuevo Laredo</strong></td><td class="num phn-mono">0</td><td class="num phn-mono" style="color:#b45309;">12</td><td class="num phn-mono"><strong>12</strong></td><td class="num"><strong style="color:#b45309;">0%</strong></td><td><div class="phn-cw-bar" style="width:48.0%;min-width:10px;height:10px;"><div class="phn-cw-ak" style="width:0.0%;"></div><div class="phn-cw-ot" style="width:100.0%;"></div></div></td></tr><tr><td><strong class="phn-gwt" style="color:var(--navy);">Ciudad Juárez</strong></td><td class="num phn-mono">0</td><td class="num phn-mono" style="color:#b45309;">11</td><td class="num phn-mono"><strong>11</strong></td><td class="num"><strong style="color:#b45309;">0%</strong></td><td><div class="phn-cw-bar" style="width:44.0%;min-width:10px;height:10px;"><div class="phn-cw-ak" style="width:0.0%;"></div><div class="phn-cw-ot" style="width:100.0%;"></div></div></td></tr><tr><td><strong class="phn-gwt" style="color:var(--navy);">Nogales</strong></td><td class="num phn-mono">0</td><td class="num phn-mono" style="color:#b45309;">9</td><td class="num phn-mono"><strong>9</strong></td><td class="num"><strong style="color:#b45309;">0%</strong></td><td><div class="phn-cw-bar" style="width:36.0%;min-width:10px;height:10px;"><div class="phn-cw-ak" style="width:0.0%;"></div><div class="phn-cw-ot" style="width:100.0%;"></div></div></td></tr><tr><td><strong class="phn-gwt" style="color:var(--navy);">Ciudad de México</strong></td><td class="num phn-mono">0</td><td class="num phn-mono" style="color:#b45309;">7</td><td class="num phn-mono"><strong>7</strong></td><td class="num"><strong style="color:#b45309;">0%</strong></td><td><div class="phn-cw-bar" style="width:28.0%;min-width:10px;height:10px;"><div class="phn-cw-ak" style="width:0.0%;"></div><div class="phn-cw-ot" style="width:100.0%;"></div></div></td></tr><tr><td><strong class="phn-gwt" style="color:var(--navy);">San Luis Potosí</strong></td><td class="num phn-mono">0</td><td class="num phn-mono" style="color:#b45309;">6</td><td class="num phn-mono"><strong>6</strong></td><td class="num"><strong style="color:#b45309;">0%</strong></td><td><div class="phn-cw-bar" style="width:24.0%;min-width:10px;height:10px;"><div class="phn-cw-ak" style="width:0.0%;"></div><div class="phn-cw-ot" style="width:100.0%;"></div></div></td></tr><tr><td><strong class="phn-gwt" style="color:var(--navy);">Toluca</strong></td><td class="num phn-mono">0</td><td class="num phn-mono" style="color:#b45309;">2</td><td class="num phn-mono"><strong>2</strong></td><td class="num"><strong style="color:#b45309;">0%</strong></td><td><div class="phn-cw-bar" style="width:8.0%;min-width:10px;height:10px;"><div class="phn-cw-ak" style="width:0.0%;"></div><div class="phn-cw-ot" style="width:100.0%;"></div></div></td></tr></tbody></table></div>
+            <div class="phn-micro">Volume bar length scales with gateway Shipments (25 = largest), so Colombia Imports' 100% on 17 Shipments is read against its real scale. Every current Export gateway has 0% Arcatek Patent share in the supplied PJ data.</div>
+          </div>
+        </div>
+        <div class="phn-sig"><div class="s1"><b>Observed Operational Signal</b>Patent 3468 is visible only on Colombia Imports. Monterrey Imports use Patent 1637, and each Export gateway carries its own Other Patent(s).</div><div class="s2"><b>AIOS Interpretation</b>Customs allocation is directionally segmented and gateway-specific in the visible data.</div><div class="s3"><b>Discovery Validation</b>Determine how customs allocation is decided by gateway, direction and Trading Partner.</div></div>
+        <details class="phn-ev"><summary>Supporting evidence · Patent × Direction × Gateway — all rows</summary><div class="phn-ev-b"><div style="overflow-x:auto;max-width:560px;"><table class="hub-table phn-cwg" style="font-size:11.5px;"><thead><tr><th>Patent</th><th>Gateway</th><th class="num">Shipments</th></tr></thead><tbody><tr class="grp"><td colspan="3">Imports</td></tr><tr style="background:rgba(0,180,216,0.06);"><td><span class="phn-pat ak" title="ARCATEK PATENT">3468</span></td><td><strong class="phn-gwt" style="color:var(--navy);">Colombia</strong></td><td class="num phn-mono">17</td></tr><tr><td><span class="phn-pat ot" title="OTHER PATENT — the company behind it is not identified">1637</span></td><td><strong class="phn-gwt" style="color:var(--navy);">Monterrey / General Mariano Escobedo</strong></td><td class="num phn-mono">6</td></tr><tr class="grp"><td colspan="3">Exports</td></tr><tr><td><span class="phn-pat ot" title="OTHER PATENT — the company behind it is not identified">3483</span></td><td><strong class="phn-gwt" style="color:var(--navy);">Colombia</strong></td><td class="num phn-mono">25</td></tr><tr><td><span class="phn-pat ot" title="OTHER PATENT — the company behind it is not identified">3438</span></td><td><strong class="phn-gwt" style="color:var(--navy);">Monterrey</strong></td><td class="num phn-mono">11</td></tr><tr><td><span class="phn-pat ot" title="OTHER PATENT — the company behind it is not identified">3842</span></td><td><strong class="phn-gwt" style="color:var(--navy);">Ciudad Juárez</strong></td><td class="num phn-mono">11</td></tr><tr><td><span class="phn-pat ot" title="OTHER PATENT — the company behind it is not identified">1653</span></td><td><strong class="phn-gwt" style="color:var(--navy);">Nogales</strong></td><td class="num phn-mono">9</td></tr><tr><td><span class="phn-pat ot" title="OTHER PATENT — the company behind it is not identified">3147</span></td><td><strong class="phn-gwt" style="color:var(--navy);">Ciudad de México</strong></td><td class="num phn-mono">7</td></tr><tr><td><span class="phn-pat ot" title="OTHER PATENT — the company behind it is not identified">3264</span></td><td><strong class="phn-gwt" style="color:var(--navy);">Nuevo Laredo</strong></td><td class="num phn-mono">7</td></tr><tr><td><span class="phn-pat ot" title="OTHER PATENT — the company behind it is not identified">3430</span></td><td><strong class="phn-gwt" style="color:var(--navy);">Nuevo Laredo</strong></td><td class="num phn-mono">5</td></tr><tr><td><span class="phn-pat ot" title="OTHER PATENT — the company behind it is not identified">1628</span></td><td><strong class="phn-gwt" style="color:var(--navy);">San Luis Potosí</strong></td><td class="num phn-mono">6</td></tr><tr><td><span class="phn-pat ot" title="OTHER PATENT — the company behind it is not identified">3744</span></td><td><strong class="phn-gwt" style="color:var(--navy);">Toluca</strong></td><td class="num phn-mono">2</td></tr><tr><td><span class="phn-pat ot" title="OTHER PATENT — the company behind it is not identified">3727</span></td><td><strong class="phn-gwt" style="color:var(--navy);">Monterrey</strong></td><td class="num phn-mono">1</td></tr></tbody></table></div></div></details>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">Customs Geographic Overlap · <span class="phn-src ca">AIOS Calculation</span></div>
+      <div class="card-body">
+        <div class="phn-kpis">
+          <div><div class="k">Current Other-Patent reference</div><div class="v" style="color:#b45309;">90 <small>Shipments</small></div><div class="s">6 Imports · 84 Exports</div></div>
+          <div><div class="k">Arcatek activity · Colombia, NL Imports</div><div class="v" style="color:var(--teal-dim);">17</div><div class="s">Patent 3468</div></div>
+          <div><div class="k">Other Patent · Colombia (MX) Exports</div><div class="v" style="color:#b45309;">25</div><div class="s">Patent 3483</div></div>
+          <div><div class="k">Gateway equivalence</div><div class="v" style="font-size:16px;">Not asserted</div><div class="s">Labels differ by direction</div></div>
+        </div>
+        <div class="phn-sig"><div class="s1"><b>Observed Operational Signal</b>At the normalized gateway-name level, current Arcatek patent activity is concentrated at Colombia, Nuevo León; Other-Patent Export activity is also visible through Colombia (MX).</div><div class="s2"><b>AIOS Interpretation</b>There is a potential same-named Colombia operating overlap worthy of Discovery. Because PJ represents the gateway labels differently by direction, AIOS does not assert exact physical-location equivalence.</div><div class="s3"><b>Discovery Validation</b>Confirm exact gateway / facility equivalence and whether customs allocations are commercially comparable.</div></div>
+        <div class="phn-principle"><b>Other-Patent volume is reference whitespace, not automatically winnable business.</b><span>This shows WHERE allocation sits — never winnable volume, provider failure or migration potential.</span></div>
+      </div>
+    </div>
+
+    <section class="phn-chapter " id="phn-ch-6">
+      <div class="phn-chapter-n">Chapter 06</div>
+      <div class="phn-chapter-t">Historical Intelligence</div>
+      <div class="phn-chapter-s">What persisted and what changed structurally? · 2025 Full Year is context, never aggregated with Current YTD</div>
+    </section>
+    <div class="card">
+      <div class="card-header">Visible universe by period · <span class="phn-src pj">PJ Fact</span> + <span class="phn-src ca">AIOS Calculation</span></div>
+      <div class="card-body">
+        <div style="overflow-x:auto;"><table class="hub-table" style="font-size:11.5px;">
+          <thead><tr><th>Period</th><th class="num">Imports</th><th class="num">Exports</th><th class="num">Total</th></tr></thead>
+          <tbody>
+            <tr class="phn-muted"><td>Previous Full Calendar Year · 2025</td><td class="num">39</td><td class="num">186</td><td class="num">225</td></tr>
+            <tr class="phn-muted"><td>Jan 1–Jul 21, 2025 · equivalent prior period</td><td class="num">23</td><td class="num">111</td><td class="num">134</td></tr>
+            <tr><td><strong>Current YTD 2026</strong> · through 21-Jul-2026</td><td class="num"><strong>23</strong></td><td class="num"><strong>84</strong></td><td class="num"><strong>107</strong></td></tr>
+            <tr><td><strong>Observed change vs equivalent 2025 period</strong></td><td class="num"><strong style="color:var(--navy);">Flat</strong></td><td class="num"><strong style="color:#b91c1c;">−24.3%</strong></td><td class="num"><strong style="color:#b91c1c;">−20.1%</strong></td></tr>
+          </tbody></table></div>
+        <div class="phn-sig"><div class="s1"><b>Observed Operational Signal</b>Current visible scale is below the equivalent 2025 period, entirely because Exports are lower; Imports are unchanged.</div><div class="s2"><b>AIOS Interpretation</b>The current operating state shows a smaller visible export-side universe while the import-side Shipment count is stable.</div><div class="s3"><b>Discovery Validation</b>Determine whether the export-side reduction reflects sourcing / production cadence, allocation changes, PJ visibility or another operating factor.</div></div>
+        <div class="phn-note-na">No cause is established by the supplied data.</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">Core Route structure · 2025 Full Year vs Current YTD · <span class="phn-src ca">AIOS Calculation</span></div>
+      <div class="card-body">
+        <div class="phn-shift">
+          <div>
+            <b style="font-size:12px;color:var(--navy);">Import Core Routes</b>
+            <div class="row"><div class="l">2025 Full Year</div><div class="phn-dots h"><i></i><i></i></div><div class="r">2 routes → 92.3%</div></div>
+            <div class="row"><div class="l">Current YTD</div><div class="phn-dots"><i></i><i></i></div><div class="r">2 routes → 100.0%</div></div>
+          </div>
+          <div>
+            <b style="font-size:12px;color:var(--navy);">Export Core Routes</b>
+            <div class="row"><div class="l">2025 Full Year</div><div class="phn-dots h"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="r">13 routes → 81.2%</div></div>
+            <div class="row"><div class="l">Current YTD</div><div class="phn-dots"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="r">9 routes → 82.1%</div></div>
+          </div>
+        </div>
+        <div class="phn-micro">1 square = 1 Core Route. Coverage is of each period's own directional universe (2025: 39 Imports / 186 Exports · Current YTD: 23 / 84). Because the periods differ in length, the route-count change is a structural observation, not a frequency-normalized growth conclusion.</div>
+        <ul class="phn-obs" style="margin-top:12px;">
+          <li>The Import network is structurally persistent: Colombia / Borgwarner and Monterrey / Hyundai Wia remain the two visible operating structures.</li>
+          <li>Exports remain much more distributed. Eight of the nine current Export Core structures were also in the 2025 Export Core set.</li>
+          <li class="chg">Reynoso International Systems / Ciudad Juárez is a notable current Core structure — 11 Shipments, 13.1% of current Exports — and is not in the 2025 Export Core set.</li>
+        </ul>
+        <div class="phn-note-na">Structural visibility observations — not evidence that business was won, lost or transferred.</div>
+        <div style="margin-top:10px;" class="phn-hist">
+        <details class="phn-ev"><summary>Current Export Core structures · persistence vs 2025 Export Core set</summary><div class="phn-ev-b"><div style="overflow-x:auto;"><table class="hub-table phn-cwg" style="font-size:11.5px;"><thead><tr><th>Origin / Trading Partner</th><th>Gateway</th><th class="num">Current Shipments</th><th>2025 Full Year</th></tr></thead><tbody><tr><td>Reynoso International Systems</td><td>Ciudad Juárez</td><td class="num phn-mono">11</td><td><span class=phn-no>Not in 2025 Core</span></td></tr><tr><td>Steel Technologies de Mexico</td><td>Monterrey</td><td class="num phn-mono">11</td><td><span class=phn-yes>In 2025 Core</span></td></tr><tr><td>Maquilas Teta Kawi</td><td>Nogales</td><td class="num phn-mono">9</td><td><span class=phn-yes>In 2025 Core</span></td></tr><tr><td>Tempel de Mexico</td><td>Nuevo Laredo</td><td class="num phn-mono">7</td><td><span class=phn-yes>In 2025 Core</span></td></tr><tr><td>Facil N.A. de Mexico</td><td>Ciudad de México</td><td class="num phn-mono">7</td><td><span class=phn-yes>In 2025 Core</span></td></tr><tr><td>Kern Liebers Mexico</td><td>Colombia</td><td class="num phn-mono">7</td><td><span class=phn-yes>In 2025 Core</span></td></tr><tr><td>KWD Industrias</td><td>Colombia</td><td class="num phn-mono">6</td><td><span class=phn-yes>In 2025 Core</span></td></tr><tr><td>Wieland Metal Services</td><td>San Luis Potosí</td><td class="num phn-mono">6</td><td><span class=phn-yes>In 2025 Core</span></td></tr><tr><td>Juntas Especiales</td><td>Nuevo Laredo</td><td class="num phn-mono">5</td><td><span class=phn-yes>In 2025 Core</span></td></tr></tbody></table></div></div></details>
+        <details class="phn-ev"><summary>2025 Full Year Import Core Routes — 2 routes · 36 / 39 Shipments = 92.3%</summary><div class="phn-ev-b"><div class="phn-scroll"><table class="phn-route-table"><thead><tr><th>Rank</th><th>Account Facility</th><th>Gateway</th><th>Trading Partner</th><th class="num">Shipments</th><th class="num">% Import</th></tr></thead><tbody><tr><td class="phn-rank"><span class="phn-rank-pill">1</span></td><td><div class="phn-ent"><strong>PHINIA Componentes Mexico</strong><span class="phn-tag self">Account facility</span><div class="phn-na">Address not available in PJ</div></div></td><td><strong class="phn-gwt" style="color:var(--navy);">Colombia, Nuevo León</strong></td><td><div class="phn-ent"><strong>Borgwarner Comercializadora PDS</strong></div></td><td class="num phn-mono">25</td><td class="num">64.1%</td></tr><tr><td class="phn-rank"><span class="phn-rank-pill">2</span></td><td><div class="phn-ent"><strong>PHINIA Componentes Mexico</strong><span class="phn-tag self">Account facility</span><div class="phn-na">Address not available in PJ</div></div></td><td><strong class="phn-gwt" style="color:var(--navy);">Monterrey / General Mariano Escobedo</strong></td><td><div class="phn-ent"><strong>Hyundai Wia Mexico</strong></div></td><td class="num phn-mono">11</td><td class="num">28.2%</td></tr></tbody></table></div></div></details>
+        <details class="phn-ev"><summary>2025 Full Year Export Core Routes — 13 routes · 151 / 186 Shipments = 81.2%</summary><div class="phn-ev-b"><div class="phn-scroll"><table class="phn-route-table"><thead><tr><th>Rank</th><th>Origin / Trading Partner</th><th>Gateway</th><th class="num">Shipments</th></tr></thead><tbody><tr><td class="phn-rank"><span class="phn-rank-pill">1</span></td><td><div class="phn-ent"><strong>Steel Technologies</strong></div></td><td><strong class="phn-gwt" style="color:var(--navy);">Monterrey</strong></td><td class="num phn-mono">25</td></tr><tr><td class="phn-rank"><span class="phn-rank-pill">2</span></td><td><div class="phn-ent"><strong>Maquilas Teta Kawi</strong></div></td><td><strong class="phn-gwt" style="color:var(--navy);">Nogales</strong></td><td class="num phn-mono">18</td></tr><tr><td class="phn-rank"><span class="phn-rank-pill">3</span></td><td><div class="phn-ent"><strong>Kern Liebers</strong></div></td><td><strong class="phn-gwt" style="color:var(--navy);">Colombia</strong></td><td class="num phn-mono">12</td></tr><tr><td class="phn-rank"><span class="phn-rank-pill">4</span></td><td><div class="phn-ent"><strong>KWD Industrias</strong></div></td><td><strong class="phn-gwt" style="color:var(--navy);">Colombia</strong></td><td class="num phn-mono">12</td></tr><tr><td class="phn-rank"><span class="phn-rank-pill">5</span></td><td><div class="phn-ent"><strong>Total Component Solution Mexico</strong></div></td><td><strong class="phn-gwt" style="color:var(--navy);">Colombia</strong></td><td class="num phn-mono">12</td></tr><tr><td class="phn-rank"><span class="phn-rank-pill">6</span></td><td><div class="phn-ent"><strong>Juntas Especiales</strong></div></td><td><strong class="phn-gwt" style="color:var(--navy);">Nuevo Laredo</strong></td><td class="num phn-mono">11</td></tr><tr><td class="phn-rank"><span class="phn-rank-pill">7</span></td><td><div class="phn-ent"><strong>Facil N.A. de Mexico</strong></div></td><td><strong class="phn-gwt" style="color:var(--navy);">Ciudad de México</strong></td><td class="num phn-mono">11</td></tr><tr><td class="phn-rank"><span class="phn-rank-pill">8</span></td><td><div class="phn-ent"><strong>Plenco de Mexico</strong></div></td><td><strong class="phn-gwt" style="color:var(--navy);">Matamoros</strong></td><td class="num phn-mono">11</td></tr><tr><td class="phn-rank"><span class="phn-rank-pill">9</span></td><td><div class="phn-ent"><strong>Magnekon</strong></div></td><td><strong class="phn-gwt" style="color:var(--navy);">Monterrey</strong></td><td class="num phn-mono">9</td></tr><tr><td class="phn-rank"><span class="phn-rank-pill">10</span></td><td><div class="phn-ent"><strong>Wieland Metal Services</strong></div></td><td><strong class="phn-gwt" style="color:var(--navy);">San Luis Potosí</strong></td><td class="num phn-mono">9</td></tr><tr><td class="phn-rank"><span class="phn-rank-pill">11</span></td><td><div class="phn-ent"><strong>Conductores Monterrey</strong></div></td><td><strong class="phn-gwt" style="color:var(--navy);">Monterrey</strong></td><td class="num phn-mono">7</td></tr><tr><td class="phn-rank"><span class="phn-rank-pill">12</span></td><td><div class="phn-ent"><strong>Tempel de Mexico</strong></div></td><td><strong class="phn-gwt" style="color:var(--navy);">Nuevo Laredo</strong></td><td class="num phn-mono">7</td></tr><tr><td class="phn-rank"><span class="phn-rank-pill">13</span></td><td><div class="phn-ent"><strong>Nucor Cold Finish Monterrey</strong></div></td><td><strong class="phn-gwt" style="color:var(--navy);">Monterrey</strong></td><td class="num phn-mono">7</td></tr></tbody></table></div><div class="phn-micro">AIOS supplied route-level Shipments for the 2025 Export Core set; per-route shares and cadence were not supplied and are not derived here.</div></div></details>
+        </div>
+      </div>
+    </div>
+
+    <section class="phn-chapter syn" id="phn-ch-7">
+      <div class="phn-chapter-n">Chapter 07</div>
+      <div class="phn-chapter-t">Commercial Synthesis</div>
+      <div class="phn-chapter-s">What does this mean commercially? · concise — evidence lives in Chapters 02–06</div>
+    </section>
+    <div class="card">
+      <div class="card-header">Commercial Synthesis · <span class="phn-src ai">AIOS Interpretation</span></div>
+      <div class="card-body">
+        <div class="phn-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:22px;">
+          <div><div class="phn-sublbl">What is established</div><ul class="phn-obs"><li class="new">A current 107-Shipment visible universe with substantial directional asymmetry: 84 Exports versus 23 Imports.</li><li class="new">Arcatek Patent 3468 visibly present on 17 current Shipments, concentrated entirely in the Colombia / Borgwarner Import corridor.</li><li class="new">A distributed Export structure: multiple Trading Partners, eight current gateways and nine Core Routes required to exceed 80%.</li><li class="new">A directionally segmented customs structure: 73.9% Arcatek share on Imports, 0.0% on Exports.</li></ul></div>
+          <div><div class="phn-sublbl">What is not established</div><ul class="phn-obs"><li class="chg">Formal commercial Relationship</li><li class="chg">Akzent Logistics Captured Business · Logistics Shared Wallet</li><li class="chg">Logistics Profit</li><li class="chg">Freight incumbency · tender timing · decision rights</li><li class="chg">Other-Patent activity as proven opportunity</li></ul></div>
+        </div>
+        <div class="phn-note-navy"><strong>Operational Complexity · <span class="phn-src ai">AIOS Interpretation</span></strong> — moderate-to-high visible coordination complexity is supported by the distributed Export structure combined with a directionally segmented customs structure. This is an interpretation of network structure, not proof of operational pain.</div>
+        <div class="phn-sublbl" style="margin-top:16px;">Position Akzent around</div>
+        <div class="phn-chips"><span>Operational Complexity</span><span>Cross-Border / Network Coordination</span><span>Customs &amp; Visibility</span><span>ILM / Control Tower</span><span>Relationship validation → Wallet Expansion if CLIENT is confirmed</span></div>
+        <div class="phn-note"><strong>Do not position the account as a transactional freight opportunity.</strong></div>
+      </div>
+    </div>
+
+    <section class="phn-chapter syn" id="phn-ch-8">
+      <div class="phn-chapter-n">Chapter 08</div>
+      <div class="phn-chapter-t">Seller Discovery Guide</div>
+      <div class="phn-chapter-s">Use before or during the account conversation · questions about unknowns, not PJ Facts</div>
+    </section>
+    <div class="card" style="border-top:3px solid #f59e0b;">
+      <div class="card-header">Seller Discovery Guide · <span class="phn-src dv">Discovery Validation</span></div>
+      <div class="card-body">
+        <div class="phn-dq-g">
+          <div><h4>Relationship and customs scope<a href="#phn-lane-a">Corridors A · B →</a></h4><ol start="1"><li>Confirm the formal PHINIA relationship with Arcatek Customs and Akzent Logistics independently.</li><li>Confirm whether Patent 3468 activity at Colombia corresponds to the current Arcatek service relationship and define the exact service scope.</li><li>Validate why the Monterrey / Hyundai Wia corridor uses Patent 1637 while Colombia / Borgwarner uses 3468.</li><li>Determine how customs allocation is decided by gateway, direction and Trading Partner.</li></ol></div>
+          <div><h4>Export freight ownership<a href="#phn-lane-c">Corridor C →</a></h4><ol start="5"><li>Confirm who owns freight procurement and allocation across the distributed Export network.</li><li>Identify incumbent forwarder / carrier structure, tender timing and contractual constraints.</li></ol></div>
+          <div><h4>Gateway footprint and visibility<a href="#phn-ch-5">Customs →</a></h4><ol start="7"><li>Validate whether the Colombia-named Import / Export gateways represent the same operational customs footprint.</li><li>Determine visibility / SLA requirements across Ciudad Juárez, Monterrey, Colombia, Nuevo Laredo, Nogales, Ciudad de México and San Luis Potosí.</li></ol></div>
+          <div><h4>Contestability and data<a href="#phn-ch-7">Commercial →</a></h4><ol start="9"><li>Establish whether any visible Other-Patent or uncaptured logistics activity is commercially contestable before treating it as opportunity.</li><li>Obtain authorized Akzent Logistics Captured Business data to calculate Logistics Shared Wallet at the highest reliable common precision.</li></ol></div>
+        </div>
+        <div class="phn-micro">Do not ask the account to rediscover reliable PJ Facts (volumes, gateways, Patents) — Discovery focuses on the actual Arcatek / Akzent relationship, service ownership, freight capture, decision rights, incumbent allocation, patent assignment logic, procurement / tender structure and contestability.</div>
+        <details class="phn-ev"><summary>Data availability and governance</summary><div class="phn-ev-b"><div class="phn-da">
+          <div><b>Available source data · PJ</b><ul><li>PJ Mexico Imports (62 records) + PJ Mexico Exports (270 records)</li><li>Shipment dates · direction datasets · Trading Partners · gateways</li><li>Customs Agent / Patent · Customs Regime · HS · goods descriptions · weights / values · partial addresses</li><li>Akzent Fact: Arcatek-owned Patents = 3468 + 1930</li></ul></div>
+          <div class="c"><b>AIOS Calculations</b><ul><li>Period scale · equivalent-period trend · directional mix</li><li>≥80% Core Routes · route cadence</li><li>Customs Shared Wallet · Patent portfolio · Patent × Direction × Gateway · Customs Wallet by Gateway</li><li>Trading Partner concentration · HS operational presence</li></ul></div>
+          <div class="x"><b>Missing / deactivated</b><ul><li>Missing: authorized PHINIA logistics capture · logistics financials · formal relationship confirmation · reliable modal detail · consistent PHINIA facility addresses</li><li>Deactivated: Logistics Shared Wallet · captured vs uncaptured logistics whitespace · Captured Logistics Profit · profit-based expansion analysis</li></ul></div>
+          <div class="d"><b>Pre-Claude Audit</b><ul><li>PASS with unsupported modules explicitly deactivated</li><li>No YTD annualization · no relationship inferred from PJ alone · no unsupported profit</li></ul></div>
+        </div></div></details>
+      </div>
+    </div>
+
+  </div>
+  <script>
+  /* Printing opens every PHINIA evidence panel, then restores the reader's state. */
+  window.addEventListener('beforeprint', function () { document.querySelectorAll('#view-phinia details.phn-ev:not([open])').forEach(function (d) { d.setAttribute('open', ''); d.setAttribute('data-phn-print', '1'); }); });
+  window.addEventListener('afterprint', function () { document.querySelectorAll('#view-phinia details.phn-ev[data-phn-print]').forEach(function (d) { d.removeAttribute('open'); d.removeAttribute('data-phn-print'); }); });
+  </script>
+</div>
+
 <!-- ══ INDUSTRIAS AUTOMOTRICES LODI VIEW ══ -->
 <div id="view-lodi" class="view">
   <div class="page-header">
@@ -20490,6 +21471,16 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
               <td><strong>Kitchen Equipment de San Luis</strong> <span style="font-size:10px;font-weight:600;color:#b45309;background:rgba(245,158,11,0.12);padding:1px 5px;border-radius:3px;margin-left:4px;" title="Relationship Not Fully Validated">NOT VALIDATED</span></td>
               <td><span style="color:var(--text-light);" title="AIOS Classification Not assigned &mdash; relationship not fully validated">&mdash;</span></td>
               <td style="color:var(--text-muted);" title="KITCHEN EQUIPMENT DE SAN LUIS &middot; Analysis Date 2026-09-18 &middot; Relationship: Relationship Not Fully Validated &middot; Arcatek Customs Service Status: Not Validated &middot; Akzent Logistics Service Status: Not Validated &middot; AIOS Classification: Not assigned &mdash; relationship not fully validated &middot; PJ Visible Shipments YTD: 1,458 &middot; Imports: 401 &middot; Exports: 1,057 &middot; Logistics Shared Wallet: Not Calculable &middot; Customs Shared Wallet: 50.1% &middot; Customs Import Wallet: 19.7% &middot; Customs Export Wallet: 61.7% &middot; Captured Logistics Profit: Not Available &middot; Expansion Type: Relationship Not Fully Validated">Relationship Not Fully Validated</td>
+              <td style="color:var(--text-light);" title="No AIOS Cross-Border rating supplied">&mdash;</td>
+              <td style="color:var(--text-light);" title="No AIOS Ocean rating supplied">&mdash;</td>
+              <td style="color:var(--text-light);" title="No AIOS Air rating supplied">&mdash;</td>
+              <td style="color:var(--text-light);" title="No AIOS ILM rating supplied">&mdash;</td>
+              <td style="color:#b45309;font-weight:700;font-size:11px;">Discovery Required &middot; Relationship Not Fully Validated</td>
+            </tr>
+            <tr onclick="showViewById('view-phinia')" style="cursor:pointer;">
+              <td><strong>PHINIA Componentes Mexico</strong> <span style="font-size:10px;font-weight:600;color:#b45309;background:rgba(245,158,11,0.12);padding:1px 5px;border-radius:3px;margin-left:4px;" title="Relationship Not Fully Validated">NOT VALIDATED</span></td>
+              <td><span style="color:var(--text-light);" title="AIOS Classification: Relationship Not Fully Validated">&mdash;</span></td>
+              <td style="color:var(--text-muted);" title="PHINIA COMPONENTES MEXICO &middot; Analysis Date 2026-09-19 &middot; Relationship: Relationship Not Fully Validated &middot; Arcatek Customs Service Status: Not Validated &middot; Akzent Logistics Service Status: Not Validated &middot; AIOS Classification: Relationship Not Fully Validated &mdash; customs participation visible, logistics relationship unvalidated &middot; PJ Visible Shipments YTD: 107 &middot; Imports: 23 &middot; Exports: 84 &middot; Jan&ndash;Jul 21 2025: 134 &middot; Logistics Shared Wallet: Not Calculable &middot; Customs Shared Wallet: 15.9% &middot; Customs Import Wallet: 73.9% &middot; Customs Export Wallet: 0.0% &middot; Captured Logistics Profit: Not Available">Relationship Not Fully Validated</td>
               <td style="color:var(--text-light);" title="No AIOS Cross-Border rating supplied">&mdash;</td>
               <td style="color:var(--text-light);" title="No AIOS Ocean rating supplied">&mdash;</td>
               <td style="color:var(--text-light);" title="No AIOS Air rating supplied">&mdash;</td>
@@ -81941,6 +82932,7 @@ const ACCOUNTS = [
   { id:'view-borgwarner', name:'BorgWarner PDS Irapuato', sub:'BORGWARNER PDS IRAPUATO &middot; Relationship Not Fully Validated &middot; Arcatek Customs Not Validated &middot; Akzent Logistics Not Validated &middot; AIOS Classification Not Assigned &middot; Analysis Date 18-Sep-2026 &middot; PJ Current YTD 1,240 Shipments &middot; 888 Imports &middot; 352 Exports &middot; equivalent-period -20.3% &middot; 2025 Full Year 2,479 &middot; Customs Shared Wallet 34.5% &middot; Arcatek Patent 3468 &middot; Other Patents 3076 3164 1944 3415 1680 &middot; Logistics Shared Wallet Not Calculable &middot; Import Core Routes 48 to 80.2% &middot; Export Core Routes 9 to 80.7% &middot; Nuevo Laredo &middot; Puebla &middot; Quer&eacute;taro &middot; Manzanillo &middot; Altamira &middot; Colombia NL &middot; Piedras Negras &middot; Tijuana &middot; Toluca &middot; AIFA &middot; AICM &middot; Double Stack Rail &middot; General Motors &middot; IMMEX &middot; Patent &times; Gateway &middot; Customs Wallet by Gateway &middot; Discovery Required', rel:'CLIENT', cls:'&mdash;', clsPill:'' },
   { id:'view-haldex',     name:'HALDEX Products de Mexico', sub:'HALDEX PRODUCTS DE MEXICO &middot; Relationship Not Fully Validated &middot; Arcatek Customs Not Validated &middot; Akzent Logistics Not Validated &middot; AIOS Classification Not Assigned &middot; Analysis Date 18-Sep-2026 &middot; PJ Current YTD 416 Shipments &middot; 287 Imports &middot; 129 Exports &middot; equivalent-period -61.2% &middot; 2025 Full Year 1,835 &middot; Customs Shared Wallet 76.4% &middot; Arcatek Patents 3468 1930 &middot; Other Patents 3438 3772 1890 3727 &middot; Logistics Shared Wallet Not Calculable &middot; Import Core Routes 4 to 81.5% &middot; Export Core Routes 8 to 82.9% &middot; Colombia NL &middot; Nuevo Laredo &middot; Mariano Escobedo Airport &middot; Monterrey &middot; Altamira &middot; Manzanillo &middot; L&aacute;zaro C&aacute;rdenas &middot; Puebla &middot; Kansas City &middot; IMMEX &middot; Patent &times; Gateway &middot; Customs Wallet by Gateway &middot; Discovery Required', rel:'CLIENT', cls:'&mdash;', clsPill:'' },
   { id:'view-kitchen',    name:'Kitchen Equipment de San Luis', sub:'KITCHEN EQUIPMENT DE SAN LUIS &middot; Relationship Not Fully Validated &middot; Arcatek Customs Not Validated &middot; Akzent Logistics Not Validated &middot; AIOS Classification Not Assigned &middot; Analysis Date 18-Sep-2026 &middot; PJ Current YTD 1,458 Shipments &middot; 401 Imports &middot; 1,057 Exports &middot; equivalent-period -8.9% &middot; 2025 Full Year 2,612 &middot; Customs Shared Wallet 50.1% &middot; Arcatek Patent 3468 &middot; Other Patents 3483 3164 3699 &middot; Logistics Shared Wallet Not Calculable &middot; Import Core Routes 6 to 82.5% &middot; Export Core Routes 16 to 80.2% &middot; Nuevo Laredo &middot; Colombia NL &middot; Quer&eacute;taro &middot; Guadalajara &middot; AIFA &middot; AICM &middot; Altamira &middot; Manzanillo &middot; Veracruz &middot; H&amp;K International &middot; H&amp;K Canada &middot; IMMEX &middot; Patent &times; Gateway &middot; Customs Wallet by Gateway &middot; Discovery Required', rel:'CLIENT', cls:'&mdash;', clsPill:'' },
+  { id:'view-phinia',     name:'PHINIA Componentes Mexico', sub:'PHINIA COMPONENTES MEXICO &middot; Relationship Not Fully Validated &middot; Arcatek Customs Not Validated &middot; Akzent Logistics Not Validated &middot; Analysis Date 19-Sep-2026 &middot; PJ Current YTD 107 Shipments &middot; 23 Imports &middot; 84 Exports &middot; equivalent-period -20.1% &middot; 2025 Full Year 225 &middot; Customs Shared Wallet 15.9% &middot; Arcatek Patent 3468 &middot; Other Patents 3483 3438 3842 1653 1637 &middot; Logistics Shared Wallet Not Calculable &middot; Import Core Routes 2 to 100.0% &middot; Export Core Routes 9 to 82.1% &middot; Colombia NL &middot; Monterrey &middot; Nuevo Laredo &middot; Ciudad Ju&aacute;rez &middot; Nogales &middot; Ciudad de M&eacute;xico &middot; San Luis Potos&iacute; &middot; Toluca &middot; Borgwarner Comercializadora PDS &middot; Hyundai Wia &middot; Reynoso International Systems &middot; Steel Technologies &middot; Alternators &middot; Starter Motors &middot; Customs Wallet by Gateway &middot; Discovery Required', rel:'CLIENT', cls:'&mdash;', clsPill:'' },
   { id:'view-lodi',      name:'Industrias Automotrices Lodi', sub:'Automotive Components / Industrial Manufacturing · Cross-Border Multimodal Operation', rel:'LEAD',   cls:'AA',   clsPill:'aa'  },
   { id:'view-organizacion-industrial-vega', name:'Organización Industrial Vega', sub:'Industrial Manufacturing · Battery Components · Plastics · Monterrey, Nuevo León', rel:'LEAD',   cls:'AA',   clsPill:'aa'  },
   { id:'view-wbtm',      name:'WBTM S. de R.L. de C.V.',   sub:'Automotive Seating / Interiors / Components · IMMEX · Korea–Mexico–USA', rel:'LEAD',   cls:'AAA',  clsPill:'aaa' },
@@ -82106,6 +83098,7 @@ var INDUSTRY_BY_ID = {
   'view-borgwarner':'Auto',
   'view-haldex':'Auto',
   'view-kitchen':'Industrial',
+  'view-phinia':'Auto',
   'view-organizacion-industrial-vega':'Industrial', 'view-wbtm':'Auto', 'view-vamasa':'Medical',
   'view-palmex':'Food', 'view-star':'Food', 'view-termolita':'Industrial',
   'view-sanfer-salud-animal':'Animal Health', 'view-saintgobain':'Industrial', 'view-brahm':'Industrial',
