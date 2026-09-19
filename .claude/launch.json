@@ -1,7 +1,6 @@
 {
   "version": "0.0.1",
   "configurations": [
-    { "name": "aios-dashboard", "runtimeExecutable": "python3", "runtimeArgs": ["-m", "http.server", "8811"], "port": 8811 },
-    { "name": "enerpres-dry", "runtimeExecutable": "python3", "runtimeArgs": ["-m", "http.server", "8823", "--directory", "/private/tmp/claude-501/-Users-patriciojacobsernagarza-Documents-GitHub-akzent-aios-dashboard/96525d96-4ccf-41cb-b2fc-a2d9bcf9f54f/scratchpad/dry"], "port": 8823 }
+    { "name": "aios-dashboard", "runtimeExecutable": "python3", "runtimeArgs": ["-m", "http.server", "8811"], "port": 8811 }
   ]
 }
