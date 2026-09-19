@@ -9295,6 +9295,718 @@ main {
 }
 @media print { #view-siete-leguas .slg-gsrc { white-space:normal; max-width:none; } #view-siete-leguas .slg-hm td { padding:4px; } #view-siete-leguas .slg-wtr > div { break-inside:avoid; } }
 
+/* GRUPO ESSEX SOLUTIONS — scoped view components (#view-grupo-essex only). AIOS Analysis 19-Sep-2026 · Relationship Not Fully Validated (Arcatek Customs Confirmed Client · Akzent Logistics Not Validated) · 8-chapter seller report. */
+#view-grupo-essex .num { text-align:right; }
+#view-grupo-essex .gex-sublbl { font-size:10px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal-dim); margin-bottom:8px; }
+#view-grupo-essex .gex-sublbl.muted { color:var(--text-light); }
+#view-grupo-essex .gex-eyebrow { font-size:9px; font-weight:800; letter-spacing:1.3px; text-transform:uppercase; color:var(--teal-dim); }
+#view-grupo-essex .gex-src { display:inline-block; font-size:8.5px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; padding:1px 6px; border-radius:3px; vertical-align:1px; }
+#view-grupo-essex .gex-src.pj { color:var(--navy); background:rgba(13,43,94,0.08); }
+#view-grupo-essex .gex-src.ak { color:#047857; background:rgba(16,185,129,0.12); }
+#view-grupo-essex .gex-calc { display:inline-block; font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--teal-dim); border:1px solid rgba(0,180,216,0.45); padding:1px 6px; border-radius:3px; }
+#view-grupo-essex .gex-mono { font-family:ui-monospace,Menlo,monospace; font-weight:700; color:var(--navy); }
+#view-grupo-essex .gex-muted td { color:var(--text-muted); }
+
+/* Chapters */
+#view-grupo-essex .gex-chapter { margin:26px 0 12px; padding:16px 22px; border-radius:8px; color:#fff; background:linear-gradient(120deg,var(--navy) 0%,#1e4a8a 100%); position:relative; overflow:hidden; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-grupo-essex .gex-chapter:first-of-type { margin-top:8px; }
+#view-grupo-essex .gex-chapter::after { content:""; position:absolute; right:0; top:0; bottom:0; width:6px; background:var(--teal); }
+#view-grupo-essex .gex-chapter.exec::after { background:#10b981; }
+#view-grupo-essex .gex-chapter.cus { background:linear-gradient(120deg,#0b4f63 0%,#0e7490 100%); }
+#view-grupo-essex .gex-chapter.cus::after { background:#f59e0b; }
+#view-grupo-essex .gex-chapter.syn { background:linear-gradient(120deg,#064e3b 0%,#047857 100%); }
+#view-grupo-essex .gex-chapter-n { font-size:9.5px; font-weight:800; letter-spacing:2px; text-transform:uppercase; opacity:0.75; }
+#view-grupo-essex .gex-chapter-t { font-size:22px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; line-height:1.2; margin-top:2px; }
+#view-grupo-essex .gex-chapter-s { font-size:11.5px; font-weight:600; opacity:0.85; margin-top:3px; }
+#view-grupo-essex .gex-chapnav { display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-top:14px; }
+#view-grupo-essex .gex-chapnav > span { font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-light); }
+#view-grupo-essex .gex-chapnav button { font:inherit; font-size:11px; font-weight:800; color:var(--navy); background:var(--surface); border:1px solid var(--border); border-radius:5px; padding:6px 11px; cursor:pointer; }
+#view-grupo-essex .gex-chapnav button:hover { border-color:var(--teal); color:var(--teal-dim); }
+
+/* Executive viewport */
+#view-grupo-essex .gex-hero { display:grid; grid-template-columns:1.15fr 1fr 1fr; gap:14px; align-items:stretch; }
+#view-grupo-essex .gex-hero > div { padding:13px 16px; background:var(--surface); border:1px solid var(--border); border-radius:7px; }
+#view-grupo-essex .gex-hero .k { font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-grupo-essex .gex-hero .v { font-size:34px; font-weight:800; color:var(--navy); line-height:1.1; margin-top:2px; }
+#view-grupo-essex .gex-hero .v small { font-size:12px; font-weight:700; color:var(--text-muted); }
+#view-grupo-essex .gex-hero .s { font-size:10.5px; color:var(--text-muted); line-height:1.55; margin-top:5px; }
+#view-grupo-essex .gex-split { display:flex; height:14px; border-radius:7px; overflow:hidden; margin-top:8px; }
+#view-grupo-essex .gex-split > div { height:100%; }
+#view-grupo-essex .gex-delta { font-size:22px; font-weight:800; line-height:1.15; }
+#view-grupo-essex .gex-delta.dn { color:#b91c1c; }
+#view-grupo-essex .gex-delta.up { color:#047857; }
+#view-grupo-essex .gex-trendrow { display:flex; gap:14px; flex-wrap:wrap; margin-top:7px; }
+#view-grupo-essex .gex-trendrow div { font-size:10.5px; color:var(--text-muted); }
+#view-grupo-essex .gex-trendrow b { display:block; font-size:15px; font-weight:800; }
+
+/* The two-wallet asymmetry — the signature visual of this account */
+#view-grupo-essex .gex-asym { display:grid; grid-template-columns:1fr 46px 1fr; gap:10px; align-items:center; margin-top:4px; }
+#view-grupo-essex .gex-asym > div.w { padding:16px 18px; border-radius:8px; border:1.5px solid var(--border); background:var(--surface); }
+#view-grupo-essex .gex-asym .w.log { border-top:4px solid #94a3b8; }
+#view-grupo-essex .gex-asym .w.cus { border-top:4px solid var(--teal); background:rgba(0,180,216,0.04); }
+#view-grupo-essex .gex-asym .wk { font-size:9.5px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); }
+#view-grupo-essex .gex-asym .wv { font-size:52px; font-weight:800; line-height:1.05; margin-top:2px; letter-spacing:-1px; }
+#view-grupo-essex .gex-asym .log .wv { color:#64748b; }
+#view-grupo-essex .gex-asym .cus .wv { color:var(--teal-dim); }
+#view-grupo-essex .gex-asym .wf { font-size:11px; color:var(--text-muted); margin-top:3px; line-height:1.5; }
+#view-grupo-essex .gex-asym .wbar { height:10px; border-radius:5px; background:#e6eaf1; overflow:hidden; margin-top:10px; }
+#view-grupo-essex .gex-asym .wbar > div { height:100%; }
+#view-grupo-essex .gex-asym .vs { text-align:center; font-size:11px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-light); }
+#view-grupo-essex .gex-asym-note { margin-top:12px; padding:11px 15px; background:rgba(13,43,94,0.04); border-left:3px solid var(--navy); border-radius:0 5px 5px 0; font-size:11px; color:var(--text-muted); line-height:1.65; }
+
+/* Signal / Interpretation / Discovery — always three visually separate layers */
+#view-grupo-essex .gex-sig { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:14px; }
+#view-grupo-essex .gex-sig > div { padding:12px 15px; border-radius:6px; font-size:11px; line-height:1.6; color:var(--text-muted); }
+#view-grupo-essex .gex-sig b { display:block; font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; margin-bottom:4px; }
+#view-grupo-essex .gex-sig .s1 { background:rgba(13,43,94,0.04); border-top:3px solid var(--navy); }
+#view-grupo-essex .gex-sig .s1 b { color:var(--navy); }
+#view-grupo-essex .gex-sig .s2 { background:rgba(0,180,216,0.05); border-top:3px solid var(--teal); }
+#view-grupo-essex .gex-sig .s2 b { color:var(--teal-dim); }
+#view-grupo-essex .gex-sig .s3 { background:rgba(245,158,11,0.05); border-top:3px solid #f59e0b; }
+#view-grupo-essex .gex-sig .s3 b { color:#b45309; }
+
+/* Notes */
+#view-grupo-essex .gex-note { margin-top:12px; padding:11px 15px; background:rgba(245,158,11,0.05); border-left:3px solid #f59e0b; border-radius:0 5px 5px 0; font-size:11px; color:var(--text-muted); line-height:1.65; }
+#view-grupo-essex .gex-note-navy { margin-top:12px; padding:11px 15px; background:rgba(13,43,94,0.04); border-left:3px solid var(--navy); border-radius:0 5px 5px 0; font-size:11px; color:var(--text-muted); line-height:1.65; }
+#view-grupo-essex .gex-note-na { margin-top:12px; padding:11px 15px; background:rgba(148,163,184,0.09); border-left:3px solid #94a3b8; border-radius:0 5px 5px 0; font-size:11px; color:var(--text-muted); line-height:1.65; }
+
+/* Progressive-disclosure ladder */
+#view-grupo-essex .gex-ladder { display:flex; flex-wrap:wrap; gap:5px; align-items:center; font-size:10px; font-weight:800; letter-spacing:0.4px; text-transform:uppercase; color:var(--navy); }
+#view-grupo-essex .gex-ladder span { background:var(--surface); border:1px solid var(--border); padding:3px 9px; border-radius:4px; }
+#view-grupo-essex .gex-ladder i { font-style:normal; color:var(--text-light); }
+
+/* Bar rows (modes, gateways, geography, partners, HS) */
+#view-grupo-essex .gex-rows { display:flex; flex-direction:column; gap:7px; }
+#view-grupo-essex .gex-row { display:grid; grid-template-columns:minmax(170px,1.5fr) 1fr 108px; gap:10px; align-items:center; padding:5px 0; border-bottom:1px solid var(--border); }
+#view-grupo-essex .gex-row:last-child { border-bottom:none; }
+#view-grupo-essex .gex-row .lbl { font-size:11.5px; font-weight:700; color:var(--navy); line-height:1.4; word-break:break-word; }
+#view-grupo-essex .gex-row .lbl em { display:block; font-style:normal; font-size:9.5px; font-weight:600; color:var(--text-muted); }
+#view-grupo-essex .gex-row .bar { height:9px; border-radius:5px; background:#e6eaf1; overflow:hidden; }
+#view-grupo-essex .gex-row .bar > div { height:100%; }
+#view-grupo-essex .gex-row .val { text-align:right; font-size:12px; font-weight:800; color:var(--navy); white-space:nowrap; }
+#view-grupo-essex .gex-row .val span { font-size:10px; font-weight:700; color:var(--text-muted); margin-left:4px; }
+
+/* Route tables */
+#view-grupo-essex .gex-route-table { width:100%; min-width:1160px; border-collapse:collapse; font-size:11px; }
+#view-grupo-essex .gex-route-table td:nth-child(2),
+#view-grupo-essex .gex-route-table td:nth-child(4) { min-width:150px; }
+#view-grupo-essex .gex-route-table td:nth-child(3) { min-width:190px; }
+#view-grupo-essex .gex-route-table th { position:sticky; top:0; z-index:2; background:var(--navy); color:#fff; font-size:8.5px; font-weight:800; letter-spacing:0.7px; text-transform:uppercase; padding:8px 7px; text-align:left; white-space:nowrap; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-grupo-essex .gex-route-table th.num { text-align:right; }
+#view-grupo-essex .gex-route-table td { padding:7px; border-bottom:1px solid var(--border); vertical-align:top; }
+#view-grupo-essex .gex-route-table tbody tr:hover { background:rgba(0,180,216,0.04); }
+#view-grupo-essex .gex-rank { width:34px; }
+#view-grupo-essex .gex-rank-pill { display:inline-block; min-width:26px; text-align:center; font-size:10px; font-weight:800; color:var(--navy); background:rgba(13,43,94,0.07); border-radius:4px; padding:2px 5px; }
+#view-grupo-essex .gex-ent strong { font-size:11px; font-weight:700; color:var(--navy); line-height:1.35; display:block; }
+#view-grupo-essex .gex-ent .gex-na { font-size:9.5px; font-weight:600; color:var(--text-light); font-style:italic; }
+#view-grupo-essex .gex-ent .gex-self { display:inline-block; font-size:8px; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--navy); background:rgba(13,43,94,0.07); padding:1px 5px; border-radius:3px; margin-top:3px; }
+#view-grupo-essex .gex-gw-name { font-size:9.5px; color:var(--text-muted); line-height:1.4; margin-top:3px; word-break:break-word; }
+#view-grupo-essex .gex-cum { min-width:78px; }
+#view-grupo-essex .gex-cum-bar { height:4px; border-radius:2px; background:#e6eaf1; overflow:hidden; margin-top:3px; }
+#view-grupo-essex .gex-cum-bar > div { height:100%; background:var(--teal); }
+#view-grupo-essex .gex-dates { font-size:9.5px; color:var(--text-muted); white-space:nowrap; }
+#view-grupo-essex .gex-scroll { overflow-x:auto; max-height:640px; overflow-y:auto; border:1px solid var(--border); border-radius:6px; }
+
+/* Patent components */
+#view-grupo-essex .gex-pat { display:inline-block; font-size:10px; font-weight:800; letter-spacing:0.5px; padding:2px 7px; border-radius:4px; white-space:nowrap; }
+#view-grupo-essex .gex-pat.ak { color:#fff; background:var(--teal-dim); }
+#view-grupo-essex .gex-pat.ot { color:#92400e; background:rgba(245,158,11,0.16); border:1px solid rgba(245,158,11,0.4); }
+#view-grupo-essex .gex-pat.off { color:var(--text-light); background:rgba(148,163,184,0.15); border:1px dashed rgba(148,163,184,0.7); }
+#view-grupo-essex .gex-gwr { display:grid; grid-template-columns:minmax(190px,1.4fr) 1fr 150px; gap:12px; align-items:center; padding:8px 0; border-bottom:1px solid var(--border); }
+#view-grupo-essex .gex-gwr:last-child { border-bottom:none; }
+#view-grupo-essex .gex-gwr .gex-cw-lbl { font-size:11.5px; font-weight:700; color:var(--navy); line-height:1.4; word-break:break-word; }
+#view-grupo-essex .gex-gwr .gex-cw-sub { font-size:9.5px; color:var(--text-muted); margin-top:2px; }
+#view-grupo-essex .gex-cw-bar { display:flex; height:16px; border-radius:8px; overflow:hidden; background:#e6eaf1; }
+#view-grupo-essex .gex-cw-bar > div { height:100%; }
+#view-grupo-essex .gex-cw-ak { background:var(--teal); }
+#view-grupo-essex .gex-cw-ot { background:#f59e0b; }
+#view-grupo-essex .gex-cw-legend { text-align:right; font-size:10px; color:var(--text-muted); white-space:nowrap; }
+#view-grupo-essex .gex-cw-legend b { display:block; font-size:15px; font-weight:800; color:var(--navy); }
+#view-grupo-essex .gex-gwr.hot { background:rgba(0,180,216,0.05); border-radius:6px; padding:10px 10px; border-bottom:none; margin-bottom:4px; }
+#view-grupo-essex .gex-gwr.hot .gex-cw-bar { height:22px; }
+#view-grupo-essex .gex-gwr.zero .gex-cw-legend b { color:#b45309; }
+#view-grupo-essex .gex-gwr.small { opacity:0.72; }
+#view-grupo-essex .gex-gwr.small .gex-cw-lbl { font-size:10.5px; }
+#view-grupo-essex .gex-gwr.small .gex-cw-bar { height:9px; }
+
+/* Materiality scale — keeps a 100% share on small volume from overpowering larger volumes */
+#view-grupo-essex .gex-matbar { height:6px; border-radius:3px; background:#e6eaf1; overflow:hidden; margin-top:4px; }
+#view-grupo-essex .gex-matbar > div { height:100%; background:var(--navy); opacity:0.55; }
+#view-grupo-essex .gex-matlbl { font-size:8.5px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:var(--text-light); margin-top:3px; }
+
+/* Deep dives */
+#view-grupo-essex .gex-dd { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+#view-grupo-essex .gex-dd > div { padding:13px 16px; background:var(--surface); border:1px solid var(--border); border-top:3px solid #f59e0b; border-radius:7px; }
+#view-grupo-essex .gex-dd .h { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+#view-grupo-essex .gex-dd .n { font-size:26px; font-weight:800; color:var(--navy); line-height:1.1; }
+#view-grupo-essex .gex-dd .n small { font-size:10px; font-weight:700; color:var(--text-muted); }
+#view-grupo-essex .gex-dd .g { font-size:10.5px; color:var(--navy); font-weight:700; margin-top:5px; line-height:1.5; }
+#view-grupo-essex .gex-dd .w { font-size:10px; color:var(--text-muted); margin-top:4px; line-height:1.5; }
+#view-grupo-essex .gex-dd .tp { font-size:10px; color:var(--text-muted); margin-top:6px; line-height:1.6; }
+#view-grupo-essex .gex-dd .tp em { font-style:normal; color:var(--navy); font-weight:700; }
+#view-grupo-essex .gex-dd .tp.na { color:var(--text-light); font-style:italic; }
+
+/* Profit provenance */
+#view-grupo-essex .gex-prov { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+#view-grupo-essex .gex-prov > div { padding:14px 17px; background:rgba(148,163,184,0.07); border:1px dashed rgba(148,163,184,0.7); border-radius:7px; }
+#view-grupo-essex .gex-prov .k { font-size:9.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-grupo-essex .gex-prov .v { font-size:19px; font-weight:800; color:#64748b; margin-top:3px; line-height:1.2; }
+#view-grupo-essex .gex-prov .s { font-size:10.5px; color:var(--text-muted); margin-top:4px; line-height:1.55; }
+
+/* Positioning */
+#view-grupo-essex .gex-pos { display:grid; grid-template-columns:repeat(5,1fr); gap:9px; }
+#view-grupo-essex .gex-pos > div { padding:12px 13px; background:var(--surface); border:1px solid var(--border); border-top:3px solid #10b981; border-radius:7px; }
+#view-grupo-essex .gex-pos b { display:block; font-size:11.5px; font-weight:800; color:var(--navy); line-height:1.35; }
+#view-grupo-essex .gex-pos span { display:block; font-size:10px; color:var(--text-muted); margin-top:4px; line-height:1.5; }
+
+#view-grupo-essex .gex-dlist { margin:6px 0 0 16px; padding:0; font-size:11px; color:var(--text-muted); line-height:1.75; }
+#view-grupo-essex .gex-dlist li { margin:2px 0; }
+#view-grupo-essex .gex-dlist b { color:var(--navy); }
+
+@media (max-width: 1100px) {
+  #view-grupo-essex .gex-pos { grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width: 900px) {
+  #view-grupo-essex .gex-hero, #view-grupo-essex .gex-sig, #view-grupo-essex .gex-dd,
+  #view-grupo-essex .gex-prov, #view-grupo-essex .gex-pos { grid-template-columns:1fr; }
+  #view-grupo-essex .gex-asym { grid-template-columns:1fr; }
+  #view-grupo-essex .gex-asym .vs { padding:4px 0; }
+  #view-grupo-essex .gex-row { grid-template-columns:1fr 92px; }
+  #view-grupo-essex .gex-row .bar { grid-column:1 / -1; }
+  #view-grupo-essex .gex-gwr { grid-template-columns:1fr; }
+  #view-grupo-essex .gex-gwr .gex-cw-legend { text-align:left; }
+}
+/* Print: every table and appendix opens in full, scroll containers release. */
+@media print {
+  #view-grupo-essex .gex-scroll { overflow:visible !important; max-height:none !important; border:none; }
+  #view-grupo-essex .gex-route-table th { position:static; }
+  #view-grupo-essex .gex-route-table { min-width:0; font-size:8.5px; }
+}
+/* Customs-client additions — customs chapter prominence, triple wallet, HS presence matrix */
+#view-grupo-essex .gex-chapter.cus { box-shadow:0 0 0 2px rgba(245,158,11,0.35); }
+#view-grupo-essex .gex-chapter .gex-prim { display:inline-block; margin-top:8px; font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; background:#f59e0b; color:#1f2937; padding:3px 9px; border-radius:4px; }
+#view-grupo-essex .gex-tri { display:grid; grid-template-columns:1fr 1.35fr 0.8fr; gap:12px; align-items:stretch; margin-top:4px; }
+#view-grupo-essex .gex-tri > div { padding:15px 17px; border-radius:8px; border:1.5px solid var(--border); background:var(--surface); }
+#view-grupo-essex .gex-tri .log { border-top:4px solid #94a3b8; }
+#view-grupo-essex .gex-tri .cus { border:2px solid var(--teal); border-top:5px solid var(--teal); background:rgba(0,180,216,0.05); }
+#view-grupo-essex .gex-tri .pro { border-style:dashed; background:rgba(148,163,184,0.06); }
+#view-grupo-essex .gex-tri .wk { font-size:9.5px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); }
+#view-grupo-essex .gex-tri .wv { font-size:46px; font-weight:800; line-height:1.05; margin-top:3px; letter-spacing:-1px; }
+#view-grupo-essex .gex-tri .log .wv { color:#64748b; }
+#view-grupo-essex .gex-tri .cus .wv { color:var(--teal-dim); font-size:58px; }
+#view-grupo-essex .gex-tri .pro .wv { font-size:15px; font-weight:800; color:#64748b; letter-spacing:0; line-height:1.35; margin-top:8px; }
+#view-grupo-essex .gex-tri .wf { font-size:11px; color:var(--text-muted); margin-top:4px; line-height:1.55; }
+#view-grupo-essex .gex-tri .wbar { height:10px; border-radius:5px; background:#e6eaf1; overflow:hidden; margin-top:10px; display:flex; }
+#view-grupo-essex .gex-tri .wbar > div { height:100%; }
+#view-grupo-essex .gex-thesis { margin-top:16px; padding:15px 19px; border-radius:8px; background:linear-gradient(120deg,rgba(13,43,94,0.05),rgba(0,180,216,0.07)); border-left:4px solid var(--teal); font-size:13px; line-height:1.65; color:var(--navy); font-weight:600; }
+#view-grupo-essex .gex-thesis b { font-weight:800; }
+#view-grupo-essex .gex-dir { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+#view-grupo-essex .gex-dir > div { padding:13px 16px; border:1px solid var(--border); border-radius:7px; background:var(--surface); }
+#view-grupo-essex .gex-dir .k { font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-grupo-essex .gex-dir .v { font-size:30px; font-weight:800; color:var(--teal-dim); line-height:1.1; margin-top:2px; }
+#view-grupo-essex .gex-dir .v.nv { color:var(--navy); }
+#view-grupo-essex .gex-dir .s { font-size:10.5px; color:var(--text-muted); line-height:1.55; margin-top:5px; }
+#view-grupo-essex .gex-hs { width:100%; border-collapse:collapse; font-size:11.5px; }
+#view-grupo-essex .gex-hs th { background:var(--navy); color:#fff; font-size:8.5px; font-weight:800; letter-spacing:0.7px; text-transform:uppercase; padding:8px; text-align:center; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-grupo-essex .gex-hs th:first-child { text-align:left; }
+#view-grupo-essex .gex-hs td { padding:7px 8px; border-bottom:1px solid var(--border); text-align:center; }
+#view-grupo-essex .gex-hs td:first-child { text-align:left; }
+#view-grupo-essex .gex-hs .y { color:var(--teal-dim); font-weight:800; }
+#view-grupo-essex .gex-hs .n { color:var(--text-light); font-size:10px; }
+#view-grupo-essex .gex-cp { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+#view-grupo-essex .gex-cp > div { padding:11px 14px; border:1px solid var(--border); border-radius:7px; background:var(--surface); font-size:10.5px; color:var(--text-muted); line-height:1.55; }
+#view-grupo-essex .gex-cp b { display:block; font-size:11.5px; color:var(--navy); font-weight:700; margin-bottom:3px; }
+#view-grupo-essex .gex-cp .r { font-size:9px; font-weight:800; letter-spacing:0.8px; text-transform:uppercase; color:var(--teal-dim); }
+#view-grupo-essex .gex-ov { display:inline-block; font-size:11px; font-weight:800; letter-spacing:0.8px; text-transform:uppercase; color:#b45309; background:rgba(245,158,11,0.12); border:1px solid rgba(245,158,11,0.45); padding:4px 10px; border-radius:5px; }
+@media (max-width: 900px) {
+  #view-grupo-essex .gex-tri, #view-grupo-essex .gex-dir, #view-grupo-essex .gex-cp { grid-template-columns:1fr; }
+  #view-grupo-essex .gex-2col { grid-template-columns:1fr !important; }
+}
+@media print {
+  #view-grupo-essex .gex-tri .cus .wv { font-size:42px; }
+}
+/* Customs-client additions (II) — relationship strip, priorities, discovery, modal bars */
+#view-grupo-essex .gex-rel { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; }
+#view-grupo-essex .gex-rel > div { padding:10px 13px; border:1px solid var(--border); border-radius:7px; background:var(--surface); }
+#view-grupo-essex .gex-rel .k { font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-grupo-essex .gex-rel .v { font-size:13px; font-weight:800; color:var(--navy); margin-top:3px; line-height:1.3; }
+#view-grupo-essex .gex-rel .v.on { color:#047857; }
+#view-grupo-essex .gex-rel .v.off { color:#64748b; }
+#view-grupo-essex .gex-rel .v.x { color:var(--teal-dim); }
+#view-grupo-essex .gex-flow { display:flex; flex-wrap:wrap; align-items:center; gap:6px; font-size:11px; font-weight:800; color:var(--navy); }
+#view-grupo-essex .gex-flow span { background:var(--surface); border:1px solid var(--border); padding:4px 10px; border-radius:5px; }
+#view-grupo-essex .gex-flow i { font-style:normal; color:var(--text-light); }
+#view-grupo-essex .gex-sigc { display:grid; grid-template-columns:1.4fr 1fr; gap:12px; }
+#view-grupo-essex .gex-sigc > div { padding:15px 17px; border:1px solid var(--border); border-radius:8px; background:var(--surface); border-top:4px solid var(--navy); }
+#view-grupo-essex .gex-sigc .n { font-size:40px; font-weight:800; color:var(--navy); line-height:1.05; margin-top:10px; }
+#view-grupo-essex .gex-sigc .n small { font-size:12px; font-weight:700; color:var(--text-muted); }
+#view-grupo-essex .gex-sigc .s { font-size:10.5px; color:var(--text-muted); line-height:1.55; margin-top:6px; }
+#view-grupo-essex .gex-prio { counter-reset:lp; list-style:none; margin:0; padding:0; display:grid; gap:8px; }
+#view-grupo-essex .gex-prio li { counter-increment:lp; display:grid; grid-template-columns:34px 1fr auto; gap:12px; align-items:center; padding:10px 14px; border:1px solid var(--border); border-radius:7px; background:var(--surface); font-size:12px; color:var(--navy); font-weight:700; line-height:1.45; }
+#view-grupo-essex .gex-prio li::before { content:counter(lp); display:flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:50%; background:var(--navy); color:#fff; font-size:12px; font-weight:800; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-grupo-essex .gex-prio li em { font-style:normal; font-size:9px; font-weight:800; letter-spacing:0.8px; text-transform:uppercase; padding:3px 8px; border-radius:4px; white-space:nowrap; }
+#view-grupo-essex .gex-prio li em.c { color:var(--teal-dim); background:rgba(0,180,216,0.1); }
+#view-grupo-essex .gex-prio li em.l { color:#475569; background:rgba(148,163,184,0.18); }
+#view-grupo-essex .gex-dq { display:grid; grid-template-columns:repeat(3,1fr); gap:9px; }
+#view-grupo-essex .gex-dq > div { padding:11px 14px; border:1px solid var(--border); border-left:3px solid #f59e0b; border-radius:0 7px 7px 0; background:var(--surface); font-size:11.5px; font-weight:700; color:var(--navy); line-height:1.5; }
+#view-grupo-essex .gex-dq > div span { display:block; font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:#b45309; margin-bottom:3px; }
+#view-grupo-essex .gex-gwi { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-top:14px; }
+#view-grupo-essex .gex-gwi > div { padding:11px 14px; border:1px solid var(--border); border-top:3px solid var(--teal); border-radius:7px; background:var(--surface); }
+#view-grupo-essex .gex-gwi > div.z { border-top-color:#f59e0b; }
+#view-grupo-essex .gex-gwi b { display:block; font-size:11.5px; font-weight:800; color:var(--navy); }
+#view-grupo-essex .gex-gwi span { display:block; font-size:10.5px; color:var(--text-muted); line-height:1.55; margin-top:4px; }
+@media (max-width: 1100px) {
+  #view-grupo-essex .gex-rel { grid-template-columns:repeat(3,1fr); }
+  #view-grupo-essex .gex-gwi, #view-grupo-essex .gex-dq { grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width: 900px) {
+  #view-grupo-essex .gex-rel, #view-grupo-essex .gex-sigc, #view-grupo-essex .gex-gwi, #view-grupo-essex .gex-dq { grid-template-columns:1fr; }
+  #view-grupo-essex .gex-prio li { grid-template-columns:34px 1fr; }
+  #view-grupo-essex .gex-prio li em { grid-column:2; justify-self:start; }
+}
+/* Deep-lane components — provenance tags, lane concentration, corridor cards, TP × Lane, persistence, matrix, roadmap */
+#view-grupo-essex .gex-src.ai { color:var(--teal-dim); background:rgba(0,180,216,0.1); }
+#view-grupo-essex .gex-src.dv { color:#b45309; background:rgba(245,158,11,0.13); }
+#view-grupo-essex .gex-src.ca { color:var(--teal-dim); background:transparent; border:1px solid rgba(0,180,216,0.45); }
+#view-grupo-essex .gex-micro { font-size:10px; font-style:italic; color:var(--text-muted); margin-top:6px; }
+#view-grupo-essex .gex-badges { display:flex; gap:6px; align-items:center; }
+#view-grupo-essex .gex-dw { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+#view-grupo-essex .gex-dw > div { padding:16px 18px; border-radius:9px; border:1.5px solid var(--border); background:var(--surface); }
+#view-grupo-essex .gex-dw .log { border-top:5px solid #94a3b8; }
+#view-grupo-essex .gex-dw .cus { border-top:5px solid var(--teal); background:rgba(0,180,216,0.04); }
+#view-grupo-essex .gex-dw .t { font-size:10px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); }
+#view-grupo-essex .gex-dw .big { font-size:50px; font-weight:800; line-height:1.05; letter-spacing:-1px; margin-top:4px; }
+#view-grupo-essex .gex-dw .log .big { color:#64748b; }
+#view-grupo-essex .gex-dw .cus .big { color:var(--teal-dim); }
+#view-grupo-essex .gex-dw .eq { font-size:13px; font-weight:800; color:var(--navy); margin-top:2px; }
+#view-grupo-essex .gex-dw .lab { margin-top:12px; font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-light); border-top:1px dashed var(--border); padding-top:8px; }
+#view-grupo-essex .gex-conc { position:relative; margin:30px 0 26px; }
+#view-grupo-essex .gex-conc-bar { display:flex; height:30px; border-radius:6px; overflow:hidden; background:#e6eaf1; }
+#view-grupo-essex .gex-conc-bar > div { height:100%; border-right:1.5px solid #fff; display:flex; align-items:center; justify-content:center; font-size:9.5px; font-weight:800; color:#fff; overflow:hidden; white-space:nowrap; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-grupo-essex .gex-conc-mk { position:absolute; top:-22px; bottom:-22px; border-left:2px dashed var(--navy); }
+#view-grupo-essex .gex-conc-mk span { position:absolute; top:0; left:4px; font-size:9px; font-weight:800; color:var(--navy); white-space:nowrap; background:var(--surface); padding:0 3px; }
+#view-grupo-essex .gex-conc-mk.b span { top:auto; bottom:0; }
+#view-grupo-essex .gex-kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+#view-grupo-essex .gex-kpis > div { padding:12px 15px; border:1px solid var(--border); border-radius:7px; background:var(--surface); }
+#view-grupo-essex .gex-kpis .k { font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-grupo-essex .gex-kpis .v { font-size:28px; font-weight:800; color:var(--navy); line-height:1.1; margin-top:2px; }
+#view-grupo-essex .gex-kpis .v small { font-size:11px; color:var(--text-muted); font-weight:700; }
+#view-grupo-essex .gex-kpis .s { font-size:10.5px; color:var(--text-muted); line-height:1.5; margin-top:4px; }
+#view-grupo-essex .gex-legend { display:flex; gap:14px; flex-wrap:wrap; font-size:10px; font-weight:700; color:var(--text-muted); }
+#view-grupo-essex .gex-legend i { display:inline-block; width:11px; height:11px; border-radius:3px; vertical-align:-1px; margin-right:4px; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-grupo-essex .gex-cor { border:1px solid var(--border); border-radius:10px; background:var(--surface); overflow:hidden; margin-bottom:16px; break-inside:avoid; }
+#view-grupo-essex .gex-cor.key { border:2px solid var(--teal); box-shadow:0 0 0 4px rgba(0,180,216,0.10); }
+#view-grupo-essex .gex-cor-h { display:flex; align-items:center; gap:12px; flex-wrap:wrap; padding:13px 18px; background:rgba(13,43,94,0.04); border-bottom:1px solid var(--border); }
+#view-grupo-essex .gex-cor.key .gex-cor-h { background:rgba(0,180,216,0.08); }
+#view-grupo-essex .gex-cor-id { width:34px; height:34px; border-radius:8px; background:var(--navy); color:#fff; font-size:15px; font-weight:800; display:flex; align-items:center; justify-content:center; flex-shrink:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-grupo-essex .gex-cor.key .gex-cor-id { background:var(--teal-dim); }
+#view-grupo-essex .gex-cor-t { font-size:15px; font-weight:800; color:var(--navy); line-height:1.3; }
+#view-grupo-essex .gex-cor-w { font-size:8.5px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); }
+#view-grupo-essex .gex-cor-flag { margin-left:auto; font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:#fff; background:var(--teal-dim); padding:4px 10px; border-radius:4px; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-grupo-essex .gex-cor-g { display:grid; grid-template-columns:0.9fr 1.35fr 1.35fr 1.1fr; }
+#view-grupo-essex .gex-cor-g > div { padding:13px 16px; border-right:1px solid var(--border); }
+#view-grupo-essex .gex-cor-g > div:last-child { border-right:none; }
+#view-grupo-essex .gex-cor-g .k { font-size:8.5px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal-dim); margin-bottom:6px; }
+#view-grupo-essex .gex-cor-g .n { font-size:30px; font-weight:800; color:var(--navy); line-height:1.05; }
+#view-grupo-essex .gex-cor-g .n small { font-size:11px; font-weight:700; color:var(--text-muted); }
+#view-grupo-essex .gex-cor-g .s { font-size:10.5px; color:var(--text-muted); line-height:1.55; margin-top:4px; }
+#view-grupo-essex .gex-cor-g .s b { color:var(--navy); }
+#view-grupo-essex .gex-cad { width:100%; border-collapse:collapse; font-size:10.5px; }
+#view-grupo-essex .gex-cad td { padding:3px 4px; border-bottom:1px solid var(--border); color:var(--text-muted); }
+#view-grupo-essex .gex-cad td:first-child { color:var(--navy); font-weight:700; }
+#view-grupo-essex .gex-cad td.r { text-align:right; white-space:nowrap; font-weight:800; color:var(--navy); }
+#view-grupo-essex .gex-cad tr:last-child td { border-bottom:none; }
+#view-grupo-essex .gex-pos { display:flex; flex-direction:column; gap:6px; }
+#view-grupo-essex .gex-pos span { display:block; font-size:10.5px; font-weight:700; padding:6px 9px; border-radius:5px; line-height:1.4; }
+#view-grupo-essex .gex-pos .lu { background:rgba(148,163,184,0.14); color:#475569; border-left:3px solid #94a3b8; }
+#view-grupo-essex .gex-pos .ca { background:rgba(0,180,216,0.1); color:var(--teal-dim); border-left:3px solid var(--teal); }
+#view-grupo-essex .gex-pos .co { background:rgba(245,158,11,0.1); color:#92400e; border-left:3px solid #f59e0b; }
+#view-grupo-essex .gex-pos span em { display:block; font-style:normal; font-size:8px; font-weight:800; letter-spacing:1px; text-transform:uppercase; opacity:0.75; }
+#view-grupo-essex .gex-cor .gex-sig { margin:0; padding:0 16px 16px; }
+#view-grupo-essex .gex-tpl { width:100%; min-width:900px; border-collapse:collapse; font-size:11px; }
+#view-grupo-essex .gex-tpl th { background:var(--navy); color:#fff; font-size:8.5px; font-weight:800; letter-spacing:0.7px; text-transform:uppercase; padding:8px; text-align:left; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-grupo-essex .gex-tpl td { padding:9px 8px; border-bottom:1px solid var(--border); vertical-align:top; }
+#view-grupo-essex .gex-tpl tr.grp td { background:rgba(13,43,94,0.04); font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--navy); padding:6px 8px; }
+#view-grupo-essex .gex-tpl .var td { background:rgba(148,163,184,0.06); }
+#view-grupo-essex .gex-tag { display:inline-block; font-size:8px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; padding:1px 5px; border-radius:3px; margin-left:4px; vertical-align:1px; }
+#view-grupo-essex .gex-tag.af { color:var(--navy); background:rgba(13,43,94,0.08); }
+#view-grupo-essex .gex-tag.sv { color:#92400e; background:rgba(245,158,11,0.14); }
+#view-grupo-essex .gex-tag.self { color:var(--navy); background:rgba(13,43,94,0.07); }
+#view-grupo-essex .gex-shift { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+#view-grupo-essex .gex-shift > div { padding:14px 16px; border:1px solid var(--border); border-radius:8px; background:var(--surface); }
+#view-grupo-essex .gex-shift .row { display:grid; grid-template-columns:118px 1fr 118px; gap:10px; align-items:center; margin-top:10px; }
+#view-grupo-essex .gex-shift .row .l { font-size:10.5px; font-weight:800; color:var(--navy); }
+#view-grupo-essex .gex-shift .row .r { font-size:11px; font-weight:800; color:var(--navy); text-align:right; white-space:nowrap; }
+#view-grupo-essex .gex-dots { display:flex; flex-wrap:wrap; gap:3px; }
+#view-grupo-essex .gex-dots i { width:11px; height:11px; border-radius:2px; background:var(--navy); -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-grupo-essex .gex-dots.h i { background:#94a3b8; }
+#view-grupo-essex .gex-h2c { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+#view-grupo-essex .gex-h2c > div { border:1px solid var(--border); border-radius:8px; background:var(--surface); overflow:hidden; }
+#view-grupo-essex .gex-h2c h4 { margin:0; padding:10px 14px; font-size:13px; font-weight:800; color:#fff; background:var(--navy); -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-grupo-essex .gex-h2c > div.adj h4 { background:var(--teal-dim); }
+#view-grupo-essex .gex-h2c > div.low h4 { background:#b45309; }
+#view-grupo-essex .gex-h2c dl { margin:0; padding:10px 14px 12px; }
+#view-grupo-essex .gex-h2c dt { font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-light); margin-top:8px; }
+#view-grupo-essex .gex-h2c dt:first-child { margin-top:0; }
+#view-grupo-essex .gex-h2c dd { margin:2px 0 0; font-size:11px; color:var(--text-muted); line-height:1.5; }
+#view-grupo-essex .gex-h2c dd.i { color:var(--teal-dim); font-weight:700; }
+#view-grupo-essex .gex-h2c dd.d { color:#b45309; }
+#view-grupo-essex .gex-lad { display:flex; flex-direction:column; gap:10px; }
+#view-grupo-essex .gex-lad > div { display:grid; grid-template-columns:130px 1fr; gap:14px; align-items:start; padding:11px 14px; border:1px solid var(--border); border-radius:7px; background:var(--surface); }
+#view-grupo-essex .gex-lad .k { font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal-dim); padding-top:3px; }
+#view-grupo-essex .gex-chips { display:flex; flex-wrap:wrap; gap:6px; }
+#view-grupo-essex .gex-chips span { font-size:11px; font-weight:700; color:var(--navy); background:rgba(13,43,94,0.05); border:1px solid var(--border); padding:4px 9px; border-radius:5px; }
+#view-grupo-essex .gex-chips span b { font-weight:800; margin-left:4px; }
+#view-grupo-essex .gex-hs { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+#view-grupo-essex .gex-hs > div { border:1px solid var(--border); border-radius:7px; padding:11px 14px; background:var(--surface); }
+#view-grupo-essex .gex-hs > div.hist { opacity:0.8; }
+#view-grupo-essex .gex-hs table { width:100%; border-collapse:collapse; font-size:11px; margin-top:6px; }
+#view-grupo-essex .gex-hs td { padding:4px 0; border-bottom:1px solid var(--border); }
+#view-grupo-essex .gex-hs td.r { text-align:right; font-weight:800; color:var(--navy); }
+#view-grupo-essex .gex-adj { display:grid; grid-template-columns:1.5fr 1fr 1fr; gap:12px; }
+#view-grupo-essex .gex-adj > div { border:1px solid var(--border); border-radius:9px; background:var(--surface); padding:15px 17px; }
+#view-grupo-essex .gex-adj > div.key { border:2px solid var(--teal); background:rgba(0,180,216,0.04); }
+#view-grupo-essex .gex-adj h4 { margin:0 0 4px; font-size:14px; font-weight:800; color:var(--navy); }
+#view-grupo-essex .gex-adj .sub { font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--teal-dim); }
+#view-grupo-essex .gex-adj .two { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin:12px 0; }
+#view-grupo-essex .gex-adj .two > div { padding:9px 11px; border-radius:6px; background:var(--bg); }
+#view-grupo-essex .gex-adj .two .k { font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-grupo-essex .gex-adj .two .v { font-size:22px; font-weight:800; line-height:1.15; margin-top:2px; }
+#view-grupo-essex .gex-adj .two .v small { font-size:10px; font-weight:700; color:var(--text-muted); }
+#view-grupo-essex .gex-adj p { font-size:11px; color:var(--text-muted); line-height:1.6; margin:6px 0 0; }
+#view-grupo-essex .gex-adj p b { color:var(--navy); }
+#view-grupo-essex .gex-mx { width:100%; border-collapse:separate; border-spacing:0 6px; font-size:11.5px; }
+#view-grupo-essex .gex-mx th { font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); text-align:left; padding:0 12px; }
+#view-grupo-essex .gex-mx td { padding:11px 12px; background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+#view-grupo-essex .gex-mx td:first-child { border-left:1px solid var(--border); border-radius:7px 0 0 7px; font-weight:800; color:var(--navy); font-size:12.5px; }
+#view-grupo-essex .gex-mx td:last-child { border-right:1px solid var(--border); border-radius:0 7px 7px 0; color:var(--text-muted); }
+#view-grupo-essex .gex-mx tr.key td { background:rgba(0,180,216,0.06); border-color:rgba(0,180,216,0.5); }
+#view-grupo-essex .gex-cell { display:inline-block; font-size:10px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; padding:4px 9px; border-radius:4px; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-grupo-essex .gex-cell.u { color:#475569; background:rgba(148,163,184,0.18); }
+#view-grupo-essex .gex-cell.a { color:#fff; background:var(--teal-dim); }
+#view-grupo-essex .gex-cell.o { color:#92400e; background:rgba(245,158,11,0.16); border:1px solid rgba(245,158,11,0.4); }
+#view-grupo-essex .gex-dm { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; }
+#view-grupo-essex .gex-dm > div { border:1px solid var(--border); border-top:3px solid #f59e0b; border-radius:7px; background:var(--surface); padding:12px 14px; }
+#view-grupo-essex .gex-dm > div.key { border-top-color:var(--teal); background:rgba(0,180,216,0.04); }
+#view-grupo-essex .gex-dm b { display:block; font-size:12px; font-weight:800; color:var(--navy); margin-bottom:6px; }
+#view-grupo-essex .gex-dm ul { margin:0; padding-left:15px; font-size:10.5px; color:var(--text-muted); line-height:1.6; }
+#view-grupo-essex .gex-road { display:grid; grid-template-columns:repeat(5,1fr); gap:0; counter-reset:rp; }
+#view-grupo-essex .gex-road > div { position:relative; padding:14px 16px 14px 18px; border:1px solid var(--border); border-left:none; background:var(--surface); }
+#view-grupo-essex .gex-road > div:first-child { border-left:1px solid var(--border); border-radius:8px 0 0 8px; border-top:4px solid var(--teal); }
+#view-grupo-essex .gex-road > div:last-child { border-radius:0 8px 8px 0; }
+#view-grupo-essex .gex-road > div { border-top:4px solid #94a3b8; }
+#view-grupo-essex .gex-road > div:nth-child(2) { border-top-color:var(--teal); }
+#view-grupo-essex .gex-road .p { font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal-dim); }
+#view-grupo-essex .gex-road .t { font-size:12.5px; font-weight:800; color:var(--navy); line-height:1.35; margin-top:3px; }
+#view-grupo-essex .gex-road .d { font-size:10.5px; color:var(--text-muted); line-height:1.55; margin-top:6px; }
+#view-grupo-essex .gex-road .d ul { margin:4px 0 0; padding-left:14px; }
+#view-grupo-essex .gex-hist { opacity:0.92; }
+#view-grupo-essex .gex-hist .gex-route-table th { background:#475569; }
+#view-grupo-essex .gex-sig.one { grid-template-columns:1fr; }
+#view-grupo-essex .gex-sigl { counter-reset:sg; list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:6px 16px; }
+#view-grupo-essex .gex-sigl li { counter-increment:sg; display:grid; grid-template-columns:24px 1fr; gap:8px; font-size:11.5px; color:var(--navy); font-weight:600; line-height:1.45; padding:5px 0; border-bottom:1px solid var(--border); }
+#view-grupo-essex .gex-sigl li::before { content:counter(sg); font-size:10px; font-weight:800; color:var(--text-muted); text-align:right; }
+@media (max-width: 1100px) {
+  #view-grupo-essex .gex-cor-g { grid-template-columns:1fr 1fr; }
+  #view-grupo-essex .gex-cor-g > div:nth-child(2) { border-right:none; }
+  #view-grupo-essex .gex-cor-g > div:nth-child(-n+2) { border-bottom:1px solid var(--border); }
+  #view-grupo-essex .gex-h2c, #view-grupo-essex .gex-hs, #view-grupo-essex .gex-kpis { grid-template-columns:repeat(2,1fr); }
+  #view-grupo-essex .gex-dm { grid-template-columns:repeat(2,1fr); }
+  #view-grupo-essex .gex-road { grid-template-columns:1fr; }
+  #view-grupo-essex .gex-road > div, #view-grupo-essex .gex-road > div:first-child, #view-grupo-essex .gex-road > div:last-child { border:1px solid var(--border); border-top:4px solid #94a3b8; border-radius:8px; margin-bottom:8px; }
+  #view-grupo-essex .gex-road > div:nth-child(-n+2) { border-top-color:var(--teal); }
+  #view-grupo-essex .gex-adj { grid-template-columns:1fr; }
+}
+@media (max-width: 900px) {
+  #view-grupo-essex .gex-dw, #view-grupo-essex .gex-cor-g, #view-grupo-essex .gex-shift, #view-grupo-essex .gex-h2c,
+  #view-grupo-essex .gex-hs, #view-grupo-essex .gex-kpis, #view-grupo-essex .gex-dm, #view-grupo-essex .gex-sigl { grid-template-columns:1fr; }
+  #view-grupo-essex .gex-cor-g > div { border-right:none; border-bottom:1px solid var(--border); }
+  #view-grupo-essex .gex-lad > div { grid-template-columns:1fr; gap:6px; }
+  #view-grupo-essex .gex-shift .row { grid-template-columns:1fr; }
+  #view-grupo-essex .gex-shift .row .r { text-align:left; }
+  #view-grupo-essex .gex-cor-flag { margin-left:0; }
+}
+@media print {
+  #view-grupo-essex .gex-tpl { min-width:0; font-size:9px; }
+  #view-grupo-essex .gex-cor, #view-grupo-essex .gex-adj > div, #view-grupo-essex .gex-h2c > div { break-inside:avoid; }
+  #view-grupo-essex .gex-dw .big { font-size:40px; }
+}
+/* Editorial-compression layer (8-chapter seller report) */
+#view-grupo-essex .gex-nav { position:sticky; margin:0; top:0; z-index:20; display:flex; gap:4px; flex-wrap:wrap; padding:8px 32px; background:rgba(255,255,255,0.97); border-bottom:1px solid var(--border); box-shadow:0 2px 8px rgba(13,43,94,0.06); }
+#view-grupo-essex .gex-nav a { font-size:11px; font-weight:700; color:var(--navy); text-decoration:none; padding:6px 10px; border-radius:5px; white-space:nowrap; }
+#view-grupo-essex .gex-nav a b { font-size:9px; color:var(--teal-dim); margin-right:5px; }
+#view-grupo-essex .gex-nav a:hover, #view-grupo-essex .gex-nav a:focus-visible { background:rgba(0,180,216,0.1); }
+#view-grupo-essex section.gex-chapter { scroll-margin-top:56px; }
+#view-grupo-essex .gex-lane, #view-grupo-essex [id^="gex-lane-"], #view-grupo-essex .card { scroll-margin-top:56px; }
+#view-grupo-essex .card-header .gex-src { margin-left:6px; background:#fff; border:none; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-grupo-essex .gex-relline { display:flex; flex-wrap:wrap; align-items:center; gap:8px 10px; font-size:12.5px; color:var(--navy); }
+#view-grupo-essex .gex-relline .sep { width:1px; height:18px; background:var(--border); }
+#view-grupo-essex .gex-relline .k { font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); }
+#view-grupo-essex .gex-jump { display:grid; grid-template-columns:auto 1fr 1fr 1fr; gap:10px; align-items:stretch; margin-top:16px; }
+#view-grupo-essex .gex-jump .k { align-self:center; font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); max-width:120px; }
+#view-grupo-essex .gex-jump a { display:block; padding:10px 14px; border:1px solid var(--border); border-left:4px solid var(--navy); border-radius:6px; text-decoration:none; font-size:10.5px; color:var(--text-muted); background:var(--surface); }
+#view-grupo-essex .gex-jump a.key { border-left-color:var(--teal); background:rgba(0,180,216,0.05); }
+#view-grupo-essex .gex-jump a b { display:block; font-size:13px; color:var(--navy); }
+#view-grupo-essex .gex-ev { margin-top:14px; border:1px solid var(--border); border-radius:7px; background:rgba(13,43,94,0.02); }
+#view-grupo-essex .gex-ev > summary { cursor:pointer; padding:10px 14px; font-size:10.5px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; color:var(--navy); list-style:none; }
+#view-grupo-essex .gex-ev > summary::-webkit-details-marker { display:none; }
+#view-grupo-essex .gex-ev > summary::before { content:"+"; display:inline-block; width:16px; color:var(--teal-dim); font-weight:800; }
+#view-grupo-essex .gex-ev[open] > summary::before { content:"−"; }
+#view-grupo-essex .gex-ev > summary:focus-visible { outline:2px solid var(--teal); outline-offset:2px; }
+#view-grupo-essex .gex-ev-b { padding:0 14px 14px; }
+#view-grupo-essex .gex-lanenav { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:16px; }
+#view-grupo-essex .gex-lanenav a { font-size:11px; font-weight:800; color:var(--navy); text-decoration:none; border:1px solid var(--border); border-radius:5px; padding:6px 11px; background:var(--surface); }
+#view-grupo-essex .gex-lanenav a.key { border-color:var(--teal); color:var(--teal-dim); background:rgba(0,180,216,0.06); }
+#view-grupo-essex .gex-lane-g { display:grid; grid-template-columns:1fr 1.45fr 1.25fr; }
+#view-grupo-essex .gex-lane-g > div { padding:13px 16px; border-right:1px solid var(--border); border-bottom:1px solid var(--border); }
+#view-grupo-essex .gex-lane-g > div:nth-child(3) { border-right:none; }
+#view-grupo-essex .gex-lane-g > div:nth-child(4) { grid-column:1 / 3; }
+#view-grupo-essex .gex-lane-g > div.pos { border-right:none; }
+#view-grupo-essex .gex-lane-g .k { font-size:8.5px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal-dim); margin-bottom:6px; }
+#view-grupo-essex .gex-lane-g .n { font-size:30px; font-weight:800; color:var(--navy); line-height:1.05; }
+#view-grupo-essex .gex-lane-g .n small { font-size:11px; font-weight:700; color:var(--text-muted); }
+#view-grupo-essex .gex-lane-g .s { font-size:10.5px; color:var(--text-muted); line-height:1.6; margin-top:4px; }
+#view-grupo-essex .gex-lane-g .s b { color:var(--navy); }
+#view-grupo-essex .gex-lane .gex-sig { margin:0; padding:14px 16px 16px; }
+#view-grupo-essex .gex-lane .gex-cad td.r { font-weight:600; }
+#view-grupo-essex .gex-lane .gex-cad td.r b { font-weight:800; color:var(--navy); }
+#view-grupo-essex .gex-lane .gex-pos { flex-direction:row; flex-wrap:wrap; }
+#view-grupo-essex .gex-2col > div, #view-grupo-essex .gex-lane-g > div, #view-grupo-essex .gex-kpis > div { min-width:0; }
+#view-grupo-essex .gex-conc-mk.r span { left:auto; right:4px; }
+#view-grupo-essex .gex-q { margin:2px 0 0; padding-left:17px; font-size:11px; line-height:1.6; }
+#view-grupo-essex .gex-q li { margin:2px 0; }
+#view-grupo-essex .gex-chips a { font-size:11px; font-weight:700; color:var(--navy); background:rgba(13,43,94,0.05); border:1px solid var(--border); padding:4px 9px; border-radius:5px; text-decoration:none; }
+#view-grupo-essex .gex-chips a:hover { border-color:var(--teal); }
+#view-grupo-essex .gex-cwg tr.grp td, #view-grupo-essex .gex-tpl tr.grp td { background:rgba(13,43,94,0.04); font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--navy); }
+#view-grupo-essex .gex-opd { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; }
+#view-grupo-essex .gex-opd > div { padding:11px 13px; border:1px solid var(--border); border-top:3px solid #f59e0b; border-radius:7px; background:var(--surface); }
+#view-grupo-essex .gex-opd b { display:block; font-size:13px; color:var(--navy); margin-top:7px; }
+#view-grupo-essex .gex-opd span:not(.gex-pat) { display:block; font-size:10.5px; color:var(--text-muted); line-height:1.5; margin-top:3px; }
+#view-grupo-essex .gex-puebla { padding:12px 15px; border:1px solid rgba(245,158,11,0.45); border-radius:7px; background:rgba(245,158,11,0.05); }
+#view-grupo-essex .gex-puebla .s { font-size:11px; color:var(--text-muted); line-height:1.6; }
+#view-grupo-essex .gex-sq { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+#view-grupo-essex .gex-sq > div { padding:14px 17px; border-radius:8px; border:1px solid var(--border); }
+#view-grupo-essex .gex-sq .has { border-top:4px solid var(--teal); background:rgba(0,180,216,0.04); }
+#view-grupo-essex .gex-sq .not { border-top:4px solid #94a3b8; background:rgba(148,163,184,0.06); }
+#view-grupo-essex .gex-sq .k { font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); }
+#view-grupo-essex .gex-sq b { display:block; font-size:16px; color:var(--navy); margin-top:4px; }
+#view-grupo-essex .gex-sq span { display:block; font-size:11px; color:var(--text-muted); line-height:1.6; margin-top:4px; }
+#view-grupo-essex .gex-mx a { color:var(--navy); text-decoration:none; }
+#view-grupo-essex .gex-mx a:hover { color:var(--teal-dim); text-decoration:underline; }
+#view-grupo-essex .gex-steps { display:grid; grid-template-columns:repeat(5,1fr); gap:8px; }
+#view-grupo-essex .gex-steps > div { padding:10px 12px; border:1px solid var(--border); border-top:3px solid #94a3b8; border-radius:6px; font-size:10.5px; color:var(--text-muted); line-height:1.55; background:var(--surface); }
+#view-grupo-essex .gex-steps > div:nth-child(-n+2) { border-top-color:var(--teal); }
+#view-grupo-essex .gex-steps b { display:block; font-size:11px; color:var(--navy); margin-bottom:3px; }
+#view-grupo-essex .gex-guide { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+#view-grupo-essex .gex-guide > div { border:1px solid var(--border); border-top:4px solid #f59e0b; border-radius:8px; padding:14px 16px; background:var(--surface); break-inside:avoid; }
+#view-grupo-essex .gex-guide > div.key { border:2px solid var(--teal); border-top-width:5px; background:rgba(0,180,216,0.04); }
+#view-grupo-essex .gex-guide h4 { display:flex; justify-content:space-between; align-items:baseline; margin:0 0 8px; font-size:16px; font-weight:800; color:var(--navy); }
+#view-grupo-essex .gex-guide h4 a { font-size:10px; font-weight:700; color:var(--teal-dim); text-decoration:none; }
+#view-grupo-essex .gex-guide .k { font-size:8.5px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); margin-top:8px; }
+#view-grupo-essex .gex-guide ul.know { margin:4px 0 0; padding-left:15px; font-size:11.5px; font-weight:700; color:var(--navy); line-height:1.6; }
+#view-grupo-essex .gex-guide .gex-q { font-size:11.5px; color:var(--text); }
+#view-grupo-essex .gex-micro a, #view-grupo-essex .gex-note-navy a, #view-grupo-essex .gex-sq a { color:var(--teal-dim); }
+@media (max-width: 1100px) {
+  #view-grupo-essex .gex-opd, #view-grupo-essex .gex-steps { grid-template-columns:repeat(2,1fr); }
+  #view-grupo-essex .gex-guide { grid-template-columns:1fr; }
+}
+@media (max-width: 900px) {
+  #view-grupo-essex .gex-nav { padding:6px 12px; }
+  #view-grupo-essex .gex-lane-g, #view-grupo-essex .gex-jump, #view-grupo-essex .gex-sq, #view-grupo-essex .gex-opd, #view-grupo-essex .gex-steps { grid-template-columns:1fr; }
+  #view-grupo-essex .gex-lane-g > div, #view-grupo-essex .gex-lane-g > div:nth-child(4) { grid-column:auto; border-right:none; }
+  #view-grupo-essex .gex-jump .k { max-width:none; }
+  #view-grupo-essex .gex-kpis, #view-grupo-essex .gex-2col { grid-template-columns:1fr !important; }
+}
+@media (max-width: 700px) {
+  #view-grupo-essex .content-body { padding:16px; }
+}
+@media print {
+  #view-grupo-essex .gex-nav { display:none !important; }
+  #view-grupo-essex .gex-ev > summary::before { content:""; }
+  #view-grupo-essex .gex-lane, #view-grupo-essex .gex-guide > div { break-inside:avoid; }
+}
+
+/* Refresh additions — governance strip, status pills, PJ provenance, overlap principle */
+#view-grupo-essex .gex-gov { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+#view-grupo-essex .gex-gov > div { padding:10px 13px; border:1px solid var(--border); border-radius:7px; background:var(--surface); min-width:0; }
+#view-grupo-essex .gex-gov > div.wide { grid-column:span 2; }
+#view-grupo-essex .gex-gov .k { font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-grupo-essex .gex-gov .v { font-size:13px; font-weight:800; color:var(--navy); margin-top:3px; line-height:1.35; }
+#view-grupo-essex .gex-gov .v small { display:block; font-size:10px; font-weight:600; color:var(--text-muted); margin-top:2px; }
+#view-grupo-essex .gex-nv { display:inline-block; font-size:10px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; color:#b45309; background:rgba(245,158,11,0.12); border:1px solid rgba(245,158,11,0.45); padding:3px 8px; border-radius:4px; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-grupo-essex .gex-na-pill { display:inline-block; font-size:10px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; color:#475569; background:rgba(148,163,184,0.16); border:1px dashed rgba(148,163,184,0.8); padding:3px 8px; border-radius:4px; }
+#view-grupo-essex .gex-dw .log .big.txt { font-size:28px; letter-spacing:0; line-height:1.2; margin-top:8px; }
+#view-grupo-essex .gex-dw .log dl { margin:12px 0 0; display:grid; grid-template-columns:1fr auto; gap:6px 12px; font-size:11px; }
+#view-grupo-essex .gex-dw .log dt { color:var(--text-muted); font-weight:700; }
+#view-grupo-essex .gex-dw .log dd { margin:0; text-align:right; }
+#view-grupo-essex .gex-principle { display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-top:12px; padding:12px 16px; border:2px solid #f59e0b; border-radius:8px; background:rgba(245,158,11,0.05); }
+#view-grupo-essex .gex-principle b { font-size:18px; font-weight:800; color:#b45309; letter-spacing:0.3px; }
+#view-grupo-essex .gex-principle span { font-size:11px; color:var(--text-muted); line-height:1.6; flex:1; min-width:220px; }
+#view-grupo-essex .gex-obs { list-style:none; margin:0; padding:0; }
+#view-grupo-essex .gex-obs li { position:relative; padding:6px 0 6px 18px; border-bottom:1px solid var(--border); font-size:11.5px; color:var(--navy); line-height:1.5; }
+#view-grupo-essex .gex-obs li:last-child { border-bottom:none; }
+#view-grupo-essex .gex-obs li::before { content:""; position:absolute; left:2px; top:12px; width:7px; height:7px; border-radius:2px; background:var(--navy); }
+#view-grupo-essex .gex-obs li.chg::before { background:#f59e0b; }
+#view-grupo-essex .gex-obs li.new::before { background:var(--teal); }
+#view-grupo-essex .gex-da { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+#view-grupo-essex .gex-da > div { padding:12px 14px; border:1px solid var(--border); border-radius:7px; background:var(--surface); border-top:3px solid var(--navy); }
+#view-grupo-essex .gex-da > div.c { border-top-color:var(--teal); }
+#view-grupo-essex .gex-da > div.x { border-top-color:#94a3b8; background:rgba(148,163,184,0.06); }
+#view-grupo-essex .gex-da > div.d { border-top-color:#f59e0b; }
+#view-grupo-essex .gex-da b { display:block; font-size:10px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--navy); margin-bottom:6px; }
+#view-grupo-essex .gex-da ul { margin:0; padding-left:15px; font-size:10.5px; color:var(--text-muted); line-height:1.6; }
+#view-grupo-essex .gex-dq-g { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+#view-grupo-essex .gex-dq-g > div { border:1px solid var(--border); border-top:4px solid #f59e0b; border-radius:8px; padding:13px 16px; background:var(--surface); break-inside:avoid; }
+#view-grupo-essex .gex-dq-g h4 { display:flex; justify-content:space-between; align-items:baseline; gap:8px; margin:0 0 6px; font-size:13px; font-weight:800; color:var(--navy); }
+#view-grupo-essex .gex-dq-g h4 a { font-size:10px; font-weight:700; color:var(--teal-dim); text-decoration:none; white-space:nowrap; }
+#view-grupo-essex .gex-dq-g ol { margin:0; padding-left:22px; font-size:12px; color:var(--text); line-height:1.6; }
+#view-grupo-essex .gex-dq-g ol li { margin:3px 0; }
+#view-grupo-essex .gex-dq-g ol li::marker { font-weight:800; color:#b45309; }
+#view-grupo-essex .page-header .gex-nv { font-size:11px; }
+#view-grupo-essex .gex-sig.two { grid-template-columns:repeat(2,1fr); }
+#view-grupo-essex .gex-hs.two { grid-template-columns:1fr 1fr; }
+@media (max-width: 1100px) {
+  #view-grupo-essex .gex-da { grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width: 900px) {
+  #view-grupo-essex .gex-gov, #view-grupo-essex .gex-da, #view-grupo-essex .gex-dq-g { grid-template-columns:1fr; }
+  #view-grupo-essex .gex-gov > div.wide { grid-column:auto; }
+  #view-grupo-essex .gex-sig.two, #view-grupo-essex .gex-hs.two { grid-template-columns:1fr; }
+}
+
+/* Grupo Essex — cloned component block */
+#view-grupo-essex .gex-jump.five { grid-template-columns:repeat(5,1fr); }
+#view-grupo-essex .gex-jump.five .k { grid-column:1 / -1; max-width:none; }
+#view-grupo-essex .gex-gwt { cursor:help; }
+#view-grupo-essex .gex-da-sm { font-size:10px; color:var(--text-muted); }
+@media (max-width: 1100px) { #view-grupo-essex .gex-jump.five { grid-template-columns:repeat(3,1fr); } }
+@media (max-width: 900px) { #view-grupo-essex .gex-jump.five { grid-template-columns:1fr; } }
+/* Grupo Essex — cloned component block */
+#view-grupo-essex .gex-tp { width:100%; border-collapse:collapse; }
+#view-grupo-essex .gex-tp td { padding:4px 8px; font-size:11.5px; border-bottom:1px solid var(--border); }
+#view-grupo-essex .gex-tp td.r { text-align:right; font-weight:800; color:var(--navy); font-family:ui-monospace,Menlo,monospace; }
+#view-grupo-essex .gex-yes { display:inline-block; font-size:9px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; color:#047857; background:rgba(16,185,129,0.12); padding:1px 6px; border-radius:3px; }
+#view-grupo-essex .gex-no { display:inline-block; font-size:9px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; color:var(--text-light); background:var(--bg); border:1px solid var(--border); padding:1px 6px; border-radius:3px; }
+
+/* Grupo Essex — cloned component block */
+#view-grupo-essex .gex-dd { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+#view-grupo-essex .gex-dd > div { padding:12px 14px; border:1px solid var(--border); border-top:3px solid #f59e0b; border-radius:7px; background:var(--surface); font-size:11px; line-height:1.6; color:var(--text-muted); }
+#view-grupo-essex .gex-dd ul { margin:6px 0 0; padding-left:16px; }
+#view-grupo-essex .gex-dd .n { font-size:22px; font-weight:800; color:#b45309; line-height:1.1; margin-top:4px; }
+#view-grupo-essex .gex-dd .n small { font-size:11px; color:var(--text-muted); font-weight:700; }
+#view-grupo-essex .gex-tpna { color:var(--text-muted); font-style:italic; }
+@media (max-width: 900px) { #view-grupo-essex .gex-dd { grid-template-columns:1fr; } }
+@media print { #view-grupo-essex .gex-dd > div { break-inside:avoid; } }
+
+/* Grupo Essex — cloned component block */
+#view-grupo-essex .gex-nm { width:100%; border-collapse:separate; border-spacing:4px; font-size:11px; }
+#view-grupo-essex .gex-nm th { font-size:9px; font-weight:800; letter-spacing:0.8px; text-transform:uppercase; color:var(--text-muted); text-align:center; padding:4px 6px; }
+#view-grupo-essex .gex-nm th.imp { color:var(--navy); border-bottom:3px solid var(--navy); }
+#view-grupo-essex .gex-nm th.exp { color:var(--teal-dim); border-bottom:3px solid var(--teal); }
+#view-grupo-essex .gex-nm td.g { font-weight:800; color:var(--navy); white-space:nowrap; padding-right:8px; }
+#view-grupo-essex .gex-nm td.g small { display:block; font-weight:600; font-size:9.5px; color:var(--text-muted); }
+#view-grupo-essex .gex-nm td.c { text-align:center; border-radius:6px; padding:8px 6px; background:rgba(148,163,184,0.06); color:var(--text-light); }
+#view-grupo-essex .gex-nm td.c.i { background:rgba(13,43,94,0.07); color:var(--navy); }
+#view-grupo-essex .gex-nm td.c.e { background:rgba(0,180,216,0.09); color:var(--teal-dim); }
+#view-grupo-essex .gex-nm td.c b { display:block; font-size:17px; font-weight:800; line-height:1.1; }
+#view-grupo-essex .gex-nm td.c span { display:block; font-size:9px; font-weight:700; opacity:0.8; margin-top:2px; }
+#view-grupo-essex .gex-fac { display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:10px; }
+#view-grupo-essex .gex-fac > div { padding:11px 14px; border:1px solid var(--border); border-radius:7px; background:var(--surface); font-size:11px; line-height:1.55; color:var(--text-muted); }
+#view-grupo-essex .gex-fac > div.p { border-left:4px solid var(--navy); }
+#view-grupo-essex .gex-fac b { display:block; font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--teal-dim); margin-bottom:3px; }
+#view-grupo-essex .gex-fac strong { color:var(--navy); }
+#view-grupo-essex .gex-dd { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+#view-grupo-essex .gex-dd > div { padding:12px 14px; border:1px solid var(--border); border-top:3px solid #f59e0b; border-radius:7px; background:var(--surface); font-size:11px; line-height:1.6; color:var(--text-muted); }
+#view-grupo-essex .gex-dd ul { margin:6px 0 0; padding-left:16px; }
+#view-grupo-essex .gex-dd .n { font-size:22px; font-weight:800; color:#b45309; line-height:1.1; margin-top:4px; }
+#view-grupo-essex .gex-dd .n small { font-size:11px; color:var(--text-muted); font-weight:700; }
+#view-grupo-essex .gex-vlist { margin:6px 0 0; padding-left:18px; columns:2; column-gap:22px; }
+#view-grupo-essex .gex-vlist li { break-inside:avoid; margin-bottom:3px; }
+@media (max-width: 900px) {
+  #view-grupo-essex .gex-fac, #view-grupo-essex .gex-dd { grid-template-columns:1fr; }
+  #view-grupo-essex .gex-vlist { columns:1; }
+  #view-grupo-essex [style*="grid-template-columns"] { grid-template-columns:1fr !important; }
+  #view-grupo-essex [style*="grid-template-columns"] > * { min-width:0; }
+}
+@media print { #view-grupo-essex .gex-dd > div, #view-grupo-essex .gex-fac > div, #view-grupo-essex .gex-nm { break-inside:avoid; } }
+
+/* Grupo Essex — cloned component block */
+#view-grupo-essex .gex-gws { display:grid; grid-template-columns:minmax(0,85.2fr) minmax(104px,14.8fr); gap:4px; margin-top:8px; }
+#view-grupo-essex .gex-gws > div { border-radius:6px; padding:9px 12px; color:#fff; min-width:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-grupo-essex .gex-gws > div b { display:block; font-size:18px; font-weight:800; line-height:1.1; }
+#view-grupo-essex .gex-gws > div span { display:block; font-size:9.5px; font-weight:700; opacity:0.9; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+#view-grupo-essex .gex-gws .nl { background:var(--navy); }
+#view-grupo-essex .gex-gws .mt { background:#b45309; }
+#view-grupo-essex .gex-map { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:4px 0 14px; }
+#view-grupo-essex .gex-map > div { display:grid; grid-template-columns:auto 1fr auto; gap:10px; align-items:center; padding:12px 16px; border-radius:8px; border:1.5px solid var(--border); background:var(--surface); }
+#view-grupo-essex .gex-map > div.ak { border-color:var(--teal); background:rgba(0,180,216,0.05); }
+#view-grupo-essex .gex-map > div.ot { border-color:#f59e0b; background:rgba(245,158,11,0.06); }
+#view-grupo-essex .gex-map .g { font-size:14px; font-weight:800; color:var(--navy); }
+#view-grupo-essex .gex-map .g small { display:block; font-size:10px; font-weight:600; color:var(--text-muted); }
+#view-grupo-essex .gex-map .n { font-size:24px; font-weight:800; color:var(--navy); text-align:right; line-height:1.05; }
+#view-grupo-essex .gex-map .n small { display:block; font-size:9.5px; font-weight:700; color:var(--text-muted); }
+#view-grupo-essex .gex-conclusion { margin:0 0 14px; padding:14px 18px; border-radius:8px; background:linear-gradient(120deg,rgba(0,180,216,0.08),rgba(245,158,11,0.08)); border-left:4px solid var(--teal); font-size:13.5px; font-weight:700; color:var(--navy); line-height:1.55; }
+#view-grupo-essex .gex-conclusion em { display:block; font-style:normal; font-size:8.5px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal-dim); margin-bottom:4px; }
+#view-grupo-essex .gex-hobs { list-style:none; margin:0; padding:0; counter-reset:hobs; display:grid; gap:10px; }
+#view-grupo-essex .gex-hobs li { counter-increment:hobs; position:relative; padding:12px 16px 12px 52px; border:1px solid var(--border); border-radius:7px; background:var(--surface); font-size:12px; line-height:1.6; color:var(--text-muted); }
+#view-grupo-essex .gex-hobs li::before { content:counter(hobs); position:absolute; left:14px; top:12px; width:26px; height:26px; border-radius:6px; background:var(--navy); color:#fff; font-size:12px; font-weight:800; display:flex; align-items:center; justify-content:center; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-grupo-essex .gex-hobs li strong { color:var(--navy); }
+@media (max-width: 900px) {
+  #view-grupo-essex .gex-map { grid-template-columns:1fr; }
+  #view-grupo-essex .gex-gws > div span { white-space:normal; }
+}
+@media print { #view-grupo-essex .gex-map > div, #view-grupo-essex .gex-hobs li { break-inside:avoid; } }
+
+/* Grupo Essex — cloned component block */
+#view-grupo-essex .gex-addr { display:block; font-size:9.5px; color:var(--text-muted); line-height:1.35; margin-top:2px; }
+#view-grupo-essex .gex-gsrc { display:block; font-size:8.5px; font-weight:600; color:var(--text-light); line-height:1.3; margin-top:2px; text-transform:none; letter-spacing:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:200px; }
+#view-grupo-essex .gex-route-table td:nth-child(2), #view-grupo-essex .gex-route-table td:nth-child(4) { min-width:190px; max-width:260px; }
+#view-grupo-essex .gex-route-table td:nth-child(3) { min-width:150px; max-width:200px; }
+#view-grupo-essex .gex-hm { width:100%; border-collapse:separate; border-spacing:3px; font-size:11.5px; }
+#view-grupo-essex .gex-hm th { font-size:8.5px; font-weight:800; letter-spacing:0.8px; text-transform:uppercase; color:var(--text-muted); padding:4px 6px; text-align:center; white-space:nowrap; }
+#view-grupo-essex .gex-hm th.l, #view-grupo-essex .gex-hm td.l { text-align:left; }
+#view-grupo-essex .gex-hm td { padding:7px 6px; text-align:center; border-radius:4px; font-weight:800; color:var(--navy); -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-grupo-essex .gex-hm td.z { color:var(--text-light); font-weight:500; background:rgba(148,163,184,0.07); }
+#view-grupo-essex .gex-hm td.l { font-weight:700; background:transparent; white-space:nowrap; }
+#view-grupo-essex .gex-hm td.t { background:transparent; color:var(--navy); border-left:2px solid var(--border); border-radius:0; }
+#view-grupo-essex .gex-hm tr.dir td { background:transparent; text-align:left; font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal-dim); padding-top:12px; }
+#view-grupo-essex .gex-hm th.ak { color:var(--teal-dim); }
+#view-grupo-essex .gex-dsplit { display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+#view-grupo-essex .gex-gwbar { display:flex; height:12px; border-radius:6px; overflow:hidden; background:#eef1f6; }
+#view-grupo-essex .gex-gwbar > div { height:100%; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-grupo-essex .gex-wtr { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+#view-grupo-essex .gex-wtr > div { padding:12px 14px; border:1px solid var(--border); border-radius:7px; background:var(--surface); }
+#view-grupo-essex .gex-wtr .k { font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-grupo-essex .gex-wtr .v { font-size:15px; font-weight:800; color:var(--navy); margin-top:4px; }
+#view-grupo-essex .gex-wtr .v span { color:#64748b; font-weight:700; }
+@media (max-width: 900px) {
+  #view-grupo-essex .gex-dsplit, #view-grupo-essex .gex-wtr { grid-template-columns:1fr; }
+}
+@media print { #view-grupo-essex .gex-gsrc { white-space:normal; max-width:none; } #view-grupo-essex .gex-hm td { padding:4px; } #view-grupo-essex .gex-wtr > div { break-inside:avoid; } }
+
+/* Grupo Essex additions — concentration flag, PJ field anomaly marker, direction-flip customs map, subordinate patent card */
+#view-grupo-essex .gex-flag { display:inline-block; font-size:9.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:#fff; background:#b91c1c; padding:3px 9px; border-radius:4px; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-grupo-essex .gex-anom { display:inline-block; font-size:8px; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:#92400e; background:rgba(245,158,11,0.16); border:1px solid rgba(245,158,11,0.45); padding:1px 5px; border-radius:3px; margin-top:3px; }
+#view-grupo-essex .gex-flip { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+#view-grupo-essex .gex-flip > div { padding:14px 16px; border-radius:8px; border:1.5px solid var(--border); background:var(--surface); min-width:0; }
+#view-grupo-essex .gex-flip > div.ak { border-color:var(--teal); background:rgba(0,180,216,0.05); }
+#view-grupo-essex .gex-flip > div.ot { border-color:#f59e0b; background:rgba(245,158,11,0.05); }
+#view-grupo-essex .gex-flip .h { font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); }
+#view-grupo-essex .gex-flip .w { font-size:40px; font-weight:800; line-height:1.05; margin-top:2px; letter-spacing:-1px; }
+#view-grupo-essex .gex-flip .ak .w { color:var(--teal-dim); }
+#view-grupo-essex .gex-flip .ot .w { color:#b45309; }
+#view-grupo-essex .gex-flip .f { font-size:12px; font-weight:800; color:var(--navy); }
+#view-grupo-essex .gex-flip ul { margin:10px 0 0; padding:0; list-style:none; display:grid; gap:6px; }
+#view-grupo-essex .gex-flip li { display:grid; grid-template-columns:auto 1fr auto; gap:8px; align-items:center; font-size:11px; color:var(--text-muted); }
+#view-grupo-essex .gex-flip li b { font-size:14px; color:var(--navy); }
+#view-grupo-essex .gex-sub { opacity:0.8; }
+#view-grupo-essex .gex-sub .n { font-size:18px !important; }
+#view-grupo-essex .gex-quote { margin:0; padding:14px 18px; border-radius:8px; background:linear-gradient(120deg,rgba(13,43,94,0.05),rgba(0,180,216,0.07)); border-left:4px solid var(--navy); font-size:13.5px; font-weight:600; color:var(--navy); line-height:1.6; }
+#view-grupo-essex .gex-quote em { display:block; font-style:normal; font-size:8.5px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal-dim); margin-bottom:5px; }
+#view-grupo-essex .gex-vlist { margin:6px 0 0; padding-left:16px; font-size:10.5px; line-height:1.55; }
+@media (max-width: 900px) { #view-grupo-essex .gex-flip { grid-template-columns:1fr; } }
+@media print { #view-grupo-essex .gex-flip > div { break-inside:avoid; } }
+
 /* LIEBHERR MONTERREY — scoped view components (#view-liebherr only). Customs CLIENT / Logistics Wallet Expansion + Deep Lane Intelligence. */
 #view-liebherr .num { text-align:right; }
 #view-liebherr .lbh-sublbl { font-size:10px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal-dim); margin-bottom:8px; }
@@ -10236,6 +10948,10 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
     <div class="nav-item" onclick="showView('view-siete-leguas', this)" title="Siete Leguas Automotive · CLIENT · Arcatek Customs Confirmed Client · Akzent Logistics Not Validated · Analysis Date 19-Sep-2026">
       <span>◆</span> <span style="flex:1;">Siete Leguas</span>
       <span class="recent-cls" style="background:rgba(16,185,129,0.2);color:#34d399;">CLIENT</span>
+    </div>
+    <div class="nav-item" onclick="showView('view-grupo-essex', this)" title="Grupo Essex Solutions · Relationship Not Fully Validated · Arcatek Customs Confirmed Client · Akzent Logistics Not Validated · Analysis Date 19-Sep-2026">
+      <span>◆</span> <span style="flex:1;">Grupo Essex Solutions</span>
+      <span class="recent-cls" style="background:rgba(245,158,11,0.2);color:#fbbf24;">NOT VALIDATED</span>
     </div>
     <div class="nav-item" onclick="showView('view-pollmann', this)">
       <span>◆</span> <span style="flex:1;">Pollmann de México</span>
@@ -11612,6 +12328,36 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
         <span class="acct-tag">Monterrey Airport</span>
         <span class="acct-tag">Colombia, NL</span>
         <span class="acct-tag">Altamira</span>
+        <span class="acct-tag">Discovery Required</span>
+      </div>
+    </div>
+
+    <!-- Grupo Essex Solutions -->
+    <div class="account-card" onclick="showViewById('view-grupo-essex')" title="Grupo Essex Solutions · AIOS Analysis 19-Sep-2026 · Relationship Not Fully Validated · Arcatek Customs Confirmed Client · Akzent Logistics Not Validated · AIOS Classification: Not assigned — insufficient authorized classification basis. Current YTD PJ Visible Universe 22 Shipments (9 Imports / 13 Exports, through 2026-07-27), -18.5% vs Jan 1 – Jul 27, 2025 (27). 2025 Full Year 43. Customs Shared Wallet 36.4% (8/22) · Import 88.9% (8/9) · Export 0.0% (0/13). Logistics Shared Wallet Not Calculable. Captured Logistics Profit Not available.">
+      <div class="account-card-header">
+        <div>
+          <div class="account-name">Grupo Essex Solutions</div>
+          <div class="account-industry">Relationship Not Fully Validated · Arcatek Customs Confirmed Client · Analysis Date 19-Sep-2026</div>
+        </div>
+        <div style="display:flex;gap:5px;align-items:center;flex-shrink:0;">
+          <span class="account-cls-badge" style="color:var(--text-light);" title="AIOS Classification: Not assigned — insufficient authorized classification basis">&mdash;</span>
+        </div>
+      </div>
+      <div class="account-metrics" style="grid-template-columns:repeat(4,1fr);">
+        <div class="acct-metric"><div class="acct-metric-val">22</div><div class="acct-metric-lbl">PJ YTD Shipments</div></div>
+        <div class="acct-metric"><div class="acct-metric-val" style="color:#b91c1c;">-18.5%</div><div class="acct-metric-lbl">vs Jan&ndash;Jul 27, 2025</div></div>
+        <div class="acct-metric"><div class="acct-metric-val" style="color:var(--teal-dim);">36.4%</div><div class="acct-metric-lbl">Customs Wallet</div></div>
+        <div class="acct-metric"><div class="acct-metric-val" style="font-size:12px;color:var(--text-light);">Not Calculable</div><div class="acct-metric-lbl">Logistics Wallet</div></div>
+      </div>
+      <div style="margin-top:8px;padding:7px 10px;background:rgba(245,158,11,0.06);border-left:3px solid #f59e0b;border-radius:0 4px 4px 0;">
+        <div style="font-size:9px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:#b45309;">Relationship Not Fully Validated · Akzent Logistics Not Validated</div>
+        <div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;margin-top:2px;">Patent 3468 on Colombia Imports &mdash; Other Patents 1783 / 3438 on Reynosa and Monterrey Exports</div>
+      </div>
+      <div class="account-tags">
+        <span class="acct-tag">Colombia, NL</span>
+        <span class="acct-tag">Reynosa</span>
+        <span class="acct-tag">Monterrey</span>
+        <span class="acct-tag">Customs Shared Wallet</span>
         <span class="acct-tag">Discovery Required</span>
       </div>
     </div>
@@ -26492,6 +27238,16 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
               <td style="color:var(--text-light);" title="No AIOS Air rating supplied">&mdash;</td>
               <td style="color:var(--text-light);" title="No AIOS ILM rating supplied">&mdash;</td>
               <td style="color:#b45309;font-weight:700;font-size:11px;">Discovery Required &middot; Akzent Logistics Not Validated</td>
+            </tr>
+            <tr onclick="showViewById('view-grupo-essex')" style="cursor:pointer;">
+              <td><strong>Grupo Essex Solutions</strong> <span style="font-size:10px;font-weight:600;color:#b45309;background:rgba(245,158,11,0.12);padding:1px 5px;border-radius:3px;margin-left:4px;" title="Relationship Not Fully Validated · Arcatek Customs Confirmed Client · Akzent Logistics Not Validated">NOT VALIDATED</span></td>
+              <td><span style="color:var(--text-light);" title="AIOS Classification: Not assigned — insufficient authorized classification basis">&mdash;</span></td>
+              <td style="color:var(--text-muted);" title="Account: Grupo Essex Solutions &middot; Analysis Date: 2026-09-19 &middot; Relationship: Relationship Not Fully Validated &middot; Arcatek Customs Service Status: Confirmed Client &middot; Akzent Logistics Service Status: Not Validated &middot; AIOS Classification: Not assigned — insufficient authorized classification basis &middot; Previous Full Calendar Year: 2025 &middot; Current YTD Through: 2026-07-27 &middot; PJ Visible Shipments 2025: 43 &middot; PJ Visible Shipments Current YTD: 22 &middot; Visible Imports Current YTD: 9 &middot; Visible Exports Current YTD: 13 &middot; Captured Logistics Shipments: Not available &middot; Logistics Shared Wallet: Not Calculable &middot; Logistics Wallet Alignment: Not Calculable &middot; Customs Shared Wallet: 36.4% (8/22) &middot; Customs Import Wallet: 88.9% (8/9) &middot; Customs Export Wallet: 0.0% (0/13) &middot; Captured Logistics Profit: Not available &middot; Principal Modes: Unknown in PJ &middot; Principal Gateways: Colombia NL; Reynosa TAMPS; Monterrey NL &middot; Arcatek Customs Patents visible: 3468 &middot; Material Other Patents: 1783; 3438 &middot; Expansion Type: Relationship Not Fully Validated &middot; Discovery Status: Customs allocation and Logistics relationship require validation">Relationship Not Fully Validated &middot; Arcatek Customs Confirmed Client &middot; Akzent Logistics Not Validated</td>
+              <td style="color:var(--text-light);" title="No AIOS Cross-Border rating supplied">&mdash;</td>
+              <td style="color:var(--text-light);" title="No AIOS Ocean rating supplied">&mdash;</td>
+              <td style="color:var(--text-light);" title="No AIOS Air rating supplied">&mdash;</td>
+              <td style="color:var(--text-light);" title="No AIOS ILM rating supplied">&mdash;</td>
+              <td style="color:#b45309;font-weight:700;font-size:11px;">Discovery Required &middot; Customs allocation and Logistics relationship require validation</td>
             </tr>
           </tbody>
         </table>
@@ -49639,6 +50395,314 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
   /* Printing opens every Siete Leguas evidence panel, then restores the reader's state. */
   window.addEventListener('beforeprint', function () { document.querySelectorAll('#view-siete-leguas details.slg-ev:not([open])').forEach(function (d) { d.setAttribute('open', ''); d.setAttribute('data-slg-print', '1'); }); });
   window.addEventListener('afterprint', function () { document.querySelectorAll('#view-siete-leguas details.slg-ev[data-slg-print]').forEach(function (d) { d.removeAttribute('open'); d.removeAttribute('data-slg-print'); }); });
+  </script>
+</div>
+
+<!-- ══ GRUPO ESSEX SOLUTIONS VIEW — AIOS Analysis 19-Sep-2026 · 8-chapter seller report (Executive · Network · Core Routes · Lane Intelligence · Customs · Historical · Commercial · Discovery) ══ -->
+<div id="view-grupo-essex" class="view">
+  <div class="page-header">
+    <div class="page-header-left">
+      <div class="page-header-eyebrow">Account Intelligence · Relationship Not Fully Validated · Arcatek Customs Confirmed Client · Akzent Logistics Not Validated · Analysis Date 19-Sep-2026</div>
+      <div class="page-header-title">Grupo Essex Solutions</div>
+      <div class="page-header-sub">Current YTD through July 27, 2026 · PJ Visible Universe 22 Shipments · 9 Imports · 13 Exports · -18.5% vs Jan 1 – Jul 27, 2025 · Customs Shared Wallet 36.4%</div>
+    </div>
+    <div class="page-header-meta">
+      <span style="display:inline-block;font-size:10px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:#b45309;background:rgba(245,158,11,0.14);padding:2px 8px;border-radius:4px;">Relationship Not Fully Validated</span>
+      <button class="print-btn" onclick="printView('view-grupo-essex')">⬇ Export PDF</button>
+    </div>
+  </div>
+  <nav class="gex-nav" data-aios-own-toc aria-label="Report chapters"><a href="#gex-ch-1"><b>01</b>Executive</a><a href="#gex-ch-2"><b>02</b>Network</a><a href="#gex-ch-3"><b>03</b>Core Routes</a><a href="#gex-ch-4"><b>04</b>Lane Intelligence</a><a href="#gex-ch-5"><b>05</b>Customs</a><a href="#gex-ch-6"><b>06</b>Historical</a><a href="#gex-ch-7"><b>07</b>Commercial</a><a href="#gex-ch-8"><b>08</b>Discovery</a></nav>
+  <div class="content-body">
+
+    <section class="gex-chapter exec" id="gex-ch-1">
+      <div class="gex-chapter-n">Chapter 01</div>
+      <div class="gex-chapter-t">Executive Account Summary</div>
+      <div class="gex-chapter-s">Where does this account stand? · 30–60 second read</div>
+    </section>
+    <div class="card" style="border-top:3px solid #f59e0b;">
+      <div class="card-header">Grupo Essex Solutions — Account Governance · Analysis Date September 19, 2026</div>
+      <div class="card-body">
+        <div class="gex-gov">
+          <div><div class="k">Relationship</div><div class="v"><span style="display:inline-block;font-size:10px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:#b45309;background:rgba(245,158,11,0.14);padding:2px 8px;border-radius:4px;">Relationship Not Fully Validated</span><small>As authorized by AIOS for this account</small></div></div>
+          <div><div class="k">Service Relationship · Arcatek Customs</div><div class="v"><span style="display:inline-block;font-size:10px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:#047857;background:rgba(16,185,129,0.12);padding:2px 8px;border-radius:4px;">Confirmed Client</span><small>Confirmed commercial relationship</small></div></div>
+          <div><div class="k">Service Relationship · Akzent Logistics</div><div class="v"><span class="gex-nv">Not Validated</span><small>No authorized Akzent Captured Freight Shipment dataset available</small></div></div>
+          <div class="wide"><div class="k">Relationship basis</div><div class="v">Arcatek Customs and Akzent Logistics are shown independently<small>Missing internal Logistics data does not mean zero Captured Business, and Akzent Logistics is not treated as Confirmed Not Captured. Relationship, Service Relationship, Wallet, Classification and Opportunity are separate concepts.</small></div></div>
+          <div><div class="k">AIOS Classification</div><div class="v">Not assigned<small>Insufficient authorized classification basis</small></div></div>
+        </div>
+
+        <div class="gex-hero" style="margin-top:14px;">
+          <div>
+            <div class="k">Current YTD PJ Visible Universe · <span class="gex-src pj">PJ Fact</span></div>
+            <div class="v">22 <small>Shipments · Jan 1 – Jul 27, 2026</small></div>
+            <div class="gex-split"><div style="width:40.9%;background:var(--navy);" title="PJ Imports 9 · 40.9%"></div><div style="width:59.1%;background:var(--teal);" title="PJ Exports 13 · 59.1%"></div></div>
+            <div class="s"><strong style="color:var(--navy);">9 PJ Imports · 40.9%</strong> · <strong style="color:var(--teal-dim);">13 PJ Exports · 59.1%</strong><br>Current YTD through July 27, 2026 · not annualized.</div>
+          </div>
+          <div>
+            <div class="k">Equivalent-period trend · Jan 1 – Jul 27 · <span class="gex-src ca">AIOS Calculation</span></div>
+            <div class="gex-delta dn">-18.5%</div>
+            <div class="gex-trendrow"><div><b style="color:#64748b;">27</b>2025</div><div><b style="color:var(--navy);">22</b>2026</div></div>
+            <div class="gex-trendrow"><div><b style="color:var(--navy);">0.0%</b>Imports 9 → 9</div><div><b style="color:#b91c1c;">-27.8%</b>Exports 18 → 13</div></div>
+          </div>
+          <div>
+            <div class="k">Previous Full Calendar Year · <span class="gex-src pj">PJ Fact</span></div>
+            <div class="v" style="color:#64748b;">43 <small>Shipments · 2025</small></div>
+            <div class="s">16 Imports · 27 Exports. Historical context only — never aggregated with Current YTD and not compared with 2026 YTD as a growth rate.</div>
+          </div>
+        </div>
+
+        <div class="gex-dw" style="margin-top:14px;">
+          <div class="cus">
+            <div class="t" style="color:var(--teal-dim);">Customs Shared Wallet · Current YTD</div>
+            <div class="big">36.4%</div>
+            <div class="eq">8 Arcatek-patent Shipments / 22 supported PJ Visible Shipments</div>
+            <div class="gex-rows" style="margin-top:10px;">
+              <div class="gex-row"><div class="lbl">Import Customs Wallet<em>8 of 9 Imports</em></div><div class="gex-cw-bar"><div class="gex-cw-ak" style="width:88.9%;"></div><div class="gex-cw-ot" style="width:11.1%;"></div></div><div class="val">88.9%</div></div>
+              <div class="gex-row"><div class="lbl">Export Customs Wallet<em>0 of 13 Exports</em></div><div class="gex-cw-bar"><div class="gex-cw-ak" style="width:0%;"></div><div class="gex-cw-ot" style="width:100%;"></div></div><div class="val">0.0%</div></div>
+            </div>
+            <div class="gex-legend" style="margin-top:8px;"><span><i style="background:var(--teal);"></i>Arcatek Patent</span><span><i style="background:#f59e0b;"></i>Other Patent</span></div>
+            <div class="lab"><span class="gex-src pj">PJ Fact</span> + <span class="gex-src ak">Akzent Fact · Arcatek Patent Ownership</span> + <span class="gex-src ca">AIOS Calculation</span> · Customs intelligence only</div>
+          </div>
+          <div class="log">
+            <div class="t">Akzent Logistics · Logistics Shared Wallet</div>
+            <div class="big txt">Not Calculable</div>
+            <dl>
+              <dt>Captured Logistics Shipments</dt><dd><span class="gex-na-pill">Not Available</span></dd>
+              <dt>Logistics Shared Wallet</dt><dd><span class="gex-na-pill">Not Calculable</span></dd>
+              <dt>Logistics Wallet Alignment</dt><dd><span class="gex-na-pill">Not Calculable</span></dd>
+              <dt>Captured Logistics Profit</dt><dd><span class="gex-na-pill">Not Available</span></dd>
+            </dl>
+            <div class="s" style="font-size:11px;color:var(--text-muted);margin-top:10px;line-height:1.55;">No authorized Akzent Captured Freight Shipment dataset is available. <strong style="color:var(--navy);">Missing internal data ≠ zero Captured Business.</strong> No Revenue, GP, Margin, Profit or Visible Uncaptured Logistics Reference is calculated.</div>
+            <div class="lab">Deactivated — not estimated, not extrapolated</div>
+          </div>
+        </div>
+        <div class="gex-micro">The Customs Shared Wallet is never combined with the Logistics Shared Wallet. Gateway-level customs allocation and the 2025 comparison are detailed once, in <a href="#gex-ch-5">Chapter 05</a>.</div>
+
+        <div class="gex-quote" style="margin-top:18px;"><em>Executive Thesis · <span class="gex-src ai">AIOS Interpretation</span></em>Arcatek has a strongly concentrated visible Customs position on the account's principal Import structure: 8 of 9 Current YTD Imports use patent 3468, primarily through Colombia, Nuevo León. Current Exports show the opposite customs structure: all 13 use Other Patents, led by 1783 through Reynosa. The primary Discovery question is why customs allocation changes by direction, gateway and Trading Partner. Logistics relationship and capture remain Not Validated.</div>
+
+        <div class="gex-jump" style="grid-template-columns:auto 1fr 1fr 1fr;">
+          <span class="k">Where to go next</span>
+          <a href="#gex-ch-4" class="key"><b>Three corridors</b>Colombia Imports · Reynosa Exports · Monterrey Exports</a>
+          <a href="#gex-ch-5"><b>Customs by direction and gateway</b>3468 on Imports · 1783 / 3438 on Exports</a>
+          <a href="#gex-ch-8"><b>Seller Discovery Guide</b>Allocation rules · decision rights · Logistics relationship</a>
+        </div>
+      </div>
+    </div>
+
+    <section class="gex-chapter " id="gex-ch-2">
+      <div class="gex-chapter-n">Chapter 02</div>
+      <div class="gex-chapter-t">Network Snapshot</div>
+      <div class="gex-chapter-s">What does the current operating structure look like? · Current YTD through July 27, 2026</div>
+    </section>
+    <div class="card">
+      <div class="card-header">Period scale, mode and principal gateways · <span class="gex-src pj">PJ Fact</span></div>
+      <div class="card-body">
+        <div style="overflow-x:auto;max-width:640px;"><table class="hub-table gex-cwg" style="font-size:11.5px;">
+          <thead><tr><th>Period</th><th class="num">Imports</th><th class="num">Exports</th><th class="num">Total</th></tr></thead>
+          <tbody>
+            <tr><td><strong>2026 Current YTD</strong> · through July 27</td><td class="num"><strong>9</strong></td><td class="num"><strong>13</strong></td><td class="num"><strong>22</strong></td></tr>
+            <tr class="gex-muted"><td>2025 Full Calendar Year</td><td class="num">16</td><td class="num">27</td><td class="num">43</td></tr>
+          </tbody></table></div>
+        <div class="gex-micro">The two periods are shown side by side for scale only; they are not aggregated and not compared as a growth rate.</div>
+        <div class="gex-dsplit" style="margin-top:18px;">
+          <div><div class="gex-sublbl">Current Import gateways · 9 Shipments</div><div class="gex-rows"><div class="gex-row"><div class="lbl"><strong class="gex-gwt" style="color:#0e7490;">Colombia, Colombia, Nuevo León</strong></div><div class="bar"><div style="width:80.0%;background:#0e7490;"></div></div><div class="val">8</div></div><div class="gex-row"><div class="lbl"><strong class="gex-gwt" style="color:#b45309;">Monterrey / General Mariano Escobedo, Nuevo León</strong></div><div class="bar"><div style="width:10.0%;background:#b45309;"></div></div><div class="val">1</div></div></div></div>
+          <div><div class="gex-sublbl">Current Export gateways · 13 Shipments</div><div class="gex-rows"><div class="gex-row"><div class="lbl"><strong class="gex-gwt" style="color:var(--navy);">Ciudad Reynosa, Tamaulipas</strong></div><div class="bar"><div style="width:100.0%;background:var(--navy);"></div></div><div class="val">10</div></div><div class="gex-row"><div class="lbl"><strong class="gex-gwt" style="color:#b45309;">Monterrey / General Mariano Escobedo, Nuevo León</strong></div><div class="bar"><div style="width:30.0%;background:#b45309;"></div></div><div class="val">3</div></div></div></div>
+        </div>
+        <div class="gex-kpis" style="margin-top:16px;">
+          <div><div class="k">Mode · <span class="gex-src pj">PJ Fact</span></div><div class="v" style="font-size:20px;"><span class="hub-tag unknown" title="Transport Method recorded as Unknown in PJ — not reclassified.">Unknown</span></div><div class="s">Transport Method: Unknown — Truck, Ocean, Air or Rail are not inferred</div></div>
+        </div>
+        <div class="gex-micro">Facility and Gateway are separate concepts and are never merged. Facilities and addresses appear in the Core Route rows of <a href="#gex-ch-3">Chapter 03</a>.</div>
+      </div>
+    </div>
+
+    <section class="gex-chapter " id="gex-ch-3">
+      <div class="gex-chapter-n">Chapter 03</div>
+      <div class="gex-chapter-t">Core Routes</div>
+      <div class="gex-chapter-s">Which routes make up ≥80% of each direction? · the complete minimum set, not a Top 10</div>
+    </section>
+    <div class="card" style="border-top:3px solid var(--navy);">
+      <div class="card-header">Current YTD Import Core Routes — 1 route · 88.9% of 9 Imports · <span class="gex-src pj">PJ Fact</span> + <span class="gex-src ca">AIOS Calculation</span></div>
+      <div class="card-body">
+        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:10px;"><span class="gex-flag">Extreme Route Concentration</span><span style="font-size:11px;color:var(--text-muted);">One route exceeds 80% of Current YTD Imports.</span></div>
+        <div style="max-width:880px;"><div class="gex-conc"><div class="gex-conc-bar"><div style="width:88.889%;background:#0e7490;" title="Route 1 · 8 Shipments">R1</div></div><div class="gex-conc-mk r" style="left:88.89%;"><span>Core · 88.9%</span></div></div></div>
+        <div style="margin-top:14px;"><div class="gex-scroll"><table class="gex-route-table"><thead><tr><th>Rank</th><th>Origin · Address</th><th>Gateway</th><th>Destination · Address</th><th>Mode</th><th class="num">Shipments</th><th class="num">Import Share</th><th class="num">Cumulative</th><th class="num">Active Months</th><th class="num">Shipments / Active Month</th><th class="num">Shipments / Week</th><th>First Visible Shipment</th><th>Last Visible Shipment</th></tr></thead><tbody><tr><td class="gex-rank"><span class="gex-rank-pill">1</span></td><td><div class="gex-ent"><strong>Grupo Essex Solutions Torreon S. De R.L. De C.V.</strong><span class="gex-na">Address not available in PJ</span></div></td><td><strong class="gex-gwt" style="color:#0e7490;">Colombia, Colombia, Nuevo León</strong></td><td><div class="gex-ent"><strong>Grupo Essex De Mexico S De Rl De Cv</strong><span class="gex-addr">Blvd. San Pedro No.110</span></div></td><td><span class="hub-tag unknown" title="Transport Method recorded as Unknown in PJ — not reclassified.">Unknown</span></td><td class="num gex-mono">8</td><td class="num">88.9%</td><td class="num gex-cum"><strong>88.9%</strong><div class="gex-cum-bar"><div style="width:88.90%;"></div></div></td><td class="num">6</td><td class="num">1.33</td><td class="num"><strong>0.29</strong></td><td class="gex-dates">January 14, 2026</td><td class="gex-dates">July 27, 2026</td></tr></tbody></table></div></div>
+      </div>
+    </div>
+    <div class="card" style="border-top:3px solid var(--teal);">
+      <div class="card-header">Current YTD Export Core Routes — 2 routes · 92.3% of 13 Exports · <span class="gex-src pj">PJ Fact</span> + <span class="gex-src ca">AIOS Calculation</span></div>
+      <div class="card-body">
+        <div style="max-width:880px;"><div class="gex-conc"><div class="gex-conc-bar"><div style="width:69.231%;background:var(--navy);" title="Route 1 · 9 Shipments">R1</div><div style="width:23.077%;background:#b45309;opacity:0.8;" title="Route 2 · 3 Shipments">R2</div></div><div class="gex-conc-mk r" style="left:92.31%;"><span>Core · 92.3%</span></div></div></div>
+        <div class="gex-legend" style="margin-top:12px;"><span><i style="background:var(--navy);"></i>Reynosa</span><span><i style="background:#b45309;"></i>Monterrey</span><span><i style="background:#e6eaf1;border:1px solid var(--border);"></i>Outside the Core set</span></div>
+        <div style="margin-top:14px;"><div class="gex-scroll"><table class="gex-route-table"><thead><tr><th>Rank</th><th>Origin · Address</th><th>Gateway</th><th>Destination · Address</th><th>Mode</th><th class="num">Shipments</th><th class="num">Export Share</th><th class="num">Cumulative</th><th class="num">Active Months</th><th class="num">Shipments / Active Month</th><th class="num">Shipments / Week</th><th>First Visible Shipment</th><th>Last Visible Shipment</th></tr></thead><tbody><tr><td class="gex-rank"><span class="gex-rank-pill">1</span></td><td><div class="gex-ent"><strong>Motores Hermeticos Del Sur Sa De Cv</strong><span class="gex-addr">Address supported only as: <strong>Mexico</strong></span></div></td><td><strong class="gex-gwt" style="color:var(--navy);">Ciudad Reynosa, Tamaulipas</strong></td><td><div class="gex-ent"><strong>Grupo Essex Solutions Torreon</strong><span class="gex-addr">Destination address field in PJ: <strong>Puerto Rico</strong></span><span class="gex-anom" title="Shown exactly as recorded in PJ — not corrected">PJ field · shown as recorded</span></div></td><td><span class="hub-tag unknown" title="Transport Method recorded as Unknown in PJ — not reclassified.">Unknown</span></td><td class="num gex-mono">9</td><td class="num">69.2%</td><td class="num gex-cum"><strong>69.2%</strong><div class="gex-cum-bar"><div style="width:69.20%;"></div></div></td><td class="num">7</td><td class="num">1.29</td><td class="num"><strong>0.36</strong></td><td class="gex-dates">January 9, 2026</td><td class="gex-dates">July 3, 2026</td></tr><tr><td class="gex-rank"><span class="gex-rank-pill">2</span></td><td><div class="gex-ent"><strong>Hammond Power Solutions Sa De Cv</strong><span class="gex-addr">Address supported only as: <strong>Mexico</strong></span></div></td><td><strong class="gex-gwt" style="color:#b45309;">Monterrey / General Mariano Escobedo, Nuevo León</strong></td><td><div class="gex-ent"><strong>Grupo Essex Solutions Torreon</strong><span class="gex-addr">Destination address field in PJ: <strong>Puerto Rico</strong></span><span class="gex-anom" title="Shown exactly as recorded in PJ — not corrected">PJ field · shown as recorded</span></div></td><td><span class="hub-tag unknown" title="Transport Method recorded as Unknown in PJ — not reclassified.">Unknown</span></td><td class="num gex-mono">3</td><td class="num">23.1%</td><td class="num gex-cum"><strong>92.3%</strong><div class="gex-cum-bar"><div style="width:92.30%;"></div></div></td><td class="num">3</td><td class="num">1.00</td><td class="num"><strong>0.24</strong></td><td class="gex-dates">April 10, 2026</td><td class="gex-dates">July 7, 2026</td></tr></tbody></table></div></div>
+        <div class="gex-micro">Ranks, shares, cumulative coverage, frequencies and visible windows are exactly as supplied by AIOS and are not recalculated. Export origin addresses are supported only as <em>Mexico</em>. The destination-address field reads <em>Puerto Rico</em> in PJ and is shown as recorded — it is not corrected. The 2025 Core Route sets are in <a href="#gex-ch-6">Chapter 06</a>.</div>
+      </div>
+    </div>
+
+    <section class="gex-chapter " id="gex-ch-4">
+      <div class="gex-chapter-n">Chapter 04</div>
+      <div class="gex-chapter-t">Lane Intelligence</div>
+      <div class="gex-chapter-s">How do the corridors behave? · Colombia Imports · Reynosa Exports · Monterrey Exports</div>
+    </section>
+    <div class="gex-cor gex-lane key" id="gex-lane-1">
+      <div class="gex-cor-h"><div class="gex-cor-id">1</div><div><div class="gex-cor-w">Corridor 1 · dominant Import structure · Gateway Colombia, Nuevo León</div><div class="gex-cor-t">Colombia Import Corridor</div></div></div>
+      <div class="gex-lane-g" style="grid-template-columns:1fr 1fr 1.5fr;"><div><div class="k">Scale / Share</div><div class="n">8 <small>of 9 Current YTD Imports</small></div><div class="s"><b>88.9%</b> Current YTD · 2025: <b>15 of 16</b> Imports, <b>93.8%</b></div></div><div><div class="k">Persistence</div><div class="s">The dominant Import structure in both periods.</div></div><div class=pos><div class="k">Customs Position · Logistics Position</div><div class="gex-pos"><span class="ca"><em>Customs · PJ</em>All 8 Current YTD Core Route Shipments use Arcatek patent 3468</span><span class="lu"><em>Logistics</em>Akzent Logistics capture · Not Validated</span></div></div></div>
+      <div class="gex-sig"><div class="s1"><b>Observed Operational Signal</b>The Import network is extremely concentrated around a persistent Colombia corridor, and Arcatek is visible on all Current YTD Shipments within that dominant Core Route.</div><div class="s2"><b>AIOS Interpretation</b>Arcatek has an established visible customs position within the account's principal Import operating structure.</div><div class="s3"><b>Discovery Validation</b>Validate:<ul class="gex-vlist"><li>service expectations and SLA</li><li>customs visibility requirements</li><li>exception-management responsibilities</li><li>decision rights</li><li>cross-border coordination model</li><li>whether Akzent Logistics participates in freight outside the internal data currently available</li><li>whether an integrated Customs + Logistics / ILM conversation is relevant</li></ul><strong>Logistics whitespace is not stated until Logistics capture is validated.</strong></div></div>
+    </div>
+    <div class="gex-cor gex-lane key" id="gex-lane-2">
+      <div class="gex-cor-h"><div class="gex-cor-id">2</div><div><div class="gex-cor-w">Corridor 2 · principal Current YTD Export gateway · Ciudad Reynosa, Tamaulipas</div><div class="gex-cor-t">Reynosa Export Corridor</div></div></div>
+      <div class="gex-lane-g" style="grid-template-columns:1fr 1fr 1.5fr;"><div><div class="k">Scale</div><div class="n">10 <small>of 13 Current YTD Exports</small></div><div class="s"><b>76.9%</b> · dominant source-level Core Route: Motores Hermeticos, <b>9 Shipments · 69.2%</b> of Current YTD Exports</div></div><div><div class="k">Historical Persistence</div><div class="s">Reynosa accounted for <b>18 of 27</b> Exports in 2025.</div></div><div class=pos><div class="k">Customs Position · Logistics Position</div><div class="gex-pos"><span class="co"><em>Customs · PJ</em>All 10 Current YTD Reynosa Export Shipments use Other Patent 1783</span><span class="lu"><em>Logistics</em>Akzent Logistics capture · Not Validated</span></div></div></div>
+      <div class="gex-sig"><div class="s1"><b>Observed Operational Signal</b>The principal Current YTD Export gateway is persistent and remains outside Arcatek-owned patents in the PJ Visible Universe.</div><div class="s2"><b>AIOS Interpretation</b>This is the most material Customs Discovery domain because it combines current scale, gateway concentration and historical persistence.</div><div class="s3"><b>Discovery Validation</b>Validate:<ul class="gex-vlist"><li>why patent 1783 is allocated to Reynosa Exports</li><li>decision rights</li><li>incumbent/customs-provider structure</li><li>contractual allocation</li><li>Trading Partner influence</li><li>regime requirements</li><li>procurement/tender timing</li><li>service specialization</li><li>commercial contestability</li></ul><strong>These Shipments are not described as winnable.</strong></div></div>
+    </div>
+    <div class="gex-cor gex-lane" id="gex-lane-3">
+      <div class="gex-cor-h"><div class="gex-cor-id">3</div><div><div class="gex-cor-w">Corridor 3 · second Export customs structure · Monterrey, Nuevo León</div><div class="gex-cor-t">Monterrey Export Corridor</div></div></div>
+      <div class="gex-lane-g" style="grid-template-columns:1fr 1fr 1.5fr;"><div><div class="k">Scale</div><div class="n">3 <small>of 13 Current YTD Exports</small></div><div class="s"><b>23.1%</b></div></div><div><div class="k">Trading Partner</div><div class="s">All three are associated with <b>Hammond Power Solutions Sa De Cv</b>.</div></div><div class=pos><div class="k">Customs Position · Logistics Position</div><div class="gex-pos"><span class="co"><em>Customs · PJ</em>All three use Other Patent 3438</span><span class="lu"><em>Logistics</em>Akzent Logistics capture · Not Validated</span></div></div></div>
+      <div class="gex-sig"><div class="s1"><b>Observed Operational Signal</b>The account shows a second material Export customs structure distinct from both Colombia Imports and Reynosa Exports.</div><div class="s2"><b>AIOS Interpretation</b>The pattern may indicate a gateway-, Trading Partner-, regime- or allocation-specific customs structure.</div><div class="s3"><b>Discovery Validation</b>Determine which factor actually explains the allocation. <strong>No hypothesized cause is presented as fact.</strong></div></div>
+    </div>
+
+    <section class="gex-chapter cus" id="gex-ch-5">
+      <div class="gex-chapter-n">Chapter 05</div>
+      <div class="gex-chapter-t">Customs Intelligence</div>
+      <div class="gex-chapter-s">Where does each Customs Patent operate? · Current YTD first, 2025 as reference</div><div class="gex-prim">Customs Shared Wallet ≠ Logistics Shared Wallet</div>
+    </section>
+    <div class="card" style="border-top:3px solid var(--teal);">
+      <div class="card-header">Customs Shared Wallet and allocation by direction · <span class="gex-src pj">PJ Fact</span> + <span class="gex-src ak">Akzent Fact · Arcatek Patent Ownership</span> + <span class="gex-src ca">AIOS Calculation</span></div>
+      <div class="card-body">
+        <div class="gex-flip">
+          <div class="ak"><div class="h">Imports · Current YTD</div><div class="w">88.9%</div><div class="f">8 of 9 Imports under Arcatek patent 3468</div>
+            <ul><li><span class="gex-pat ak" title="ARCATEK PATENT">3468</span><span>Colombia, Nuevo León</span><b>8</b></li><li><span class="gex-pat ot" title="OTHER PATENT — the company behind it is not identified">1823</span><span>Monterrey, Nuevo León</span><b>1</b></li></ul></div>
+          <div class="ot"><div class="h">Exports · Current YTD</div><div class="w">0.0%</div><div class="f">0 of 13 Exports under Arcatek patents</div>
+            <ul><li><span class="gex-pat ot" title="OTHER PATENT — the company behind it is not identified">1783</span><span>Reynosa, Tamaulipas</span><b>10</b></li><li><span class="gex-pat ot" title="OTHER PATENT — the company behind it is not identified">3438</span><span>Monterrey, Nuevo León</span><b>3</b></li></ul></div>
+        </div>
+        <div class="gex-kpis" style="margin-top:14px;">
+          <div><div class="k">Customs Shared Wallet · 2026 Current YTD</div><div class="v" style="color:var(--teal-dim);">36.4%</div><div class="s">8 Arcatek Patent Shipments / 22 supported PJ Customs Universe</div></div>
+          <div><div class="k">Customs Shared Wallet · 2025 Full Calendar Year</div><div class="v" style="color:#64748b;">34.9%</div><div class="s">15 Arcatek Patent Shipments / 43 supported PJ Customs Universe</div></div>
+          <div><div class="k">Arcatek-owned Patents · <span class="gex-src ak">Akzent Fact</span></div><div class="v" style="font-size:20px;"><span class="gex-pat ak" title="ARCATEK PATENT">3468</span> <span class="gex-pat ak" title="ARCATEK PATENT">1930</span></div><div class="s">3468 visible · 1930 not visible in the supplied PJ Shipment data</div></div>
+        </div>
+        <div style="margin-top:18px;">
+          <div class="gex-sublbl">Patent × Direction × Gateway · Current YTD</div>
+          <div style="overflow-x:auto;max-width:900px;"><table class="hub-table gex-cwg" style="font-size:11.5px;"><thead><tr><th>Patent</th><th>Ownership</th><th>Direction</th><th>Gateway</th><th class=num>Shipments</th><th class=num>% Patent</th><th class=num>% Direction</th></tr></thead><tbody><tr style=background:rgba(0,180,216,0.06);><td><span class="gex-pat ak" title="ARCATEK PATENT">3468</span></td><td><span style="font-size:9.5px;font-weight:800;letter-spacing:0.6px;color:var(--teal-dim);">ARCATEK PATENT</span></td><td>Import</td><td><strong class="gex-gwt" style="color:#0e7490;">Colombia, Nuevo León</strong></td><td class="num gex-mono">8</td><td class="num">100%</td><td class="num">88.9%</td></tr><tr><td><span class="gex-pat ot" title="OTHER PATENT — the company behind it is not identified">1823</span></td><td><span style="font-size:9.5px;font-weight:800;letter-spacing:0.6px;color:#b45309;">OTHER PATENT</span></td><td>Import</td><td><strong class="gex-gwt" style="color:#b45309;">Monterrey, Nuevo León</strong></td><td class="num gex-mono">1</td><td class="num">100%</td><td class="num">11.1%</td></tr><tr><td><span class="gex-pat ot" title="OTHER PATENT — the company behind it is not identified">1783</span></td><td><span style="font-size:9.5px;font-weight:800;letter-spacing:0.6px;color:#b45309;">OTHER PATENT</span></td><td>Export</td><td><strong class="gex-gwt" style="color:var(--navy);">Reynosa, Tamaulipas</strong></td><td class="num gex-mono">10</td><td class="num">100%</td><td class="num">76.9%</td></tr><tr><td><span class="gex-pat ot" title="OTHER PATENT — the company behind it is not identified">3438</span></td><td><span style="font-size:9.5px;font-weight:800;letter-spacing:0.6px;color:#b45309;">OTHER PATENT</span></td><td>Export</td><td><strong class="gex-gwt" style="color:#b45309;">Monterrey, Nuevo León</strong></td><td class="num gex-mono">3</td><td class="num">100%</td><td class="num">23.1%</td></tr></tbody></table></div>
+        </div>
+        <div style="margin-top:18px;">
+          <div class="gex-sublbl">Customs Wallet by Gateway · Current YTD</div>
+          <div style="overflow-x:auto;max-width:900px;"><table class="hub-table gex-cwg" style="font-size:11.5px;"><thead><tr><th>Direction</th><th>Gateway</th><th class=num>Arcatek</th><th class=num>Other</th><th class=num>Total</th><th class=num>Arcatek Customs Share</th><th>Volume</th></tr></thead><tbody><tr style="background:rgba(0,180,216,0.06);"><td>Import</td><td><strong class="gex-gwt" style="color:#0e7490;">Colombia</strong></td><td class="num gex-mono">8</td><td class="num gex-mono">0</td><td class="num gex-mono">8</td><td class="num"><strong style="color:var(--teal-dim);">100%</strong> <span style="font-size:10px;color:var(--text-muted);">(8/8)</span></td><td style="width:24%;"><div class="gex-cw-bar" style="width:80.0%;min-width:10px;height:10px;"><div class="gex-cw-ak" style="width:100.0%;"></div><div class="gex-cw-ot" style="width:0.0%;"></div></div></td></tr><tr><td>Import</td><td><strong class="gex-gwt" style="color:#b45309;">Monterrey</strong></td><td class="num gex-mono">0</td><td class="num gex-mono">1</td><td class="num gex-mono">1</td><td class="num"><strong style="color:#b45309;">0%</strong> <span style="font-size:10px;color:var(--text-muted);">(0/1)</span></td><td style="width:24%;"><div class="gex-cw-bar" style="width:10.0%;min-width:10px;height:10px;"><div class="gex-cw-ak" style="width:0.0%;"></div><div class="gex-cw-ot" style="width:100.0%;"></div></div></td></tr><tr><td>Export</td><td><strong class="gex-gwt" style="color:var(--navy);">Reynosa</strong></td><td class="num gex-mono">0</td><td class="num gex-mono">10</td><td class="num gex-mono">10</td><td class="num"><strong style="color:#b45309;">0%</strong> <span style="font-size:10px;color:var(--text-muted);">(0/10)</span></td><td style="width:24%;"><div class="gex-cw-bar" style="width:100.0%;min-width:10px;height:10px;"><div class="gex-cw-ak" style="width:0.0%;"></div><div class="gex-cw-ot" style="width:100.0%;"></div></div></td></tr><tr><td>Export</td><td><strong class="gex-gwt" style="color:#b45309;">Monterrey</strong></td><td class="num gex-mono">0</td><td class="num gex-mono">3</td><td class="num gex-mono">3</td><td class="num"><strong style="color:#b45309;">0%</strong> <span style="font-size:10px;color:var(--text-muted);">(0/3)</span></td><td style="width:24%;"><div class="gex-cw-bar" style="width:30.0%;min-width:10px;height:10px;"><div class="gex-cw-ak" style="width:0.0%;"></div><div class="gex-cw-ot" style="width:100.0%;"></div></div></td></tr></tbody></table></div>
+          <div class="gex-legend" style="margin-top:8px;"><span><i style="background:var(--teal);"></i>Arcatek Patent</span><span><i style="background:#f59e0b;"></i>Other Patent</span><span>Bar length scales with gateway Shipments</span></div>
+        </div>
+        <div class="gex-micro">Values are AIOS allocations and are not recalculated. This is Customs Shared Wallet intelligence and is never combined with the Logistics Shared Wallet. The companies or agencies behind Other Patents are not identified.</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">Material Other Patent deep dive · <span class="gex-src pj">PJ Fact</span> + <span class="gex-src ca">AIOS Calculation</span></div>
+      <div class="card-body">
+        <div class="gex-dd" style="grid-template-columns:1.35fr 1fr;">
+          <div><span class="gex-pat ot" title="OTHER PATENT — the company behind it is not identified">1783</span> <span style="font-size:9.5px;font-weight:800;letter-spacing:0.6px;color:#b45309;">OTHER PATENT</span> <span style="font-size:9.5px;font-weight:800;color:var(--navy);margin-left:6px;">Primary Other-Patent Discovery structure</span>
+            <div class="n">10 <small>Current YTD Shipments · Export · Reynosa</small></div>
+            <ul><li>Motores Hermeticos Del Sur: <strong>9</strong></li><li>Emerson Commercial &amp; Residential Motors Mexico: <strong>1</strong></li>
+            <li>Visible: January 9 – July 3, 2026</li><li>Active Months 7 · <strong>1.43</strong> Shipments / Active Month · <strong>0.40</strong> Shipments / Week</li></ul></div>
+          <div><span class="gex-pat ot" title="OTHER PATENT — the company behind it is not identified">3438</span> <span style="font-size:9.5px;font-weight:800;letter-spacing:0.6px;color:#b45309;">OTHER PATENT</span>
+            <div class="n">3 <small>Shipments · Export · Monterrey</small></div>
+            <ul><li>Trading Partner: Hammond Power Solutions</li><li>Visible: April 10 – July 7, 2026</li>
+            <li>Active Months 3 · <strong>1.00</strong> Shipments / Active Month · <strong>0.24</strong> Shipments / Week</li></ul></div>
+        </div>
+        <div class="gex-dd gex-sub" style="grid-template-columns:1fr;margin-top:10px;">
+          <div><span class="gex-pat ot" title="OTHER PATENT — the company behind it is not identified">1823</span> <span style="font-size:9.5px;font-weight:800;letter-spacing:0.6px;color:#b45309;">OTHER PATENT</span> <span class="n" style="display:inline;margin-left:8px;">1 <small>Shipment · Import · Monterrey · June 3, 2026</small></span></div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">Customs Whitespace Reference · Current YTD · <span class="gex-src pj">PJ Fact</span> + <span class="gex-src ca">AIOS Calculation</span></div>
+      <div class="card-body">
+        <div class="gex-kpis">
+          <div><div class="k">Other-Patent Shipments</div><div class="v" style="color:#b45309;">14</div><div class="s">of 22 supported customs universe · <strong>63.6%</strong></div></div>
+          <div><div class="k">Import Other-Patent Reference</div><div class="v" style="color:#b45309;">1</div><div class="s">Monterrey · 1823</div></div>
+          <div><div class="k">Export Other-Patent Reference</div><div class="v" style="color:#b45309;">13</div><div class="s">Reynosa · 1783 = 10 · Monterrey · 3438 = 3</div></div>
+        </div>
+        <div class="gex-principle"><b>Customs reference whitespace — not confirmed opportunity.</b><span>Visible Other-Patent activity identifies WHERE Arcatek is not visible in the supported customs universe. It does not establish commercial availability or migration potential. Discovery validates WHY another Patent is used and whether any eligible business is contestable.</span></div>
+        <details class="gex-ev"><summary>HS Intelligence · Current YTD operational presence</summary><div class="gex-ev-b"><div class="gex-note" style="margin:0 0 12px;"><strong>One Shipment may contain multiple HS Codes. HS counts represent operational presence and are not additive.</strong></div><div style="overflow-x:auto;max-width:460px;"><table class="hub-table gex-cwg" style="font-size:11.5px;"><thead><tr><th class=num>Rank</th><th>HS Code</th><th class=num>Operational Presence</th></tr></thead><tbody><tr><td class="num">1</td><td class="gex-mono">3923909900</td><td class="num gex-mono">9</td></tr><tr><td class="num">2</td><td class="gex-mono">3923409900</td><td class="num gex-mono">8</td></tr><tr><td class="num">3</td><td class="gex-mono">7602000201</td><td class="num gex-mono">6</td></tr><tr><td class="num">4</td><td class="gex-mono">8544110100</td><td class="num gex-mono">6</td></tr><tr><td class="num">5</td><td class="gex-mono">3923500100</td><td class="num gex-mono">5</td></tr></tbody></table></div><div class="gex-micro">Supported PJ goods descriptions include plastic packaging/pallet/reel items, aluminum wire scrap and copper winding wire.</div></div></details>
+      </div>
+    </div>
+
+    <section class="gex-chapter " id="gex-ch-6">
+      <div class="gex-chapter-n">Chapter 06</div>
+      <div class="gex-chapter-t">Historical Intelligence</div>
+      <div class="gex-chapter-s">What changed structurally? · 2025 is context, never aggregated with Current YTD</div>
+    </section>
+    <div class="card">
+      <div class="card-header">Structural persistence and change · <span class="gex-src pj">PJ Fact</span> + <span class="gex-src ca">AIOS Calculation</span></div>
+      <div class="card-body">
+        <ol class="gex-hobs">
+          <li>The <strong>Colombia Import structure is persistent and highly concentrated</strong> — covered in <a href="#gex-lane-1">Corridor 1</a>.</li>
+          <li><strong>Arcatek patent 3468 remains the dominant visible customs position on Imports.</strong></li>
+          <li><strong>Reynosa remains a material Export gateway.</strong></li>
+          <li><strong>Current YTD Export volume is lower than the equivalent prior-year period</strong> (18 → 13).</li>
+          <li>The Current YTD Export Core structure includes <strong>Hammond / Monterrey</strong>, while <strong>Conductores Monterrey</strong> was part of the 2025 Core set.</li>
+        </ol>
+        <div class="gex-note-na">No cause is inferred for these structural changes. Routes and Trading Partners are not described as won, lost, new business or lost business.</div>
+        <div class="gex-shift" style="margin-top:16px;">
+          <div>
+            <b style="font-size:12px;color:var(--navy);">Import Core Route set size</b>
+            <div class="row"><div class="l">2025 Full Year</div><div class="gex-dots h"><i></i></div><div class="r">1 route → 93.8%</div></div>
+            <div class="row"><div class="l">Current YTD</div><div class="gex-dots"><i></i></div><div class="r">1 route → 88.9%</div></div>
+          </div>
+          <div>
+            <b style="font-size:12px;color:var(--navy);">Export Core Route set size</b>
+            <div class="row"><div class="l">2025 Full Year</div><div class="gex-dots h"><i></i><i></i><i></i></div><div class="r">3 routes → 85.2%</div></div>
+            <div class="row"><div class="l">Current YTD</div><div class="gex-dots"><i></i><i></i></div><div class="r">2 routes → 92.3%</div></div>
+          </div>
+        </div>
+        <div class="gex-hist" style="margin-top:14px;">
+        <details class="gex-ev"><summary>2025 Import Core Routes ≥80% — historical · 1 route · 93.8% of 16 Imports</summary><div class="gex-ev-b"><div class="gex-scroll"><table class="gex-route-table" style="min-width:0;"><thead><tr><th>Rank</th><th>Origin</th><th>Gateway</th><th>Destination</th><th class="num">Shipments</th><th class="num">Import Share</th><th class="num">Cumulative</th><th class="num">Active Months</th><th class="num">Shipments / Active Month</th><th class="num">Shipments / Week</th><th>Visible window</th></tr></thead><tbody><tr class="gex-muted"><td class="gex-rank"><span class="gex-rank-pill">1</span></td><td>Grupo Essex Solutions Torreon</td><td><strong class="gex-gwt" style="color:#0e7490;">Colombia, Nuevo León</strong></td><td>Grupo Essex De Mexico</td><td class="num gex-mono">15</td><td class="num">93.8%</td><td class="num gex-cum"><strong>93.8%</strong><div class="gex-cum-bar"><div style="width:93.80%;"></div></div></td><td class="num">8</td><td class="num">1.88</td><td class="num"><strong>0.40</strong></td><td class="gex-dates">March 10 – November 26, 2025</td></tr></tbody></table></div><div class="gex-micro">Exactly as supplied by AIOS.</div></div></details>
+        <details class="gex-ev"><summary>2025 Export Core Routes ≥80% — historical · 3 routes · 85.2% of 27 Exports</summary><div class="gex-ev-b"><div class="gex-scroll"><table class="gex-route-table" style="min-width:0;"><thead><tr><th>Rank</th><th>Origin</th><th>Gateway</th><th>Destination</th><th class="num">Shipments</th><th class="num">Export Share</th><th class="num">Cumulative</th></tr></thead><tbody><tr class="gex-muted"><td class="gex-rank"><span class="gex-rank-pill">1</span></td><td>Motores Hermeticos Del Sur</td><td><strong class="gex-gwt" style="color:var(--navy);">Reynosa</strong></td><td>Grupo Essex Solutions</td><td class="num gex-mono">13</td><td class="num">48.1%</td><td class="num gex-cum"><strong>48.1%</strong><div class="gex-cum-bar"><div style="width:48.10%;"></div></div></td></tr><tr class="gex-muted"><td class="gex-rank"><span class="gex-rank-pill">2</span></td><td>Conductores Monterrey</td><td><strong class="gex-gwt" style="color:#b45309;">Monterrey</strong></td><td>Grupo Essex Solutions</td><td class="num gex-mono">7</td><td class="num">25.9%</td><td class="num gex-cum"><strong>74.1%</strong><div class="gex-cum-bar"><div style="width:74.10%;"></div></div></td></tr><tr class="gex-muted"><td class="gex-rank"><span class="gex-rank-pill">3</span></td><td>Emerson Commercial &amp; Residential Motors Mexico</td><td><strong class="gex-gwt" style="color:var(--navy);">Reynosa</strong></td><td>Grupo Essex Solutions</td><td class="num gex-mono">3</td><td class="num">11.1%</td><td class="num gex-cum"><strong>85.2%</strong><div class="gex-cum-bar"><div style="width:85.20%;"></div></div></td></tr></tbody></table></div><div class="gex-micro">Exactly as supplied by AIOS. Route frequency and visible windows were not supplied for the 2025 Export set and are not derived.</div></div></details>
+        </div>
+      </div>
+    </div>
+
+    <section class="gex-chapter syn" id="gex-ch-7">
+      <div class="gex-chapter-n">Chapter 07</div>
+      <div class="gex-chapter-t">Commercial Synthesis</div>
+      <div class="gex-chapter-s">What does this mean commercially? · evidence lives in Chapters 02–06</div>
+    </section>
+    <div class="card">
+      <div class="card-header">Commercial Synthesis · <span class="gex-src ai">AIOS Interpretation</span></div>
+      <div class="card-body">
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;">
+          <div><div class="gex-sublbl">Established position</div><ul class="gex-obs">
+            <li class="new">Arcatek Customs has a confirmed visible position in the principal Import structure, particularly the persistent Colombia corridor.</li>
+          </ul></div>
+          <div><div class="gex-sublbl">Not validated</div><ul class="gex-obs">
+            <li class="chg">Akzent Logistics Captured Business is not validated. Therefore no Logistics Shared Wallet, Logistics penetration, Logistics Visible Uncaptured Reference, captured Logistics Profit or freight whitespace is calculated or implied.</li>
+          </ul></div>
+          <div><div class="gex-sublbl">Customs Discovery domain</div><ul class="gex-obs">
+            <li class="chg">Material Current YTD customs reference whitespace is concentrated in Exports: Reynosa / Patent 1783 — <strong>10 Shipments</strong>; Monterrey / Patent 3438 — <strong>3 Shipments</strong>.</li>
+            <li class="chg">The remaining Import reference is one Monterrey Shipment under 1823.</li>
+          </ul></div>
+        </div>
+        <div class="gex-sublbl" style="margin-top:16px;">Commercial Positioning</div>
+        <ol class="gex-sigl" style="max-width:900px;"><li><span>Operational Complexity</span></li><li><span>Cross-Border Coordination</span></li><li><span>Customs &amp; Visibility</span></li><li><span>ILM / Control Tower</span></li><li><span>Integrated coordination — where Discovery validates a legitimate need</span></li></ol>
+        <div class="gex-note"><strong>Do not position Akzent as a transactional freight provider.</strong> Customer pain is not claimed without validation.</div>
+      </div>
+    </div>
+
+    <section class="gex-chapter syn" id="gex-ch-8">
+      <div class="gex-chapter-n">Chapter 08</div>
+      <div class="gex-chapter-t">Seller Discovery Guide</div>
+      <div class="gex-chapter-s">Use before or during the account conversation · questions about unknowns, not PJ Facts</div>
+    </section>
+    <div class="card" style="border-top:3px solid #f59e0b;">
+      <div class="card-header">Seller Discovery Guide · <span class="gex-src dv">Discovery Validation</span></div>
+      <div class="card-body">
+        <div class="gex-dq-g">
+          <div><h4>Customs allocation &amp; decision rights<a href="#gex-ch-5">Customs →</a></h4><ol start="1"><li>What determines the split between patent 3468 on Imports and patents 1783/3438 on Exports?</li><li>Who owns customs-provider allocation by gateway and direction?</li><li>Why is the Reynosa Export structure consistently assigned to patent 1783?</li><li>Is the Hammond / Monterrey / 3438 structure driven by Trading Partner requirements, gateway allocation, regime, contract or another operating rule?</li><li>What explains the isolated Monterrey Import under patent 1823?</li><li>Are any Other-Patent allocations commercially reviewable? If yes, what is the procurement or tender cycle?</li></ol></div>
+          <div><h4>Freight, coordination &amp; operating model<a href="#gex-ch-4">Lane Intelligence →</a></h4><ol start="7"><li>Who manages freight for the Colombia Import and Reynosa/Monterrey Export structures?</li><li>Does Akzent currently capture any freight that is absent from the internal data available to this analysis?</li><li>Where are cross-border visibility, exception management and coordination responsibilities currently owned?</li><li>What SLA, decision criteria and operating requirements would govern any eligible service consolidation?</li></ol></div>
+        </div>
+        <div class="gex-micro">Do not ask the account to rediscover reliable PJ Facts already presented in this report (volumes, gateways, Trading Partners, Patents) or the confirmed Arcatek Customs relationship.</div>
+        <details class="gex-ev"><summary>Data availability and provenance</summary><div class="gex-ev-b"><div class="gex-da"><div><b>Available · PJ Facts</b><ul><li>PJ Shipment-level Import and Export data</li><li>Shipment dates</li><li>Facilities / Trading Partners</li><li>Partial addresses</li><li>Gateways</li><li>Customs Agent / Patent</li><li>Customs regime</li><li>HS Codes</li><li>Goods descriptions</li><li>Values / weights</li></ul></div><div class="c"><b>Calculated and authorized by AIOS</b><ul><li>Shipment scale</li><li>Equivalent-period comparison</li><li>Complete ≥80% Core Routes</li><li>Route frequencies</li><li>Customs Shared Wallet</li><li>Import / Export Customs Wallet</li><li>Patent portfolio</li><li>Patent × Direction × Gateway</li><li>Customs Wallet by Gateway</li><li>Material Other Patent structure</li><li>Current / historical lane persistence</li></ul></div><div class="x"><b>Missing / Not Validated</b><ul><li>Akzent Captured Freight Shipments</li><li>Akzent Logistics relationship confirmation</li><li>Logistics Shared Wallet</li><li>Logistics Visible Uncaptured Reference</li><li>Revenue / Profit / GP / Margin</li><li>Reliable transport mode</li></ul></div><div class="d"><b>Governance</b><ul><li>Akzent Facts: Arcatek Customs Confirmed Client · Arcatek-owned Patents = 3468 + 1930</li><li>Current YTD through July 27, 2026 and 2025 Full Year kept separate · no annualization</li><li>No company assigned to Other Patents</li><li>No zero substituted for missing data</li><li>No visible whitespace labeled winnable</li></ul></div></div></div></details>
+      </div>
+    </div>
+
+  </div>
+  <script>
+  /* Printing opens every Grupo Essex evidence panel, then restores the reader's state. */
+  window.addEventListener('beforeprint', function () { document.querySelectorAll('#view-grupo-essex details.gex-ev:not([open])').forEach(function (d) { d.setAttribute('open', ''); d.setAttribute('data-gex-print', '1'); }); });
+  window.addEventListener('afterprint', function () { document.querySelectorAll('#view-grupo-essex details.gex-ev[data-gex-print]').forEach(function (d) { d.removeAttribute('open'); d.removeAttribute('data-gex-print'); }); });
   </script>
 </div>
 
@@ -87308,6 +88372,7 @@ const ACCOUNTS = [
   { id:'view-cemm', name:'CEMM MEX', sub:'CEMM MEX &middot; CLIENT &middot; Arcatek Customs Confirmed Client &middot; Akzent Logistics Not Validated &middot; AIOS Classification Not Assigned &middot; Analysis Date 19-Sep-2026 &middot; PJ Current YTD 2,664 Shipments &middot; 1,551 Imports &middot; 1,113 Exports &middot; equivalent-period +17.8% &middot; 2025 Full Year 4,316 &middot; Customs Shared Wallet 11.5% &middot; Arcatek Patent 3468 &middot; Other Patents 1823 1487 1862 3933 1890 3200 &middot; Logistics Shared Wallet Not Calculable &middot; Import Core Routes 11 to 80.27% &middot; Export Core Routes 22 to 80.05% &middot; Guadalupe Nuevo Leon &middot; Novi Bridge St &middot; Novi Meadowbrook Rd &middot; Mariano Escobedo Airport &middot; Nuevo Laredo &middot; Altamira &middot; Monterrey &middot; Colombia NL &middot; Puebla &middot; Manzanillo &middot; IMMEX &middot; Customs Wallet by Gateway &middot; Discovery Required', rel:'CLIENT', cls:'&mdash;', clsPill:'' },
   { id:'view-enerpres', name:'Petroliferos Enerpres S.A. de C.V.', sub:'PETROLIFEROS ENERPRES &middot; CLIENT &middot; Arcatek Customs Confirmed Client &middot; Akzent Logistics Not Validated &middot; Analysis Date 19-Sep-2026 &middot; PJ Current YTD 386 Shipments &middot; 386 Imports &middot; Rail &middot; equivalent-period +32.2% &middot; 2025 Full Year 571 &middot; Customs Shared Wallet 85.2% &middot; Arcatek Patent 3468 &middot; Other Patent 3830 &middot; Logistics Shared Wallet Not Calculable &middot; Import Core Routes 5 to 89.6% &middot; Nuevo Laredo &middot; Matamoros &middot; Tauber Oil &middot; BP Products North America &middot; Centennial Energy &middot; 4 J Energy &middot; Phoenix Park Energy Marketing &middot; Customs Wallet by Gateway &middot; Discovery Required', rel:'CLIENT', cls:'&mdash;', clsPill:'' },
   { id:'view-siete-leguas', name:'Siete Leguas Automotive', sub:'SIETE LEGUAS AUTOMOTIVE &middot; CLIENT &middot; Arcatek Customs Confirmed Client &middot; Akzent Logistics Not Validated &middot; Analysis Date 19-Sep-2026 &middot; PJ Current YTD 330 Shipments &middot; 239 Imports &middot; 91 Exports &middot; equivalent-period +10.0% &middot; FY2025 515 &middot; Customs Shared Wallet 22.7% &middot; Import 16.7% &middot; Export 38.5% &middot; Arcatek Patent 3468 &middot; Other Patents 3600 3954 3772 3164 3469 1691 &middot; Logistics Shared Wallet Not Calculable &middot; Import Core Routes 28 to 80.33% &middot; Export Core Routes 5 to 80.22% &middot; Air &middot; Maritime &middot; Monterrey Airport &middot; Colombia NL &middot; Altamira &middot; AIFA &middot; AICM &middot; Manzanillo &middot; Nuevo Laredo &middot; BRP Rotax &middot; Customs-to-Logistics Expansion &middot; Discovery Required', rel:'CLIENT', cls:'&mdash;', clsPill:'' },
+  { id:'view-grupo-essex', name:'Grupo Essex Solutions', sub:'GRUPO ESSEX SOLUTIONS &middot; Relationship Not Fully Validated &middot; Arcatek Customs Confirmed Client &middot; Akzent Logistics Not Validated &middot; Analysis Date 19-Sep-2026 &middot; PJ Current YTD 22 Shipments &middot; 9 Imports &middot; 13 Exports &middot; equivalent-period -18.5% &middot; 2025 Full Year 43 &middot; Customs Shared Wallet 36.4% &middot; Import 88.9% &middot; Export 0.0% &middot; Arcatek Patent 3468 &middot; Other Patents 1783 3438 1823 &middot; Logistics Shared Wallet Not Calculable &middot; Import Core Routes 1 to 88.9% &middot; Export Core Routes 2 to 92.3% &middot; Colombia NL &middot; Reynosa &middot; Monterrey &middot; Motores Hermeticos Del Sur &middot; Hammond Power Solutions &middot; Torreon &middot; Discovery Required', rel:'CLIENT', cls:'&mdash;', clsPill:'' },
   { id:'view-pollmann', name:'Pollmann de México', sub:'Automotive Components / Mechatronics / Industrial Manufacturing · Import-Dominant · Air-Sensitive Supply Chain · China / Austria / Czech Republic / Germany sourcing · Querétaro · Veracruz · Puebla · Manzanillo · AICM · AIFA · Nuevo Laredo · Customs Complexity · ILM / Control Tower · Panjiva Mexico Imports + Exports', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
   { id:'view-magna-powertrain', name:'Magna Powertrain de México', sub:'Automotive / Powertrain / Auto Components · IMMEX · Cross-Border · Multimodal · Air urgency · Nuevo Laredo · Colombia NL · Piedras Negras · Altamira · Manzanillo · Puebla · Guanajuato / Silao · OEM continuity · Customs Complexity · ILM / Control Tower · Panjiva Imports + Exports', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
   { id:'view-philipmorris', name:'Philip Morris Mexico', sub:'Tobacco / Nicotine Products / Regulated Consumer Goods / Industrial Production Support · Air-Dominant · Maritime · Truck · Double Stack Rail · Guadalajara · Manzanillo · Altamira · Nuevo Laredo · Colombia · Central America · Brazil · Canada · Machinery parts · Customs Sensitivity · ILM / Control Tower · Panjiva Imports + Exports', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
