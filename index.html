@@ -3287,6 +3287,237 @@ main {
   #view-borgwarner .bw-route-table { min-width:0; font-size:8.5px; }
 }
 
+/* HALDEX PRODUCTS DE MEXICO — scoped view components (#view-haldex only). Customs Agency CLIENT. */
+#view-haldex .num { text-align:right; }
+#view-haldex .hdx-sublbl { font-size:10px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal-dim); margin-bottom:8px; }
+#view-haldex .hdx-sublbl.muted { color:var(--text-light); }
+#view-haldex .hdx-eyebrow { font-size:9px; font-weight:800; letter-spacing:1.3px; text-transform:uppercase; color:var(--teal-dim); }
+#view-haldex .hdx-src { display:inline-block; font-size:8.5px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; padding:1px 6px; border-radius:3px; vertical-align:1px; }
+#view-haldex .hdx-src.pj { color:var(--navy); background:rgba(13,43,94,0.08); }
+#view-haldex .hdx-src.ak { color:#047857; background:rgba(16,185,129,0.12); }
+#view-haldex .hdx-calc { display:inline-block; font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--teal-dim); border:1px solid rgba(0,180,216,0.45); padding:1px 6px; border-radius:3px; }
+#view-haldex .hdx-mono { font-family:ui-monospace,Menlo,monospace; font-weight:700; color:var(--navy); }
+#view-haldex .hdx-muted td { color:var(--text-muted); }
+
+/* Chapters */
+#view-haldex .hdx-chapter { margin:26px 0 12px; padding:16px 22px; border-radius:8px; color:#fff; background:linear-gradient(120deg,var(--navy) 0%,#1e4a8a 100%); position:relative; overflow:hidden; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-haldex .hdx-chapter:first-of-type { margin-top:8px; }
+#view-haldex .hdx-chapter::after { content:""; position:absolute; right:0; top:0; bottom:0; width:6px; background:var(--teal); }
+#view-haldex .hdx-chapter.exec::after { background:#10b981; }
+#view-haldex .hdx-chapter.cus { background:linear-gradient(120deg,#0b4f63 0%,#0e7490 100%); }
+#view-haldex .hdx-chapter.cus::after { background:#f59e0b; }
+#view-haldex .hdx-chapter.syn { background:linear-gradient(120deg,#064e3b 0%,#047857 100%); }
+#view-haldex .hdx-chapter-n { font-size:9.5px; font-weight:800; letter-spacing:2px; text-transform:uppercase; opacity:0.75; }
+#view-haldex .hdx-chapter-t { font-size:22px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; line-height:1.2; margin-top:2px; }
+#view-haldex .hdx-chapter-s { font-size:11.5px; font-weight:600; opacity:0.85; margin-top:3px; }
+#view-haldex .hdx-chapnav { display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-top:14px; }
+#view-haldex .hdx-chapnav > span { font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-light); }
+#view-haldex .hdx-chapnav button { font:inherit; font-size:11px; font-weight:800; color:var(--navy); background:var(--surface); border:1px solid var(--border); border-radius:5px; padding:6px 11px; cursor:pointer; }
+#view-haldex .hdx-chapnav button:hover { border-color:var(--teal); color:var(--teal-dim); }
+
+/* Executive viewport */
+#view-haldex .hdx-hero { display:grid; grid-template-columns:1.15fr 1fr 1fr; gap:14px; align-items:stretch; }
+#view-haldex .hdx-hero > div { padding:13px 16px; background:var(--surface); border:1px solid var(--border); border-radius:7px; }
+#view-haldex .hdx-hero .k { font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-haldex .hdx-hero .v { font-size:34px; font-weight:800; color:var(--navy); line-height:1.1; margin-top:2px; }
+#view-haldex .hdx-hero .v small { font-size:12px; font-weight:700; color:var(--text-muted); }
+#view-haldex .hdx-hero .s { font-size:10.5px; color:var(--text-muted); line-height:1.55; margin-top:5px; }
+#view-haldex .hdx-split { display:flex; height:14px; border-radius:7px; overflow:hidden; margin-top:8px; }
+#view-haldex .hdx-split > div { height:100%; }
+#view-haldex .hdx-delta { font-size:22px; font-weight:800; line-height:1.15; }
+#view-haldex .hdx-delta.dn { color:#b91c1c; }
+#view-haldex .hdx-delta.up { color:#047857; }
+#view-haldex .hdx-trendrow { display:flex; gap:14px; flex-wrap:wrap; margin-top:7px; }
+#view-haldex .hdx-trendrow div { font-size:10.5px; color:var(--text-muted); }
+#view-haldex .hdx-trendrow b { display:block; font-size:15px; font-weight:800; }
+
+/* The two-wallet asymmetry — the signature visual of this account */
+#view-haldex .hdx-asym { display:grid; grid-template-columns:1fr 46px 1fr; gap:10px; align-items:center; margin-top:4px; }
+#view-haldex .hdx-asym > div.w { padding:16px 18px; border-radius:8px; border:1.5px solid var(--border); background:var(--surface); }
+#view-haldex .hdx-asym .w.log { border-top:4px solid #94a3b8; }
+#view-haldex .hdx-asym .w.cus { border-top:4px solid var(--teal); background:rgba(0,180,216,0.04); }
+#view-haldex .hdx-asym .wk { font-size:9.5px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); }
+#view-haldex .hdx-asym .wv { font-size:52px; font-weight:800; line-height:1.05; margin-top:2px; letter-spacing:-1px; }
+#view-haldex .hdx-asym .log .wv { color:#64748b; }
+#view-haldex .hdx-asym .cus .wv { color:var(--teal-dim); }
+#view-haldex .hdx-asym .wf { font-size:11px; color:var(--text-muted); margin-top:3px; line-height:1.5; }
+#view-haldex .hdx-asym .wbar { height:10px; border-radius:5px; background:#e6eaf1; overflow:hidden; margin-top:10px; }
+#view-haldex .hdx-asym .wbar > div { height:100%; }
+#view-haldex .hdx-asym .vs { text-align:center; font-size:11px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-light); }
+#view-haldex .hdx-asym-note { margin-top:12px; padding:11px 15px; background:rgba(13,43,94,0.04); border-left:3px solid var(--navy); border-radius:0 5px 5px 0; font-size:11px; color:var(--text-muted); line-height:1.65; }
+
+/* Signal / Interpretation / Discovery — always three visually separate layers */
+#view-haldex .hdx-sig { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:14px; }
+#view-haldex .hdx-sig > div { padding:12px 15px; border-radius:6px; font-size:11px; line-height:1.6; color:var(--text-muted); }
+#view-haldex .hdx-sig b { display:block; font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; margin-bottom:4px; }
+#view-haldex .hdx-sig .s1 { background:rgba(13,43,94,0.04); border-top:3px solid var(--navy); }
+#view-haldex .hdx-sig .s1 b { color:var(--navy); }
+#view-haldex .hdx-sig .s2 { background:rgba(0,180,216,0.05); border-top:3px solid var(--teal); }
+#view-haldex .hdx-sig .s2 b { color:var(--teal-dim); }
+#view-haldex .hdx-sig .s3 { background:rgba(245,158,11,0.05); border-top:3px solid #f59e0b; }
+#view-haldex .hdx-sig .s3 b { color:#b45309; }
+
+/* Notes */
+#view-haldex .hdx-note { margin-top:12px; padding:11px 15px; background:rgba(245,158,11,0.05); border-left:3px solid #f59e0b; border-radius:0 5px 5px 0; font-size:11px; color:var(--text-muted); line-height:1.65; }
+#view-haldex .hdx-note-navy { margin-top:12px; padding:11px 15px; background:rgba(13,43,94,0.04); border-left:3px solid var(--navy); border-radius:0 5px 5px 0; font-size:11px; color:var(--text-muted); line-height:1.65; }
+#view-haldex .hdx-note-na { margin-top:12px; padding:11px 15px; background:rgba(148,163,184,0.09); border-left:3px solid #94a3b8; border-radius:0 5px 5px 0; font-size:11px; color:var(--text-muted); line-height:1.65; }
+
+/* Progressive-disclosure ladder */
+#view-haldex .hdx-ladder { display:flex; flex-wrap:wrap; gap:5px; align-items:center; font-size:10px; font-weight:800; letter-spacing:0.4px; text-transform:uppercase; color:var(--navy); }
+#view-haldex .hdx-ladder span { background:var(--surface); border:1px solid var(--border); padding:3px 9px; border-radius:4px; }
+#view-haldex .hdx-ladder i { font-style:normal; color:var(--text-light); }
+
+/* Bar rows (modes, gateways, geography, partners, HS) */
+#view-haldex .hdx-rows { display:flex; flex-direction:column; gap:7px; }
+#view-haldex .hdx-row { display:grid; grid-template-columns:minmax(170px,1.5fr) 1fr 108px; gap:10px; align-items:center; padding:5px 0; border-bottom:1px solid var(--border); }
+#view-haldex .hdx-row:last-child { border-bottom:none; }
+#view-haldex .hdx-row .lbl { font-size:11.5px; font-weight:700; color:var(--navy); line-height:1.4; word-break:break-word; }
+#view-haldex .hdx-row .lbl em { display:block; font-style:normal; font-size:9.5px; font-weight:600; color:var(--text-muted); }
+#view-haldex .hdx-row .bar { height:9px; border-radius:5px; background:#e6eaf1; overflow:hidden; }
+#view-haldex .hdx-row .bar > div { height:100%; }
+#view-haldex .hdx-row .val { text-align:right; font-size:12px; font-weight:800; color:var(--navy); white-space:nowrap; }
+#view-haldex .hdx-row .val span { font-size:10px; font-weight:700; color:var(--text-muted); margin-left:4px; }
+
+/* Route tables */
+#view-haldex .hdx-route-table { width:100%; min-width:1160px; border-collapse:collapse; font-size:11px; }
+#view-haldex .hdx-route-table td:nth-child(2),
+#view-haldex .hdx-route-table td:nth-child(4) { min-width:150px; }
+#view-haldex .hdx-route-table td:nth-child(3) { min-width:190px; }
+#view-haldex .hdx-route-table th { position:sticky; top:0; z-index:2; background:var(--navy); color:#fff; font-size:8.5px; font-weight:800; letter-spacing:0.7px; text-transform:uppercase; padding:8px 7px; text-align:left; white-space:nowrap; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-haldex .hdx-route-table th.num { text-align:right; }
+#view-haldex .hdx-route-table td { padding:7px; border-bottom:1px solid var(--border); vertical-align:top; }
+#view-haldex .hdx-route-table tbody tr:hover { background:rgba(0,180,216,0.04); }
+#view-haldex .hdx-rank { width:34px; }
+#view-haldex .hdx-rank-pill { display:inline-block; min-width:26px; text-align:center; font-size:10px; font-weight:800; color:var(--navy); background:rgba(13,43,94,0.07); border-radius:4px; padding:2px 5px; }
+#view-haldex .hdx-ent strong { font-size:11px; font-weight:700; color:var(--navy); line-height:1.35; display:block; }
+#view-haldex .hdx-ent .hdx-na { font-size:9.5px; font-weight:600; color:var(--text-light); font-style:italic; }
+#view-haldex .hdx-ent .hdx-self { display:inline-block; font-size:8px; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--navy); background:rgba(13,43,94,0.07); padding:1px 5px; border-radius:3px; margin-top:3px; }
+#view-haldex .hdx-gw-name { font-size:9.5px; color:var(--text-muted); line-height:1.4; margin-top:3px; word-break:break-word; }
+#view-haldex .hdx-cum { min-width:78px; }
+#view-haldex .hdx-cum-bar { height:4px; border-radius:2px; background:#e6eaf1; overflow:hidden; margin-top:3px; }
+#view-haldex .hdx-cum-bar > div { height:100%; background:var(--teal); }
+#view-haldex .hdx-dates { font-size:9.5px; color:var(--text-muted); white-space:nowrap; }
+#view-haldex .hdx-scroll { overflow-x:auto; max-height:640px; overflow-y:auto; border:1px solid var(--border); border-radius:6px; }
+
+/* Patent components */
+#view-haldex .hdx-pat { display:inline-block; font-size:10px; font-weight:800; letter-spacing:0.5px; padding:2px 7px; border-radius:4px; white-space:nowrap; }
+#view-haldex .hdx-pat.ak { color:#fff; background:var(--teal-dim); }
+#view-haldex .hdx-pat.ot { color:#92400e; background:rgba(245,158,11,0.16); border:1px solid rgba(245,158,11,0.4); }
+#view-haldex .hdx-pat.off { color:var(--text-light); background:rgba(148,163,184,0.15); border:1px dashed rgba(148,163,184,0.7); }
+#view-haldex .hdx-gwr { display:grid; grid-template-columns:minmax(190px,1.4fr) 1fr 150px; gap:12px; align-items:center; padding:8px 0; border-bottom:1px solid var(--border); }
+#view-haldex .hdx-gwr:last-child { border-bottom:none; }
+#view-haldex .hdx-gwr .hdx-cw-lbl { font-size:11.5px; font-weight:700; color:var(--navy); line-height:1.4; word-break:break-word; }
+#view-haldex .hdx-gwr .hdx-cw-sub { font-size:9.5px; color:var(--text-muted); margin-top:2px; }
+#view-haldex .hdx-cw-bar { display:flex; height:16px; border-radius:8px; overflow:hidden; background:#e6eaf1; }
+#view-haldex .hdx-cw-bar > div { height:100%; }
+#view-haldex .hdx-cw-ak { background:var(--teal); }
+#view-haldex .hdx-cw-ot { background:#f59e0b; }
+#view-haldex .hdx-cw-legend { text-align:right; font-size:10px; color:var(--text-muted); white-space:nowrap; }
+#view-haldex .hdx-cw-legend b { display:block; font-size:15px; font-weight:800; color:var(--navy); }
+#view-haldex .hdx-gwr.hot { background:rgba(0,180,216,0.05); border-radius:6px; padding:10px 10px; border-bottom:none; margin-bottom:4px; }
+#view-haldex .hdx-gwr.hot .hdx-cw-bar { height:22px; }
+#view-haldex .hdx-gwr.zero .hdx-cw-legend b { color:#b45309; }
+#view-haldex .hdx-gwr.small { opacity:0.72; }
+#view-haldex .hdx-gwr.small .hdx-cw-lbl { font-size:10.5px; }
+#view-haldex .hdx-gwr.small .hdx-cw-bar { height:9px; }
+
+/* Materiality scale — keeps a 100% share on small volume from overpowering larger volumes */
+#view-haldex .hdx-matbar { height:6px; border-radius:3px; background:#e6eaf1; overflow:hidden; margin-top:4px; }
+#view-haldex .hdx-matbar > div { height:100%; background:var(--navy); opacity:0.55; }
+#view-haldex .hdx-matlbl { font-size:8.5px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:var(--text-light); margin-top:3px; }
+
+/* Deep dives */
+#view-haldex .hdx-dd { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+#view-haldex .hdx-dd > div { padding:13px 16px; background:var(--surface); border:1px solid var(--border); border-top:3px solid #f59e0b; border-radius:7px; }
+#view-haldex .hdx-dd .h { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+#view-haldex .hdx-dd .n { font-size:26px; font-weight:800; color:var(--navy); line-height:1.1; }
+#view-haldex .hdx-dd .n small { font-size:10px; font-weight:700; color:var(--text-muted); }
+#view-haldex .hdx-dd .g { font-size:10.5px; color:var(--navy); font-weight:700; margin-top:5px; line-height:1.5; }
+#view-haldex .hdx-dd .w { font-size:10px; color:var(--text-muted); margin-top:4px; line-height:1.5; }
+#view-haldex .hdx-dd .tp { font-size:10px; color:var(--text-muted); margin-top:6px; line-height:1.6; }
+#view-haldex .hdx-dd .tp em { font-style:normal; color:var(--navy); font-weight:700; }
+#view-haldex .hdx-dd .tp.na { color:var(--text-light); font-style:italic; }
+
+/* Profit provenance */
+#view-haldex .hdx-prov { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+#view-haldex .hdx-prov > div { padding:14px 17px; background:rgba(148,163,184,0.07); border:1px dashed rgba(148,163,184,0.7); border-radius:7px; }
+#view-haldex .hdx-prov .k { font-size:9.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-haldex .hdx-prov .v { font-size:19px; font-weight:800; color:#64748b; margin-top:3px; line-height:1.2; }
+#view-haldex .hdx-prov .s { font-size:10.5px; color:var(--text-muted); margin-top:4px; line-height:1.55; }
+
+/* Positioning */
+#view-haldex .hdx-pos { display:grid; grid-template-columns:repeat(5,1fr); gap:9px; }
+#view-haldex .hdx-pos > div { padding:12px 13px; background:var(--surface); border:1px solid var(--border); border-top:3px solid #10b981; border-radius:7px; }
+#view-haldex .hdx-pos b { display:block; font-size:11.5px; font-weight:800; color:var(--navy); line-height:1.35; }
+#view-haldex .hdx-pos span { display:block; font-size:10px; color:var(--text-muted); margin-top:4px; line-height:1.5; }
+
+#view-haldex .hdx-dlist { margin:6px 0 0 16px; padding:0; font-size:11px; color:var(--text-muted); line-height:1.75; }
+#view-haldex .hdx-dlist li { margin:2px 0; }
+#view-haldex .hdx-dlist b { color:var(--navy); }
+
+@media (max-width: 1100px) {
+  #view-haldex .hdx-pos { grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width: 900px) {
+  #view-haldex .hdx-hero, #view-haldex .hdx-sig, #view-haldex .hdx-dd,
+  #view-haldex .hdx-prov, #view-haldex .hdx-pos { grid-template-columns:1fr; }
+  #view-haldex .hdx-asym { grid-template-columns:1fr; }
+  #view-haldex .hdx-asym .vs { padding:4px 0; }
+  #view-haldex .hdx-row { grid-template-columns:1fr 92px; }
+  #view-haldex .hdx-row .bar { grid-column:1 / -1; }
+  #view-haldex .hdx-gwr { grid-template-columns:1fr; }
+  #view-haldex .hdx-gwr .hdx-cw-legend { text-align:left; }
+}
+/* Print: every table and appendix opens in full, scroll containers release. */
+@media print {
+  #view-haldex .hdx-scroll { overflow:visible !important; max-height:none !important; border:none; }
+  #view-haldex .hdx-route-table th { position:static; }
+  #view-haldex .hdx-route-table { min-width:0; font-size:8.5px; }
+}
+/* HALDEX additions — customs chapter prominence, triple wallet, HS presence matrix */
+#view-haldex .hdx-chapter.cus { box-shadow:0 0 0 2px rgba(245,158,11,0.35); }
+#view-haldex .hdx-chapter .hdx-prim { display:inline-block; margin-top:8px; font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; background:#f59e0b; color:#1f2937; padding:3px 9px; border-radius:4px; }
+#view-haldex .hdx-tri { display:grid; grid-template-columns:1fr 1.35fr 0.8fr; gap:12px; align-items:stretch; margin-top:4px; }
+#view-haldex .hdx-tri > div { padding:15px 17px; border-radius:8px; border:1.5px solid var(--border); background:var(--surface); }
+#view-haldex .hdx-tri .log { border-top:4px solid #94a3b8; }
+#view-haldex .hdx-tri .cus { border:2px solid var(--teal); border-top:5px solid var(--teal); background:rgba(0,180,216,0.05); }
+#view-haldex .hdx-tri .pro { border-style:dashed; background:rgba(148,163,184,0.06); }
+#view-haldex .hdx-tri .wk { font-size:9.5px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); }
+#view-haldex .hdx-tri .wv { font-size:46px; font-weight:800; line-height:1.05; margin-top:3px; letter-spacing:-1px; }
+#view-haldex .hdx-tri .log .wv { color:#64748b; }
+#view-haldex .hdx-tri .cus .wv { color:var(--teal-dim); font-size:58px; }
+#view-haldex .hdx-tri .pro .wv { font-size:15px; font-weight:800; color:#64748b; letter-spacing:0; line-height:1.35; margin-top:8px; }
+#view-haldex .hdx-tri .wf { font-size:11px; color:var(--text-muted); margin-top:4px; line-height:1.55; }
+#view-haldex .hdx-tri .wbar { height:10px; border-radius:5px; background:#e6eaf1; overflow:hidden; margin-top:10px; display:flex; }
+#view-haldex .hdx-tri .wbar > div { height:100%; }
+#view-haldex .hdx-thesis { margin-top:16px; padding:15px 19px; border-radius:8px; background:linear-gradient(120deg,rgba(13,43,94,0.05),rgba(0,180,216,0.07)); border-left:4px solid var(--teal); font-size:13px; line-height:1.65; color:var(--navy); font-weight:600; }
+#view-haldex .hdx-thesis b { font-weight:800; }
+#view-haldex .hdx-dir { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+#view-haldex .hdx-dir > div { padding:13px 16px; border:1px solid var(--border); border-radius:7px; background:var(--surface); }
+#view-haldex .hdx-dir .k { font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-haldex .hdx-dir .v { font-size:30px; font-weight:800; color:var(--teal-dim); line-height:1.1; margin-top:2px; }
+#view-haldex .hdx-dir .v.nv { color:var(--navy); }
+#view-haldex .hdx-dir .s { font-size:10.5px; color:var(--text-muted); line-height:1.55; margin-top:5px; }
+#view-haldex .hdx-hs { width:100%; border-collapse:collapse; font-size:11.5px; }
+#view-haldex .hdx-hs th { background:var(--navy); color:#fff; font-size:8.5px; font-weight:800; letter-spacing:0.7px; text-transform:uppercase; padding:8px; text-align:center; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-haldex .hdx-hs th:first-child { text-align:left; }
+#view-haldex .hdx-hs td { padding:7px 8px; border-bottom:1px solid var(--border); text-align:center; }
+#view-haldex .hdx-hs td:first-child { text-align:left; }
+#view-haldex .hdx-hs .y { color:var(--teal-dim); font-weight:800; }
+#view-haldex .hdx-hs .n { color:var(--text-light); font-size:10px; }
+#view-haldex .hdx-cp { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+#view-haldex .hdx-cp > div { padding:11px 14px; border:1px solid var(--border); border-radius:7px; background:var(--surface); font-size:10.5px; color:var(--text-muted); line-height:1.55; }
+#view-haldex .hdx-cp b { display:block; font-size:11.5px; color:var(--navy); font-weight:700; margin-bottom:3px; }
+#view-haldex .hdx-cp .r { font-size:9px; font-weight:800; letter-spacing:0.8px; text-transform:uppercase; color:var(--teal-dim); }
+#view-haldex .hdx-ov { display:inline-block; font-size:11px; font-weight:800; letter-spacing:0.8px; text-transform:uppercase; color:#b45309; background:rgba(245,158,11,0.12); border:1px solid rgba(245,158,11,0.45); padding:4px 10px; border-radius:5px; }
+@media (max-width: 900px) {
+  #view-haldex .hdx-tri, #view-haldex .hdx-dir, #view-haldex .hdx-cp { grid-template-columns:1fr; }
+  #view-haldex .hdx-2col { grid-template-columns:1fr !important; }
+}
+@media print {
+  #view-haldex .hdx-tri .cus .wv { font-size:42px; }
+}
+
 /* ═══════════════════════════════════════════════════════════════
    AIOS · COLLAPSIBLE SIDEBAR + EXPORT CONTROLS
    Presentation only. Expanded (220px) remains the default; the
@@ -3850,6 +4081,10 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
       <span class="recent-cls" style="background:rgba(16,185,129,0.2);color:#34d399;">CLIENT</span>
       <span class="recent-cls aaa">AAA</span>
     </div>
+    <div class="nav-item" onclick="showView('view-haldex', this)" title="HALDEX Products de Mexico · Customs Agency CLIENT · AIOS Classification not supplied">
+      <span>◆</span> <span style="flex:1;">HALDEX Products de Mexico</span>
+      <span class="recent-cls" style="background:rgba(16,185,129,0.2);color:#34d399;">CLIENT</span>
+    </div>
   </div>
 
   <div class="nav-divider"></div>
@@ -4401,6 +4636,37 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
         <span class="acct-tag">Manzanillo</span>
         <span class="acct-tag">Multimodal</span>
         <span class="acct-tag">IMMEX</span>
+        <span class="acct-tag">Customs Shared Wallet</span>
+      </div>
+    </div>
+
+    <!-- HALDEX Products de Mexico -->
+    <div class="account-card" onclick="showViewById('view-haldex')" title="HALDEX Products de Mexico is an Akzent Customs Agency CLIENT with no captured freight business. Panjiva shows 416 visible Shipments in Current YTD Jan–Jul 2026 (287 Imports / 129 Exports), against 1,073 in the comparable Jan–Jul 2025 window (−61.2%). Akzent Captured Freight Shipments = 0, so Logistics Shared Wallet is 0.0%. Akzent Patents 3468/1930 account for 318 of 416 visible Current YTD customs Shipments — a 76.4% Customs Shared Wallet (Imports 85.4%, Exports 56.6%). Other-Patent Reference is 98 Shipments, concentrated around Monterrey/MTY. Profit is not calculable — Akzent financial source not supplied.">
+      <div class="account-card-header">
+        <div>
+          <div class="account-name">HALDEX Products de Mexico</div>
+          <div class="account-industry">Customs Agency CLIENT · Auto components · Apodaca, Nuevo León · 2026 YTD Jan–Jul</div>
+        </div>
+        <div style="display:flex;gap:5px;align-items:center;flex-shrink:0;">
+          <span class="account-cls-badge client">CLIENT</span>
+        </div>
+      </div>
+      <div class="account-metrics" style="grid-template-columns:repeat(4,1fr);">
+        <div class="acct-metric"><div class="acct-metric-val">416</div><div class="acct-metric-lbl">Visible YTD Shipments</div></div>
+        <div class="acct-metric"><div class="acct-metric-val">0.0%</div><div class="acct-metric-lbl">Logistics Wallet</div></div>
+        <div class="acct-metric"><div class="acct-metric-val" style="color:var(--teal-dim);">76.4%</div><div class="acct-metric-lbl">Customs Wallet</div></div>
+        <div class="acct-metric"><div class="acct-metric-val" style="font-size:15px;color:var(--text-light);">n/a</div><div class="acct-metric-lbl">Profit</div></div>
+      </div>
+      <div style="margin-top:8px;padding:7px 10px;background:rgba(0,180,216,0.06);border-left:3px solid var(--teal);border-radius:0 4px 4px 0;">
+        <div style="font-size:9px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:var(--teal-dim);">Customs Agency CLIENT</div>
+        <div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;margin-top:2px;">318 of 416 YTD Shipments on Akzent Patents &mdash; no Akzent-managed freight</div>
+      </div>
+      <div class="account-tags">
+        <span class="acct-tag" style="background:rgba(16,185,129,0.15);color:#10b981;border-color:rgba(16,185,129,0.3);">CLIENT</span>
+        <span class="acct-tag">Customs Agency</span>
+        <span class="acct-tag">Colombia NL</span>
+        <span class="acct-tag">Nuevo Laredo</span>
+        <span class="acct-tag">MTY Airport</span>
         <span class="acct-tag">Customs Shared Wallet</span>
       </div>
     </div>
@@ -13530,6 +13796,452 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
   </div>
 </div>
 
+<!-- ══ HALDEX PRODUCTS DE MEXICO VIEW — AIOS CUSTOMS AGENCY CLIENT ══ -->
+<div id="view-haldex" class="view">
+  <div class="page-header">
+    <div class="page-header-left">
+      <div class="page-header-eyebrow">CLIENT Account · Customs Agency CLIENT · Executive Summary · Logistics Intelligence · Customs Agency Intelligence · Commercial Synthesis</div>
+      <div class="page-header-title">HALDEX Products de Mexico</div>
+      <div class="page-header-sub">Akzent Customs Agency CLIENT · no Akzent-managed freight · Apodaca, Nuevo León · Current YTD Jan–Jul 2026</div>
+    </div>
+    <div class="page-header-meta">
+      <span class="classification-badge client">CLIENT</span>
+      <button class="print-btn" onclick="printView('view-haldex')">⬇ Export PDF</button>
+    </div>
+  </div>
+  <div class="content-body">
+
+    <!-- Identity strip -->
+    <div class="card" style="border-top:3px solid #10b981;">
+      <div class="card-body" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:11px 18px;">
+        <span style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);">Relationship Status</span>
+        <span class="classification-badge client">CLIENT</span>
+        <span style="width:1px;height:20px;background:var(--border);"></span>
+        <span style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);">Relationship Type</span>
+        <span style="font-size:12.5px;font-weight:800;color:var(--teal-dim);letter-spacing:0.5px;">CUSTOMS AGENCY CLIENT</span>
+        <span style="width:1px;height:20px;background:var(--border);"></span>
+        <span style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);">Akzent Customs Patents</span>
+        <span class="hdx-pat ak">3468</span><span class="hdx-pat ak">1930</span>
+        <span style="width:1px;height:20px;background:var(--border);"></span>
+        <span style="font-size:10.5px;color:var(--navy);line-height:1.5;"><span class="hdx-src pj">Panjiva</span> Visible Universe · 2025 Full Year · comparable Jan–Jul 2025 · Current YTD Jan–Jul 2026</span>
+        <span style="flex:1;min-width:220px;font-size:10px;color:var(--text-muted);line-height:1.55;"><strong style="color:var(--navy);">Akzent currently manages no HALDEX freight/logistics Shipments.</strong> Captured Freight Business = 0 Shipments <span class="hdx-src ak">Akzent Fact</span>. Akzent patents are the Captured Customs Business indicator. All counts are Shipments; Current YTD is never annualized.</span>
+      </div>
+    </div>
+
+    <div class="hdx-chapter exec" id="hdx-ch-1">
+      <div class="hdx-chapter-n">Chapter 1</div>
+      <div class="hdx-chapter-t">Executive Account Summary</div>
+      <div class="hdx-chapter-s">Customs Agency CLIENT · a 30–60 second read</div>
+      <div class="hdx-chapnav"><span>Jump to</span>
+        <button type="button" onclick="document.getElementById('hdx-ch-3').scrollIntoView({behavior:'smooth'});">Customs Agency Intelligence</button>
+        <button type="button" onclick="document.getElementById('hdx-ch-2').scrollIntoView({behavior:'smooth'});">Logistics Intelligence</button>
+        <button type="button" onclick="document.getElementById('hdx-ch-4').scrollIntoView({behavior:'smooth'});">Commercial Synthesis</button>
+      </div>
+    </div>
+
+    <!-- 01 EXECUTIVE VIEWPORT -->
+    <div class="card" style="border-top:3px solid #10b981;">
+      <div class="card-header"><span class="accent">01</span> Executive Viewport — Relationship, Scale, Dual Wallet, Profit</div>
+      <div class="card-body">
+        <div class="hdx-thesis">HALDEX is an Akzent <b>Customs Agency CLIENT</b> with <b>no captured freight business</b>. Akzent patents account for <b>318 of 416</b> visible Current YTD customs Shipments, a <b>76.4% Customs Shared Wallet</b>. Customs participation is materially stronger in <b>Imports (85.4%)</b> than <b>Exports (56.6%)</b>. The remaining Other-Patent Reference is geographically concentrated, especially around <b>Monterrey/MTY</b> and selected maritime/customs gateways.</div>
+
+        <div style="margin-top:18px;" class="hdx-hero">
+          <div>
+            <div class="k"><span class="hdx-src pj">Panjiva</span> Visible Shipments · Current YTD Jan–Jul 2026</div>
+            <div class="v">416</div>
+            <div class="hdx-split">
+              <div style="width:69.0%;background:var(--navy);" title="287 Imports"></div>
+              <div style="width:31.0%;background:var(--teal);" title="129 Exports"></div>
+            </div>
+            <div class="s"><strong style="color:var(--navy);">287 Imports</strong> &nbsp;·&nbsp; <strong style="color:var(--teal-dim);">129 Exports</strong></div>
+          </div>
+          <div>
+            <div class="k">Comparable trend · Jan–Jul 2025 → Jan–Jul 2026</div>
+            <div class="hdx-delta dn">−61.2%</div>
+            <div class="s">1,073 → 416 visible Shipments on a like-for-like Jan–Jul basis. 2025 Full Year (1,835) is shown separately and never compared with YTD.</div>
+            <div class="hdx-trendrow">
+              <div>Imports<b class="hdx-delta dn" style="font-size:15px;">−69.0%</b>926 → 287</div>
+              <div>Exports<b class="hdx-delta dn" style="font-size:15px;">−12.2%</b>147 → 129</div>
+            </div>
+          </div>
+          <div>
+            <div class="k">Akzent Captured Freight Shipments</div>
+            <div class="v">0</div>
+            <div class="s"><span class="hdx-src ak">Akzent Fact</span> Akzent does not manage HALDEX freight. The relationship is Customs Agency: <strong style="color:var(--navy);">318 Current YTD Shipments cleared under Akzent patents 3468 / 1930.</strong></div>
+          </div>
+        </div>
+
+        <div style="margin-top:18px;">
+          <div class="hdx-sublbl">Three separate answers — never combined</div>
+          <div class="hdx-tri">
+            <div class="log">
+              <div class="wk">1 · Logistics Shared Wallet</div>
+              <div class="wv">0.0%</div>
+              <div class="wbar"><div style="width:0%;"></div></div>
+              <div class="wf">0 Akzent Captured Freight Shipments of 416 Panjiva Visible Shipments. <span class="hdx-calc">AIOS Calculation</span><br>A relationship fact, not a performance score.</div>
+            </div>
+            <div class="cus">
+              <div class="wk" style="color:var(--teal-dim);">2 · Customs Shared Wallet — the actual CLIENT relationship</div>
+              <div class="wv">76.4%</div>
+              <div class="wbar"><div style="width:76.4%;background:var(--teal);"></div><div style="width:23.6%;background:#f59e0b;"></div></div>
+              <div class="wf"><strong style="color:var(--navy);">318 Akzent Patent Shipments</strong> of 416 visible customs Shipments · <strong style="color:#b45309;">98 Other-Patent Reference (23.6%)</strong> <span class="hdx-calc">AIOS Calculation</span></div>
+            </div>
+            <div class="pro">
+              <div class="wk">3 · Profit availability</div>
+              <div class="wv">Not available — Akzent financial source not supplied</div>
+              <div class="wf">No Revenue, Gross Profit or Margin dataset for HALDEX customs business. Not estimated.</div>
+            </div>
+          </div>
+          <div class="hdx-asym-note"><strong>HALDEX is currently a Customs Agency CLIENT. Akzent does not manage the account's freight. Visible Uncaptured Reference is not automatically winnable business.</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 CUSTOMS AT A GLANCE -->
+    <div class="card" style="border-top:3px solid var(--teal);">
+      <div class="card-header"><span class="accent">02</span> Customs Participation at a Glance — Direction and Comparable Share</div>
+      <div class="card-body">
+        <div class="hdx-dir">
+          <div><div class="k">Imports · Customs Wallet</div><div class="v">85.4%</div><div class="s"><strong style="color:var(--navy);">245 of 287</strong> Import Shipments on Akzent patents · 42 Other-Patent Reference</div></div>
+          <div><div class="k">Exports · Customs Wallet</div><div class="v">56.6%</div><div class="s"><strong style="color:var(--navy);">73 of 129</strong> Export Shipments on Akzent patents · 56 Other-Patent Reference</div></div>
+          <div><div class="k">Comparable Customs Share · Jan–Jul</div><div class="v nv">+5.7 pp</div><div class="s">70.7% (759 / 1,073) → 76.4% (318 / 416). Share rose while the visible universe contracted.</div></div>
+        </div>
+        <div class="hdx-note"><strong>A higher share does not mean more absolute business.</strong> In the comparable Jan–Jul window, Akzent Patent Shipments were 759 in 2025 and 318 in 2026 — the percentage is always read together with the Shipment scale.</div>
+      </div>
+    </div>
+
+    <!-- 03 EXECUTIVE THESIS -->
+    <div class="card">
+      <div class="card-header"><span class="accent">03</span> Executive Thesis — Signal, Interpretation and Discovery are separate layers</div>
+      <div class="card-body">
+        <div class="hdx-sig">
+          <div class="s1"><b>Observed Operational Signal</b>416 visible Current YTD Shipments. 318 use Akzent patents (76.4%); 98 use Other Patents. Akzent patents concentrate in <strong>Colombia, Nuevo Laredo and Altamira</strong>; Other Patents concentrate around <strong>MTY Airport / Monterrey</strong> and selected maritime gateways. Akzent Captured Freight Shipments = 0.</div>
+          <div class="s2"><b>AIOS Interpretation</b>HALDEX is a <strong>high-participation Customs Agency CLIENT</strong>, not an existing logistics CLIENT. The most defensible expansion path is to understand the structural reason for the remaining Other-Patent allocations before pursuing migration.</div>
+          <div class="s3"><b>Discovery Validation</b>Why Other Patents are used by gateway, direction, Trading Partner, regime, contract, specialization, contingency, capacity, decision owner and procurement model — and whether specific Shipments are eligible to migrate.</div>
+        </div>
+        <div class="hdx-note-navy">Nothing in the Interpretation or Discovery layer is proven business. Visible Uncaptured Reference and Other-Patent Reference describe <strong>where to look</strong>, not what is winnable.</div>
+      </div>
+    </div>
+
+    <div class="hdx-chapter " id="hdx-ch-2">
+      <div class="hdx-chapter-n">Chapter 2</div>
+      <div class="hdx-chapter-t">Logistics Intelligence</div>
+      <div class="hdx-chapter-s">Panjiva Visible Universe only · Akzent Captured Freight Business = 0 Shipments</div>
+    </div>
+
+    <!-- 04 LOGISTICS SHARED WALLET -->
+    <div class="card">
+      <div class="card-header"><span class="accent">04</span> Logistics Shared Wallet — Visible Universe, not Captured Business</div>
+      <div class="card-body">
+        <div class="hdx-note-na" style="margin-top:0;margin-bottom:14px;"><strong>Akzent Captured Freight Business = 0. HALDEX is currently a Customs Agency CLIENT. Panjiva logistics intelligence describes the visible operating network and does not imply Akzent freight participation.</strong></div>
+        <div style="overflow-x:auto;"><table class="hub-table" style="font-size:11.5px;">
+          <thead><tr><th>Period</th><th class="num">Panjiva Visible Logistics Shipments</th><th class="num">Akzent Captured Freight Shipments</th><th class="num">Logistics Shared Wallet</th><th class="num">Visible Uncaptured Reference</th></tr></thead>
+          <tbody>
+            <tr class="hdx-muted"><td>2025 Full Calendar Year</td><td class="num hdx-mono">1,835</td><td class="num hdx-mono">0</td><td class="num"><strong>0.0%</strong></td><td class="num hdx-mono">1,835</td></tr>
+            <tr style="background:rgba(148,163,184,0.07);"><td><strong>Current YTD Jan–Jul 2026</strong></td><td class="num"><strong>416</strong></td><td class="num"><strong>0</strong></td><td class="num"><strong style="font-size:15px;color:#64748b;">0.0%</strong></td><td class="num"><strong>416</strong></td></tr>
+          </tbody></table></div>
+        <div class="hdx-note-navy">The 0.0% Logistics Shared Wallet reflects the relationship type — Akzent is HALDEX's customs agent, not its freight provider. <strong>It is not a negative performance score and not a sales score.</strong> Visible Uncaptured Reference is not automatically winnable business.</div>
+      </div>
+    </div>
+
+    <!-- 05 SCALE -->
+    <div class="card">
+      <div class="card-header"><span class="accent">05</span> Visible Scale and Comparable Trend</div>
+      <div class="card-body">
+        <div style="overflow-x:auto;"><table class="hub-table" style="font-size:12px;">
+          <thead><tr><th>Period</th><th class="num">Imports</th><th class="num">Exports</th><th class="num">Total</th></tr></thead>
+          <tbody>
+            <tr class="hdx-muted"><td>2025 Full Calendar Year <span class="hdx-src pj">Panjiva</span> <span style="font-size:9.5px;">structural history</span></td><td class="num hdx-mono">1,584</td><td class="num hdx-mono">251</td><td class="num hdx-mono">1,835</td></tr>
+            <tr style="border-top:2px solid var(--border);"><td>Jan–Jul 2025 · comparable window</td><td class="num hdx-mono">926</td><td class="num hdx-mono">147</td><td class="num hdx-mono">1,073</td></tr>
+            <tr style="background:rgba(0,180,216,0.05);"><td><strong>Jan–Jul 2026 · Current YTD</strong></td><td class="num"><strong>287</strong></td><td class="num"><strong>129</strong></td><td class="num"><strong style="font-size:14px;">416</strong></td></tr>
+            <tr><td><strong>Comparable change</strong></td><td class="num"><strong style="color:#b91c1c;">−69.0%</strong></td><td class="num"><strong style="color:#b91c1c;">−12.2%</strong></td><td class="num"><strong style="color:#b91c1c;font-size:14px;">−61.2%</strong></td></tr>
+          </tbody></table></div>
+        <div class="hdx-note-navy">Change is measured on the <strong>Jan–Jul window only</strong>. The 2025 Full Year total is never compared with Current YTD as growth, and Current YTD is never annualized.</div>
+      </div>
+    </div>
+
+    <!-- 06 VISIBLE NETWORK -->
+    <div class="card">
+      <div class="card-header"><span class="accent">06</span> Visible Network — Direction → Gateway → Mode · Current YTD</div>
+      <div class="card-body">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px;" class="hdx-2col">
+          <div><div class="hdx-sublbl">Import gateways — 287 Shipments</div><div class="hdx-rows"><div class="hdx-row"><div class="lbl">Colombia, NL</div><div class="bar"><div style="width:100.0%;background:var(--navy);"></div></div><div class="val">155</div></div><div class="hdx-row"><div class="lbl">Nuevo Laredo</div><div class="bar"><div style="width:58.1%;background:var(--navy);"></div></div><div class="val">90</div></div><div class="hdx-row"><div class="lbl">MTY Airport</div><div class="bar"><div style="width:17.4%;background:var(--navy);"></div></div><div class="val">27</div></div><div class="hdx-row"><div class="lbl">Puebla</div><div class="bar"><div style="width:4.5%;background:var(--navy);"></div></div><div class="val">7</div></div><div class="hdx-row"><div class="lbl">Lázaro Cárdenas</div><div class="bar"><div style="width:3.2%;background:var(--navy);"></div></div><div class="val">5</div></div><div class="hdx-row"><div class="lbl">Manzanillo</div><div class="bar"><div style="width:1.9%;background:var(--navy);"></div></div><div class="val">3</div></div></div></div>
+          <div><div class="hdx-sublbl">Export gateways — 129 Shipments</div><div class="hdx-rows"><div class="hdx-row"><div class="lbl">Nuevo Laredo</div><div class="bar"><div style="width:100.0%;background:var(--teal);"></div></div><div class="val">36</div></div><div class="hdx-row"><div class="lbl">Colombia, NL</div><div class="bar"><div style="width:77.8%;background:var(--teal);"></div></div><div class="val">28</div></div><div class="hdx-row"><div class="lbl">MTY Airport</div><div class="bar"><div style="width:61.1%;background:var(--teal);"></div></div><div class="val">22</div></div><div class="hdx-row"><div class="lbl">Monterrey</div><div class="bar"><div style="width:61.1%;background:var(--teal);"></div></div><div class="val">22</div></div><div class="hdx-row"><div class="lbl">Altamira</div><div class="bar"><div style="width:33.3%;background:var(--teal);"></div></div><div class="val">12</div></div><div class="hdx-row"><div class="lbl">Manzanillo</div><div class="bar"><div style="width:16.7%;background:var(--teal);"></div></div><div class="val">6</div></div><div class="hdx-row"><div class="lbl">Mexicali</div><div class="bar"><div style="width:5.6%;background:var(--teal);"></div></div><div class="val">2</div></div><div class="hdx-row"><div class="lbl">AIFA</div><div class="bar"><div style="width:2.8%;background:var(--teal);"></div></div><div class="val">1</div></div></div></div>
+        </div>
+        <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+          <span class="hdx-sublbl" style="margin:0;">Modes on Current YTD Core Routes</span>
+          <span class="hub-tag truck" title="Mode as supplied by AIOS.">🚚 Truck</span> <span class="hub-tag air" title="Mode as supplied by AIOS.">✈ Air</span> <span class="hub-tag ocean" title="Mode as supplied by AIOS.">⚓ Maritime</span> <span class="hub-tag unknown" title="Transport method recorded as Unknown in Panjiva — AIOS does not infer the missing mode.">— Unknown</span>
+        </div>
+        <div class="hdx-note-navy">Gateway counts are all visible Shipments at each gateway, regardless of customs patent. Import flow runs through <strong>Colombia, NL (155)</strong> and <strong>Nuevo Laredo (90)</strong>; Exports are spread across more gateways, led by Nuevo Laredo (36), Colombia, NL (28), MTY Airport (22) and Monterrey (22). Unknown is a Panjiva source state, not a mode.</div>
+      </div>
+    </div>
+
+    <!-- 07 CORE ROUTES -->
+    <div class="card" style="border-top:3px solid var(--teal);">
+      <div class="card-header"><span class="accent">07</span> Current YTD Core Routes — complete ≥80% sets</div>
+      <div class="card-body">
+        <div class="hdx-eyebrow" style="margin-bottom:10px;"><span class="hdx-src pj">Panjiva</span> Visible network · complete sets, never truncated · not Akzent Captured Business</div>
+        <div class="hdx-sublbl">Import Core Routes — 3 routes reach 83.6% of 287 Imports</div>
+        <div class="hdx-scroll"><table class="hdx-route-table"><thead><tr><th class="num">Rank</th><th>Origin</th><th>Gateway</th><th>Destination</th><th>Mode</th><th class="num">Shipments</th><th class="num">% Imports</th><th class="num">Cum. %</th><th class="num">Active Months</th><th class="num">Ship./Active Month</th><th class="num">Ship./Week</th><th>First Visible</th><th>Last Visible</th></tr></thead><tbody><tr><td class="hdx-rank"><span class="hdx-rank-pill">#1</span></td><td class="hdx-ent"><strong>10930 North Pomona Avenue, Kansas City Missouri 64153, United States</strong></td><td><span class="hub-tag" title="Customs gateway exactly as supplied by AIOS. No border/port classification is inferred.">⛨ Gateway</span><div class="hdx-gw-name">Colombia, Nuevo León</div></td><td class="hdx-ent"><strong>Carr. Libre Federal A Miguel Aleman Km. 20.5 Ed.2, Apodaca, Nuevo León</strong><span class="hdx-self">HALDEX consignee</span></td><td><span class="hub-tag unknown" title="Transport method recorded as Unknown in Panjiva — AIOS does not infer the missing mode.">— Unknown</span></td><td class="num"><strong>151</strong></td><td class="num">52.6%</td><td class="num hdx-cum"><strong>52.6%</strong><div class="hdx-cum-bar"><div style="width:52.6%;"></div></div></td><td class="num">7</td><td class="num">21.57</td><td class="num">5.45</td><td class="hdx-dates">2026-01-02</td><td class="hdx-dates">2026-07-14</td></tr><tr><td class="hdx-rank"><span class="hdx-rank-pill">#2</span></td><td class="hdx-ent"><span class="hdx-na">Address not available in Panjiva</span></td><td><span class="hub-tag" title="Customs gateway exactly as supplied by AIOS. No border/port classification is inferred.">⛨ Gateway</span><div class="hdx-gw-name">Nuevo Laredo, Tamaulipas</div></td><td class="hdx-ent"><strong>Carr. Libre Federal A Miguel Aleman Km. 20.5 Ed.2, Apodaca, Nuevo León</strong><span class="hdx-self">HALDEX consignee</span></td><td><span class="hub-tag truck" title="Mode as supplied by AIOS.">🚚 Truck</span></td><td class="num"><strong>59</strong></td><td class="num">20.6%</td><td class="num hdx-cum"><strong>73.2%</strong><div class="hdx-cum-bar"><div style="width:73.2%;"></div></div></td><td class="num">7</td><td class="num">8.43</td><td class="num">2.02</td><td class="hdx-dates">2026-01-07</td><td class="hdx-dates">2026-07-29</td></tr><tr><td class="hdx-rank"><span class="hdx-rank-pill">#3</span></td><td class="hdx-ent"><strong>10930 North Pomona Avenue, Kansas City Missouri 64153, United States</strong></td><td><span class="hub-tag" title="Customs gateway exactly as supplied by AIOS. No border/port classification is inferred.">⛨ Gateway</span><div class="hdx-gw-name">Nuevo Laredo, Tamaulipas</div></td><td class="hdx-ent"><strong>Carr. Libre Federal A Miguel Aleman Km. 20.5 Ed.2, Apodaca, Nuevo León</strong><span class="hdx-self">HALDEX consignee</span></td><td><span class="hub-tag truck" title="Mode as supplied by AIOS.">🚚 Truck</span></td><td class="num"><strong>30</strong></td><td class="num">10.5%</td><td class="num hdx-cum"><strong>83.6%</strong><div class="hdx-cum-bar"><div style="width:83.6%;"></div></div></td><td class="num">7</td><td class="num">4.29</td><td class="num">1.11</td><td class="hdx-dates">2026-01-22</td><td class="hdx-dates">2026-07-29</td></tr></tbody></table></div>
+
+        <div class="hdx-sublbl" style="margin-top:22px;">Export Core Routes — 8 routes reach 83.7% of 129 Exports</div>
+        <div class="hdx-scroll"><table class="hdx-route-table" style="min-width:900px;"><thead><tr><th class="num">Rank</th><th>Origin</th><th>Gateway</th><th>Destination</th><th>Mode</th><th class="num">Shipments</th><th class="num">% Exports</th></tr></thead><tbody><tr><td class="hdx-rank"><span class="hdx-rank-pill">#1</span></td><td class="hdx-ent"><strong>Apodaca</strong></td><td><span class="hub-tag" title="Customs gateway exactly as supplied by AIOS. No border/port classification is inferred.">⛨ Gateway</span><div class="hdx-gw-name">Nuevo Laredo</div></td><td class="hdx-ent"><span class="hdx-na">Address not available in Panjiva</span></td><td><span class="hub-tag truck" title="Mode as supplied by AIOS.">🚚 Truck</span></td><td class="num"><strong>32</strong></td><td class="num">24.8%</td></tr><tr><td class="hdx-rank"><span class="hdx-rank-pill">#2</span></td><td class="hdx-ent"><strong>Apodaca</strong></td><td><span class="hub-tag" title="Customs gateway exactly as supplied by AIOS. No border/port classification is inferred.">⛨ Gateway</span><div class="hdx-gw-name">MTY Airport</div></td><td class="hdx-ent"><span class="hdx-na">Address not available in Panjiva</span></td><td><span class="hub-tag air" title="Mode as supplied by AIOS.">✈ Air</span></td><td class="num"><strong>22</strong></td><td class="num">17.1%</td></tr><tr><td class="hdx-rank"><span class="hdx-rank-pill">#3</span></td><td class="hdx-ent"><strong>Apodaca</strong></td><td><span class="hub-tag" title="Customs gateway exactly as supplied by AIOS. No border/port classification is inferred.">⛨ Gateway</span><div class="hdx-gw-name">Colombia, NL</div></td><td class="hdx-ent"><strong>N Fathom St, Portland, OR 97217, USA</strong></td><td><span class="hub-tag unknown" title="Transport method recorded as Unknown in Panjiva — AIOS does not infer the missing mode.">— Unknown</span></td><td class="num"><strong>14</strong></td><td class="num">10.9%</td></tr><tr><td class="hdx-rank"><span class="hdx-rank-pill">#4</span></td><td class="hdx-ent"><strong>Apodaca</strong></td><td><span class="hub-tag" title="Customs gateway exactly as supplied by AIOS. No border/port classification is inferred.">⛨ Gateway</span><div class="hdx-gw-name">Altamira</div></td><td class="hdx-ent"><strong>10930 North Pomona Avenue, Kansas City Missouri 64153, United States</strong></td><td><span class="hub-tag ocean" title="Mode as supplied by AIOS.">⚓ Maritime</span></td><td class="num"><strong>12</strong></td><td class="num">9.3%</td></tr><tr><td class="hdx-rank"><span class="hdx-rank-pill">#5</span></td><td class="hdx-ent"><strong>Apodaca</strong></td><td><span class="hub-tag" title="Customs gateway exactly as supplied by AIOS. No border/port classification is inferred.">⛨ Gateway</span><div class="hdx-gw-name">Colombia</div></td><td class="hdx-ent"><strong>Calz. Gustavo Vildósola Almada, Mexicali, BC</strong></td><td><span class="hub-tag unknown" title="Transport method recorded as Unknown in Panjiva — AIOS does not infer the missing mode.">— Unknown</span></td><td class="num"><strong>7</strong></td><td class="num"><span class="hdx-na">Shipments only</span></td></tr><tr><td class="hdx-rank"><span class="hdx-rank-pill">#6</span></td><td class="hdx-ent"><strong>Apodaca</strong></td><td><span class="hub-tag" title="Customs gateway exactly as supplied by AIOS. No border/port classification is inferred.">⛨ Gateway</span><div class="hdx-gw-name">Colombia</div></td><td class="hdx-ent"><strong>Colombia</strong></td><td><span class="hub-tag unknown" title="Transport method recorded as Unknown in Panjiva — AIOS does not infer the missing mode.">— Unknown</span></td><td class="num"><strong>7</strong></td><td class="num"><span class="hdx-na">Shipments only</span></td></tr><tr><td class="hdx-rank"><span class="hdx-rank-pill">#7</span></td><td class="hdx-ent"><strong>Apodaca</strong></td><td><span class="hub-tag" title="Customs gateway exactly as supplied by AIOS. No border/port classification is inferred.">⛨ Gateway</span><div class="hdx-gw-name">Monterrey</div></td><td class="hdx-ent"><strong>Monterrey-Monclova km 5, Andrés Caballero Moreno Agropecuaria, General Escobedo, NL</strong></td><td><span class="hub-tag unknown" title="Transport method recorded as Unknown in Panjiva — AIOS does not infer the missing mode.">— Unknown</span></td><td class="num"><strong>7</strong></td><td class="num"><span class="hdx-na">Shipments only</span></td></tr><tr><td class="hdx-rank"><span class="hdx-rank-pill">#8</span></td><td class="hdx-ent"><strong>Antiguo Camino a San Lorenzo 338, Toluca, Estado de México</strong></td><td><span class="hub-tag" title="Customs gateway exactly as supplied by AIOS. No border/port classification is inferred.">⛨ Gateway</span><div class="hdx-gw-name">Monterrey</div></td><td class="hdx-ent"><strong>Apodaca</strong></td><td><span class="hub-tag unknown" title="Transport method recorded as Unknown in Panjiva — AIOS does not infer the missing mode.">— Unknown</span></td><td class="num"><strong>7</strong></td><td class="num"><span class="hdx-na">Shipments only</span></td></tr><tr style="background:rgba(0,180,216,0.06);"><td></td><td colspan="5" style="font-size:10.5px;font-weight:700;color:var(--navy);">Complete ≥80% Export Core Route set — 8 routes</td><td class="num hdx-cum"><strong style="font-size:13px;">83.7%</strong><div class="hdx-cum-bar"><div style="width:83.7%;"></div></div></td></tr></tbody></table></div>
+        <div class="hdx-note-navy" style="font-size:10.5px;">AIOS supplied the directional share for Export routes 1–4 and the Shipment count for all eight routes; the full set reaches <strong>83.7%</strong>. Values are reproduced without recalculation. Route 1 Import mode is <strong>Unknown</strong> in the source and is not inferred.</div>
+
+        <div class="outreach-step hist-appendix" style="margin-top:18px;">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Historical · 2025 Full Year Import Core Routes — 5 routes / 89.4% of 1,584 Imports</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body" style="padding:0;">
+            <div style="padding:10px 16px;background:var(--bg);border-bottom:1px solid var(--border);"><div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-light);">Historical Core Route Appendix — 2025 Full Calendar Year Imports</div></div>
+            <div class="hdx-scroll"><table class="hdx-route-table" style="min-width:700px;"><thead><tr><th class="num">Rank</th><th>Origin</th><th>Gateway</th><th>Destination</th><th class="num">Shipments</th></tr></thead><tbody><tr><td class="hdx-rank"><span class="hdx-rank-pill">#1</span></td><td class="hdx-ent"><strong>Kansas City</strong></td><td><span class="hub-tag" title="Customs gateway exactly as supplied by AIOS. No border/port classification is inferred.">⛨ Gateway</span><div class="hdx-gw-name">Colombia</div></td><td class="hdx-ent"><strong>Apodaca</strong><span class="hdx-self">HALDEX consignee</span></td><td class="num"><strong>418</strong></td></tr><tr><td class="hdx-rank"><span class="hdx-rank-pill">#2</span></td><td class="hdx-ent"><strong>Kansas City</strong></td><td><span class="hub-tag" title="Customs gateway exactly as supplied by AIOS. No border/port classification is inferred.">⛨ Gateway</span><div class="hdx-gw-name">Nuevo Laredo</div></td><td class="hdx-ent"><strong>Apodaca</strong><span class="hdx-self">HALDEX consignee</span></td><td class="num"><strong>333</strong></td></tr><tr><td class="hdx-rank"><span class="hdx-rank-pill">#3</span></td><td class="hdx-ent"><strong>Kansas City</strong></td><td><span class="hub-tag" title="Customs gateway exactly as supplied by AIOS. No border/port classification is inferred.">⛨ Gateway</span><div class="hdx-gw-name">Manzanillo</div></td><td class="hdx-ent"><strong>Apodaca</strong><span class="hdx-self">HALDEX consignee</span></td><td class="num"><strong>240</strong></td></tr><tr><td class="hdx-rank"><span class="hdx-rank-pill">#4</span></td><td class="hdx-ent"><strong>Kansas City</strong></td><td><span class="hub-tag" title="Customs gateway exactly as supplied by AIOS. No border/port classification is inferred.">⛨ Gateway</span><div class="hdx-gw-name">Altamira</div></td><td class="hdx-ent"><strong>Apodaca</strong><span class="hdx-self">HALDEX consignee</span></td><td class="num"><strong>217</strong></td></tr><tr><td class="hdx-rank"><span class="hdx-rank-pill">#5</span></td><td class="hdx-ent"><span class="hdx-na">Address not available in Panjiva</span></td><td><span class="hub-tag" title="Customs gateway exactly as supplied by AIOS. No border/port classification is inferred.">⛨ Gateway</span><div class="hdx-gw-name">Nuevo Laredo</div></td><td class="hdx-ent"><strong>Apodaca</strong><span class="hdx-self">HALDEX consignee</span></td><td class="num"><strong>208</strong></td></tr><tr style="background:rgba(148,163,184,0.08);"><td></td><td colspan="3" style="font-size:10.5px;font-weight:700;color:var(--navy);">Complete ≥80% 2025 Import Core Route set — 5 routes</td><td class="num"><strong>89.4%</strong></td></tr></tbody></table></div>
+          </div>
+        </div>
+        <div class="outreach-step hist-appendix" style="margin-top:10px;">
+          <div class="outreach-step-header" onclick="toggleAccordion(this)"><span>Historical · 2025 Full Year Export Core Routes — 8 routes / 80.5% of 251 Exports</span><span class="outreach-step-toggle">+</span></div>
+          <div class="outreach-step-body">
+            <div style="overflow-x:auto;"><table class="hub-table" style="font-size:11.5px;">
+              <thead><tr><th>Period</th><th class="num">Direction denominator</th><th class="num">Smallest Core Route set</th><th class="num">Final cumulative coverage</th></tr></thead>
+              <tbody><tr class="hdx-muted"><td>2025 Full Calendar Year · Exports</td><td class="num hdx-mono">251</td><td class="num hdx-mono">8 routes</td><td class="num"><strong>80.5%</strong></td></tr></tbody></table></div>
+          </div>
+        </div>
+        <div class="hdx-note-navy">Historical 2025 sets are subordinate context, collapsed on screen, <strong>print in full</strong>, and are never aggregated with Current YTD. Where a precise address is not populated the rendering is <strong>Address not available in Panjiva</strong>; no address is inferred or enriched.</div>
+      </div>
+    </div>
+
+    <!-- 08 TRADING PARTNERS / FACILITIES -->
+    <div class="card">
+      <div class="card-header"><span class="accent">08</span> Trading Partners and Facilities visible on Core Routes</div>
+      <div class="card-body">
+        <div class="hdx-cp">
+          <div><span class="r">HALDEX facility · Import destination / Export origin</span><b>Carr. Libre Federal A Miguel Aleman Km. 20.5 Ed.2, Apodaca, Nuevo León</b>Destination of all three Current YTD Import Core Routes; AIOS renders the origin of Export Core Routes 1–7 as “Apodaca”.</div>
+          <div><span class="r">Import origin · Export destination</span><b>10930 North Pomona Avenue, Kansas City Missouri 64153, United States</b>Origin of Import Core Routes 1 (151 Shipments via Colombia, NL) and 3 (30 via Nuevo Laredo), and destination of Export Core Route 4 via Altamira.</div>
+          <div><span class="r">Export destination</span><b>N Fathom St, Portland, OR 97217, USA</b>Export Core Route 3 via Colombia, NL — 14 Shipments.</div>
+          <div><span class="r">Export destination</span><b>Calz. Gustavo Vildósola Almada, Mexicali, BC</b>Export Core Route 5 via Colombia — 7 Shipments.</div>
+          <div><span class="r">Export destination</span><b>Monterrey-Monclova km 5, Andrés Caballero Moreno Agropecuaria, General Escobedo, NL</b>Export Core Route 7 via Monterrey — 7 Shipments.</div>
+          <div><span class="r">Origin → HALDEX Apodaca</span><b>Antiguo Camino a San Lorenzo 338, Toluca, Estado de México</b>Export Core Route 8 via Monterrey — 7 Shipments.</div>
+        </div>
+        <div class="hdx-note-navy">Facilities are rendered exactly as supplied by AIOS; no company name is attached to an address that AIOS did not name. Import Core Route 2 and Export Core Routes 1–2 carry <strong>Address not available in Panjiva</strong>. Trading Partner <strong>Haldex Products De Mexico Sa De Cv</strong> is visible on the Other-Patent 1890 and 3727 Shipments (Chapter 3).</div>
+      </div>
+    </div>
+
+    <!-- 09 HS -->
+    <div class="card">
+      <div class="card-header"><span class="accent">09</span> HS Intelligence — operational presence by period and direction</div>
+      <div class="card-body">
+        <div class="hdx-note" style="margin-top:0;margin-bottom:14px;"><strong>One Shipment may contain multiple HS Codes. HS counts represent operational presence and are not additive.</strong></div>
+        <div style="overflow-x:auto;"><table class="hdx-hs">
+          <thead><tr><th>HS Code · AIOS relevant visible code</th><th>2025 Full Year · Imports</th><th>2025 Full Year · Exports</th><th>Current YTD · Imports</th><th>Current YTD · Exports</th></tr></thead>
+          <tbody><tr><td class="hdx-mono">9802001900</td><td class="y">✓ visible</td><td class="y">✓ visible</td><td class="y">✓ visible</td><td class="y">✓ visible</td></tr><tr><td class="hdx-mono">8481900599</td><td class="y">✓ visible</td><td class="y">✓ visible</td><td class="y">✓ visible</td><td class="y">✓ visible</td></tr><tr><td class="hdx-mono">8708309903</td><td class="y">✓ visible</td><td class="y">✓ visible</td><td class="y">✓ visible</td><td class="y">✓ visible</td></tr><tr><td class="hdx-mono">8708309999</td><td class="y">✓ visible</td><td class="y">✓ visible</td><td class="y">✓ visible</td><td class="y">✓ visible</td></tr><tr><td class="hdx-mono">4016990100</td><td class="y">✓ visible</td><td class="y">✓ visible</td><td class="y">✓ visible</td><td class="y">✓ visible</td></tr><tr><td class="hdx-mono">8481809900</td><td class="y">✓ visible</td><td class="y">✓ visible</td><td class="y">✓ visible</td><td class="y">✓ visible</td></tr><tr><td class="hdx-mono">8412319900</td><td class="y">✓ visible</td><td class="y">✓ visible</td><td class="n">not visible</td><td class="y">✓ visible</td></tr></tbody></table></div>
+        <div class="hdx-note-navy">Codes are those AIOS identified as relevant visible codes. Presence is read directly from the <span class="hdx-src pj">Panjiva</span> Import and Export records for each period. HS presence is never summed into Shipment totals, and no product description beyond the source is attached.</div>
+      </div>
+    </div>
+
+    <!-- 10 LOGISTICS WHITESPACE -->
+    <div class="card" style="border-top:3px solid #94a3b8;">
+      <div class="card-header"><span class="accent">10</span> Logistics Whitespace — Visible Uncaptured Reference</div>
+      <div class="card-body">
+        <div class="hdx-dir">
+          <div><div class="k">Visible Uncaptured Reference · Current YTD</div><div class="v nv">416</div><div class="s">Every visible Shipment — Akzent manages no HALDEX freight.</div></div>
+          <div><div class="k">Visible Uncaptured Reference · 2025 Full Year</div><div class="v nv" style="color:#64748b;">1,835</div><div class="s">Structural history; not combined with Current YTD.</div></div>
+          <div><div class="k">Logistics Shared Wallet</div><div class="v nv" style="color:#64748b;">0.0%</div><div class="s">Relationship fact, not a sales score.</div></div>
+        </div>
+        <div class="hdx-note">Logistics Whitespace is kept <strong>separate from Customs Whitespace</strong> (Chapter 3). The freight network is valuable operating intelligence and may support future discussions around Operational Complexity, Customs &amp; Visibility and ILM / Control Tower coordination, but it is <strong>not Captured Business</strong> and <strong>not automatically winnable</strong>.</div>
+      </div>
+    </div>
+
+    <div class="hdx-chapter cus" id="hdx-ch-3">
+      <div class="hdx-chapter-n">Chapter 3</div>
+      <div class="hdx-chapter-t">Customs Agency Intelligence</div>
+      <div class="hdx-chapter-s">The actual CLIENT relationship · Akzent Patents 3468 + 1930 · Panjiva Customs Agent field</div><div class="hdx-prim">Primary relationship chapter</div>
+    </div>
+
+    <!-- 11 CUSTOMS SHARED WALLET -->
+    <div class="card" style="border-top:3px solid var(--teal);">
+      <div class="card-header"><span class="accent">11</span> Customs Shared Wallet — periods kept separate</div>
+      <div class="card-body">
+        <div style="overflow-x:auto;"><table class="hub-table" style="font-size:11.5px;">
+          <thead><tr><th>Period</th><th class="num">Visible customs universe</th><th class="num">Akzent Patent Shipments</th><th class="num">Other Patent Shipments</th><th class="num">Customs Shared Wallet</th><th class="num">Other-Patent Reference</th></tr></thead>
+          <tbody>
+            <tr class="hdx-muted"><td>2025 Full Calendar Year</td><td class="num hdx-mono">1,835</td><td class="num hdx-mono">1,334</td><td class="num hdx-mono">501</td><td class="num"><strong>72.7%</strong></td><td class="num" style="color:#b45309;">27.3%</td></tr>
+            <tr style="border-top:2px solid var(--border);"><td>Jan–Jul 2025 · comparable</td><td class="num hdx-mono">1,073</td><td class="num hdx-mono">759</td><td class="num hdx-mono" style="color:var(--text-light);">—</td><td class="num"><strong>70.7%</strong></td><td class="num" style="color:var(--text-light);">—</td></tr>
+            <tr style="background:rgba(0,180,216,0.06);"><td><strong>Jan–Jul 2026 · Current YTD</strong></td><td class="num"><strong>416</strong></td><td class="num"><strong>318</strong></td><td class="num"><strong>98</strong></td><td class="num"><strong style="color:var(--teal-dim);font-size:16px;">76.4%</strong></td><td class="num"><strong style="color:#b45309;">23.6%</strong></td></tr>
+            <tr><td><strong>Comparable change in visible Customs Share</strong></td><td colspan="3" class="num" style="font-size:10.5px;color:var(--text-muted);">Akzent Patent Shipments 759 → 318 on the same Jan–Jul window</td><td class="num"><strong style="color:var(--teal-dim);">+5.7 pp</strong></td><td></td></tr>
+          </tbody></table></div>
+        <div class="hdx-note">The visible Customs Share increased by 5.7 percentage points <strong>while absolute Akzent Patent Shipments were lower</strong> in the comparable window. Increased share does not imply increased absolute business.</div>
+
+        <div class="hdx-sublbl" style="margin-top:18px;">Current YTD Customs Wallet by Direction</div>
+        <div style="overflow-x:auto;"><table class="hub-table" style="font-size:11.5px;">
+          <thead><tr><th>Direction</th><th class="num">Visible</th><th class="num">Akzent Patents</th><th class="num">Other Patents</th><th class="num">Customs Wallet</th><th class="num">Other-Patent Reference</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Imports</strong></td><td class="num hdx-mono">287</td><td class="num hdx-mono">245</td><td class="num hdx-mono">42</td><td class="num"><strong style="color:var(--teal-dim);font-size:14px;">85.4%</strong></td><td class="num" style="color:#b45309;">14.6%</td></tr>
+            <tr><td><strong>Exports</strong></td><td class="num hdx-mono">129</td><td class="num hdx-mono">73</td><td class="num hdx-mono">56</td><td class="num"><strong style="color:var(--teal-dim);font-size:14px;">56.6%</strong></td><td class="num" style="color:#b45309;">43.4%</td></tr>
+            <tr style="background:rgba(0,180,216,0.06);"><td><strong>Total</strong></td><td class="num"><strong>416</strong></td><td class="num"><strong>318</strong></td><td class="num"><strong>98</strong></td><td class="num"><strong style="color:var(--teal-dim);font-size:16px;">76.4%</strong></td><td class="num"><strong style="color:#b45309;">23.6%</strong></td></tr>
+          </tbody></table></div>
+        <div class="hdx-rows" style="margin-top:12px;">
+          <div class="hdx-row"><div class="lbl">Imports<em>287 visible · 245 Akzent · 42 Other</em></div><div class="hdx-cw-bar" style="width:100%;"><div class="hdx-cw-ak" style="width:85.4%;"></div><div class="hdx-cw-ot" style="width:14.6%;"></div></div><div class="val">85.4%</div></div>
+          <div class="hdx-row"><div class="lbl">Exports<em>129 visible · 73 Akzent · 56 Other</em></div><div class="hdx-cw-bar" style="width:44.9%;"><div class="hdx-cw-ak" style="width:56.6%;"></div><div class="hdx-cw-ot" style="width:43.4%;"></div></div><div class="val">56.6%</div></div>
+        </div>
+        <div class="hdx-note-navy"><strong>Akzent's visible customs participation is deeper in Imports than Exports. This identifies where Discovery should focus; it does not establish that Other-Patent Shipments are commercially migratable.</strong> Bar length scales with directional volume.</div>
+      </div>
+    </div>
+
+    <!-- 12 PATENT PORTFOLIO -->
+    <div class="card" style="border-top:3px solid var(--teal);">
+      <div class="card-header"><span class="accent">12</span> Current YTD Patent Portfolio</div>
+      <div class="card-body">
+        <div class="hdx-rows"><div class="hdx-row"><div class="lbl"><span class="hdx-pat ak" title="Akzent-owned patent">3468</span> &nbsp;<span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:var(--teal-dim);">AKZENT PATENT</span></div><div class="bar"><div style="width:100.0%;background:var(--teal);"></div></div><div class="val">317</div></div><div class="hdx-row"><div class="lbl"><span class="hdx-pat ot" title="Other Patent — the agency behind it is not identified">3438</span> &nbsp;<span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:#b45309;">OTHER PATENT</span></div><div class="bar"><div style="width:19.9%;background:#f59e0b;"></div></div><div class="val">63</div></div><div class="hdx-row"><div class="lbl"><span class="hdx-pat ot" title="Other Patent — the agency behind it is not identified">3772</span> &nbsp;<span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:#b45309;">OTHER PATENT</span></div><div class="bar"><div style="width:4.7%;background:#f59e0b;"></div></div><div class="val">15</div></div><div class="hdx-row"><div class="lbl"><span class="hdx-pat ot" title="Other Patent — the agency behind it is not identified">1890</span> &nbsp;<span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:#b45309;">OTHER PATENT</span></div><div class="bar"><div style="width:2.2%;background:#f59e0b;"></div></div><div class="val">7</div></div><div class="hdx-row"><div class="lbl"><span class="hdx-pat ot" title="Other Patent — the agency behind it is not identified">3727</span> &nbsp;<span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:#b45309;">OTHER PATENT</span></div><div class="bar"><div style="width:1.9%;background:#f59e0b;"></div></div><div class="val">6</div></div><div class="hdx-row"><div class="lbl"><span class="hdx-pat ot" title="Other Patent — the agency behind it is not identified">3611</span> &nbsp;<span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:#b45309;">OTHER PATENT</span></div><div class="bar"><div style="width:0.6%;background:#f59e0b;"></div></div><div class="val">2</div></div><div class="hdx-row"><div class="lbl"><span class="hdx-pat ot" title="Other Patent — the agency behind it is not identified">1410</span> &nbsp;<span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:#b45309;">OTHER PATENT</span></div><div class="bar"><div style="width:0.6%;background:#f59e0b;"></div></div><div class="val">2</div></div><div class="hdx-row"><div class="lbl"><span class="hdx-pat ot" title="Other Patent — the agency behind it is not identified">1823</span> &nbsp;<span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:#b45309;">OTHER PATENT</span></div><div class="bar"><div style="width:0.6%;background:#f59e0b;"></div></div><div class="val">2</div></div><div class="hdx-row"><div class="lbl"><span class="hdx-pat ak" title="Akzent-owned patent">1930</span> &nbsp;<span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:var(--teal-dim);">AKZENT PATENT</span></div><div class="bar"><div style="width:0.3%;background:var(--teal);"></div></div><div class="val">1</div></div><div class="hdx-row"><div class="lbl"><span class="hdx-pat ot" title="Other Patent — the agency behind it is not identified">1647</span> &nbsp;<span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:#b45309;">OTHER PATENT</span></div><div class="bar"><div style="width:0.3%;background:#f59e0b;"></div></div><div class="val">1</div></div></div>
+        <div class="hdx-note"><strong>Patent 3438 represents 63 of the 98 Current YTD Other-Patent Shipments — 64.3% of the Other-Patent Reference.</strong> The agency or company behind any Other Patent is not identified, and Other Patents are not named as competitors.</div>
+      </div>
+    </div>
+
+    <!-- 13 PATENT × GATEWAY -->
+    <div class="card">
+      <div class="card-header"><span class="accent">13</span> Patent × Gateway — Current YTD</div>
+      <div class="card-body">
+        <div class="hdx-sublbl">Imports — 287 Shipments</div>
+        <div class="hdx-scroll" style="max-height:none;"><table class="hdx-route-table" style="min-width:760px;"><thead><tr><th>Patent</th><th>Ownership</th><th>Direction</th><th>Gateway</th><th class="num">Shipments</th><th class="num">% Patent</th><th class="num">% Direction</th></tr></thead><tbody><tr><td><span class="hdx-pat ak" title="Akzent-owned patent">3468</span></td><td><span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:var(--teal-dim);">AKZENT PATENT</span></td><td>Import</td><td style="font-size:10.5px;color:var(--navy);font-weight:700;">Colombia, Nuevo León</td><td class="num"><strong>155</strong></td><td class="num">63.3%</td><td class="num">54.0%</td></tr><tr><td><span class="hdx-pat ak" title="Akzent-owned patent">3468</span></td><td><span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:var(--teal-dim);">AKZENT PATENT</span></td><td>Import</td><td style="font-size:10.5px;color:var(--navy);font-weight:700;">Nuevo Laredo</td><td class="num"><strong>90</strong></td><td class="num">36.7%</td><td class="num">31.4%</td></tr><tr><td><span class="hdx-pat ot" title="Other Patent — the agency behind it is not identified">3438</span></td><td><span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:#b45309;">OTHER PATENT</span></td><td>Import</td><td style="font-size:10.5px;color:var(--navy);font-weight:700;">MTY Airport</td><td class="num"><strong>27</strong></td><td class="num">100%</td><td class="num">9.4%</td></tr><tr><td><span class="hdx-pat ot" title="Other Patent — the agency behind it is not identified">1890</span></td><td><span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:#b45309;">OTHER PATENT</span></td><td>Import</td><td style="font-size:10.5px;color:var(--navy);font-weight:700;">Puebla</td><td class="num"><strong>7</strong></td><td class="num">100%</td><td class="num">2.4%</td></tr><tr><td><span class="hdx-pat ot" title="Other Patent — the agency behind it is not identified">3772</span></td><td><span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:#b45309;">OTHER PATENT</span></td><td>Import</td><td style="font-size:10.5px;color:var(--navy);font-weight:700;">Lázaro Cárdenas</td><td class="num"><strong>5</strong></td><td class="num">62.5%</td><td class="num">1.7%</td></tr><tr><td><span class="hdx-pat ot" title="Other Patent — the agency behind it is not identified">3772</span></td><td><span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:#b45309;">OTHER PATENT</span></td><td>Import</td><td style="font-size:10.5px;color:var(--navy);font-weight:700;">Manzanillo</td><td class="num"><strong>3</strong></td><td class="num">37.5%</td><td class="num">1.0%</td></tr></tbody></table></div>
+        <div class="hdx-sublbl" style="margin-top:20px;">Exports — 129 Shipments</div>
+        <div class="hdx-scroll" style="max-height:none;"><table class="hdx-route-table" style="min-width:760px;"><thead><tr><th>Patent</th><th>Ownership</th><th>Direction</th><th>Gateway</th><th class="num">Shipments</th><th class="num">% Patent</th><th class="num">% Direction</th></tr></thead><tbody><tr><td><span class="hdx-pat ak" title="Akzent-owned patent">3468</span></td><td><span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:var(--teal-dim);">AKZENT PATENT</span></td><td>Export</td><td style="font-size:10.5px;color:var(--navy);font-weight:700;">Nuevo Laredo</td><td class="num"><strong>33</strong></td><td class="num">45.8%</td><td class="num">25.6%</td></tr><tr><td><span class="hdx-pat ak" title="Akzent-owned patent">3468</span></td><td><span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:var(--teal-dim);">AKZENT PATENT</span></td><td>Export</td><td style="font-size:10.5px;color:var(--navy);font-weight:700;">Colombia, Nuevo León</td><td class="num"><strong>28</strong></td><td class="num">38.9%</td><td class="num">21.7%</td></tr><tr><td><span class="hdx-pat ak" title="Akzent-owned patent">3468</span></td><td><span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:var(--teal-dim);">AKZENT PATENT</span></td><td>Export</td><td style="font-size:10.5px;color:var(--navy);font-weight:700;">Altamira</td><td class="num"><strong>11</strong></td><td class="num">15.3%</td><td class="num">8.5%</td></tr><tr><td><span class="hdx-pat ak" title="Akzent-owned patent">1930</span></td><td><span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:var(--teal-dim);">AKZENT PATENT</span></td><td>Export</td><td style="font-size:10.5px;color:var(--navy);font-weight:700;">Altamira</td><td class="num"><strong>1</strong></td><td class="num">100%</td><td class="num">0.8%</td></tr><tr><td><span class="hdx-pat ot" title="Other Patent — the agency behind it is not identified">3438</span></td><td><span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:#b45309;">OTHER PATENT</span></td><td>Export</td><td style="font-size:10.5px;color:var(--navy);font-weight:700;">MTY Airport</td><td class="num"><strong>22</strong></td><td class="num">61.1%</td><td class="num">17.1%</td></tr><tr><td><span class="hdx-pat ot" title="Other Patent — the agency behind it is not identified">3438</span></td><td><span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:#b45309;">OTHER PATENT</span></td><td>Export</td><td style="font-size:10.5px;color:var(--navy);font-weight:700;">Monterrey</td><td class="num"><strong>14</strong></td><td class="num">38.9%</td><td class="num">10.9%</td></tr><tr><td><span class="hdx-pat ot" title="Other Patent — the agency behind it is not identified">3727</span></td><td><span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:#b45309;">OTHER PATENT</span></td><td>Export</td><td style="font-size:10.5px;color:var(--navy);font-weight:700;">Monterrey</td><td class="num"><strong>6</strong></td><td class="num">100%</td><td class="num">4.7%</td></tr><tr><td><span class="hdx-pat ot" title="Other Patent — the agency behind it is not identified">3772</span></td><td><span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:#b45309;">OTHER PATENT</span></td><td>Export</td><td style="font-size:10.5px;color:var(--navy);font-weight:700;">Manzanillo</td><td class="num"><strong>6</strong></td><td class="num">85.7%</td><td class="num">4.7%</td></tr><tr><td><span class="hdx-pat ot" title="Other Patent — the agency behind it is not identified">3772</span></td><td><span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:#b45309;">OTHER PATENT</span></td><td>Export</td><td style="font-size:10.5px;color:var(--navy);font-weight:700;">AIFA</td><td class="num"><strong>1</strong></td><td class="num">14.3%</td><td class="num">0.8%</td></tr><tr><td><span class="hdx-pat ot" title="Other Patent — the agency behind it is not identified">1410</span></td><td><span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:#b45309;">OTHER PATENT</span></td><td>Export</td><td style="font-size:10.5px;color:var(--navy);font-weight:700;">Nuevo Laredo</td><td class="num"><strong>2</strong></td><td class="num"><span class="hdx-na">Shipments only</span></td><td class="num"><span class="hdx-na">Shipments only</span></td></tr><tr><td><span class="hdx-pat ot" title="Other Patent — the agency behind it is not identified">1647</span></td><td><span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:#b45309;">OTHER PATENT</span></td><td>Export</td><td style="font-size:10.5px;color:var(--navy);font-weight:700;">Nuevo Laredo</td><td class="num"><strong>1</strong></td><td class="num"><span class="hdx-na">Shipments only</span></td><td class="num"><span class="hdx-na">Shipments only</span></td></tr><tr><td><span class="hdx-pat ot" title="Other Patent — the agency behind it is not identified">3611</span></td><td><span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:#b45309;">OTHER PATENT</span></td><td>Export</td><td style="font-size:10.5px;color:var(--navy);font-weight:700;">Mexicali</td><td class="num"><strong>2</strong></td><td class="num"><span class="hdx-na">Shipments only</span></td><td class="num"><span class="hdx-na">Shipments only</span></td></tr><tr><td><span class="hdx-pat ot" title="Other Patent — the agency behind it is not identified">1823</span></td><td><span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:#b45309;">OTHER PATENT</span></td><td>Export</td><td style="font-size:10.5px;color:var(--navy);font-weight:700;">Monterrey</td><td class="num"><strong>2</strong></td><td class="num"><span class="hdx-na">Shipments only</span></td><td class="num"><span class="hdx-na">Shipments only</span></td></tr></tbody></table></div>
+        <div class="hdx-note-navy"><strong>% Patent</strong> is the gateway's share of that patent's Shipments in the direction; <strong>% Direction</strong> is its share of the 287 Import or 129 Export Shipments. AIOS supplied Shipment counts only for Patents 1410, 1647, 3611 and 1823. No percentage on this page is derived in JavaScript.</div>
+      </div>
+    </div>
+
+    <!-- 14 CUSTOMS WALLET BY GATEWAY -->
+    <div class="card" style="border-top:3px solid var(--teal);">
+      <div class="card-header"><span class="accent">14</span> Customs Wallet by Gateway — Current YTD</div>
+      <div class="card-body">
+        <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin-bottom:12px;font-size:10px;font-weight:700;color:var(--text-muted);">
+          <span><span style="display:inline-block;width:12px;height:12px;border-radius:3px;background:var(--teal);vertical-align:-2px;"></span> Akzent Patents 3468/1930</span>
+          <span><span style="display:inline-block;width:12px;height:12px;border-radius:3px;background:#f59e0b;vertical-align:-2px;"></span> Other Patents</span>
+          <span><span style="display:inline-block;width:12px;height:6px;border-radius:3px;background:var(--navy);opacity:0.55;vertical-align:0;"></span> Gateway materiality — bar width scales with total gateway volume</span>
+        </div>
+        <div class="hdx-sublbl">Imports</div>
+        <div class="hdx-gwr hot"><div><div class="hdx-cw-lbl">Colombia, NL</div><div class="hdx-cw-sub">155 Shipments · 155 Akzent · 0 Other Patent</div></div><div><div class="hdx-cw-bar" style="width:100.0%;min-width:34px;"><div class="hdx-cw-ak" style="width:100.0%;"></div><div class="hdx-cw-ot" style="width:0.0%;"></div></div><div class="hdx-matbar" style="width:100.0%;min-width:34px;"><div style="width:100%;"></div></div><div class="hdx-matlbl">Gateway materiality — 155 of 155 Shipments at the largest Import gateway</div></div><div class="hdx-cw-legend"><b>100%</b>Akzent Customs Share<br><span style="color:var(--text-light);">0 Other-Patent Reference</span></div></div><div class="hdx-gwr hot"><div><div class="hdx-cw-lbl">Nuevo Laredo</div><div class="hdx-cw-sub">90 Shipments · 90 Akzent · 0 Other Patent</div></div><div><div class="hdx-cw-bar" style="width:58.1%;min-width:34px;"><div class="hdx-cw-ak" style="width:100.0%;"></div><div class="hdx-cw-ot" style="width:0.0%;"></div></div><div class="hdx-matbar" style="width:58.1%;min-width:34px;"><div style="width:100%;"></div></div><div class="hdx-matlbl">Gateway materiality — 90 of 155 Shipments at the largest Import gateway</div></div><div class="hdx-cw-legend"><b>100%</b>Akzent Customs Share<br><span style="color:var(--text-light);">0 Other-Patent Reference</span></div></div><div class="hdx-gwr hot zero"><div><div class="hdx-cw-lbl">MTY Airport</div><div class="hdx-cw-sub">27 Shipments · 0 Akzent · 27 Other Patent</div></div><div><div class="hdx-cw-bar" style="width:17.4%;min-width:34px;"><div class="hdx-cw-ak" style="width:0.0%;"></div><div class="hdx-cw-ot" style="width:100.0%;"></div></div><div class="hdx-matbar" style="width:17.4%;min-width:34px;"><div style="width:100%;"></div></div><div class="hdx-matlbl">Gateway materiality — 27 of 155 Shipments at the largest Import gateway</div></div><div class="hdx-cw-legend"><b>0%</b>Akzent Customs Share<br><span style="color:#b45309;font-weight:700;">27 Other-Patent Reference</span></div></div><div class="hdx-gwr zero small"><div><div class="hdx-cw-lbl">Puebla</div><div class="hdx-cw-sub">7 Shipments · 0 Akzent · 7 Other Patent</div></div><div><div class="hdx-cw-bar" style="width:4.5%;min-width:34px;"><div class="hdx-cw-ak" style="width:0.0%;"></div><div class="hdx-cw-ot" style="width:100.0%;"></div></div><div class="hdx-matbar" style="width:4.5%;min-width:34px;"><div style="width:100%;"></div></div><div class="hdx-matlbl">Gateway materiality — 7 of 155 Shipments at the largest Import gateway</div></div><div class="hdx-cw-legend"><b>0%</b>Akzent Customs Share<br><span style="color:#b45309;font-weight:700;">7 Other-Patent Reference</span></div></div><div class="hdx-gwr zero small"><div><div class="hdx-cw-lbl">Lázaro Cárdenas</div><div class="hdx-cw-sub">5 Shipments · 0 Akzent · 5 Other Patent</div></div><div><div class="hdx-cw-bar" style="width:3.2%;min-width:34px;"><div class="hdx-cw-ak" style="width:0.0%;"></div><div class="hdx-cw-ot" style="width:100.0%;"></div></div><div class="hdx-matbar" style="width:3.2%;min-width:34px;"><div style="width:100%;"></div></div><div class="hdx-matlbl">Gateway materiality — 5 of 155 Shipments at the largest Import gateway</div></div><div class="hdx-cw-legend"><b>0%</b>Akzent Customs Share<br><span style="color:#b45309;font-weight:700;">5 Other-Patent Reference</span></div></div><div class="hdx-gwr zero small"><div><div class="hdx-cw-lbl">Manzanillo</div><div class="hdx-cw-sub">3 Shipments · 0 Akzent · 3 Other Patent</div></div><div><div class="hdx-cw-bar" style="width:1.9%;min-width:34px;"><div class="hdx-cw-ak" style="width:0.0%;"></div><div class="hdx-cw-ot" style="width:100.0%;"></div></div><div class="hdx-matbar" style="width:1.9%;min-width:34px;"><div style="width:100%;"></div></div><div class="hdx-matlbl">Gateway materiality — 3 of 155 Shipments at the largest Import gateway</div></div><div class="hdx-cw-legend"><b>0%</b>Akzent Customs Share<br><span style="color:#b45309;font-weight:700;">3 Other-Patent Reference</span></div></div>
+        <div class="hdx-sublbl" style="margin-top:20px;">Exports</div>
+        <div class="hdx-gwr hot"><div><div class="hdx-cw-lbl">Nuevo Laredo</div><div class="hdx-cw-sub">36 Shipments · 33 Akzent · 3 Other Patent</div></div><div><div class="hdx-cw-bar" style="width:100.0%;min-width:34px;"><div class="hdx-cw-ak" style="width:91.7%;"></div><div class="hdx-cw-ot" style="width:8.3%;"></div></div><div class="hdx-matbar" style="width:100.0%;min-width:34px;"><div style="width:100%;"></div></div><div class="hdx-matlbl">Gateway materiality — 36 of 36 Shipments at the largest Export gateway</div></div><div class="hdx-cw-legend"><b>91.7%</b>Akzent Customs Share<br><span style="color:#b45309;font-weight:700;">3 Other-Patent Reference</span></div></div><div class="hdx-gwr hot"><div><div class="hdx-cw-lbl">Colombia, NL</div><div class="hdx-cw-sub">28 Shipments · 28 Akzent · 0 Other Patent</div></div><div><div class="hdx-cw-bar" style="width:77.8%;min-width:34px;"><div class="hdx-cw-ak" style="width:100.0%;"></div><div class="hdx-cw-ot" style="width:0.0%;"></div></div><div class="hdx-matbar" style="width:77.8%;min-width:34px;"><div style="width:100%;"></div></div><div class="hdx-matlbl">Gateway materiality — 28 of 36 Shipments at the largest Export gateway</div></div><div class="hdx-cw-legend"><b>100%</b>Akzent Customs Share<br><span style="color:var(--text-light);">0 Other-Patent Reference</span></div></div><div class="hdx-gwr hot zero"><div><div class="hdx-cw-lbl">MTY Airport</div><div class="hdx-cw-sub">22 Shipments · 0 Akzent · 22 Other Patent</div></div><div><div class="hdx-cw-bar" style="width:61.1%;min-width:34px;"><div class="hdx-cw-ak" style="width:0.0%;"></div><div class="hdx-cw-ot" style="width:100.0%;"></div></div><div class="hdx-matbar" style="width:61.1%;min-width:34px;"><div style="width:100%;"></div></div><div class="hdx-matlbl">Gateway materiality — 22 of 36 Shipments at the largest Export gateway</div></div><div class="hdx-cw-legend"><b>0%</b>Akzent Customs Share<br><span style="color:#b45309;font-weight:700;">22 Other-Patent Reference</span></div></div><div class="hdx-gwr hot zero"><div><div class="hdx-cw-lbl">Monterrey</div><div class="hdx-cw-sub">22 Shipments · 0 Akzent · 22 Other Patent</div></div><div><div class="hdx-cw-bar" style="width:61.1%;min-width:34px;"><div class="hdx-cw-ak" style="width:0.0%;"></div><div class="hdx-cw-ot" style="width:100.0%;"></div></div><div class="hdx-matbar" style="width:61.1%;min-width:34px;"><div style="width:100%;"></div></div><div class="hdx-matlbl">Gateway materiality — 22 of 36 Shipments at the largest Export gateway</div></div><div class="hdx-cw-legend"><b>0%</b>Akzent Customs Share<br><span style="color:#b45309;font-weight:700;">22 Other-Patent Reference</span></div></div><div class="hdx-gwr"><div><div class="hdx-cw-lbl">Altamira</div><div class="hdx-cw-sub">12 Shipments · 12 Akzent · 0 Other Patent</div></div><div><div class="hdx-cw-bar" style="width:33.3%;min-width:34px;"><div class="hdx-cw-ak" style="width:100.0%;"></div><div class="hdx-cw-ot" style="width:0.0%;"></div></div><div class="hdx-matbar" style="width:33.3%;min-width:34px;"><div style="width:100%;"></div></div><div class="hdx-matlbl">Gateway materiality — 12 of 36 Shipments at the largest Export gateway</div></div><div class="hdx-cw-legend"><b>100%</b>Akzent Customs Share<br><span style="color:var(--text-light);">0 Other-Patent Reference</span></div></div><div class="hdx-gwr zero small"><div><div class="hdx-cw-lbl">Manzanillo</div><div class="hdx-cw-sub">6 Shipments · 0 Akzent · 6 Other Patent</div></div><div><div class="hdx-cw-bar" style="width:16.7%;min-width:34px;"><div class="hdx-cw-ak" style="width:0.0%;"></div><div class="hdx-cw-ot" style="width:100.0%;"></div></div><div class="hdx-matbar" style="width:16.7%;min-width:34px;"><div style="width:100%;"></div></div><div class="hdx-matlbl">Gateway materiality — 6 of 36 Shipments at the largest Export gateway</div></div><div class="hdx-cw-legend"><b>0%</b>Akzent Customs Share<br><span style="color:#b45309;font-weight:700;">6 Other-Patent Reference</span></div></div><div class="hdx-gwr zero small"><div><div class="hdx-cw-lbl">Mexicali</div><div class="hdx-cw-sub">2 Shipments · 0 Akzent · 2 Other Patent</div></div><div><div class="hdx-cw-bar" style="width:5.6%;min-width:34px;"><div class="hdx-cw-ak" style="width:0.0%;"></div><div class="hdx-cw-ot" style="width:100.0%;"></div></div><div class="hdx-matbar" style="width:5.6%;min-width:34px;"><div style="width:100%;"></div></div><div class="hdx-matlbl">Gateway materiality — 2 of 36 Shipments at the largest Export gateway</div></div><div class="hdx-cw-legend"><b>0%</b>Akzent Customs Share<br><span style="color:#b45309;font-weight:700;">2 Other-Patent Reference</span></div></div><div class="hdx-gwr zero small"><div><div class="hdx-cw-lbl">AIFA</div><div class="hdx-cw-sub">1 Shipments · 0 Akzent · 1 Other Patent</div></div><div><div class="hdx-cw-bar" style="width:2.8%;min-width:34px;"><div class="hdx-cw-ak" style="width:0.0%;"></div><div class="hdx-cw-ot" style="width:100.0%;"></div></div><div class="hdx-matbar" style="width:2.8%;min-width:34px;"><div style="width:100%;"></div></div><div class="hdx-matlbl">Gateway materiality — 1 of 36 Shipments at the largest Export gateway</div></div><div class="hdx-cw-legend"><b>0%</b>Akzent Customs Share<br><span style="color:#b45309;font-weight:700;">1 Other-Patent Reference</span></div></div>
+        <div class="hdx-note"><strong>Read share and volume together.</strong> Akzent holds 100% of the two largest Import gateways (Colombia, NL 155 · Nuevo Laredo 90) and 91.7% of Nuevo Laredo Exports (33 of 36). The largest Other-Patent gateways are <strong>MTY Airport (27 Imports + 22 Exports)</strong> and <strong>Monterrey (22 Exports)</strong>. Altamira Exports are 100% Akzent on 12 Shipments — a small gateway that must not visually outweigh larger ones.</div>
+      </div>
+    </div>
+
+    <!-- 15 OTHER PATENT DEEP DIVE -->
+    <div class="card" style="border-top:3px solid #f59e0b;">
+      <div class="card-header"><span class="accent">15</span> Material Other-Patent Deep Dive</div>
+      <div class="card-body">
+        <div class="hdx-dd">
+          <div style="grid-column:1 / -1;border-top-width:5px;">
+            <div class="h"><span class="hdx-pat ot" title="Other Patent — the agency behind it is not identified">3438</span> <span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:#b45309;">OTHER PATENT</span> <span class="hdx-sublbl" style="margin:0;">Primary Other Patent</span></div>
+            <div class="n">63 <small>Current YTD Shipments · 64.3% of the Other-Patent Reference</small></div>
+            <div class="g">27 Imports via MTY Airport · 22 Exports via MTY Airport · 14 Exports via Monterrey</div>
+            <div class="w">Observed concentration: MTY Airport / Monterrey in both directions.</div>
+          </div>
+          <div>
+            <div class="h"><span class="hdx-pat ot" title="Other Patent — the agency behind it is not identified">3772</span> <span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:#b45309;">OTHER PATENT</span> <span class="hdx-sublbl" style="margin:0;">Secondary</span></div>
+            <div class="n">15 <small>Shipments</small></div>
+            <div class="g">Imports: Lázaro Cárdenas 5 · Manzanillo 3</div>
+            <div class="g" style="margin-top:2px;">Exports: Manzanillo 6 · AIFA 1</div>
+          </div>
+          <div>
+            <div class="h"><span class="hdx-pat ot" title="Other Patent — the agency behind it is not identified">1890</span> <span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:#b45309;">OTHER PATENT</span></div>
+            <div class="n">7 <small>Imports</small></div>
+            <div class="g">Puebla · active across 7 months</div>
+            <div class="tp">Trading Partner visible: <em>Haldex Products De Mexico Sa De Cv</em></div>
+          </div>
+          <div>
+            <div class="h"><span class="hdx-pat ot" title="Other Patent — the agency behind it is not identified">3727</span> <span style="font-size:9px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:#b45309;">OTHER PATENT</span></div>
+            <div class="n">6 <small>Exports</small></div>
+            <div class="g">Monterrey · active across 6 months</div>
+            <div class="tp">Trading Partner visible: <em>Haldex Products De Mexico Sa De Cv</em></div>
+          </div>
+          <div>
+            <div class="h"><span class="hdx-sublbl" style="margin:0;">Long tail · Exports</span></div>
+            <div class="g"><span class="hdx-pat ot" title="Other Patent — the agency behind it is not identified">1410</span> Nuevo Laredo 2 · <span class="hdx-pat ot" title="Other Patent — the agency behind it is not identified">1647</span> Nuevo Laredo 1</div>
+            <div class="g" style="margin-top:5px;"><span class="hdx-pat ot" title="Other Patent — the agency behind it is not identified">3611</span> Mexicali 2 · <span class="hdx-pat ot" title="Other Patent — the agency behind it is not identified">1823</span> Monterrey 2</div>
+          </div>
+        </div>
+        <div class="hdx-note-navy">These are observed allocations only. <strong>This view does not infer why any Other Patent is used</strong>, and does not identify the agency behind it.</div>
+      </div>
+    </div>
+
+    <!-- 16 CUSTOMS WHITESPACE -->
+    <div class="card" style="border-top:3px solid #f59e0b;">
+      <div class="card-header"><span class="accent">16</span> Customs Whitespace Reference — Other-Patent participation</div>
+      <div class="card-body">
+        <div class="hdx-dir">
+          <div><div class="k">Other-Patent Reference · Current YTD</div><div class="v" style="color:#b45309;">98</div><div class="s">23.6% of 416 visible customs Shipments</div></div>
+          <div><div class="k">Import Other-Patent Reference</div><div class="v" style="color:#b45309;">42</div><div class="s">of 287 Imports</div></div>
+          <div><div class="k">Export Other-Patent Reference</div><div class="v" style="color:#b45309;">56</div><div class="s">of 129 Exports</div></div>
+        </div>
+        <div style="margin:14px 0 4px;"><span class="hdx-ov">Overlap ≠ winnable</span></div>
+        <div class="hdx-sig">
+          <div class="s1"><b>Observed Operational Signal</b>98 Current YTD Shipments use Other Patents. Patent 3438 accounts for 63. <strong>MTY Airport / Monterrey</strong> is the principal visible concentration.</div>
+          <div class="s2"><b>AIOS Interpretation</b>The most relevant customs expansion question is whether specific <strong>Gateway × Direction</strong> allocations outside Akzent patents are structurally required or potentially contestable.</div>
+          <div class="s3"><b>Discovery Validation</b><ul class="hdx-dlist" style="margin-left:14px;"><li>gateway allocation rules</li><li>direction allocation</li><li>Trading Partner influence</li><li>customs regime requirements</li><li>existing agreements</li><li>specialization</li><li>contingency assignments</li><li>capacity</li><li>operating hours</li><li>procurement ownership</li><li>decision rights</li><li>eligibility to migrate specific Shipments</li></ul></div>
+        </div>
+        <div class="hdx-note">The 98 Shipments are a <strong>Customs Whitespace Reference</strong>, not a winnable opportunity. No economics are extrapolated across them.</div>
+      </div>
+    </div>
+
+    <div class="hdx-chapter syn" id="hdx-ch-4">
+      <div class="hdx-chapter-n">Chapter 4</div>
+      <div class="hdx-chapter-t">Commercial Synthesis</div>
+      <div class="hdx-chapter-s">Observed Signal → AIOS Interpretation → Discovery Validation → Positioning</div>
+    </div>
+
+    <!-- 17 PROFIT -->
+    <div class="card">
+      <div class="card-header"><span class="accent">17</span> Profit — Not Calculable</div>
+      <div class="card-body">
+        <div class="hdx-prov">
+          <div><div class="k">Status</div><div class="v">NOT CALCULABLE</div><div class="s">No Akzent Revenue, Gross Profit, Profit or Margin dataset was supplied for HALDEX customs business.</div></div>
+          <div><div class="k">Deactivated</div><div class="v" style="font-size:14px;">Profit analysis · GP/Shipment · Profit Wallet · whitespace economics</div><div class="s">Not estimated. No economics are extrapolated across the 98 Other-Patent Shipments.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 18 SYNTHESIS -->
+    <div class="card" style="border-top:3px solid #10b981;">
+      <div class="card-header"><span class="accent">18</span> Observed Signal · AIOS Interpretation · Discovery Validation</div>
+      <div class="card-body">
+        <div class="hdx-sig">
+          <div class="s1"><b>Observed Operational Signal</b><ul class="hdx-dlist" style="margin-left:14px;"><li>416 visible Current YTD Shipments</li><li>318 Current YTD Shipments using Akzent patents</li><li>76.4% Customs Shared Wallet</li><li>85.4% Import Customs Wallet</li><li>56.6% Export Customs Wallet</li><li>98 Other-Patent Reference Shipments</li><li>strong Akzent patent concentration in Colombia, Nuevo Laredo and Altamira</li><li>Other-Patent concentration around MTY Airport/Monterrey and selected maritime gateways</li><li>zero Akzent Captured Freight Shipments</li></ul></div>
+          <div class="s2"><b>AIOS Interpretation</b>HALDEX should be positioned internally as a <strong>high-participation Customs Agency CLIENT</strong>, not as an existing logistics CLIENT.<br><br>The most defensible expansion path is to understand the structural reason for the remaining Other-Patent allocations before pursuing migration.<br><br>The freight network is valuable operating intelligence and may support future discussions around Operational Complexity, Customs &amp; Visibility and ILM / Control Tower coordination, but it is <strong>not Captured Business</strong>.</div>
+          <div class="s3"><b>Discovery Validation</b>Validate why Other Patents are used by:<ul class="hdx-dlist" style="margin-left:14px;"><li>gateway</li><li>direction</li><li>Trading Partner</li><li>regime</li><li>contract</li><li>specialization</li><li>contingency</li><li>capacity</li><li>decision owner</li><li>procurement model</li></ul>Reliable Panjiva facts are not re-asked of HALDEX.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 19 POSITIONING -->
+    <div class="card">
+      <div class="card-header"><span class="accent">19</span> Commercial Positioning</div>
+      <div class="card-body">
+        <div class="hdx-pos">
+          <div><b>Customs &amp; Visibility Partner</b><span>Built on the existing 76.4% Customs Shared Wallet.</span></div>
+          <div><b>Operational Complexity Partner</b><span>Multi-gateway, multimodal visible network.</span></div>
+          <div><b>Multimodal Coordination Partner</b><span>Truck, Air and Maritime visible on Core Routes.</span></div>
+          <div><b>ILM / Control Tower Partner</b><span>Coordination across border, airport and port gateways.</span></div>
+          <div><b>CLIENT Wallet Expansion Partner</b><span>Starting from the structural reasons behind Other-Patent allocations.</span></div>
+        </div>
+        <div class="hdx-note-navy">Akzent is <strong>not</strong> positioned as a transactional freight provider, and no freight incumbency is claimed.</div>
+      </div>
+    </div>
+
+    <!-- 20 DATA AVAILABILITY -->
+    <div class="card">
+      <div class="card-header"><span class="accent">20</span> Data Availability</div>
+      <div class="card-body">
+        <div style="overflow-x:auto;"><table class="hub-table" style="font-size:11px;">
+          <thead><tr><th>Status</th><th>Items</th></tr></thead>
+          <tbody>
+            <tr><td><strong style="color:#047857;">Available</strong></td><td>Panjiva Imports · Panjiva Exports · Shipment dates · facilities/addresses where present · gateways · modes · Customs Agent/Patent · Customs Regime · Trading Partners · HS Codes · goods · values/weights where populated · user-confirmed zero Akzent freight capture · Akzent Patent ownership 3468 + 1930</td></tr>
+            <tr><td><strong style="color:var(--teal-dim);">Calculable</strong></td><td>visible scale · comparable trend · Logistics Shared Wallet = 0% · Customs Shared Wallet · Customs Wallet by direction · Patent Portfolio · Patent × Gateway · Customs Wallet by Gateway · Core Routes · route frequency · Logistics Visible Uncaptured Reference · Customs Other-Patent Reference</td></tr>
+            <tr><td><strong style="color:#b45309;">Missing</strong></td><td>Akzent customs Revenue · Akzent customs Gross Profit/Profit · Margin · validated reason for Other-Patent assignments · commercial eligibility of Other-Patent Shipments</td></tr>
+            <tr class="hdx-muted"><td><strong>Deactivated</strong></td><td>Profit analysis · GP/Shipment · Profit Wallet · whitespace economics</td></tr>
+          </tbody></table></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <!-- ══ INDUSTRIAS AUTOMOTRICES LODI VIEW ══ -->
 <div id="view-lodi" class="view">
   <div class="page-header">
@@ -17919,6 +18631,16 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
               <td style="color:var(--text-light);" title="No AIOS Air rating supplied &middot; Air = 208 Current YTD Import Shipments and 14 Export Shipments &middot; Querétaro, AIFA and AICM">&mdash;</td>
               <td style="color:var(--text-light);" title="No AIOS ILM rating supplied &middot; ILM / Control Tower is part of the AIOS Commercial Positioning">&mdash;</td>
               <td style="color:#10b981;font-weight:700;font-size:11px;">CLIENT Wallet Expansion &middot; Operational Complexity + Customs &amp; Visibility + ILM / Control Tower</td>
+            </tr>
+            <tr onclick="showViewById('view-haldex')" style="cursor:pointer;">
+              <td><strong>HALDEX Products de Mexico</strong> <span style="font-size:10px;font-weight:600;color:#10b981;background:rgba(16,185,129,0.1);padding:1px 5px;border-radius:3px;margin-left:4px;">CLIENT</span></td>
+              <td><span style="color:var(--text-light);" title="AIOS Classification not supplied for this account">&mdash;</span></td>
+              <td style="color:var(--text-muted);" title="HALDEX Products de Mexico · Relationship CLIENT · Customs Agency CLIENT · Akzent Captured Freight Shipments = 0 · Panjiva Current YTD Jan–Jul 2026 · 416 visible Shipments (287 Imports / 129 Exports) · equivalent-period change −61.2% (Imports −69.0%, Exports −12.2%) · Customs Shared Wallet 76.4% (318 / 416) · Imports 85.4% · Exports 56.6% · Other-Patent Reference 98 · Import Core Routes 3 = 83.6% · Export Core Routes 8 = 83.7%">Auto Components &middot; Customs Agency CLIENT</td>
+              <td style="color:var(--text-light);" title="No AIOS Cross-Border rating supplied &middot; Current YTD Import Core Routes run through Colombia, NL and Nuevo Laredo">&mdash;</td>
+              <td style="color:var(--text-light);" title="No AIOS Ocean rating supplied &middot; Export Core Route via Altamira is Maritime (12 Shipments)">&mdash;</td>
+              <td style="color:var(--text-light);" title="No AIOS Air rating supplied &middot; Export Core Route via MTY Airport is Air (22 Shipments)">&mdash;</td>
+              <td style="color:var(--text-light);" title="No AIOS ILM rating supplied &middot; ILM / Control Tower is part of the AIOS Commercial Positioning">&mdash;</td>
+              <td style="color:#10b981;font-weight:700;font-size:11px;">CLIENT Wallet Expansion &middot; Customs &amp; Visibility + Operational Complexity + ILM / Control Tower</td>
             </tr>
             <tr>
               <td><strong>Industrias Automotrices Lodi</strong> <span style="font-size:10px;font-weight:600;color:#b45309;background:rgba(245,158,11,0.12);padding:1px 5px;border-radius:3px;margin-left:4px;">LEAD</span></td>
@@ -79363,6 +80085,7 @@ const ACCOUNTS = [
   { id:'view-inx',       name:'INX International Mexico',   sub:'Industrial Chemicals / Printing Inks / Coatings · Cross-Border Supply Chain', rel:'LEAD',   cls:'AA',   clsPill:'aa'  },
   { id:'view-pipsa',     name:'Corporación Pipsa',         sub:'Corporaci&oacute;n Pipsa S.A. de C.V. &middot; CLIENT &middot; AIOS Classification AAA &middot; Operational Complexity High &middot; Metals recycling / lead processing &middot; Garc&iacute;a, Nuevo Le&oacute;n &middot; Panjiva Current YTD 2026-01-02 to 2026-07-31 2,770 Shipments &middot; 1,736 Imports &middot; 1,034 Exports &middot; Truck 99.9% &middot; Import Core Routes 2 to 95.9% &middot; Export Core Routes 3 to 82.8% &middot; Colombia NL &middot; Nuevo Laredo &middot; Manzanillo &middot; United States &middot; China &middot; Lead Metal Trading LLC &middot; Corpipsa LLC &middot; Glencore Ltd. &middot; IMMEX &middot; waste lead-acid batteries &middot; refined lead &middot; Akzent captured 2 Export Truck Shipments Jan-Aug 2026 &middot; GP $341.17 &middot; Logistics Shared Wallet 0.07% provisional reference &middot; Visible Uncaptured Reference 2,768 &middot; Customs Shared Wallet &middot; Customs Share 90.8% &middot; patents 3468 1930 3541 3954 &middot; Patent &times; Gateway &middot; Customs Wallet by Gateway &middot; Nuevo Laredo Export Customs 26.8% &middot; Customs Agency Intelligence &middot; Cross-Border &middot; Customs &amp; Visibility &middot; ILM / Control Tower', rel:'CLIENT', cls:'AAA', clsPill:'aaa' },
   { id:'view-borgwarner', name:'BorgWarner PDS Irapuato', sub:'BorgWarner PDS Irapuato S de RL de CV &middot; CLIENT &middot; AIOS Classification AAA &middot; Operational Complexity High &middot; Automotive components &middot; Irapuato Guanajuato &middot; Panjiva Current YTD 2026-01-01 to 2026-07-31 1,240 Shipments &middot; 888 Imports &middot; 352 Exports &middot; equivalent-period -20.3% &middot; 2025 Full Year 2,479 &middot; Truck &middot; Air &middot; Maritime &middot; Double Stack Rail &middot; Unknown mode &middot; Import Core Routes 48 to 80.2% &middot; Export Core Routes 9 to 80.7% &middot; Nuevo Laredo &middot; Puebla &middot; Quer&eacute;taro &middot; Manzanillo &middot; Altamira &middot; Colombia NL &middot; Piedras Negras &middot; Tijuana &middot; AIFA &middot; AICM &middot; Guadalajara &middot; China &middot; United States &middot; South Korea &middot; Germany &middot; Japan &middot; BorgWarner PDS Anderson &middot; Freudenberg FST &middot; Hyundai Transys &middot; General Motors &middot; Woodbridge &middot; Niagara Lasalle &middot; Akzent captured freight 0 Shipments &middot; Logistics Shared Wallet 0.0% &middot; Visible Uncaptured Reference 1,240 &middot; Customs Shared Wallet 34.5% &middot; Imports 36.6% &middot; Exports 29.3% &middot; patents 3468 1930 &middot; 1930 not visible &middot; Other Patents 3076 3164 1944 3415 1680 1777 3770 3904 &middot; Patent &times; Gateway &middot; Customs Wallet by Gateway &middot; Other-Patent Customs Whitespace 812 &middot; IMMEX &middot; Customs Agency Intelligence &middot; Multimodal Coordination &middot; Customs &amp; Visibility &middot; ILM / Control Tower', rel:'CLIENT', cls:'AAA', clsPill:'aaa' },
+  { id:'view-haldex',     name:'HALDEX Products de Mexico', sub:'HALDEX Products de Mexico S.A. de C.V. &middot; CLIENT &middot; Customs Agency CLIENT &middot; no Akzent-managed freight &middot; AIOS Classification not supplied &middot; Auto components &middot; Apodaca Nuevo Le&oacute;n &middot; Panjiva Current YTD Jan&ndash;Jul 2026 416 Shipments &middot; 287 Imports &middot; 129 Exports &middot; equivalent-period -61.2% &middot; 2025 Full Year 1,835 &middot; Logistics Shared Wallet 0.0% &middot; Customs Shared Wallet 76.4% &middot; Akzent Patents 3468 1930 &middot; Other Patent 3438 3772 1890 3727 &middot; Other-Patent Reference 98 &middot; Import Core Routes 3 to 83.6% &middot; Export Core Routes 8 to 83.7% &middot; Colombia NL &middot; Nuevo Laredo &middot; MTY Airport &middot; Monterrey &middot; Altamira &middot; Manzanillo &middot; L&aacute;zaro C&aacute;rdenas &middot; Puebla &middot; Kansas City &middot; Patent &times; Gateway &middot; Customs Wallet by Gateway &middot; Customs Whitespace &middot; Customs &amp; Visibility &middot; ILM / Control Tower', rel:'CLIENT', cls:'&mdash;', clsPill:'' },
   { id:'view-lodi',      name:'Industrias Automotrices Lodi', sub:'Automotive Components / Industrial Manufacturing · Cross-Border Multimodal Operation', rel:'LEAD',   cls:'AA',   clsPill:'aa'  },
   { id:'view-organizacion-industrial-vega', name:'Organización Industrial Vega', sub:'Industrial Manufacturing · Battery Components · Plastics · Monterrey, Nuevo León', rel:'LEAD',   cls:'AA',   clsPill:'aa'  },
   { id:'view-wbtm',      name:'WBTM S. de R.L. de C.V.',   sub:'Automotive Seating / Interiors / Components · IMMEX · Korea–Mexico–USA', rel:'LEAD',   cls:'AAA',  clsPill:'aaa' },
@@ -79526,6 +80249,7 @@ var INDUSTRY_BY_ID = {
   'view-alfagomma':'Industrial', 'view-bendix':'Auto',
   'view-inx':'Industrial', 'view-pipsa':'Industrial', 'view-lodi':'Auto',
   'view-borgwarner':'Auto',
+  'view-haldex':'Auto',
   'view-organizacion-industrial-vega':'Industrial', 'view-wbtm':'Auto', 'view-vamasa':'Medical',
   'view-palmex':'Food', 'view-star':'Food', 'view-termolita':'Industrial',
   'view-sanfer-salud-animal':'Animal Health', 'view-saintgobain':'Industrial', 'view-brahm':'Industrial',
