@@ -12335,6 +12335,359 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
   .aios-sb-toggle, .aios-sb-foot, .aios-export-btn, #aios-sb-tip, .aios-modal, .aios-toast { display: none !important; }
 }
 </style>
+<style id="d2-style">
+/* Official Akzent logo files, supplied for Dashboard 2.0 (embedded unmodified).
+   dark = white wordmark + arrow, for navy backgrounds; light = grey wordmark + arrow. */
+#view-dashboard2 {
+  --d2-logo-dark: url("data:image/png;base64,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");
+  --d2-logo-light: url("data:image/png;base64,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");
+}
+/* ═══════════════════════════════════════════════════════════════
+   DASHBOARD 2.0 · EXECUTIVE PORTFOLIO INTELLIGENCE
+   Every rule is scoped to #view-dashboard2 (or its nav entry), so no
+   existing view, account report or export is affected.
+═══════════════════════════════════════════════════════════════ */
+#view-dashboard2 {
+  --d2-ink: #0A1A38;
+  --d2-navy: #0D2B5E;
+  --d2-navy-2: #16397A;
+  --d2-cyan: #00B4D8;
+  --d2-cyan-ink: #007A93;
+  --d2-cyan-soft: #E3F6FA;
+  --d2-bg: #F2F4F8;
+  --d2-surface: #FFFFFF;
+  --d2-line: #E1E6EE;
+  --d2-line-2: #C9D2E0;
+  --d2-text: #0F1B2D;
+  --d2-muted: #556175;
+  --d2-faint: #8590A3;
+  --d2-rec: #0D2B5E;
+  --d2-new: #00A3C4;
+  --d2-nv-bg: #FFF7E6;
+  --d2-nv-ink: #8A5A00;
+  --d2-nv-line: #E3B55C;
+  --d2-neg: #B42318;
+  --d2-focus: #00B4D8;
+  --d2-radius: 10px;
+  background: var(--d2-bg);
+  color: var(--d2-text);
+  min-height: 100vh;
+  font-variant-numeric: tabular-nums;
+}
+#view-dashboard2 *, #view-dashboard2 *::before, #view-dashboard2 *::after { box-sizing: border-box; }
+#view-dashboard2 button { font: inherit; color: inherit; }
+#view-dashboard2 :focus-visible { outline: 2px solid var(--d2-focus); outline-offset: 2px; border-radius: 4px; }
+#view-dashboard2 .d2-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ── Brand assets (official files, aspect ratio preserved) ── */
+#view-dashboard2 .d2-logo { display: block; width: 132px; aspect-ratio: 790 / 174; background: var(--d2-logo-dark) no-repeat left center / contain; }
+#view-dashboard2 .d2-logo-light { display: block; width: 104px; aspect-ratio: 892 / 273; background: var(--d2-logo-light) no-repeat left center / contain; }
+/* Arrow = the arrow region of the official white-wordmark file, shown at its native aspect (no redraw). */
+#view-dashboard2 .d2-arrow { display: inline-block; flex: none; width: 7px; height: 14px; background: var(--d2-logo-dark) no-repeat; background-size: 86.4px 19.03px; background-position: -79.4px -4.92px; }
+
+/* ── Hero ── */
+#view-dashboard2 .d2-hero { background: radial-gradient(120% 140% at 100% 0%, #173F80 0%, var(--d2-navy) 42%, var(--d2-ink) 100%); color: #fff; padding: 22px 36px 26px; }
+#view-dashboard2 .d2-hero-top { display: flex; align-items: center; justify-content: space-between; gap: 12px 20px; flex-wrap: wrap; }
+#view-dashboard2 .d2-brand { display: flex; align-items: center; gap: 14px; }
+#view-dashboard2 .d2-brand-os { font-size: 9.5px; font-weight: 700; letter-spacing: 2.2px; text-transform: uppercase; color: rgba(255,255,255,0.55); padding-left: 14px; border-left: 1px solid rgba(255,255,255,0.18); line-height: 1.5; }
+#view-dashboard2 .d2-hero-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+#view-dashboard2 .d2-tag { font-size: 9.5px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--d2-cyan); border: 1px solid rgba(0,180,216,0.45); border-radius: 999px; padding: 4px 10px; }
+#view-dashboard2 .d2-hbtn { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); color: #fff; border-radius: 6px; padding: 6px 12px; font-size: 11px; font-weight: 600; cursor: pointer; }
+#view-dashboard2 .d2-hbtn:hover { background: rgba(255,255,255,0.16); }
+#view-dashboard2 .d2-hero-main { display: grid; grid-template-columns: minmax(0, 1fr) minmax(420px, 1.25fr); gap: 20px 48px; align-items: end; margin-top: 26px; }
+#view-dashboard2 .d2-eyebrow { display: flex; align-items: center; gap: 8px; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--d2-cyan); }
+#view-dashboard2 .d2-hero h1 { font-size: 30px; line-height: 1.15; font-weight: 300; letter-spacing: -0.4px; margin: 10px 0 8px; color: #fff; }
+#view-dashboard2 .d2-hero h1 b { font-weight: 700; }
+#view-dashboard2 .d2-hero-sub { font-size: 12px; line-height: 1.6; color: rgba(255,255,255,0.62); max-width: 560px; }
+#view-dashboard2 .d2-scale-nums { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; }
+#view-dashboard2 .d2-num { text-align: left; padding: 0 18px; border-left: 1px solid rgba(255,255,255,0.14); background: none; border-top: 0; border-right: 0; border-bottom: 0; cursor: default; }
+#view-dashboard2 .d2-num:first-child { border-left: 0; padding-left: 0; }
+#view-dashboard2 button.d2-num { cursor: pointer; }
+#view-dashboard2 .d2-num-l { display: block; font-size: 10px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: rgba(255,255,255,0.6); }
+#view-dashboard2 .d2-num-v { display: block; font-size: 44px; font-weight: 200; line-height: 1.05; margin-top: 4px; color: #fff; }
+#view-dashboard2 .d2-num-p { display: block; font-size: 11px; color: rgba(255,255,255,0.62); margin-top: 2px; }
+#view-dashboard2 button.d2-num[aria-pressed="true"] .d2-num-v { color: var(--d2-cyan); }
+#view-dashboard2 button.d2-num:hover .d2-num-l { color: #fff; }
+#view-dashboard2 .d2-split { display: flex; height: 10px; border-radius: 999px; overflow: hidden; margin-top: 16px; background: rgba(255,255,255,0.1); }
+#view-dashboard2 .d2-split span { display: block; height: 100%; }
+#view-dashboard2 .d2-split .s-client { background: var(--d2-cyan); }
+#view-dashboard2 .d2-split .s-lead { background: rgba(255,255,255,0.32); }
+#view-dashboard2 .d2-split-leg { display: flex; justify-content: space-between; gap: 8px; margin-top: 7px; font-size: 10.5px; color: rgba(255,255,255,0.6); }
+#view-dashboard2 .d2-split-leg i { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 6px; vertical-align: 0; }
+
+/* ── Filter bar ── */
+#view-dashboard2 .d2-filterbar { position: sticky; top: 0; z-index: 30; display: flex; align-items: center; gap: 8px 12px; flex-wrap: wrap; padding: 10px 36px; background: rgba(255,255,255,0.94); backdrop-filter: blur(6px); border-bottom: 1px solid var(--d2-line); min-height: 48px; }
+#view-dashboard2 .d2-fb-label { font-size: 9.5px; font-weight: 800; letter-spacing: 1.6px; text-transform: uppercase; color: var(--d2-faint); }
+#view-dashboard2 .d2-chips { display: flex; gap: 6px; flex-wrap: wrap; flex: 1; min-width: 0; }
+#view-dashboard2 .d2-chip { display: inline-flex; align-items: center; gap: 6px; background: var(--d2-cyan-soft); color: var(--d2-navy); border: 1px solid rgba(0,122,147,0.28); border-radius: 999px; padding: 3px 4px 3px 10px; font-size: 11px; font-weight: 600; cursor: pointer; }
+#view-dashboard2 .d2-chip b { font-weight: 800; color: var(--d2-cyan-ink); font-size: 9.5px; letter-spacing: .6px; text-transform: uppercase; }
+#view-dashboard2 .d2-chip .x { display: inline-grid; place-items: center; width: 17px; height: 17px; border-radius: 50%; background: rgba(13,43,94,0.08); font-size: 11px; line-height: 1; }
+#view-dashboard2 .d2-chip:hover .x { background: var(--d2-navy); color: #fff; }
+#view-dashboard2 .d2-none { font-size: 11.5px; color: var(--d2-faint); }
+#view-dashboard2 .d2-fb-count { font-size: 11.5px; color: var(--d2-muted); white-space: nowrap; }
+#view-dashboard2 .d2-fb-count b { color: var(--d2-text); }
+#view-dashboard2 .d2-reset { background: var(--d2-navy); color: #fff; border: 0; border-radius: 6px; padding: 7px 12px; font-size: 11px; font-weight: 700; cursor: pointer; }
+#view-dashboard2 .d2-reset:disabled { background: var(--d2-line); color: var(--d2-faint); cursor: default; }
+
+/* ── Layout ── */
+#view-dashboard2 .d2-body { padding: 22px 36px 8px; display: grid; gap: 18px; }
+#view-dashboard2 .d2-row { display: grid; gap: 18px; }
+#view-dashboard2 .d2-row-comp { grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.4fr); }
+#view-dashboard2 .d2-row-if { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.5fr); }
+#view-dashboard2 .d2-card { background: var(--d2-surface); border: 1px solid var(--d2-line); border-radius: var(--d2-radius); padding: 18px 20px 18px; min-width: 0; }
+#view-dashboard2 .d2-card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px 16px; flex-wrap: wrap; margin-bottom: 14px; }
+#view-dashboard2 .d2-step { display: flex; align-items: center; gap: 7px; font-size: 9.5px; font-weight: 800; letter-spacing: 1.6px; text-transform: uppercase; color: var(--d2-cyan-ink); }
+#view-dashboard2 .d2-card h2 { font-size: 16px; font-weight: 700; color: var(--d2-navy); margin: 5px 0 3px; letter-spacing: -0.1px; }
+#view-dashboard2 .d2-q { font-size: 11.5px; color: var(--d2-muted); line-height: 1.5; }
+#view-dashboard2 .d2-denom { font-size: 10.5px; color: var(--d2-muted); background: var(--d2-bg); border: 1px solid var(--d2-line); border-radius: 6px; padding: 4px 8px; white-space: nowrap; }
+#view-dashboard2 .d2-denom b { color: var(--d2-text); }
+#view-dashboard2 .d2-note { font-size: 10.5px; line-height: 1.55; color: var(--d2-muted); margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--d2-line); }
+#view-dashboard2 .d2-note b { color: var(--d2-text); }
+#view-dashboard2 .d2-static { font-size: 9.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--d2-faint); }
+
+/* ── Segmented controls ── */
+#view-dashboard2 .d2-seg { display: inline-flex; background: var(--d2-bg); border: 1px solid var(--d2-line); border-radius: 7px; padding: 2px; gap: 2px; }
+#view-dashboard2 .d2-seg button { border: 0; background: none; border-radius: 5px; padding: 5px 10px; font-size: 11px; font-weight: 600; color: var(--d2-muted); cursor: pointer; white-space: nowrap; }
+#view-dashboard2 .d2-seg button[aria-pressed="true"] { background: var(--d2-surface); color: var(--d2-navy); box-shadow: 0 1px 2px rgba(13,43,94,0.14); }
+#view-dashboard2 .d2-seg button:disabled { opacity: .45; cursor: not-allowed; }
+#view-dashboard2 .d2-ctl { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+#view-dashboard2 .d2-ctl-l { font-size: 9.5px; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; color: var(--d2-faint); }
+
+/* ── Tenure ── */
+#view-dashboard2 .d2-stack { display: flex; height: 38px; border-radius: 7px; overflow: hidden; gap: 2px; background: var(--d2-surface); }
+#view-dashboard2 .d2-stack button { border: 0; padding: 0; min-width: 4px; cursor: pointer; position: relative; }
+#view-dashboard2 .d2-stack button[aria-pressed="false"].dim { opacity: .35; }
+#view-dashboard2 .t-rec { background: var(--d2-rec); }
+#view-dashboard2 .t-new { background: var(--d2-new); }
+#view-dashboard2 .t-nv { background: repeating-linear-gradient(135deg, #D8DEE8 0 5px, #EEF1F6 5px 10px); }
+#view-dashboard2 .d2-legend { display: grid; gap: 4px; margin-top: 12px; }
+#view-dashboard2 .d2-leg { display: grid; grid-template-columns: 12px minmax(0, 1fr) auto auto; align-items: center; gap: 10px; width: 100%; text-align: left; background: none; border: 1px solid transparent; border-radius: 7px; padding: 7px 8px; cursor: pointer; }
+#view-dashboard2 .d2-leg:hover { background: var(--d2-bg); }
+#view-dashboard2 .d2-leg[aria-pressed="true"] { background: var(--d2-cyan-soft); border-color: rgba(0,122,147,0.35); }
+#view-dashboard2 .d2-leg i { width: 12px; height: 12px; border-radius: 3px; }
+#view-dashboard2 .d2-leg-n { font-size: 13px; font-weight: 600; }
+#view-dashboard2 .d2-leg-d { display: block; font-size: 10.5px; color: var(--d2-muted); font-weight: 400; margin-top: 1px; }
+#view-dashboard2 .d2-leg-c { font-size: 20px; font-weight: 300; color: var(--d2-navy); }
+#view-dashboard2 .d2-leg-p { font-size: 11px; color: var(--d2-muted); min-width: 44px; text-align: right; }
+
+/* ── Service matrix ── */
+#view-dashboard2 .d2-svc-top { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-bottom: 14px; }
+#view-dashboard2 .d2-kpi { border: 1px solid var(--d2-line); border-radius: 8px; padding: 10px 12px; text-align: left; background: var(--d2-surface); cursor: pointer; }
+#view-dashboard2 .d2-kpi:hover { border-color: var(--d2-line-2); }
+#view-dashboard2 .d2-kpi[aria-pressed="true"] { border-color: var(--d2-cyan-ink); background: var(--d2-cyan-soft); }
+#view-dashboard2 .d2-kpi-l { display: block; font-size: 10px; font-weight: 700; color: var(--d2-muted); line-height: 1.35; min-height: 27px; }
+#view-dashboard2 .d2-kpi-v { display: block; font-size: 26px; font-weight: 300; color: var(--d2-navy); line-height: 1.1; margin-top: 4px; }
+#view-dashboard2 .d2-kpi-p { display: block; font-size: 10.5px; color: var(--d2-muted); }
+#view-dashboard2 .d2-matrix { display: grid; grid-template-columns: 172px repeat(3, minmax(0, 1fr)) 92px; gap: 4px; align-items: stretch; }
+#view-dashboard2 .d2-mx-h { font-size: 9.5px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--d2-muted); padding: 6px 6px; display: flex; align-items: flex-end; line-height: 1.3; }
+#view-dashboard2 .d2-mx-h.ax { color: var(--d2-cyan-ink); }
+#view-dashboard2 .d2-mx-r .d2-st { white-space: normal; line-height: 1.25; }
+#view-dashboard2 .d2-mx-r { font-size: 11px; font-weight: 700; color: var(--d2-text); padding: 6px 8px; display: flex; align-items: center; gap: 7px; line-height: 1.3; }
+#view-dashboard2 .d2-cell { border: 1px solid var(--d2-line); border-radius: 7px; padding: 9px 10px; min-height: 64px; text-align: left; background: var(--d2-surface); cursor: pointer; display: flex; flex-direction: column; justify-content: space-between; gap: 2px; }
+#view-dashboard2 .d2-cell:hover { border-color: var(--d2-line-2); }
+#view-dashboard2 .d2-cell .c { font-size: 22px; font-weight: 300; color: var(--d2-navy); line-height: 1; }
+#view-dashboard2 .d2-cell .p { font-size: 10px; color: var(--d2-muted); }
+#view-dashboard2 .d2-cell .k { font-size: 9px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; color: var(--d2-cyan-ink); }
+#view-dashboard2 .d2-cell.zero { background: var(--d2-bg); cursor: default; }
+#view-dashboard2 .d2-cell.zero .c { color: var(--d2-faint); }
+#view-dashboard2 .d2-cell.dual { background: linear-gradient(135deg, var(--d2-navy), var(--d2-navy-2)); border-color: var(--d2-navy); }
+#view-dashboard2 .d2-cell.dual .c, #view-dashboard2 .d2-cell.dual .p { color: #fff; }
+#view-dashboard2 .d2-cell.dual .k { color: var(--d2-cyan); }
+#view-dashboard2 .d2-cell.nv { background: var(--d2-nv-bg); border-style: dashed; border-color: var(--d2-nv-line); }
+#view-dashboard2 .d2-cell[aria-pressed="true"] { outline: 2px solid var(--d2-cyan); outline-offset: 1px; }
+#view-dashboard2 .d2-tot { font-size: 11px; color: var(--d2-muted); padding: 6px 8px; display: flex; flex-direction: column; justify-content: center; border-left: 1px solid var(--d2-line); }
+#view-dashboard2 .d2-tot b { font-size: 15px; font-weight: 600; color: var(--d2-navy); }
+
+/* ── Status pills ── */
+#view-dashboard2 .d2-st { display: inline-flex; align-items: center; gap: 5px; font-size: 10.5px; font-weight: 700; border-radius: 999px; padding: 2px 8px 2px 6px; white-space: nowrap; border: 1px solid transparent; }
+#view-dashboard2 .d2-st::before { content: ""; width: 7px; height: 7px; border-radius: 50%; flex: none; }
+#view-dashboard2 .d2-st.cc { background: #E6F0FB; color: var(--d2-navy); }
+#view-dashboard2 .d2-st.cc::before { background: var(--d2-navy); }
+#view-dashboard2 .d2-st.cnc { background: #fff; color: #3F4A5C; border-color: var(--d2-line-2); }
+#view-dashboard2 .d2-st.cnc::before { border: 1.5px solid #3F4A5C; }
+#view-dashboard2 .d2-st.nv { background: var(--d2-nv-bg); color: var(--d2-nv-ink); border: 1px dashed var(--d2-nv-line); }
+#view-dashboard2 .d2-st.nv::before { border: 1.5px dashed var(--d2-nv-ink); }
+#view-dashboard2 .d2-st.client { background: var(--d2-navy); color: #fff; }
+#view-dashboard2 .d2-st.client::before { background: var(--d2-cyan); }
+#view-dashboard2 .d2-st.lead { background: #EEF1F6; color: #3F4A5C; }
+#view-dashboard2 .d2-st.lead::before { border: 1.5px solid #6B7688; }
+#view-dashboard2 .d2-st.rec { background: #E6F0FB; color: var(--d2-navy); }
+#view-dashboard2 .d2-st.rec::before { background: var(--d2-rec); }
+#view-dashboard2 .d2-st.new { background: var(--d2-cyan-soft); color: var(--d2-cyan-ink); }
+#view-dashboard2 .d2-st.new::before { background: var(--d2-new); }
+#view-dashboard2 .d2-na { color: var(--d2-faint); font-size: 11px; }
+
+/* ── Industry ── */
+#view-dashboard2 .d2-ind { display: grid; gap: 2px; }
+#view-dashboard2 .d2-ibar { display: grid; grid-template-columns: minmax(96px, 150px) minmax(0, 1fr) 30px 50px; align-items: center; gap: 10px; width: 100%; background: none; border: 1px solid transparent; border-radius: 6px; padding: 5px 6px; text-align: left; cursor: pointer; }
+#view-dashboard2 .d2-ibar:hover { background: var(--d2-bg); }
+#view-dashboard2 .d2-ibar[aria-pressed="true"] { background: var(--d2-cyan-soft); border-color: rgba(0,122,147,0.35); }
+#view-dashboard2 .d2-ibar .n { font-size: 11.5px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#view-dashboard2 .d2-ibar .t { height: 12px; background: var(--d2-bg); border-radius: 3px; overflow: hidden; }
+#view-dashboard2 .d2-ibar .t span { display: block; height: 100%; background: linear-gradient(90deg, var(--d2-navy), var(--d2-navy-2)); border-radius: 3px; }
+#view-dashboard2 .d2-ibar[aria-pressed="true"] .t span { background: linear-gradient(90deg, var(--d2-cyan-ink), var(--d2-cyan)); }
+#view-dashboard2 .d2-ibar.na .n { color: var(--d2-muted); font-style: italic; font-weight: 500; }
+#view-dashboard2 .d2-ibar.na .t span { background: repeating-linear-gradient(135deg, #C9D2E0 0 4px, #E6EAF1 4px 8px); }
+#view-dashboard2 .d2-ibar .c { font-size: 12.5px; font-weight: 700; text-align: right; }
+#view-dashboard2 .d2-ibar .p { font-size: 11px; color: var(--d2-muted); text-align: right; }
+#view-dashboard2 .d2-empty { font-size: 12px; color: var(--d2-faint); padding: 18px 4px; }
+
+/* ── Treemap ── */
+#view-dashboard2 .d2-tm-ctl { display: flex; gap: 10px 18px; flex-wrap: wrap; align-items: center; }
+#view-dashboard2 .d2-cover { display: flex; align-items: center; gap: 8px 14px; flex-wrap: wrap; margin: 2px 0 12px; font-size: 11.5px; color: var(--d2-muted); }
+#view-dashboard2 .d2-cover b { color: var(--d2-text); }
+#view-dashboard2 .d2-meter { width: 120px; height: 6px; border-radius: 999px; background: var(--d2-bg); overflow: hidden; border: 1px solid var(--d2-line); }
+#view-dashboard2 .d2-meter span { display: block; height: 100%; background: var(--d2-cyan-ink); }
+#view-dashboard2 .d2-tm { position: relative; width: 100%; height: 440px; border-radius: 8px; overflow: hidden; background: var(--d2-bg); }
+#view-dashboard2 .d2-tm-g { position: absolute; border-radius: 4px; }
+#view-dashboard2 .d2-tm-gl { position: absolute; left: 6px; top: 3px; right: 6px; font-size: 9px; font-weight: 800; letter-spacing: 1.1px; text-transform: uppercase; color: var(--d2-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; pointer-events: none; }
+#view-dashboard2 .d2-tile { position: absolute; border: 0; border-radius: 4px; padding: 6px 7px; color: #fff; text-align: left; overflow: hidden; cursor: pointer; display: flex; flex-direction: column; justify-content: space-between; transition: filter .12s; }
+#view-dashboard2 .d2-tile:hover, #view-dashboard2 .d2-tile:focus-visible { filter: brightness(1.18); }
+#view-dashboard2 .d2-tile:focus-visible { outline: 2px solid #fff; outline-offset: -3px; }
+#view-dashboard2 .d2-tile .tn { font-size: 11.5px; font-weight: 700; line-height: 1.2; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+#view-dashboard2 .d2-tile .tv { font-size: 13px; font-weight: 300; opacity: .95; white-space: nowrap; }
+#view-dashboard2 .d2-tile.sm .tn { font-size: 10px; -webkit-line-clamp: 1; }
+#view-dashboard2 .d2-tile.sm .tv { font-size: 10.5px; }
+#view-dashboard2 .d2-side { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 12px; }
+#view-dashboard2 .d2-side-box { border: 1px solid var(--d2-line); border-radius: 8px; padding: 10px 12px; font-size: 11px; color: var(--d2-muted); }
+#view-dashboard2 .d2-side-box h3 { font-size: 10px; font-weight: 800; letter-spacing: 1.1px; text-transform: uppercase; color: var(--d2-text); margin: 0 0 6px; }
+#view-dashboard2 .d2-side-box.neg { border-color: rgba(180,35,24,0.35); background: #FFF6F5; }
+#view-dashboard2 .d2-side-box.neg h3 { color: var(--d2-neg); }
+#view-dashboard2 .d2-side-list { display: flex; flex-wrap: wrap; gap: 4px 6px; }
+#view-dashboard2 .d2-side-list button { background: var(--d2-surface); border: 1px solid var(--d2-line); border-radius: 5px; padding: 2px 7px; font-size: 10.5px; cursor: pointer; color: var(--d2-text); }
+#view-dashboard2 .d2-side-list button:hover { border-color: var(--d2-cyan-ink); }
+#view-dashboard2 .d2-side-list .v { font-weight: 700; margin-left: 4px; }
+#view-dashboard2 .d2-side-list .v.neg { color: var(--d2-neg); }
+
+/* ── Management Intelligence ── */
+#view-dashboard2 .d2-lenses { display: grid; grid-template-columns: repeat(auto-fill, minmax(215px, 1fr)); gap: 8px; }
+#view-dashboard2 .d2-lens { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 10px; align-items: start; text-align: left; background: var(--d2-surface); border: 1px solid var(--d2-line); border-left: 3px solid var(--d2-line-2); border-radius: 7px; padding: 10px 12px; cursor: pointer; }
+#view-dashboard2 .d2-lens:hover { border-color: var(--d2-line-2); border-left-color: var(--d2-navy); }
+#view-dashboard2 .d2-lens[aria-pressed="true"] { background: var(--d2-cyan-soft); border-color: rgba(0,122,147,0.4); border-left-color: var(--d2-cyan-ink); }
+#view-dashboard2 .d2-lens.zero { opacity: .6; }
+#view-dashboard2 .d2-lens .ln { font-size: 11.5px; font-weight: 700; color: var(--d2-navy); line-height: 1.35; }
+#view-dashboard2 .d2-lens .ld { grid-column: 1 / -1; font-size: 10.5px; color: var(--d2-muted); line-height: 1.45; }
+#view-dashboard2 .d2-lens .lc { font-size: 20px; font-weight: 300; color: var(--d2-navy); line-height: 1; text-align: right; }
+#view-dashboard2 .d2-lens .lp { display: block; font-size: 9.5px; color: var(--d2-muted); margin-top: 3px; }
+#view-dashboard2 .d2-lens-grp { font-size: 9.5px; font-weight: 800; letter-spacing: 1.3px; text-transform: uppercase; color: var(--d2-faint); grid-column: 1 / -1; margin-top: 6px; }
+
+/* ── Table ── */
+#view-dashboard2 .d2-tools { display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-end; margin-bottom: 12px; }
+#view-dashboard2 .d2-field { display: flex; flex-direction: column; gap: 3px; }
+#view-dashboard2 .d2-field span { font-size: 9px; font-weight: 800; letter-spacing: 1.1px; text-transform: uppercase; color: var(--d2-faint); }
+#view-dashboard2 .d2-field select, #view-dashboard2 .d2-field input { font: inherit; font-size: 11.5px; color: var(--d2-text); background: var(--d2-surface); border: 1px solid var(--d2-line-2); border-radius: 6px; padding: 6px 8px; min-width: 0; }
+#view-dashboard2 .d2-field input { width: 210px; }
+#view-dashboard2 .d2-field select { max-width: 190px; }
+#view-dashboard2 .d2-field.on select { border-color: var(--d2-cyan-ink); background: var(--d2-cyan-soft); }
+#view-dashboard2 .d2-tw { overflow-x: auto; border: 1px solid var(--d2-line); border-radius: 8px; }
+#view-dashboard2 table.d2-t { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 11.5px; min-width: 1320px; }
+#view-dashboard2 .d2-t caption { text-align: left; padding: 0 0 8px; font-size: 11px; color: var(--d2-muted); caption-side: top; }
+#view-dashboard2 .d2-t th { position: sticky; top: 0; background: #F7F9FC; font-size: 9.5px; font-weight: 800; letter-spacing: .9px; text-transform: uppercase; color: var(--d2-muted); text-align: left; padding: 0; border-bottom: 1px solid var(--d2-line); white-space: nowrap; vertical-align: bottom; }
+#view-dashboard2 .d2-t th > span, #view-dashboard2 .d2-t th > button { display: block; width: 100%; padding: 9px 10px; text-align: left; background: none; border: 0; font: inherit; letter-spacing: inherit; text-transform: inherit; color: inherit; }
+#view-dashboard2 .d2-t th > button { cursor: pointer; }
+#view-dashboard2 .d2-t th > button:hover { color: var(--d2-navy); }
+#view-dashboard2 .d2-t th > button::after { content: "↕"; margin-left: 5px; opacity: .35; }
+#view-dashboard2 .d2-t th[aria-sort="ascending"] > button::after { content: "↑"; opacity: 1; color: var(--d2-cyan-ink); }
+#view-dashboard2 .d2-t th[aria-sort="descending"] > button::after { content: "↓"; opacity: 1; color: var(--d2-cyan-ink); }
+#view-dashboard2 .d2-t th.num > button, #view-dashboard2 .d2-t th.num > span, #view-dashboard2 .d2-t td.num { text-align: right; }
+#view-dashboard2 .d2-t td { padding: 8px 10px; border-bottom: 1px solid var(--d2-line); vertical-align: middle; white-space: nowrap; }
+#view-dashboard2 .d2-t tbody tr { cursor: pointer; }
+#view-dashboard2 .d2-t tbody tr:hover td { background: #F7FAFD; }
+#view-dashboard2 .d2-t tbody tr:last-child td { border-bottom: 0; }
+#view-dashboard2 .d2-t td:first-child, #view-dashboard2 .d2-t th:first-child { position: sticky; left: 0; z-index: 1; background: var(--d2-surface); box-shadow: 1px 0 0 var(--d2-line); }
+#view-dashboard2 .d2-t th:first-child { z-index: 2; background: #F7F9FC; }
+#view-dashboard2 .d2-t tbody tr:hover td:first-child { background: #F7FAFD; }
+#view-dashboard2 .d2-open { background: none; border: 0; padding: 0; font-weight: 700; color: var(--d2-navy); cursor: pointer; text-align: left; max-width: 260px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: block; }
+#view-dashboard2 .d2-open:hover { color: var(--d2-cyan-ink); text-decoration: underline; }
+#view-dashboard2 .d2-sub { display: block; font-size: 10px; color: var(--d2-faint); margin-top: 1px; max-width: 200px; overflow: hidden; text-overflow: ellipsis; }
+#view-dashboard2 .d2-money { font-weight: 600; }
+#view-dashboard2 .d2-money.neg { color: var(--d2-neg); }
+#view-dashboard2 .d2-cls { font-size: 10px; font-weight: 800; border-radius: 4px; padding: 2px 6px; }
+#view-dashboard2 .d2-cls.aaa { background: rgba(232,0,45,0.1); color: #B0001F; }
+#view-dashboard2 .d2-cls.aa { background: rgba(0,180,216,0.12); color: var(--d2-cyan-ink); }
+#view-dashboard2 .d2-wl { font-weight: 600; }
+#view-dashboard2 .d2-wtag { font-size: 9px; font-weight: 800; letter-spacing: .6px; text-transform: uppercase; color: var(--d2-muted); border: 1px solid var(--d2-line-2); border-radius: 3px; padding: 0 4px; margin-left: 5px; }
+#view-dashboard2 .d2-tfoot { font-size: 10.5px; color: var(--d2-muted); margin-top: 10px; line-height: 1.55; }
+
+/* ── Tooltip ── */
+#view-dashboard2 .d2-tip { position: fixed; z-index: 60; max-width: 340px; background: var(--d2-ink); color: #fff; border-radius: 8px; padding: 11px 13px; font-size: 11px; line-height: 1.5; box-shadow: 0 10px 30px rgba(10,26,56,0.35); pointer-events: none; opacity: 0; transform: translateY(4px); transition: opacity .1s, transform .1s; }
+#view-dashboard2 .d2-tip.show { opacity: 1; transform: none; }
+#view-dashboard2 .d2-tip h4 { font-size: 12.5px; font-weight: 700; margin: 0 0 6px; color: #fff; }
+#view-dashboard2 .d2-tip dl { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 2px 10px; margin: 0; }
+#view-dashboard2 .d2-tip dt { color: rgba(255,255,255,0.55); white-space: nowrap; }
+#view-dashboard2 .d2-tip dd { margin: 0; color: #fff; }
+#view-dashboard2 .d2-tip .muted { color: rgba(255,255,255,0.55); }
+#view-dashboard2 .d2-tip .neg { color: #FF9B91; }
+#view-dashboard2 .d2-tip .hint { margin-top: 7px; padding-top: 6px; border-top: 1px solid rgba(255,255,255,0.14); color: var(--d2-cyan); font-weight: 600; }
+
+/* ── Footer / governance ── */
+#view-dashboard2 .d2-foot { margin: 8px 36px 32px; padding: 18px 20px; background: var(--d2-surface); border: 1px solid var(--d2-line); border-radius: var(--d2-radius); display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 16px 24px; align-items: start; }
+#view-dashboard2 .d2-foot h2 { font-size: 10px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: var(--d2-navy); margin: 0 0 8px; }
+#view-dashboard2 .d2-gov { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 6px 22px; font-size: 10.5px; line-height: 1.55; color: var(--d2-muted); margin: 0; padding: 0; list-style: none; }
+#view-dashboard2 .d2-gov b { color: var(--d2-text); }
+
+/* ── Nav entry ── */
+.nav-item .d2-nav-new { font-size: 8.5px; font-weight: 800; letter-spacing: .8px; color: var(--teal); border: 1px solid rgba(0,180,216,0.45); border-radius: 3px; padding: 0 4px; margin-left: auto; }
+
+/* ── Responsive — keyed to the view's own width (the sidebar may be open, railed or hidden) ── */
+#view-dashboard2 { container-type: inline-size; container-name: d2; }
+@container d2 (max-width: 1120px) {
+  .d2-row-if { grid-template-columns: minmax(0, 1fr) !important; }
+}
+@container d2 (max-width: 960px) {
+  .d2-row-comp { grid-template-columns: minmax(0, 1fr) !important; }
+  .d2-hero-main { grid-template-columns: minmax(0, 1fr) !important; }
+}
+@container d2 (max-width: 620px) {
+  .d2-hero { padding: 18px 16px 20px !important; }
+  .d2-hero h1 { font-size: 23px !important; }
+  .d2-num { padding: 0 8px !important; }
+  .d2-num-l { font-size: 8.5px !important; letter-spacing: 1px !important; }
+  .d2-num-v { font-size: 30px !important; }
+  .d2-num-p { font-size: 10px !important; }
+  .d2-split-leg { flex-direction: column; }
+  .d2-filterbar { padding: 8px 16px !important; }
+  .d2-chips { flex: 1 1 100% !important; order: 5; }
+  .d2-fb-count { margin-left: auto; }
+  .d2-body { padding: 16px 12px 8px !important; }
+  .d2-card { padding: 14px 12px !important; }
+  .d2-svc-top { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .d2-matrix { grid-template-columns: 84px repeat(3, minmax(0, 1fr)) !important; gap: 3px !important; }
+  .d2-matrix .d2-tot, .d2-matrix .d2-mx-tot { display: none !important; }
+  .d2-mx-h { font-size: 8px !important; padding: 4px 2px !important; }
+  .d2-mx-h.ax { font-size: 7.5px !important; }
+  .d2-cell { padding: 6px !important; min-height: 52px !important; }
+  .d2-cell .c { font-size: 17px !important; }
+  .d2-cell .k { font-size: 7.5px !important; }
+  .d2-mx-r { font-size: 10px !important; padding: 2px !important; }
+  .d2-mx-r .d2-st { font-size: 9px; padding: 2px 5px 2px 4px; }
+  .d2-tm { height: 340px !important; }
+  .d2-side { grid-template-columns: minmax(0, 1fr) !important; }
+  .d2-field { flex: 1 1 130px; }
+  .d2-field input { width: 100% !important; }
+  .d2-field select { max-width: none !important; width: 100%; }
+  .d2-foot { margin: 8px 12px 24px !important; grid-template-columns: minmax(0, 1fr) !important; }
+  .d2-ibar { grid-template-columns: minmax(70px, 104px) minmax(0, 1fr) 24px 42px !important; gap: 6px !important; }
+  .d2-denom { white-space: normal !important; }
+  .d2-leg { gap: 6px !important; }
+  .d2-leg-c { font-size: 17px !important; }
+}
+
+/* ── Print ── */
+@media print {
+  #view-dashboard2 { background: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  #view-dashboard2 .d2-filterbar { position: static; }
+  #view-dashboard2 .d2-hero-actions, #view-dashboard2 .d2-tip, #view-dashboard2 .d2-reset, #view-dashboard2 .d2-tools { display: none !important; }
+  #view-dashboard2 .d2-card, #view-dashboard2 .d2-foot { break-inside: avoid; }
+  #view-dashboard2 .d2-row-comp, #view-dashboard2 .d2-row-if { grid-template-columns: minmax(0, 1fr); }
+  #view-dashboard2 .d2-tw { overflow: visible; }
+  #view-dashboard2 table.d2-t { min-width: 0; font-size: 7.5px; }
+  #view-dashboard2 .d2-t td, #view-dashboard2 .d2-t th > span, #view-dashboard2 .d2-t th > button { padding: 3px 4px; white-space: normal; }
+  #view-dashboard2 .d2-t th { position: static; }
+  #view-dashboard2 .d2-t td:first-child, #view-dashboard2 .d2-t th:first-child { position: static; box-shadow: none; }
+  #view-dashboard2 .d2-t tr { break-inside: avoid; }
+}
+</style>
 <script>
 /* AIOS · Sidebar state — applied before first paint so a collapsed rail never flashes open. */
 (function () {
@@ -12367,6 +12720,10 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
     <div class="nav-label">Navigate</div>
     <div class="nav-item active" onclick="showView('view-home', this)">
       <span>⬡</span> Dashboard
+    </div>
+    <div class="nav-item" onclick="showView('view-dashboard2', this)">
+      <span>◇</span> <span style="flex:1;">Dashboard 2.0</span>
+      <span class="d2-nav-new">NEW</span>
     </div>
     <div class="nav-item" onclick="showView('view-network', this)">
       <span>◈</span> Network Intelligence
@@ -15530,6 +15887,92 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
       </div>
     </div>
   </div>
+</div>
+
+<!-- ══ DASHBOARD 2.0 · EXECUTIVE PORTFOLIO INTELLIGENCE (parallel view — the current Dashboard above is unchanged) ══ -->
+<div id="view-dashboard2" class="view" aria-labelledby="d2-title">
+  <header class="d2-hero">
+    <div class="d2-hero-top">
+      <div class="d2-brand">
+        <span class="d2-logo" role="img" aria-label="Akzent"></span>
+        <span class="d2-brand-os">Intelligence OS<br>Dashboard 2.0</span>
+      </div>
+      <div class="d2-hero-actions">
+        <span class="d2-tag">Parallel view · evaluation</span>
+        <button type="button" class="d2-hbtn" data-d2-go="view-home">Open current Dashboard</button>
+        <button type="button" class="d2-hbtn" data-d2-print="1">Print</button>
+      </div>
+    </div>
+    <div class="d2-hero-main">
+      <div>
+        <div class="d2-eyebrow"><span class="d2-arrow" aria-hidden="true"></span>Executive Portfolio Intelligence</div>
+        <h1 id="d2-title">What does our <b>commercial portfolio</b> look like?</h1>
+        <p class="d2-hero-sub" id="d2-hero-sub"></p>
+      </div>
+      <div id="d2-scale"></div>
+    </div>
+  </header>
+
+  <div class="d2-filterbar" role="region" aria-label="Active portfolio filters">
+    <span class="d2-fb-label">Filters</span>
+    <div class="d2-chips" id="d2-chips" aria-live="polite"></div>
+    <span class="d2-fb-count" id="d2-fb-count" aria-live="polite"></span>
+    <button type="button" class="d2-reset" id="d2-reset" data-d2-reset="1">Reset Filters</button>
+  </div>
+
+  <div class="d2-body">
+    <div class="d2-row d2-row-comp">
+      <section class="d2-card" id="d2-tenure" aria-labelledby="d2-h-tenure"></section>
+      <section class="d2-card" id="d2-services" aria-labelledby="d2-h-services"></section>
+    </div>
+
+    <div class="d2-row d2-row-if">
+      <section class="d2-card" id="d2-industry" aria-labelledby="d2-h-industry"></section>
+      <section class="d2-card" id="d2-finance" aria-labelledby="d2-h-finance"></section>
+    </div>
+
+    <section class="d2-card" id="d2-lenses" aria-labelledby="d2-h-lenses"></section>
+
+    <section class="d2-card" aria-labelledby="d2-h-table">
+      <div class="d2-card-head">
+        <div>
+          <div class="d2-step"><span class="d2-arrow" aria-hidden="true"></span>06 · Accounts</div>
+          <h2 id="d2-h-table">Account Portfolio</h2>
+          <div class="d2-q">Which accounts sit behind each pattern? Select any account to open its Account Intelligence.</div>
+        </div>
+      </div>
+      <div class="d2-tools" role="search" aria-label="Filter the account portfolio">
+        <label class="d2-field"><span>Search</span><input type="search" id="d2-q" placeholder="Account name…" autocomplete="off" spellcheck="false"></label>
+        <label class="d2-field"><span>Relationship</span><select data-d2-sel="rel"></select></label>
+        <label class="d2-field"><span>Client Tenure</span><select data-d2-sel="ten"></select></label>
+        <label class="d2-field"><span>Industry</span><select data-d2-sel="ind"></select></label>
+        <label class="d2-field"><span>Akzent Logistics</span><select data-d2-sel="log"></select></label>
+        <label class="d2-field"><span>Arcatek Customs</span><select data-d2-sel="cus"></select></label>
+        <label class="d2-field"><span>Classification</span><select data-d2-sel="cls"></select></label>
+        <label class="d2-field"><span>ILM Potential</span><select data-d2-sel="ilm"></select></label>
+        <label class="d2-field"><span>Analysis Date</span><select data-d2-sel="fresh"></select></label>
+      </div>
+      <div class="d2-tw" id="d2-tw"></div>
+      <p class="d2-tfoot" id="d2-tfoot"></p>
+    </section>
+  </div>
+
+  <footer class="d2-foot" aria-labelledby="d2-h-gov">
+    <div><span class="d2-logo-light" role="img" aria-label="Akzent"></span></div>
+    <div>
+      <h2 id="d2-h-gov">AIOS governance · how to read Dashboard 2.0</h2>
+      <ul class="d2-gov">
+        <li><b>Presentation only.</b> Dashboard 2.0 consumes authorized AIOS intelligence already stored in each account. It calculates, estimates and classifies nothing; counts and percentages are display aggregations with the denominator always shown.</li>
+        <li><b>Relationship</b> (CLIENT / LEAD) comes from the same AIOS relationship registry as the current Dashboard, including owner mandates.</li>
+        <li><b>Service Relationships</b> are evaluated independently. Values are taken as stated in each account; where an account states none, Akzent Logistics is Confirmed Client only under the authorized AIOS rule “Captured Logistics &gt; 0”. Missing data is Not Validated — never Confirmed Not Captured.</li>
+        <li><b>Client Tenure</b> — Recurring: confirmed Captured Business in 2025 or earlier. New Client: explicitly no Captured Business in 2025 and confirmed Captured Business in 2026. Otherwise Not Validated. PJ activity and missing files never establish tenure. Client Since is shown only where an account states it.</li>
+        <li><b>Revenue and Profit</b> are internal Captured Logistics Business figures exactly as each account reports them for 2025 or 2026 YTD. PJ value is never Revenue; nothing is estimated, annualized, summed across periods or extrapolated to the PJ Visible Universe. YTD cut-off dates differ by account. Customs profitability is not reported.</li>
+        <li><b>Wallets</b> — Logistics Shared Wallet and Customs Shared Wallet are separate AIOS calculations, shown with their stated period and status. They are not ranked, and Not Calculable is never 0%. Visible Uncaptured Reference is not available, addressable or winnable business.</li>
+      </ul>
+    </div>
+  </footer>
+
+  <div class="d2-tip" id="d2-tip" role="tooltip" aria-hidden="true"></div>
 </div>
 
 <!-- ══ LIEBHERR VIEW — AIOS CLIENT · 8-chapter seller report (Executive · Network · Core Routes · Lane Intelligence · Customs · Historical · Commercial · Discovery) ══ -->
@@ -89485,6 +89928,7 @@ const ACCOUNTS = [
   { id:'view-jyrsa', name:'JYRSA PPE', sub:'JYRSA PPE S.A. de C.V. · Jyrsa Ppe Sa De Cv · Target Account · LEAD · AA Priority Target · Operational Complexity Medium-High · Panjiva Visible Logistics Universe · Personal Protective Equipment Industrial Safety Products · hearing protection earmuffs plugs · protective eyewear safety glasses · safety apparel · textile PPE lumbar supports · plastic safety industrial accessories · Ocean-Led Asia Sourcing · Manzanillo-Concentrated Inbound · Central American Export Corridor · 135 Current YTD Shipments · Imports 110 81.5% Jan 2 to Jul 29 2026 · Exports 25 18.5% Jan 9 to Jul 8 2026 · comparable Jan 1–Jul 29 actual vs actual 92 to 135 +46.7% · Imports 68 to 110 +61.8% · Exports 24 to 25 +4.2% · Import share +7.6 pp · Import Maritime 99 90.0% Truck 9 8.2% Air 2 1.8% · Export Truck 25 100.0% · 16 Import Core Routes 81.8% of 29 visible routes · 7 Export Core Routes 84.0% of 10 visible routes · EXTREME ROUTE CONCENTRATION does not apply · Top 3 Imports 40.0% Top 5 48.2% · Top 3 Exports 48.0% Top 5 68.0% · 2025 baseline 177 Shipments 137 Imports 40 Exports · 16 Import Core Routes 80.3% · 12 Export Core Routes 80.0% · visible CIF 2026 YTD Imports USD 2.548M Exports USD 0.500M total USD 3.048M · 2025 Imports USD 2.938M Exports USD 0.913M total USD 3.851M · gross weight 2026 YTD 735,479.91 kg imports 39,915.08 kg exports · 2025 741,279.98 kg imports 79,744.94 kg exports · Hangzhou Top Safe 20 18.2% · Shanghai H&amp;L Industry 14 12.7% · Ansafe Industrial Safety Products 10 9.1% · Nung Lai 8 7.3% · Radians Inc. 7 6.4% · Suzhou Rhz Textile Technology · Fujian Rds Foreign Trade · Guangzhou Junyue Foam Earplug · Shanghai East Best International · Dikamar Ind Proteccao Calcado · Ltld Esd · Pat Safety · Suzhou Weebitex · The Best Time Fuzhou · Sondel Sociedad Anonima 5 · Items Industriales 4 · Tecnofijaciones De Costa Rica 3 · Afalpi Medica Sociedad Anonima 2 · Equipos Comerciales Y Servicios Electricos 2 · Moreno Macay 2 · Manzanillo Colima Port 96 87.3% of imports · Nuevo Laredo Tamaulipas Border 7 6.4% · Aeropuerto Internacional General Mariano Escobedo Airport 3 · Veracruz Port 3 · AICM Airport 1 · Ciudad Hidalgo Chiapas Border 21 84.0% of exports · Nuevo Laredo Border 4 16.0% · Altamira 2025 exports · MTY Airport 2025 imports · China 90 81.8% · Taiwan 9 8.2% · United States 7 6.4% · Portugal 4 3.6% · Costa Rica 10 40.0% · Nicaragua 5 20.0% · Guatemala 4 16.0% · United States 4 16.0% · El Salvador 2 8.0% · Dominican Republic Honduras Bolivia 2025 · Customs Agent 1742 96 87.3% · 3614 · 3043 · 3403 · 3685 · 3950 21 84.0% · 3323 · 3923 · Final Import Export · HS 3926901100 hearing protection · 3926909999 plastic industrial safety articles · 6307909999 safety textile lumbar supports · 3926209900 protective apparel · 9004909900 safety glasses · HS counts non-additive · Radians Inc. two Panjiva address renderings not merged · Safety Co. Nicaragua S.A. Costa Rica destination conflict · Afalpi Sociedad Anonima vs Afalpi Medica Sociedad Anonima · Ferreteria Ochoa two separate records · data quality entity resolution hypothesis · Address not available in Panjiva · Ocean · Customs · Cross-Border · LATAM · Operational Complexity Partner · Multimodal Coordination Partner · Customs &amp; Visibility Partner · ILM / Control Tower Partner', rel:'LEAD', cls:'AA', clsPill:'aa' },
 ];
 const MODULES = [
+  { id:'view-dashboard2',  name:'Dashboard 2.0',        sub:'Executive Portfolio Intelligence · management view' },
   { id:'view-network',     name:'Network Intelligence', sub:'Cross-account analysis · Lane overlap' },
   { id:'view-methodology', name:'Methodology',          sub:'AIOS intelligence workflow'            },
   { id:'view-scoring',     name:'Scoring Model',        sub:'AAA / AA / A classification framework' },
@@ -90129,6 +90573,816 @@ document.addEventListener('keydown', function(e) {
 });
 
 /* ── END BRAHM CHART (SVG, no external deps) ── */
+</script>
+
+<script>
+/* ═══════════════════════════════════════════════════════════════
+   DASHBOARD 2.0 · EXECUTIVE PORTFOLIO INTELLIGENCE
+   Presentation / deployment only. A parallel view: the current
+   Dashboard (view-home), its metrics and its DOM are untouched.
+
+   D2_FACTS holds authorized values transcribed from each account's
+   own AIOS report (19-Sep-2026 audit). Every value keeps its verbatim
+   source sentence in `q`. Nothing is derived: missing = absent key.
+     ad   Analysis Date as stamped in the account
+     pj   headline PJ Visible Shipments { v, p: period as labelled }
+     ilm  ILM Potential as stated
+     log / cus  Service Relationship { s: CC|CNC|NV, b: 'stated'|'rule' }
+                'rule' = authorized AIOS rule "Captured Logistics > 0
+                ⇒ Akzent Logistics Confirmed Client"
+     c25 / c26  explicit Captured Business evidence for <=2025 / 2026
+     fin  { y26|y25: { rev, pro, mar } } internal Captured Business,
+          { v, w: window, l: label, s: service scope, cur, q }
+     finNote  why an account's figures are not account-level
+     lw / cw  Logistics / Customs Shared Wallet as reported
+   Relationship, Industry and Classification are read live from the
+   existing ACCOUNTS / INDUSTRY_BY_ID registries (single source).
+═══════════════════════════════════════════════════════════════ */
+var D2_FACTS = {"view-woco":{"ad":"19-Sep-2026","pj":{"v":1244,"p":"2026 YTD through Jul 31"},"log":{"s":"CC","b":"stated","q":"Service Relationship · Akzent Logistics Confirmed Client 1 captured Logistics Shipment supplied in the account package"},"cus":{"s":"CC","b":"stated","q":"Service Relationship · Arcatek Customs Confirmed Client Arcatek Patent 3468 on 73 Current YTD PJ Shipments"},"c26":{"v":true,"q":"Captured Logistics Shipments 1 · June 2026 · Import"},"finNote":"Captured Logistics Profit 416.11 is one June 2026 Shipment and belongs to a different legal entity (Woco Automotive Polymer); the account states it is not an account-level result.","lw":{"v":"Not Calculable","st":"Not Calculable","p":"2026 YTD through Jul 31","q":"Logistics Shared Wallet Not Calculable Captured Logistics Shipments 1","all":[{"v":"Not Calculable","st":"Not Calculable","p":"2026 YTD through Jul 31","sc":"Total"}]},"cw":{"v":"5.87%","st":null,"p":"2026 YTD through Jul 31","q":"Customs Shared Wallet · Current YTD 5.87% 73 / 1,244 Shipments on Arcatek Patent 3468","all":[{"v":"5.87%","st":null,"p":"2026 YTD through Jul 31","sc":"Total"},{"v":"8.47%","st":null,"p":"2026 YTD through Jul 31","sc":"Imports"},{"v":"3.24%","st":null,"p":"2026 YTD through Jul 31","sc":"Exports"},{"v":"8.22%","st":"Comparable","p":"Jan–Jul 2025","sc":"Total"},{"v":"8.60%","st":null,"p":"2025 Full Year","sc":"Total"}]}},"view-borgwarner":{"ad":"18-Sep-2026","pj":{"v":1240,"p":"Current YTD 2026 through 31-Jul"},"log":{"s":"NV","b":"stated","q":"Account Intelligence · CLIENT · Arcatek Customs Confirmed Client · Akzent Logistics Not Validated"},"cus":{"s":"CC","b":"stated","q":"Arcatek Customs is Confirmed Client because Arcatek Patent 3468 is visible in PJ."},"lw":{"v":"Not Calculable","st":"Not Calculable","p":"Current YTD through 31-Jul-2026","q":"Logistics Shared Wallet Not Calculable Captured Logistics Shipments Not Available","all":[{"v":"Not Calculable","st":"Not Calculable","p":"Current YTD through 31-Jul-2026","sc":"Total"}]},"cw":{"v":"34.5%","st":null,"p":"Current YTD through 31-Jul-2026","q":"Customs Shared Wallet · Current YTD 34.5% 428 / 1,240 Shipments on Arcatek Patent 3468","all":[{"v":"34.5%","st":null,"p":"Current YTD through 31-Jul-2026","sc":"Total"},{"v":"36.6%","st":null,"p":"Current YTD through 31-Jul-2026","sc":"Imports"},{"v":"29.3%","st":null,"p":"Current YTD through 31-Jul-2026","sc":"Exports"},{"v":"29.7%","st":null,"p":"2025 Full Year","sc":"Total"}]}},"view-laerdal":{"pj":{"v":544,"p":"Current YTD 2026 (Jan 2 – Jul 31, 2026)"},"ilm":"VERY HIGH","log":{"s":"CC","b":"stated","q":"Arcatek Customs Confirmed Client Akzent Logistics Confirmed Client"},"cus":{"s":"CC","b":"stated","q":"Relationship Status CLIENT Service Relationship Arcatek Customs Confirmed Client"},"c25":{"v":true,"q":"Metric 2025 2026 YTD Signal Revenue $65,372 $51,927"},"c26":{"v":true,"q":"Profit $16,509 $20,723 ↑ Higher margin 2026 Shipments 67 10 Jan–Jun 2026"},"fin":{"y26":{"rev":{"v":51927,"w":null,"l":"Revenue","s":"Logistics","cur":"$","q":"Metric 2025 2026 YTD Signal Revenue $65,372 $51,927"},"pro":{"v":20723,"w":null,"l":"Profit","s":"Logistics","cur":"$","q":"Profit $16,509 $20,723 ↑ Higher margin"}},"y25":{"rev":{"v":65372,"w":null,"l":"Revenue","s":"Logistics","cur":"$","q":"Metric 2025 2026 YTD Signal Revenue $65,372 $51,927"},"pro":{"v":16509,"w":null,"l":"Profit","s":"Logistics","cur":"$","q":"Profit $16,509 $20,723 ↑ Higher margin"}}}},"view-techniplas":{"pj":{"v":1024,"p":"total visible"},"ilm":"Muy Alto","log":{"s":"CC","b":"rule","q":"Akzent Activity — 2025 vs 2026 YTD Metric 2025 2026 YTD Signal Shipments 60 24 YTD in progress"},"c25":{"v":true,"q":"Akzent Activity — 2025 vs 2026 YTD Metric 2025 2026 YTD Signal Shipments 60 24 YTD in progress"},"c26":{"v":true,"q":"Akzent Activity — 2025 vs 2026 YTD Metric 2025 2026 YTD Signal Shipments 60 24 YTD in progress"},"fin":{"y26":{"rev":{"v":154388.61,"w":null,"l":"Revenue","s":"Logistics","cur":"$","q":"Total 60 $451,382.30 $100,989.54 24 $154,388.61 $38,351.71"},"pro":{"v":38351.71,"w":null,"l":"Gross Profit","s":"Logistics","cur":"$","q":"Total 60 $451,382.30 $100,989.54 24 $154,388.61 $38,351.71"},"mar":{"v":24.8,"w":null,"l":"Margin","s":"Logistics","cur":"","q":"Margin 22.4% 24.8% ↑ Higher margin"}},"y25":{"rev":{"v":451382.3,"w":null,"l":"Revenue","s":"Logistics","cur":"$","q":"Total 60 $451,382.30 $100,989.54 24 $154,388.61 $38,351.71"},"pro":{"v":100989.54,"w":null,"l":"Gross Profit","s":"Logistics","cur":"$","q":"Total 60 $451,382.30 $100,989.54 24 $154,388.61 $38,351.71"},"mar":{"v":22.4,"w":null,"l":"Margin","s":"Logistics","cur":"","q":"Margin 22.4% 24.8% ↑ Higher margin"}}}},"view-mekra":{"pj":{"v":3004,"p":"total visible"},"ilm":"Muy Alto","log":{"s":"CC","b":"rule","q":"Akzent Captured 7 6 imports · 1 export"},"c25":{"v":false,"q":"Signal: 2025 had no captured Akzent Shipments; 2026 YTD is a 7-Shipment truck entry point"},"c26":{"v":true,"q":"Signal: 2025 had no captured Akzent Shipments; 2026 YTD is a 7-Shipment truck entry point"},"fin":{"y26":{"rev":{"v":8061.77,"w":null,"l":"Revenue","s":"Logistics","cur":"$","q":"Total 0 $0 $0 N/A 7 $8,061.77 $1,282.86 15.9%"},"pro":{"v":1282.86,"w":null,"l":"Gross Profit","s":"Logistics","cur":"$","q":"Total 0 $0 $0 N/A 7 $8,061.77 $1,282.86 15.9%"},"mar":{"v":15.9,"w":null,"l":"Margin","s":"Logistics","cur":"$","q":"Total 0 $0 $0 N/A 7 $8,061.77 $1,282.86 15.9%"}},"y25":{"rev":{"v":0,"w":null,"l":"Revenue","s":"Logistics","cur":"$","q":"Total 0 $0 $0 N/A 7 $8,061.77 $1,282.86 15.9%"},"pro":{"v":0,"w":null,"l":"Gross Profit","s":"Logistics","cur":"$","q":"Total 0 $0 $0 N/A 7 $8,061.77 $1,282.86 15.9%"}}}},"view-capital":{"pj":{"v":502,"p":"total visible"},"ilm":"Muy Alto","log":{"s":"CC","b":"rule","q":"Akzent Captured 26 22 imports · 1 export · 3 other"},"c25":{"v":true,"q":"Metric 2025 2026 YTD Signal Shipments 17 3 ⚠ Sharp drop"},"c26":{"v":true,"q":"Metric 2025 2026 YTD Signal Shipments 17 3 ⚠ Sharp drop"},"fin":{"y26":{"rev":{"v":1455.97,"w":null,"l":"Revenue","s":"Logistics","cur":"$","q":"Total 17 $17,668.80 $5,335.63 30.2% 3 $1,455.97 $490.41 33.7%"},"pro":{"v":490.41,"w":null,"l":"Gross Profit","s":"Logistics","cur":"$","q":"Total 17 $17,668.80 $5,335.63 30.2% 3 $1,455.97 $490.41 33.7%"},"mar":{"v":33.7,"w":null,"l":"Margin","s":"Logistics","cur":"$","q":"Total 17 $17,668.80 $5,335.63 30.2% 3 $1,455.97 $490.41 33.7%"}},"y25":{"rev":{"v":17668.8,"w":null,"l":"Revenue","s":"Logistics","cur":"$","q":"Total 17 $17,668.80 $5,335.63 30.2% 3 $1,455.97 $490.41 33.7%"},"pro":{"v":5335.63,"w":null,"l":"Gross Profit","s":"Logistics","cur":"$","q":"Total 17 $17,668.80 $5,335.63 30.2% 3 $1,455.97 $490.41 33.7%"},"mar":{"v":30.2,"w":null,"l":"Margin","s":"Logistics","cur":"$","q":"Total 17 $17,668.80 $5,335.63 30.2% 3 $1,455.97 $490.41 33.7%"}}}},"view-metalistik":{"pj":{"v":91,"p":"total visible"},"ilm":"Alto","log":{"s":"CC","b":"rule","q":"Akzent Captured 27 21 imports · 6 exports"},"c25":{"v":true,"q":"Metric 2025 2026 YTD Signal Shipments 11 3 YTD in progress"},"c26":{"v":true,"q":"Metric 2025 2026 YTD Signal Shipments 11 3 YTD in progress"},"fin":{"y26":{"rev":{"v":6695.01,"w":null,"l":"Revenue","s":"Logistics","cur":"$","q":"Total 11 $13,011.45 $3,530.48 27.1% 3 $6,695.01 $2,289.95 34.2%"},"pro":{"v":2289.95,"w":null,"l":"Gross Profit","s":"Logistics","cur":"$","q":"Total 11 $13,011.45 $3,530.48 27.1% 3 $6,695.01 $2,289.95 34.2%"},"mar":{"v":34.2,"w":null,"l":"Margin","s":"Logistics","cur":"$","q":"Total 11 $13,011.45 $3,530.48 27.1% 3 $6,695.01 $2,289.95 34.2%"}},"y25":{"rev":{"v":13011.45,"w":null,"l":"Revenue","s":"Logistics","cur":"$","q":"Total 11 $13,011.45 $3,530.48 27.1% 3 $6,695.01 $2,289.95 34.2%"},"pro":{"v":3530.48,"w":null,"l":"Gross Profit","s":"Logistics","cur":"$","q":"Total 11 $13,011.45 $3,530.48 27.1% 3 $6,695.01 $2,289.95 34.2%"},"mar":{"v":27.1,"w":null,"l":"Margin","s":"Logistics","cur":"$","q":"Total 11 $13,011.45 $3,530.48 27.1% 3 $6,695.01 $2,289.95 34.2%"}}}},"view-bombas":{"pj":{"v":53,"p":"total visible (imports only; export file not loaded)"},"ilm":"Alto","log":{"s":"CC","b":"rule","q":"Akzent Captured 3 3 air import Shipments"},"c25":{"v":true,"q":"Historical note: 2024 also had 1 Shipment — USD 540 revenue, USD 235 gross profit (Aéreo, Impo)."},"c26":{"v":true,"q":"Margin 12.4% 14.7% ↑ Margin lift Shipments 1 1 Steady"},"fin":{"y26":{"rev":{"v":1518,"w":null,"l":"Revenue","s":"Logistics","cur":"$","q":"Revenue $1,134 $1,518 ↑ Growth"},"pro":{"v":224,"w":null,"l":"Gross Profit","s":"Logistics","cur":"$","q":"Gross Profit $140 $224 ↑ Higher profit"},"mar":{"v":14.7,"w":null,"l":"Margin","s":"Logistics","cur":"","q":"Margin 12.4% 14.7% ↑ Margin lift"}},"y25":{"rev":{"v":1134,"w":null,"l":"Revenue","s":"Logistics","cur":"$","q":"Revenue $1,134 $1,518 ↑ Growth"},"pro":{"v":140,"w":null,"l":"Gross Profit","s":"Logistics","cur":"$","q":"Gross Profit $140 $224 ↑ Higher profit"},"mar":{"v":12.4,"w":null,"l":"Margin","s":"Logistics","cur":"","q":"Margin 12.4% 14.7% ↑ Margin lift"}}}},"view-siete-leguas":{"ad":"19-Sep-2026","pj":{"v":330,"p":"Current YTD 2026 (Imports through 2026-07-30 · Exports through 2026-07-31)"},"log":{"s":"NV","b":"stated","q":"Service Relationship · Akzent Logistics Not Validated No authorized Akzent Logistics Captured Business dataset supplied"},"cus":{"s":"CC","b":"stated","q":"Service Relationship · Arcatek Customs Confirmed Client Confirmed commercial relationship"},"lw":{"v":"Not Calculable","st":"Not Calculable","p":"Current YTD","q":"Captured Logistics Shipments Not Available Logistics Shared Wallet Not Calculable Logistics Wallet Alignment Not Calculable","all":[{"v":"Not Calculable","st":"Not Calculable","p":"Current YTD","sc":"Total"}]},"cw":{"v":"22.7%","st":null,"p":"Current YTD","q":"Customs Shared Wallet · Current YTD 22.7% 75 Arcatek-Patent Shipments / 330 supported visible customs Shipments","all":[{"v":"22.7%","st":null,"p":"Current YTD","sc":"Total"},{"v":"16.7%","st":null,"p":"Current YTD","sc":"Imports"},{"v":"38.5%","st":null,"p":"Current YTD","sc":"Exports"},{"v":"20.0%","st":null,"p":"FY2025","sc":"Total"}]}},"view-woco-aps":{"ad":"19-Sep-2026","pj":{"v":487,"p":"Current YTD · 2026 YTD through Jul 31"},"log":{"s":"CC","b":"stated","q":"Service Relationship · Akzent Logistics Confirmed Client 1 captured Logistics Shipment supplied · June 2026"},"cus":{"s":"CC","b":"stated","q":"Service Relationship · Arcatek Customs Confirmed Client Arcatek Patent 3468 on 250 current YTD PJ Shipments"},"c26":{"v":true,"q":"Akzent Logistics Confirmed Client 1 captured Logistics Shipment supplied · June 2026"},"finNote":"Captured Logistics Profit 416.11 is a single June 2026 Shipment; the account states it is not an account-level result.","lw":{"v":"Not Calculable","st":"Not Calculable","p":"2026 YTD through Jul 31","q":"Logistics Shared Wallet: Not Calculable — the internal source does not establish a complete numerator for the PJ Jan–Jul 2026 period.","all":[{"v":"Not Calculable","st":"Not Calculable","p":"2026 YTD through Jul 31","sc":"Total"}]},"cw":{"v":"51.33%","st":null,"p":"2026 YTD through Jul 31","q":"2026 YTD · through Jul 31 250 / 487 = 51.33% 59 / 126 = 46.83% 191 / 361 = 52.91%","all":[{"v":"51.33%","st":null,"p":"2026 YTD through Jul 31","sc":"Total"},{"v":"46.83%","st":null,"p":"2026 YTD through Jul 31","sc":"Imports"},{"v":"52.91%","st":null,"p":"2026 YTD through Jul 31","sc":"Exports"},{"v":"58.84%","st":null,"p":"Jan–Jul 2025 (comparable period)","sc":"Total"},{"v":"58.87%","st":null,"p":"2025 Full Year","sc":"Total"}]}},"view-pipsa":{"pj":{"v":2770,"p":"Current YTD 2026-01-02 → 2026-07-31"},"log":{"s":"CC","b":"stated","q":"Service Relationship Arcatek Customs Confirmed Client Akzent Logistics Confirmed Client AIOS Classification AAA"},"cus":{"s":"CC","b":"stated","q":"Relationship Status CLIENT Service Relationship Arcatek Customs Confirmed Client"},"c26":{"v":true,"q":"Akzent Profit overlay · captured freight · Jan–Aug 2026 Captured Shipments 2 Gross Profit $341.17"},"fin":{"y26":{"pro":{"v":341.17,"w":"Jan–Aug 2026","l":"Gross Profit","s":"Logistics","cur":"$","q":"Profit · Akzent Jan–Aug 2026 $341.17 GP $170.59 / Shipment · 2 captured Shipments Revenue not provided"}}},"lw":{"v":"0.07%","st":"Provisional","p":"Akzent Jan–Aug 2026 vs PJ Current YTD 2026-01-02 → 2026-07-31","q":"Logistics Shared Wallet Provisional · periods not fully aligned 0.07% Provisional captured / visible reference 2 Akzent Shipments vs 2,770 Panjiva visible Shipments","all":[{"v":"0.07%","st":"Provisional","p":"Akzent Jan–Aug 2026 vs PJ Current YTD 2026-01-02 → 2026-07-31","sc":"Total"},{"v":"0.00%","st":"Provisional","p":"Akzent Jan–Aug 2026 vs PJ Current YTD 2026-01-02 → 2026-07-31","sc":"Imports"},{"v":"0.19%","st":"Provisional","p":"Akzent Jan–Aug 2026 vs PJ Current YTD 2026-01-02 → 2026-07-31","sc":"Exports"}]},"cw":{"v":"90.8%","st":null,"p":"Current YTD 2026 · through Jul 31","q":"Customs Shared Wallet 90.8% 2,516 Shipments using Akzent patents 3468 + 1930 vs 2,770 visible Shipments","all":[{"v":"90.8%","st":null,"p":"Current YTD 2026 · through Jul 31","sc":"Total"},{"v":"95.9%","st":null,"p":"Current YTD 2026 · through Jul 31","sc":"Imports"},{"v":"82.3%","st":null,"p":"Current YTD 2026 · through Jul 31","sc":"Exports"},{"v":"85.4%","st":null,"p":"Previous Full Calendar Year 2025","sc":"Total"}]}},"view-saen":{"pj":{"v":42,"p":"Import shipments · 2025–2026 YTD"},"log":{"s":"CC","b":"rule","q":"Akzent Captured 13 2025 + 2026 YTD shipments Total Coverage 31.0%"},"c25":{"v":true,"q":"Metric 2025 2026 YTD Signal Shipments 9 4 YTD in progress Revenue $6,405.65 $2,606.47"},"c26":{"v":true,"q":"Metric 2025 2026 YTD Signal Shipments 9 4 YTD in progress Revenue $6,405.65 $2,606.47"},"fin":{"y26":{"rev":{"v":2606.47,"w":null,"l":"Revenue","s":"Logistics","cur":"$","q":"Revenue $6,405.65 $2,606.47 Partial year Gross Profit $3,265.74 $1,515.14"},"pro":{"v":1515.14,"w":null,"l":"Gross Profit","s":"Logistics","cur":"$","q":"Gross Profit $3,265.74 $1,515.14 Partial year Margin 51.0% 58.1%"},"mar":{"v":58.1,"w":null,"l":"Margin","s":"Logistics","cur":"$","q":"Gross Profit $3,265.74 $1,515.14 Partial year Margin 51.0% 58.1%"}},"y25":{"rev":{"v":6405.65,"w":null,"l":"Revenue","s":"Logistics","cur":"$","q":"Revenue $6,405.65 $2,606.47 Partial year Gross Profit $3,265.74 $1,515.14"},"pro":{"v":3265.74,"w":null,"l":"Gross Profit","s":"Logistics","cur":"$","q":"Gross Profit $3,265.74 $1,515.14 Partial year Margin 51.0% 58.1%"},"mar":{"v":51.0,"w":null,"l":"Margin","s":"Logistics","cur":"$","q":"Gross Profit $3,265.74 $1,515.14 Partial year Margin 51.0% 58.1%"}}}},"view-eurowater":{"pj":{"v":26,"p":"Total visible Shipments"},"log":{"s":"CC","b":"rule","q":"Akzent Captured 15 15 imports · 0 exports Total Coverage 57.69%"},"c25":{"v":true,"q":"Metric 2025 2026 YTD Signal Shipments 6 6 Stable Revenue $22,210.44 $19,036.14"},"c26":{"v":true,"q":"Metric 2025 2026 YTD Signal Shipments 6 6 Stable Revenue $22,210.44 $19,036.14"},"fin":{"y26":{"rev":{"v":19036.14,"w":null,"l":"Revenue","s":"Logistics","cur":"$","q":"Total 6 $22,210.44 $4,949.21 22.3% 6 $19,036.14 $6,647.15 34.9%"},"pro":{"v":6647.15,"w":null,"l":"Gross Profit","s":"Logistics","cur":"$","q":"Total 6 $22,210.44 $4,949.21 22.3% 6 $19,036.14 $6,647.15 34.9%"},"mar":{"v":34.9,"w":null,"l":"Margin","s":"Logistics","cur":"$","q":"Total 6 $22,210.44 $4,949.21 22.3% 6 $19,036.14 $6,647.15 34.9%"}},"y25":{"rev":{"v":22210.44,"w":null,"l":"Revenue","s":"Logistics","cur":"$","q":"Total 6 $22,210.44 $4,949.21 22.3% 6 $19,036.14 $6,647.15 34.9%"},"pro":{"v":4949.21,"w":null,"l":"Gross Profit","s":"Logistics","cur":"$","q":"Total 6 $22,210.44 $4,949.21 22.3% 6 $19,036.14 $6,647.15 34.9%"},"mar":{"v":22.3,"w":null,"l":"Margin","s":"Logistics","cur":"$","q":"Total 6 $22,210.44 $4,949.21 22.3% 6 $19,036.14 $6,647.15 34.9%"}}}},"view-equipo":{"pj":{"v":60,"p":"Total visible Shipments"},"log":{"s":"CC","b":"rule","q":"Akzent Captured 18 18 imports · 0 exports Total Coverage 30.00%"},"c25":{"v":true,"q":"Metric 2025 2026 YTD Signal Shipments 12 1 ⚠ Sharp drop Revenue $11,731.63 $335.00"},"c26":{"v":true,"q":"Metric 2025 2026 YTD Signal Shipments 12 1 ⚠ Sharp drop Revenue $11,731.63 $335.00"},"fin":{"y26":{"rev":{"v":335.0,"w":null,"l":"Revenue","s":"Logistics","cur":"$","q":"Total 12 $11,731.63 $4,689.77 40.0% 1 $335.00 $132.61 39.6%"},"pro":{"v":132.61,"w":null,"l":"Gross Profit","s":"Logistics","cur":"$","q":"Total 12 $11,731.63 $4,689.77 40.0% 1 $335.00 $132.61 39.6%"},"mar":{"v":39.6,"w":null,"l":"Margin","s":"Logistics","cur":"$","q":"Total 12 $11,731.63 $4,689.77 40.0% 1 $335.00 $132.61 39.6%"}},"y25":{"rev":{"v":11731.63,"w":null,"l":"Revenue","s":"Logistics","cur":"$","q":"Total 12 $11,731.63 $4,689.77 40.0% 1 $335.00 $132.61 39.6%"},"pro":{"v":4689.77,"w":null,"l":"Gross Profit","s":"Logistics","cur":"$","q":"Total 12 $11,731.63 $4,689.77 40.0% 1 $335.00 $132.61 39.6%"},"mar":{"v":40.0,"w":null,"l":"Margin","s":"Logistics","cur":"$","q":"Total 12 $11,731.63 $4,689.77 40.0% 1 $335.00 $132.61 39.6%"}}}},"view-plasticos":{"pj":{"v":8,"p":"Visible import Shipments"},"log":{"s":"CC","b":"rule","q":"Akzent Captured 1 1 export terrestrial Shipment"},"c25":{"v":false,"q":"Margin N/A 0.7% ⚠ Margin floor Shipments 0 1 Spot / proof"},"c26":{"v":true,"q":"A single 2026 export terrestrial Shipment ($2,030 revenue · $15 gross profit · 0.7% margin)"},"fin":{"y26":{"rev":{"v":2030,"w":null,"l":"Revenue","s":"Logistics","cur":"$","q":"Metric 2025 2026 YTD Signal Revenue $0 $2,030 Initial capture Gross Profit $0 $15"},"pro":{"v":15,"w":null,"l":"Gross Profit","s":"Logistics","cur":"$","q":"Metric 2025 2026 YTD Signal Revenue $0 $2,030 Initial capture Gross Profit $0 $15"},"mar":{"v":0.7,"w":null,"l":"Margin","s":"Logistics","cur":"$","q":"Gross Profit $0 $15 ⚠ Very thin Margin N/A 0.7%"}},"y25":{"rev":{"v":0,"w":null,"l":"Revenue","s":"Logistics","cur":"$","q":"Metric 2025 2026 YTD Signal Revenue $0 $2,030 Initial capture Gross Profit $0 $15"},"pro":{"v":0,"w":null,"l":"Gross Profit","s":"Logistics","cur":"$","q":"Metric 2025 2026 YTD Signal Revenue $0 $2,030 Initial capture Gross Profit $0 $15"}}}},"view-aceros-titan":{"pj":{"v":261,"p":"Total visible PJ Shipments analyzed (2025 full year 227 + 2026 YTD 34)"},"ilm":"High"},"view-kitchen":{"ad":"18-Sep-2026","pj":{"v":1458,"p":"Current YTD through 31-Jul-2026"},"log":{"s":"NV","b":"stated","q":"Arcatek Customs Confirmed Client · Akzent Logistics Not Validated · Analysis Date 18-Sep-2026"},"cus":{"s":"CC","b":"stated","q":"Arcatek Customs is Confirmed Client because Arcatek Patent 3468 is visible in PJ."},"lw":{"v":"Not Calculable","st":"Not Calculable","p":"Current YTD","q":"Logistics Shared Wallet Not Calculable Captured Logistics Shipments Not Available Captured Logistics Profit Not Available","all":[{"v":"Not Calculable","st":"Not Calculable","p":"Current YTD","sc":"Total"}]},"cw":{"v":"50.1%","st":null,"p":"Current YTD","q":"Customs Shared Wallet · Current YTD 50.1% 731 / 1,458 Shipments on Arcatek Patent 3468","all":[{"v":"50.1%","st":null,"p":"Current YTD","sc":"Total"},{"v":"61.7%","st":null,"p":"Current YTD","sc":"Exports"},{"v":"19.7%","st":null,"p":"Current YTD","sc":"Imports"},{"v":"45.6%","st":null,"p":"2025 Full Year","sc":"Total"},{"v":"46.9%","st":null,"p":"Jan–Jul 2025","sc":"Total"}]}},"view-liebherr":{"pj":{"v":275,"p":"2026 YTD through July 31"},"log":{"s":"CNC","b":"stated","q":"CLIENT — Customs Only Akzent Fact Arcatek Customs Confirmed Client Akzent Logistics Confirmed Not Captured"},"cus":{"s":"CC","b":"stated","q":"CLIENT — Customs Only Akzent Fact Arcatek Customs Confirmed Client"},"c26":{"v":false,"q":"Captured Logistics Business Captured Freight Shipments 0 · Logistics Shared Wallet 0.0% · Visible Uncaptured Reference 275"},"lw":{"v":"0.0%","st":null,"p":"2026 YTD","q":"Logistics Shared Wallet 0.0% 0 / 275 = 0.0% Imports 0 / 199 0.0% Exports 0 / 76 0.0%","all":[{"v":"0.0%","st":null,"p":"2026 YTD","sc":"Total"},{"v":"0.0%","st":null,"p":"2026 YTD","sc":"Imports"},{"v":"0.0%","st":null,"p":"2026 YTD","sc":"Exports"}]},"cw":{"v":"25.5%","st":null,"p":"2026 YTD","q":"Customs Shared Wallet · Panjiva Fact + Akzent Patent Ownership + AIOS Calculation Current · 2026 YTD 25.5% 70 / 275","all":[{"v":"25.5%","st":null,"p":"2026 YTD","sc":"Total"},{"v":"15.1%","st":null,"p":"2026 YTD","sc":"Imports"},{"v":"52.6%","st":null,"p":"2026 YTD","sc":"Exports"},{"v":"19.0%","st":null,"p":"2025 Full Year","sc":"Total"},{"v":"7.5%","st":null,"p":"2025 Full Year","sc":"Imports"},{"v":"50.9%","st":null,"p":"2025 Full Year","sc":"Exports"}]}},"view-haldex":{"ad":"18-Sep-2026","pj":{"v":416,"p":"Current YTD (Imports through 31-Jul-2026 · Exports through 30-Jul-2026)"},"log":{"s":"NV","b":"stated","q":"Arcatek Customs Confirmed Client · Akzent Logistics Not Validated · Analysis Date 18-Sep-2026"},"cus":{"s":"CC","b":"stated","q":"Arcatek Customs is a confirmed service relationship; Akzent Logistics freight capture remains Not Validated"},"lw":{"v":"Not Calculable","st":"Not Calculable","p":"Current YTD","q":"Logistics Shared Wallet Not Calculable Captured Logistics Shipments Not Available Captured Logistics Profit Not Available","all":[{"v":"Not Calculable","st":"Not Calculable","p":"Current YTD","sc":"Total"}]},"cw":{"v":"76.4%","st":null,"p":"Current YTD","q":"Customs Shared Wallet · Current YTD 76.4% 318 / 416 Shipments on Arcatek-owned Patents 3468 + 1930","all":[{"v":"76.4%","st":null,"p":"Current YTD","sc":"Total"},{"v":"85.4%","st":null,"p":"Current YTD","sc":"Imports"},{"v":"56.6%","st":null,"p":"Current YTD","sc":"Exports"},{"v":"72.7%","st":null,"p":"2025 Full Year","sc":"Total"},{"v":"70.7%","st":null,"p":"Equivalent Jan–Jul 2025","sc":"Total"}]}},"view-lincoln-electric":{"ad":"19-Sep-2026","pj":{"v":1114,"p":"Current YTD Jan 1 – Jul 31, 2026"},"log":{"s":"CC","b":"stated","q":"Service Relationship · Akzent Logistics Confirmed Client 6 authorized Akzent Captured Logistics Shipments"},"cus":{"s":"CC","b":"stated","q":"Service Relationship · Arcatek Customs Confirmed Client Arcatek Patent 3468 on 426 Current YTD PJ Shipments"},"c26":{"v":true,"q":"Akzent Captured Logistics · Akzent Fact 6 supplied Captured Logistics Shipments Jul 28 → Aug 5, 2026"},"fin":{"y26":{"pro":{"v":896.29,"w":"Jul 28 → Aug 5, 2026","l":"Captured Logistics Profit","s":"Logistics","cur":"","q":"Captured Logistics Profit 896.29 Profit · Imports / Exports 446.29 / 450.00"}}},"lw":{"v":"Not Calculable","st":"Not Calculable","p":"Current YTD","q":"Logistics Shared Wallet Not Calculable Logistics Wallet Alignment Not Calculable Logistics Shared Wallet is Not Calculable from currently aligned source universes","all":[{"v":"Not Calculable","st":"Not Calculable","p":"Current YTD","sc":"Total"}]},"cw":{"v":"38.2%","st":null,"p":"2026 YTD · Jan 1 – Jul 31","q":"Customs Shared Wallet · Current YTD 38.2% 426 / 1,114 Shipments on Arcatek Patent 3468","all":[{"v":"38.2%","st":null,"p":"2026 YTD · Jan 1 – Jul 31","sc":"Total"},{"v":"44.6%","st":null,"p":"2026 YTD · Jan 1 – Jul 31","sc":"Imports"},{"v":"30.0%","st":null,"p":"2026 YTD · Jan 1 – Jul 31","sc":"Exports"},{"v":"41.0%","st":null,"p":"FY2025","sc":"Total"},{"v":"45.4%","st":null,"p":"FY2025","sc":"Imports"},{"v":"34.2%","st":null,"p":"FY2025","sc":"Exports"}]}},"view-phinia":{"ad":"19-Sep-2026","pj":{"v":107,"p":"Current YTD 2026 through 21-Jul-2026"},"log":{"s":"NV","b":"stated","q":"No authorized PHINIA internal Captured Business dataset was supplied, so Akzent Logistics remains Not Validated."},"cus":{"s":"CC","b":"stated","q":"Arcatek Patent 3468 visible on 17 current PJ Shipments → Arcatek Customs Confirmed Client"},"lw":{"v":"Not Calculable","st":"Not Calculable","p":"Current YTD","q":"Logistics Shared Wallet Not Calculable Captured Logistics Shipments Not Available Logistics Wallet Alignment Not Calculable","all":[{"v":"Not Calculable","st":"Not Calculable","p":"Current YTD","sc":"Total"}]},"cw":{"v":"15.9%","st":null,"p":"Current YTD","q":"Customs Shared Wallet · Current YTD 15.9% 17 / 107 Shipments on Arcatek Patent 3468","all":[{"v":"15.9%","st":null,"p":"Current YTD","sc":"Total"},{"v":"73.9%","st":null,"p":"Current YTD","sc":"Imports"},{"v":"0.0%","st":null,"p":"Current YTD","sc":"Exports"},{"v":"11.1%","st":null,"p":"2025 Full Year","sc":"Total"},{"v":"64.1%","st":null,"p":"2025 Full Year","sc":"Imports"},{"v":"0.0%","st":null,"p":"2025 Full Year","sc":"Exports"}]}},"view-sanfer-salud-animal":{"pj":{"v":227,"p":"total visible (2025 FY + 2026 YTD a mayo 2026)"},"ilm":"Very High"},"view-skx":{"pj":{"v":1609,"p":"total visible"},"ilm":"Muy Alto","log":{"s":"CC","b":"rule","q":"Akzent captured 7 import Shipments in 2026 YTD (6 Terrestre · 1 Marítimo) with $1,996.54 GP at 34.5% margin."},"c25":{"v":false,"q":"Shipments 0 7 ⚠ Very low penetration"},"c26":{"v":true,"q":"Akzent captured 7 import Shipments in 2026 YTD (6 Terrestre · 1 Marítimo) with $1,996.54 GP at 34.5% margin."},"fin":{"y26":{"rev":{"v":5780,"w":null,"l":"Revenue","s":"Logistics","cur":"$","q":"Metric 2025 2026 YTD Signal Revenue $0 $5,780 Initial capture in 2026"},"pro":{"v":1996.54,"w":null,"l":"Profit","s":"Logistics","cur":"$","q":"Profit $0 $1,996.54 Healthy early GP"},"mar":{"v":34.5,"w":null,"l":"Margin","s":"Logistics","cur":"","q":"Margin 0.0% 34.5% Strong early margin"}},"y25":{"rev":{"v":0,"w":null,"l":"Revenue","s":"Logistics","cur":"$","q":"Metric 2025 2026 YTD Signal Revenue $0 $5,780 Initial capture in 2026"},"pro":{"v":0,"w":null,"l":"Profit","s":"Logistics","cur":"$","q":"Profit $0 $1,996.54 Healthy early GP"},"mar":{"v":0.0,"w":null,"l":"Margin","s":"Logistics","cur":"","q":"Margin 0.0% 34.5% Strong early margin"}}}},"view-invevni":{"pj":{"v":988,"p":"total visible (2025 + 2026 YTD, imports only)"},"ilm":"High","lw":{"v":"Not Calculable","st":"Not Calculable","p":"total visible","q":"Akzent Captured Universe Not provided Coverage Not calculable Wallet Not calculable Penetration Not calculable","all":[{"v":"Not Calculable","st":"Not Calculable","p":"total visible","sc":"Total"}]}},"view-busman":{"ad":"19-Sep-2026","pj":{"v":16,"p":"Current YTD (Imports through Jun 20, Exports through Jul 13, 2026)"},"log":{"s":"CC","b":"stated","q":"Service Relationship · Akzent Logistics Confirmed Client"},"cus":{"s":"NV","b":"stated","q":"Service Relationship · Arcatek Customs Not Validated"},"c25":{"v":true,"q":"2025 Full Year · 5 Captured Shipments · all Imports"},"c26":{"v":true,"q":"2026 supplied YTD · through Jul 23 · 4 Captured Shipments"},"fin":{"y26":{"pro":{"v":3956.35,"w":"Through Jul 23, 2026","l":"Captured Logistics Profit","s":"Logistics","cur":"$","q":"4 Shipments · 2026 YTD Through Jul 23, 2026 · Profit $3,956.35"}},"y25":{"pro":{"v":3718.0,"w":"2025 Full Year","l":"Captured Logistics Profit","s":"Logistics","cur":"$","q":"2025 Full Year 5 · $3,718.00 · $743.60 / Shipment"}}},"lw":{"v":"25.0%","st":"Provisional","p":"Current YTD","q":"Current YTD 25.0% Provisional Reference 4 / 16 raw reference","all":[{"v":"13.2%","st":"Exact","p":"2025 Full Year","sc":"Total"},{"v":"19.2%","st":"Exact","p":"2025 Full Year","sc":"Imports"},{"v":"25.0%","st":"Provisional","p":"Current YTD","sc":"Total"},{"v":"44.4%","st":"Provisional","p":"Current YTD","sc":"Imports"}]},"cw":{"v":"25.0%","st":null,"p":"Current YTD","q":"Current YTD Customs Shared Wallet 25.0% 4 Arcatek Patent / 16 supported Shipments","all":[{"v":"25.0%","st":null,"p":"Current YTD","sc":"Total"},{"v":"44.4%","st":null,"p":"Current YTD","sc":"Imports"},{"v":"0.0%","st":null,"p":"Current YTD","sc":"Exports"},{"v":"42.1%","st":null,"p":"2025 Full Year","sc":"Total"},{"v":"61.5%","st":null,"p":"2025 Full Year","sc":"Imports"},{"v":"0.0%","st":null,"p":"2025 Full Year","sc":"Exports"}]}},"view-doga":{"ad":"19-Sep-2026","pj":{"v":79,"p":"Current YTD Jan 1 – Jul 29, 2026"},"log":{"s":"CC","b":"stated","q":"Service Relationship · Akzent Logistics Confirmed Client"},"cus":{"s":"NV","b":"stated","q":"Service Relationship · Arcatek Customs Not Validated"},"c25":{"v":true,"q":"2025 Full Calendar Year · historical reference 23 Captured Shipments (22 Imports · 1 Export)"},"c26":{"v":true,"q":"Jan 1 – Aug 26, 2026: 37 Captured Shipments · $43,687.35 Profit final"},"fin":{"y26":{"pro":{"v":40136.96,"w":"Jan 1 – Jul 29, 2026","l":"Captured Profit final","s":"Logistics","cur":"$","q":"Captured Profit final 2025 $6,908.89 2026 $40,136.96"}},"y25":{"pro":{"v":17959.72,"w":"2025 Full Calendar Year","l":"Profit final","s":"Logistics","cur":"$","q":"Air Export 1 · $17,959.72 Profit final · $780.86 / Shipment"}}},"lw":{"v":"Not Calculable","st":"Not Calculable","p":"2026 equivalent (Jan 1 – Jul 29)","q":"Total · 2026 equivalent Not Calculable","all":[{"v":"Not Calculable","st":"Not Calculable","p":"2026 equivalent (Jan 1 – Jul 29)","sc":"Total"},{"v":"89.2%","st":"Provisional","p":"2026 equivalent (Jan 1 – Jul 29)","sc":"Imports"},{"v":"66.7%","st":"Provisional","p":"2025 equivalent (Jan 1 – Jul 29)","sc":"Imports"},{"v":"Not Calculable","st":"Not Calculable","p":"2026 equivalent (Jan 1 – Jul 29)","sc":"Exports"}]},"cw":{"v":"49.4%","st":null,"p":"Current YTD Jan 1 – Jul 29, 2026","q":"Customs Shared Wallet 49.4% 39 Arcatek Patent / 79 supported PJ Shipments","all":[{"v":"49.4%","st":null,"p":"Current YTD Jan 1 – Jul 29, 2026","sc":"Total"},{"v":"16.2%","st":null,"p":"Current YTD Jan 1 – Jul 29, 2026","sc":"Imports"},{"v":"78.6%","st":null,"p":"Current YTD Jan 1 – Jul 29, 2026","sc":"Exports"}]}},"view-cemm":{"ad":"19-Sep-2026","pj":{"v":2664,"p":"Current YTD Jan 1 – Jul 31, 2026"},"log":{"s":"NV","b":"stated","q":"Service Relationship · Akzent Logistics Not Validated"},"cus":{"s":"CC","b":"stated","q":"Service Relationship · Arcatek Customs Confirmed Client"},"lw":{"v":"Not Calculable","st":"Not Calculable","p":"Current YTD Jan 1 – Jul 31, 2026","q":"Logistics Shared Wallet Not Calculable Captured Logistics Shipments Not Available","all":[{"v":"Not Calculable","st":"Not Calculable","p":"Current YTD Jan 1 – Jul 31, 2026","sc":"Total"}]},"cw":{"v":"11.5%","st":null,"p":"Current YTD Jan 1 – Jul 31, 2026","q":"Customs Shared Wallet · Current YTD 11.5% 307 Arcatek-Patent Shipments / 2,664 supported PJ Shipments","all":[{"v":"11.5%","st":null,"p":"Current YTD Jan 1 – Jul 31, 2026","sc":"Total"},{"v":"11.8%","st":null,"p":"Current YTD Jan 1 – Jul 31, 2026","sc":"Imports"},{"v":"11.1%","st":null,"p":"Current YTD Jan 1 – Jul 31, 2026","sc":"Exports"},{"v":"13.7%","st":null,"p":"Jan 1 – Jul 31, 2025 (equivalent-period reference)","sc":"Total"}]}},"view-enerpres":{"ad":"19-Sep-2026","pj":{"v":386,"p":"Current YTD Jan 1 – Jul 29, 2026"},"log":{"s":"NV","b":"stated","q":"Service Relationship · Akzent Logistics Not Validated"},"cus":{"s":"CC","b":"stated","q":"Service Relationship · Arcatek Customs Confirmed Client Confirmed commercial relationship"},"lw":{"v":"Not Calculable","st":"Not Calculable","p":"Current YTD Jan 1 – Jul 29, 2026","q":"Logistics Shared Wallet Not Calculable Logistics Wallet Alignment Not Calculable","all":[{"v":"Not Calculable","st":"Not Calculable","p":"Current YTD Jan 1 – Jul 29, 2026","sc":"Total"}]},"cw":{"v":"85.2%","st":null,"p":"Current YTD Jan 1 – Jul 29, 2026","q":"Customs Shared Wallet · Current YTD 85.2% 329 Arcatek-Patent Shipments / 386 supported visible customs Shipments","all":[{"v":"85.2%","st":null,"p":"Current YTD Jan 1 – Jul 29, 2026","sc":"Total"},{"v":"97.2%","st":null,"p":"2025 Full Year","sc":"Total"}]}},"view-holdin":{"pj":{"v":188,"p":"total visible (2025 Full Year 142 + 2026 YTD through 2026-05-30 46)"},"ilm":"High","lw":{"v":"Not Calculable","st":"Not Calculable","p":"2025 + 2026 YTD","q":"Wallet Penetration Not calculable Requires Akzent shipment data","all":[{"v":"Not Calculable","st":"Not Calculable","p":"2025 + 2026 YTD","sc":"Total"}]}},"view-grupo-essex":{"ad":"19-Sep-2026","pj":{"v":22,"p":"Current YTD through July 27, 2026"},"log":{"s":"NV","b":"stated","q":"Service Relationship · Akzent Logistics Not Validated No authorized Akzent Captured Freight Shipment dataset available"},"cus":{"s":"CC","b":"stated","q":"Service Relationship · Arcatek Customs Confirmed Client Confirmed commercial relationship"},"lw":{"v":"Not Calculable","st":"Not Calculable","p":"Current YTD through July 27, 2026","q":"Akzent Logistics · Logistics Shared Wallet Not Calculable","all":[{"v":"Not Calculable","st":"Not Calculable","p":"Current YTD through July 27, 2026","sc":"Total"}]},"cw":{"v":"36.4%","st":null,"p":"Current YTD Jan 1 – Jul 27, 2026","q":"Customs Shared Wallet · Current YTD 36.4% 8 Arcatek-patent Shipments / 22 supported PJ Visible Shipments","all":[{"v":"36.4%","st":null,"p":"Current YTD Jan 1 – Jul 27, 2026","sc":"Total"},{"v":"88.9%","st":null,"p":"Current YTD Jan 1 – Jul 27, 2026","sc":"Imports"},{"v":"0.0%","st":null,"p":"Current YTD Jan 1 – Jul 27, 2026","sc":"Exports"},{"v":"34.9%","st":null,"p":"2025 Full Calendar Year","sc":"Total"}]}},"view-brahm":{"pj":{"v":680,"p":"total visible (2025 462 + 2026 YTD 218)"},"ilm":"Very High","log":{"s":"CC","b":"rule","q":"Akzent Captured Universe 15 Shipments"},"c25":{"v":true,"q":"Captured — 2025 Akzent Shipments 11 Imports 9 · Exports 2"},"c26":{"v":true,"q":"Captured — 2026 YTD Akzent Shipments 4 Imports 4 · Exports 0"},"fin":{"y26":{"rev":{"v":41005,"w":"2026 YTD","l":"2026 YTD Revenue","s":"Logistics","cur":"$","q":"2026 YTD Revenue USD 41,005 Current period"},"pro":{"v":7985,"w":"2026 YTD","l":"2026 YTD Gross Profit","s":"Logistics","cur":"$","q":"2026 YTD Gross Profit USD 7,985 Current period"},"mar":{"v":19.5,"w":"2026 YTD","l":"2026 YTD Margin","s":"Logistics","cur":"","q":"2026 YTD Margin 19.5% Healthy on a smaller base"}},"y25":{"rev":{"v":16824,"w":"2025","l":"Revenue","s":"Logistics","cur":"$","q":"Revenue USD 16,824 Gross Profit USD -143,896"},"pro":{"v":-143896,"w":"2025","l":"Gross Profit","s":"Logistics","cur":"$","q":"Revenue USD 16,824 Gross Profit USD -143,896"},"mar":{"v":-855.3,"w":"2025","l":"Margin","s":"Logistics","cur":"","q":"Margin -855.3% Driven by export maritime loss"}}}},"view-delmonte":{"pj":{"v":1121,"p":"total visible (period not stated)"},"ilm":"Very High","log":{"s":"CC","b":"rule","q":"Akzent already captures 80 Shipments with USD 337,043.79 revenue"},"c25":{"v":true,"q":"2024 54 $222,904 $37,126 16.7% 2025 16 $69,540 $13,310 19.1%"},"c26":{"v":true,"q":"2026 YTD 10 $44,600 $5,940 13.3%"},"fin":{"y26":{"rev":{"v":44600,"w":"2026 YTD","l":"Revenue","s":"Logistics","cur":"$","q":"2026 YTD 10 $44,600 $5,940 13.3%"},"pro":{"v":5940,"w":"2026 YTD","l":"GP","s":"Logistics","cur":"$","q":"2026 YTD 10 $44,600 $5,940 13.3%"},"mar":{"v":13.3,"w":"2026 YTD","l":"Margin","s":"Logistics","cur":"$","q":"2026 YTD 10 $44,600 $5,940 13.3%"}},"y25":{"rev":{"v":69540,"w":"2025","l":"Revenue","s":"Logistics","cur":"$","q":"2025 16 $69,540 $13,310 19.1%"},"pro":{"v":13310,"w":"2025","l":"GP","s":"Logistics","cur":"$","q":"2025 16 $69,540 $13,310 19.1%"},"mar":{"v":19.1,"w":"2025","l":"Margin","s":"Logistics","cur":"$","q":"2025 16 $69,540 $13,310 19.1%"}}}},"view-vistamex":{"pj":{"v":425,"p":"total visible (2025 Full Year 317 + 2026 YTD Jan 6 – May 27, 2026 108)"},"ilm":"Very High","lw":{"v":"Not Calculable","st":"Not Calculable","p":"2025 + 2026 YTD","q":"Wallet Penetration No calculable sin Akzent shipment data","all":[{"v":"Not Calculable","st":"Not Calculable","p":"2025 + 2026 YTD","sc":"Total"}]}},"view-johnson":{"pj":{"v":14990,"p":"2025 Full Year + 2026 YTD through May 30, 2026 — total analyzed (imports loaded 10,000 of 11,732 indicated + 4,990 exports)"},"ilm":"Very High"},"view-daltile":{"pj":{"v":4803,"p":"2025 + 2026 YTD visible universe"},"ilm":"Very High"},"view-smp":{"pj":{"v":1109,"p":"recorded imports only (no export figure stated; period not stated)"}},"view-saintgobain":{"pj":{"v":14990,"p":"analyzed imports + exports (10,000 of 18,338 visible imports analyzed + 4,990 exports); period not stated"}},"view-panelrey":{"pj":{"v":7140,"p":"total visible — FY2025 + 2026 YTD (through May 30, 2026), PJ Imports + Exports"},"ilm":"HIGH"},"view-alfagomma":{"pj":{"v":389,"p":"total visible — Jan 2025 – May 2026, imports + exports"},"ilm":"VERY HIGH"},"view-bendix":{"pj":{"v":321,"p":"2026 YTD (2025 Full Year: 1,047 reported separately)"},"ilm":"Very High"},"view-palmex":{"ilm":"MUY ALTO"},"view-star":{"pj":{"v":948,"p":"total visible — Jan 2025 – May 2026, imports + exports"},"ilm":"HIGH"},"view-termolita":{"pj":{"v":1060,"p":"2025 Full Year + 2026 YTD (through May 30, 2026) — exports only (unique Bill of Lading records); imports not provided"},"ilm":"High"},"view-vamasa":{"pj":{"v":214,"p":"2025 + 2026 YTD — imports only; no PJ exports file provided"},"ilm":"High"},"view-inx":{"pj":{"v":92,"p":"2026 YTD (2025 Full Year: 258 reported separately)"},"ilm":"HIGH"},"view-lodi":{"pj":{"v":352,"p":"total visible — 2025 + 2026 YTD"},"ilm":"HIGH"},"view-organizacion-industrial-vega":{"pj":{"v":59,"p":"2026 YTD through May 27, 2026 (2025 Full Year: 120 reported separately)"},"ilm":"HIGH"},"view-wbtm":{"pj":{"v":629,"p":"2026 YTD through late May 2026 (2025 Full Year: 1,870 reported separately)"},"ilm":"VERY HIGH"},"view-cinsa":{"pj":{"v":319,"p":"2026 YTD through May 2026 (2025: 1,689 reported separately)"},"ilm":"VERY HIGH"},"view-smr":{"pj":{"v":543,"p":"2026 YTD through May 29, 2026 (2025: 1,643 reported separately)"},"ilm":"VERY HIGH"},"view-ludvig-svensson":{"pj":{"v":16,"p":"Current YTD — 2026 (2025 Full Year: 33 reported separately)"},"ilm":"MEDIUM-HIGH"},"view-marquardt":{"pj":{"v":2725,"p":"2026 YTD through May 29, 2026 (2025 Full Year: 5,978 reported separately)"},"ilm":"Very High"},"view-rassini":{"pj":{"v":2209,"p":"2026 YTD as of June 30, 2026 (2025: 6,886 reported separately)"},"ilm":"AAA"},"view-fabrica-mermeladas":{"pj":{"v":117,"p":"total visible — PJ Imports + Exports · 2025 + 2026 YTD"},"ilm":"High"},"view-se-bordnetze":{"pj":{"v":303,"p":"total visible — January 2025 through June 2026, PJ Imports + Exports"},"ilm":"HIGH"},"view-sumitomo-hardmetal":{"pj":{"v":1427,"p":"total visible — 2025 + 2026 YTD"},"ilm":"Alto"},"view-tecnoglobal-ph7":{"pj":{"v":90,"p":"Current Year-to-Date — 2026 YTD (2025: 157 reported separately)"},"ilm":"Medium-High"},"view-veritiv":{"pj":{"v":1925,"p":"Current YTD — 2026 through June 30, 2026 (2025: 4,143 reported separately)"},"ilm":"HIGH"},"view-bio-pappel":{"pj":{"v":8839,"p":"2026 YTD through June 30, 2026 — analyzed; imports based on partial file (10,000 of 24,664 records)"},"ilm":"VERY HIGH"},"view-metalicas-titan":{"pj":{"v":28,"p":"2025 + 2026 YTD — exports only; no PJ imports file provided"},"ilm":"MEDIUM-HIGH"},"view-mckinley":{"pj":{"v":2319,"p":"2025 only — imports only; exports not provided, 2026 YTD not available"},"ilm":"Medium-High"},"view-grupo-sanfer":{"pj":{"v":301,"p":"2026 YTD (primary basis; 2025: 641 reported separately)"},"ilm":"High"},"view-yofc":{"pj":{"v":183,"p":"2025 + 2026 YTD — imports only; no PJ exports file provided"},"ilm":"Alto"},"view-hirotec":{"pj":{"v":2549,"p":"total visible — 2025 + 2026 YTD (through June 30, 2026)"},"ilm":"AAA"},"view-sisflex":{"pj":{"v":450,"p":"2026 YTD through June 29, 2026 (2025: 797 reported separately)"}},"view-gomez-cuetara":{"pj":{"v":252,"p":"2026 YTD (2025: 563 reported separately)"},"ilm":"Alto"},"view-owens-corning":{"pj":{"v":715,"p":"2026 YTD through June 30, 2026"},"ilm":"AAA"},"view-suspensys":{"pj":{"v":6,"p":"2026 YTD through August 19, 2026"},"ilm":"MEDIUM-HIGH"},"view-pollmann":{"pj":{"v":105,"p":"Current YTD 2026 through June 2026"},"ilm":"Very High"},"view-magna-powertrain":{"pj":{"v":3775,"p":"2026 YTD through 2026-06-30"},"ilm":"AAA"},"view-philipmorris":{"pj":{"v":1205,"p":"Current YTD 2026 through 2026-06-30"},"ilm":"Very High"},"view-bitron":{"pj":{"v":2499,"p":"2026 YTD"},"ilm":"AAA"},"view-chiquita":{"pj":{"v":97,"p":"2026 YTD through June 2026"},"ilm":"MEDIUM-HIGH"},"view-crown-envases":{"pj":{"v":363,"p":"2026 YTD through June 2026"},"ilm":"HIGH"},"view-worldtradefoods":{"pj":{"v":15,"p":"2026 YTD through June 26, 2026 (PJ Mexico Imports only; 0 exports)"},"ilm":"Medium-High"},"view-helvex":{"pj":{"v":376,"p":"2026 YTD through June 30, 2026"}},"view-fronterra":{"pj":{"v":642,"p":"2026 YTD (PJ Mexico Exports only)"},"ilm":"Medium-High"},"view-skf":{"pj":{"v":2166,"p":"Current YTD 2026-01-01 → 2026-07-31"},"ilm":"VERY HIGH"},"view-flex-americas":{"pj":{"v":2262,"p":"Current YTD Jan 1 – Jun 30, 2026"},"ilm":"VERY HIGH"},"view-accudyn":{"pj":{"v":584,"p":"Current YTD Jan 5 – Jul 30, 2026"}},"view-autlan":{"pj":{"v":361,"p":"Current YTD 01-Jan through 31-Jul-2026"},"ilm":"VERY HIGH"},"view-productora-papel":{"pj":{"v":2898,"p":"Current YTD January 1 – July 31, 2026"},"ilm":"HIGH"},"view-tbc-mexico":{"pj":{"v":2896,"p":"Current YTD 2026-01-02 → 2026-07-31"},"ilm":"HIGH"},"view-velozzetti":{"pj":{"v":60,"p":"Current YTD 2026-01-05 → 2026-07-30 (imports only; Export PJ data not provided)"},"ilm":"HIGH"},"view-diken":{"pj":{"v":60,"p":"Current YTD 2026 through July 29, 2026"}},"view-ternium":{"pj":{"v":11254,"p":"Current YTD 2026 through July 31, 2026"}},"view-cuprum":{"pj":{"v":598,"p":"Current YTD 2026-01-01 → 2026-07-31"},"ilm":"HIGH"},"view-jiangsu-beiren":{"pj":{"v":32,"p":"Current YTD 2026 (Imports through July 27 · Exports through June 9)"}},"view-seojin":{"pj":{"v":19,"p":"Current YTD 2026 Jan 7 – Jul 4 (Mexico Imports only; Exports not provided)"},"ilm":"High"},"view-uflex-woven-bags":{"pj":{"v":100,"p":"Current YTD 01-Jan through 31-Jul-2026"},"ilm":"HIGH"},"view-kus":{"pj":{"v":640,"p":"Current YTD 02-Jan through 31-Jul-2026"},"ilm":"HIGH"},"view-lankwitzer":{"pj":{"v":128,"p":"Current YTD 01-Jan through 28-Jul-2026"},"ilm":"HIGH"},"view-alurem":{"pj":{"v":21,"p":"Current YTD 2026-01-02 to 2026-06-22 (imports only; Exports not available in supplied PJ file)"},"ilm":"MEDIUM-HIGH"},"view-victaulic":{"pj":{"v":453,"p":"Current YTD 2026-01-01 → 2026-07-31"},"ilm":"VERY HIGH"},"view-lisi":{"pj":{"v":581,"p":"Current YTD 2026-01-03 → 2026-07-31"},"ilm":"VERY HIGH"},"view-tenneco":{"pj":{"v":788,"p":"Current YTD 2026-01-01 → 2026-07-31"}},"view-porcelana":{"pj":{"v":315,"p":"Current YTD 2026-01-01 → 2026-07-29"}},"view-austin-bacis":{"pj":{"v":399,"p":"Current YTD 2026-01-01 → 2026-07-30 (Mexico Imports only; Exports not available)"}},"view-jyrsa":{"pj":{"v":135,"p":"Current YTD 2026 (Imports Jan 2 – Jul 29 · Exports Jan 9 – Jul 8)"},"ilm":"HIGH"}};
+
+(function () {
+  'use strict';
+
+  var VIEW_ID = 'view-dashboard2';
+  var STATUS = {
+    CC:  { label: 'Confirmed Client',       cls: 'cc'  },
+    CNC: { label: 'Confirmed Not Captured', cls: 'cnc' },
+    NV:  { label: 'Not Validated',          cls: 'nv'  }
+  };
+  var STATUS_ORDER = ['CC', 'CNC', 'NV'];
+  var TENURE = {
+    REC: { label: 'Recurring',     cls: 'rec', sw: 't-rec', desc: 'Confirmed Captured Business in 2025 or earlier' },
+    NEW: { label: 'New Client',    cls: 'new', sw: 't-new', desc: 'No Captured Business in 2025 · confirmed Captured Business in 2026' },
+    NV:  { label: 'Not Validated', cls: 'nv',  sw: 't-nv',  desc: 'Authorized information does not establish the historical condition' }
+  };
+  var TENURE_ORDER = ['REC', 'NEW', 'NV'];
+  var IND_LABEL = { 'Auto': 'Automotive' };           /* display wording only */
+  var IND_NA = 'Industry Not Available';
+  /* Spelling / language variants of the same stated level (no re-rating). */
+  var ILM_NORM = { 'very high': 'Very High', 'muy alto': 'Very High', 'high': 'High', 'alto': 'High',
+                   'medium-high': 'Medium-High', 'medio-alto': 'Medium-High', 'aaa': 'AAA' };
+  var ILM_ORDER = ['Very High', 'High', 'Medium-High', 'AAA'];
+  var CLS_ORDER = ['AAA', 'AA+', 'AA', 'A'];
+  var PERIODS = { y26: '2026 YTD', y25: '2025' };
+  var METRICS = { pro: 'Profit', rev: 'Revenue' };
+  var TILE_COLORS = ['#0D2B5E', '#1B4F96', '#00738C', '#2F5E93', '#1F4775', '#0B6275', '#3A5A91', '#23406E', '#155A7A', '#2A4F86'];
+
+  var S = null;
+  var ROWS = [], BY_ID = {}, CLIENTS = [], LEADS = [];
+  var ready = false, tmTimer = 0;
+  var root, tipEl, tipFor = null;
+
+  function defaults() {
+    return { rel: 'all', ten: null, ind: null, log: null, cus: null, cls: null, ilm: null, fresh: null,
+             lens: null, q: '', metric: 'pro', period: 'y26', sort: { k: 'name', d: 1 } };
+  }
+
+  /* ── helpers ── */
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function decode(s) { var t = document.createElement('textarea'); t.innerHTML = String(s); return t.value; }
+  function fold(s) { return String(s).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); }
+  function pct(n, d) {
+    if (!d) return '—';
+    var p = n / d * 100;
+    return (p > 0 && p < 1 ? p.toFixed(1) : Math.round(p * 10) / 10 % 1 === 0 ? Math.round(p) : p.toFixed(1)) + '%';
+  }
+  var MON = { jan: 0, feb: 1, mar: 2, apr: 3, may: 4, jun: 5, jul: 6, aug: 7, sep: 8, oct: 9, nov: 10, dec: 11 };
+  function parseAd(s) {
+    var m = /^(\d{1,2})-([A-Za-z]{3})-(\d{4})$/.exec(String(s || ''));
+    return m && MON[m[2].toLowerCase()] != null ? new Date(+m[3], MON[m[2].toLowerCase()], +m[1]).getTime() : null;
+  }
+  function plural(n, one, many) { return n + ' ' + (n === 1 ? one : (many || one + 's')); }
+  function money(x, compact) {
+    if (!x) return '';
+    var v = x.v, sign = v < 0 ? '−' : '', a = Math.abs(v), cur = x.cur || '', s;
+    if (compact) {
+      s = a >= 1e6 ? (a / 1e6).toFixed(1) + 'M' : a >= 1e4 ? Math.round(a / 1e3) + 'K' :
+          a >= 1e3 ? (a / 1e3).toFixed(1) + 'K' : String(Math.round(a));
+    } else {
+      s = a.toLocaleString('en-US', { minimumFractionDigits: a % 1 ? 2 : 0, maximumFractionDigits: 2 });
+    }
+    return sign + cur + s;
+  }
+  function fin(r, period, metric) {
+    var p = r.f.fin && r.f.fin[period];
+    return (p && p[metric]) || null;
+  }
+  function hasAnyFin(r) {
+    var f = r.f.fin;
+    return !!(f && ((f.y26 && (f.y26.pro || f.y26.rev)) || (f.y25 && (f.y25.pro || f.y25.rev))));
+  }
+  function hasNegativeProfit(r) {
+    return ['y26', 'y25'].some(function (p) { var x = fin(r, p, 'pro'); return x && x.v < 0; });
+  }
+  /* Source label / cut-off, only where it adds information beyond the period itself. */
+  function finContext(x) {
+    var p = PERIODS[S.period], out = [];
+    var l = String(x.l || '').replace(p, '').trim();
+    if (l && !/^(revenue|profit)$/i.test(l)) out.push(l);
+    if (x.w && x.w !== p) out.push(x.w);
+    return out.join(' · ');
+  }
+  function relPill(r) { return '<span class="d2-st ' + (r.rel === 'CLIENT' ? 'client' : 'lead') + '">' + r.rel + '</span>'; }
+  function stPill(s) { return s ? '<span class="d2-st ' + STATUS[s].cls + '">' + STATUS[s].label + '</span>' : '<span class="d2-na">— LEAD</span>'; }
+  function tenPill(t) { return t ? '<span class="d2-st ' + TENURE[t].cls + '">' + TENURE[t].label + '</span>' : '<span class="d2-na">— LEAD</span>'; }
+  function basisText(r, key) {
+    var b = r[key + 'B'];
+    return b === 'stated' ? 'as stated in the account' :
+           b === 'rule' ? 'AIOS rule · Captured Logistics > 0' : 'no authorized statement in the account';
+  }
+
+  /* ── model (built once from the live registries) ── */
+  function buildRows() {
+    ROWS = []; BY_ID = {};
+    ACCOUNTS.forEach(function (a) {
+      var rs = a.relationshipStatus;
+      if (!rs) return;                                    /* unresolved: shown nowhere, as on the current Dashboard */
+      var f = D2_FACTS[a.id] || {};
+      var r = {
+        id: a.id, name: decode(a.name), f: f,
+        rel: rs === 'lead' ? 'LEAD' : 'CLIENT',
+        mandateNew: rs === 'new_client',
+        ind: a.industry ? (IND_LABEL[a.industry] || a.industry) : IND_NA,
+        cls: /^(AAA|AA\+?|A)$/.test(a.cls) ? a.cls : null,
+        ilm: f.ilm ? (ILM_NORM[String(f.ilm).toLowerCase()] || String(f.ilm)) : null,
+        ad: f.ad || null,
+        log: null, cus: null, ten: null
+      };
+      r.fold = fold(r.name);
+      if (r.rel === 'CLIENT') {
+        r.log = f.log ? f.log.s : 'NV'; r.logB = f.log ? f.log.b : 'none';
+        r.cus = f.cus ? f.cus.s : 'NV'; r.cusB = f.cus ? f.cus.b : 'none';
+        var c25 = f.c25 ? f.c25.v : null, c26 = f.c26 ? f.c26.v : null;
+        r.ten = c25 === true ? 'REC' : (c25 === false && c26 === true ? 'NEW' : 'NV');
+      }
+      ROWS.push(r); BY_ID[r.id] = r;
+    });
+    CLIENTS = ROWS.filter(function (r) { return r.rel === 'CLIENT'; });
+    LEADS = ROWS.filter(function (r) { return r.rel === 'LEAD'; });
+  }
+
+  /* ── Management Intelligence lenses: filters over authorized values only ── */
+  var LENSES = [
+    { grp: 'Service Relationships' },
+    { k: 'nv', u: 'c', label: 'Service Relationship Not Validated', desc: 'CLIENTS with at least one of the two services Not Validated',
+      test: function (r) { return r.rel === 'CLIENT' && (r.log === 'NV' || r.cus === 'NV'); } },
+    { k: 'dual', u: 'c', label: 'Dual-Service CLIENTS', desc: 'Akzent Logistics and Arcatek Customs both Confirmed Client',
+      test: function (r) { return r.log === 'CC' && r.cus === 'CC'; } },
+    { k: 'logonly', u: 'c', label: 'Logistics · Customs Confirmed Not Captured', desc: 'Akzent Logistics Confirmed Client with Arcatek Customs explicitly Confirmed Not Captured',
+      test: function (r) { return r.log === 'CC' && r.cus === 'CNC'; } },
+    { k: 'cusonly', u: 'c', label: 'Customs · Logistics Confirmed Not Captured', desc: 'Arcatek Customs Confirmed Client with Akzent Logistics explicitly Confirmed Not Captured',
+      test: function (r) { return r.cus === 'CC' && r.log === 'CNC'; } },
+    { grp: 'Client Tenure' },
+    { k: 'rec', u: 'c', label: 'Recurring Clients', desc: TENURE.REC.desc, test: function (r) { return r.ten === 'REC'; } },
+    { k: 'new', u: 'c', label: 'New Clients', desc: TENURE.NEW.desc, test: function (r) { return r.ten === 'NEW'; } },
+    { k: 'tnv', u: 'c', label: 'Tenure Not Validated', desc: 'History does not establish Recurring or New Client', test: function (r) { return r.ten === 'NV'; } },
+    { grp: 'Data coverage' },
+    { k: 'fin', u: 'c', label: 'Supported financial information', desc: 'CLIENTS reporting account-level Captured Revenue or Profit (2025 or 2026 YTD)',
+      test: function (r) { return r.rel === 'CLIENT' && hasAnyFin(r); } },
+    { k: 'nofin', u: 'c', label: 'No supported financial information', desc: 'CLIENTS without account-level Captured Revenue or Profit — not zero',
+      test: function (r) { return r.rel === 'CLIENT' && !hasAnyFin(r); } },
+    { k: 'neg', u: 'c', label: 'Negative reported Profit', desc: 'A reported period with negative Captured Profit',
+      test: function (r) { return r.rel === 'CLIENT' && hasNegativeProfit(r); } },
+    { k: 'lwnc', u: 'c', label: 'Logistics Shared Wallet Not Calculable', desc: 'As stated by AIOS in the account — not 0%',
+      test: function (r) { return r.rel === 'CLIENT' && !!(r.f.lw && r.f.lw.v === 'Not Calculable'); } },
+    { k: 'noad', u: 'a', label: 'No AIOS Analysis Date recorded', desc: 'The account report carries no explicit AIOS Analysis Date stamp',
+      test: function (r) { return !r.ad; } },
+    { grp: 'Operating model' },
+    { k: 'ilm', u: 'a', label: 'ILM Potential stated Very High', desc: 'As stated in the account report (All Accounts)',
+      test: function (r) { return r.ilm === 'Very High'; } }
+  ];
+  var LENS_BY_K = {};
+  LENSES.forEach(function (l) { if (l.k) LENS_BY_K[l.k] = l; });
+
+  /* ── filtering ── */
+  function match(r, except) {
+    if (except !== 'rel' && S.rel !== 'all' && r.rel !== S.rel) return false;
+    if (except !== 'ten' && S.ten && r.ten !== S.ten) return false;
+    if (except !== 'ind' && S.ind && r.ind !== S.ind) return false;
+    if (except !== 'svc' && S.log && r.log !== S.log) return false;
+    if (except !== 'svc' && S.cus && r.cus !== S.cus) return false;
+    if (S.cls && (r.cls || 'none') !== S.cls) return false;
+    if (S.ilm && (r.ilm || 'none') !== S.ilm) return false;
+    if (S.fresh && (S.fresh === 'yes') !== !!r.ad) return false;
+    if (except !== 'lens' && S.lens && !LENS_BY_K[S.lens].test(r)) return false;
+    if (S.q && r.fold.indexOf(S.q) < 0) return false;
+    return true;
+  }
+  function filtered(except) { return ROWS.filter(function (r) { return match(r, except); }); }
+  function activeFilters() {
+    var out = [];
+    if (S.rel !== 'all') out.push({ k: 'rel', t: 'Relationship', v: S.rel === 'CLIENT' ? 'CLIENTS' : 'LEADS' });
+    if (S.ten) out.push({ k: 'ten', t: 'Tenure', v: TENURE[S.ten].label });
+    if (S.ind) out.push({ k: 'ind', t: 'Industry', v: S.ind });
+    if (S.log) out.push({ k: 'log', t: 'Akzent Logistics', v: STATUS[S.log].label });
+    if (S.cus) out.push({ k: 'cus', t: 'Arcatek Customs', v: STATUS[S.cus].label });
+    if (S.cls) out.push({ k: 'cls', t: 'Classification', v: S.cls === 'none' ? 'Not stated' : S.cls });
+    if (S.ilm) out.push({ k: 'ilm', t: 'ILM Potential', v: S.ilm === 'none' ? 'Not stated' : S.ilm });
+    if (S.fresh) out.push({ k: 'fresh', t: 'Analysis Date', v: S.fresh === 'yes' ? 'Recorded' : 'Not recorded' });
+    if (S.lens) out.push({ k: 'lens', t: 'Lens', v: LENS_BY_K[S.lens].label });
+    if (S.q) out.push({ k: 'q', t: 'Search', v: '“' + document.getElementById('d2-q').value.trim() + '”' });
+    return out;
+  }
+  function onlyServiceOrTenure() {
+    return activeFilters().every(function (f) { return f.k === 'ten' || f.k === 'log' || f.k === 'cus' || (f.k === 'rel' && S.rel === 'CLIENT'); });
+  }
+
+  /* ── render: hero ── */
+  function renderHero() {
+    var n = ROWS.length, c = CLIENTS.length, l = LEADS.length;
+    var latestRow = ROWS.filter(function (r) { return parseAd(r.ad); })
+      .sort(function (a, b) { return parseAd(b.ad) - parseAd(a.ad); })[0];
+    document.getElementById('d2-hero-sub').innerHTML =
+      'Management view of the accounts in Akzent Intelligence OS — relationship, tenure, service footprint, industry and ' +
+      'supported Captured Business concentration. Every figure is authorized AIOS intelligence; select anything to see the accounts behind it.' +
+      (latestRow ? ' Most recent AIOS Analysis Date: <b style="color:#fff;font-weight:600">' + esc(latestRow.ad) + '</b>.' : '');
+    document.getElementById('d2-scale').innerHTML =
+      '<div class="d2-scale-nums">' +
+        '<button type="button" class="d2-num" data-d2-set="rel:all" aria-pressed="' + (S.rel === 'all') + '">' +
+          '<span class="d2-num-l">Total Accounts</span><span class="d2-num-v">' + n + '</span><span class="d2-num-p">All Accounts in AIOS</span></button>' +
+        '<button type="button" class="d2-num" data-d2-set="rel:CLIENT" aria-pressed="' + (S.rel === 'CLIENT') + '">' +
+          '<span class="d2-num-l">CLIENTS</span><span class="d2-num-v">' + c + '</span><span class="d2-num-p">' + pct(c, n) + ' of All Accounts</span></button>' +
+        '<button type="button" class="d2-num" data-d2-set="rel:LEAD" aria-pressed="' + (S.rel === 'LEAD') + '">' +
+          '<span class="d2-num-l">LEADS</span><span class="d2-num-v">' + l + '</span><span class="d2-num-p">' + pct(l, n) + ' of All Accounts</span></button>' +
+      '</div>' +
+      '<div class="d2-split" role="img" aria-label="' + c + ' CLIENTS and ' + l + ' LEADS of ' + n + ' accounts">' +
+        '<span class="s-client" style="width:' + (c / n * 100) + '%"></span><span class="s-lead" style="width:' + (l / n * 100) + '%"></span></div>' +
+      '<div class="d2-split-leg"><span><i style="background:var(--d2-cyan)"></i>CLIENT · confirmed relationship with at least one service</span>' +
+        '<span><i style="background:rgba(255,255,255,0.32)"></i>LEAD · no confirmed service relationship</span></div>';
+  }
+
+  /* ── render: filter bar ── */
+  function renderFilterBar() {
+    var af = activeFilters(), shown = filtered().length;
+    document.getElementById('d2-chips').innerHTML = af.length ? af.map(function (f) {
+      return '<button type="button" class="d2-chip" data-d2-clear="' + f.k + '" aria-label="Remove filter ' + esc(f.t + ': ' + f.v) + '">' +
+             '<b>' + esc(f.t) + '</b>' + esc(f.v) + '<span class="x" aria-hidden="true">×</span></button>';
+    }).join('') : '<span class="d2-none">None — showing the complete portfolio. Select any segment, bar, cell, lens or tile to filter.</span>';
+    document.getElementById('d2-fb-count').innerHTML = 'Showing <b>' + shown + '</b> of ' + ROWS.length + ' accounts';
+    document.getElementById('d2-reset').disabled = !af.length;
+  }
+
+  /* ── render: tenure ── */
+  function renderTenure() {
+    var c = CLIENTS.length, counts = {};
+    TENURE_ORDER.forEach(function (t) { counts[t] = CLIENTS.filter(function (r) { return r.ten === t; }).length; });
+    var mandNV = CLIENTS.filter(function (r) { return r.mandateNew && r.ten !== 'NEW'; });
+    var since = CLIENTS.filter(function (r) { return r.f.since; });
+    var html = '<div class="d2-card-head"><div>' +
+        '<div class="d2-step"><span class="d2-arrow" aria-hidden="true"></span>01 · Client Tenure</div>' +
+        '<h2 id="d2-h-tenure">Recurring vs New Clients</h2>' +
+        '<div class="d2-q">How much of the CLIENT base is recurring business, and how much is new in 2026?</div></div>' +
+        '<span class="d2-denom">% of CLIENT portfolio · <b>n = ' + c + '</b></span></div>';
+    html += '<div class="d2-stack" role="group" aria-label="Client Tenure composition">';
+    TENURE_ORDER.forEach(function (t) {
+      if (!counts[t]) return;
+      var on = S.ten === t;
+      html += '<button type="button" class="' + TENURE[t].sw + (S.ten && !on ? ' dim' : '') + '" style="flex:' + counts[t] + '" data-d2-set="ten:' + t +
+              '" aria-pressed="' + on + '" data-d2-tipt="' + esc(TENURE[t].label + ' · ' + counts[t] + ' CLIENTS · ' + pct(counts[t], c) + ' of CLIENT portfolio') +
+              '" aria-label="' + esc(TENURE[t].label + ': ' + counts[t] + ' CLIENTS, ' + pct(counts[t], c) + ' of CLIENT portfolio') + '"></button>';
+    });
+    html += '</div><div class="d2-legend">';
+    TENURE_ORDER.forEach(function (t) {
+      html += '<button type="button" class="d2-leg" data-d2-set="ten:' + t + '" aria-pressed="' + (S.ten === t) + '">' +
+              '<i class="' + TENURE[t].sw + '"></i><span class="d2-leg-n">' + TENURE[t].label + '<span class="d2-leg-d">' + TENURE[t].desc + '</span></span>' +
+              '<span class="d2-leg-c">' + counts[t] + '</span><span class="d2-leg-p">' + pct(counts[t], c) + '</span></button>';
+    });
+    html += '</div><div class="d2-note">';
+    html += '<b>Client Since:</b> ' + (since.length ? plural(since.length, 'CLIENT') + ' carry an authorized first year of Captured Business.'
+          : 'not displayed — no account states an authorized first year of Captured Business, and it is not reconstructed from partial history.');
+    if (mandNV.length) {
+      html += '<br><b>Current Dashboard “New Clients”</b> is an owner-mandated relationship category, not tenure. ' +
+              plural(mandNV.length, 'mandated account') + ' (' + mandNV.map(function (r) { return esc(r.name); }).join(', ') +
+              ') lack the Captured Business evidence the tenure rule requires, so they show as Not Validated here.';
+    }
+    html += '</div><div class="d2-static" style="margin-top:8px">Portfolio totals · not narrowed by other filters</div>';
+    document.getElementById('d2-tenure').innerHTML = html;
+  }
+
+  /* ── render: service relationships ── */
+  function renderServices() {
+    var c = CLIENTS.length;
+    function n(fn) { return CLIENTS.filter(fn).length; }
+    var logCC = n(function (r) { return r.log === 'CC'; }), cusCC = n(function (r) { return r.cus === 'CC'; });
+    var dual = n(function (r) { return r.log === 'CC' && r.cus === 'CC'; });
+    var anyNV = n(function (r) { return r.log === 'NV' || r.cus === 'NV'; });
+    function kpi(label, v, set, pressed) {
+      return '<button type="button" class="d2-kpi" data-d2-set="' + set + '" aria-pressed="' + pressed + '">' +
+             '<span class="d2-kpi-l">' + label + '</span><span class="d2-kpi-v">' + v + '</span><span class="d2-kpi-p">' + pct(v, c) + ' of CLIENT portfolio</span></button>';
+    }
+    var html = '<div class="d2-card-head"><div>' +
+        '<div class="d2-step"><span class="d2-arrow" aria-hidden="true"></span>02 · Service Relationships</div>' +
+        '<h2 id="d2-h-services">Akzent Logistics × Arcatek Customs</h2>' +
+        '<div class="d2-q">Which services do we provide to each CLIENT? The two services are evaluated independently — rows are Akzent Logistics, columns are Arcatek Customs.</div></div>' +
+        '<span class="d2-denom">% of CLIENT portfolio · <b>n = ' + c + '</b></span></div>';
+    html += '<div class="d2-svc-top">' +
+      kpi('Akzent Logistics · Confirmed Client', logCC, 'svc:CC:', S.log === 'CC' && !S.cus) +
+      kpi('Arcatek Customs · Confirmed Client', cusCC, 'svc::CC', S.cus === 'CC' && !S.log) +
+      kpi('Dual-Service CLIENTS · both confirmed', dual, 'svc:CC:CC', S.log === 'CC' && S.cus === 'CC') +
+      kpi('At least one service Not Validated', anyNV, 'lens:nv', S.lens === 'nv') + '</div>';
+    html += '<div class="d2-matrix" role="grid" aria-label="Service Relationship matrix: Akzent Logistics rows by Arcatek Customs columns">';
+    html += '<div class="d2-mx-h ax" role="columnheader">Akzent Logistics ↓ · Arcatek Customs →</div>';
+    STATUS_ORDER.forEach(function (cs) { html += '<div class="d2-mx-h" role="columnheader">' + STATUS[cs].label + '</div>'; });
+    html += '<div class="d2-mx-h d2-mx-tot" role="columnheader">Logistics total</div>';
+    STATUS_ORDER.forEach(function (ls) {
+      html += '<div class="d2-mx-r" role="rowheader">' + stPill(ls) + '</div>';
+      STATUS_ORDER.forEach(function (cs) {
+        var v = n(function (r) { return r.log === ls && r.cus === cs; });
+        var isDual = ls === 'CC' && cs === 'CC';
+        var cls = 'd2-cell' + (isDual ? ' dual' : (ls === 'NV' || cs === 'NV') ? ' nv' : '') + (v ? '' : ' zero');
+        var tag = isDual ? 'Dual-Service' : (ls === 'CC' && cs === 'CNC') ? 'Logistics only' : (ls === 'CNC' && cs === 'CC') ? 'Customs only' : '';
+        var lab = 'Akzent Logistics ' + STATUS[ls].label + ', Arcatek Customs ' + STATUS[cs].label + ': ' + v + ' CLIENTS, ' + pct(v, c) + ' of CLIENT portfolio';
+        html += v ? '<button type="button" role="gridcell" class="' + cls + '" data-d2-set="svc:' + ls + ':' + cs + '" aria-pressed="' + (S.log === ls && S.cus === cs) + '" aria-label="' + esc(lab) + '">' +
+                    '<span class="k">' + tag + '</span><span class="c">' + v + '</span><span class="p">' + pct(v, c) + '</span></button>'
+                  : '<div role="gridcell" class="' + cls + '" aria-label="' + esc(lab) + '"><span class="k">' + tag + '</span><span class="c">0</span><span class="p">—</span></div>';
+      });
+      var rt = n(function (r) { return r.log === ls; });
+      html += '<div class="d2-tot" role="gridcell"><b>' + rt + '</b>' + pct(rt, c) + '</div>';
+    });
+    html += '<div class="d2-mx-r d2-mx-tot" role="rowheader" style="color:var(--d2-muted)">Customs total</div>';
+    STATUS_ORDER.forEach(function (cs) {
+      var ct = n(function (r) { return r.cus === cs; });
+      html += '<div class="d2-tot d2-mx-tot" role="gridcell" style="border-left:0;border-top:1px solid var(--d2-line)"><b>' + ct + '</b>' + pct(ct, c) + '</div>';
+    });
+    html += '<div class="d2-mx-tot"></div></div>';
+    html += '<div class="d2-note"><b>Overlapping populations.</b> Akzent Logistics and Arcatek Customs Confirmed Clients overlap; Dual-Service is their intersection, so the headline figures do not add up to CLIENTS. ' +
+            '“Logistics only” / “Customs only” require the other service to be explicitly <b>Confirmed Not Captured</b> — Not Validated is never counted as not captured. ' +
+            'Missing internal data is Not Validated, never zero.</div>' +
+            '<div class="d2-static" style="margin-top:8px">Portfolio totals · not narrowed by other filters</div>';
+    document.getElementById('d2-services').innerHTML = html;
+  }
+
+  /* ── render: industry (cross-filtered by everything except Industry) ── */
+  function renderIndustry() {
+    var base = filtered('ind'), d = base.length, groups = {};
+    base.forEach(function (r) { groups[r.ind] = (groups[r.ind] || 0) + 1; });
+    var list = Object.keys(groups).map(function (k) { return { k: k, n: groups[k] }; })
+      .sort(function (a, b) {
+        if ((a.k === IND_NA) !== (b.k === IND_NA)) return a.k === IND_NA ? 1 : -1;
+        return b.n - a.n || a.k.localeCompare(b.k);
+      });
+    if (S.ind && !groups[S.ind]) list.push({ k: S.ind, n: 0 });
+    var uni = S.rel === 'CLIENT' ? 'CLIENT portfolio' : S.rel === 'LEAD' ? 'LEAD portfolio' : 'All Accounts';
+    var narrowed = activeFilters().some(function (f) { return f.k !== 'rel' && f.k !== 'ind'; });
+    var maxN = list.reduce(function (m, x) { return Math.max(m, x.n); }, 0) || 1;
+    var html = '<div class="d2-card-head"><div>' +
+        '<div class="d2-step"><span class="d2-arrow" aria-hidden="true"></span>03 · Industry</div>' +
+        '<h2 id="d2-h-industry">Industry Composition</h2>' +
+        '<div class="d2-q">What kinds of companies make up the portfolio?</div></div>' +
+        '<div class="d2-ctl"><span class="d2-ctl-l">Universe</span><div class="d2-seg" role="group" aria-label="Industry universe">' +
+          '<button type="button" data-d2-set="rel:CLIENT" aria-pressed="' + (S.rel === 'CLIENT') + '">CLIENTS</button>' +
+          '<button type="button" data-d2-set="rel:all" aria-pressed="' + (S.rel === 'all') + '">All Accounts</button>' +
+          '<button type="button" data-d2-set="rel:LEAD" aria-pressed="' + (S.rel === 'LEAD') + '">LEADS</button></div></div></div>' +
+        '<div style="margin:-4px 0 10px"><span class="d2-denom">% of ' + uni + (narrowed ? ' matching active filters' : '') + ' · <b>n = ' + d + '</b></span></div>';
+    if (!d) html += '<div class="d2-empty">No accounts match the active filters.</div>';
+    else {
+      html += '<div class="d2-ind" role="group" aria-label="Industries">';
+      list.forEach(function (x) {
+        var on = S.ind === x.k;
+        html += '<button type="button" class="d2-ibar' + (x.k === IND_NA ? ' na' : '') + '" data-d2-set="ind:' + esc(x.k) + '" aria-pressed="' + on + '" ' +
+                'aria-label="' + esc(x.k + ': ' + x.n + ' accounts, ' + pct(x.n, d) + ' of ' + uni) + '">' +
+                '<span class="n" title="' + esc(x.k) + '">' + esc(x.k) + '</span><span class="t"><span style="width:' + (x.n / maxN * 100) + '%"></span></span>' +
+                '<span class="c">' + x.n + '</span><span class="p">' + pct(x.n, d) + '</span></button>';
+      });
+      html += '</div>';
+    }
+    var na = base.filter(function (r) { return r.ind === IND_NA; }).length;
+    html += '<div class="d2-note">Industry comes only from the existing AIOS industry registry used by the current Dashboard — never from account names, HS Codes, Trading Partners or assumptions.' +
+            (na ? ' <b>' + plural(na, 'account') + '</b> in this universe ' + (na === 1 ? 'has' : 'have') + ' no authorized Industry and ' + (na === 1 ? 'is' : 'are') + ' shown as ' + IND_NA + '.' : '') + '</div>';
+    document.getElementById('d2-industry').innerHTML = html;
+  }
+
+  /* ── treemap ── */
+  function squarify(items, rect, out) {
+    var total = items.reduce(function (s, i) { return s + i.v; }, 0);
+    if (!total || rect.w <= 0 || rect.h <= 0) return;
+    var scale = rect.w * rect.h / total;
+    var nodes = items.map(function (i) { return { item: i, a: i.v * scale }; });
+    var r = { x: rect.x, y: rect.y, w: rect.w, h: rect.h }, row = [];
+    function worst(rw, side) {
+      var s = 0, mx = 0, mn = Infinity;
+      rw.forEach(function (n) { s += n.a; mx = Math.max(mx, n.a); mn = Math.min(mn, n.a); });
+      return Math.max(side * side * mx / (s * s), (s * s) / (side * side * mn));
+    }
+    function lay(rw) {
+      var s = rw.reduce(function (t, n) { return t + n.a; }, 0);
+      if (r.w >= r.h) {
+        var cw = s / r.h, yy = r.y;
+        rw.forEach(function (n) { var hh = n.a / cw; out.push({ item: n.item, x: r.x, y: yy, w: cw, h: hh }); yy += hh; });
+        r.x += cw; r.w -= cw;
+      } else {
+        var rh = s / r.w, xx = r.x;
+        rw.forEach(function (n) { var ww = n.a / rh; out.push({ item: n.item, x: xx, y: r.y, w: ww, h: rh }); xx += ww; });
+        r.y += rh; r.h -= rh;
+      }
+    }
+    while (nodes.length) {
+      var side = Math.min(r.w, r.h);
+      if (!row.length || worst(row.concat([nodes[0]]), side) <= worst(row, side)) row.push(nodes.shift());
+      else { lay(row); row = []; }
+    }
+    if (row.length) lay(row);
+  }
+
+  function financeSets() {
+    var clients = filtered().filter(function (r) { return r.rel === 'CLIENT'; });
+    var pos = [], nonpos = [], missing = [];
+    clients.forEach(function (r) {
+      var x = fin(r, S.period, S.metric);
+      if (!x) missing.push(r);
+      else if (x.v > 0) pos.push({ r: r, x: x, v: x.v });
+      else nonpos.push({ r: r, x: x });
+    });
+    return { clients: clients, pos: pos, nonpos: nonpos, missing: missing };
+  }
+  function coverageOf(period, metric) {
+    return CLIENTS.filter(function (r) { return !!fin(r, period, metric); }).length;
+  }
+
+  function renderFinance() {
+    var fs = financeSets(), mLabel = METRICS[S.metric], pLabel = PERIODS[S.period];
+    var cov = fs.pos.length + fs.nonpos.length, tot = fs.clients.length;
+    var html = '<div class="d2-card-head"><div>' +
+        '<div class="d2-step"><span class="d2-arrow" aria-hidden="true"></span>04 · Financial concentration</div>' +
+        '<h2 id="d2-h-finance">CLIENT Portfolio — Financial Concentration</h2>' +
+        '<div class="d2-q">' + (S.metric === 'rev' ? 'Where is our Captured Business scale concentrated?' : 'Where is our supported Captured Business profitability concentrated?') +
+        ' Each rectangle is one CLIENT, grouped by Industry and sized by its reported ' + mLabel + '.</div></div>' +
+        '<div class="d2-tm-ctl">' +
+          '<div class="d2-ctl"><span class="d2-ctl-l">Size by</span><div class="d2-seg" role="group" aria-label="Size by">' +
+            ['pro', 'rev'].map(function (m) {
+              var c = coverageOf(S.period, m);
+              return '<button type="button" data-d2-set="metric:' + m + '" aria-pressed="' + (S.metric === m) + '"' + (c ? '' : ' disabled') + '>' + METRICS[m] + '</button>';
+            }).join('') + '</div></div>' +
+          '<div class="d2-ctl"><span class="d2-ctl-l">Period</span><div class="d2-seg" role="group" aria-label="Period">' +
+            ['y26', 'y25'].map(function (p) {
+              return '<button type="button" data-d2-set="period:' + p + '" aria-pressed="' + (S.period === p) + '">' + PERIODS[p] + '</button>';
+            }).join('') + '</div></div>' +
+        '</div></div>';
+    html += '<div class="d2-cover"><span class="d2-meter" aria-hidden="true"><span style="width:' + (tot ? cov / tot * 100 : 0) + '%"></span></span>' +
+            '<span>Financial coverage · <b>' + cov + ' of ' + tot + '</b> CLIENTS' + (tot !== CLIENTS.length ? ' in the active selection' : '') +
+            ' report ' + mLabel + ' for ' + pLabel + '</span>' +
+            '<span>· <b>' + fs.missing.length + '</b> without supported ' + mLabel + ' data (not zero, not drawn)</span>' +
+            (fs.nonpos.length ? '<span>· <b>' + fs.nonpos.length + '</b> reported ≤ 0, listed separately</span>' : '') + '</div>';
+    html += fs.pos.length
+      ? '<div class="d2-tm" id="d2-tm" role="group" aria-label="' + esc('Treemap of ' + fs.pos.length + ' CLIENTS sized by ' + pLabel + ' ' + mLabel) + '"></div>'
+      : '<div class="d2-tm" id="d2-tm"><div class="d2-empty" style="padding:24px">No CLIENT in the active selection reports a positive ' + pLabel + ' ' + mLabel + '.</div></div>';
+    html += '<div class="d2-side">';
+    html += '<div class="d2-side-box' + (fs.nonpos.some(function (e) { return e.x.v < 0; }) ? ' neg' : '') + '"><h3>Reported ' + mLabel + ' ≤ 0 · ' + pLabel + '</h3>' +
+            (fs.nonpos.length
+              ? '<div style="margin-bottom:6px">Area cannot represent zero or negative values; these reported figures are shown here unchanged.</div><div class="d2-side-list">' +
+                fs.nonpos.map(function (e) {
+                  return '<button type="button" data-d2-open="' + e.r.id + '" data-d2-tip="' + e.r.id + '">' + esc(e.r.name) +
+                         '<span class="v' + (e.x.v < 0 ? ' neg' : '') + '">' + money(e.x) + '</span></button>';
+                }).join('') + '</div>'
+              : 'None in the active selection.') + '</div>';
+    html += '<div class="d2-side-box"><h3>No supported ' + mLabel + ' data · ' + pLabel + '</h3>' +
+            (fs.missing.length
+              ? '<div class="d2-side-list">' + fs.missing.map(function (r) {
+                  return '<button type="button" data-d2-open="' + r.id + '" data-d2-tip="' + r.id + '">' + esc(r.name) + '</button>';
+                }).join('') + '</div>'
+              : 'Every CLIENT in the active selection reports this metric.') + '</div>';
+    html += '</div>';
+    html += '<div class="d2-note">' + mLabel + ' = internal Captured Logistics Business as reported in each account for ' + pLabel +
+            (S.period === 'y26' ? ' (cut-off dates differ by account and are shown on hover; nothing is annualized)' : ' (full-year figures; equivalent-period partials are not used)') +
+            '. PJ value is never Revenue, Profit is never estimated or extrapolated, and multi-period “cumulative” totals are not used. ' +
+            'Margin appears on hover only where the account states it. Customs profitability is not reported by AIOS.' +
+            (CLIENTS.some(function (r) { return r.f.finNote; }) ? ' <b>' + CLIENTS.filter(function (r) { return r.f.finNote; }).map(function (r) { return esc(r.name); }).join(', ') +
+            ':</b> the only reported Profit is a single-Shipment figure the account states is not an account-level result, so it is excluded.' : '') + '</div>';
+    document.getElementById('d2-finance').innerHTML = html;
+    layoutTreemap(fs);
+  }
+
+  function layoutTreemap(fs) {
+    var host = document.getElementById('d2-tm');
+    if (!host || !fs.pos.length) return;
+    var W = host.clientWidth, H = host.clientHeight;
+    if (!W || !H) return;
+    var groups = {};
+    fs.pos.forEach(function (e) { (groups[e.r.ind] = groups[e.r.ind] || []).push(e); });
+    var gl = Object.keys(groups).map(function (k) {
+      var items = groups[k].sort(function (a, b) { return b.v - a.v; });
+      return { k: k, items: items, v: items.reduce(function (s, e) { return s + e.v; }, 0) };
+    }).sort(function (a, b) { return b.v - a.v; });
+    var gRects = [];
+    squarify(gl, { x: 0, y: 0, w: W, h: H }, gRects);
+    var html = '', ci = 0;
+    gRects.forEach(function (g) {
+      var color = TILE_COLORS[ci++ % TILE_COLORS.length];
+      var pad = 2, head = (g.h > 64 && g.w > 80) ? 17 : 0;
+      html += '<div class="d2-tm-g" style="left:' + g.x + 'px;top:' + g.y + 'px;width:' + g.w + 'px;height:' + g.h + 'px">' +
+              (head ? '<div class="d2-tm-gl">' + esc(g.item.k) + '</div>' : '') + '</div>';
+      var tiles = [];
+      squarify(g.item.items, { x: g.x + pad, y: g.y + pad + head, w: g.w - pad * 2, h: g.h - pad * 2 - head }, tiles);
+      tiles.forEach(function (t) {
+        var e = t.item, w = Math.max(0, t.w - 2), h = Math.max(0, t.h - 2);
+        var big = w > 78 && h > 40, small = !big && w > 44 && h > 22;
+        var lab = e.r.name + ' · ' + e.r.ind + ' · ' + PERIODS[S.period] + ' ' + METRICS[S.metric] + ' ' + money(e.x) + (e.x.cur ? '' : ' (currency not stated)');
+        html += '<button type="button" class="d2-tile' + (small ? ' sm' : '') + '" data-d2-open="' + e.r.id + '" data-d2-tip="' + e.r.id + '" ' +
+                'style="left:' + (t.x + 1) + 'px;top:' + (t.y + 1) + 'px;width:' + w + 'px;height:' + h + 'px;background:' + color + '" aria-label="' + esc(lab) + '">' +
+                (big || small ? '<span class="tn">' + esc(e.r.name) + '</span><span class="tv">' + money(e.x, true) + '</span>' : '') + '</button>';
+      });
+    });
+    host.innerHTML = html;
+  }
+
+  /* ── render: management lenses ── */
+  function renderLenses() {
+    var c = CLIENTS.length, a = ROWS.length;
+    var html = '<div class="d2-card-head"><div>' +
+        '<div class="d2-step"><span class="d2-arrow" aria-hidden="true"></span>05 · Management Intelligence</div>' +
+        '<h2 id="d2-h-lenses">Portfolio conditions requiring attention or validation</h2>' +
+        '<div class="d2-q">Filters over authorized AIOS intelligence — not scores, not rankings and not opportunity conclusions. Select a lens to see its accounts.</div></div>' +
+        '<span class="d2-denom">Denominators: CLIENT portfolio <b>n = ' + c + '</b> · All Accounts <b>n = ' + a + '</b></span></div>';
+    html += '<div class="d2-lenses">';
+    LENSES.forEach(function (l) {
+      if (l.grp) { html += '<div class="d2-lens-grp">' + l.grp + '</div>'; return; }
+      var v = ROWS.filter(l.test).length, d = l.u === 'c' ? c : a;
+      html += '<button type="button" class="d2-lens' + (v ? '' : ' zero') + '" data-d2-set="lens:' + l.k + '" aria-pressed="' + (S.lens === l.k) + '">' +
+              '<span class="ln">' + esc(l.label) + '</span><span class="lc">' + v + '<span class="lp">' + pct(v, d) + ' of ' + (l.u === 'c' ? 'CLIENTS' : 'All Accounts') + '</span></span>' +
+              '<span class="ld">' + esc(l.desc) + '</span></button>';
+    });
+    html += '</div>';
+    document.getElementById('d2-lenses').innerHTML = html;
+  }
+
+  /* ── render: table ── */
+  var COLS = [
+    { k: 'name', t: 'Account', sort: true },
+    { k: 'rel', t: 'Relationship', sort: true },
+    { k: 'ten', t: 'Client Tenure', sort: true },
+    { k: 'ind', t: 'Industry', sort: true },
+    { k: 'log', t: 'Akzent Logistics', sort: true },
+    { k: 'cus', t: 'Arcatek Customs', sort: true },
+    { k: 'rev', t: 'Revenue', sort: true, num: true },
+    { k: 'pro', t: 'Profit', sort: true, num: true },
+    { k: 'lw', t: 'Logistics Shared Wallet', sort: false },
+    { k: 'cw', t: 'Customs Shared Wallet', sort: false },
+    { k: 'pj', t: 'PJ Visible Shipments', sort: false, num: true },
+    { k: 'cls', t: 'Classification', sort: true },
+    { k: 'ilm', t: 'ILM Potential', sort: true },
+    { k: 'ad', t: 'Analysis Date', sort: true }
+  ];
+  function rank(list, v) { var i = list.indexOf(v); return i < 0 ? list.length : i; }
+  function sortKey(r, k) {
+    switch (k) {
+      case 'rel': return r.rel === 'CLIENT' ? 0 : 1;
+      case 'ten': return r.ten ? rank(TENURE_ORDER, r.ten) : 9;
+      case 'log': case 'cus': return r[k] ? rank(STATUS_ORDER, r[k]) : 9;
+      case 'cls': return rank(CLS_ORDER, r.cls);
+      case 'ilm': return rank(ILM_ORDER, r.ilm);
+      case 'ind': return r.ind === IND_NA ? '￿' : r.ind;
+      case 'ad': return parseAd(r.ad);
+      case 'rev': case 'pro': var x = fin(r, S.period, k); return x ? x.v : null;
+      default: return null;
+    }
+  }
+  function sortRows(list) {
+    var k = S.sort.k, d = S.sort.d;
+    return list.slice().sort(function (a, b) {
+      if (k === 'name') return d * a.name.localeCompare(b.name, 'es', { sensitivity: 'base', numeric: true });
+      var x = sortKey(a, k), y = sortKey(b, k);
+      if (x === null && y === null) return a.name.localeCompare(b.name, 'es', { sensitivity: 'base' });
+      if (x === null) return 1;                             /* missing values always last — never treated as 0 */
+      if (y === null) return -1;
+      if (x < y) return -d;
+      if (x > y) return d;
+      return a.name.localeCompare(b.name, 'es', { sensitivity: 'base' });
+    });
+  }
+  function walletCell(w) {
+    if (!w) return '<span class="d2-na">Not stated</span>';
+    var t = (w.all || []).map(function (x) { return (x.sc ? x.sc + ' · ' : '') + x.v + (x.st ? ' (' + x.st + ')' : '') + (x.p ? ' · ' + x.p : ''); }).join('\n');
+    if (w.v === 'Not Calculable') return '<span class="d2-st nv" title="' + esc(t) + '">Not Calculable</span>';
+    return '<span title="' + esc(t) + '"><span class="d2-wl">' + esc(w.v) + '</span>' + (w.st ? '<span class="d2-wtag">' + esc(w.st) + '</span>' : '') +
+           '<span class="d2-sub">' + esc(w.p || '') + '</span></span>';
+  }
+  function moneyCell(r, k) {
+    if (r.rel !== 'CLIENT') return '<span class="d2-na">—</span>';
+    var x = fin(r, S.period, k);
+    if (!x) return '<span class="d2-na">' + (r.f.finNote ? 'Not account-level' : 'Not available') + '</span>';
+    return '<span class="d2-money' + (x.v < 0 ? ' neg' : '') + '" title="' + esc((x.l || '') + (x.w ? ' · ' + x.w : '') + (x.cur ? '' : ' · currency not stated')) + '">' +
+           money(x) + '</span>' + (x.w && x.w !== PERIODS[S.period] ? '<span class="d2-sub" style="margin-left:auto">' + esc(x.w) + '</span>' : '');
+  }
+  function renderTable() {
+    var list = sortRows(filtered());
+    var html = '<table class="d2-t"><caption>' + list.length + ' of ' + ROWS.length + ' accounts · Revenue and Profit show <b>' + PERIODS[S.period] +
+               '</b> (change with the Period control above) · select a row to open its Account Intelligence</caption><thead><tr>';
+    COLS.forEach(function (c) {
+      var t = c.k === 'rev' || c.k === 'pro' ? c.t + ' · ' + PERIODS[S.period] : c.t;
+      var aria = c.sort ? ' aria-sort="' + (S.sort.k === c.k ? (S.sort.d > 0 ? 'ascending' : 'descending') : 'none') + '"' : '';
+      html += '<th scope="col" class="' + (c.num ? 'num' : '') + '"' + aria + '>' +
+              (c.sort ? '<button type="button" data-d2-sort="' + c.k + '">' + esc(t) + '</button>'
+                      : '<span title="Not sortable — periods and denominators differ across accounts">' + esc(t) + '</span>') + '</th>';
+    });
+    html += '</tr></thead><tbody>';
+    if (!list.length) html += '<tr><td colspan="' + COLS.length + '" class="d2-empty" style="text-align:left">No accounts match the active filters.</td></tr>';
+    list.forEach(function (r) {
+      var f = r.f;
+      html += '<tr data-d2-row="' + r.id + '">' +
+        '<td><button type="button" class="d2-open" data-d2-open="' + r.id + '" data-d2-tip="' + r.id + '">' + esc(r.name) + '</button></td>' +
+        '<td>' + relPill(r) + '</td>' +
+        '<td>' + tenPill(r.ten) + '</td>' +
+        '<td>' + (r.ind === IND_NA ? '<span class="d2-na">Not available</span>' : esc(r.ind)) + '</td>' +
+        '<td title="' + (r.log ? esc(basisText(r, 'log')) : '') + '">' + stPill(r.log) + '</td>' +
+        '<td title="' + (r.cus ? esc(basisText(r, 'cus')) : '') + '">' + stPill(r.cus) + '</td>' +
+        '<td class="num">' + moneyCell(r, 'rev') + '</td>' +
+        '<td class="num">' + moneyCell(r, 'pro') + '</td>' +
+        '<td>' + (r.rel === 'CLIENT' ? walletCell(f.lw) : '<span class="d2-na">—</span>') + '</td>' +
+        '<td>' + (r.rel === 'CLIENT' ? walletCell(f.cw) : '<span class="d2-na">—</span>') + '</td>' +
+        '<td class="num">' + (f.pj ? '<span class="d2-wl">' + Number(f.pj.v).toLocaleString('en-US') + '</span><span class="d2-sub" style="margin-left:auto" title="' + esc(f.pj.p) + '">' + esc(f.pj.p) + '</span>' : '<span class="d2-na">Not stated</span>') + '</td>' +
+        '<td>' + (r.cls ? '<span class="d2-cls ' + (r.cls === 'AAA' ? 'aaa' : 'aa') + '">' + r.cls + '</span>' : '<span class="d2-na">Not stated</span>') + '</td>' +
+        '<td>' + (r.ilm ? esc(r.ilm) : '<span class="d2-na">Not stated</span>') + '</td>' +
+        '<td>' + (r.ad ? esc(r.ad) : '<span class="d2-na">Not recorded</span>') + '</td>' +
+        '</tr>';
+    });
+    html += '</tbody></table>';
+    document.getElementById('d2-tw').innerHTML = html;
+    document.getElementById('d2-tfoot').innerHTML =
+      '<b>Service Relationships</b> are shown for CLIENTS only; a LEAD is by definition an account with no confirmed service relationship. ' +
+      'Wallet and PJ Visible Shipments columns are not sortable because their periods and denominators differ between accounts — hover a value for its full AIOS context. ' +
+      'Missing values sort last and are never treated as zero.';
+  }
+
+  /* ── toolbar selects (static elements, options built once) ── */
+  function buildSelects() {
+    var inds = {}; ROWS.forEach(function (r) { inds[r.ind] = 1; });
+    var indList = Object.keys(inds).sort(function (a, b) { return (a === IND_NA) - (b === IND_NA) || a.localeCompare(b); });
+    var ilms = {}; ROWS.forEach(function (r) { if (r.ilm) ilms[r.ilm] = 1; });
+    var clsS = {}; ROWS.forEach(function (r) { if (r.cls) clsS[r.cls] = 1; });
+    var OPTS = {
+      rel: [['all', 'All Accounts'], ['CLIENT', 'CLIENTS'], ['LEAD', 'LEADS']],
+      ten: [['', 'Any'], ['REC', 'Recurring'], ['NEW', 'New Client'], ['NV', 'Not Validated']],
+      ind: [['', 'Any']].concat(indList.map(function (k) { return [k, k]; })),
+      log: [['', 'Any'], ['CC', 'Confirmed Client'], ['CNC', 'Confirmed Not Captured'], ['NV', 'Not Validated']],
+      cus: [['', 'Any'], ['CC', 'Confirmed Client'], ['CNC', 'Confirmed Not Captured'], ['NV', 'Not Validated']],
+      cls: [['', 'Any']].concat(CLS_ORDER.filter(function (c) { return clsS[c]; }).map(function (c) { return [c, c]; }), [['none', 'Not stated']]),
+      ilm: [['', 'Any']].concat(ILM_ORDER.filter(function (c) { return ilms[c]; }).map(function (c) { return [c, c]; }), [['none', 'Not stated']]),
+      fresh: [['', 'Any'], ['yes', 'Recorded'], ['no', 'Not recorded']]
+    };
+    Array.prototype.forEach.call(root.querySelectorAll('[data-d2-sel]'), function (sel) {
+      var k = sel.getAttribute('data-d2-sel');
+      sel.innerHTML = OPTS[k].map(function (o) { return '<option value="' + esc(o[0]) + '">' + esc(o[1]) + '</option>'; }).join('');
+      sel.addEventListener('change', function () {
+        var v = sel.value;
+        S[k] = k === 'rel' ? v : (v || null);
+        renderAll();
+      });
+    });
+    var q = document.getElementById('d2-q');
+    q.addEventListener('input', function () { S.q = fold(q.value.trim()); renderAll(); });
+  }
+  function syncSelects() {
+    Array.prototype.forEach.call(root.querySelectorAll('[data-d2-sel]'), function (sel) {
+      var k = sel.getAttribute('data-d2-sel'), v = S[k] == null ? '' : S[k];
+      if (sel.value !== v) sel.value = v;
+      sel.parentNode.classList.toggle('on', k === 'rel' ? v !== 'all' : !!v);
+    });
+    var q = document.getElementById('d2-q');
+    if (!S.q && q.value) q.value = '';
+  }
+
+  /* ── orchestration (focus-preserving re-render) ── */
+  function renderAll() {
+    hideTip();
+    var ae = document.activeElement, key = null;
+    if (ae && root.contains(ae)) {
+      ['data-d2-set', 'data-d2-sort', 'data-d2-clear', 'data-d2-open'].some(function (a) {
+        if (ae.hasAttribute(a)) { key = '[' + a + '="' + ae.getAttribute(a).replace(/"/g, '\\"') + '"]'; return true; }
+        return false;
+      });
+    }
+    renderHero(); renderFilterBar(); renderTenure(); renderServices();
+    renderIndustry(); renderFinance(); renderLenses(); renderTable(); syncSelects();
+    if (key) { var el = root.querySelector(key); if (el) el.focus({ preventScroll: true }); else if (ae.hasAttribute('data-d2-clear')) document.getElementById('d2-reset').focus(); }
+  }
+
+  function toggle(k, v) { S[k] = S[k] === v ? null : v; }
+  function applySet(spec) {
+    var p = spec.split(':'), k = p[0];
+    if (k === 'rel') S.rel = (S.rel === p[1] && p[1] !== 'all') ? 'all' : p[1];
+    else if (k === 'svc') {
+      var l = p[1] || null, c = p[2] || null;
+      if (S.log === l && S.cus === c) { S.log = null; S.cus = null; }
+      else { S.log = l; S.cus = c; }
+    }
+    else if (k === 'metric' || k === 'period') S[k] = p[1];
+    else toggle(k, spec.slice(k.length + 1));
+  }
+
+  /* ── tooltip ── */
+  function tipHtml(r) {
+    var rows = [['Industry', esc(r.ind)], ['Relationship', r.rel + (r.mandateNew ? ' <span class="muted">· owner-mandated NEW CLIENT</span>' : '')]];
+    if (r.rel === 'CLIENT') {
+      rows.push(['Client Tenure', TENURE[r.ten].label]);
+      rows.push(['Client Since', r.f.since ? esc(r.f.since.v) : '<span class="muted">Not available</span>']);
+      rows.push(['Akzent Logistics', STATUS[r.log].label + ' <span class="muted">· ' + basisText(r, 'log') + '</span>']);
+      rows.push(['Arcatek Customs', STATUS[r.cus].label + ' <span class="muted">· ' + basisText(r, 'cus') + '</span>']);
+      ['rev', 'pro', 'mar'].forEach(function (m) {
+        var x = fin(r, S.period, m), label = m === 'mar' ? 'Margin' : METRICS[m];
+        if (m === 'mar') { if (x) rows.push([label + ' · ' + PERIODS[S.period], x.v + '% <span class="muted">· as stated</span>']); return; }
+        rows.push([label + ' · ' + PERIODS[S.period], x ? '<span class="' + (x.v < 0 ? 'neg' : '') + '">' + money(x) + '</span>' +
+          (x.cur ? '' : ' <span class="muted">(currency not stated)</span>') + (finContext(x) ? ' <span class="muted">· ' + esc(finContext(x)) + '</span>' : '')
+          : '<span class="muted">' + (r.f.finNote ? 'Not account-level' : 'Not available') + '</span>']);
+      });
+    }
+    if (r.f.pj) rows.push(['PJ Visible', Number(r.f.pj.v).toLocaleString('en-US') + ' Shipments <span class="muted">· ' + esc(r.f.pj.p) + '</span>']);
+    return '<h4>' + esc(r.name) + '</h4><dl>' + rows.map(function (x) { return '<dt>' + x[0] + '</dt><dd>' + x[1] + '</dd>'; }).join('') +
+           '</dl><div class="hint">Open Account Intelligence →</div>';
+  }
+  function showTip(el) {
+    var id = el.getAttribute('data-d2-tip'), txt = el.getAttribute('data-d2-tipt');
+    if (!id && !txt) return;
+    tipEl.innerHTML = id ? tipHtml(BY_ID[id]) : esc(txt);
+    tipEl.classList.add('show');
+    tipEl.setAttribute('aria-hidden', 'false');
+    var b = el.getBoundingClientRect(), tw = tipEl.offsetWidth, th = tipEl.offsetHeight;
+    var x = Math.min(window.innerWidth - tw - 12, Math.max(12, b.left + b.width / 2 - tw / 2));
+    var y = b.top - th - 10;
+    if (y < 12) y = Math.min(window.innerHeight - th - 12, b.bottom + 10);
+    tipEl.style.left = x + 'px'; tipEl.style.top = y + 'px';
+    tipFor = el;
+  }
+  function hideTip() {
+    if (!tipEl) return;
+    tipEl.classList.remove('show'); tipEl.setAttribute('aria-hidden', 'true'); tipFor = null;
+  }
+
+  /* ── events (delegated; registered once) ── */
+  function bind() {
+    root.addEventListener('click', function (e) {
+      var t = e.target.closest ? e.target.closest('[data-d2-set],[data-d2-sort],[data-d2-clear],[data-d2-reset],[data-d2-open],[data-d2-go],[data-d2-print],[data-d2-row]') : null;
+      if (!t || !root.contains(t)) return;
+      if (t.hasAttribute('data-d2-set')) { applySet(t.getAttribute('data-d2-set')); renderAll(); return; }
+      if (t.hasAttribute('data-d2-sort')) {
+        var k = t.getAttribute('data-d2-sort');
+        S.sort = S.sort.k === k ? { k: k, d: -S.sort.d } : { k: k, d: (k === 'rev' || k === 'pro' || k === 'ad') ? -1 : 1 };
+        renderAll(); return;
+      }
+      if (t.hasAttribute('data-d2-clear')) {
+        var c = t.getAttribute('data-d2-clear');
+        if (c === 'rel') S.rel = 'all'; else if (c === 'q') { S.q = ''; document.getElementById('d2-q').value = ''; } else S[c] = null;
+        renderAll(); return;
+      }
+      if (t.hasAttribute('data-d2-reset')) {
+        var keep = { metric: S.metric, period: S.period, sort: S.sort };
+        S = defaults(); S.metric = keep.metric; S.period = keep.period; S.sort = keep.sort;
+        document.getElementById('d2-q').value = '';
+        renderAll(); return;
+      }
+      if (t.hasAttribute('data-d2-open')) { hideTip(); showViewById(t.getAttribute('data-d2-open')); return; }
+      if (t.hasAttribute('data-d2-row')) { hideTip(); showViewById(t.getAttribute('data-d2-row')); return; }
+      if (t.hasAttribute('data-d2-go')) { showViewById(t.getAttribute('data-d2-go')); return; }
+      if (t.hasAttribute('data-d2-print')) { printView(VIEW_ID); return; }
+    });
+    root.addEventListener('mouseover', function (e) {
+      var el = e.target.closest ? e.target.closest('[data-d2-tip],[data-d2-tipt]') : null;
+      if (el && el !== tipFor && root.contains(el)) showTip(el);
+    });
+    root.addEventListener('mouseout', function (e) {
+      if (tipFor && (!e.relatedTarget || !tipFor.contains(e.relatedTarget))) hideTip();
+    });
+    root.addEventListener('focusin', function (e) {
+      var el = e.target.closest ? e.target.closest('[data-d2-tip],[data-d2-tipt]') : null;
+      if (el) showTip(el); else hideTip();
+    });
+    root.addEventListener('focusout', hideTip);
+    root.addEventListener('keydown', function (e) { if (e.key === 'Escape' && tipFor) hideTip(); });
+    var scroller = document.getElementById('main-scroll');
+    if (scroller) scroller.addEventListener('scroll', function () { if (tipFor) hideTip(); }, { passive: true });
+    window.addEventListener('resize', function () {
+      if (!ready || !root.classList.contains('active')) return;
+      clearTimeout(tmTimer);
+      tmTimer = setTimeout(function () { layoutTreemap(financeSets()); }, 120);
+    });
+  }
+
+  function init() {
+    if (ready) return;
+    ready = true;
+    S = defaults();
+    buildRows();
+    buildSelects();
+    bind();
+    renderAll();
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    root = document.getElementById(VIEW_ID);
+    if (!root || typeof ACCOUNTS === 'undefined') return;
+    tipEl = document.getElementById('d2-tip');
+    /* Render lazily on first activation (the treemap needs real layout);
+       re-layout the treemap whenever the view is shown again. */
+    var onShow = function () {
+      if (!root.classList.contains('active')) { hideTip(); return; }
+      if (!ready) init(); else layoutTreemap(financeSets());
+    };
+    new MutationObserver(onShow).observe(root, { attributes: true, attributeFilter: ['class'] });
+    if (root.classList.contains('active')) onShow();
+  });
+})();
 </script>
 
 <!-- ══ COMMAND PALETTE OVERLAY ══ -->
