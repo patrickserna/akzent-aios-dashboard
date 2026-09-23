@@ -958,6 +958,7 @@ main {
 .acct-section-dot.current { background: #10b981; }
 .acct-section-dot.new     { background: var(--teal); }
 .acct-section-dot.lead    { background: #f59e0b; }
+.acct-section-dot.nv      { background: #94a3b8; }
 .acct-section-n {
   font-size: 10px;
   font-weight: 800;
@@ -985,6 +986,7 @@ main {
 .acct-tag.rel-current { background: rgba(16,185,129,0.15); color: #10b981;       border-color: rgba(16,185,129,0.3);  font-weight: 700; }
 .acct-tag.rel-new     { background: rgba(0,180,216,0.14);  color: var(--teal-dim); border-color: rgba(0,180,216,0.32); font-weight: 700; }
 .acct-tag.rel-lead    { background: rgba(245,158,11,0.12); color: #b45309;       border-color: rgba(245,158,11,0.3);  font-weight: 700; }
+.acct-tag.rel-nv      { background: rgba(148,163,184,0.18); color: #475569;      border-color: rgba(148,163,184,0.45); font-weight: 700; }
 
 /* ── KICK-OFF LEADS (engagement starting) ── */
 .account-card.kickoff {
@@ -1022,6 +1024,8 @@ main {
 #cmd-scope.on { display: inline-block; }
 .cmd-pill.newclient { background: rgba(0,180,216,0.12); color: var(--teal-dim); }
 .cmd-dot.newclient  { background: var(--teal); }
+.cmd-pill.nv { background: rgba(148,163,184,0.18); color: #475569; }
+.cmd-dot.nv  { background: #94a3b8; }
 
 /* ── NETWORK VIEW ── */
 .network-table { width: 100%; border-collapse: collapse; font-size: 12px; }
@@ -16255,6 +16259,866 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
 #view-crown-envases .crn-gt { display:inline-block; font-size:8px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; color:var(--teal-dim); background:rgba(0,180,216,0.1); border:1px solid rgba(0,180,216,0.35); padding:1px 5px; border-radius:3px; margin-top:3px; }
 /* The Core Route tables carry a wide screen min-width; print must be free to reflow them. */
 @media print { #view-crown-envases .crn-route-table { min-width:0 !important; font-size:8px; } }
+/* MISSION FOODS MEXICO — scoped view components (#view-mission-foods only). AIOS Analysis 23-Sep-2026 · Account status Not Validated (ARCATEK Customs Confirmed Not Captured within the PJ Visible Universe · AKZENT Logistics Not Validated) · 10-chapter seller report. Cloned from the Crown Envases scaffold. */
+#view-mission-foods .num { text-align:right; }
+#view-mission-foods .mfm-sublbl { font-size:10px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal-dim); margin-bottom:8px; }
+#view-mission-foods .mfm-sublbl.muted { color:var(--text-light); }
+#view-mission-foods .mfm-eyebrow { font-size:9px; font-weight:800; letter-spacing:1.3px; text-transform:uppercase; color:var(--teal-dim); }
+#view-mission-foods .mfm-src { display:inline-block; font-size:8.5px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; padding:1px 6px; border-radius:3px; vertical-align:1px; }
+#view-mission-foods .mfm-src.pj { color:var(--navy); background:rgba(13,43,94,0.08); }
+#view-mission-foods .mfm-src.ak { color:#047857; background:rgba(16,185,129,0.12); }
+#view-mission-foods .mfm-src.ar { color:#b45309; background:rgba(245,158,11,0.15); }
+#view-mission-foods .mfm-calc { display:inline-block; font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--teal-dim); border:1px solid rgba(0,180,216,0.45); padding:1px 6px; border-radius:3px; }
+#view-mission-foods .mfm-mono { font-family:ui-monospace,Menlo,monospace; font-weight:700; color:var(--navy); }
+#view-mission-foods .mfm-muted td { color:var(--text-muted); }
+
+/* Chapters */
+#view-mission-foods .mfm-chapter { margin:26px 0 12px; padding:16px 22px; border-radius:8px; color:#fff; background:linear-gradient(120deg,var(--navy) 0%,#1e4a8a 100%); position:relative; overflow:hidden; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-mission-foods .mfm-chapter:first-of-type { margin-top:8px; }
+#view-mission-foods .mfm-chapter::after { content:""; position:absolute; right:0; top:0; bottom:0; width:6px; background:var(--teal); }
+#view-mission-foods .mfm-chapter.exec::after { background:#10b981; }
+#view-mission-foods .mfm-chapter.cus { background:linear-gradient(120deg,#0b4f63 0%,#0e7490 100%); }
+#view-mission-foods .mfm-chapter.cus::after { background:#f59e0b; }
+#view-mission-foods .mfm-chapter.syn { background:linear-gradient(120deg,#064e3b 0%,#047857 100%); }
+#view-mission-foods .mfm-chapter-n { font-size:9.5px; font-weight:800; letter-spacing:2px; text-transform:uppercase; opacity:0.75; }
+#view-mission-foods .mfm-chapter-t { font-size:22px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; line-height:1.2; margin-top:2px; }
+#view-mission-foods .mfm-chapter-s { font-size:11.5px; font-weight:600; opacity:0.85; margin-top:3px; }
+#view-mission-foods .mfm-chapnav { display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-top:14px; }
+#view-mission-foods .mfm-chapnav > span { font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-light); }
+#view-mission-foods .mfm-chapnav button { font:inherit; font-size:11px; font-weight:800; color:var(--navy); background:var(--surface); border:1px solid var(--border); border-radius:5px; padding:6px 11px; cursor:pointer; }
+#view-mission-foods .mfm-chapnav button:hover { border-color:var(--teal); color:var(--teal-dim); }
+
+/* Executive viewport */
+#view-mission-foods .mfm-hero { display:grid; grid-template-columns:1.15fr 1fr 1fr; gap:14px; align-items:stretch; }
+#view-mission-foods .mfm-hero > div { padding:13px 16px; background:var(--surface); border:1px solid var(--border); border-radius:7px; }
+#view-mission-foods .mfm-hero .k { font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-mission-foods .mfm-hero .v { font-size:34px; font-weight:800; color:var(--navy); line-height:1.1; margin-top:2px; }
+#view-mission-foods .mfm-hero .v small { font-size:12px; font-weight:700; color:var(--text-muted); }
+#view-mission-foods .mfm-hero .s { font-size:10.5px; color:var(--text-muted); line-height:1.55; margin-top:5px; }
+#view-mission-foods .mfm-split { display:flex; height:14px; border-radius:7px; overflow:hidden; margin-top:8px; }
+#view-mission-foods .mfm-split > div { height:100%; }
+#view-mission-foods .mfm-delta { font-size:22px; font-weight:800; line-height:1.15; }
+#view-mission-foods .mfm-delta.dn { color:#b91c1c; }
+#view-mission-foods .mfm-delta.up { color:#047857; }
+#view-mission-foods .mfm-trendrow { display:flex; gap:14px; flex-wrap:wrap; margin-top:7px; }
+#view-mission-foods .mfm-trendrow div { font-size:10.5px; color:var(--text-muted); }
+#view-mission-foods .mfm-trendrow b { display:block; font-size:15px; font-weight:800; }
+
+/* The two-wallet asymmetry — the signature visual of this account */
+#view-mission-foods .mfm-asym { display:grid; grid-template-columns:1fr 46px 1fr; gap:10px; align-items:center; margin-top:4px; }
+#view-mission-foods .mfm-asym > div.w { padding:16px 18px; border-radius:8px; border:1.5px solid var(--border); background:var(--surface); }
+#view-mission-foods .mfm-asym .w.log { border-top:4px solid #94a3b8; }
+#view-mission-foods .mfm-asym .w.cus { border-top:4px solid var(--teal); background:rgba(0,180,216,0.04); }
+#view-mission-foods .mfm-asym .wk { font-size:9.5px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); }
+#view-mission-foods .mfm-asym .wv { font-size:52px; font-weight:800; line-height:1.05; margin-top:2px; letter-spacing:-1px; }
+#view-mission-foods .mfm-asym .log .wv { color:#64748b; }
+#view-mission-foods .mfm-asym .cus .wv { color:var(--teal-dim); }
+#view-mission-foods .mfm-asym .wf { font-size:11px; color:var(--text-muted); margin-top:3px; line-height:1.5; }
+#view-mission-foods .mfm-asym .wbar { height:10px; border-radius:5px; background:#e6eaf1; overflow:hidden; margin-top:10px; }
+#view-mission-foods .mfm-asym .wbar > div { height:100%; }
+#view-mission-foods .mfm-asym .vs { text-align:center; font-size:11px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-light); }
+#view-mission-foods .mfm-asym-note { margin-top:12px; padding:11px 15px; background:rgba(13,43,94,0.04); border-left:3px solid var(--navy); border-radius:0 5px 5px 0; font-size:11px; color:var(--text-muted); line-height:1.65; }
+
+/* Signal / Interpretation / Discovery — always three visually separate layers */
+#view-mission-foods .mfm-sig { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:14px; }
+#view-mission-foods .mfm-sig > div { padding:12px 15px; border-radius:6px; font-size:11px; line-height:1.6; color:var(--text-muted); }
+#view-mission-foods .mfm-sig b { display:block; font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; margin-bottom:4px; }
+#view-mission-foods .mfm-sig .s1 { background:rgba(13,43,94,0.04); border-top:3px solid var(--navy); }
+#view-mission-foods .mfm-sig .s1 b { color:var(--navy); }
+#view-mission-foods .mfm-sig .s2 { background:rgba(0,180,216,0.05); border-top:3px solid var(--teal); }
+#view-mission-foods .mfm-sig .s2 b { color:var(--teal-dim); }
+#view-mission-foods .mfm-sig .s3 { background:rgba(245,158,11,0.05); border-top:3px solid #f59e0b; }
+#view-mission-foods .mfm-sig .s3 b { color:#b45309; }
+
+/* Notes */
+#view-mission-foods .mfm-note { margin-top:12px; padding:11px 15px; background:rgba(245,158,11,0.05); border-left:3px solid #f59e0b; border-radius:0 5px 5px 0; font-size:11px; color:var(--text-muted); line-height:1.65; }
+#view-mission-foods .mfm-note-navy { margin-top:12px; padding:11px 15px; background:rgba(13,43,94,0.04); border-left:3px solid var(--navy); border-radius:0 5px 5px 0; font-size:11px; color:var(--text-muted); line-height:1.65; }
+#view-mission-foods .mfm-note-na { margin-top:12px; padding:11px 15px; background:rgba(148,163,184,0.09); border-left:3px solid #94a3b8; border-radius:0 5px 5px 0; font-size:11px; color:var(--text-muted); line-height:1.65; }
+
+/* Progressive-disclosure ladder */
+#view-mission-foods .mfm-ladder { display:flex; flex-wrap:wrap; gap:5px; align-items:center; font-size:10px; font-weight:800; letter-spacing:0.4px; text-transform:uppercase; color:var(--navy); }
+#view-mission-foods .mfm-ladder span { background:var(--surface); border:1px solid var(--border); padding:3px 9px; border-radius:4px; }
+#view-mission-foods .mfm-ladder i { font-style:normal; color:var(--text-light); }
+
+/* Bar rows (modes, gateways, geography, partners, HS) */
+#view-mission-foods .mfm-rows { display:flex; flex-direction:column; gap:7px; }
+#view-mission-foods .mfm-row { display:grid; grid-template-columns:minmax(170px,1.5fr) 1fr 108px; gap:10px; align-items:center; padding:5px 0; border-bottom:1px solid var(--border); }
+#view-mission-foods .mfm-row:last-child { border-bottom:none; }
+#view-mission-foods .mfm-row .lbl { font-size:11.5px; font-weight:700; color:var(--navy); line-height:1.4; word-break:break-word; }
+#view-mission-foods .mfm-row .lbl em { display:block; font-style:normal; font-size:9.5px; font-weight:600; color:var(--text-muted); }
+#view-mission-foods .mfm-row .bar { height:9px; border-radius:5px; background:#e6eaf1; overflow:hidden; }
+#view-mission-foods .mfm-row .bar > div { height:100%; }
+#view-mission-foods .mfm-row .val { text-align:right; font-size:12px; font-weight:800; color:var(--navy); white-space:nowrap; }
+#view-mission-foods .mfm-row .val span { font-size:10px; font-weight:700; color:var(--text-muted); margin-left:4px; }
+
+/* Route tables */
+#view-mission-foods .mfm-route-table { width:100%; min-width:1160px; border-collapse:collapse; font-size:11px; }
+#view-mission-foods .mfm-route-table td:nth-child(2),
+#view-mission-foods .mfm-route-table td:nth-child(4) { min-width:150px; }
+#view-mission-foods .mfm-route-table td:nth-child(3) { min-width:190px; }
+#view-mission-foods .mfm-route-table th { position:sticky; top:0; z-index:2; background:var(--navy); color:#fff; font-size:8.5px; font-weight:800; letter-spacing:0.7px; text-transform:uppercase; padding:8px 7px; text-align:left; white-space:nowrap; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-mission-foods .mfm-route-table th.num { text-align:right; }
+#view-mission-foods .mfm-route-table td { padding:7px; border-bottom:1px solid var(--border); vertical-align:top; }
+#view-mission-foods .mfm-route-table tbody tr:hover { background:rgba(0,180,216,0.04); }
+#view-mission-foods .mfm-rank { width:34px; }
+#view-mission-foods .mfm-rank-pill { display:inline-block; min-width:26px; text-align:center; font-size:10px; font-weight:800; color:var(--navy); background:rgba(13,43,94,0.07); border-radius:4px; padding:2px 5px; }
+#view-mission-foods .mfm-ent strong { font-size:11px; font-weight:700; color:var(--navy); line-height:1.35; display:block; }
+#view-mission-foods .mfm-ent .mfm-na { font-size:9.5px; font-weight:600; color:var(--text-light); font-style:italic; }
+#view-mission-foods .mfm-ent .mfm-self { display:inline-block; font-size:8px; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--navy); background:rgba(13,43,94,0.07); padding:1px 5px; border-radius:3px; margin-top:3px; }
+#view-mission-foods .mfm-gw-name { font-size:9.5px; color:var(--text-muted); line-height:1.4; margin-top:3px; word-break:break-word; }
+#view-mission-foods .mfm-cum { min-width:78px; }
+#view-mission-foods .mfm-cum-bar { height:4px; border-radius:2px; background:#e6eaf1; overflow:hidden; margin-top:3px; }
+#view-mission-foods .mfm-cum-bar > div { height:100%; background:var(--teal); }
+#view-mission-foods .mfm-dates { font-size:9.5px; color:var(--text-muted); white-space:nowrap; }
+#view-mission-foods .mfm-scroll { overflow-x:auto; max-height:640px; overflow-y:auto; border:1px solid var(--border); border-radius:6px; }
+
+/* Patent components */
+#view-mission-foods .mfm-pat { display:inline-block; font-size:10px; font-weight:800; letter-spacing:0.5px; padding:2px 7px; border-radius:4px; white-space:nowrap; }
+#view-mission-foods .mfm-pat.ak { color:#fff; background:var(--teal-dim); }
+#view-mission-foods .mfm-pat.ot { color:#92400e; background:rgba(245,158,11,0.16); border:1px solid rgba(245,158,11,0.4); }
+#view-mission-foods .mfm-pat.off { color:var(--text-light); background:rgba(148,163,184,0.15); border:1px dashed rgba(148,163,184,0.7); }
+#view-mission-foods .mfm-gwr { display:grid; grid-template-columns:minmax(190px,1.4fr) 1fr 150px; gap:12px; align-items:center; padding:8px 0; border-bottom:1px solid var(--border); }
+#view-mission-foods .mfm-gwr:last-child { border-bottom:none; }
+#view-mission-foods .mfm-gwr .mfm-cw-lbl { font-size:11.5px; font-weight:700; color:var(--navy); line-height:1.4; word-break:break-word; }
+#view-mission-foods .mfm-gwr .mfm-cw-sub { font-size:9.5px; color:var(--text-muted); margin-top:2px; }
+#view-mission-foods .mfm-cw-bar { display:flex; height:16px; border-radius:8px; overflow:hidden; background:#e6eaf1; }
+#view-mission-foods .mfm-cw-bar > div { height:100%; }
+#view-mission-foods .mfm-cw-ak { background:var(--teal); }
+#view-mission-foods .mfm-cw-ot { background:#f59e0b; }
+#view-mission-foods .mfm-cw-legend { text-align:right; font-size:10px; color:var(--text-muted); white-space:nowrap; }
+#view-mission-foods .mfm-cw-legend b { display:block; font-size:15px; font-weight:800; color:var(--navy); }
+#view-mission-foods .mfm-gwr.hot { background:rgba(0,180,216,0.05); border-radius:6px; padding:10px 10px; border-bottom:none; margin-bottom:4px; }
+#view-mission-foods .mfm-gwr.hot .mfm-cw-bar { height:22px; }
+#view-mission-foods .mfm-gwr.zero .mfm-cw-legend b { color:#b45309; }
+#view-mission-foods .mfm-gwr.small { opacity:0.72; }
+#view-mission-foods .mfm-gwr.small .mfm-cw-lbl { font-size:10.5px; }
+#view-mission-foods .mfm-gwr.small .mfm-cw-bar { height:9px; }
+
+/* Materiality scale — keeps a 100% share on small volume from overpowering larger volumes */
+#view-mission-foods .mfm-matbar { height:6px; border-radius:3px; background:#e6eaf1; overflow:hidden; margin-top:4px; }
+#view-mission-foods .mfm-matbar > div { height:100%; background:var(--navy); opacity:0.55; }
+#view-mission-foods .mfm-matlbl { font-size:8.5px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:var(--text-light); margin-top:3px; }
+
+/* Deep dives */
+#view-mission-foods .mfm-dd { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+#view-mission-foods .mfm-dd > div { padding:13px 16px; background:var(--surface); border:1px solid var(--border); border-top:3px solid #f59e0b; border-radius:7px; }
+#view-mission-foods .mfm-dd .h { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+#view-mission-foods .mfm-dd .n { font-size:26px; font-weight:800; color:var(--navy); line-height:1.1; }
+#view-mission-foods .mfm-dd .n small { font-size:10px; font-weight:700; color:var(--text-muted); }
+#view-mission-foods .mfm-dd .g { font-size:10.5px; color:var(--navy); font-weight:700; margin-top:5px; line-height:1.5; }
+#view-mission-foods .mfm-dd .w { font-size:10px; color:var(--text-muted); margin-top:4px; line-height:1.5; }
+#view-mission-foods .mfm-dd .tp { font-size:10px; color:var(--text-muted); margin-top:6px; line-height:1.6; }
+#view-mission-foods .mfm-dd .tp em { font-style:normal; color:var(--navy); font-weight:700; }
+#view-mission-foods .mfm-dd .tp.na { color:var(--text-light); font-style:italic; }
+
+/* Profit provenance */
+#view-mission-foods .mfm-prov { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+#view-mission-foods .mfm-prov > div { padding:14px 17px; background:rgba(148,163,184,0.07); border:1px dashed rgba(148,163,184,0.7); border-radius:7px; }
+#view-mission-foods .mfm-prov .k { font-size:9.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-mission-foods .mfm-prov .v { font-size:19px; font-weight:800; color:#64748b; margin-top:3px; line-height:1.2; }
+#view-mission-foods .mfm-prov .s { font-size:10.5px; color:var(--text-muted); margin-top:4px; line-height:1.55; }
+
+/* Positioning */
+#view-mission-foods .mfm-pos { display:grid; grid-template-columns:repeat(5,1fr); gap:9px; }
+#view-mission-foods .mfm-pos > div { padding:12px 13px; background:var(--surface); border:1px solid var(--border); border-top:3px solid #10b981; border-radius:7px; }
+#view-mission-foods .mfm-pos b { display:block; font-size:11.5px; font-weight:800; color:var(--navy); line-height:1.35; }
+#view-mission-foods .mfm-pos span { display:block; font-size:10px; color:var(--text-muted); margin-top:4px; line-height:1.5; }
+
+#view-mission-foods .mfm-dlist { margin:6px 0 0 16px; padding:0; font-size:11px; color:var(--text-muted); line-height:1.75; }
+#view-mission-foods .mfm-dlist li { margin:2px 0; }
+#view-mission-foods .mfm-dlist b { color:var(--navy); }
+
+@media (max-width: 1100px) {
+  #view-mission-foods .mfm-pos { grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width: 900px) {
+  #view-mission-foods .mfm-hero, #view-mission-foods .mfm-sig, #view-mission-foods .mfm-dd,
+  #view-mission-foods .mfm-prov, #view-mission-foods .mfm-pos { grid-template-columns:1fr; }
+  #view-mission-foods .mfm-asym { grid-template-columns:1fr; }
+  #view-mission-foods .mfm-asym .vs { padding:4px 0; }
+  #view-mission-foods .mfm-row { grid-template-columns:1fr 92px; }
+  #view-mission-foods .mfm-row .bar { grid-column:1 / -1; }
+  #view-mission-foods .mfm-gwr { grid-template-columns:1fr; }
+  #view-mission-foods .mfm-gwr .mfm-cw-legend { text-align:left; }
+}
+/* Print: every table and appendix opens in full, scroll containers release. */
+@media print {
+  #view-mission-foods .mfm-scroll { overflow:visible !important; max-height:none !important; border:none; }
+  #view-mission-foods .mfm-route-table th { position:static; }
+  #view-mission-foods .mfm-route-table { min-width:0; font-size:8.5px; }
+}
+/* Customs-client additions — customs chapter prominence, triple wallet, HS presence matrix */
+#view-mission-foods .mfm-chapter.cus { box-shadow:0 0 0 2px rgba(245,158,11,0.35); }
+#view-mission-foods .mfm-chapter .mfm-prim { display:inline-block; margin-top:8px; font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; background:#f59e0b; color:#1f2937; padding:3px 9px; border-radius:4px; }
+#view-mission-foods .mfm-tri { display:grid; grid-template-columns:1fr 1.35fr 0.8fr; gap:12px; align-items:stretch; margin-top:4px; }
+#view-mission-foods .mfm-tri > div { padding:15px 17px; border-radius:8px; border:1.5px solid var(--border); background:var(--surface); }
+#view-mission-foods .mfm-tri .log { border-top:4px solid #94a3b8; }
+#view-mission-foods .mfm-tri .cus { border:2px solid var(--teal); border-top:5px solid var(--teal); background:rgba(0,180,216,0.05); }
+#view-mission-foods .mfm-tri .pro { border-style:dashed; background:rgba(148,163,184,0.06); }
+#view-mission-foods .mfm-tri .wk { font-size:9.5px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); }
+#view-mission-foods .mfm-tri .wv { font-size:46px; font-weight:800; line-height:1.05; margin-top:3px; letter-spacing:-1px; }
+#view-mission-foods .mfm-tri .log .wv { color:#64748b; }
+#view-mission-foods .mfm-tri .cus .wv { color:var(--teal-dim); font-size:58px; }
+#view-mission-foods .mfm-tri .pro .wv { font-size:15px; font-weight:800; color:#64748b; letter-spacing:0; line-height:1.35; margin-top:8px; }
+#view-mission-foods .mfm-tri .wf { font-size:11px; color:var(--text-muted); margin-top:4px; line-height:1.55; }
+#view-mission-foods .mfm-tri .wbar { height:10px; border-radius:5px; background:#e6eaf1; overflow:hidden; margin-top:10px; display:flex; }
+#view-mission-foods .mfm-tri .wbar > div { height:100%; }
+#view-mission-foods .mfm-thesis { margin-top:16px; padding:15px 19px; border-radius:8px; background:linear-gradient(120deg,rgba(13,43,94,0.05),rgba(0,180,216,0.07)); border-left:4px solid var(--teal); font-size:13px; line-height:1.65; color:var(--navy); font-weight:600; }
+#view-mission-foods .mfm-thesis b { font-weight:800; }
+#view-mission-foods .mfm-dir { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+#view-mission-foods .mfm-dir > div { padding:13px 16px; border:1px solid var(--border); border-radius:7px; background:var(--surface); }
+#view-mission-foods .mfm-dir .k { font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-mission-foods .mfm-dir .v { font-size:30px; font-weight:800; color:var(--teal-dim); line-height:1.1; margin-top:2px; }
+#view-mission-foods .mfm-dir .v.nv { color:var(--navy); }
+#view-mission-foods .mfm-dir .s { font-size:10.5px; color:var(--text-muted); line-height:1.55; margin-top:5px; }
+#view-mission-foods .mfm-hs { width:100%; border-collapse:collapse; font-size:11.5px; }
+#view-mission-foods .mfm-hs th { background:var(--navy); color:#fff; font-size:8.5px; font-weight:800; letter-spacing:0.7px; text-transform:uppercase; padding:8px; text-align:center; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-mission-foods .mfm-hs th:first-child { text-align:left; }
+#view-mission-foods .mfm-hs td { padding:7px 8px; border-bottom:1px solid var(--border); text-align:center; }
+#view-mission-foods .mfm-hs td:first-child { text-align:left; }
+#view-mission-foods .mfm-hs .y { color:var(--teal-dim); font-weight:800; }
+#view-mission-foods .mfm-hs .n { color:var(--text-light); font-size:10px; }
+#view-mission-foods .mfm-cp { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+#view-mission-foods .mfm-cp > div { padding:11px 14px; border:1px solid var(--border); border-radius:7px; background:var(--surface); font-size:10.5px; color:var(--text-muted); line-height:1.55; }
+#view-mission-foods .mfm-cp b { display:block; font-size:11.5px; color:var(--navy); font-weight:700; margin-bottom:3px; }
+#view-mission-foods .mfm-cp .r { font-size:9px; font-weight:800; letter-spacing:0.8px; text-transform:uppercase; color:var(--teal-dim); }
+#view-mission-foods .mfm-ov { display:inline-block; font-size:11px; font-weight:800; letter-spacing:0.8px; text-transform:uppercase; color:#b45309; background:rgba(245,158,11,0.12); border:1px solid rgba(245,158,11,0.45); padding:4px 10px; border-radius:5px; }
+@media (max-width: 900px) {
+  #view-mission-foods .mfm-tri, #view-mission-foods .mfm-dir, #view-mission-foods .mfm-cp { grid-template-columns:1fr; }
+  #view-mission-foods .mfm-2col { grid-template-columns:1fr !important; }
+}
+@media print {
+  #view-mission-foods .mfm-tri .cus .wv { font-size:42px; }
+}
+/* Customs-client additions (II) — relationship strip, priorities, discovery, modal bars */
+#view-mission-foods .mfm-rel { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; }
+#view-mission-foods .mfm-rel > div { padding:10px 13px; border:1px solid var(--border); border-radius:7px; background:var(--surface); }
+#view-mission-foods .mfm-rel .k { font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-mission-foods .mfm-rel .v { font-size:13px; font-weight:800; color:var(--navy); margin-top:3px; line-height:1.3; }
+#view-mission-foods .mfm-rel .v.on { color:#047857; }
+#view-mission-foods .mfm-rel .v.off { color:#64748b; }
+#view-mission-foods .mfm-rel .v.x { color:var(--teal-dim); }
+#view-mission-foods .mfm-flow { display:flex; flex-wrap:wrap; align-items:center; gap:6px; font-size:11px; font-weight:800; color:var(--navy); }
+#view-mission-foods .mfm-flow span { background:var(--surface); border:1px solid var(--border); padding:4px 10px; border-radius:5px; }
+#view-mission-foods .mfm-flow i { font-style:normal; color:var(--text-light); }
+#view-mission-foods .mfm-sigc { display:grid; grid-template-columns:1.4fr 1fr; gap:12px; }
+#view-mission-foods .mfm-sigc > div { padding:15px 17px; border:1px solid var(--border); border-radius:8px; background:var(--surface); border-top:4px solid var(--navy); }
+#view-mission-foods .mfm-sigc .n { font-size:40px; font-weight:800; color:var(--navy); line-height:1.05; margin-top:10px; }
+#view-mission-foods .mfm-sigc .n small { font-size:12px; font-weight:700; color:var(--text-muted); }
+#view-mission-foods .mfm-sigc .s { font-size:10.5px; color:var(--text-muted); line-height:1.55; margin-top:6px; }
+#view-mission-foods .mfm-prio { counter-reset:lp; list-style:none; margin:0; padding:0; display:grid; gap:8px; }
+#view-mission-foods .mfm-prio li { counter-increment:lp; display:grid; grid-template-columns:34px 1fr auto; gap:12px; align-items:center; padding:10px 14px; border:1px solid var(--border); border-radius:7px; background:var(--surface); font-size:12px; color:var(--navy); font-weight:700; line-height:1.45; }
+#view-mission-foods .mfm-prio li::before { content:counter(lp); display:flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:50%; background:var(--navy); color:#fff; font-size:12px; font-weight:800; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-mission-foods .mfm-prio li em { font-style:normal; font-size:9px; font-weight:800; letter-spacing:0.8px; text-transform:uppercase; padding:3px 8px; border-radius:4px; white-space:nowrap; }
+#view-mission-foods .mfm-prio li em.c { color:var(--teal-dim); background:rgba(0,180,216,0.1); }
+#view-mission-foods .mfm-prio li em.l { color:#475569; background:rgba(148,163,184,0.18); }
+#view-mission-foods .mfm-dq { display:grid; grid-template-columns:repeat(3,1fr); gap:9px; }
+#view-mission-foods .mfm-dq > div { padding:11px 14px; border:1px solid var(--border); border-left:3px solid #f59e0b; border-radius:0 7px 7px 0; background:var(--surface); font-size:11.5px; font-weight:700; color:var(--navy); line-height:1.5; }
+#view-mission-foods .mfm-dq > div span { display:block; font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:#b45309; margin-bottom:3px; }
+#view-mission-foods .mfm-gwi { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-top:14px; }
+#view-mission-foods .mfm-gwi > div { padding:11px 14px; border:1px solid var(--border); border-top:3px solid var(--teal); border-radius:7px; background:var(--surface); }
+#view-mission-foods .mfm-gwi > div.z { border-top-color:#f59e0b; }
+#view-mission-foods .mfm-gwi b { display:block; font-size:11.5px; font-weight:800; color:var(--navy); }
+#view-mission-foods .mfm-gwi span { display:block; font-size:10.5px; color:var(--text-muted); line-height:1.55; margin-top:4px; }
+@media (max-width: 1100px) {
+  #view-mission-foods .mfm-rel { grid-template-columns:repeat(3,1fr); }
+  #view-mission-foods .mfm-gwi, #view-mission-foods .mfm-dq { grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width: 900px) {
+  #view-mission-foods .mfm-rel, #view-mission-foods .mfm-sigc, #view-mission-foods .mfm-gwi, #view-mission-foods .mfm-dq { grid-template-columns:1fr; }
+  #view-mission-foods .mfm-prio li { grid-template-columns:34px 1fr; }
+  #view-mission-foods .mfm-prio li em { grid-column:2; justify-self:start; }
+}
+/* Deep-lane components — provenance tags, lane concentration, corridor cards, TP × Lane, persistence, matrix, roadmap */
+#view-mission-foods .mfm-src.ai { color:var(--teal-dim); background:rgba(0,180,216,0.1); }
+#view-mission-foods .mfm-src.dv { color:#b45309; background:rgba(245,158,11,0.13); }
+#view-mission-foods .mfm-src.ca { color:var(--teal-dim); background:transparent; border:1px solid rgba(0,180,216,0.45); }
+#view-mission-foods .mfm-micro { font-size:10px; font-style:italic; color:var(--text-muted); margin-top:6px; }
+#view-mission-foods .mfm-badges { display:flex; gap:6px; align-items:center; }
+#view-mission-foods .mfm-dw { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+#view-mission-foods .mfm-dw > div { padding:16px 18px; border-radius:9px; border:1.5px solid var(--border); background:var(--surface); }
+#view-mission-foods .mfm-dw .log { border-top:5px solid #94a3b8; }
+#view-mission-foods .mfm-dw .cus { border-top:5px solid var(--teal); background:rgba(0,180,216,0.04); }
+#view-mission-foods .mfm-dw .t { font-size:10px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); }
+#view-mission-foods .mfm-dw .big { font-size:50px; font-weight:800; line-height:1.05; letter-spacing:-1px; margin-top:4px; }
+#view-mission-foods .mfm-dw .log .big { color:#64748b; }
+#view-mission-foods .mfm-dw .cus .big { color:var(--teal-dim); }
+#view-mission-foods .mfm-dw .eq { font-size:13px; font-weight:800; color:var(--navy); margin-top:2px; }
+#view-mission-foods .mfm-dw .lab { margin-top:12px; font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-light); border-top:1px dashed var(--border); padding-top:8px; }
+#view-mission-foods .mfm-conc { position:relative; margin:30px 0 26px; }
+#view-mission-foods .mfm-conc-bar { display:flex; height:30px; border-radius:6px; overflow:hidden; background:#e6eaf1; }
+#view-mission-foods .mfm-conc-bar > div { height:100%; border-right:1.5px solid #fff; display:flex; align-items:center; justify-content:center; font-size:9.5px; font-weight:800; color:#fff; overflow:hidden; white-space:nowrap; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-mission-foods .mfm-conc-mk { position:absolute; top:-22px; bottom:-22px; border-left:2px dashed var(--navy); }
+#view-mission-foods .mfm-conc-mk span { position:absolute; top:0; left:4px; font-size:9px; font-weight:800; color:var(--navy); white-space:nowrap; background:var(--surface); padding:0 3px; }
+#view-mission-foods .mfm-conc-mk.b span { top:auto; bottom:0; }
+#view-mission-foods .mfm-kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+#view-mission-foods .mfm-kpis > div { padding:12px 15px; border:1px solid var(--border); border-radius:7px; background:var(--surface); }
+#view-mission-foods .mfm-kpis .k { font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-mission-foods .mfm-kpis .v { font-size:28px; font-weight:800; color:var(--navy); line-height:1.1; margin-top:2px; }
+#view-mission-foods .mfm-kpis .v small { font-size:11px; color:var(--text-muted); font-weight:700; }
+#view-mission-foods .mfm-kpis .s { font-size:10.5px; color:var(--text-muted); line-height:1.5; margin-top:4px; }
+#view-mission-foods .mfm-legend { display:flex; gap:14px; flex-wrap:wrap; font-size:10px; font-weight:700; color:var(--text-muted); }
+#view-mission-foods .mfm-legend i { display:inline-block; width:11px; height:11px; border-radius:3px; vertical-align:-1px; margin-right:4px; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-mission-foods .mfm-cor { border:1px solid var(--border); border-radius:10px; background:var(--surface); overflow:hidden; margin-bottom:16px; break-inside:avoid; }
+#view-mission-foods .mfm-cor.key { border:2px solid var(--teal); box-shadow:0 0 0 4px rgba(0,180,216,0.10); }
+#view-mission-foods .mfm-cor-h { display:flex; align-items:center; gap:12px; flex-wrap:wrap; padding:13px 18px; background:rgba(13,43,94,0.04); border-bottom:1px solid var(--border); }
+#view-mission-foods .mfm-cor.key .mfm-cor-h { background:rgba(0,180,216,0.08); }
+#view-mission-foods .mfm-cor-id { width:34px; height:34px; border-radius:8px; background:var(--navy); color:#fff; font-size:15px; font-weight:800; display:flex; align-items:center; justify-content:center; flex-shrink:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-mission-foods .mfm-cor.key .mfm-cor-id { background:var(--teal-dim); }
+#view-mission-foods .mfm-cor-t { font-size:15px; font-weight:800; color:var(--navy); line-height:1.3; }
+#view-mission-foods .mfm-cor-w { font-size:8.5px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); }
+#view-mission-foods .mfm-cor-flag { margin-left:auto; font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:#fff; background:var(--teal-dim); padding:4px 10px; border-radius:4px; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-mission-foods .mfm-cor-g { display:grid; grid-template-columns:0.9fr 1.35fr 1.35fr 1.1fr; }
+#view-mission-foods .mfm-cor-g > div { padding:13px 16px; border-right:1px solid var(--border); }
+#view-mission-foods .mfm-cor-g > div:last-child { border-right:none; }
+#view-mission-foods .mfm-cor-g .k { font-size:8.5px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal-dim); margin-bottom:6px; }
+#view-mission-foods .mfm-cor-g .n { font-size:30px; font-weight:800; color:var(--navy); line-height:1.05; }
+#view-mission-foods .mfm-cor-g .n small { font-size:11px; font-weight:700; color:var(--text-muted); }
+#view-mission-foods .mfm-cor-g .s { font-size:10.5px; color:var(--text-muted); line-height:1.55; margin-top:4px; }
+#view-mission-foods .mfm-cor-g .s b { color:var(--navy); }
+#view-mission-foods .mfm-cad { width:100%; border-collapse:collapse; font-size:10.5px; }
+#view-mission-foods .mfm-cad td { padding:3px 4px; border-bottom:1px solid var(--border); color:var(--text-muted); }
+#view-mission-foods .mfm-cad td:first-child { color:var(--navy); font-weight:700; }
+#view-mission-foods .mfm-cad td.r { text-align:right; white-space:nowrap; font-weight:800; color:var(--navy); }
+#view-mission-foods .mfm-cad tr:last-child td { border-bottom:none; }
+#view-mission-foods .mfm-pos { display:flex; flex-direction:column; gap:6px; }
+#view-mission-foods .mfm-pos span { display:block; font-size:10.5px; font-weight:700; padding:6px 9px; border-radius:5px; line-height:1.4; }
+#view-mission-foods .mfm-pos .lu { background:rgba(148,163,184,0.14); color:#475569; border-left:3px solid #94a3b8; }
+#view-mission-foods .mfm-pos .ca { background:rgba(0,180,216,0.1); color:var(--teal-dim); border-left:3px solid var(--teal); }
+#view-mission-foods .mfm-pos .co { background:rgba(245,158,11,0.1); color:#92400e; border-left:3px solid #f59e0b; }
+#view-mission-foods .mfm-pos span em { display:block; font-style:normal; font-size:8px; font-weight:800; letter-spacing:1px; text-transform:uppercase; opacity:0.75; }
+#view-mission-foods .mfm-cor .mfm-sig { margin:0; padding:0 16px 16px; }
+#view-mission-foods .mfm-tpl { width:100%; min-width:900px; border-collapse:collapse; font-size:11px; }
+#view-mission-foods .mfm-tpl th { background:var(--navy); color:#fff; font-size:8.5px; font-weight:800; letter-spacing:0.7px; text-transform:uppercase; padding:8px; text-align:left; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-mission-foods .mfm-tpl td { padding:9px 8px; border-bottom:1px solid var(--border); vertical-align:top; }
+#view-mission-foods .mfm-tpl tr.grp td { background:rgba(13,43,94,0.04); font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--navy); padding:6px 8px; }
+#view-mission-foods .mfm-tpl .var td { background:rgba(148,163,184,0.06); }
+#view-mission-foods .mfm-tag { display:inline-block; font-size:8px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; padding:1px 5px; border-radius:3px; margin-left:4px; vertical-align:1px; }
+#view-mission-foods .mfm-tag.af { color:var(--navy); background:rgba(13,43,94,0.08); }
+#view-mission-foods .mfm-tag.sv { color:#92400e; background:rgba(245,158,11,0.14); }
+#view-mission-foods .mfm-tag.self { color:var(--navy); background:rgba(13,43,94,0.07); }
+#view-mission-foods .mfm-shift { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+#view-mission-foods .mfm-shift > div { padding:14px 16px; border:1px solid var(--border); border-radius:8px; background:var(--surface); }
+#view-mission-foods .mfm-shift .row { display:grid; grid-template-columns:118px 1fr 118px; gap:10px; align-items:center; margin-top:10px; }
+#view-mission-foods .mfm-shift .row .l { font-size:10.5px; font-weight:800; color:var(--navy); }
+#view-mission-foods .mfm-shift .row .r { font-size:11px; font-weight:800; color:var(--navy); text-align:right; white-space:nowrap; }
+#view-mission-foods .mfm-dots { display:flex; flex-wrap:wrap; gap:3px; }
+#view-mission-foods .mfm-dots i { width:11px; height:11px; border-radius:2px; background:var(--navy); -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-mission-foods .mfm-dots.h i { background:#94a3b8; }
+#view-mission-foods .mfm-h2c { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+#view-mission-foods .mfm-h2c > div { border:1px solid var(--border); border-radius:8px; background:var(--surface); overflow:hidden; }
+#view-mission-foods .mfm-h2c h4 { margin:0; padding:10px 14px; font-size:13px; font-weight:800; color:#fff; background:var(--navy); -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-mission-foods .mfm-h2c > div.adj h4 { background:var(--teal-dim); }
+#view-mission-foods .mfm-h2c > div.low h4 { background:#b45309; }
+#view-mission-foods .mfm-h2c dl { margin:0; padding:10px 14px 12px; }
+#view-mission-foods .mfm-h2c dt { font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-light); margin-top:8px; }
+#view-mission-foods .mfm-h2c dt:first-child { margin-top:0; }
+#view-mission-foods .mfm-h2c dd { margin:2px 0 0; font-size:11px; color:var(--text-muted); line-height:1.5; }
+#view-mission-foods .mfm-h2c dd.i { color:var(--teal-dim); font-weight:700; }
+#view-mission-foods .mfm-h2c dd.d { color:#b45309; }
+#view-mission-foods .mfm-lad { display:flex; flex-direction:column; gap:10px; }
+#view-mission-foods .mfm-lad > div { display:grid; grid-template-columns:130px 1fr; gap:14px; align-items:start; padding:11px 14px; border:1px solid var(--border); border-radius:7px; background:var(--surface); }
+#view-mission-foods .mfm-lad .k { font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal-dim); padding-top:3px; }
+#view-mission-foods .mfm-chips { display:flex; flex-wrap:wrap; gap:6px; }
+#view-mission-foods .mfm-chips span { font-size:11px; font-weight:700; color:var(--navy); background:rgba(13,43,94,0.05); border:1px solid var(--border); padding:4px 9px; border-radius:5px; }
+#view-mission-foods .mfm-chips span b { font-weight:800; margin-left:4px; }
+#view-mission-foods .mfm-hs { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+#view-mission-foods .mfm-hs > div { border:1px solid var(--border); border-radius:7px; padding:11px 14px; background:var(--surface); }
+#view-mission-foods .mfm-hs > div.hist { opacity:0.8; }
+#view-mission-foods .mfm-hs table { width:100%; border-collapse:collapse; font-size:11px; margin-top:6px; }
+#view-mission-foods .mfm-hs td { padding:4px 0; border-bottom:1px solid var(--border); }
+#view-mission-foods .mfm-hs td.r { text-align:right; font-weight:800; color:var(--navy); }
+#view-mission-foods .mfm-adj { display:grid; grid-template-columns:1.5fr 1fr 1fr; gap:12px; }
+#view-mission-foods .mfm-adj > div { border:1px solid var(--border); border-radius:9px; background:var(--surface); padding:15px 17px; }
+#view-mission-foods .mfm-adj > div.key { border:2px solid var(--teal); background:rgba(0,180,216,0.04); }
+#view-mission-foods .mfm-adj h4 { margin:0 0 4px; font-size:14px; font-weight:800; color:var(--navy); }
+#view-mission-foods .mfm-adj .sub { font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--teal-dim); }
+#view-mission-foods .mfm-adj .two { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin:12px 0; }
+#view-mission-foods .mfm-adj .two > div { padding:9px 11px; border-radius:6px; background:var(--bg); }
+#view-mission-foods .mfm-adj .two .k { font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-mission-foods .mfm-adj .two .v { font-size:22px; font-weight:800; line-height:1.15; margin-top:2px; }
+#view-mission-foods .mfm-adj .two .v small { font-size:10px; font-weight:700; color:var(--text-muted); }
+#view-mission-foods .mfm-adj p { font-size:11px; color:var(--text-muted); line-height:1.6; margin:6px 0 0; }
+#view-mission-foods .mfm-adj p b { color:var(--navy); }
+#view-mission-foods .mfm-mx { width:100%; border-collapse:separate; border-spacing:0 6px; font-size:11.5px; }
+#view-mission-foods .mfm-mx th { font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); text-align:left; padding:0 12px; }
+#view-mission-foods .mfm-mx td { padding:11px 12px; background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+#view-mission-foods .mfm-mx td:first-child { border-left:1px solid var(--border); border-radius:7px 0 0 7px; font-weight:800; color:var(--navy); font-size:12.5px; }
+#view-mission-foods .mfm-mx td:last-child { border-right:1px solid var(--border); border-radius:0 7px 7px 0; color:var(--text-muted); }
+#view-mission-foods .mfm-mx tr.key td { background:rgba(0,180,216,0.06); border-color:rgba(0,180,216,0.5); }
+#view-mission-foods .mfm-cell { display:inline-block; font-size:10px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; padding:4px 9px; border-radius:4px; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-mission-foods .mfm-cell.u { color:#475569; background:rgba(148,163,184,0.18); }
+#view-mission-foods .mfm-cell.a { color:#fff; background:var(--teal-dim); }
+#view-mission-foods .mfm-cell.o { color:#92400e; background:rgba(245,158,11,0.16); border:1px solid rgba(245,158,11,0.4); }
+#view-mission-foods .mfm-dm { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; }
+#view-mission-foods .mfm-dm > div { border:1px solid var(--border); border-top:3px solid #f59e0b; border-radius:7px; background:var(--surface); padding:12px 14px; }
+#view-mission-foods .mfm-dm > div.key { border-top-color:var(--teal); background:rgba(0,180,216,0.04); }
+#view-mission-foods .mfm-dm b { display:block; font-size:12px; font-weight:800; color:var(--navy); margin-bottom:6px; }
+#view-mission-foods .mfm-dm ul { margin:0; padding-left:15px; font-size:10.5px; color:var(--text-muted); line-height:1.6; }
+#view-mission-foods .mfm-road { display:grid; grid-template-columns:repeat(5,1fr); gap:0; counter-reset:rp; }
+#view-mission-foods .mfm-road > div { position:relative; padding:14px 16px 14px 18px; border:1px solid var(--border); border-left:none; background:var(--surface); }
+#view-mission-foods .mfm-road > div:first-child { border-left:1px solid var(--border); border-radius:8px 0 0 8px; border-top:4px solid var(--teal); }
+#view-mission-foods .mfm-road > div:last-child { border-radius:0 8px 8px 0; }
+#view-mission-foods .mfm-road > div { border-top:4px solid #94a3b8; }
+#view-mission-foods .mfm-road > div:nth-child(2) { border-top-color:var(--teal); }
+#view-mission-foods .mfm-road .p { font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal-dim); }
+#view-mission-foods .mfm-road .t { font-size:12.5px; font-weight:800; color:var(--navy); line-height:1.35; margin-top:3px; }
+#view-mission-foods .mfm-road .d { font-size:10.5px; color:var(--text-muted); line-height:1.55; margin-top:6px; }
+#view-mission-foods .mfm-road .d ul { margin:4px 0 0; padding-left:14px; }
+#view-mission-foods .mfm-hist { opacity:0.92; }
+#view-mission-foods .mfm-hist .mfm-route-table th { background:#475569; }
+#view-mission-foods .mfm-sig.one { grid-template-columns:1fr; }
+#view-mission-foods .mfm-sigl { counter-reset:sg; list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:6px 16px; }
+#view-mission-foods .mfm-sigl li { counter-increment:sg; display:grid; grid-template-columns:24px 1fr; gap:8px; font-size:11.5px; color:var(--navy); font-weight:600; line-height:1.45; padding:5px 0; border-bottom:1px solid var(--border); }
+#view-mission-foods .mfm-sigl li::before { content:counter(sg); font-size:10px; font-weight:800; color:var(--text-muted); text-align:right; }
+@media (max-width: 1100px) {
+  #view-mission-foods .mfm-cor-g { grid-template-columns:1fr 1fr; }
+  #view-mission-foods .mfm-cor-g > div:nth-child(2) { border-right:none; }
+  #view-mission-foods .mfm-cor-g > div:nth-child(-n+2) { border-bottom:1px solid var(--border); }
+  #view-mission-foods .mfm-h2c, #view-mission-foods .mfm-hs, #view-mission-foods .mfm-kpis { grid-template-columns:repeat(2,1fr); }
+  #view-mission-foods .mfm-dm { grid-template-columns:repeat(2,1fr); }
+  #view-mission-foods .mfm-road { grid-template-columns:1fr; }
+  #view-mission-foods .mfm-road > div, #view-mission-foods .mfm-road > div:first-child, #view-mission-foods .mfm-road > div:last-child { border:1px solid var(--border); border-top:4px solid #94a3b8; border-radius:8px; margin-bottom:8px; }
+  #view-mission-foods .mfm-road > div:nth-child(-n+2) { border-top-color:var(--teal); }
+  #view-mission-foods .mfm-adj { grid-template-columns:1fr; }
+}
+@media (max-width: 900px) {
+  #view-mission-foods .mfm-dw, #view-mission-foods .mfm-cor-g, #view-mission-foods .mfm-shift, #view-mission-foods .mfm-h2c,
+  #view-mission-foods .mfm-hs, #view-mission-foods .mfm-kpis, #view-mission-foods .mfm-dm, #view-mission-foods .mfm-sigl { grid-template-columns:1fr; }
+  #view-mission-foods .mfm-cor-g > div { border-right:none; border-bottom:1px solid var(--border); }
+  #view-mission-foods .mfm-lad > div { grid-template-columns:1fr; gap:6px; }
+  #view-mission-foods .mfm-shift .row { grid-template-columns:1fr; }
+  #view-mission-foods .mfm-shift .row .r { text-align:left; }
+  #view-mission-foods .mfm-cor-flag { margin-left:0; }
+}
+@media print {
+  #view-mission-foods .mfm-tpl { min-width:0; font-size:9px; }
+  #view-mission-foods .mfm-cor, #view-mission-foods .mfm-adj > div, #view-mission-foods .mfm-h2c > div { break-inside:avoid; }
+  #view-mission-foods .mfm-dw .big { font-size:40px; }
+}
+/* Editorial-compression layer (8-chapter seller report) */
+#view-mission-foods .mfm-nav { position:sticky; margin:0; top:0; z-index:20; display:flex; gap:4px; flex-wrap:wrap; padding:8px 32px; background:rgba(255,255,255,0.97); border-bottom:1px solid var(--border); box-shadow:0 2px 8px rgba(13,43,94,0.06); }
+#view-mission-foods .mfm-nav a { font-size:11px; font-weight:700; color:var(--navy); text-decoration:none; padding:6px 10px; border-radius:5px; white-space:nowrap; }
+#view-mission-foods .mfm-nav a b { font-size:9px; color:var(--teal-dim); margin-right:5px; }
+#view-mission-foods .mfm-nav a:hover, #view-mission-foods .mfm-nav a:focus-visible { background:rgba(0,180,216,0.1); }
+#view-mission-foods section.mfm-chapter { scroll-margin-top:56px; }
+#view-mission-foods .mfm-lane, #view-mission-foods [id^="mfm-lane-"], #view-mission-foods .card { scroll-margin-top:56px; }
+#view-mission-foods .card-header .mfm-src { margin-left:6px; background:#fff; border:none; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-mission-foods .mfm-relline { display:flex; flex-wrap:wrap; align-items:center; gap:8px 10px; font-size:12.5px; color:var(--navy); }
+#view-mission-foods .mfm-relline .sep { width:1px; height:18px; background:var(--border); }
+#view-mission-foods .mfm-relline .k { font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); }
+#view-mission-foods .mfm-jump { display:grid; grid-template-columns:auto 1fr 1fr 1fr; gap:10px; align-items:stretch; margin-top:16px; }
+#view-mission-foods .mfm-jump .k { align-self:center; font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); max-width:120px; }
+#view-mission-foods .mfm-jump a { display:block; padding:10px 14px; border:1px solid var(--border); border-left:4px solid var(--navy); border-radius:6px; text-decoration:none; font-size:10.5px; color:var(--text-muted); background:var(--surface); }
+#view-mission-foods .mfm-jump a.key { border-left-color:var(--teal); background:rgba(0,180,216,0.05); }
+#view-mission-foods .mfm-jump a b { display:block; font-size:13px; color:var(--navy); }
+#view-mission-foods .mfm-ev { margin-top:14px; border:1px solid var(--border); border-radius:7px; background:rgba(13,43,94,0.02); }
+#view-mission-foods .mfm-ev > summary { cursor:pointer; padding:10px 14px; font-size:10.5px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; color:var(--navy); list-style:none; }
+#view-mission-foods .mfm-ev > summary::-webkit-details-marker { display:none; }
+#view-mission-foods .mfm-ev > summary::before { content:"+"; display:inline-block; width:16px; color:var(--teal-dim); font-weight:800; }
+#view-mission-foods .mfm-ev[open] > summary::before { content:"−"; }
+#view-mission-foods .mfm-ev > summary:focus-visible { outline:2px solid var(--teal); outline-offset:2px; }
+#view-mission-foods .mfm-ev-b { padding:0 14px 14px; }
+#view-mission-foods .mfm-lanenav { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:16px; }
+#view-mission-foods .mfm-lanenav a { font-size:11px; font-weight:800; color:var(--navy); text-decoration:none; border:1px solid var(--border); border-radius:5px; padding:6px 11px; background:var(--surface); }
+#view-mission-foods .mfm-lanenav a.key { border-color:var(--teal); color:var(--teal-dim); background:rgba(0,180,216,0.06); }
+#view-mission-foods .mfm-lane-g { display:grid; grid-template-columns:1fr 1.45fr 1.25fr; }
+#view-mission-foods .mfm-lane-g > div { padding:13px 16px; border-right:1px solid var(--border); border-bottom:1px solid var(--border); }
+#view-mission-foods .mfm-lane-g > div:nth-child(3) { border-right:none; }
+#view-mission-foods .mfm-lane-g > div:nth-child(4) { grid-column:1 / 3; }
+#view-mission-foods .mfm-lane-g > div.pos { border-right:none; }
+#view-mission-foods .mfm-lane-g .k { font-size:8.5px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal-dim); margin-bottom:6px; }
+#view-mission-foods .mfm-lane-g .n { font-size:30px; font-weight:800; color:var(--navy); line-height:1.05; }
+#view-mission-foods .mfm-lane-g .n small { font-size:11px; font-weight:700; color:var(--text-muted); }
+#view-mission-foods .mfm-lane-g .s { font-size:10.5px; color:var(--text-muted); line-height:1.6; margin-top:4px; }
+#view-mission-foods .mfm-lane-g .s b { color:var(--navy); }
+#view-mission-foods .mfm-lane .mfm-sig { margin:0; padding:14px 16px 16px; }
+#view-mission-foods .mfm-lane .mfm-cad td.r { font-weight:600; }
+#view-mission-foods .mfm-lane .mfm-cad td.r b { font-weight:800; color:var(--navy); }
+#view-mission-foods .mfm-lane .mfm-pos { flex-direction:row; flex-wrap:wrap; }
+#view-mission-foods .mfm-2col > div, #view-mission-foods .mfm-lane-g > div, #view-mission-foods .mfm-kpis > div { min-width:0; }
+#view-mission-foods .mfm-conc-mk.r span { left:auto; right:4px; }
+#view-mission-foods .mfm-q { margin:2px 0 0; padding-left:17px; font-size:11px; line-height:1.6; }
+#view-mission-foods .mfm-q li { margin:2px 0; }
+#view-mission-foods .mfm-chips a { font-size:11px; font-weight:700; color:var(--navy); background:rgba(13,43,94,0.05); border:1px solid var(--border); padding:4px 9px; border-radius:5px; text-decoration:none; }
+#view-mission-foods .mfm-chips a:hover { border-color:var(--teal); }
+#view-mission-foods .mfm-cwg tr.grp td, #view-mission-foods .mfm-tpl tr.grp td { background:rgba(13,43,94,0.04); font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--navy); }
+#view-mission-foods .mfm-opd { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; }
+#view-mission-foods .mfm-opd > div { padding:11px 13px; border:1px solid var(--border); border-top:3px solid #f59e0b; border-radius:7px; background:var(--surface); }
+#view-mission-foods .mfm-opd b { display:block; font-size:13px; color:var(--navy); margin-top:7px; }
+#view-mission-foods .mfm-opd span:not(.mfm-pat) { display:block; font-size:10.5px; color:var(--text-muted); line-height:1.5; margin-top:3px; }
+#view-mission-foods .mfm-puebla { padding:12px 15px; border:1px solid rgba(245,158,11,0.45); border-radius:7px; background:rgba(245,158,11,0.05); }
+#view-mission-foods .mfm-puebla .s { font-size:11px; color:var(--text-muted); line-height:1.6; }
+#view-mission-foods .mfm-sq { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+#view-mission-foods .mfm-sq > div { padding:14px 17px; border-radius:8px; border:1px solid var(--border); }
+#view-mission-foods .mfm-sq .has { border-top:4px solid var(--teal); background:rgba(0,180,216,0.04); }
+#view-mission-foods .mfm-sq .not { border-top:4px solid #94a3b8; background:rgba(148,163,184,0.06); }
+#view-mission-foods .mfm-sq .k { font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); }
+#view-mission-foods .mfm-sq b { display:block; font-size:16px; color:var(--navy); margin-top:4px; }
+#view-mission-foods .mfm-sq span { display:block; font-size:11px; color:var(--text-muted); line-height:1.6; margin-top:4px; }
+#view-mission-foods .mfm-mx a { color:var(--navy); text-decoration:none; }
+#view-mission-foods .mfm-mx a:hover { color:var(--teal-dim); text-decoration:underline; }
+#view-mission-foods .mfm-steps { display:grid; grid-template-columns:repeat(5,1fr); gap:8px; }
+#view-mission-foods .mfm-steps > div { padding:10px 12px; border:1px solid var(--border); border-top:3px solid #94a3b8; border-radius:6px; font-size:10.5px; color:var(--text-muted); line-height:1.55; background:var(--surface); }
+#view-mission-foods .mfm-steps > div:nth-child(-n+2) { border-top-color:var(--teal); }
+#view-mission-foods .mfm-steps b { display:block; font-size:11px; color:var(--navy); margin-bottom:3px; }
+#view-mission-foods .mfm-guide { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+#view-mission-foods .mfm-guide > div { border:1px solid var(--border); border-top:4px solid #f59e0b; border-radius:8px; padding:14px 16px; background:var(--surface); break-inside:avoid; }
+#view-mission-foods .mfm-guide > div.key { border:2px solid var(--teal); border-top-width:5px; background:rgba(0,180,216,0.04); }
+#view-mission-foods .mfm-guide h4 { display:flex; justify-content:space-between; align-items:baseline; margin:0 0 8px; font-size:16px; font-weight:800; color:var(--navy); }
+#view-mission-foods .mfm-guide h4 a { font-size:10px; font-weight:700; color:var(--teal-dim); text-decoration:none; }
+#view-mission-foods .mfm-guide .k { font-size:8.5px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); margin-top:8px; }
+#view-mission-foods .mfm-guide ul.know { margin:4px 0 0; padding-left:15px; font-size:11.5px; font-weight:700; color:var(--navy); line-height:1.6; }
+#view-mission-foods .mfm-guide .mfm-q { font-size:11.5px; color:var(--text); }
+#view-mission-foods .mfm-micro a, #view-mission-foods .mfm-note-navy a, #view-mission-foods .mfm-sq a { color:var(--teal-dim); }
+@media (max-width: 1100px) {
+  #view-mission-foods .mfm-opd, #view-mission-foods .mfm-steps { grid-template-columns:repeat(2,1fr); }
+  #view-mission-foods .mfm-guide { grid-template-columns:1fr; }
+}
+@media (max-width: 900px) {
+  #view-mission-foods .mfm-nav { padding:6px 12px; }
+  #view-mission-foods .mfm-lane-g, #view-mission-foods .mfm-jump, #view-mission-foods .mfm-sq, #view-mission-foods .mfm-opd, #view-mission-foods .mfm-steps { grid-template-columns:1fr; }
+  #view-mission-foods .mfm-lane-g > div, #view-mission-foods .mfm-lane-g > div:nth-child(4) { grid-column:auto; border-right:none; }
+  #view-mission-foods .mfm-jump .k { max-width:none; }
+  #view-mission-foods .mfm-kpis, #view-mission-foods .mfm-2col { grid-template-columns:1fr !important; }
+}
+@media (max-width: 700px) {
+  #view-mission-foods .content-body { padding:16px; }
+}
+@media print {
+  #view-mission-foods .mfm-nav { display:none !important; }
+  #view-mission-foods .mfm-ev > summary::before { content:""; }
+  #view-mission-foods .mfm-lane, #view-mission-foods .mfm-guide > div { break-inside:avoid; }
+}
+
+/* Refresh additions — governance strip, status pills, PJ provenance, overlap principle */
+#view-mission-foods .mfm-gov { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+#view-mission-foods .mfm-gov > div { padding:10px 13px; border:1px solid var(--border); border-radius:7px; background:var(--surface); min-width:0; }
+#view-mission-foods .mfm-gov > div.wide { grid-column:span 2; }
+#view-mission-foods .mfm-gov .k { font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-mission-foods .mfm-gov .v { font-size:13px; font-weight:800; color:var(--navy); margin-top:3px; line-height:1.35; }
+#view-mission-foods .mfm-gov .v small { display:block; font-size:10px; font-weight:600; color:var(--text-muted); margin-top:2px; }
+#view-mission-foods .mfm-nv { display:inline-block; font-size:10px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; color:#b45309; background:rgba(245,158,11,0.12); border:1px solid rgba(245,158,11,0.45); padding:3px 8px; border-radius:4px; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-mission-foods .mfm-na-pill { display:inline-block; font-size:10px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; color:#475569; background:rgba(148,163,184,0.16); border:1px dashed rgba(148,163,184,0.8); padding:3px 8px; border-radius:4px; }
+#view-mission-foods .mfm-dw .log .big.txt { font-size:28px; letter-spacing:0; line-height:1.2; margin-top:8px; }
+#view-mission-foods .mfm-dw .log dl { margin:12px 0 0; display:grid; grid-template-columns:1fr auto; gap:6px 12px; font-size:11px; }
+#view-mission-foods .mfm-dw .log dt { color:var(--text-muted); font-weight:700; }
+#view-mission-foods .mfm-dw .log dd { margin:0; text-align:right; }
+#view-mission-foods .mfm-principle { display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-top:12px; padding:12px 16px; border:2px solid #f59e0b; border-radius:8px; background:rgba(245,158,11,0.05); }
+#view-mission-foods .mfm-principle b { font-size:18px; font-weight:800; color:#b45309; letter-spacing:0.3px; }
+#view-mission-foods .mfm-principle span { font-size:11px; color:var(--text-muted); line-height:1.6; flex:1; min-width:220px; }
+#view-mission-foods .mfm-obs { list-style:none; margin:0; padding:0; }
+#view-mission-foods .mfm-obs li { position:relative; padding:6px 0 6px 18px; border-bottom:1px solid var(--border); font-size:11.5px; color:var(--navy); line-height:1.5; }
+#view-mission-foods .mfm-obs li:last-child { border-bottom:none; }
+#view-mission-foods .mfm-obs li::before { content:""; position:absolute; left:2px; top:12px; width:7px; height:7px; border-radius:2px; background:var(--navy); }
+#view-mission-foods .mfm-obs li.chg::before { background:#f59e0b; }
+#view-mission-foods .mfm-obs li.new::before { background:var(--teal); }
+#view-mission-foods .mfm-da { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+#view-mission-foods .mfm-da > div { padding:12px 14px; border:1px solid var(--border); border-radius:7px; background:var(--surface); border-top:3px solid var(--navy); }
+#view-mission-foods .mfm-da > div.c { border-top-color:var(--teal); }
+#view-mission-foods .mfm-da > div.x { border-top-color:#94a3b8; background:rgba(148,163,184,0.06); }
+#view-mission-foods .mfm-da > div.d { border-top-color:#f59e0b; }
+#view-mission-foods .mfm-da b { display:block; font-size:10px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--navy); margin-bottom:6px; }
+#view-mission-foods .mfm-da ul { margin:0; padding-left:15px; font-size:10.5px; color:var(--text-muted); line-height:1.6; }
+#view-mission-foods .mfm-dq-g { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+#view-mission-foods .mfm-dq-g > div { border:1px solid var(--border); border-top:4px solid #f59e0b; border-radius:8px; padding:13px 16px; background:var(--surface); break-inside:avoid; }
+#view-mission-foods .mfm-dq-g h4 { display:flex; justify-content:space-between; align-items:baseline; gap:8px; margin:0 0 6px; font-size:13px; font-weight:800; color:var(--navy); }
+#view-mission-foods .mfm-dq-g h4 a { font-size:10px; font-weight:700; color:var(--teal-dim); text-decoration:none; white-space:nowrap; }
+#view-mission-foods .mfm-dq-g ol { margin:0; padding-left:22px; font-size:12px; color:var(--text); line-height:1.6; }
+#view-mission-foods .mfm-dq-g ol li { margin:3px 0; }
+#view-mission-foods .mfm-dq-g ol li::marker { font-weight:800; color:#b45309; }
+#view-mission-foods .page-header .mfm-nv { font-size:11px; }
+#view-mission-foods .mfm-sig.two { grid-template-columns:repeat(2,1fr); }
+#view-mission-foods .mfm-hs.two { grid-template-columns:1fr 1fr; }
+@media (max-width: 1100px) {
+  #view-mission-foods .mfm-da { grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width: 900px) {
+  #view-mission-foods .mfm-gov, #view-mission-foods .mfm-da, #view-mission-foods .mfm-dq-g { grid-template-columns:1fr; }
+  #view-mission-foods .mfm-gov > div.wide { grid-column:auto; }
+  #view-mission-foods .mfm-sig.two, #view-mission-foods .mfm-hs.two { grid-template-columns:1fr; }
+}
+
+/* BUSMAN — cloned component block */
+#view-mission-foods .mfm-jump.five { grid-template-columns:repeat(5,1fr); }
+#view-mission-foods .mfm-jump.five .k { grid-column:1 / -1; max-width:none; }
+#view-mission-foods .mfm-gwt { cursor:help; }
+#view-mission-foods .mfm-da-sm { font-size:10px; color:var(--text-muted); }
+@media (max-width: 1100px) { #view-mission-foods .mfm-jump.five { grid-template-columns:repeat(3,1fr); } }
+@media (max-width: 900px) { #view-mission-foods .mfm-jump.five { grid-template-columns:1fr; } }
+/* BUSMAN — cloned component block */
+#view-mission-foods .mfm-tp { width:100%; border-collapse:collapse; }
+#view-mission-foods .mfm-tp td { padding:4px 8px; font-size:11.5px; border-bottom:1px solid var(--border); }
+#view-mission-foods .mfm-tp td.r { text-align:right; font-weight:800; color:var(--navy); font-family:ui-monospace,Menlo,monospace; }
+#view-mission-foods .mfm-yes { display:inline-block; font-size:9px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; color:#047857; background:rgba(16,185,129,0.12); padding:1px 6px; border-radius:3px; }
+#view-mission-foods .mfm-no { display:inline-block; font-size:9px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; color:var(--text-light); background:var(--bg); border:1px solid var(--border); padding:1px 6px; border-radius:3px; }
+
+/* BUSMAN — cloned component block */
+#view-mission-foods .mfm-dd { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+#view-mission-foods .mfm-dd > div { padding:12px 14px; border:1px solid var(--border); border-top:3px solid #f59e0b; border-radius:7px; background:var(--surface); font-size:11px; line-height:1.6; color:var(--text-muted); }
+#view-mission-foods .mfm-dd ul { margin:6px 0 0; padding-left:16px; }
+#view-mission-foods .mfm-dd .n { font-size:22px; font-weight:800; color:#b45309; line-height:1.1; margin-top:4px; }
+#view-mission-foods .mfm-dd .n small { font-size:11px; color:var(--text-muted); font-weight:700; }
+#view-mission-foods .mfm-tpna { color:var(--text-muted); font-style:italic; }
+@media (max-width: 900px) { #view-mission-foods .mfm-dd { grid-template-columns:1fr; } }
+@media print { #view-mission-foods .mfm-dd > div { break-inside:avoid; } }
+
+/* BUSMAN — cloned component block */
+#view-mission-foods .mfm-nm { width:100%; border-collapse:separate; border-spacing:4px; font-size:11px; }
+#view-mission-foods .mfm-nm th { font-size:9px; font-weight:800; letter-spacing:0.8px; text-transform:uppercase; color:var(--text-muted); text-align:center; padding:4px 6px; }
+#view-mission-foods .mfm-nm th.imp { color:var(--navy); border-bottom:3px solid var(--navy); }
+#view-mission-foods .mfm-nm th.exp { color:var(--teal-dim); border-bottom:3px solid var(--teal); }
+#view-mission-foods .mfm-nm td.g { font-weight:800; color:var(--navy); white-space:nowrap; padding-right:8px; }
+#view-mission-foods .mfm-nm td.g small { display:block; font-weight:600; font-size:9.5px; color:var(--text-muted); }
+#view-mission-foods .mfm-nm td.c { text-align:center; border-radius:6px; padding:8px 6px; background:rgba(148,163,184,0.06); color:var(--text-light); }
+#view-mission-foods .mfm-nm td.c.i { background:rgba(13,43,94,0.07); color:var(--navy); }
+#view-mission-foods .mfm-nm td.c.e { background:rgba(0,180,216,0.09); color:var(--teal-dim); }
+#view-mission-foods .mfm-nm td.c b { display:block; font-size:17px; font-weight:800; line-height:1.1; }
+#view-mission-foods .mfm-nm td.c span { display:block; font-size:9px; font-weight:700; opacity:0.8; margin-top:2px; }
+#view-mission-foods .mfm-fac { display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:10px; }
+#view-mission-foods .mfm-fac > div { padding:11px 14px; border:1px solid var(--border); border-radius:7px; background:var(--surface); font-size:11px; line-height:1.55; color:var(--text-muted); }
+#view-mission-foods .mfm-fac > div.p { border-left:4px solid var(--navy); }
+#view-mission-foods .mfm-fac b { display:block; font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--teal-dim); margin-bottom:3px; }
+#view-mission-foods .mfm-fac strong { color:var(--navy); }
+#view-mission-foods .mfm-dd { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+#view-mission-foods .mfm-dd > div { padding:12px 14px; border:1px solid var(--border); border-top:3px solid #f59e0b; border-radius:7px; background:var(--surface); font-size:11px; line-height:1.6; color:var(--text-muted); }
+#view-mission-foods .mfm-dd ul { margin:6px 0 0; padding-left:16px; }
+#view-mission-foods .mfm-dd .n { font-size:22px; font-weight:800; color:#b45309; line-height:1.1; margin-top:4px; }
+#view-mission-foods .mfm-dd .n small { font-size:11px; color:var(--text-muted); font-weight:700; }
+#view-mission-foods .mfm-vlist { margin:6px 0 0; padding-left:18px; columns:2; column-gap:22px; }
+#view-mission-foods .mfm-vlist li { break-inside:avoid; margin-bottom:3px; }
+@media (max-width: 900px) {
+  #view-mission-foods .mfm-fac, #view-mission-foods .mfm-dd { grid-template-columns:1fr; }
+  #view-mission-foods .mfm-vlist { columns:1; }
+  #view-mission-foods [style*="grid-template-columns"] { grid-template-columns:1fr !important; }
+  #view-mission-foods [style*="grid-template-columns"] > * { min-width:0; }
+}
+@media print { #view-mission-foods .mfm-dd > div, #view-mission-foods .mfm-fac > div, #view-mission-foods .mfm-nm { break-inside:avoid; } }
+
+/* BUSMAN — cloned component block */
+#view-mission-foods .mfm-gws { display:grid; grid-template-columns:minmax(0,85.2fr) minmax(104px,14.8fr); gap:4px; margin-top:8px; }
+#view-mission-foods .mfm-gws > div { border-radius:6px; padding:9px 12px; color:#fff; min-width:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-mission-foods .mfm-gws > div b { display:block; font-size:18px; font-weight:800; line-height:1.1; }
+#view-mission-foods .mfm-gws > div span { display:block; font-size:9.5px; font-weight:700; opacity:0.9; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+#view-mission-foods .mfm-gws .nl { background:var(--navy); }
+#view-mission-foods .mfm-gws .mt { background:#b45309; }
+#view-mission-foods .mfm-map { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:4px 0 14px; }
+#view-mission-foods .mfm-map > div { display:grid; grid-template-columns:auto 1fr auto; gap:10px; align-items:center; padding:12px 16px; border-radius:8px; border:1.5px solid var(--border); background:var(--surface); }
+#view-mission-foods .mfm-map > div.ak { border-color:var(--teal); background:rgba(0,180,216,0.05); }
+#view-mission-foods .mfm-map > div.ot { border-color:#f59e0b; background:rgba(245,158,11,0.06); }
+#view-mission-foods .mfm-map .g { font-size:14px; font-weight:800; color:var(--navy); }
+#view-mission-foods .mfm-map .g small { display:block; font-size:10px; font-weight:600; color:var(--text-muted); }
+#view-mission-foods .mfm-map .n { font-size:24px; font-weight:800; color:var(--navy); text-align:right; line-height:1.05; }
+#view-mission-foods .mfm-map .n small { display:block; font-size:9.5px; font-weight:700; color:var(--text-muted); }
+#view-mission-foods .mfm-conclusion { margin:0 0 14px; padding:14px 18px; border-radius:8px; background:linear-gradient(120deg,rgba(0,180,216,0.08),rgba(245,158,11,0.08)); border-left:4px solid var(--teal); font-size:13.5px; font-weight:700; color:var(--navy); line-height:1.55; }
+#view-mission-foods .mfm-conclusion em { display:block; font-style:normal; font-size:8.5px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal-dim); margin-bottom:4px; }
+#view-mission-foods .mfm-hobs { list-style:none; margin:0; padding:0; counter-reset:hobs; display:grid; gap:10px; }
+#view-mission-foods .mfm-hobs li { counter-increment:hobs; position:relative; padding:12px 16px 12px 52px; border:1px solid var(--border); border-radius:7px; background:var(--surface); font-size:12px; line-height:1.6; color:var(--text-muted); }
+#view-mission-foods .mfm-hobs li::before { content:counter(hobs); position:absolute; left:14px; top:12px; width:26px; height:26px; border-radius:6px; background:var(--navy); color:#fff; font-size:12px; font-weight:800; display:flex; align-items:center; justify-content:center; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-mission-foods .mfm-hobs li strong { color:var(--navy); }
+@media (max-width: 900px) {
+  #view-mission-foods .mfm-map { grid-template-columns:1fr; }
+  #view-mission-foods .mfm-gws > div span { white-space:normal; }
+}
+@media print { #view-mission-foods .mfm-map > div, #view-mission-foods .mfm-hobs li { break-inside:avoid; } }
+
+/* BUSMAN — cloned component block */
+#view-mission-foods .mfm-addr { display:block; font-size:9.5px; color:var(--text-muted); line-height:1.35; margin-top:2px; }
+#view-mission-foods .mfm-gsrc { display:block; font-size:8.5px; font-weight:600; color:var(--text-light); line-height:1.3; margin-top:2px; text-transform:none; letter-spacing:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:200px; }
+#view-mission-foods .mfm-route-table td:nth-child(2), #view-mission-foods .mfm-route-table td:nth-child(4) { min-width:190px; max-width:260px; }
+#view-mission-foods .mfm-route-table td:nth-child(3) { min-width:150px; max-width:200px; }
+#view-mission-foods .mfm-hm { width:100%; border-collapse:separate; border-spacing:3px; font-size:11.5px; }
+#view-mission-foods .mfm-hm th { font-size:8.5px; font-weight:800; letter-spacing:0.8px; text-transform:uppercase; color:var(--text-muted); padding:4px 6px; text-align:center; white-space:nowrap; }
+#view-mission-foods .mfm-hm th.l, #view-mission-foods .mfm-hm td.l { text-align:left; }
+#view-mission-foods .mfm-hm td { padding:7px 6px; text-align:center; border-radius:4px; font-weight:800; color:var(--navy); -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-mission-foods .mfm-hm td.z { color:var(--text-light); font-weight:500; background:rgba(148,163,184,0.07); }
+#view-mission-foods .mfm-hm td.l { font-weight:700; background:transparent; white-space:nowrap; }
+#view-mission-foods .mfm-hm td.t { background:transparent; color:var(--navy); border-left:2px solid var(--border); border-radius:0; }
+#view-mission-foods .mfm-hm tr.dir td { background:transparent; text-align:left; font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal-dim); padding-top:12px; }
+#view-mission-foods .mfm-hm th.ak { color:var(--teal-dim); }
+#view-mission-foods .mfm-dsplit { display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+#view-mission-foods .mfm-gwbar { display:flex; height:12px; border-radius:6px; overflow:hidden; background:#eef1f6; }
+#view-mission-foods .mfm-gwbar > div { height:100%; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-mission-foods .mfm-wtr { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+#view-mission-foods .mfm-wtr > div { padding:12px 14px; border:1px solid var(--border); border-radius:7px; background:var(--surface); }
+#view-mission-foods .mfm-wtr .k { font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-mission-foods .mfm-wtr .v { font-size:15px; font-weight:800; color:var(--navy); margin-top:4px; }
+#view-mission-foods .mfm-wtr .v span { color:#64748b; font-weight:700; }
+@media (max-width: 900px) {
+  #view-mission-foods .mfm-dsplit, #view-mission-foods .mfm-wtr { grid-template-columns:1fr; }
+}
+@media print { #view-mission-foods .mfm-gsrc { white-space:normal; max-width:none; } #view-mission-foods .mfm-hm td { padding:4px; } #view-mission-foods .mfm-wtr > div { break-inside:avoid; } }
+
+/* BUSMAN — cloned component block */
+#view-mission-foods .mfm-flag { display:inline-block; font-size:9.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:#fff; background:#b91c1c; padding:3px 9px; border-radius:4px; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-mission-foods .mfm-anom { display:inline-block; font-size:8px; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:#92400e; background:rgba(245,158,11,0.16); border:1px solid rgba(245,158,11,0.45); padding:1px 5px; border-radius:3px; margin-top:3px; }
+#view-mission-foods .mfm-flip { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+#view-mission-foods .mfm-flip > div { padding:14px 16px; border-radius:8px; border:1.5px solid var(--border); background:var(--surface); min-width:0; }
+#view-mission-foods .mfm-flip > div.ak { border-color:var(--teal); background:rgba(0,180,216,0.05); }
+#view-mission-foods .mfm-flip > div.ot { border-color:#f59e0b; background:rgba(245,158,11,0.05); }
+#view-mission-foods .mfm-flip .h { font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); }
+#view-mission-foods .mfm-flip .w { font-size:40px; font-weight:800; line-height:1.05; margin-top:2px; letter-spacing:-1px; }
+#view-mission-foods .mfm-flip .ak .w { color:var(--teal-dim); }
+#view-mission-foods .mfm-flip .ot .w { color:#b45309; }
+#view-mission-foods .mfm-flip .f { font-size:12px; font-weight:800; color:var(--navy); }
+#view-mission-foods .mfm-flip ul { margin:10px 0 0; padding:0; list-style:none; display:grid; gap:6px; }
+#view-mission-foods .mfm-flip li { display:grid; grid-template-columns:auto 1fr auto; gap:8px; align-items:center; font-size:11px; color:var(--text-muted); }
+#view-mission-foods .mfm-flip li b { font-size:14px; color:var(--navy); }
+#view-mission-foods .mfm-sub { opacity:0.8; }
+#view-mission-foods .mfm-sub .n { font-size:18px !important; }
+#view-mission-foods .mfm-quote { margin:0; padding:14px 18px; border-radius:8px; background:linear-gradient(120deg,rgba(13,43,94,0.05),rgba(0,180,216,0.07)); border-left:4px solid var(--navy); font-size:13.5px; font-weight:600; color:var(--navy); line-height:1.6; }
+#view-mission-foods .mfm-quote em { display:block; font-style:normal; font-size:8.5px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal-dim); margin-bottom:5px; }
+#view-mission-foods .mfm-vlist { margin:6px 0 0; padding-left:16px; font-size:10.5px; line-height:1.55; }
+@media (max-width: 900px) { #view-mission-foods .mfm-flip { grid-template-columns:1fr; } }
+@media print { #view-mission-foods .mfm-flip > div { break-inside:avoid; } }
+
+/* BUSMAN — cloned component block */
+#view-mission-foods .mfm-lens { display:grid; grid-template-columns:1fr 1.25fr 1fr 1fr; gap:12px; }
+#view-mission-foods .mfm-lens > div { padding:14px 16px; border-radius:9px; border:1.5px solid var(--border); background:var(--surface); min-width:0; }
+#view-mission-foods .mfm-lens > .pj { border-top:5px solid var(--navy); }
+#view-mission-foods .mfm-lens > .cap { border-top:5px solid #10b981; background:rgba(16,185,129,0.035); }
+#view-mission-foods .mfm-lens > .cap2 { border-top:5px solid #047857; }
+#view-mission-foods .mfm-lens .cap2 .big { color:#047857; font-size:30px; }
+#view-mission-foods .mfm-lw { display:flex; align-items:center; gap:8px; margin-top:8px; font-size:10px; font-weight:800; letter-spacing:0.8px; text-transform:uppercase; color:var(--text-muted); }
+#view-mission-foods .mfm-prov { display:inline-block; font-size:9px; font-weight:800; letter-spacing:0.8px; text-transform:uppercase; color:#92400e; background:rgba(245,158,11,0.14); border:1px solid rgba(245,158,11,0.45); padding:2px 7px; border-radius:4px; vertical-align:middle; }
+#view-mission-foods .mfm-why { font-size:10px; color:var(--text-muted); font-weight:600; }
+#view-mission-foods .mfm-lens > .cus { border-top:5px solid var(--teal); background:rgba(0,180,216,0.035); }
+#view-mission-foods .mfm-lens .t { font-size:9.5px; font-weight:800; letter-spacing:1.1px; text-transform:uppercase; color:var(--text-muted); }
+#view-mission-foods .mfm-lens .t i { font-style:normal; display:block; font-size:8.5px; letter-spacing:0.6px; color:var(--text-light); margin-top:2px; }
+#view-mission-foods .mfm-lens .big { font-size:36px; font-weight:800; line-height:1.05; margin-top:6px; letter-spacing:-0.5px; color:var(--navy); }
+#view-mission-foods .mfm-lens .cap .big { color:#047857; }
+#view-mission-foods .mfm-lens .cus .big { color:var(--teal-dim); }
+#view-mission-foods .mfm-lens .big small { font-size:12px; font-weight:700; color:var(--text-muted); letter-spacing:0; }
+#view-mission-foods .mfm-lens .s { font-size:10.5px; color:var(--text-muted); line-height:1.55; margin-top:6px; }
+#view-mission-foods .mfm-lens .s b { color:var(--navy); }
+#view-mission-foods .mfm-chips { display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
+#view-mission-foods .mfm-chip { display:inline-block; font-size:10.5px; font-weight:800; padding:3px 8px; border-radius:4px; background:rgba(13,43,94,0.06); color:var(--navy); white-space:nowrap; }
+#view-mission-foods .mfm-chip.up { background:rgba(16,185,129,0.1); color:#047857; }
+#view-mission-foods .mfm-chip em { font-style:normal; font-weight:700; color:var(--text-muted); margin-right:4px; }
+#view-mission-foods .mfm-cap { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; }
+#view-mission-foods .mfm-cap > div { padding:13px 16px; border:1px solid var(--border); border-radius:8px; background:var(--surface); min-width:0; }
+#view-mission-foods .mfm-cap .h { font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); margin-bottom:8px; }
+#view-mission-foods .mfm-cmp { display:grid; grid-template-columns:62px 1fr auto; gap:8px; align-items:center; margin-top:7px; font-size:10.5px; }
+#view-mission-foods .mfm-cmp .l { font-weight:800; color:var(--text-muted); }
+#view-mission-foods .mfm-cmp .b { height:12px; border-radius:6px; background:#e6eaf1; overflow:hidden; }
+#view-mission-foods .mfm-cmp .b > div { height:100%; background:#94a3b8; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-mission-foods .mfm-cmp.now .b > div { background:#10b981; }
+#view-mission-foods .mfm-cmp .v { font-weight:800; color:var(--navy); white-space:nowrap; text-align:right; }
+#view-mission-foods .mfm-cap .d { margin-top:9px; font-size:18px; font-weight:800; color:#047857; }
+#view-mission-foods .mfm-cap .d small { font-size:10px; font-weight:700; color:var(--text-muted); margin-left:4px; }
+#view-mission-foods .mfm-modes { display:flex; height:16px; border-radius:8px; overflow:hidden; background:#e6eaf1; margin-top:6px; }
+#view-mission-foods .mfm-modes > div { height:100%; display:flex; align-items:center; justify-content:center; font-size:8.5px; font-weight:800; color:#fff; overflow:hidden; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-mission-foods .mfm-ref { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-top:12px; }
+#view-mission-foods .mfm-ref > div { padding:10px 13px; border:1px dashed var(--border); border-radius:7px; font-size:10.5px; color:var(--text-muted); line-height:1.55; min-width:0; }
+#view-mission-foods .mfm-ref b { display:block; font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--navy); margin-bottom:3px; }
+#view-mission-foods .mfm-ref strong { color:var(--navy); }
+#view-mission-foods .mfm-quote { margin:0; padding:14px 18px; border-radius:8px; background:linear-gradient(120deg,rgba(13,43,94,0.05),rgba(0,180,216,0.07)); border-left:4px solid var(--navy); font-size:13px; font-weight:600; color:var(--navy); line-height:1.6; }
+#view-mission-foods .mfm-quote em { display:block; font-style:normal; font-size:8.5px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal-dim); margin-bottom:5px; }
+#view-mission-foods .mfm-vlist { margin:6px 0 0; padding-left:16px; font-size:10.5px; line-height:1.55; }
+#view-mission-foods .mfm-rtags { display:flex; flex-wrap:wrap; gap:5px; margin-top:6px; }
+#view-mission-foods .mfm-rtags span { font-size:10px; font-weight:800; color:var(--navy); background:rgba(13,43,94,0.06); padding:2px 7px; border-radius:4px; }
+@media (max-width: 1300px) { #view-mission-foods .mfm-lens { grid-template-columns:1fr 1fr; } }
+@media (max-width: 1100px) { #view-mission-foods .mfm-cap, #view-mission-foods .mfm-ref { grid-template-columns:1fr !important; } }
+@media (max-width: 700px) { #view-mission-foods .mfm-lens { grid-template-columns:1fr; } #view-mission-foods .mfm-chip, #view-mission-foods .mfm-na-pill { white-space:normal; max-width:100%; } }
+@media print { #view-mission-foods .mfm-lens > div, #view-mission-foods .mfm-cap > div { break-inside:avoid; } }
+
+/* BUSMAN additions — short-observation-window cell, HS presence bars, period badges */
+#view-mission-foods .mfm-sw { display:inline-block; margin-top:3px; font-size:8.5px; font-weight:800; letter-spacing:0.7px; text-transform:uppercase; color:#92400e; background:rgba(245,158,11,0.14); border:1px solid rgba(245,158,11,0.45); padding:1px 6px; border-radius:4px; white-space:normal; max-width:96px; line-height:1.3; }
+#view-mission-foods .mfm-sw-v { color:var(--text-light); font-weight:600; text-decoration:underline dotted; }
+#view-mission-foods .mfm-per { display:inline-block; font-size:9px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; color:var(--navy); background:rgba(13,43,94,0.07); padding:2px 7px; border-radius:4px; white-space:nowrap; }
+#view-mission-foods .mfm-per.hist { color:#64748b; background:rgba(148,163,184,0.16); }
+#view-mission-foods .mfm-hsb { height:8px; border-radius:4px; background:#e6eaf1; overflow:hidden; min-width:60px; }
+#view-mission-foods .mfm-hsb > div { height:100%; background:var(--navy); -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-mission-foods .mfm-hsb.ex > div { background:var(--teal); }
+#view-mission-foods .mfm-hsnote { margin-top:10px; padding:8px 12px; border-left:3px solid var(--navy); background:rgba(13,43,94,0.04); font-size:11px; font-weight:700; color:var(--navy); border-radius:0 5px 5px 0; }
+#view-mission-foods .mfm-win { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-top:10px; }
+#view-mission-foods .mfm-win > div { padding:8px 11px; border:1px dashed var(--border); border-radius:6px; font-size:10.5px; color:var(--text-muted); line-height:1.45; min-width:0; }
+#view-mission-foods .mfm-win b { display:block; font-size:8.5px; font-weight:800; letter-spacing:0.9px; text-transform:uppercase; color:var(--navy); }
+#view-mission-foods .mfm-dsplit > div { min-width:0; }
+#view-mission-foods .mfm-lens .mfm-chip { white-space:normal; }
+#view-mission-foods .mfm-lw { flex-wrap:wrap; }
+#view-mission-foods .mfm-route-table { min-width:1000px; }
+#view-mission-foods .mfm-route-table th { white-space:normal; vertical-align:bottom; line-height:1.3; }
+#view-mission-foods .mfm-route-table td:nth-child(2), #view-mission-foods .mfm-route-table td:nth-child(4) { min-width:140px; max-width:200px; }
+#view-mission-foods .mfm-route-table td:nth-child(3) { min-width:90px; max-width:130px; }
+@media (max-width: 900px) { #view-mission-foods .mfm-win { grid-template-columns:1fr; } }
+#view-mission-foods .mfm-gt { display:inline-block; font-size:8px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; color:var(--teal-dim); background:rgba(0,180,216,0.1); border:1px solid rgba(0,180,216,0.35); padding:1px 5px; border-radius:3px; margin-top:3px; }
+/* The Core Route tables carry a wide screen min-width; print must be free to reflow them. */
+@media print { #view-mission-foods .mfm-route-table { min-width:0 !important; font-size:8px; } }
+
+/* Mission Foods Mexico additions (status pills, lane sequence, 3-up comparisons, monthly chart, wallets, matrix record). */
+#view-mission-foods .mfm-st { display:inline-block; font-size:10px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; padding:2px 8px; border-radius:4px; }
+#view-mission-foods .mfm-st.nv { color:#475569; background:rgba(148,163,184,0.16); border:1px dashed rgba(100,116,139,0.8); }
+#view-mission-foods .mfm-st.cnc { color:#92400e; background:rgba(245,158,11,0.14); border:1px solid rgba(245,158,11,0.45); }
+#view-mission-foods .mfm-gov .v .mfm-st + small { margin-top:6px; }
+#view-mission-foods .mfm-exec { list-style:none; margin:0; padding:0; display:grid; gap:6px; max-width:1100px; }
+#view-mission-foods .mfm-exec li { display:grid; grid-template-columns:112px 1fr; gap:10px; align-items:baseline; font-size:12.5px; line-height:1.55; color:var(--text); padding:7px 12px; border:1px solid var(--border); border-radius:6px; background:var(--surface); }
+#view-mission-foods .mfm-exec .t { font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--navy); }
+#view-mission-foods .mfm-exec .t.i { color:var(--teal-dim); }
+#view-mission-foods .mfm-cmp3 { display:grid; grid-template-columns:repeat(3,minmax(0,220px)); gap:12px; margin-top:8px; }
+#view-mission-foods .mfm-cmp3 > div { padding:11px 14px; border:1px solid var(--border); border-radius:7px; background:var(--surface); }
+#view-mission-foods .mfm-cmp3 .k { font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-mission-foods .mfm-cmp3 .s { font-size:11px; color:var(--text-muted); margin-top:2px; }
+#view-mission-foods .mfm-meth { margin:0; padding-left:18px; font-size:11.5px; line-height:1.65; color:var(--text-muted); }
+#view-mission-foods .mfm-seq { list-style:none; margin:12px 0 0; padding:0; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:6px 14px; }
+#view-mission-foods .mfm-seq li { display:grid; grid-template-columns:150px 1fr; gap:10px; align-items:baseline; padding:6px 10px; border-bottom:1px solid var(--border); font-size:12px; line-height:1.55; color:var(--text); }
+#view-mission-foods .mfm-seq li .k { font-size:8.5px; font-weight:800; letter-spacing:0.9px; text-transform:uppercase; color:var(--text-muted); }
+#view-mission-foods .mfm-seq li .k .mfm-src { display:block; width:max-content; max-width:100%; white-space:normal; margin-top:3px; }
+#view-mission-foods .mfm-seq li.s1, #view-mission-foods .mfm-seq li.s2, #view-mission-foods .mfm-seq li.s3 { grid-column:1 / -1; border-bottom:none; border-radius:5px; }
+#view-mission-foods .mfm-seq li.s1 { background:rgba(13,43,94,0.04); border-left:3px solid var(--navy); }
+#view-mission-foods .mfm-seq li.s2 { background:rgba(0,180,216,0.05); border-left:3px solid var(--teal); }
+#view-mission-foods .mfm-seq li.s3 { background:rgba(245,158,11,0.05); border-left:3px solid #f59e0b; }
+#view-mission-foods .mfm-oth { display:inline-block; margin-left:6px; font-size:8px; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:#92400e; background:rgba(245,158,11,0.14); padding:1px 5px; border-radius:3px; vertical-align:1px; }
+#view-mission-foods .mfm-wal { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+#view-mission-foods .mfm-wal > div { padding:13px 16px; border-radius:8px; border:1px solid var(--border); background:var(--surface); }
+#view-mission-foods .mfm-wal .cus { border-top:4px solid var(--teal); }
+#view-mission-foods .mfm-wal .log { border-top:4px solid #94a3b8; background:rgba(148,163,184,0.06); }
+#view-mission-foods .mfm-wal .k { font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-mission-foods .mfm-wal .wv { font-size:34px; font-weight:800; color:var(--teal-dim); line-height:1.1; margin-top:4px; }
+#view-mission-foods .mfm-wal .wv.sm { font-size:18px; color:#475569; margin-top:10px; }
+#view-mission-foods .mfm-wal .s { font-size:11px; color:var(--text-muted); line-height:1.5; margin-top:4px; }
+#view-mission-foods .mfm-mchart { display:grid; grid-template-columns:repeat(12,1fr); gap:6px; align-items:end; height:190px; padding:18px 4px 0; border-bottom:1px solid var(--border); margin-bottom:18px; }
+#view-mission-foods .mfm-mchart .c { display:flex; flex-direction:column; height:100%; }
+#view-mission-foods .mfm-mchart .bars { flex:1; display:flex; gap:2px; align-items:flex-end; }
+#view-mission-foods .mfm-mchart .b { flex:1; position:relative; border-radius:3px 3px 0 0; min-height:2px; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+#view-mission-foods .mfm-mchart .b.y25 { background:#94a3b8; }
+#view-mission-foods .mfm-mchart .b.none { background:transparent; }
+#view-mission-foods .mfm-mchart .b i { position:absolute; top:-14px; left:50%; transform:translateX(-50%); font-style:normal; font-size:8.5px; font-weight:700; color:var(--text-muted); white-space:nowrap; }
+#view-mission-foods .mfm-mchart .m { text-align:center; font-size:9.5px; font-weight:700; color:var(--text-muted); padding:4px 0; }
+#view-mission-foods .mfm-legend .nt { font-size:10px; color:var(--text-light); }
+#view-mission-foods .mfm-hsgrid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; margin-top:16px; }
+#view-mission-foods .mfm-layers { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+#view-mission-foods .mfm-layers > div { padding:13px 16px; border-radius:7px; font-size:12px; line-height:1.6; color:var(--text); }
+#view-mission-foods .mfm-layers b { display:flex; flex-wrap:wrap; gap:6px; align-items:center; font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; margin-bottom:6px; }
+#view-mission-foods .mfm-layers ul { margin:0; padding-left:18px; }
+#view-mission-foods .mfm-layers li { margin:3px 0; }
+#view-mission-foods .mfm-layers .s1 { background:rgba(13,43,94,0.04); border-top:3px solid var(--navy); }
+#view-mission-foods .mfm-layers .s1 b { color:var(--navy); }
+#view-mission-foods .mfm-layers .s2 { background:rgba(0,180,216,0.05); border-top:3px solid var(--teal); }
+#view-mission-foods .mfm-layers .s2 b { color:var(--teal-dim); }
+#view-mission-foods .mfm-layers .s3 { background:rgba(245,158,11,0.05); border-top:3px solid #f59e0b; }
+#view-mission-foods .mfm-layers .s3 b { color:#b45309; }
+#view-mission-foods .mfm-first { font-style:normal; font-size:8.5px; font-weight:800; letter-spacing:0.8px; text-transform:uppercase; color:#fff; background:#b45309; padding:1px 6px; border-radius:3px; margin-left:6px; vertical-align:2px; }
+#view-mission-foods .mfm-rec { margin:0; padding:16px 18px; background:rgba(13,43,94,0.04); border:1px solid var(--border); border-radius:7px; font-family:ui-monospace,Menlo,monospace; font-size:11.5px; line-height:1.6; color:var(--navy); white-space:pre-wrap; word-break:break-word; }
+@media (max-width: 1000px) {
+  #view-mission-foods .mfm-wal { grid-template-columns:repeat(2,1fr); }
+  #view-mission-foods .mfm-seq, #view-mission-foods .mfm-hsgrid, #view-mission-foods .mfm-layers { grid-template-columns:1fr; }
+}
+@media (max-width: 640px) {
+  #view-mission-foods .mfm-wal, #view-mission-foods .mfm-cmp3 { grid-template-columns:1fr !important; }
+  #view-mission-foods .mfm-seq li, #view-mission-foods .mfm-exec li { grid-template-columns:1fr; gap:3px; }
+  #view-mission-foods .mfm-mchart { gap:2px; }
+  #view-mission-foods .mfm-mchart .b i { display:none; }
+  #view-mission-foods .mfm-hero, #view-mission-foods .mfm-exec { grid-template-columns:minmax(0,1fr); }
+  #view-mission-foods .mfm-hero > div, #view-mission-foods .mfm-exec li { min-width:0; overflow-wrap:anywhere; }
+  #view-mission-foods .card-header { white-space:normal; flex-wrap:wrap; height:auto; line-height:1.5; row-gap:4px; }
+  #view-mission-foods .mfm-seq, #view-mission-foods .mfm-hsgrid, #view-mission-foods .mfm-layers { grid-template-columns:minmax(0,1fr); }
+  #view-mission-foods .mfm-seq li, #view-mission-foods .mfm-seq li > div { min-width:0; overflow-wrap:anywhere; }
+}
+@media print {
+  #view-mission-foods .mfm-seq li, #view-mission-foods .mfm-layers > div, #view-mission-foods .mfm-wal > div { break-inside:avoid; }
+  #view-mission-foods .mfm-route-table { min-width:0 !important; font-size:8px; }
+}
 
 @media print {
   .aios-sb-toggle, .aios-sb-foot, .aios-export-btn, #aios-sb-tip, .aios-modal, .aios-toast { display: none !important; }
@@ -17027,6 +17891,7 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
     <button type="button" class="rel-tab"        role="tab" aria-selected="false" data-cat="current_client" onclick="setCategory('current_client')">Current Clients <span class="rel-tab-count" id="cnt-current_client">0</span></button>
     <button type="button" class="rel-tab"        role="tab" aria-selected="false" data-cat="new_client"     onclick="setCategory('new_client')">New Clients <span class="rel-tab-count" id="cnt-new_client">0</span></button>
     <button type="button" class="rel-tab"        role="tab" aria-selected="false" data-cat="lead"           onclick="setCategory('lead')">Leads <span class="rel-tab-count" id="cnt-lead">0</span></button>
+    <button type="button" class="rel-tab"        role="tab" aria-selected="false" data-cat="not_validated"  onclick="setCategory('not_validated')">Not Validated <span class="rel-tab-count" id="cnt-not_validated">0</span></button>
   </div>
 
   <div class="home-stats-row">
@@ -18317,6 +19182,37 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
         <span class="acct-tag">Toluca</span>
         <span class="acct-tag">Truck</span>
         <span class="acct-tag">Maritime</span>
+        <span class="acct-tag">Discovery Required</span>
+      </div>
+    </div>
+
+    <!-- Mission Foods Mexico · AIOS 23-Sep-2026 · Not Validated -->
+    <div class="account-card" onclick="showViewById('view-mission-foods')" title="Mission Foods Mexico S. de R.L. de C.V. &middot; Analysis Date 23-Sep-2026 &middot; Account status: Not Validated &mdash; not labelled CLIENT or LEAD &middot; ARCATEK Customs: Confirmed Not Captured (PJ Visible Universe only) &middot; AKZENT Logistics: Not Validated &middot; Previous Full Calendar Year 1 Jan 2025 to 31 Dec 2025 &middot; Current YTD 1 Jan 2026 to 31 Jul 2026 &middot; PJ Visible 2026 YTD 1,088 Shipments &middot; 613 PJ Exports &middot; 475 PJ Imports &middot; 2025 1,723 Shipments &middot; Comparable Jan-Jul +15.6% &middot; never annualized &middot; Primary gateway Nuevo Laredo 77.7% 2026 YTD &middot; Truck-led &middot; Customs Shared Wallet 0.0% &middot; Logistics Shared Wallet Not Calculable &middot; Profit Not Available">
+      <div class="account-card-header">
+        <div>
+          <div class="account-name">Mission Foods Mexico</div>
+          <div class="account-industry">Not Validated &middot; ARCATEK Customs Confirmed Not Captured (PJ Visible Universe) &middot; AKZENT Logistics Not Validated &middot; Analysis Date 23-Sep-2026</div>
+        </div>
+        <div style="display:flex;gap:5px;align-items:center;flex-shrink:0;">
+          <span class="account-cls-badge" style="color:var(--text-light);" title="AIOS Classification not assigned for this account">&mdash;</span>
+        </div>
+      </div>
+      <div class="account-metrics" style="grid-template-columns:repeat(4,1fr);">
+        <div class="acct-metric"><div class="acct-metric-val" title="PJ Visible Universe Current YTD 1 Jan to 31 Jul 2026">1,088</div><div class="acct-metric-lbl">PJ YTD Shipments</div></div>
+        <div class="acct-metric"><div class="acct-metric-val" title="PJ Exports Current YTD">613</div><div class="acct-metric-lbl">PJ Exports</div></div>
+        <div class="acct-metric"><div class="acct-metric-val" title="PJ Imports Current YTD">475</div><div class="acct-metric-lbl">PJ Imports</div></div>
+        <div class="acct-metric"><div class="acct-metric-val" style="color:#047857;font-size:15px;" title="Comparable January-July 2025 vs January-July 2026 &middot; 941 to 1,088 Shipments">+15.6%</div><div class="acct-metric-lbl">Comparable Jan&ndash;Jul</div></div>
+      </div>
+      <div style="margin-top:8px;padding:7px 10px;background:rgba(148,163,184,0.1);border-left:3px solid #94a3b8;border-radius:0 4px 4px 0;">
+        <div style="font-size:9px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:#475569;">Not Validated &middot; Customs Shared Wallet 0.0% &middot; Logistics Shared Wallet Not Calculable &middot; Profit Not Available</div>
+        <div style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;margin-top:2px;">San Pedro Garza Garcia &harr; Nuevo Laredo / Tijuana &harr; Irving &middot; truck-led bidirectional cross-border network</div>
+      </div>
+      <div class="account-tags">
+        <span class="acct-tag">Nuevo Laredo</span>
+        <span class="acct-tag">Tijuana</span>
+        <span class="acct-tag">Truck</span>
+        <span class="acct-tag">Returnable Packaging (to validate)</span>
+        <span class="acct-tag">ILM / Control Tower</span>
         <span class="acct-tag">Discovery Required</span>
       </div>
     </div>
@@ -32341,6 +33237,16 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
               <td style="color:var(--text-light);" title="Not supplied by AIOS for this account">&mdash;</td>
               <td style="color:var(--text-light);" title="Not supplied by AIOS for this account">&mdash;</td>
               <td style="color:#b45309;font-weight:700;font-size:11px;">Concentrated export corridor &middot; fragmented import network &middot; Discovery Required</td>
+            </tr>
+            <tr onclick="showViewById('view-mission-foods')" style="cursor:pointer;">
+              <td><strong>Mission Foods Mexico</strong> <span style="font-size:10px;font-weight:600;color:#475569;background:rgba(148,163,184,0.18);padding:1px 5px;border-radius:3px;margin-left:4px;" title="Mission Foods Mexico S. de R.L. de C.V. &middot; Analysis Date 23-Sep-2026 &middot; Account status: Not Validated &mdash; not labelled CLIENT or LEAD &middot; ARCATEK Customs: Confirmed Not Captured (PJ Visible Universe only) &middot; AKZENT Logistics: Not Validated &middot; Previous Full Calendar Year 1 Jan 2025 to 31 Dec 2025 &middot; Current YTD 1 Jan 2026 to 31 Jul 2026 &middot; PJ Visible 2026 YTD 1,088 Shipments &middot; 613 PJ Exports &middot; 475 PJ Imports &middot; 2025 1,723 Shipments &middot; Comparable Jan-Jul +15.6% &middot; never annualized &middot; Primary gateway Nuevo Laredo 77.7% 2026 YTD &middot; Truck-led &middot; Customs Shared Wallet 0.0% &middot; Logistics Shared Wallet Not Calculable &middot; Profit Not Available">NOT VALIDATED</span></td>
+              <td><span style="color:var(--text-light);" title="AIOS Classification not assigned">&mdash;</span></td>
+              <td style="color:var(--text-muted);" title="No industry classification was supplied by AIOS for this account">Industry not assigned by AIOS</td>
+              <td style="color:var(--text-light);" title="Not supplied by AIOS for this account">&mdash;</td>
+              <td style="color:var(--text-light);" title="Not supplied by AIOS for this account">&mdash;</td>
+              <td style="color:var(--text-light);" title="Not supplied by AIOS for this account">&mdash;</td>
+              <td style="color:var(--text-light);" title="Not supplied by AIOS for this account">&mdash;</td>
+              <td style="color:#b45309;font-weight:700;font-size:11px;">Bidirectional cross-border network &middot; rising Nuevo Laredo concentration &middot; Discovery Required</td>
             </tr>
             <tr onclick="showViewById('view-worldtradefoods')" style="cursor:pointer;">
               <td><strong>World Trade Foods</strong> <span style="font-size:10px;font-weight:600;color:#b45309;background:rgba(245,158,11,0.12);padding:1px 5px;border-radius:3px;margin-left:4px;">LEAD</span></td>
@@ -60910,6 +61816,578 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
   /* Printing opens every CROWN ENVASES MEXICO evidence panel, then restores the reader's state. */
   window.addEventListener('beforeprint', function () { document.querySelectorAll('#view-crown-envases details.crn-ev:not([open])').forEach(function (d) { d.setAttribute('open', ''); d.setAttribute('data-crn-print', '1'); }); });
   window.addEventListener('afterprint', function () { document.querySelectorAll('#view-crown-envases details.crn-ev[data-crn-print]').forEach(function (d) { d.removeAttribute('open'); d.removeAttribute('data-crn-print'); }); });
+  </script>
+</div>
+
+<!-- ══ MISSION FOODS MEXICO VIEW — AIOS Analysis 23-Sep-2026 · Account status Not Validated (ARCATEK Customs Confirmed Not Captured within the PJ Visible Universe · AKZENT Logistics Not Validated) · 10-chapter seller report ══ -->
+<div id="view-mission-foods" class="view">
+  <div class="page-header">
+    <div class="page-header-left">
+      <div class="page-header-eyebrow">Account Intelligence · Not Validated · ARCATEK Customs Confirmed Not Captured (PJ Visible Universe only) · AKZENT Logistics Not Validated · Analysis Date 23-Sep-2026</div>
+      <div class="page-header-title">Mission Foods Mexico</div>
+      <div class="page-header-sub">PJ Visible Universe · Current YTD 1 Jan – 31 Jul 2026 · 1,088 Shipments (613 PJ Exports · 475 PJ Imports) · high-frequency, truck-led, bidirectional cross-border network · increasingly concentrated through Nuevo Laredo · Discovery Validation required</div>
+    </div>
+    <div class="page-header-meta">
+      <span class="mfm-st nv">Not Validated</span>
+      <button class="print-btn" onclick="printView('view-mission-foods')">⬇ Export PDF</button>
+    </div>
+  </div>
+  <nav class="mfm-nav" data-aios-own-toc aria-label="Report chapters"><a href="#mfm-ch-1"><b>01</b>Executive</a><a href="#mfm-ch-2"><b>02</b>Network</a><a href="#mfm-ch-3"><b>03</b>Core Routes</a><a href="#mfm-ch-4"><b>04</b>Lane Intelligence</a><a href="#mfm-ch-5"><b>05</b>Customs</a><a href="#mfm-ch-6"><b>06</b>Historical</a><a href="#mfm-ch-7"><b>07</b>HS Intelligence</a><a href="#mfm-ch-8"><b>08</b>Commercial</a><a href="#mfm-ch-9"><b>09</b>Discovery</a><a href="#mfm-ch-10"><b>10</b>Matrix Record</a></nav>
+  <div class="content-body">
+
+    <section class="mfm-chapter exec" id="mfm-ch-1">
+      <div class="mfm-chapter-n">Chapter 01</div>
+      <div class="mfm-chapter-t">Executive Account Summary</div>
+      <div class="mfm-chapter-s">Where does this account stand? · 30–60 second read</div>
+    </section>
+    <div class="card" style="border-top:3px solid #94a3b8;">
+      <div class="card-header">Mission Foods Mexico — Account Governance · Analysis Date 23-Sep-2026</div>
+      <div class="card-body">
+        <div class="mfm-gov">
+          <div><div class="k">Account status</div><div class="v"><span class="mfm-st nv">Not Validated</span><small>Not labelled CLIENT or LEAD. The existing ARCATEK and AKZENT relationships require Discovery Validation.</small></div></div>
+          <div><div class="k">Service Relationship · ARCATEK Customs</div><div class="v"><span class="mfm-st cnc">Confirmed Not Captured</span><small><b>Scope: PJ Visible Universe only.</b> Every observed Shipment uses a non-ARCATEK patent. This does not prove that no ARCATEK relationship exists outside the PJ Visible Universe — treated in <a href="#mfm-ch-5">Chapter 05</a>.</small></div></div>
+          <div><div class="k">Service Relationship · AKZENT Logistics</div><div class="v"><span class="mfm-st nv">Not Validated</span><small>No authorized AKZENT captured-freight dataset was available. Missing internal data is <b>not</b> zero captured business and <b>not</b> a confirmed absence of relationship.</small></div></div>
+          <div><div class="k">PJ-visible legal entity <span class="mfm-src pj">PJ Facts</span></div><div class="v" style="font-size:12.5px;">Mission Foods Mexico S. de R.L. de C.V.<small>PJ-reported Mexican address: Rio De La Plata 407 Ote., Col. Del Valle, San Pedro Garza Garcia, Nuevo Leon 66220, Mexico. This is a PJ-reported address, <b>not</b> a confirmed manufacturing plant.</small></div></div>
+          <div class="wide"><div class="k">Periods in force</div><div class="v" style="font-size:12.5px;">Previous Full Calendar Year <b>1 Jan – 31 Dec 2025</b> · Current YTD <b>1 Jan – 31 Jul 2026</b> · Comparable period <b>Jan–Jul 2025 vs Jan–Jul 2026</b><small>The source files were generated on 23 Sep 2026, but their latest Shipment date is <b>31 Jul 2026</b>. Current YTD contains no August or September 2026 activity and is never annualized.</small></div></div>
+        </div>
+
+        <div class="mfm-hero" style="margin-top:14px;">
+          <div style="border-top:4px solid var(--navy);">
+            <div class="k">PJ Visible Universe · Current YTD <span class="mfm-src pj">PJ Facts</span></div>
+            <div class="v">1,088 <small>Shipments · 1 Jan – 31 Jul 2026</small></div>
+            <div class="s"><b>PJ Exports 613</b> · <b>PJ Imports 475</b> · 35.9 Shipments per calendar week</div>
+          </div>
+          <div style="border-top:4px solid #94a3b8;">
+            <div class="k">Previous Full Calendar Year 2025 <span class="mfm-src pj">PJ Facts</span></div>
+            <div class="v" style="color:#64748b;">1,723 <small>Shipments · 1 Jan – 31 Dec 2025</small></div>
+            <div class="s">PJ Exports <b>950</b> · PJ Imports <b>773</b> · 33.0 Shipments per calendar week</div>
+          </div>
+          <div style="border-top:4px solid #f59e0b;">
+            <div class="k">Comparable period · Jan–Jul <span class="mfm-src ca">AIOS Calculations</span></div>
+            <div class="mfm-delta up">+15.6%</div>
+            <div class="s">941 → 1,088 Shipments · detail in <a href="#mfm-ch-2">Chapter 02</a></div>
+            <div class="mfm-sw">Comparable-period basis only · never annualized</div>
+          </div>
+        </div>
+
+        <div class="mfm-sublbl" style="margin-top:20px;">Approved executive statements</div>
+        <ul class="mfm-exec">
+          <li><span class="t">Observed</span>Mission Foods Mexico has a <b>high-frequency, truck-led, bidirectional cross-border</b> PJ Visible Universe.</li>
+          <li><span class="t">Observed</span>The network is <b>increasingly concentrated through Nuevo Laredo</b>.</li>
+          <li><span class="t">Customs</span>ARCATEK Customs is <b>Confirmed Not Captured within the PJ Visible Universe</b> because no Shipment uses ARCATEK patents 3468 or 1930.</li>
+          <li><span class="t">Logistics</span>AKZENT Logistics remains <b>Not Validated</b> because no authorized captured-freight source was available.</li>
+          <li><span class="t">Status</span>The overall account is <b>not</b> classified as CLIENT or LEAD.</li>
+          <li><span class="t i">Interpretation</span>Commercial relevance centers on cross-border operational coordination, customs and freight visibility, returnable-packaging cycles, exception management, and Control Tower/ILM. These commercial themes are <span class="mfm-src ai">AIOS Interpretations</span> and require <span class="mfm-src dv">Discovery Validation</span>.</li>
+        </ul>
+
+        <div class="mfm-jump">
+          <span class="k">Where to go next</span>
+          <a href="#mfm-ch-3" class="key"><b>Core Routes</b>Exact PJ source-string routes to ≥80% in each direction</a>
+          <a href="#mfm-ch-5"><b>Customs Intelligence</b>Gateway mix · patents · Shared Wallets</a>
+          <a href="#mfm-ch-9"><b>Seller Discovery Guide</b>11 prioritized questions</a>
+        </div>
+      </div>
+    </div>
+
+    <section class="mfm-chapter" id="mfm-ch-2">
+      <div class="mfm-chapter-n">Chapter 02</div>
+      <div class="mfm-chapter-t">Network Snapshot</div>
+      <div class="mfm-chapter-s">What does the visible network look like? · PJ Visible Universe</div>
+    </section>
+    <div class="card">
+      <div class="card-header">PJ Visible Universe by period · <span class="mfm-src pj">PJ Facts</span> + <span class="mfm-src ca">AIOS Calculations</span></div>
+      <div class="card-body">
+        <div style="overflow-x:auto;max-width:900px;"><table class="hub-table mfm-cwg" style="font-size:12px;min-width:560px;">
+          <thead><tr><th>Period</th><th class="num">PJ Exports</th><th class="num">PJ Imports</th><th class="num">Total PJ Shipments</th><th class="num">Calendar-week frequency</th></tr></thead>
+          <tbody>
+            <tr><td>Full-year 2025</td><td class="num">950</td><td class="num">773</td><td class="num"><b>1,723</b></td><td class="num">33.0</td></tr>
+            <tr><td>January–July 2025</td><td class="num">509</td><td class="num">432</td><td class="num"><b>941</b></td><td class="num">31.1</td></tr>
+            <tr style="background:rgba(13,43,94,0.04);"><td><strong>January–July 2026</strong></td><td class="num"><strong>613</strong></td><td class="num"><strong>475</strong></td><td class="num"><strong>1,088</strong></td><td class="num"><strong>35.9</strong></td></tr>
+          </tbody></table></div>
+
+        <div class="mfm-sublbl" style="margin-top:18px;">Comparable January–July change <span class="mfm-src ca">AIOS Calculations</span></div>
+        <div class="mfm-cmp3">
+          <div><div class="k">PJ Exports</div><div class="mfm-delta up">+20.4%</div><div class="s">509 → 613</div></div>
+          <div><div class="k">PJ Imports</div><div class="mfm-delta up">+10.0%</div><div class="s">432 → 475</div></div>
+          <div><div class="k">Total</div><div class="mfm-delta up">+15.6%</div><div class="s">941 → 1,088</div></div>
+        </div>
+
+        <div class="mfm-sublbl" style="margin-top:18px;">Mode mix <span class="mfm-src pj">PJ Facts</span></div>
+        <div style="overflow-x:auto;max-width:760px;"><table class="hub-table mfm-cwg" style="font-size:12px;min-width:480px;">
+          <thead><tr><th>Period · Direction</th><th class="num">Truck</th><th class="num">Maritime</th><th class="num">Air</th></tr></thead>
+          <tbody>
+            <tr><td>2025 PJ Exports</td><td class="num"><b>941</b></td><td class="num">6</td><td class="num">3</td></tr>
+            <tr><td>2025 PJ Imports</td><td class="num"><b>769</b></td><td class="num">1</td><td class="num">3</td></tr>
+            <tr><td>2026 YTD PJ Exports</td><td class="num"><b>608</b></td><td class="num">5</td><td class="num">&mdash;</td></tr>
+            <tr><td>2026 YTD PJ Imports</td><td class="num"><b>472</b></td><td class="num">1</td><td class="num">2</td></tr>
+          </tbody></table></div>
+        <div class="mfm-micro">&mdash; = no Air Shipment was reported for 2026 YTD PJ Exports. Gateway mix and patents are in <a href="#mfm-ch-5">Chapter 05</a>; monthly history is in <a href="#mfm-ch-6">Chapter 06</a>.</div>
+
+        <details class="mfm-ev" open><summary>Source &amp; method note</summary><div class="mfm-ev-b">
+          <ul class="mfm-meth">
+            <li>Business-facing source labels: PJ Facts, PJ Visible Universe, PJ Imports, PJ Exports, PJ Shipment data, AIOS Calculations, AIOS Interpretations and Discovery Validation. Where PJ does not report an address, the report says <em>Address not available in PJ</em>.</li>
+            <li>One PJ result row equals one visible Shipment for this report.</li>
+            <li>PJ Exports contain no exact duplicate rows. One export BOL appears in two operationally different records, and both were retained.</li>
+            <li>PJ Imports have no BOL or equivalent unique Shipment identifier. They contain <b>185</b> exact duplicate rows beyond the first occurrence in 2025 and <b>38</b> in 2026 YTD. These rows were retained because no reliable key exists to determine whether they are duplicate records or repeated operational Shipments.</li>
+            <li>The source files were generated on 23 Sep 2026; their latest Shipment date is 31 Jul 2026.</li>
+          </ul>
+        </div></details>
+      </div>
+    </div>
+
+    <section class="mfm-chapter" id="mfm-ch-3">
+      <div class="mfm-chapter-n">Chapter 03</div>
+      <div class="mfm-chapter-t">Core Routes</div>
+      <div class="mfm-chapter-s">Exact PJ source-string routes · smallest set reaching ≥80% of each direction · address variants never merged</div>
+    </section>
+    <div class="card" style="border-top:3px solid #94a3b8;">
+      <div class="card-header">2025 PJ Exports · denominator 950 · 3 Core Routes · 811 / 950 = 85.4% cumulative · <span class="mfm-src pj">PJ Facts</span> + <span class="mfm-src ca">AIOS Calculations</span></div>
+      <div class="card-body">
+        <div class="mfm-scroll mfm-hist"><table class="mfm-route-table" style="min-width:980px;"><thead><tr><th>Route</th><th>PJ origin address</th><th>Gateway</th><th>PJ destination address</th><th class="num">Shipments</th><th class="num">Share</th><th class="num">Cumulative share</th></tr></thead><tbody>
+          <tr><td class="mfm-rank"><span class="mfm-rank-pill">E25-1</span></td><td><div class="mfm-ent"><span class="mfm-addr">Rio De La Plata 407 Ote., Col. Del Valle, San Pedro Garza Garcia Nuevo Leon 66220, Mexico</span></div></td><td><div class="mfm-ent"><strong>NUEVO LAREDO, NUEVO LAREDO, TAMAULIPAS.</strong></div></td><td><div class="mfm-ent"><span class="mfm-addr">Executive Dr, Irving, TX 75038, USA</span></div></td><td class="num mfm-mono">587</td><td class="num">61.8%</td><td class="num mfm-cum"><strong>61.8%</strong><div class="mfm-cum-bar"><div style="width:61.8%;"></div></div></td></tr>
+          <tr><td class="mfm-rank"><span class="mfm-rank-pill">E25-2</span></td><td><div class="mfm-ent"><span class="mfm-addr">Rio De La Plata 407 Ote., Col. Del Valle, San Pedro Garza Garcia Nuevo Leon 66220, Mexico</span></div></td><td><div class="mfm-ent"><strong>NUEVO LAREDO, NUEVO LAREDO, TAMAULIPAS.</strong></div></td><td><div class="mfm-ent"><span class="mfm-addr">EXECUTIVE DR. IRVING, TEXAS 75038</span></div></td><td class="num mfm-mono">147</td><td class="num">15.5%</td><td class="num mfm-cum"><strong>77.3%</strong><div class="mfm-cum-bar"><div style="width:77.3%;"></div></div></td></tr>
+          <tr><td class="mfm-rank"><span class="mfm-rank-pill">E25-3</span></td><td><div class="mfm-ent"><span class="mfm-addr">Rio De La Plata 407 Ote., Col. Del Valle, San Pedro Garza Garcia Nuevo Leon 66220, Mexico</span></div></td><td><div class="mfm-ent"><strong>TIJUANA, TIJUANA, BAJA CALIFORNIA.</strong></div></td><td><div class="mfm-ent"><span class="mfm-addr">EXECUTIVE DR. IRVING, TEXAS 75038</span></div></td><td class="num mfm-mono">77</td><td class="num">8.1%</td><td class="num mfm-cum"><strong>85.4%</strong><div class="mfm-cum-bar"><div style="width:85.4%;"></div></div></td></tr>
+        </tbody></table></div>
+      </div>
+    </div>
+
+    <div class="card" style="border-top:3px solid var(--navy);">
+      <div class="card-header">2026 YTD PJ Exports · denominator 613 · 1 Core Route · 510 / 613 = 83.2% cumulative · <span class="mfm-src pj">PJ Facts</span> + <span class="mfm-src ca">AIOS Calculations</span></div>
+      <div class="card-body">
+        <div class="mfm-scroll"><table class="mfm-route-table" style="min-width:980px;"><thead><tr><th>Route</th><th>PJ origin address</th><th>Gateway</th><th>PJ destination address</th><th class="num">Shipments</th><th class="num">Share</th><th class="num">Cumulative share</th></tr></thead><tbody>
+          <tr><td class="mfm-rank"><span class="mfm-rank-pill">E26-1</span></td><td><div class="mfm-ent"><span class="mfm-addr">Rio De La Plata 407 Ote., Col. Del Valle, San Pedro Garza Garcia Nuevo Leon 66220, Mexico</span></div></td><td><div class="mfm-ent"><strong>NUEVO LAREDO, NUEVO LAREDO, TAMAULIPAS.</strong></div></td><td><div class="mfm-ent"><span class="mfm-addr">EXECUTIVE DR. IRVING, TEXAS 75038</span></div></td><td class="num mfm-mono">510</td><td class="num">83.2%</td><td class="num mfm-cum"><strong>83.2%</strong><div class="mfm-cum-bar"><div style="width:83.2%;"></div></div></td></tr>
+        </tbody></table></div>
+      </div>
+    </div>
+
+    <div class="card" style="border-top:3px solid #94a3b8;">
+      <div class="card-header">2025 PJ Imports · denominator 773 · 2 Core Routes · 657 / 773 = 85.0% cumulative · <span class="mfm-src pj">PJ Facts</span> + <span class="mfm-src ca">AIOS Calculations</span></div>
+      <div class="card-body">
+        <div class="mfm-scroll mfm-hist"><table class="mfm-route-table" style="min-width:980px;"><thead><tr><th>Route</th><th>PJ origin address</th><th>Gateway</th><th>PJ destination address</th><th class="num">Shipments</th><th class="num">Share</th><th class="num">Cumulative share</th></tr></thead><tbody>
+          <tr><td class="mfm-rank"><span class="mfm-rank-pill">I25-1</span></td><td><div class="mfm-ent"><span class="mfm-na">Address not available in PJ</span></div></td><td><div class="mfm-ent"><strong>NUEVO LAREDO, NUEVO LAREDO, TAMAULIPAS.</strong></div></td><td><div class="mfm-ent"><span class="mfm-addr">Rio De La Plata 407 Ote. Col. Del Valle, Nuevo Leon</span></div></td><td class="num mfm-mono">366</td><td class="num">47.3%</td><td class="num mfm-cum"><strong>47.3%</strong><div class="mfm-cum-bar"><div style="width:47.3%;"></div></div></td></tr>
+          <tr><td class="mfm-rank"><span class="mfm-rank-pill">I25-2</span></td><td><div class="mfm-ent"><span class="mfm-na">Address not available in PJ</span></div></td><td><div class="mfm-ent"><strong>TIJUANA, TIJUANA, BAJA CALIFORNIA.</strong></div></td><td><div class="mfm-ent"><span class="mfm-addr">Rio De La Plata 407 Ote. Col. Del Valle, Nuevo Leon</span></div></td><td class="num mfm-mono">291</td><td class="num">37.6%</td><td class="num mfm-cum"><strong>85.0%</strong><div class="mfm-cum-bar"><div style="width:85.0%;"></div></div></td></tr>
+        </tbody></table></div>
+      </div>
+    </div>
+
+    <div class="card" style="border-top:3px solid var(--teal);">
+      <div class="card-header">2026 YTD PJ Imports · denominator 475 · 2 Core Routes · 400 / 475 = 84.2% cumulative · <span class="mfm-src pj">PJ Facts</span> + <span class="mfm-src ca">AIOS Calculations</span></div>
+      <div class="card-body">
+        <div class="mfm-scroll"><table class="mfm-route-table" style="min-width:980px;"><thead><tr><th>Route</th><th>PJ origin address</th><th>Gateway</th><th>PJ destination address</th><th class="num">Shipments</th><th class="num">Share</th><th class="num">Cumulative share</th></tr></thead><tbody>
+          <tr><td class="mfm-rank"><span class="mfm-rank-pill">I26-1</span></td><td><div class="mfm-ent"><span class="mfm-addr">Executive Dr, Irving, TX 75038, USA</span></div></td><td><div class="mfm-ent"><strong>NUEVO LAREDO, NUEVO LAREDO, TAMAULIPAS.</strong></div></td><td><div class="mfm-ent"><span class="mfm-addr">Rio De La Plata 407 Ote. Col. Del Valle, Nuevo Leon</span></div></td><td class="num mfm-mono">243</td><td class="num">51.2%</td><td class="num mfm-cum"><strong>51.2%</strong><div class="mfm-cum-bar"><div style="width:51.2%;"></div></div></td></tr>
+          <tr><td class="mfm-rank"><span class="mfm-rank-pill">I26-2</span></td><td><div class="mfm-ent"><span class="mfm-na">Address not available in PJ</span></div></td><td><div class="mfm-ent"><strong>TIJUANA, TIJUANA, BAJA CALIFORNIA.</strong></div></td><td><div class="mfm-ent"><span class="mfm-addr">Rio De La Plata 407 Ote. Col. Del Valle, Nuevo Leon</span></div></td><td class="num mfm-mono">157</td><td class="num">33.1%</td><td class="num mfm-cum"><strong>84.2%</strong><div class="mfm-cum-bar"><div style="width:84.2%;"></div></div></td></tr>
+        </tbody></table></div>
+      </div>
+    </div>
+
+    <div class="mfm-note-na"><strong style="color:var(--navy);">Exact source strings.</strong> Origin, gateway and destination strings are displayed exactly as reported in PJ. The two Irving address strings — <em>Executive Dr, Irving, TX 75038, USA</em> and <em>EXECUTIVE DR. IRVING, TEXAS 75038</em> — are <strong>kept as separate routes and never merged</strong>. Shares and cumulative shares are exactly as supplied by AIOS. Mode, active months and frequency are developed per corridor in <a href="#mfm-ch-4">Chapter 04</a>.</div>
+
+    <section class="mfm-chapter" id="mfm-ch-4">
+      <div class="mfm-chapter-n">Chapter 04</div>
+      <div class="mfm-chapter-t">Lane Intelligence</div>
+      <div class="mfm-chapter-s">How do the corridors behave? · Scale → Share → Frequency → Persistence → Gateway → Trading Partner → Logistics Capture → Customs Position → Observed Signal → AIOS Interpretation → Discovery Validation</div>
+    </section>
+    <div class="mfm-lanenav"><span>Four corridors</span><a href="#mfm-lane-A" class="key">A · Mexico address → Nuevo Laredo → Irving</a><a href="#mfm-lane-B">B · Mexico address → Tijuana → Irving</a><a href="#mfm-lane-C">C · Irving / origin unavailable → Nuevo Laredo → Mexico address</a><a href="#mfm-lane-D">D · Origin unavailable → Tijuana → Mexico address</a></div>
+
+    <div class="mfm-cor mfm-lane key" id="mfm-lane-A">
+      <div class="mfm-cor-h"><div class="mfm-cor-id">A</div><div><div class="mfm-cor-w">Corridor A · PJ Exports · Truck-led · the dominant visible structure</div><div class="mfm-cor-t">Mexico address → Nuevo Laredo → Irving</div></div></div>
+      <ol class="mfm-seq">
+        <li class=""><div class="k">Scale <span class="mfm-src pj">PJ Facts</span></div><div class="v">2025 exact Core Route strings: <b>587</b> and <b>147</b> Shipments · 2026 YTD exact Core Route: <b>510</b> Shipments</div></li>
+        <li class=""><div class="k">Share <span class="mfm-src ca">AIOS Calculations</span></div><div class="v">2026 YTD Core Route: <b>83.2%</b> of 2026 YTD PJ Exports</div></li>
+        <li class=""><div class="k">Frequency <span class="mfm-src ca">AIOS Calculations</span></div><div class="v">2025 strings: <b>11.3</b> and <b>2.8</b> Shipments per calendar week · 2026 YTD: <b>16.8</b> Shipments per calendar week</div></li>
+        <li class=""><div class="k">Persistence <span class="mfm-src ca">AIOS Calculations</span></div><div class="v">First 2025 string active <b>January–October 2025</b> · second string active <b>October–December 2025</b> · 2026 YTD route active in <b>all seven months</b></div></li>
+        <li class=""><div class="k">Gateway </div><div class="v">NUEVO LAREDO, NUEVO LAREDO, TAMAULIPAS.</div></li>
+        <li class=""><div class="k">Trading Partner </div><div class="v">PJ Trading Partner strings <b>Gruma Corp. Dba Mission Foods Corp.</b> and <b>Gruma Corporation</b> — displayed separately; not merged and not classified as affiliates</div></li>
+        <li class=""><div class="k">Logistics Capture </div><div class="v"><span class="mfm-st nv">Not Validated</span> No authorized AKZENT captured-freight dataset was available.</div></li>
+        <li class=""><div class="k">Customs Position </div><div class="v">Other Patent <b>1631</b> on the main Nuevo Laredo routes · ARCATEK patents 3468 / 1930 not observed</div></li>
+        <li class="s1"><div class="k">Observed Signal <span class="mfm-src pj">PJ Facts</span></div><div class="v">The gateway and visible addresses persist while the PJ name and address strings change.</div></li>
+        <li class="s2"><div class="k">AIOS Interpretation <span class="mfm-src ai">AIOS Interpretations</span></div><div class="v">The data may represent continuing operations with different source normalization.</div></li>
+        <li class="s3"><div class="k">Discovery Validation <span class="mfm-src dv">Discovery Validation</span></div><div class="v">Confirm physical facilities, entity relationships, freight owner, and the reason for the visible name change.</div></li>
+      </ol>
+    </div>
+
+    <div class="mfm-cor mfm-lane" id="mfm-lane-B">
+      <div class="mfm-cor-h"><div class="mfm-cor-id">B</div><div><div class="mfm-cor-w">Corridor B · PJ Exports · secondary gateway</div><div class="mfm-cor-t">Mexico address → Tijuana → Irving</div></div></div>
+      <ol class="mfm-seq">
+        <li class=""><div class="k">Scale <span class="mfm-src pj">PJ Facts</span></div><div class="v">2025: <b>77</b> Core Route Shipments · total Tijuana PJ Exports <b>92</b> in January–July 2025 and <b>60</b> in January–July 2026</div></li>
+        <li class=""><div class="k">Share <span class="mfm-src ca">AIOS Calculations</span></div><div class="v">2025 Core Route: <b>8.1%</b> of 2025 PJ Exports · not a 2026 YTD Core Route</div></li>
+        <li class=""><div class="k">Frequency <span class="mfm-src ca">AIOS Calculations</span></div><div class="v"><span class="mfm-na-pill">Not supplied by AIOS for this lane</span></div></li>
+        <li class=""><div class="k">Persistence <span class="mfm-src ca">AIOS Calculations</span></div><div class="v">2025 Core Route active in <b>all 12 months</b></div></li>
+        <li class=""><div class="k">Gateway </div><div class="v">TIJUANA, TIJUANA, BAJA CALIFORNIA.</div></li>
+        <li class=""><div class="k">Trading Partner </div><div class="v"><span class="mfm-na-pill">Not supplied by AIOS for this lane</span></div></li>
+        <li class=""><div class="k">Logistics Capture </div><div class="v"><span class="mfm-st nv">Not Validated</span> No authorized AKZENT captured-freight dataset was available.</div></li>
+        <li class=""><div class="k">Customs Position </div><div class="v">Other Patents <b>1252</b> for 52 Shipments and <b>3822</b> for 25 on the 2025 Core Route · ARCATEK patents 3468 / 1930 not observed</div></li>
+        <li class="s1"><div class="k">Observed Signal <span class="mfm-src pj">PJ Facts</span></div><div class="v">Total Tijuana PJ Exports fell from 92 in January–July 2025 to 60 in January–July 2026.</div></li>
+        <li class="s2"><div class="k">AIOS Interpretation <span class="mfm-src ai">AIOS Interpretations</span></div><div class="v"><span class="mfm-na-pill">Not supplied by AIOS for this lane</span></div></li>
+        <li class="s3"><div class="k">Discovery Validation <span class="mfm-src dv">Discovery Validation</span></div><div class="v">Determine whether the reduction reflects gateway redesign, product mix, capacity, seasonality, or source behavior.</div></li>
+      </ol>
+    </div>
+
+    <div class="mfm-cor mfm-lane" id="mfm-lane-C">
+      <div class="mfm-cor-h"><div class="mfm-cor-id">C</div><div><div class="mfm-cor-w">Corridor C · PJ Imports · two routes kept separate</div><div class="mfm-cor-t">Irving / origin unavailable → Nuevo Laredo → Mexico address</div></div></div>
+      <ol class="mfm-seq">
+        <li class=""><div class="k">Scale <span class="mfm-src pj">PJ Facts</span></div><div class="v">2025 Core Route with origin unavailable: <b>366</b> Shipments · 2026 YTD Core Route with Irving origin: <b>243</b> Shipments</div></li>
+        <li class=""><div class="k">Share <span class="mfm-src ca">AIOS Calculations</span></div><div class="v">2025: <b>47.3%</b> of 2025 PJ Imports · 2026 YTD: <b>51.2%</b> of 2026 YTD PJ Imports</div></li>
+        <li class=""><div class="k">Frequency <span class="mfm-src ca">AIOS Calculations</span></div><div class="v">2026 YTD: <b>8.0</b> Shipments per calendar week · 2025 frequency not supplied by AIOS</div></li>
+        <li class=""><div class="k">Persistence <span class="mfm-src ca">AIOS Calculations</span></div><div class="v">2025 route active in <b>all 12 months</b> · 2026 YTD route active in <b>all seven months</b></div></li>
+        <li class=""><div class="k">Gateway </div><div class="v">NUEVO LAREDO, NUEVO LAREDO, TAMAULIPAS.</div></li>
+        <li class=""><div class="k">Trading Partner </div><div class="v"><span class="mfm-na-pill">Not supplied by AIOS for this lane</span></div></li>
+        <li class=""><div class="k">Logistics Capture </div><div class="v"><span class="mfm-st nv">Not Validated</span> No authorized AKZENT captured-freight dataset was available.</div></li>
+        <li class=""><div class="k">Customs Position </div><div class="v">2026 YTD Other Patent <b>1631</b> · ARCATEK patents 3468 / 1930 not observed</div></li>
+        <li class="s1"><div class="k">Observed Signal <span class="mfm-src pj">PJ Facts</span></div><div class="v">The 2025 route has no origin address in PJ; the 2026 YTD route carries the Irving origin string. The routes are <b>not merged</b>.</div></li>
+        <li class="s2"><div class="k">AIOS Interpretation <span class="mfm-src ai">AIOS Interpretations</span></div><div class="v"><span class="mfm-na-pill">Not supplied by AIOS for this lane</span></div></li>
+        <li class="s3"><div class="k">Discovery Validation <span class="mfm-src dv">Discovery Validation</span></div><div class="v">Confirm whether they represent the same operational flow and identify the true origin facility.</div></li>
+      </ol>
+    </div>
+
+    <div class="mfm-cor mfm-lane" id="mfm-lane-D">
+      <div class="mfm-cor-h"><div class="mfm-cor-id">D</div><div><div class="mfm-cor-w">Corridor D · PJ Imports · persistent secondary gateway</div><div class="mfm-cor-t">Origin unavailable → Tijuana → Mexico address</div></div></div>
+      <ol class="mfm-seq">
+        <li class=""><div class="k">Scale <span class="mfm-src pj">PJ Facts</span></div><div class="v">2025: <b>291</b> Core Route Shipments · 2026 YTD: <b>157</b> Core Route Shipments</div></li>
+        <li class=""><div class="k">Share <span class="mfm-src ca">AIOS Calculations</span></div><div class="v">2025: <b>37.6%</b> of 2025 PJ Imports · 2026 YTD: <b>33.1%</b> of 2026 YTD PJ Imports</div></li>
+        <li class=""><div class="k">Frequency <span class="mfm-src ca">AIOS Calculations</span></div><div class="v">2025: <b>5.6</b> Shipments per calendar week · 2026 YTD: <b>5.2</b> Shipments per calendar week</div></li>
+        <li class=""><div class="k">Persistence <span class="mfm-src ca">AIOS Calculations</span></div><div class="v">Active in <b>every month</b> of both periods</div></li>
+        <li class=""><div class="k">Gateway </div><div class="v">TIJUANA, TIJUANA, BAJA CALIFORNIA.</div></li>
+        <li class=""><div class="k">Trading Partner </div><div class="v"><span class="mfm-na-pill">Not supplied by AIOS for this lane</span></div></li>
+        <li class=""><div class="k">Logistics Capture </div><div class="v"><span class="mfm-st nv">Not Validated</span> No authorized AKZENT captured-freight dataset was available.</div></li>
+        <li class=""><div class="k">Customs Position </div><div class="v">Main Other Patents <b>1252</b> and <b>3930</b> · ARCATEK patents 3468 / 1930 not observed</div></li>
+        <li class="s1"><div class="k">Observed Signal <span class="mfm-src pj">PJ Facts</span></div><div class="v">Origin address not available in PJ in either period; the route is active in every month of both periods.</div></li>
+        <li class="s2"><div class="k">AIOS Interpretation <span class="mfm-src ai">AIOS Interpretations</span></div><div class="v"><span class="mfm-na-pill">Not supplied by AIOS for this lane</span></div></li>
+        <li class="s3"><div class="k">Discovery Validation <span class="mfm-src dv">Discovery Validation</span></div><div class="v">Identify origin facilities and the operational role of this gateway.</div></li>
+      </ol>
+    </div>
+
+    <div class="mfm-note-na">No corridor is described as won, lost, new business or winnable. PJ establishes scale, cadence and structure only.</div>
+
+    <section class="mfm-chapter cus" id="mfm-ch-5">
+      <div class="mfm-chapter-n">Chapter 05</div>
+      <div class="mfm-chapter-t">Customs Intelligence</div>
+      <div class="mfm-chapter-s">Gateway mix · Patent × Direction × Gateway · Shared Wallets</div>
+    </section>
+    <div class="card" style="border-top:3px solid #f59e0b;">
+      <div class="card-header">ARCATEK patent position · <span class="mfm-src pj">PJ Facts</span></div>
+      <div class="card-body">
+        <div class="mfm-gov">
+          <div><div class="k">ARCATEK-owned patents</div><div class="v"><span class="mfm-pat ak">3468</span> <span class="mfm-pat ak">1930</span><small>Patent ownership reference</small></div></div>
+          <div><div class="k">Presence in the PJ Visible Universe</div><div class="v" style="color:#b45309;">Neither patent appears<small>No PJ Shipment in 2025 or 2026 YTD uses either ARCATEK patent.</small></div></div>
+          <div><div class="k">ARCATEK Customs</div><div class="v"><span class="mfm-st cnc">Confirmed Not Captured</span><small>PJ Visible Universe only. This does not prove that no ARCATEK relationship exists outside the PJ Visible Universe.</small></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">Gateway mix · <span class="mfm-src pj">PJ Facts</span> + <span class="mfm-src ca">AIOS Calculations</span></div>
+      <div class="card-body">
+        <div style="overflow-x:auto;max-width:860px;"><table class="hub-table mfm-cwg" style="font-size:12px;min-width:520px;">
+          <thead><tr><th>Period</th><th class="num">Nuevo Laredo</th><th class="num">Tijuana</th><th class="num">Other gateways</th></tr></thead>
+          <tbody>
+            <tr><td>Full-year 2025</td><td class="num"><b>1,240</b> / 72.0%</td><td class="num">464 / 26.9%</td><td class="num">19 / 1.1%</td></tr>
+            <tr><td>January–July 2025</td><td class="num"><b>631</b> / 67.1%</td><td class="num">296 / 31.5%</td><td class="num">14 / 1.5%</td></tr>
+            <tr style="background:rgba(13,43,94,0.04);"><td><strong>January–July 2026</strong></td><td class="num"><strong>845</strong> / 77.7%</td><td class="num">225 / 20.7%</td><td class="num">18 / 1.7%</td></tr>
+          </tbody></table></div>
+        <div class="mfm-cmp3" style="grid-template-columns:repeat(2,minmax(0,260px));">
+          <div><div class="k">Nuevo Laredo · comparable Jan–Jul</div><div class="mfm-delta up">+33.9%</div><div class="s">631 → 845</div></div>
+          <div><div class="k">Tijuana · comparable Jan–Jul</div><div class="mfm-delta dn">−24.0%</div><div class="s">296 → 225</div></div>
+        </div>
+        <div class="mfm-note-navy"><b>Observed Signal.</b> No cause is stated for the Nuevo Laredo / Tijuana mix shift; the drivers are a Discovery Validation item (<a href="#mfm-ch-9">Chapter 09</a>, question 4).</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">Patent × Direction × Gateway · <span class="mfm-src pj">PJ Facts</span></div>
+      <div class="card-body">
+        <div class="mfm-dsplit">
+          <div>
+            <div class="mfm-sublbl muted"><span class="mfm-per hist">Previous Full Calendar Year 2025</span></div>
+            <div style="overflow-x:auto;"><table class="hub-table mfm-cwg" style="font-size:11.5px;min-width:420px;"><thead><tr><th>Patent</th><th>Gateway</th><th class="num">Shipments</th><th>Relative scale</th></tr></thead><tbody>
+              <tr class="grp"><td colspan="4">PJ Exports · 950 Shipments</td></tr>
+              <tr><td><span class="mfm-pat ot">1631</span></td><td>Nuevo Laredo</td><td class="num mfm-mono">791</td><td style="width:30%;"><div class="mfm-hsb ex"><div style="width:100.0%;"></div></div></td></tr>
+              <tr><td><span class="mfm-pat ot">1252</span></td><td>Tijuana</td><td class="num mfm-mono">108</td><td style="width:30%;"><div class="mfm-hsb ex"><div style="width:13.7%;"></div></div></td></tr>
+              <tr><td><span class="mfm-pat ot">3822</span></td><td>Tijuana</td><td class="num mfm-mono">35</td><td style="width:30%;"><div class="mfm-hsb ex"><div style="width:4.4%;"></div></div></td></tr>
+              <tr><td><span class="mfm-pat ot">3950</span></td><td>Ciudad Hidalgo</td><td class="num mfm-mono">6</td><td style="width:30%;"><div class="mfm-hsb ex"><div style="width:0.8%;"></div></div></td></tr>
+              <tr><td><span class="mfm-pat ot">1690</span></td><td>Manzanillo</td><td class="num mfm-mono">3</td><td style="width:30%;"><div class="mfm-hsb ex"><div style="width:0.4%;"></div></div></td></tr>
+              <tr><td><span class="mfm-pat ot">3182</span></td><td>Altamira</td><td class="num mfm-mono">2</td><td style="width:30%;"><div class="mfm-hsb ex"><div style="width:0.3%;"></div></div></td></tr>
+              <tr><td><span class="mfm-pat ot">1817</span></td><td>AIFA</td><td class="num mfm-mono">2</td><td style="width:30%;"><div class="mfm-hsb ex"><div style="width:0.3%;"></div></div></td></tr>
+              <tr><td><span class="mfm-pat ot">3930</span></td><td>Tijuana</td><td class="num mfm-mono">1</td><td style="width:30%;"><div class="mfm-hsb ex"><div style="width:0.1%;"></div></div></td></tr>
+              <tr><td><span class="mfm-pat ot">3908</span></td><td>Altamira</td><td class="num mfm-mono">1</td><td style="width:30%;"><div class="mfm-hsb ex"><div style="width:0.1%;"></div></div></td></tr>
+              <tr><td><span class="mfm-pat ot">3993</span></td><td>Monterrey International Airport</td><td class="num mfm-mono">1</td><td style="width:30%;"><div class="mfm-hsb ex"><div style="width:0.1%;"></div></div></td></tr>
+              <tr class="grp"><td colspan="4">PJ Imports · 773 Shipments</td></tr>
+              <tr><td><span class="mfm-pat ot">1631</span></td><td>Nuevo Laredo</td><td class="num mfm-mono">334</td><td style="width:30%;"><div class="mfm-hsb"><div style="width:100.0%;"></div></div></td></tr>
+              <tr><td><span class="mfm-pat ot">1252</span></td><td>Tijuana</td><td class="num mfm-mono">218</td><td style="width:30%;"><div class="mfm-hsb"><div style="width:65.3%;"></div></div></td></tr>
+              <tr><td><span class="mfm-pat ot">3577</span></td><td>Nuevo Laredo</td><td class="num mfm-mono">106</td><td style="width:30%;"><div class="mfm-hsb"><div style="width:31.7%;"></div></div></td></tr>
+              <tr><td><span class="mfm-pat ot">3930</span></td><td>Tijuana</td><td class="num mfm-mono">81</td><td style="width:30%;"><div class="mfm-hsb"><div style="width:24.3%;"></div></div></td></tr>
+              <tr><td><span class="mfm-pat ot">3259</span></td><td>Tijuana</td><td class="num mfm-mono">21</td><td style="width:30%;"><div class="mfm-hsb"><div style="width:6.3%;"></div></div></td></tr>
+              <tr><td><span class="mfm-pat ot">3438</span></td><td>Nuevo Laredo</td><td class="num mfm-mono">9</td><td style="width:30%;"><div class="mfm-hsb"><div style="width:2.7%;"></div></div></td></tr>
+              <tr><td><span class="mfm-pat ot">3577</span></td><td>Monterrey International Airport</td><td class="num mfm-mono">2</td><td style="width:30%;"><div class="mfm-hsb"><div style="width:0.6%;"></div></div></td></tr>
+              <tr><td><span class="mfm-pat ot">3438</span></td><td>Monterrey International Airport</td><td class="num mfm-mono">1</td><td style="width:30%;"><div class="mfm-hsb"><div style="width:0.3%;"></div></div></td></tr>
+              <tr><td><span class="mfm-pat ot">3428</span></td><td>Altamira</td><td class="num mfm-mono">1</td><td style="width:30%;"><div class="mfm-hsb"><div style="width:0.3%;"></div></div></td></tr>
+            </tbody></table></div>
+          </div>
+          <div>
+            <div class="mfm-sublbl"><span class="mfm-per">Current YTD 2026</span></div>
+            <div style="overflow-x:auto;"><table class="hub-table mfm-cwg" style="font-size:11.5px;min-width:420px;"><thead><tr><th>Patent</th><th>Gateway</th><th class="num">Shipments</th><th>Relative scale</th></tr></thead><tbody>
+              <tr class="grp"><td colspan="4">PJ Exports · 613 Shipments</td></tr>
+              <tr><td><span class="mfm-pat ot">1631</span></td><td>Nuevo Laredo</td><td class="num mfm-mono">538</td><td style="width:30%;"><div class="mfm-hsb ex"><div style="width:100.0%;"></div></div></td></tr>
+              <tr><td><span class="mfm-pat ot">1252</span></td><td>Tijuana</td><td class="num mfm-mono">60</td><td style="width:30%;"><div class="mfm-hsb ex"><div style="width:11.2%;"></div></div></td></tr>
+              <tr><td><span class="mfm-pat ot">3950</span></td><td>Ciudad Hidalgo</td><td class="num mfm-mono">10</td><td style="width:30%;"><div class="mfm-hsb ex"><div style="width:1.9%;"></div></div></td></tr>
+              <tr><td><span class="mfm-pat ot">1690</span></td><td>Manzanillo</td><td class="num mfm-mono">3</td><td style="width:30%;"><div class="mfm-hsb ex"><div style="width:0.6%;"></div></div></td></tr>
+              <tr><td><span class="mfm-pat ot">3182</span></td><td>Altamira</td><td class="num mfm-mono">2</td><td style="width:30%;"><div class="mfm-hsb ex"><div style="width:0.4%;"></div></div></td></tr>
+              <tr class="grp"><td colspan="4">PJ Imports · 475 Shipments</td></tr>
+              <tr><td><span class="mfm-pat ot">1631</span></td><td>Nuevo Laredo</td><td class="num mfm-mono">243</td><td style="width:30%;"><div class="mfm-hsb"><div style="width:100.0%;"></div></div></td></tr>
+              <tr><td><span class="mfm-pat ot">1252</span></td><td>Tijuana</td><td class="num mfm-mono">117</td><td style="width:30%;"><div class="mfm-hsb"><div style="width:48.1%;"></div></div></td></tr>
+              <tr><td><span class="mfm-pat ot">3577</span></td><td>Nuevo Laredo</td><td class="num mfm-mono">64</td><td style="width:30%;"><div class="mfm-hsb"><div style="width:26.3%;"></div></div></td></tr>
+              <tr><td><span class="mfm-pat ot">3930</span></td><td>Tijuana</td><td class="num mfm-mono">40</td><td style="width:30%;"><div class="mfm-hsb"><div style="width:16.5%;"></div></div></td></tr>
+              <tr><td><span class="mfm-pat ot">3259</span></td><td>Tijuana</td><td class="num mfm-mono">8</td><td style="width:30%;"><div class="mfm-hsb"><div style="width:3.3%;"></div></div></td></tr>
+              <tr><td><span class="mfm-pat ot">3577</span></td><td>Monterrey International Airport</td><td class="num mfm-mono">2</td><td style="width:30%;"><div class="mfm-hsb"><div style="width:0.8%;"></div></div></td></tr>
+              <tr><td><span class="mfm-pat ot">3336</span></td><td>Altamira</td><td class="num mfm-mono">1</td><td style="width:30%;"><div class="mfm-hsb"><div style="width:0.4%;"></div></div></td></tr>
+            </tbody></table></div>
+          </div>
+        </div>
+        <div class="mfm-micro">All patents shown are Other Patents. Bar lengths are a relative presentation scale within each direction. The companies behind the Other Patents are not identified.</div>
+
+        <div class="mfm-sublbl" style="margin-top:20px;">Gateway × Direction × ARCATEK / Other · every cell is <span class="mfm-pat ot">Other Patent</span></div>
+        <div style="overflow-x:auto;max-width:860px;"><table class="hub-table mfm-cwg" style="font-size:12px;min-width:520px;">
+          <thead><tr><th>Period</th><th>Direction</th><th class="num">Nuevo Laredo</th><th class="num">Tijuana</th><th class="num">Other</th></tr></thead>
+          <tbody>
+            <tr><td>2025</td><td>Exports</td><td class="num">791 <span class="mfm-oth">Other Patent</span></td><td class="num">144 <span class="mfm-oth">Other Patent</span></td><td class="num">15 <span class="mfm-oth">Other Patent</span></td></tr>
+            <tr><td>2025</td><td>Imports</td><td class="num">449 <span class="mfm-oth">Other Patent</span></td><td class="num">320 <span class="mfm-oth">Other Patent</span></td><td class="num">4 <span class="mfm-oth">Other Patent</span></td></tr>
+            <tr><td>2026 YTD</td><td>Exports</td><td class="num">538 <span class="mfm-oth">Other Patent</span></td><td class="num">60 <span class="mfm-oth">Other Patent</span></td><td class="num">15 <span class="mfm-oth">Other Patent</span></td></tr>
+            <tr><td>2026 YTD</td><td>Imports</td><td class="num">307 <span class="mfm-oth">Other Patent</span></td><td class="num">165 <span class="mfm-oth">Other Patent</span></td><td class="num">3 <span class="mfm-oth">Other Patent</span></td></tr>
+          </tbody></table></div>
+        <div class="mfm-micro">ARCATEK patent Shipments: <b>0</b> in every cell.</div>
+      </div>
+    </div>
+
+    <div class="card" style="border-top:3px solid #f59e0b;">
+      <div class="card-header">Shared Wallets · <span class="mfm-src ca">AIOS Calculations</span></div>
+      <div class="card-body">
+        <div class="mfm-wal">
+          <div class="cus"><div class="k">ARCATEK Customs Shared Wallet · 2025</div><div class="wv">0.0%</div><div class="s">0 / 1,723 PJ Shipments</div></div>
+          <div class="cus"><div class="k">ARCATEK Customs Shared Wallet · 2026 YTD</div><div class="wv">0.0%</div><div class="s">0 / 1,088 PJ Shipments</div></div>
+          <div class="log"><div class="k">AKZENT Logistics Shared Wallet</div><div class="wv sm">Not Calculable</div><div class="s">No authorized AKZENT captured-freight dataset was available. No zero Logistics Wallet is shown.</div></div>
+          <div class="log"><div class="k">Profit</div><div class="wv sm">Not Available</div><div class="s">No financial intelligence is available or implied.</div></div>
+        </div>
+        <div class="mfm-micro"><b>Customs Wallet alignment: Exact</b> for the PJ Visible Universe, because every denominator row has a reported patent. The Customs and Logistics Wallets are separate measures and are never combined.</div>
+        <div class="mfm-principle"><b>Visible Uncaptured Reference</b><span>All other-patent Shipments are a <strong>Visible Uncaptured Reference</strong> only. They are <strong>never</strong> described as winnable business.</span></div>
+      </div>
+    </div>
+
+    <section class="mfm-chapter" id="mfm-ch-6">
+      <div class="mfm-chapter-n">Chapter 06</div>
+      <div class="mfm-chapter-t">Historical Intelligence</div>
+      <div class="mfm-chapter-s">Available history begins in January 2025 · 2025 context vs Current YTD through 31 Jul 2026</div>
+    </section>
+    <div class="card">
+      <div class="card-header">Monthly PJ Shipments · <span class="mfm-src pj">PJ Facts</span></div>
+      <div class="card-body">
+        <div class="mfm-legend"><span><i style="background:#94a3b8;"></i>2025</span><span><i style="background:var(--navy);"></i>2026 PJ Exports</span><span><i style="background:#0e7490;"></i>2026 PJ Imports</span><span class="nt">No 2026 bar after July · the source ends on 31 Jul 2026</span></div>
+        <div class="mfm-sublbl">Monthly PJ Exports · 2025 vs 2026</div><div class="mfm-mchart"><div class="c"><div class="bars"><div class="b y25" style="height:100.0%;" title="Jan 2025 · 109"><i>109</i></div><div class="b y26" style="height:86.2%;background:var(--navy);" title="Jan 2026 · 94"><i>94</i></div></div><div class="m">Jan</div></div><div class="c"><div class="bars"><div class="b y25" style="height:79.8%;" title="Feb 2025 · 87"><i>87</i></div><div class="b y26" style="height:79.8%;background:var(--navy);" title="Feb 2026 · 87"><i>87</i></div></div><div class="m">Feb</div></div><div class="c"><div class="bars"><div class="b y25" style="height:88.1%;" title="Mar 2025 · 96"><i>96</i></div><div class="b y26" style="height:86.2%;background:var(--navy);" title="Mar 2026 · 94"><i>94</i></div></div><div class="m">Mar</div></div><div class="c"><div class="bars"><div class="b y25" style="height:89.0%;" title="Apr 2025 · 97"><i>97</i></div><div class="b y26" style="height:78.9%;background:var(--navy);" title="Apr 2026 · 86"><i>86</i></div></div><div class="m">Apr</div></div><div class="c"><div class="bars"><div class="b y25" style="height:49.5%;" title="May 2025 · 54"><i>54</i></div><div class="b y26" style="height:77.1%;background:var(--navy);" title="May 2026 · 84"><i>84</i></div></div><div class="m">May</div></div><div class="c"><div class="bars"><div class="b y25" style="height:17.4%;" title="Jun 2025 · 19"><i>19</i></div><div class="b y26" style="height:76.1%;background:var(--navy);" title="Jun 2026 · 83"><i>83</i></div></div><div class="m">Jun</div></div><div class="c"><div class="bars"><div class="b y25" style="height:43.1%;" title="Jul 2025 · 47"><i>47</i></div><div class="b y26" style="height:78.0%;background:var(--navy);" title="Jul 2026 · 85"><i>85</i></div></div><div class="m">Jul</div></div><div class="c"><div class="bars"><div class="b y25" style="height:89.0%;" title="Aug 2025 · 97"><i>97</i></div><div class="b y26 none" title="Outside Current YTD (source ends 31 Jul 2026)"></div></div><div class="m">Aug</div></div><div class="c"><div class="bars"><div class="b y25" style="height:78.9%;" title="Sep 2025 · 86"><i>86</i></div><div class="b y26 none" title="Outside Current YTD (source ends 31 Jul 2026)"></div></div><div class="m">Sep</div></div><div class="c"><div class="bars"><div class="b y25" style="height:86.2%;" title="Oct 2025 · 94"><i>94</i></div><div class="b y26 none" title="Outside Current YTD (source ends 31 Jul 2026)"></div></div><div class="m">Oct</div></div><div class="c"><div class="bars"><div class="b y25" style="height:73.4%;" title="Nov 2025 · 80"><i>80</i></div><div class="b y26 none" title="Outside Current YTD (source ends 31 Jul 2026)"></div></div><div class="m">Nov</div></div><div class="c"><div class="bars"><div class="b y25" style="height:77.1%;" title="Dec 2025 · 84"><i>84</i></div><div class="b y26 none" title="Outside Current YTD (source ends 31 Jul 2026)"></div></div><div class="m">Dec</div></div></div>
+        <div class="mfm-sublbl">Monthly PJ Imports · 2025 vs 2026</div><div class="mfm-mchart"><div class="c"><div class="bars"><div class="b y25" style="height:97.6%;" title="Jan 2025 · 82"><i>82</i></div><div class="b y26" style="height:79.8%;background:#0e7490;" title="Jan 2026 · 67"><i>67</i></div></div><div class="m">Jan</div></div><div class="c"><div class="bars"><div class="b y25" style="height:69.0%;" title="Feb 2025 · 58"><i>58</i></div><div class="b y26" style="height:69.0%;background:#0e7490;" title="Feb 2026 · 58"><i>58</i></div></div><div class="m">Feb</div></div><div class="c"><div class="bars"><div class="b y25" style="height:100.0%;" title="Mar 2025 · 84"><i>84</i></div><div class="b y26" style="height:88.1%;background:#0e7490;" title="Mar 2026 · 74"><i>74</i></div></div><div class="m">Mar</div></div><div class="c"><div class="bars"><div class="b y25" style="height:85.7%;" title="Apr 2025 · 72"><i>72</i></div><div class="b y26" style="height:85.7%;background:#0e7490;" title="Apr 2026 · 72"><i>72</i></div></div><div class="m">Apr</div></div><div class="c"><div class="bars"><div class="b y25" style="height:54.8%;" title="May 2025 · 46"><i>46</i></div><div class="b y26" style="height:81.0%;background:#0e7490;" title="May 2026 · 68"><i>68</i></div></div><div class="m">May</div></div><div class="c"><div class="bars"><div class="b y25" style="height:45.2%;" title="Jun 2025 · 38"><i>38</i></div><div class="b y26" style="height:86.9%;background:#0e7490;" title="Jun 2026 · 73"><i>73</i></div></div><div class="m">Jun</div></div><div class="c"><div class="bars"><div class="b y25" style="height:61.9%;" title="Jul 2025 · 52"><i>52</i></div><div class="b y26" style="height:75.0%;background:#0e7490;" title="Jul 2026 · 63"><i>63</i></div></div><div class="m">Jul</div></div><div class="c"><div class="bars"><div class="b y25" style="height:85.7%;" title="Aug 2025 · 72"><i>72</i></div><div class="b y26 none" title="Outside Current YTD (source ends 31 Jul 2026)"></div></div><div class="m">Aug</div></div><div class="c"><div class="bars"><div class="b y25" style="height:84.5%;" title="Sep 2025 · 71"><i>71</i></div><div class="b y26 none" title="Outside Current YTD (source ends 31 Jul 2026)"></div></div><div class="m">Sep</div></div><div class="c"><div class="bars"><div class="b y25" style="height:94.0%;" title="Oct 2025 · 79"><i>79</i></div><div class="b y26 none" title="Outside Current YTD (source ends 31 Jul 2026)"></div></div><div class="m">Oct</div></div><div class="c"><div class="bars"><div class="b y25" style="height:72.6%;" title="Nov 2025 · 61"><i>61</i></div><div class="b y26 none" title="Outside Current YTD (source ends 31 Jul 2026)"></div></div><div class="m">Nov</div></div><div class="c"><div class="bars"><div class="b y25" style="height:69.0%;" title="Dec 2025 · 58"><i>58</i></div><div class="b y26 none" title="Outside Current YTD (source ends 31 Jul 2026)"></div></div><div class="m">Dec</div></div></div>
+        <div class="mfm-micro">Monthly counts are exactly as supplied. Bar heights are a relative scale within each chart.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">Customs regimes · <span class="mfm-src pj">PJ Facts</span></div>
+      <div class="card-body">
+        <div style="overflow-x:auto;max-width:900px;"><table class="hub-table mfm-cwg" style="font-size:12px;min-width:560px;">
+          <thead><tr><th>Period · Direction</th><th>Regime</th><th class="num">Shipments</th><th class="num">Share</th></tr></thead>
+          <tbody>
+            <tr><td>2025 PJ Exports</td><td>Return of Goods in the Same State</td><td class="num">784</td><td class="num">82.5%</td></tr>
+            <tr><td>2026 YTD PJ Exports</td><td>Return of Goods in the Same State</td><td class="num"><b>537</b></td><td class="num"><b>87.6%</b></td></tr>
+            <tr><td>2025 PJ Imports</td><td>Temporary Import/Export of Goods Returned in the Same Condition</td><td class="num">543</td><td class="num">70.2%</td></tr>
+            <tr><td>2026 YTD PJ Imports</td><td>Temporary Import/Export of Goods Returned in the Same Condition</td><td class="num"><b>360</b></td><td class="num"><b>75.8%</b></td></tr>
+          </tbody></table></div>
+        <div class="mfm-sig">
+          <div class="s1"><b>Observed Operational Signal</b>Return-of-goods and temporary regimes are material in both directions and both periods.</div>
+          <div class="s2"><b>AIOS Interpretation</b>These regimes and the HS presence of plastic packaging boxes may indicate a material returnable-packaging loop. This is not confirmed.</div>
+          <div class="s3"><b>Discovery Validation</b>Validate the operational purpose, ownership, cycle time, loss, dwell, and control process.</div>
+        </div>
+      </div>
+    </div>
+
+    <section class="mfm-chapter" id="mfm-ch-7">
+      <div class="mfm-chapter-n">Chapter 07</div>
+      <div class="mfm-chapter-t">HS Intelligence</div>
+      <div class="mfm-chapter-s">Operational presence by direction and period · authorized English business descriptions only</div>
+    </section>
+    <div class="card">
+      <div class="card-header">HS Intelligence · Operational Presence · <span class="mfm-src pj">PJ Facts</span></div>
+      <div class="card-body">
+        <div class="mfm-hsnote">One Shipment may contain multiple HS Codes. HS counts represent operational presence and are not additive.</div>
+        <div class="mfm-hsgrid">
+          <div>
+            <div class="mfm-sublbl muted"><span class="mfm-per hist">2025 PJ Exports</span> · denominator 950 · 5 HS Codes</div>
+            <div style="overflow-x:auto;"><table class="hub-table mfm-cwg" style="font-size:11.5px;min-width:440px;"><thead><tr><th>HS Code</th><th>Authorized description</th><th class="num">Shipment presence</th><th class="num">Share</th><th>Scale</th></tr></thead><tbody>
+              <tr><td class="mfm-mono">3923100301</td><td style="font-size:11px;">Plastic boxes for packaging</td><td class="num mfm-mono">787</td><td class="num">82.8%</td><td style="width:16%;"><div class="mfm-hsb ex"><div style="width:100.0%;"></div></div></td></tr>
+              <tr><td class="mfm-mono">1905909902</td><td style="font-size:11px;">Packaged corn tostadas, primarily Guerrero and Calidad brands</td><td class="num mfm-mono">150</td><td class="num">15.8%</td><td style="width:16%;"><div class="mfm-hsb ex"><div style="width:19.1%;"></div></div></td></tr>
+              <tr><td class="mfm-mono">1905909999</td><td style="font-size:11px;">Wheat tortillas and other packaged tortilla and tostada products</td><td class="num mfm-mono">150</td><td class="num">15.8%</td><td style="width:16%;"><div class="mfm-hsb ex"><div style="width:19.1%;"></div></div></td></tr>
+              <tr><td class="mfm-mono">1905909901</td><td style="font-size:11px;">Packaged corn tostadas</td><td class="num mfm-mono">8</td><td class="num">0.8%</td><td style="width:16%;"><div class="mfm-hsb ex"><div style="width:1.0%;"></div></div></td></tr>
+              <tr><td class="mfm-mono">2103909900</td><td style="font-size:11px;">Seasonings</td><td class="num mfm-mono">4</td><td class="num">0.4%</td><td style="width:16%;"><div class="mfm-hsb ex"><div style="width:0.5%;"></div></div></td></tr>
+            </tbody></table></div>
+          </div>
+          <div>
+            <div class="mfm-sublbl"><span class="mfm-per">2026 YTD PJ Exports</span> · denominator 613 · 4 HS Codes</div>
+            <div style="overflow-x:auto;"><table class="hub-table mfm-cwg" style="font-size:11.5px;min-width:440px;"><thead><tr><th>HS Code</th><th>Authorized description</th><th class="num">Shipment presence</th><th class="num">Share</th><th>Scale</th></tr></thead><tbody>
+              <tr><td class="mfm-mono">3923100301</td><td style="font-size:11px;">Plastic boxes for packaging</td><td class="num mfm-mono">539</td><td class="num">87.9%</td><td style="width:16%;"><div class="mfm-hsb ex"><div style="width:100.0%;"></div></div></td></tr>
+              <tr><td class="mfm-mono">1905909999</td><td style="font-size:11px;">Wheat tortillas and assorted packaged tortilla and tostada products</td><td class="num mfm-mono">72</td><td class="num">11.7%</td><td style="width:16%;"><div class="mfm-hsb ex"><div style="width:13.4%;"></div></div></td></tr>
+              <tr><td class="mfm-mono">1905909902</td><td style="font-size:11px;">Packaged corn tostadas</td><td class="num mfm-mono">61</td><td class="num">10.0%</td><td style="width:16%;"><div class="mfm-hsb ex"><div style="width:11.3%;"></div></div></td></tr>
+              <tr><td class="mfm-mono">1905909901</td><td style="font-size:11px;">Packaged corn tostadas</td><td class="num mfm-mono">3</td><td class="num">0.5%</td><td style="width:16%;"><div class="mfm-hsb ex"><div style="width:0.6%;"></div></div></td></tr>
+            </tbody></table></div>
+            <div class="mfm-micro">Only four HS Codes were observed in 2026 YTD PJ Exports.</div>
+          </div>
+          <div>
+            <div class="mfm-sublbl muted"><span class="mfm-per hist">2025 PJ Imports</span> · denominator 773 · 5 HS Codes</div>
+            <div style="overflow-x:auto;"><table class="hub-table mfm-cwg" style="font-size:11.5px;min-width:440px;"><thead><tr><th>HS Code</th><th>Authorized description</th><th class="num">Shipment presence</th><th class="num">Share</th><th>Scale</th></tr></thead><tbody>
+              <tr><td class="mfm-mono">3923100301</td><td style="font-size:11px;">Plastic boxes for packaging</td><td class="num mfm-mono">546</td><td class="num">70.6%</td><td style="width:16%;"><div class="mfm-hsb"><div style="width:100.0%;"></div></div></td></tr>
+              <tr><td class="mfm-mono">8438900699</td><td style="font-size:11px;">Parts for food-processing and industrial bakery machinery</td><td class="num mfm-mono">68</td><td class="num">8.8%</td><td style="width:16%;"><div class="mfm-hsb"><div style="width:12.5%;"></div></div></td></tr>
+              <tr><td class="mfm-mono">8483300499</td><td style="font-size:11px;">Bushings, plain bearings, and bearing housings without incorporated bearings</td><td class="num mfm-mono">28</td><td class="num">3.6%</td><td style="width:16%;"><div class="mfm-hsb"><div style="width:5.1%;"></div></div></td></tr>
+              <tr><td class="mfm-mono">7318299999</td><td style="font-size:11px;">Non-threaded steel washers, bushings, pins, and spacers</td><td class="num mfm-mono">25</td><td class="num">3.2%</td><td style="width:16%;"><div class="mfm-hsb"><div style="width:4.6%;"></div></div></td></tr>
+              <tr><td class="mfm-mono">8438900601</td><td style="font-size:11px;">Parts for bakery and dough-mixing machinery, including rollers, pistons, rods, and supports</td><td class="num mfm-mono">23</td><td class="num">3.0%</td><td style="width:16%;"><div class="mfm-hsb"><div style="width:4.2%;"></div></div></td></tr>
+            </tbody></table></div>
+          </div>
+          <div>
+            <div class="mfm-sublbl"><span class="mfm-per">2026 YTD PJ Imports</span> · denominator 475 · 5 HS Codes</div>
+            <div style="overflow-x:auto;"><table class="hub-table mfm-cwg" style="font-size:11.5px;min-width:440px;"><thead><tr><th>HS Code</th><th>Authorized description</th><th class="num">Shipment presence</th><th class="num">Share</th><th>Scale</th></tr></thead><tbody>
+              <tr><td class="mfm-mono">3923100301</td><td style="font-size:11px;">Plastic boxes for packaging</td><td class="num mfm-mono">360</td><td class="num">75.8%</td><td style="width:16%;"><div class="mfm-hsb"><div style="width:100.0%;"></div></div></td></tr>
+              <tr><td class="mfm-mono">8438900699</td><td style="font-size:11px;">Parts for food-processing and industrial bakery machinery</td><td class="num mfm-mono">33</td><td class="num">6.9%</td><td style="width:16%;"><div class="mfm-hsb"><div style="width:9.2%;"></div></div></td></tr>
+              <tr><td class="mfm-mono">8482109999</td><td style="font-size:11px;">Ball bearings</td><td class="num mfm-mono">14</td><td class="num">2.9%</td><td style="width:16%;"><div class="mfm-hsb"><div style="width:3.9%;"></div></div></td></tr>
+              <tr><td class="mfm-mono">1108110100</td><td style="font-size:11px;">Wheat starch</td><td class="num mfm-mono">12</td><td class="num">2.5%</td><td style="width:16%;"><div class="mfm-hsb"><div style="width:3.3%;"></div></div></td></tr>
+              <tr><td class="mfm-mono">8208300299</td><td style="font-size:11px;">Knives and cutting components for the food industry</td><td class="num mfm-mono">11</td><td class="num">2.3%</td><td style="width:16%;"><div class="mfm-hsb"><div style="width:3.1%;"></div></div></td></tr>
+            </tbody></table></div>
+          </div>
+        </div>
+        <div class="mfm-micro">Every description is the exact authorized English business description supplied by AIOS. No description is researched, derived, translated, shortened or replaced.</div>
+      </div>
+    </div>
+
+    <section class="mfm-chapter syn" id="mfm-ch-8">
+      <div class="mfm-chapter-n">Chapter 08</div>
+      <div class="mfm-chapter-t">Commercial Synthesis</div>
+      <div class="mfm-chapter-s">Three layers kept separate · Observed Operational Signal · AIOS Interpretation · Discovery Validation</div>
+    </section>
+    <div class="card" style="border-top:3px solid #047857;">
+      <div class="card-header">Commercial Synthesis</div>
+      <div class="card-body">
+        <div class="mfm-layers">
+          <div class="s1"><b>Observed Operational Signal <span class="mfm-src pj">PJ Facts</span></b><ul>
+            <li>High-frequency, truck-led, bidirectional cross-border activity</li>
+            <li>Increasing Nuevo Laredo concentration</li>
+            <li>Visible flows between the PJ-reported Mexico and Irving addresses</li>
+            <li>Material plastic packaging-box presence</li>
+            <li>Material temporary and return-of-goods regimes</li>
+            <li>Additional imports of machinery parts, bearings, cutting components, and ingredients</li>
+          </ul></div>
+          <div class="s2"><b>AIOS Interpretation <span class="mfm-src ai">AIOS Interpretations</span></b><ul>
+            <li>Relevant commercial themes may include cross-border operational coordination, customs and freight visibility, returnable-packaging cycle control, exception management, and Control Tower/ILM.</li>
+            <li>Nuevo Laredo concentration creates a logical point for examining resilience, handoffs, and visibility.</li>
+            <li>These are hypotheses, not confirmed customer pain points.</li>
+          </ul></div>
+          <div class="s3"><b>Discovery Validation <span class="mfm-src dv">Discovery Validation</span></b><ul>
+            <li>Validate the existing ARCATEK and AKZENT relationships.</li>
+            <li>Identify true facilities and legal entities.</li>
+            <li>Confirm freight ownership and provider assignments.</li>
+            <li>Explain the Nuevo Laredo/Tijuana mix shift.</li>
+            <li>Validate the returnable-packaging process and KPIs.</li>
+            <li>Identify exception-management and visibility gaps.</li>
+          </ul></div>
+        </div>
+        <div class="mfm-principle"><b>Not a freight-pricing conversation</b><span>The opportunity is <strong>not</strong> positioned as transactional freight pricing. No revenue, Profit or opportunity value is stated or implied.</span></div>
+      </div>
+    </div>
+
+    <section class="mfm-chapter syn" id="mfm-ch-9">
+      <div class="mfm-chapter-n">Chapter 09</div>
+      <div class="mfm-chapter-t">Seller Discovery Guide</div>
+      <div class="mfm-chapter-s">Prioritized questions for the account conversation · questions about unknowns, never about PJ Facts</div>
+    </section>
+    <div class="card" style="border-top:3px solid #f59e0b;">
+      <div class="card-header">Seller Discovery Guide · 11 prioritized questions · <span class="mfm-src dv">Discovery Validation</span></div>
+      <div class="card-body">
+        <div class="mfm-dq-g">
+          <div><h4><span>Priority 1 · Relationship and entity validation <em class="mfm-first">Ask first</em></span><a href="#mfm-ch-5">Chapter 05 &rarr;</a></h4><ol start="1">
+            <li>&ldquo;Do Mission Foods Mexico, Gruma Corporation, and the different PJ name strings belong to the same operating and contracting model for these Shipments?&rdquo;</li>
+            <li>&ldquo;Is there an ARCATEK 3468/1930 relationship outside the PJ Visible Universe?&rdquo;</li>
+            <li>&ldquo;Is any freight captured by AKZENT, and can it be matched by BOL, date, gateway, direction, and entity?&rdquo;</li>
+          </ol></div>
+          <div><h4><span>Priority 2 · Network and facilities</span><a href="#mfm-ch-4">Chapter 04 &rarr;</a></h4><ol start="4">
+            <li>&ldquo;What explains the increase through Nuevo Laredo and the decrease through Tijuana?&rdquo;</li>
+            <li>&ldquo;Which physical facilities do the San Pedro Garza Garcia and Irving addresses represent?&rdquo;</li>
+          </ol></div>
+          <div><h4><span>Priority 3 · Control and ownership</span><a href="#mfm-ch-8">Chapter 08 &rarr;</a></h4><ol start="6">
+            <li>&ldquo;Who controls carrier selection, broker assignment, and exception management?&rdquo;</li>
+          </ol></div>
+          <div><h4><span>Priority 4 · Returnable packaging and flow mix</span><a href="#mfm-ch-6">Chapter 06 &rarr;</a></h4><ol start="7">
+            <li>&ldquo;Do the plastic boxes form a managed returnable-packaging loop?&rdquo;</li>
+            <li>&ldquo;Who measures cycle time, loss, inventory, dwell, and recovery for returnable packaging?&rdquo;</li>
+            <li>&ldquo;Which Shipments represent finished product, returnable packaging, maintenance parts, machinery, or ingredients?&rdquo;</li>
+          </ol></div>
+          <div><h4><span>Priority 5 · Visibility and pilot case</span><a href="#mfm-ch-8">Chapter 08 &rarr;</a></h4><ol start="10">
+            <li>&ldquo;Where do visibility and ownership break between facility, broker, carrier, and Trading Partner?&rdquo;</li>
+            <li>&ldquo;What business event and KPI would justify a Control Tower/ILM pilot?&rdquo;</li>
+          </ol></div>
+        </div>
+      </div>
+    </div>
+
+    <section class="mfm-chapter" id="mfm-ch-10">
+      <div class="mfm-chapter-n">Chapter 10</div>
+      <div class="mfm-chapter-t">AIOS Account Matrix Record</div>
+      <div class="mfm-chapter-s">Authorized values only · no probability or implementation score</div>
+    </section>
+    <div class="card">
+      <div class="card-header">AIOS Account Matrix Record · Mission Foods Mexico</div>
+      <div class="card-body">
+        <pre class="mfm-rec">account_name: Mission Foods Mexico
+legal_entity_visible_in_pj: Mission Foods Mexico S. de R.L. de C.V.
+account_status: Not Validated - do not label CLIENT or LEAD
+arcatek_customs:
+  classification: Confirmed Not Captured
+  scope: PJ Visible Universe only
+akzent_logistics:
+  classification: Not Validated
+previous_full_calendar_year: 2025
+current_ytd_cutoff: 2026-07-31
+pj_visible_shipments_2025:
+  exports: 950
+  imports: 773
+  total: 1723
+pj_visible_shipments_2026_ytd:
+  exports: 613
+  imports: 475
+  total: 1088
+comparable_growth_january_july: 15.6%
+primary_mode: Truck
+primary_gateway_2025: Nuevo Laredo - 1240 Shipments - 72.0%
+primary_gateway_2026_ytd: Nuevo Laredo - 845 Shipments - 77.7%
+customs_shared_wallet_2025: 0.0%
+customs_shared_wallet_2026_ytd: 0.0%
+logistics_shared_wallet: Not Calculable
+profit: Not Available
+primary_operational_signal: High-frequency bidirectional cross-border network with rising Nuevo Laredo concentration
+commercial_hypotheses:
+  - Cross-border operational coordination
+  - Customs and freight visibility
+  - Returnable-packaging cycle visibility
+  - Exception management and Control Tower/ILM
+mandatory_validation:
+  - CRM and internal service relationship
+  - Captured AKZENT freight
+  - Entity and facility mapping
+  - Gateway shift drivers
+  - Returnable packaging ownership and KPIs
+data_quality_limits:
+  - YTD source ends on July 31, 2026
+  - PJ Imports contain exact duplicate rows without a Shipment identifier
+  - PJ names and addresses were not merged</pre>
+      </div>
+    </div>
+
+  </div>
+  <script>
+  /* Printing opens every MISSION FOODS MEXICO evidence panel, then restores the reader's state. */
+  window.addEventListener('beforeprint', function () { document.querySelectorAll('#view-mission-foods details.mfm-ev:not([open])').forEach(function (d) { d.setAttribute('open', ''); d.setAttribute('data-mfm-print', '1'); }); });
+  window.addEventListener('afterprint', function () { document.querySelectorAll('#view-mission-foods details.mfm-ev[data-mfm-print]').forEach(function (d) { d.removeAttribute('open'); d.removeAttribute('data-mfm-print'); }); });
   </script>
 </div>
 
@@ -93995,6 +95473,7 @@ const ACCOUNTS = [
   { id:'view-bitron', name:'Bitron de México', sub:'Electronics Manufacturing / Automotive &amp; Appliance Controls · Mexico · Air urgency · Cross-Border · Asia sourcing · Querétaro · Puebla · Nuevo Laredo · Manzanillo · AICM · AIFA · Veracruz · Capacitors, resistors, diodes &amp; integrated circuits · Supplier coordination · Customs complexity · ILM / Control Tower · Panjiva Imports + Exports', rel:'LEAD', cls:'AAA', clsPill:'aaa' },
   { id:'view-chiquita', name:'Chiquita Mexico', sub:'Fresh Produce / Cross-Border Food Supply Chain · Mexico ↔ United States · Nuevo Laredo · Truck cross-border · Perishable lettuce &amp; radicchio exports · Corrugated carton packaging imports · Fresh Express Inc. · Customs visibility · ILM / Control Tower · Panjiva Imports + Exports', rel:'LEAD', cls:'AA', clsPill:'aa' },
   { id:'view-crown-envases', name:'Crown Envases Mexico', sub:'Crown Envases Mexico &middot; Analysis Date 21-Sep-2026 &middot; Relationship: LEAD &middot; Arcatek Customs: Confirmed Not Captured &middot; Akzent Logistics: Confirmed Not Captured &middot; AIOS Classification: Not assigned &mdash; authorized classification taxonomy was not supplied &middot; Previous Full Calendar Year 1 Jan 2025 to 31 Dec 2025 &middot; Current YTD 1 Jan 2026 to 31 Jul 2026 &middot; PJ Visible Current YTD 434 Shipments &middot; 111 PJ Imports 25.6% &middot; 323 PJ Exports 74.4% &middot; 2025 Full Year 635 Shipments &middot; 199 Imports &middot; 436 Exports &middot; Equivalent period Jan-Jul 2025 407 Shipments &middot; 133 Imports &middot; 274 Exports &middot; Equivalent-period change total +6.6% &middot; Imports -16.5% &middot; Exports +17.9% &middot; never annualized &middot; No Logistics Shared Wallet &middot; No Customs Shared Wallet &middot; No Penetration &middot; No Captured Business &middot; No Revenue &middot; No Profit &middot; No GP &middot; No Akzent performance &middot; Current YTD modes Truck 409 94.2% &middot; Maritime 15 3.5% &middot; Unknown 10 2.3% &middot; Current YTD gateways Ciudad Hidalgo 283 65.2% &middot; Nuevo Laredo 126 29.0% &middot; Manzanillo 14 3.2% &middot; Toluca 10 2.3% &middot; Altamira 1 0.2% &middot; Import Core Routes Current YTD 11 routes &middot; 89 / 111 = 80.2% &middot; Stolle Machinery &middot; Hong Kong Southwest Aluminium &middot; Akzo Nobel Coatings &middot; Sc Johnson And Son &middot; Okl Engineering &middot; Belvac &middot; Wissota Tool &middot; Carnaudmetalbox Engineering &middot; Sencon &middot; Systems Electronics Group &middot; Global International &middot; Export Core Route Current YTD 1 route &middot; Crown Envases Mexico to Ciudad Hidalgo to CBC International S.A. &middot; 280 Shipments &middot; 86.7% &middot; EXTREME ROUTE CONCENTRATION &middot; 40.0 per active month &middot; 9.47 per week &middot; 6 Jan 2026 to 31 Jul 2026 &middot; 2025 Import Core Routes 12 routes &middot; 162 / 199 = 81.4% &middot; 2025 Export Core Routes 2 routes &middot; 406 / 436 = 93.1% &middot; two PJ address variants kept separate &middot; Nuevo Laredo import network 85 Imports 76.6% &middot; Manzanillo aluminum inputs 14 Imports 12.6% &middot; Nuevo Laredo export structure 41 Exports 12.7% &middot; AA Metal Inc. 28 &middot; Tempo Global Resources variants 5 &middot; Customs Agents 3032 &middot; 3772 &middot; 3744 &middot; 1861 &middot; 1741 &middot; Arcatek Patents 3468 and 1930 do not appear &middot; HS 7612909900 aluminum cans and containers &middot; 7602000201 aluminum waste and scrap &middot; 8466949900 metal-working machinery parts &middot; 8309900800 aluminum lids and closures &middot; 8443919999 printing-machine parts &middot; 7606120100 aluminum sheet in rolls &middot; 7310299901 containers &middot; Discovery Required', rel:'LEAD', cls:'&mdash;', clsPill:'' },
+  { id:'view-mission-foods', name:'Mission Foods Mexico', sub:'Mission Foods Mexico S. de R.L. de C.V. &middot; Analysis Date 23-Sep-2026 &middot; Account status: Not Validated &mdash; not labelled CLIENT or LEAD &middot; ARCATEK Customs: Confirmed Not Captured (PJ Visible Universe only) &middot; AKZENT Logistics: Not Validated &middot; Previous Full Calendar Year 1 Jan 2025 to 31 Dec 2025 &middot; Current YTD 1 Jan 2026 to 31 Jul 2026 &middot; PJ Visible 2026 YTD 1,088 Shipments &middot; 613 PJ Exports &middot; 475 PJ Imports &middot; 2025 1,723 Shipments &middot; Comparable Jan-Jul +15.6% &middot; never annualized &middot; Primary gateway Nuevo Laredo 77.7% 2026 YTD &middot; Truck-led &middot; Customs Shared Wallet 0.0% &middot; Logistics Shared Wallet Not Calculable &middot; Profit Not Available', rel:'NOT VALIDATED', cls:'&mdash;', clsPill:'' },
   { id:'view-worldtradefoods', name:'World Trade Foods', sub:'World Trade Foods LLC S. de R.L. de C.V. · Food Imports · Frozen Potato Products · Mexico · Maritime only · Veracruz · Altamira · Belgium · Netherlands · Frozen prefried potatoes &amp; dehydrated potato flakes · Hidrocalira Inc. · Supplier concentration · Customs visibility · Food import control tower · Panjiva Mexico Imports', rel:'LEAD', cls:'AA', clsPill:'aa' },
   { id:'view-helvex', name:'Helvex', sub:'Building Products / Bathroom Fixtures / Sanitary Ware · Mexico · Multimodal Maritime + Air + Truck · Manzanillo · Veracruz · AIFA · AICM · Ciudad Hidalgo · Nuevo Laredo · China / Italy / Taiwan / Spain / Germany sourcing · LATAM, Caribbean &amp; United States export network · Faucets, valves, ceramic sanitary ware &amp; components · Supplier coordination · Customs complexity · Air urgency · ILM / Control Tower · Panjiva Imports + Exports', rel:'LEAD', cls:'AA', clsPill:'aa' },
   { id:'view-fronterra', name:'Fronterra Avocados', sub:'Fronterra Avocados S.A. de C.V. · Agroexport / Fresh Produce / Avocado Exporter · Mexico to USA Cross-Border · 100% Truck · Reynosa · Nuevo Laredo · Aguacate Hass · Fronterra Group Inc. · Consignee concentration · Customs visibility · Exception management · ILM / Control Tower · Panjiva Mexico Exports', rel:'LEAD', cls:'AA', clsPill:'aa' },
@@ -94145,6 +95624,7 @@ var INDUSTRY_BY_ID = {
   'view-magna-powertrain':'Auto', 'view-philipmorris':'Tobacco',
   'view-bitron':'Electronics', 'view-chiquita':'Fresh Produce',
   /* Crown Envases Mexico: no industry supplied by AIOS in the 21-Sep-2026 account package — none is invented. */
+  /* Mission Foods Mexico: no industry supplied by AIOS in the 23-Sep-2026 account package — none is invented. */
   'view-worldtradefoods':'Food',
   'view-helvex':'Building Products',
   'view-fronterra':'Fresh Produce',
@@ -94196,6 +95676,7 @@ function resolveRelationship(acc) {
   if (RELATIONSHIP_OVERRIDES[key]) return RELATIONSHIP_OVERRIDES[key];
   if (acc.rel === 'CLIENT') return 'current_client';
   if (acc.rel === 'LEAD')   return 'lead';
+  if (acc.rel === 'NOT VALIDATED') return 'not_validated';   /* AIOS status: neither CLIENT nor LEAD */
   UNRESOLVED_ACCOUNTS.push(acc.name);
   return null;
 }
@@ -94229,7 +95710,8 @@ var MISSING_MANDATED = Object.keys(RELATIONSHIP_OVERRIDES).filter(function(k) {
 var CATEGORIES = [
   { key:'current_client', label:'Current Clients',   short:'Current Clients', dot:'current', tag:'CLIENT',     tagCls:'rel-current' },
   { key:'new_client',     label:'New Clients',       short:'New Clients',     dot:'new',     tag:'NEW CLIENT', tagCls:'rel-new'     },
-  { key:'lead',           label:'Leads / Prospects', short:'Leads',           dot:'lead',    tag:'LEAD',       tagCls:'rel-lead'    }
+  { key:'lead',           label:'Leads / Prospects', short:'Leads',           dot:'lead',    tag:'LEAD',       tagCls:'rel-lead'    },
+  { key:'not_validated',  label:'Not Validated',     short:'Not Validated',   dot:'nv',      tag:'NOT VALIDATED', tagCls:'rel-nv'   }
 ];
 
 function catMeta(key) {
@@ -94523,7 +96005,8 @@ function renderPalette(query) {
   var PILL = {
     current_client: { pill:'<span class="cmd-pill client">CLIENT</span>',        dot:'client'    },
     new_client:     { pill:'<span class="cmd-pill newclient">NEW CLIENT</span>', dot:'newclient' },
-    lead:           { pill:'<span class="cmd-pill lead">LEAD</span>',            dot:'lead'      }
+    lead:           { pill:'<span class="cmd-pill lead">LEAD</span>',            dot:'lead'      },
+    not_validated:  { pill:'<span class="cmd-pill nv">NOT VALIDATED</span>',     dot:'nv'        }
   };
 
   var html = '';
@@ -94796,6 +96279,7 @@ var D2_FACTS = {"view-woco":{"ad":"19-Sep-2026","pj":{"v":1244,"p":"2026 YTD thr
     ACCOUNTS.forEach(function (a) {
       var rs = a.relationshipStatus;
       if (!rs) return;                                    /* unresolved: shown nowhere, as on the current Dashboard */
+      if (rs === 'not_validated') return;                 /* neither CLIENT nor LEAD: outside both Dashboard 2.0 universes */
       var f = D2_FACTS[a.id] || {};
       var r = {
         id: a.id, name: decode(a.name), f: f,
