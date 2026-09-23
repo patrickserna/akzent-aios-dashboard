@@ -17046,13 +17046,15 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
 /* The Core Route tables carry a wide screen min-width; print must be free to reflow them. */
 @media print { #view-mission-foods .mfm-route-table { min-width:0 !important; font-size:8px; } }
 
-/* Mission Foods Mexico additions (status pills, lane sequence, 3-up comparisons, monthly chart, wallets, matrix record). */
-#view-mission-foods .mfm-st { display:inline-block; font-size:10px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; padding:2px 8px; border-radius:4px; }
+/* Mission Foods Mexico additions: status pills, executive statements, 3-up comparisons, lane capture/customs line, monthly chart, wallets, discovery priority, matrix record. */
+#view-mission-foods .mfm-st { display:inline-block; font-size:10px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; padding:2px 8px; border-radius:4px; white-space:nowrap; }
 #view-mission-foods .mfm-st.nv { color:#475569; background:rgba(148,163,184,0.16); border:1px dashed rgba(100,116,139,0.8); }
 #view-mission-foods .mfm-st.cnc { color:#92400e; background:rgba(245,158,11,0.14); border:1px solid rgba(245,158,11,0.45); }
-#view-mission-foods .mfm-gov .v .mfm-st + small { margin-top:6px; }
-#view-mission-foods .mfm-exec { list-style:none; margin:0; padding:0; display:grid; gap:6px; max-width:1100px; }
-#view-mission-foods .mfm-exec li { display:grid; grid-template-columns:112px 1fr; gap:10px; align-items:baseline; font-size:12.5px; line-height:1.55; color:var(--text); padding:7px 12px; border:1px solid var(--border); border-radius:6px; background:var(--surface); }
+#view-mission-foods .mfm-st.hdr { color:#334155; background:#e2e8f0; border:1px solid #cbd5e1; }
+#view-mission-foods .mfm-gov .v .mfm-st { display:table; margin-bottom:4px; }
+#view-mission-foods .mfm-exec { list-style:none; margin:0; padding:0; display:grid; gap:6px; }
+#view-mission-foods .mfm-exec li { display:grid; grid-template-columns:110px minmax(0,1fr); gap:12px; align-items:baseline; font-size:12.5px; line-height:1.55; color:var(--text); padding:8px 14px; border:1px solid var(--border); border-left:3px solid var(--navy); border-radius:6px; background:var(--surface); }
+#view-mission-foods .mfm-exec li.i { border-left-color:var(--teal); background:rgba(0,180,216,0.04); }
 #view-mission-foods .mfm-exec .t { font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--navy); }
 #view-mission-foods .mfm-exec .t.i { color:var(--teal-dim); }
 #view-mission-foods .mfm-cmp3 { display:grid; grid-template-columns:repeat(3,minmax(0,220px)); gap:12px; margin-top:8px; }
@@ -17060,14 +17062,14 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
 #view-mission-foods .mfm-cmp3 .k { font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
 #view-mission-foods .mfm-cmp3 .s { font-size:11px; color:var(--text-muted); margin-top:2px; }
 #view-mission-foods .mfm-meth { margin:0; padding-left:18px; font-size:11.5px; line-height:1.65; color:var(--text-muted); }
-#view-mission-foods .mfm-seq { list-style:none; margin:12px 0 0; padding:0; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:6px 14px; }
-#view-mission-foods .mfm-seq li { display:grid; grid-template-columns:150px 1fr; gap:10px; align-items:baseline; padding:6px 10px; border-bottom:1px solid var(--border); font-size:12px; line-height:1.55; color:var(--text); }
-#view-mission-foods .mfm-seq li .k { font-size:8.5px; font-weight:800; letter-spacing:0.9px; text-transform:uppercase; color:var(--text-muted); }
-#view-mission-foods .mfm-seq li .k .mfm-src { display:block; width:max-content; max-width:100%; white-space:normal; margin-top:3px; }
-#view-mission-foods .mfm-seq li.s1, #view-mission-foods .mfm-seq li.s2, #view-mission-foods .mfm-seq li.s3 { grid-column:1 / -1; border-bottom:none; border-radius:5px; }
-#view-mission-foods .mfm-seq li.s1 { background:rgba(13,43,94,0.04); border-left:3px solid var(--navy); }
-#view-mission-foods .mfm-seq li.s2 { background:rgba(0,180,216,0.05); border-left:3px solid var(--teal); }
-#view-mission-foods .mfm-seq li.s3 { background:rgba(245,158,11,0.05); border-left:3px solid #f59e0b; }
+#view-mission-foods .mfm-rank-pill { white-space:nowrap; }
+#view-mission-foods .mfm-pos .na { font-weight:600; font-style:italic; }
+#view-mission-foods .mfm-capl { display:grid; grid-template-columns:1fr 1fr; border-bottom:1px solid var(--border); }
+#view-mission-foods .mfm-capl > div { display:flex; flex-wrap:wrap; align-items:center; gap:6px 10px; padding:10px 16px; font-size:11.5px; color:var(--text); }
+#view-mission-foods .mfm-capl > div:first-child { border-right:1px solid var(--border); }
+#view-mission-foods .mfm-capl .k { font-size:8.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+#view-mission-foods .mfm-capl .t { color:var(--text-muted); }
+#view-mission-foods .mfm-lane .mfm-sig { margin:12px 14px 14px; }
 #view-mission-foods .mfm-oth { display:inline-block; margin-left:6px; font-size:8px; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:#92400e; background:rgba(245,158,11,0.14); padding:1px 5px; border-radius:3px; vertical-align:1px; }
 #view-mission-foods .mfm-wal { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
 #view-mission-foods .mfm-wal > div { padding:13px 16px; border-radius:8px; border:1px solid var(--border); background:var(--surface); }
@@ -17098,25 +17100,40 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
 #view-mission-foods .mfm-layers .s2 b { color:var(--teal-dim); }
 #view-mission-foods .mfm-layers .s3 { background:rgba(245,158,11,0.05); border-top:3px solid #f59e0b; }
 #view-mission-foods .mfm-layers .s3 b { color:#b45309; }
+#view-mission-foods .mfm-dq-g > div.p1 { grid-column:1 / -1; border-top-color:#b45309; background:rgba(245,158,11,0.04); }
 #view-mission-foods .mfm-first { font-style:normal; font-size:8.5px; font-weight:800; letter-spacing:0.8px; text-transform:uppercase; color:#fff; background:#b45309; padding:1px 6px; border-radius:3px; margin-left:6px; vertical-align:2px; }
-#view-mission-foods .mfm-rec { margin:0; padding:16px 18px; background:rgba(13,43,94,0.04); border:1px solid var(--border); border-radius:7px; font-family:ui-monospace,Menlo,monospace; font-size:11.5px; line-height:1.6; color:var(--navy); white-space:pre-wrap; word-break:break-word; }
+#view-mission-foods .mfm-mx { width:100%; max-width:1000px; border-collapse:collapse; font-size:12px; }
+#view-mission-foods .mfm-mx th { width:290px; text-align:left; text-transform:none; letter-spacing:0; vertical-align:top; padding:8px 12px; font-family:ui-monospace,Menlo,monospace; font-size:11px; font-weight:700; color:var(--text-muted); background:rgba(13,43,94,0.03); border-bottom:1px solid var(--border); }
+#view-mission-foods .mfm-mx td { padding:8px 12px; color:var(--navy); font-weight:600; border-bottom:1px solid var(--border); line-height:1.5; }
+#view-mission-foods .mfm-mx ul { margin:0; padding-left:16px; font-weight:500; }
+#view-mission-foods .mfm-mx dl { margin:0; display:grid; gap:2px; }
+#view-mission-foods .mfm-mx dl > div { display:flex; gap:8px; flex-wrap:wrap; }
+#view-mission-foods .mfm-mx dt { font-family:ui-monospace,Menlo,monospace; font-size:11px; color:var(--text-muted); font-weight:600; }
+#view-mission-foods .mfm-mx dt::after { content:':'; }
+#view-mission-foods .mfm-mx dd { margin:0; }
 @media (max-width: 1000px) {
   #view-mission-foods .mfm-wal { grid-template-columns:repeat(2,1fr); }
-  #view-mission-foods .mfm-seq, #view-mission-foods .mfm-hsgrid, #view-mission-foods .mfm-layers { grid-template-columns:1fr; }
+  #view-mission-foods .mfm-hsgrid, #view-mission-foods .mfm-layers { grid-template-columns:minmax(0,1fr); }
+  #view-mission-foods .mfm-capl { grid-template-columns:1fr; }
+  #view-mission-foods .mfm-capl > div:first-child { border-right:none; border-bottom:1px solid var(--border); }
 }
 @media (max-width: 640px) {
   #view-mission-foods .mfm-wal, #view-mission-foods .mfm-cmp3 { grid-template-columns:1fr !important; }
-  #view-mission-foods .mfm-seq li, #view-mission-foods .mfm-exec li { grid-template-columns:1fr; gap:3px; }
-  #view-mission-foods .mfm-mchart { gap:2px; }
-  #view-mission-foods .mfm-mchart .b i { display:none; }
+  #view-mission-foods .mfm-exec li { grid-template-columns:minmax(0,1fr); gap:3px; }
   #view-mission-foods .mfm-hero, #view-mission-foods .mfm-exec { grid-template-columns:minmax(0,1fr); }
   #view-mission-foods .mfm-hero > div, #view-mission-foods .mfm-exec li { min-width:0; overflow-wrap:anywhere; }
   #view-mission-foods .card-header { white-space:normal; flex-wrap:wrap; height:auto; line-height:1.5; row-gap:4px; }
-  #view-mission-foods .mfm-seq, #view-mission-foods .mfm-hsgrid, #view-mission-foods .mfm-layers { grid-template-columns:minmax(0,1fr); }
-  #view-mission-foods .mfm-seq li, #view-mission-foods .mfm-seq li > div { min-width:0; overflow-wrap:anywhere; }
+  #view-mission-foods .mfm-mx th { width:auto; display:block; border-bottom:none; }
+  #view-mission-foods .mfm-mx td { display:block; }
+  #view-mission-foods .mfm-mchart { gap:2px; }
+  #view-mission-foods .mfm-mchart .b i { display:none; }
+  #view-mission-foods .mfm-st { white-space:normal; }
+  #view-mission-foods .mfm-capl > div { min-width:0; overflow-wrap:anywhere; padding:10px 12px; }
+  #view-mission-foods .mfm-lane .mfm-sig { margin:10px 8px 12px; grid-template-columns:minmax(0,1fr); }
+  #view-mission-foods .mfm-sig > div { min-width:0; overflow-wrap:anywhere; }
 }
 @media print {
-  #view-mission-foods .mfm-seq li, #view-mission-foods .mfm-layers > div, #view-mission-foods .mfm-wal > div { break-inside:avoid; }
+  #view-mission-foods .mfm-layers > div, #view-mission-foods .mfm-wal > div, #view-mission-foods .mfm-lane { break-inside:avoid; }
   #view-mission-foods .mfm-route-table { min-width:0 !important; font-size:8px; }
 }
 
@@ -61828,7 +61845,7 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
       <div class="page-header-sub">PJ Visible Universe · Current YTD 1 Jan – 31 Jul 2026 · 1,088 Shipments (613 PJ Exports · 475 PJ Imports) · high-frequency, truck-led, bidirectional cross-border network · increasingly concentrated through Nuevo Laredo · Discovery Validation required</div>
     </div>
     <div class="page-header-meta">
-      <span class="mfm-st nv">Not Validated</span>
+      <span class="mfm-st hdr">Not Validated</span>
       <button class="print-btn" onclick="printView('view-mission-foods')">⬇ Export PDF</button>
     </div>
   </div>
@@ -61855,29 +61872,35 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
           <div style="border-top:4px solid var(--navy);">
             <div class="k">PJ Visible Universe · Current YTD <span class="mfm-src pj">PJ Facts</span></div>
             <div class="v">1,088 <small>Shipments · 1 Jan – 31 Jul 2026</small></div>
-            <div class="s"><b>PJ Exports 613</b> · <b>PJ Imports 475</b> · 35.9 Shipments per calendar week</div>
+            <div class="mfm-split"><div style="width:56.3%;background:#0d2b5e;" title="PJ Exports 613"></div><div style="width:43.7%;background:#0e7490;" title="PJ Imports 475"></div></div>
+            <div class="s"><b>PJ Exports 613</b> · <b>PJ Imports 475</b><br>35.9 Shipments per calendar week · bidirectional, truck-led</div>
           </div>
           <div style="border-top:4px solid #94a3b8;">
             <div class="k">Previous Full Calendar Year 2025 <span class="mfm-src pj">PJ Facts</span></div>
             <div class="v" style="color:#64748b;">1,723 <small>Shipments · 1 Jan – 31 Dec 2025</small></div>
-            <div class="s">PJ Exports <b>950</b> · PJ Imports <b>773</b> · 33.0 Shipments per calendar week</div>
+            <div class="mfm-split"><div style="width:55.1%;background:#94a3b8;" title="PJ Exports 950"></div><div style="width:44.9%;background:#cbd5e1;" title="PJ Imports 773"></div></div>
+            <div class="s">PJ Exports <b>950</b> · PJ Imports <b>773</b><br>33.0 Shipments per calendar week · context only, never a growth base</div>
           </div>
           <div style="border-top:4px solid #f59e0b;">
             <div class="k">Comparable period · Jan–Jul <span class="mfm-src ca">AIOS Calculations</span></div>
             <div class="mfm-delta up">+15.6%</div>
-            <div class="s">941 → 1,088 Shipments · detail in <a href="#mfm-ch-2">Chapter 02</a></div>
+            <div class="mfm-trendrow">
+              <div>Jan–Jul 2025<b>941</b>509 Exports · 432 Imports</div>
+              <div>Jan–Jul 2026<b>1,088</b>613 Exports · 475 Imports</div>
+              <div>Direction split<b style="color:#047857;">+20.4% Exports</b>Imports +10.0%</div>
+            </div>
             <div class="mfm-sw">Comparable-period basis only · never annualized</div>
           </div>
         </div>
 
         <div class="mfm-sublbl" style="margin-top:20px;">Approved executive statements</div>
         <ul class="mfm-exec">
-          <li><span class="t">Observed</span>Mission Foods Mexico has a <b>high-frequency, truck-led, bidirectional cross-border</b> PJ Visible Universe.</li>
-          <li><span class="t">Observed</span>The network is <b>increasingly concentrated through Nuevo Laredo</b>.</li>
-          <li><span class="t">Customs</span>ARCATEK Customs is <b>Confirmed Not Captured within the PJ Visible Universe</b> because no Shipment uses ARCATEK patents 3468 or 1930.</li>
-          <li><span class="t">Logistics</span>AKZENT Logistics remains <b>Not Validated</b> because no authorized captured-freight source was available.</li>
-          <li><span class="t">Status</span>The overall account is <b>not</b> classified as CLIENT or LEAD.</li>
-          <li><span class="t i">Interpretation</span>Commercial relevance centers on cross-border operational coordination, customs and freight visibility, returnable-packaging cycles, exception management, and Control Tower/ILM. These commercial themes are <span class="mfm-src ai">AIOS Interpretations</span> and require <span class="mfm-src dv">Discovery Validation</span>.</li>
+          <li><span class="t">Observed</span><span>Mission Foods Mexico has a <b>high-frequency, truck-led, bidirectional cross-border</b> PJ Visible Universe.</span></li>
+          <li><span class="t">Observed</span><span>The network is <b>increasingly concentrated through Nuevo Laredo</b>.</span></li>
+          <li><span class="t">Customs</span><span>ARCATEK Customs is <b>Confirmed Not Captured within the PJ Visible Universe</b> because no Shipment uses ARCATEK patents 3468 or 1930.</span></li>
+          <li><span class="t">Logistics</span><span>AKZENT Logistics remains <b>Not Validated</b> because no authorized captured-freight source was available.</span></li>
+          <li><span class="t">Status</span><span>The overall account is <b>not</b> classified as CLIENT or LEAD.</span></li>
+          <li class="i"><span class="t i">Interpretation</span><span>Commercial relevance centers on cross-border operational coordination, customs and freight visibility, returnable-packaging cycles, exception management, and Control Tower/ILM. These commercial themes are <span class="mfm-src ai">AIOS Interpretations</span> and require <span class="mfm-src dv">Discovery Validation</span>.</span></li>
         </ul>
 
         <div class="mfm-jump">
@@ -61938,123 +61961,133 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
     <section class="mfm-chapter" id="mfm-ch-3">
       <div class="mfm-chapter-n">Chapter 03</div>
       <div class="mfm-chapter-t">Core Routes</div>
-      <div class="mfm-chapter-s">Exact PJ source-string routes · smallest set reaching ≥80% of each direction · address variants never merged</div>
+      <div class="mfm-chapter-s">Which exact PJ source-string routes make up ≥80% of each direction? · address variants never merged</div>
     </section>
-    <div class="card" style="border-top:3px solid #94a3b8;">
-      <div class="card-header">2025 PJ Exports · denominator 950 · 3 Core Routes · 811 / 950 = 85.4% cumulative · <span class="mfm-src pj">PJ Facts</span> + <span class="mfm-src ca">AIOS Calculations</span></div>
-      <div class="card-body">
-        <div class="mfm-scroll mfm-hist"><table class="mfm-route-table" style="min-width:980px;"><thead><tr><th>Route</th><th>PJ origin address</th><th>Gateway</th><th>PJ destination address</th><th class="num">Shipments</th><th class="num">Share</th><th class="num">Cumulative share</th></tr></thead><tbody>
-          <tr><td class="mfm-rank"><span class="mfm-rank-pill">E25-1</span></td><td><div class="mfm-ent"><span class="mfm-addr">Rio De La Plata 407 Ote., Col. Del Valle, San Pedro Garza Garcia Nuevo Leon 66220, Mexico</span></div></td><td><div class="mfm-ent"><strong>NUEVO LAREDO, NUEVO LAREDO, TAMAULIPAS.</strong></div></td><td><div class="mfm-ent"><span class="mfm-addr">Executive Dr, Irving, TX 75038, USA</span></div></td><td class="num mfm-mono">587</td><td class="num">61.8%</td><td class="num mfm-cum"><strong>61.8%</strong><div class="mfm-cum-bar"><div style="width:61.8%;"></div></div></td></tr>
-          <tr><td class="mfm-rank"><span class="mfm-rank-pill">E25-2</span></td><td><div class="mfm-ent"><span class="mfm-addr">Rio De La Plata 407 Ote., Col. Del Valle, San Pedro Garza Garcia Nuevo Leon 66220, Mexico</span></div></td><td><div class="mfm-ent"><strong>NUEVO LAREDO, NUEVO LAREDO, TAMAULIPAS.</strong></div></td><td><div class="mfm-ent"><span class="mfm-addr">EXECUTIVE DR. IRVING, TEXAS 75038</span></div></td><td class="num mfm-mono">147</td><td class="num">15.5%</td><td class="num mfm-cum"><strong>77.3%</strong><div class="mfm-cum-bar"><div style="width:77.3%;"></div></div></td></tr>
-          <tr><td class="mfm-rank"><span class="mfm-rank-pill">E25-3</span></td><td><div class="mfm-ent"><span class="mfm-addr">Rio De La Plata 407 Ote., Col. Del Valle, San Pedro Garza Garcia Nuevo Leon 66220, Mexico</span></div></td><td><div class="mfm-ent"><strong>TIJUANA, TIJUANA, BAJA CALIFORNIA.</strong></div></td><td><div class="mfm-ent"><span class="mfm-addr">EXECUTIVE DR. IRVING, TEXAS 75038</span></div></td><td class="num mfm-mono">77</td><td class="num">8.1%</td><td class="num mfm-cum"><strong>85.4%</strong><div class="mfm-cum-bar"><div style="width:85.4%;"></div></div></td></tr>
-        </tbody></table></div>
-      </div>
-    </div>
-
     <div class="card" style="border-top:3px solid var(--navy);">
-      <div class="card-header">2026 YTD PJ Exports · denominator 613 · 1 Core Route · 510 / 613 = 83.2% cumulative · <span class="mfm-src pj">PJ Facts</span> + <span class="mfm-src ca">AIOS Calculations</span></div>
+      <div class="card-header">Current YTD Export Core Routes — 1 route · 510 / 613 = 83.2% cumulative · <span class="mfm-src pj">PJ Facts</span> + <span class="mfm-src ca">AIOS Calculations</span></div>
       <div class="card-body">
+        <div class="mfm-micro" style="margin-top:0;">Directional universe: <strong>613 PJ Exports</strong> · 1 Jan – 31 Jul 2026. Core Routes are the smallest exact-string route set reaching at least 80%.</div>
+        <div style="max-width:900px;"><div class="mfm-conc"><div class="mfm-conc-bar"><div style="width:83.2%;background:#0d2b5e;" title="Core Route E-1 &middot; 510 Shipments">E-1 · 83.2%</div></div><div class="mfm-conc-mk r" style="left:83.2%;"><span>Core · 83.2%</span></div></div></div>
         <div class="mfm-scroll"><table class="mfm-route-table" style="min-width:980px;"><thead><tr><th>Route</th><th>PJ origin address</th><th>Gateway</th><th>PJ destination address</th><th class="num">Shipments</th><th class="num">Share</th><th class="num">Cumulative share</th></tr></thead><tbody>
-          <tr><td class="mfm-rank"><span class="mfm-rank-pill">E26-1</span></td><td><div class="mfm-ent"><span class="mfm-addr">Rio De La Plata 407 Ote., Col. Del Valle, San Pedro Garza Garcia Nuevo Leon 66220, Mexico</span></div></td><td><div class="mfm-ent"><strong>NUEVO LAREDO, NUEVO LAREDO, TAMAULIPAS.</strong></div></td><td><div class="mfm-ent"><span class="mfm-addr">EXECUTIVE DR. IRVING, TEXAS 75038</span></div></td><td class="num mfm-mono">510</td><td class="num">83.2%</td><td class="num mfm-cum"><strong>83.2%</strong><div class="mfm-cum-bar"><div style="width:83.2%;"></div></div></td></tr>
-        </tbody></table></div>
-      </div>
-    </div>
-
-    <div class="card" style="border-top:3px solid #94a3b8;">
-      <div class="card-header">2025 PJ Imports · denominator 773 · 2 Core Routes · 657 / 773 = 85.0% cumulative · <span class="mfm-src pj">PJ Facts</span> + <span class="mfm-src ca">AIOS Calculations</span></div>
-      <div class="card-body">
-        <div class="mfm-scroll mfm-hist"><table class="mfm-route-table" style="min-width:980px;"><thead><tr><th>Route</th><th>PJ origin address</th><th>Gateway</th><th>PJ destination address</th><th class="num">Shipments</th><th class="num">Share</th><th class="num">Cumulative share</th></tr></thead><tbody>
-          <tr><td class="mfm-rank"><span class="mfm-rank-pill">I25-1</span></td><td><div class="mfm-ent"><span class="mfm-na">Address not available in PJ</span></div></td><td><div class="mfm-ent"><strong>NUEVO LAREDO, NUEVO LAREDO, TAMAULIPAS.</strong></div></td><td><div class="mfm-ent"><span class="mfm-addr">Rio De La Plata 407 Ote. Col. Del Valle, Nuevo Leon</span></div></td><td class="num mfm-mono">366</td><td class="num">47.3%</td><td class="num mfm-cum"><strong>47.3%</strong><div class="mfm-cum-bar"><div style="width:47.3%;"></div></div></td></tr>
-          <tr><td class="mfm-rank"><span class="mfm-rank-pill">I25-2</span></td><td><div class="mfm-ent"><span class="mfm-na">Address not available in PJ</span></div></td><td><div class="mfm-ent"><strong>TIJUANA, TIJUANA, BAJA CALIFORNIA.</strong></div></td><td><div class="mfm-ent"><span class="mfm-addr">Rio De La Plata 407 Ote. Col. Del Valle, Nuevo Leon</span></div></td><td class="num mfm-mono">291</td><td class="num">37.6%</td><td class="num mfm-cum"><strong>85.0%</strong><div class="mfm-cum-bar"><div style="width:85.0%;"></div></div></td></tr>
+          <tr><td class="mfm-rank"><span class="mfm-rank-pill">E-1</span></td><td><div class="mfm-ent"><span class="mfm-addr">Rio De La Plata 407 Ote., Col. Del Valle, San Pedro Garza Garcia Nuevo Leon 66220, Mexico</span></div></td><td><div class="mfm-ent"><strong>NUEVO LAREDO, NUEVO LAREDO, TAMAULIPAS.</strong></div></td><td><div class="mfm-ent"><span class="mfm-addr">EXECUTIVE DR. IRVING, TEXAS 75038</span></div></td><td class="num mfm-mono">510</td><td class="num">83.2%</td><td class="num mfm-cum"><strong>83.2%</strong><div class="mfm-cum-bar"><div style="width:83.2%;"></div></div></td></tr>
         </tbody></table></div>
       </div>
     </div>
 
     <div class="card" style="border-top:3px solid var(--teal);">
-      <div class="card-header">2026 YTD PJ Imports · denominator 475 · 2 Core Routes · 400 / 475 = 84.2% cumulative · <span class="mfm-src pj">PJ Facts</span> + <span class="mfm-src ca">AIOS Calculations</span></div>
+      <div class="card-header">Current YTD Import Core Routes — 2 routes · 400 / 475 = 84.2% cumulative · <span class="mfm-src pj">PJ Facts</span> + <span class="mfm-src ca">AIOS Calculations</span></div>
       <div class="card-body">
+        <div class="mfm-micro" style="margin-top:0;">Directional universe: <strong>475 PJ Imports</strong> · 1 Jan – 31 Jul 2026. Core Routes are the smallest exact-string route set reaching at least 80%.</div>
+        <div style="max-width:900px;"><div class="mfm-conc"><div class="mfm-conc-bar"><div style="width:51.2%;background:#0d2b5e;" title="Core Route I-1 &middot; 243 Shipments">I-1 · 51.2%</div><div style="width:33.1%;background:#0e7490;" title="Core Route I-2 &middot; 157 Shipments">I-2 · 33.1%</div></div><div class="mfm-conc-mk r" style="left:84.2%;"><span>Core · 84.2%</span></div></div></div>
         <div class="mfm-scroll"><table class="mfm-route-table" style="min-width:980px;"><thead><tr><th>Route</th><th>PJ origin address</th><th>Gateway</th><th>PJ destination address</th><th class="num">Shipments</th><th class="num">Share</th><th class="num">Cumulative share</th></tr></thead><tbody>
-          <tr><td class="mfm-rank"><span class="mfm-rank-pill">I26-1</span></td><td><div class="mfm-ent"><span class="mfm-addr">Executive Dr, Irving, TX 75038, USA</span></div></td><td><div class="mfm-ent"><strong>NUEVO LAREDO, NUEVO LAREDO, TAMAULIPAS.</strong></div></td><td><div class="mfm-ent"><span class="mfm-addr">Rio De La Plata 407 Ote. Col. Del Valle, Nuevo Leon</span></div></td><td class="num mfm-mono">243</td><td class="num">51.2%</td><td class="num mfm-cum"><strong>51.2%</strong><div class="mfm-cum-bar"><div style="width:51.2%;"></div></div></td></tr>
-          <tr><td class="mfm-rank"><span class="mfm-rank-pill">I26-2</span></td><td><div class="mfm-ent"><span class="mfm-na">Address not available in PJ</span></div></td><td><div class="mfm-ent"><strong>TIJUANA, TIJUANA, BAJA CALIFORNIA.</strong></div></td><td><div class="mfm-ent"><span class="mfm-addr">Rio De La Plata 407 Ote. Col. Del Valle, Nuevo Leon</span></div></td><td class="num mfm-mono">157</td><td class="num">33.1%</td><td class="num mfm-cum"><strong>84.2%</strong><div class="mfm-cum-bar"><div style="width:84.2%;"></div></div></td></tr>
+          <tr><td class="mfm-rank"><span class="mfm-rank-pill">I-1</span></td><td><div class="mfm-ent"><span class="mfm-addr">Executive Dr, Irving, TX 75038, USA</span></div></td><td><div class="mfm-ent"><strong>NUEVO LAREDO, NUEVO LAREDO, TAMAULIPAS.</strong></div></td><td><div class="mfm-ent"><span class="mfm-addr">Rio De La Plata 407 Ote. Col. Del Valle, Nuevo Leon</span></div></td><td class="num mfm-mono">243</td><td class="num">51.2%</td><td class="num mfm-cum"><strong>51.2%</strong><div class="mfm-cum-bar"><div style="width:51.2%;"></div></div></td></tr>
+          <tr><td class="mfm-rank"><span class="mfm-rank-pill">I-2</span></td><td><div class="mfm-ent"><span class="mfm-na">Address not available in PJ</span></div></td><td><div class="mfm-ent"><strong>TIJUANA, TIJUANA, BAJA CALIFORNIA.</strong></div></td><td><div class="mfm-ent"><span class="mfm-addr">Rio De La Plata 407 Ote. Col. Del Valle, Nuevo Leon</span></div></td><td class="num mfm-mono">157</td><td class="num">33.1%</td><td class="num mfm-cum"><strong>84.2%</strong><div class="mfm-cum-bar"><div style="width:84.2%;"></div></div></td></tr>
         </tbody></table></div>
       </div>
     </div>
 
-    <div class="mfm-note-na"><strong style="color:var(--navy);">Exact source strings.</strong> Origin, gateway and destination strings are displayed exactly as reported in PJ. The two Irving address strings — <em>Executive Dr, Irving, TX 75038, USA</em> and <em>EXECUTIVE DR. IRVING, TEXAS 75038</em> — are <strong>kept as separate routes and never merged</strong>. Shares and cumulative shares are exactly as supplied by AIOS. Mode, active months and frequency are developed per corridor in <a href="#mfm-ch-4">Chapter 04</a>.</div>
+    <div class="card">
+      <div class="card-header">Historical Core Routes · Previous Full Calendar Year 2025 · <span class="mfm-src pj">PJ Facts</span> + <span class="mfm-src ca">AIOS Calculations</span></div>
+      <div class="card-body">
+        <div class="mfm-micro" style="margin-top:0;">2025 Core Routes are context. They are never aggregated with Current YTD.</div>
+        <details class="mfm-ev" open><summary>2025 PJ Exports · 3 Core Routes · 811 / 950 = 85.4% cumulative</summary><div class="mfm-ev-b">
+        <div style="max-width:900px;"><div class="mfm-conc"><div class="mfm-conc-bar"><div style="width:61.8%;background:#64748b;" title="Core Route E-1 &middot; 587 Shipments">E-1 · 61.8%</div><div style="width:15.5%;background:#64748b;" title="Core Route E-2 &middot; 147 Shipments">E-2 · 15.5%</div><div style="width:8.1%;background:#a8b4c4;" title="Core Route E-3 &middot; 77 Shipments">E-3 · 8.1%</div></div><div class="mfm-conc-mk r" style="left:85.4%;"><span>Core · 85.4%</span></div></div></div>
+        <div class="mfm-scroll mfm-hist"><table class="mfm-route-table" style="min-width:980px;"><thead><tr><th>Route</th><th>PJ origin address</th><th>Gateway</th><th>PJ destination address</th><th class="num">Shipments</th><th class="num">Share</th><th class="num">Cumulative share</th></tr></thead><tbody>
+          <tr><td class="mfm-rank"><span class="mfm-rank-pill">E-1</span></td><td><div class="mfm-ent"><span class="mfm-addr">Rio De La Plata 407 Ote., Col. Del Valle, San Pedro Garza Garcia Nuevo Leon 66220, Mexico</span></div></td><td><div class="mfm-ent"><strong>NUEVO LAREDO, NUEVO LAREDO, TAMAULIPAS.</strong></div></td><td><div class="mfm-ent"><span class="mfm-addr">Executive Dr, Irving, TX 75038, USA</span></div></td><td class="num mfm-mono">587</td><td class="num">61.8%</td><td class="num mfm-cum"><strong>61.8%</strong><div class="mfm-cum-bar"><div style="width:61.8%;"></div></div></td></tr>
+          <tr><td class="mfm-rank"><span class="mfm-rank-pill">E-2</span></td><td><div class="mfm-ent"><span class="mfm-addr">Rio De La Plata 407 Ote., Col. Del Valle, San Pedro Garza Garcia Nuevo Leon 66220, Mexico</span></div></td><td><div class="mfm-ent"><strong>NUEVO LAREDO, NUEVO LAREDO, TAMAULIPAS.</strong></div></td><td><div class="mfm-ent"><span class="mfm-addr">EXECUTIVE DR. IRVING, TEXAS 75038</span></div></td><td class="num mfm-mono">147</td><td class="num">15.5%</td><td class="num mfm-cum"><strong>77.3%</strong><div class="mfm-cum-bar"><div style="width:77.3%;"></div></div></td></tr>
+          <tr><td class="mfm-rank"><span class="mfm-rank-pill">E-3</span></td><td><div class="mfm-ent"><span class="mfm-addr">Rio De La Plata 407 Ote., Col. Del Valle, San Pedro Garza Garcia Nuevo Leon 66220, Mexico</span></div></td><td><div class="mfm-ent"><strong>TIJUANA, TIJUANA, BAJA CALIFORNIA.</strong></div></td><td><div class="mfm-ent"><span class="mfm-addr">EXECUTIVE DR. IRVING, TEXAS 75038</span></div></td><td class="num mfm-mono">77</td><td class="num">8.1%</td><td class="num mfm-cum"><strong>85.4%</strong><div class="mfm-cum-bar"><div style="width:85.4%;"></div></div></td></tr>
+        </tbody></table></div>
+        </div></details>
+        <details class="mfm-ev" open><summary>2025 PJ Imports · 2 Core Routes · 657 / 773 = 85.0% cumulative</summary><div class="mfm-ev-b">
+        <div style="max-width:900px;"><div class="mfm-conc"><div class="mfm-conc-bar"><div style="width:47.3%;background:#64748b;" title="Core Route I-1 &middot; 366 Shipments">I-1 · 47.3%</div><div style="width:37.6%;background:#a8b4c4;" title="Core Route I-2 &middot; 291 Shipments">I-2 · 37.6%</div></div><div class="mfm-conc-mk r" style="left:85.0%;"><span>Core · 85.0%</span></div></div></div>
+        <div class="mfm-scroll mfm-hist"><table class="mfm-route-table" style="min-width:980px;"><thead><tr><th>Route</th><th>PJ origin address</th><th>Gateway</th><th>PJ destination address</th><th class="num">Shipments</th><th class="num">Share</th><th class="num">Cumulative share</th></tr></thead><tbody>
+          <tr><td class="mfm-rank"><span class="mfm-rank-pill">I-1</span></td><td><div class="mfm-ent"><span class="mfm-na">Address not available in PJ</span></div></td><td><div class="mfm-ent"><strong>NUEVO LAREDO, NUEVO LAREDO, TAMAULIPAS.</strong></div></td><td><div class="mfm-ent"><span class="mfm-addr">Rio De La Plata 407 Ote. Col. Del Valle, Nuevo Leon</span></div></td><td class="num mfm-mono">366</td><td class="num">47.3%</td><td class="num mfm-cum"><strong>47.3%</strong><div class="mfm-cum-bar"><div style="width:47.3%;"></div></div></td></tr>
+          <tr><td class="mfm-rank"><span class="mfm-rank-pill">I-2</span></td><td><div class="mfm-ent"><span class="mfm-na">Address not available in PJ</span></div></td><td><div class="mfm-ent"><strong>TIJUANA, TIJUANA, BAJA CALIFORNIA.</strong></div></td><td><div class="mfm-ent"><span class="mfm-addr">Rio De La Plata 407 Ote. Col. Del Valle, Nuevo Leon</span></div></td><td class="num mfm-mono">291</td><td class="num">37.6%</td><td class="num mfm-cum"><strong>85.0%</strong><div class="mfm-cum-bar"><div style="width:85.0%;"></div></div></td></tr>
+        </tbody></table></div>
+        </div></details>
+      </div>
+    </div>
+
+    <div class="mfm-note-na"><strong style="color:var(--navy);">Exact source strings.</strong> Origin, gateway and destination strings are displayed exactly as reported in PJ. The two Irving address strings — <em>Executive Dr, Irving, TX 75038, USA</em> and <em>EXECUTIVE DR. IRVING, TEXAS 75038</em> — are <strong>kept as separate routes and never merged</strong>. Shares and cumulative shares are exactly as supplied by AIOS. Frequency and persistence are developed per corridor in <a href="#mfm-ch-4">Chapter 04</a>.</div>
 
     <section class="mfm-chapter" id="mfm-ch-4">
       <div class="mfm-chapter-n">Chapter 04</div>
       <div class="mfm-chapter-t">Lane Intelligence</div>
-      <div class="mfm-chapter-s">How do the corridors behave? · Scale → Share → Frequency → Persistence → Gateway → Trading Partner → Logistics Capture → Customs Position → Observed Signal → AIOS Interpretation → Discovery Validation</div>
+      <div class="mfm-chapter-s">How do the corridors behave? · the primary home for corridor interpretation</div>
     </section>
     <div class="mfm-lanenav"><span>Four corridors</span><a href="#mfm-lane-A" class="key">A · Mexico address → Nuevo Laredo → Irving</a><a href="#mfm-lane-B">B · Mexico address → Tijuana → Irving</a><a href="#mfm-lane-C">C · Irving / origin unavailable → Nuevo Laredo → Mexico address</a><a href="#mfm-lane-D">D · Origin unavailable → Tijuana → Mexico address</a></div>
+    <div class="mfm-micro" style="margin:0 0 14px;">Each corridor reads in the same order: Scale → Share → Frequency → Persistence → Gateway → Trading Partner → Logistics Capture → Customs Position → Observed Signal → AIOS Interpretation → Discovery Validation.</div>
 
     <div class="mfm-cor mfm-lane key" id="mfm-lane-A">
-      <div class="mfm-cor-h"><div class="mfm-cor-id">A</div><div><div class="mfm-cor-w">Corridor A · PJ Exports · Truck-led · the dominant visible structure</div><div class="mfm-cor-t">Mexico address → Nuevo Laredo → Irving</div></div></div>
-      <ol class="mfm-seq">
-        <li class=""><div class="k">Scale <span class="mfm-src pj">PJ Facts</span></div><div class="v">2025 exact Core Route strings: <b>587</b> and <b>147</b> Shipments · 2026 YTD exact Core Route: <b>510</b> Shipments</div></li>
-        <li class=""><div class="k">Share <span class="mfm-src ca">AIOS Calculations</span></div><div class="v">2026 YTD Core Route: <b>83.2%</b> of 2026 YTD PJ Exports</div></li>
-        <li class=""><div class="k">Frequency <span class="mfm-src ca">AIOS Calculations</span></div><div class="v">2025 strings: <b>11.3</b> and <b>2.8</b> Shipments per calendar week · 2026 YTD: <b>16.8</b> Shipments per calendar week</div></li>
-        <li class=""><div class="k">Persistence <span class="mfm-src ca">AIOS Calculations</span></div><div class="v">First 2025 string active <b>January–October 2025</b> · second string active <b>October–December 2025</b> · 2026 YTD route active in <b>all seven months</b></div></li>
-        <li class=""><div class="k">Gateway </div><div class="v">NUEVO LAREDO, NUEVO LAREDO, TAMAULIPAS.</div></li>
-        <li class=""><div class="k">Trading Partner </div><div class="v">PJ Trading Partner strings <b>Gruma Corp. Dba Mission Foods Corp.</b> and <b>Gruma Corporation</b> — displayed separately; not merged and not classified as affiliates</div></li>
-        <li class=""><div class="k">Logistics Capture </div><div class="v"><span class="mfm-st nv">Not Validated</span> No authorized AKZENT captured-freight dataset was available.</div></li>
-        <li class=""><div class="k">Customs Position </div><div class="v">Other Patent <b>1631</b> on the main Nuevo Laredo routes · ARCATEK patents 3468 / 1930 not observed</div></li>
-        <li class="s1"><div class="k">Observed Signal <span class="mfm-src pj">PJ Facts</span></div><div class="v">The gateway and visible addresses persist while the PJ name and address strings change.</div></li>
-        <li class="s2"><div class="k">AIOS Interpretation <span class="mfm-src ai">AIOS Interpretations</span></div><div class="v">The data may represent continuing operations with different source normalization.</div></li>
-        <li class="s3"><div class="k">Discovery Validation <span class="mfm-src dv">Discovery Validation</span></div><div class="v">Confirm physical facilities, entity relationships, freight owner, and the reason for the visible name change.</div></li>
-      </ol>
+      <div class="mfm-cor-h"><div class="mfm-cor-id">A</div><div><div class="mfm-cor-w">Corridor A · PJ Exports · the dominant visible structure</div><div class="mfm-cor-t">Mexico address → Nuevo Laredo → Irving</div></div><span class="mfm-cor-flag">83.2% of 2026 YTD PJ Exports</span></div>
+      <div class="mfm-lane-g">
+        <div><div class="k">Scale · Share <span class="mfm-src pj">PJ Facts</span></div><div class="n">510<small> 2026 YTD PJ Exports · exact Core Route</small></div><div class="s">Share <b>83.2%</b> of 2026 YTD PJ Exports<br>2025 exact Core Route strings: <b>587</b> and <b>147</b> Shipments</div></div>
+        <div><div class="k">Frequency &amp; persistence <span class="mfm-src ca">AIOS Calculations</span></div><div class="s">2026 YTD: <b>16.8</b> Shipments per calendar week<br>2025 strings: <b>11.3</b> and <b>2.8</b> per calendar week</div><div class="mfm-rtags"><span>1st 2025 string · Jan–Oct 2025</span><span>2nd 2025 string · Oct–Dec 2025</span><span>2026 YTD · all seven months</span></div></div>
+        <div class="pos"><div class="k">Structure</div><div class="mfm-pos"><span class="lu"><em>Gateway</em>Nuevo Laredo</span><span class="ca"><em>Trading Partner</em>Gruma Corp. Dba Mission Foods Corp. · Gruma Corporation</span><span class="co"><em>Direction</em>Export</span></div><div class="mfm-micro" style="margin-top:6px;">PJ Trading Partner strings are shown separately — not merged and not classified as affiliates.</div></div>
+      </div>
+      <div class="mfm-capl">
+        <div><span class="k">Logistics Capture</span><span class="mfm-st nv">Not Validated</span><span class="t">No authorized AKZENT captured-freight dataset was available.</span></div>
+        <div><span class="k">Customs Position</span><span class="t">Other Patent <b>1631</b> on the main Nuevo Laredo routes · ARCATEK 3468 / 1930 not observed</span></div>
+      </div>
+      <div class="mfm-sig">
+        <div class="s1"><b>Observed Signal</b>The gateway and visible addresses persist while the PJ name and address strings change.</div>
+        <div class="s2"><b>AIOS Interpretation</b>The data may represent continuing operations with different source normalization.</div>
+        <div class="s3"><b>Discovery Validation</b>Confirm physical facilities, entity relationships, freight owner, and the reason for the visible name change.</div>
+      </div>
     </div>
 
     <div class="mfm-cor mfm-lane" id="mfm-lane-B">
-      <div class="mfm-cor-h"><div class="mfm-cor-id">B</div><div><div class="mfm-cor-w">Corridor B · PJ Exports · secondary gateway</div><div class="mfm-cor-t">Mexico address → Tijuana → Irving</div></div></div>
-      <ol class="mfm-seq">
-        <li class=""><div class="k">Scale <span class="mfm-src pj">PJ Facts</span></div><div class="v">2025: <b>77</b> Core Route Shipments · total Tijuana PJ Exports <b>92</b> in January–July 2025 and <b>60</b> in January–July 2026</div></li>
-        <li class=""><div class="k">Share <span class="mfm-src ca">AIOS Calculations</span></div><div class="v">2025 Core Route: <b>8.1%</b> of 2025 PJ Exports · not a 2026 YTD Core Route</div></li>
-        <li class=""><div class="k">Frequency <span class="mfm-src ca">AIOS Calculations</span></div><div class="v"><span class="mfm-na-pill">Not supplied by AIOS for this lane</span></div></li>
-        <li class=""><div class="k">Persistence <span class="mfm-src ca">AIOS Calculations</span></div><div class="v">2025 Core Route active in <b>all 12 months</b></div></li>
-        <li class=""><div class="k">Gateway </div><div class="v">TIJUANA, TIJUANA, BAJA CALIFORNIA.</div></li>
-        <li class=""><div class="k">Trading Partner </div><div class="v"><span class="mfm-na-pill">Not supplied by AIOS for this lane</span></div></li>
-        <li class=""><div class="k">Logistics Capture </div><div class="v"><span class="mfm-st nv">Not Validated</span> No authorized AKZENT captured-freight dataset was available.</div></li>
-        <li class=""><div class="k">Customs Position </div><div class="v">Other Patents <b>1252</b> for 52 Shipments and <b>3822</b> for 25 on the 2025 Core Route · ARCATEK patents 3468 / 1930 not observed</div></li>
-        <li class="s1"><div class="k">Observed Signal <span class="mfm-src pj">PJ Facts</span></div><div class="v">Total Tijuana PJ Exports fell from 92 in January–July 2025 to 60 in January–July 2026.</div></li>
-        <li class="s2"><div class="k">AIOS Interpretation <span class="mfm-src ai">AIOS Interpretations</span></div><div class="v"><span class="mfm-na-pill">Not supplied by AIOS for this lane</span></div></li>
-        <li class="s3"><div class="k">Discovery Validation <span class="mfm-src dv">Discovery Validation</span></div><div class="v">Determine whether the reduction reflects gateway redesign, product mix, capacity, seasonality, or source behavior.</div></li>
-      </ol>
+      <div class="mfm-cor-h"><div class="mfm-cor-id">B</div><div><div class="mfm-cor-w">Corridor B · PJ Exports · secondary gateway</div><div class="mfm-cor-t">Mexico address → Tijuana → Irving</div></div><span class="mfm-cor-flag">Not a 2026 YTD Core Route</span></div>
+      <div class="mfm-lane-g">
+        <div><div class="k">Scale · Share <span class="mfm-src pj">PJ Facts</span></div><div class="n">77<small> 2025 PJ Exports · Core Route</small></div><div class="s">Share <b>8.1%</b> of 2025 PJ Exports<br>Total Tijuana PJ Exports: <b>92</b> in Jan–Jul 2025 · <b>60</b> in Jan–Jul 2026</div></div>
+        <div><div class="k">Frequency &amp; persistence <span class="mfm-src ca">AIOS Calculations</span></div><div class="s">Frequency: Not supplied by AIOS</div><div class="mfm-rtags"><span>2025 Core Route · active all 12 months</span></div></div>
+        <div class="pos"><div class="k">Structure</div><div class="mfm-pos"><span class="lu"><em>Gateway</em>Tijuana</span><span class="lu na"><em>Trading Partner</em>Not supplied by AIOS</span><span class="co"><em>Direction</em>Export</span></div></div>
+      </div>
+      <div class="mfm-capl">
+        <div><span class="k">Logistics Capture</span><span class="mfm-st nv">Not Validated</span><span class="t">No authorized AKZENT captured-freight dataset was available.</span></div>
+        <div><span class="k">Customs Position</span><span class="t">Other Patents <b>1252</b> for 52 Shipments and <b>3822</b> for 25 · ARCATEK 3468 / 1930 not observed</span></div>
+      </div>
+      <div class="mfm-sig">
+        <div class="s1"><b>Observed Signal</b>Total Tijuana PJ Exports fell from 92 in January–July 2025 to 60 in January–July 2026.</div>
+        <div class="s2"><b>AIOS Interpretation</b><span class="mfm-na-pill">No lane-specific AIOS Interpretation supplied</span></div>
+        <div class="s3"><b>Discovery Validation</b>Determine whether the reduction reflects gateway redesign, product mix, capacity, seasonality, or source behavior.</div>
+      </div>
     </div>
 
     <div class="mfm-cor mfm-lane" id="mfm-lane-C">
-      <div class="mfm-cor-h"><div class="mfm-cor-id">C</div><div><div class="mfm-cor-w">Corridor C · PJ Imports · two routes kept separate</div><div class="mfm-cor-t">Irving / origin unavailable → Nuevo Laredo → Mexico address</div></div></div>
-      <ol class="mfm-seq">
-        <li class=""><div class="k">Scale <span class="mfm-src pj">PJ Facts</span></div><div class="v">2025 Core Route with origin unavailable: <b>366</b> Shipments · 2026 YTD Core Route with Irving origin: <b>243</b> Shipments</div></li>
-        <li class=""><div class="k">Share <span class="mfm-src ca">AIOS Calculations</span></div><div class="v">2025: <b>47.3%</b> of 2025 PJ Imports · 2026 YTD: <b>51.2%</b> of 2026 YTD PJ Imports</div></li>
-        <li class=""><div class="k">Frequency <span class="mfm-src ca">AIOS Calculations</span></div><div class="v">2026 YTD: <b>8.0</b> Shipments per calendar week · 2025 frequency not supplied by AIOS</div></li>
-        <li class=""><div class="k">Persistence <span class="mfm-src ca">AIOS Calculations</span></div><div class="v">2025 route active in <b>all 12 months</b> · 2026 YTD route active in <b>all seven months</b></div></li>
-        <li class=""><div class="k">Gateway </div><div class="v">NUEVO LAREDO, NUEVO LAREDO, TAMAULIPAS.</div></li>
-        <li class=""><div class="k">Trading Partner </div><div class="v"><span class="mfm-na-pill">Not supplied by AIOS for this lane</span></div></li>
-        <li class=""><div class="k">Logistics Capture </div><div class="v"><span class="mfm-st nv">Not Validated</span> No authorized AKZENT captured-freight dataset was available.</div></li>
-        <li class=""><div class="k">Customs Position </div><div class="v">2026 YTD Other Patent <b>1631</b> · ARCATEK patents 3468 / 1930 not observed</div></li>
-        <li class="s1"><div class="k">Observed Signal <span class="mfm-src pj">PJ Facts</span></div><div class="v">The 2025 route has no origin address in PJ; the 2026 YTD route carries the Irving origin string. The routes are <b>not merged</b>.</div></li>
-        <li class="s2"><div class="k">AIOS Interpretation <span class="mfm-src ai">AIOS Interpretations</span></div><div class="v"><span class="mfm-na-pill">Not supplied by AIOS for this lane</span></div></li>
-        <li class="s3"><div class="k">Discovery Validation <span class="mfm-src dv">Discovery Validation</span></div><div class="v">Confirm whether they represent the same operational flow and identify the true origin facility.</div></li>
-      </ol>
+      <div class="mfm-cor-h"><div class="mfm-cor-id">C</div><div><div class="mfm-cor-w">Corridor C · PJ Imports · two routes kept separate</div><div class="mfm-cor-t">Irving / origin unavailable → Nuevo Laredo → Mexico address</div></div><span class="mfm-cor-flag">Routes not merged</span></div>
+      <div class="mfm-lane-g">
+        <div><div class="k">Scale · Share <span class="mfm-src pj">PJ Facts</span></div><div class="n">243<small> 2026 YTD PJ Imports · Irving origin</small></div><div class="s">Share <b>51.2%</b> of 2026 YTD PJ Imports<br>2025 route, origin not available in PJ: <b>366</b> Shipments · <b>47.3%</b></div></div>
+        <div><div class="k">Frequency &amp; persistence <span class="mfm-src ca">AIOS Calculations</span></div><div class="s">2026 YTD: <b>8.0</b> Shipments per calendar week<br>2025 frequency: not supplied by AIOS</div><div class="mfm-rtags"><span>2025 route · active all 12 months</span><span>2026 YTD route · all seven months</span></div></div>
+        <div class="pos"><div class="k">Structure</div><div class="mfm-pos"><span class="lu"><em>Gateway</em>Nuevo Laredo</span><span class="lu na"><em>Trading Partner</em>Not supplied by AIOS</span><span class="co"><em>Direction</em>Import</span></div></div>
+      </div>
+      <div class="mfm-capl">
+        <div><span class="k">Logistics Capture</span><span class="mfm-st nv">Not Validated</span><span class="t">No authorized AKZENT captured-freight dataset was available.</span></div>
+        <div><span class="k">Customs Position</span><span class="t">2026 YTD Other Patent <b>1631</b> · ARCATEK 3468 / 1930 not observed</span></div>
+      </div>
+      <div class="mfm-sig">
+        <div class="s1"><b>Observed Signal</b>The 2025 route has no origin address in PJ; the 2026 YTD route carries the Irving origin string.</div>
+        <div class="s2"><b>AIOS Interpretation</b><span class="mfm-na-pill">No lane-specific AIOS Interpretation supplied</span></div>
+        <div class="s3"><b>Discovery Validation</b>Confirm whether they represent the same operational flow and identify the true origin facility.</div>
+      </div>
     </div>
 
     <div class="mfm-cor mfm-lane" id="mfm-lane-D">
-      <div class="mfm-cor-h"><div class="mfm-cor-id">D</div><div><div class="mfm-cor-w">Corridor D · PJ Imports · persistent secondary gateway</div><div class="mfm-cor-t">Origin unavailable → Tijuana → Mexico address</div></div></div>
-      <ol class="mfm-seq">
-        <li class=""><div class="k">Scale <span class="mfm-src pj">PJ Facts</span></div><div class="v">2025: <b>291</b> Core Route Shipments · 2026 YTD: <b>157</b> Core Route Shipments</div></li>
-        <li class=""><div class="k">Share <span class="mfm-src ca">AIOS Calculations</span></div><div class="v">2025: <b>37.6%</b> of 2025 PJ Imports · 2026 YTD: <b>33.1%</b> of 2026 YTD PJ Imports</div></li>
-        <li class=""><div class="k">Frequency <span class="mfm-src ca">AIOS Calculations</span></div><div class="v">2025: <b>5.6</b> Shipments per calendar week · 2026 YTD: <b>5.2</b> Shipments per calendar week</div></li>
-        <li class=""><div class="k">Persistence <span class="mfm-src ca">AIOS Calculations</span></div><div class="v">Active in <b>every month</b> of both periods</div></li>
-        <li class=""><div class="k">Gateway </div><div class="v">TIJUANA, TIJUANA, BAJA CALIFORNIA.</div></li>
-        <li class=""><div class="k">Trading Partner </div><div class="v"><span class="mfm-na-pill">Not supplied by AIOS for this lane</span></div></li>
-        <li class=""><div class="k">Logistics Capture </div><div class="v"><span class="mfm-st nv">Not Validated</span> No authorized AKZENT captured-freight dataset was available.</div></li>
-        <li class=""><div class="k">Customs Position </div><div class="v">Main Other Patents <b>1252</b> and <b>3930</b> · ARCATEK patents 3468 / 1930 not observed</div></li>
-        <li class="s1"><div class="k">Observed Signal <span class="mfm-src pj">PJ Facts</span></div><div class="v">Origin address not available in PJ in either period; the route is active in every month of both periods.</div></li>
-        <li class="s2"><div class="k">AIOS Interpretation <span class="mfm-src ai">AIOS Interpretations</span></div><div class="v"><span class="mfm-na-pill">Not supplied by AIOS for this lane</span></div></li>
-        <li class="s3"><div class="k">Discovery Validation <span class="mfm-src dv">Discovery Validation</span></div><div class="v">Identify origin facilities and the operational role of this gateway.</div></li>
-      </ol>
+      <div class="mfm-cor-h"><div class="mfm-cor-id">D</div><div><div class="mfm-cor-w">Corridor D · PJ Imports · persistent secondary gateway</div><div class="mfm-cor-t">Origin unavailable → Tijuana → Mexico address</div></div><span class="mfm-cor-flag">Active every month</span></div>
+      <div class="mfm-lane-g">
+        <div><div class="k">Scale · Share <span class="mfm-src pj">PJ Facts</span></div><div class="n">157<small> 2026 YTD PJ Imports · Core Route</small></div><div class="s">Share <b>33.1%</b> of 2026 YTD PJ Imports<br>2025: <b>291</b> Shipments · <b>37.6%</b></div></div>
+        <div><div class="k">Frequency &amp; persistence <span class="mfm-src ca">AIOS Calculations</span></div><div class="s">2026 YTD: <b>5.2</b> Shipments per calendar week<br>2025: <b>5.6</b> per calendar week</div><div class="mfm-rtags"><span>Active in every month of 2025</span><span>Active in every month of 2026 YTD</span></div></div>
+        <div class="pos"><div class="k">Structure</div><div class="mfm-pos"><span class="lu"><em>Gateway</em>Tijuana</span><span class="lu na"><em>Trading Partner</em>Not supplied by AIOS</span><span class="co"><em>Direction</em>Import</span></div></div>
+      </div>
+      <div class="mfm-capl">
+        <div><span class="k">Logistics Capture</span><span class="mfm-st nv">Not Validated</span><span class="t">No authorized AKZENT captured-freight dataset was available.</span></div>
+        <div><span class="k">Customs Position</span><span class="t">Main Other Patents <b>1252</b> and <b>3930</b> · ARCATEK 3468 / 1930 not observed</span></div>
+      </div>
+      <div class="mfm-sig">
+        <div class="s1"><b>Observed Signal</b>Origin address not available in PJ in either period; the route is active in every month of both periods.</div>
+        <div class="s2"><b>AIOS Interpretation</b><span class="mfm-na-pill">No lane-specific AIOS Interpretation supplied</span></div>
+        <div class="s3"><b>Discovery Validation</b>Identify origin facilities and the operational role of this gateway.</div>
+      </div>
     </div>
 
     <div class="mfm-note-na">No corridor is described as won, lost, new business or winnable. PJ establishes scale, cadence and structure only.</div>
@@ -62217,16 +62250,6 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
         <div class="mfm-hsnote">One Shipment may contain multiple HS Codes. HS counts represent operational presence and are not additive.</div>
         <div class="mfm-hsgrid">
           <div>
-            <div class="mfm-sublbl muted"><span class="mfm-per hist">2025 PJ Exports</span> · denominator 950 · 5 HS Codes</div>
-            <div style="overflow-x:auto;"><table class="hub-table mfm-cwg" style="font-size:11.5px;min-width:440px;"><thead><tr><th>HS Code</th><th>Authorized description</th><th class="num">Shipment presence</th><th class="num">Share</th><th>Scale</th></tr></thead><tbody>
-              <tr><td class="mfm-mono">3923100301</td><td style="font-size:11px;">Plastic boxes for packaging</td><td class="num mfm-mono">787</td><td class="num">82.8%</td><td style="width:16%;"><div class="mfm-hsb ex"><div style="width:100.0%;"></div></div></td></tr>
-              <tr><td class="mfm-mono">1905909902</td><td style="font-size:11px;">Packaged corn tostadas, primarily Guerrero and Calidad brands</td><td class="num mfm-mono">150</td><td class="num">15.8%</td><td style="width:16%;"><div class="mfm-hsb ex"><div style="width:19.1%;"></div></div></td></tr>
-              <tr><td class="mfm-mono">1905909999</td><td style="font-size:11px;">Wheat tortillas and other packaged tortilla and tostada products</td><td class="num mfm-mono">150</td><td class="num">15.8%</td><td style="width:16%;"><div class="mfm-hsb ex"><div style="width:19.1%;"></div></div></td></tr>
-              <tr><td class="mfm-mono">1905909901</td><td style="font-size:11px;">Packaged corn tostadas</td><td class="num mfm-mono">8</td><td class="num">0.8%</td><td style="width:16%;"><div class="mfm-hsb ex"><div style="width:1.0%;"></div></div></td></tr>
-              <tr><td class="mfm-mono">2103909900</td><td style="font-size:11px;">Seasonings</td><td class="num mfm-mono">4</td><td class="num">0.4%</td><td style="width:16%;"><div class="mfm-hsb ex"><div style="width:0.5%;"></div></div></td></tr>
-            </tbody></table></div>
-          </div>
-          <div>
             <div class="mfm-sublbl"><span class="mfm-per">2026 YTD PJ Exports</span> · denominator 613 · 4 HS Codes</div>
             <div style="overflow-x:auto;"><table class="hub-table mfm-cwg" style="font-size:11.5px;min-width:440px;"><thead><tr><th>HS Code</th><th>Authorized description</th><th class="num">Shipment presence</th><th class="num">Share</th><th>Scale</th></tr></thead><tbody>
               <tr><td class="mfm-mono">3923100301</td><td style="font-size:11px;">Plastic boxes for packaging</td><td class="num mfm-mono">539</td><td class="num">87.9%</td><td style="width:16%;"><div class="mfm-hsb ex"><div style="width:100.0%;"></div></div></td></tr>
@@ -62237,13 +62260,13 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
             <div class="mfm-micro">Only four HS Codes were observed in 2026 YTD PJ Exports.</div>
           </div>
           <div>
-            <div class="mfm-sublbl muted"><span class="mfm-per hist">2025 PJ Imports</span> · denominator 773 · 5 HS Codes</div>
+            <div class="mfm-sublbl muted"><span class="mfm-per hist">2025 PJ Exports</span> · denominator 950 · 5 HS Codes</div>
             <div style="overflow-x:auto;"><table class="hub-table mfm-cwg" style="font-size:11.5px;min-width:440px;"><thead><tr><th>HS Code</th><th>Authorized description</th><th class="num">Shipment presence</th><th class="num">Share</th><th>Scale</th></tr></thead><tbody>
-              <tr><td class="mfm-mono">3923100301</td><td style="font-size:11px;">Plastic boxes for packaging</td><td class="num mfm-mono">546</td><td class="num">70.6%</td><td style="width:16%;"><div class="mfm-hsb"><div style="width:100.0%;"></div></div></td></tr>
-              <tr><td class="mfm-mono">8438900699</td><td style="font-size:11px;">Parts for food-processing and industrial bakery machinery</td><td class="num mfm-mono">68</td><td class="num">8.8%</td><td style="width:16%;"><div class="mfm-hsb"><div style="width:12.5%;"></div></div></td></tr>
-              <tr><td class="mfm-mono">8483300499</td><td style="font-size:11px;">Bushings, plain bearings, and bearing housings without incorporated bearings</td><td class="num mfm-mono">28</td><td class="num">3.6%</td><td style="width:16%;"><div class="mfm-hsb"><div style="width:5.1%;"></div></div></td></tr>
-              <tr><td class="mfm-mono">7318299999</td><td style="font-size:11px;">Non-threaded steel washers, bushings, pins, and spacers</td><td class="num mfm-mono">25</td><td class="num">3.2%</td><td style="width:16%;"><div class="mfm-hsb"><div style="width:4.6%;"></div></div></td></tr>
-              <tr><td class="mfm-mono">8438900601</td><td style="font-size:11px;">Parts for bakery and dough-mixing machinery, including rollers, pistons, rods, and supports</td><td class="num mfm-mono">23</td><td class="num">3.0%</td><td style="width:16%;"><div class="mfm-hsb"><div style="width:4.2%;"></div></div></td></tr>
+              <tr><td class="mfm-mono">3923100301</td><td style="font-size:11px;">Plastic boxes for packaging</td><td class="num mfm-mono">787</td><td class="num">82.8%</td><td style="width:16%;"><div class="mfm-hsb ex"><div style="width:100.0%;"></div></div></td></tr>
+              <tr><td class="mfm-mono">1905909902</td><td style="font-size:11px;">Packaged corn tostadas, primarily Guerrero and Calidad brands</td><td class="num mfm-mono">150</td><td class="num">15.8%</td><td style="width:16%;"><div class="mfm-hsb ex"><div style="width:19.1%;"></div></div></td></tr>
+              <tr><td class="mfm-mono">1905909999</td><td style="font-size:11px;">Wheat tortillas and other packaged tortilla and tostada products</td><td class="num mfm-mono">150</td><td class="num">15.8%</td><td style="width:16%;"><div class="mfm-hsb ex"><div style="width:19.1%;"></div></div></td></tr>
+              <tr><td class="mfm-mono">1905909901</td><td style="font-size:11px;">Packaged corn tostadas</td><td class="num mfm-mono">8</td><td class="num">0.8%</td><td style="width:16%;"><div class="mfm-hsb ex"><div style="width:1.0%;"></div></div></td></tr>
+              <tr><td class="mfm-mono">2103909900</td><td style="font-size:11px;">Seasonings</td><td class="num mfm-mono">4</td><td class="num">0.4%</td><td style="width:16%;"><div class="mfm-hsb ex"><div style="width:0.5%;"></div></div></td></tr>
             </tbody></table></div>
           </div>
           <div>
@@ -62254,6 +62277,16 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
               <tr><td class="mfm-mono">8482109999</td><td style="font-size:11px;">Ball bearings</td><td class="num mfm-mono">14</td><td class="num">2.9%</td><td style="width:16%;"><div class="mfm-hsb"><div style="width:3.9%;"></div></div></td></tr>
               <tr><td class="mfm-mono">1108110100</td><td style="font-size:11px;">Wheat starch</td><td class="num mfm-mono">12</td><td class="num">2.5%</td><td style="width:16%;"><div class="mfm-hsb"><div style="width:3.3%;"></div></div></td></tr>
               <tr><td class="mfm-mono">8208300299</td><td style="font-size:11px;">Knives and cutting components for the food industry</td><td class="num mfm-mono">11</td><td class="num">2.3%</td><td style="width:16%;"><div class="mfm-hsb"><div style="width:3.1%;"></div></div></td></tr>
+            </tbody></table></div>
+          </div>
+          <div>
+            <div class="mfm-sublbl muted"><span class="mfm-per hist">2025 PJ Imports</span> · denominator 773 · 5 HS Codes</div>
+            <div style="overflow-x:auto;"><table class="hub-table mfm-cwg" style="font-size:11.5px;min-width:440px;"><thead><tr><th>HS Code</th><th>Authorized description</th><th class="num">Shipment presence</th><th class="num">Share</th><th>Scale</th></tr></thead><tbody>
+              <tr><td class="mfm-mono">3923100301</td><td style="font-size:11px;">Plastic boxes for packaging</td><td class="num mfm-mono">546</td><td class="num">70.6%</td><td style="width:16%;"><div class="mfm-hsb"><div style="width:100.0%;"></div></div></td></tr>
+              <tr><td class="mfm-mono">8438900699</td><td style="font-size:11px;">Parts for food-processing and industrial bakery machinery</td><td class="num mfm-mono">68</td><td class="num">8.8%</td><td style="width:16%;"><div class="mfm-hsb"><div style="width:12.5%;"></div></div></td></tr>
+              <tr><td class="mfm-mono">8483300499</td><td style="font-size:11px;">Bushings, plain bearings, and bearing housings without incorporated bearings</td><td class="num mfm-mono">28</td><td class="num">3.6%</td><td style="width:16%;"><div class="mfm-hsb"><div style="width:5.1%;"></div></div></td></tr>
+              <tr><td class="mfm-mono">7318299999</td><td style="font-size:11px;">Non-threaded steel washers, bushings, pins, and spacers</td><td class="num mfm-mono">25</td><td class="num">3.2%</td><td style="width:16%;"><div class="mfm-hsb"><div style="width:4.6%;"></div></div></td></tr>
+              <tr><td class="mfm-mono">8438900601</td><td style="font-size:11px;">Parts for bakery and dough-mixing machinery, including rollers, pistons, rods, and supports</td><td class="num mfm-mono">23</td><td class="num">3.0%</td><td style="width:16%;"><div class="mfm-hsb"><div style="width:4.2%;"></div></div></td></tr>
             </tbody></table></div>
           </div>
         </div>
@@ -62278,12 +62311,12 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
             <li>Material temporary and return-of-goods regimes</li>
             <li>Additional imports of machinery parts, bearings, cutting components, and ingredients</li>
           </ul></div>
-          <div class="s2"><b>AIOS Interpretation <span class="mfm-src ai">AIOS Interpretations</span></b><ul>
+          <div class="s2"><b>AIOS Interpretation</b><ul>
             <li>Relevant commercial themes may include cross-border operational coordination, customs and freight visibility, returnable-packaging cycle control, exception management, and Control Tower/ILM.</li>
             <li>Nuevo Laredo concentration creates a logical point for examining resilience, handoffs, and visibility.</li>
             <li>These are hypotheses, not confirmed customer pain points.</li>
           </ul></div>
-          <div class="s3"><b>Discovery Validation <span class="mfm-src dv">Discovery Validation</span></b><ul>
+          <div class="s3"><b>Discovery Validation</b><ul>
             <li>Validate the existing ARCATEK and AKZENT relationships.</li>
             <li>Identify true facilities and legal entities.</li>
             <li>Confirm freight ownership and provider assignments.</li>
@@ -62305,7 +62338,7 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
       <div class="card-header">Seller Discovery Guide · 11 prioritized questions · <span class="mfm-src dv">Discovery Validation</span></div>
       <div class="card-body">
         <div class="mfm-dq-g">
-          <div><h4><span>Priority 1 · Relationship and entity validation <em class="mfm-first">Ask first</em></span><a href="#mfm-ch-5">Chapter 05 &rarr;</a></h4><ol start="1">
+          <div class="p1"><h4><span>Priority 1 · Relationship and entity validation <em class="mfm-first">Ask first</em></span><a href="#mfm-ch-5">Chapter 05 &rarr;</a></h4><ol start="1">
             <li>&ldquo;Do Mission Foods Mexico, Gruma Corporation, and the different PJ name strings belong to the same operating and contracting model for these Shipments?&rdquo;</li>
             <li>&ldquo;Is there an ARCATEK 3468/1930 relationship outside the PJ Visible Universe?&rdquo;</li>
             <li>&ldquo;Is any freight captured by AKZENT, and can it be matched by BOL, date, gateway, direction, and entity?&rdquo;</li>
@@ -62338,48 +62371,29 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
     <div class="card">
       <div class="card-header">AIOS Account Matrix Record · Mission Foods Mexico</div>
       <div class="card-body">
-        <pre class="mfm-rec">account_name: Mission Foods Mexico
-legal_entity_visible_in_pj: Mission Foods Mexico S. de R.L. de C.V.
-account_status: Not Validated - do not label CLIENT or LEAD
-arcatek_customs:
-  classification: Confirmed Not Captured
-  scope: PJ Visible Universe only
-akzent_logistics:
-  classification: Not Validated
-previous_full_calendar_year: 2025
-current_ytd_cutoff: 2026-07-31
-pj_visible_shipments_2025:
-  exports: 950
-  imports: 773
-  total: 1723
-pj_visible_shipments_2026_ytd:
-  exports: 613
-  imports: 475
-  total: 1088
-comparable_growth_january_july: 15.6%
-primary_mode: Truck
-primary_gateway_2025: Nuevo Laredo - 1240 Shipments - 72.0%
-primary_gateway_2026_ytd: Nuevo Laredo - 845 Shipments - 77.7%
-customs_shared_wallet_2025: 0.0%
-customs_shared_wallet_2026_ytd: 0.0%
-logistics_shared_wallet: Not Calculable
-profit: Not Available
-primary_operational_signal: High-frequency bidirectional cross-border network with rising Nuevo Laredo concentration
-commercial_hypotheses:
-  - Cross-border operational coordination
-  - Customs and freight visibility
-  - Returnable-packaging cycle visibility
-  - Exception management and Control Tower/ILM
-mandatory_validation:
-  - CRM and internal service relationship
-  - Captured AKZENT freight
-  - Entity and facility mapping
-  - Gateway shift drivers
-  - Returnable packaging ownership and KPIs
-data_quality_limits:
-  - YTD source ends on July 31, 2026
-  - PJ Imports contain exact duplicate rows without a Shipment identifier
-  - PJ names and addresses were not merged</pre>
+        <table class="mfm-mx"><tbody>
+        <tr><th>account_name</th><td>Mission Foods Mexico</td></tr>
+        <tr><th>legal_entity_visible_in_pj</th><td>Mission Foods Mexico S. de R.L. de C.V.</td></tr>
+        <tr><th>account_status</th><td>Not Validated - do not label CLIENT or LEAD</td></tr>
+        <tr><th>arcatek_customs</th><td><dl><div><dt>classification</dt><dd>Confirmed Not Captured</dd></div><div><dt>scope</dt><dd>PJ Visible Universe only</dd></div></dl></td></tr>
+        <tr><th>akzent_logistics</th><td><dl><div><dt>classification</dt><dd>Not Validated</dd></div></dl></td></tr>
+        <tr><th>previous_full_calendar_year</th><td>2025</td></tr>
+        <tr><th>current_ytd_cutoff</th><td>2026-07-31</td></tr>
+        <tr><th>pj_visible_shipments_2025</th><td><dl><div><dt>exports</dt><dd>950</dd></div><div><dt>imports</dt><dd>773</dd></div><div><dt>total</dt><dd>1723</dd></div></dl></td></tr>
+        <tr><th>pj_visible_shipments_2026_ytd</th><td><dl><div><dt>exports</dt><dd>613</dd></div><div><dt>imports</dt><dd>475</dd></div><div><dt>total</dt><dd>1088</dd></div></dl></td></tr>
+        <tr><th>comparable_growth_january_july</th><td>15.6%</td></tr>
+        <tr><th>primary_mode</th><td>Truck</td></tr>
+        <tr><th>primary_gateway_2025</th><td>Nuevo Laredo - 1240 Shipments - 72.0%</td></tr>
+        <tr><th>primary_gateway_2026_ytd</th><td>Nuevo Laredo - 845 Shipments - 77.7%</td></tr>
+        <tr><th>customs_shared_wallet_2025</th><td>0.0%</td></tr>
+        <tr><th>customs_shared_wallet_2026_ytd</th><td>0.0%</td></tr>
+        <tr><th>logistics_shared_wallet</th><td>Not Calculable</td></tr>
+        <tr><th>profit</th><td>Not Available</td></tr>
+        <tr><th>primary_operational_signal</th><td>High-frequency bidirectional cross-border network with rising Nuevo Laredo concentration</td></tr>
+        <tr><th>commercial_hypotheses</th><td><ul><li>Cross-border operational coordination</li><li>Customs and freight visibility</li><li>Returnable-packaging cycle visibility</li><li>Exception management and Control Tower/ILM</li></ul></td></tr>
+        <tr><th>mandatory_validation</th><td><ul><li>CRM and internal service relationship</li><li>Captured AKZENT freight</li><li>Entity and facility mapping</li><li>Gateway shift drivers</li><li>Returnable packaging ownership and KPIs</li></ul></td></tr>
+        <tr><th>data_quality_limits</th><td><ul><li>YTD source ends on July 31, 2026</li><li>PJ Imports contain exact duplicate rows without a Shipment identifier</li><li>PJ names and addresses were not merged</li></ul></td></tr>
+        </tbody></table>
       </div>
     </div>
 
