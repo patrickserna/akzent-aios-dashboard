@@ -33908,6 +33908,84 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
 #view-arcatek .arc-mini th { font-size: 9.5px; font-weight: 800; letter-spacing: .6px; text-transform: uppercase; color: var(--arc-muted); }
 #view-arcatek .arc-placeholder { font-size: 12px; color: var(--arc-muted); padding: 18px 4px; text-align: center; }
 
+/* ── Account detail · executive cockpit ── */
+#view-arcatek .arc-cockpit { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); align-items: start; }
+#view-arcatek .arc-cp { display: flex; flex-direction: column; gap: 8px; }
+#view-arcatek .arc-cp-h { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+#view-arcatek .arc-cp-h .arc-group-t { margin-bottom: 0; }
+#view-arcatek .arc-cp-big { font-size: 26px; font-weight: 300; line-height: 1.1; color: var(--arc-navy); }
+#view-arcatek .arc-cp-big small { font-size: 12px; font-weight: 600; color: var(--arc-muted); }
+#view-arcatek .arc-cp-big.is-na { font-size: 16px; font-weight: 700; color: var(--arc-muted); }
+#view-arcatek .arc-cp-big .arc-pend { font-size: 13px; }
+#view-arcatek .arc-cp-sub { font-size: 11px; color: var(--arc-muted); line-height: 1.45; overflow-wrap: anywhere; }
+#view-arcatek .arc-cp-sub b { color: var(--arc-text); }
+#view-arcatek .arc-cp-foot { font-size: 10px; color: var(--arc-faint); line-height: 1.4; }
+#view-arcatek .arc-cp-foot b { color: var(--arc-muted); }
+#view-arcatek .arc-kv-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 12px; }
+#view-arcatek .arc-kv-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 12px; }
+#view-arcatek .arc-kv { min-width: 0; }
+#view-arcatek .arc-kv-l { display: block; font-size: 10px; font-weight: 700; color: var(--arc-muted); margin-bottom: 2px; }
+#view-arcatek .arc-kv-v { display: block; font-size: 15px; font-weight: 700; color: var(--arc-navy); overflow-wrap: anywhere; }
+#view-arcatek .arc-kv-s { display: block; font-size: 10px; font-weight: 400; color: var(--arc-faint); margin-top: 1px; overflow-wrap: anywhere; }
+#view-arcatek .arc-pend { display: inline-block; font-size: 11px; font-weight: 700; color: var(--arc-muted); background: var(--arc-bg); border: 1px dashed var(--arc-line-2); border-radius: 5px; padding: 1px 7px; }
+#view-arcatek .arc-delta.up { color: var(--arc-ok-ink); }
+#view-arcatek .arc-delta.down { color: var(--arc-flag-ink); }
+#view-arcatek .is-ref .arc-delta { color: inherit; }
+/* REFERENCE: illustrative values — muted and dotted-underlined, never styled like real data */
+#view-arcatek .arc-ref { display: inline-flex; align-items: center; font-size: 8.5px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; color: #7A6A9E; background: repeating-linear-gradient(135deg, #F5F2FB 0 4px, #EEE9F8 4px 8px); border: 1px solid #D9D0EC; border-radius: 4px; padding: 1px 6px; white-space: nowrap; cursor: help; }
+#view-arcatek .is-ref { color: #7A6A9E !important; text-decoration: underline dotted rgba(122,106,158,0.55); text-underline-offset: 3px; }
+#view-arcatek .arc-legend { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 10.5px; color: var(--arc-muted); margin: 0 0 10px; }
+#view-arcatek .arc-legend > span { display: inline-flex; align-items: center; gap: 5px; }
+#view-arcatek .arc-legend b { color: var(--arc-navy); }
+#view-arcatek .arc-info { display: inline-block; font-size: 12px; font-weight: 700; color: var(--arc-cyan-ink); cursor: help; vertical-align: middle; }
+#view-arcatek .arc-chip { display: inline-block; font-size: 9.5px; font-weight: 700; color: var(--arc-muted); border: 1px solid var(--arc-line-2); border-radius: 999px; padding: 0 6px; margin-left: 4px; }
+/* Coverage gateway list */
+#view-arcatek ul.arc-gw { list-style: none; margin: 0; padding: 0; display: grid; gap: 3px; }
+#view-arcatek .arc-gw li { display: flex; align-items: center; gap: 7px; font-size: 11.5px; min-width: 0; }
+#view-arcatek .arc-gw-i { flex: none; display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; border-radius: 4px; font-size: 10px; font-weight: 800; }
+#view-arcatek .arc-gw li.on .arc-gw-i { background: var(--arc-ok-bg); color: var(--arc-ok-ink); border: 1px solid #A9D8B6; }
+#view-arcatek .arc-gw li.off .arc-gw-i { background: var(--arc-flag-bg); color: var(--arc-flag-ink); border: 1px solid var(--arc-flag-line); }
+#view-arcatek .arc-gw-n { flex: 1; min-width: 0; font-weight: 600; color: var(--arc-text); overflow-wrap: anywhere; }
+#view-arcatek .arc-gw li.off .arc-gw-n { color: var(--arc-muted); }
+#view-arcatek .arc-gw-c { flex: none; font-size: 10px; color: var(--arc-faint); }
+#view-arcatek .arc-gw.is-ref .arc-gw-n { color: #7A6A9E; }
+#view-arcatek .arc-gw-more summary { font-size: 10.5px; font-weight: 700; color: var(--arc-cyan-ink); cursor: pointer; margin-bottom: 3px; }
+/* Cross-selling */
+#view-arcatek ul.arc-cx { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+#view-arcatek .arc-cx li { display: flex; align-items: flex-start; gap: 8px; font-size: 12.5px; font-weight: 700; color: var(--arc-text); }
+#view-arcatek .arc-cx-i { flex: none; display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 4px; font-size: 11px; font-weight: 800; border: 1.5px solid var(--arc-line-2); color: var(--arc-muted); background: #fff; }
+#view-arcatek .arc-cx li.yes .arc-cx-i { background: var(--arc-ok-bg); border-color: #A9D8B6; color: var(--arc-ok-ink); }
+#view-arcatek .arc-cx li.no { color: var(--arc-muted); }
+#view-arcatek .arc-cx-st { margin-top: 2px; }
+#view-arcatek .arc-rel { display: inline-flex; align-items: center; gap: 6px; font-size: 10.5px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; border-radius: 6px; padding: 4px 10px; border: 1px solid transparent; white-space: nowrap; }
+#view-arcatek .arc-rel.group { background: var(--arc-navy); color: #fff; }
+#view-arcatek .arc-rel.group span { color: var(--arc-cyan); }
+#view-arcatek .arc-rel.arc { background: var(--arc-cyan-soft); color: var(--arc-cyan-ink); border-color: rgba(0,122,147,0.3); }
+#view-arcatek .arc-rel.pend { background: var(--arc-bg); color: var(--arc-muted); border: 1px dashed var(--arc-line-2); }
+/* Control */
+#view-arcatek .arc-trend { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; }
+#view-arcatek .arc-trend.up { color: var(--arc-ok-ink); }
+#view-arcatek .arc-trend.flat { color: var(--arc-cyan-ink); }
+#view-arcatek .arc-trend.down { color: var(--arc-flag-ink); }
+#view-arcatek .arc-trend.off { color: var(--arc-muted); }
+#view-arcatek .arc-trend.is-ref { text-decoration: none; }
+#view-arcatek svg.arc-spark { display: block; width: 100%; height: 54px; overflow: visible; }
+#view-arcatek .arc-spark .a { fill: var(--arc-cyan-soft); }
+#view-arcatek .arc-spark .l { fill: none; stroke: var(--arc-navy); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+#view-arcatek .arc-spark .d { fill: var(--arc-navy); stroke: #fff; stroke-width: 2; vector-effect: non-scaling-stroke; }
+#view-arcatek .arc-spark .h { fill: transparent; }
+#view-arcatek .arc-spark .h:hover { fill: rgba(0,180,216,0.18); }
+#view-arcatek .arc-spark.is-ref .a { fill: #F3F0FA; }
+#view-arcatek .arc-spark.is-ref .l { stroke: #9A8CBF; stroke-dasharray: 5 3; }
+#view-arcatek .arc-spark.is-ref .d { fill: #9A8CBF; }
+#view-arcatek .arc-spark-x { display: flex; justify-content: space-between; font-size: 9.5px; color: var(--arc-faint); margin-top: -4px; }
+/* Supporting information, collapsed */
+#view-arcatek details.arc-support > summary { cursor: pointer; list-style: none; display: flex; align-items: center; gap: 8px; }
+#view-arcatek details.arc-support > summary::-webkit-details-marker { display: none; }
+#view-arcatek details.arc-support > summary::before { content: '▸'; font-size: 11px; color: var(--arc-navy); transition: transform .15s; }
+#view-arcatek details.arc-support[open] > summary::before { transform: rotate(90deg); }
+#view-arcatek details.arc-support > summary h4 { margin: 0; }
+
 /* ── Smaller screens ── */
 @media (max-width: 900px) {
   #view-arcatek .arc-hero { padding: 18px 18px 18px; }
@@ -33945,7 +34023,7 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
   <div class="sidebar-logo">
     <div class="logo-mark" role="img" aria-label="Akzent"></div>
     <div class="logo-sub">Intelligence OS</div>
-    <div class="aios-build" id="aios-build" title="Build 172 · last updated 2026-10-06 14:25 (Mexico City)"><b>v2.172</b> · Updated 06 Oct 2026, 14:25</div>
+    <div class="aios-build" id="aios-build" title="Build 173 · last updated 2026-10-06 14:40 (Mexico City)"><b>v2.173</b> · Updated 06 Oct 2026, 14:40</div>
     <div class="aios-logo-glyph" aria-hidden="true"></div>
     <button type="button" id="aios-sb-toggle" class="aios-sb-toggle" onclick="aiosToggleSidebar()" aria-label="Collapse sidebar" aria-controls="aios-sidebar" aria-expanded="true" title="Collapse sidebar">
       <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false"><path d="M10 3.5 5.5 8 10 12.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -119508,9 +119586,11 @@ var D2_FACTS = {"view-finezac":{"pj":{"v":14,"p":"PJ Visible Imports — 2026 YT
      rel      only when D2_FACTS has no Arcatek Customs status
      flags    [{ f: field key | 'entity' | 'rel', why, src }]
      values   future internal data, keyed by field
-              (e.g. kam, ceCur, cePrev, ceYtd, fees, gp, offActive,
-              offOper, status, lastOp, incidents, lastVisit, next):
-              { v, period, src }. Absent = missing-information status.
+              (e.g. kamArc, kamAkz, ceCur, cePrev, ceYtd, ceSeries
+              {v:[monthly entries], months:[labels]}, fees, gpPrev,
+              status, lastOp, incidents, lastVisit, next):
+              { v, period, src }. Absent = Pending (or REFERENCE in the
+              Account Detail while ARCATEK_REFERENCE.on).
      support  optional supporting tiles replacing the D2-derived ones
    To add an account: append one entry (aios:'pending' and no view when
    its AIOS is not processed yet). Totals, search and filters follow.
@@ -119543,7 +119623,8 @@ var ARCATEK_REGISTRY = [
     wallet: { src: 'D2_FACTS.cw', num: 329, den: 386, basis: 'Arcatek-Patent Shipments / supported visible customs Shipments', cutoff: '2026-07-29' } },
 
   { key: 'lincoln', legal: 'LINCOLN ELECTRIC MAQUINAS S DE RL', view: 'view-lincoln-electric', aios: 'processed',
-    wallet: { src: 'D2_FACTS.cw', num: 426, den: 1114, basis: 'Shipments on Arcatek Patent 3468', cutoff: '2026-07-31' } },
+    wallet: { src: 'D2_FACTS.cw', num: 426, den: 1114, basis: 'Shipments on Arcatek Patent 3468', cutoff: '2026-07-31' },
+    values: { kamAkz: { v: 'Monica Cervantes', src: 'view-lincoln-electric · Akzent Captured Logistics records (Seller)' } } },
 
   { key: 'siete-leguas', legal: 'SIETE LEGUAS AUTOMOTIVE, SA DE CV', view: 'view-siete-leguas', aios: 'processed',
     wallet: { src: 'D2_FACTS.cw', num: 75, den: 330, basis: 'Arcatek-Patent Shipments / supported visible customs Shipments', cutoff: 'Imports 2026-07-30 · Exports 2026-07-31' } },
@@ -119576,13 +119657,64 @@ var ARCATEK_REGISTRY = [
     wallet: { src: 'D2_FACTS.cw', num: 166, den: 1263, basis: 'Arcatek Patent Shipments / supported Shipments', cutoff: '2026-07-31' } }
 ];
 
+/* ── Account Detail data (read by the Account Detail cockpit only) ──
+   ARCATEK_GATEWAYS   real · per legal entity, the customer's customs gateways
+                      [gateway as labelled by AIOS, Arcatek-patent Shipments
+                      (3468 + 1930), all visible Shipments] from each view's
+                      "Customs Wallet by Gateway" / "Patent × Direction × Gateway"
+                      table (Panjiva Fact · Akzent Fact patents · current YTD,
+                      same cutoff as the Customs Shared Wallet). Arcatek totals
+                      reconcile exactly to wallet.num for all 17; listed < den
+                      means the AIOS lists only material gateways.
+   ARCATEK_LOGISTICS_WALLET  real · numerator / denominator / period of the
+                      D2_FACTS Logistics Shared Wallet, as printed in each view.
+   ARCATEK_REFERENCE  illustrative only · shown while the real Arcatek source
+                      is missing and `on` is true, always tagged REFERENCE.
+                      Never used when a real value exists. */
+var ARCATEK_GATEWAYS = {
+  'pipsa': { listed: 2770, den: 2770, list: [['Colombia, Nuevo León', 2449, 2516], ['Nuevo Laredo, Tamaulipas', 67, 250], ['Manzanillo, Colima', 0, 4]] },
+  'borgwarner': { listed: 1240, den: 1240, list: [['Nuevo Laredo', 407, 538], ['Puebla', 0, 205], ['Querétaro', 0, 195], ['Manzanillo', 0, 127], ['Colombia, Nuevo León', 0, 50], ['Piedras Negras', 0, 23], ['Altamira', 21, 21], ['Tijuana', 0, 21], ['Felipe Ángeles Airport (AIFA)', 0, 18], ['Guadalajara (Tlajomulco)', 0, 15], ['Toluca (San Cayetano Morelos)', 0, 14], ['Mexico City Airport (AICM)', 0, 13]] },
+  'haldex': { listed: 416, den: 416, list: [['Colombia', 183, 183], ['Nuevo Laredo', 123, 126], ['Mariano Escobedo Airport', 0, 49], ['Monterrey', 0, 22], ['Altamira', 12, 12], ['Manzanillo', 0, 9], ['Puebla', 0, 7], ['Lazaro Cardenas', 0, 5], ['Mexicali', 0, 2], ['AIFA', 0, 1]] },
+  'kitchen': { listed: 1425, den: 1458, list: [['Nuevo Laredo, Tamaulipas', 652, 706], ['Colombia, Nuevo León', 79, 390], ['Querétaro', 0, 66], ['Manzanillo', 0, 45], ['Guadalajara (Tlajomulco)', 0, 43], ['Altamira', 0, 42], ['Felipe Ángeles Airport (AIFA)', 0, 40], ['Mexico City Airport (AICM)', 0, 39], ['Veracruz', 0, 27], ['Ciudad Hidalgo, Chiapas', 0, 11], ['Monterrey (Gral. Mariano Escobedo)', 0, 9], ['Puebla', 0, 7]] },
+  'phinia': { listed: 107, den: 107, list: [['Colombia', 17, 42], ['Monterrey', 0, 12], ['Nuevo Laredo', 0, 12], ['Ciudad Juárez', 0, 11], ['Nogales', 0, 9], ['Ciudad de México', 0, 7], ['Monterrey / General Mariano Escobedo', 0, 6], ['San Luis Potosí', 0, 6], ['Toluca', 0, 2]] },
+  'woco-aps': { listed: 487, den: 487, list: [['Nuevo Laredo', 120, 169], ['Colombia', 128, 128], ['Ciudad Hidalgo', 0, 49], ['Manzanillo', 0, 40], ['Queretaro', 0, 29], ['Zaragoza-Isleta · Cd. Juárez', 0, 27], ['Veracruz', 0, 14], ['AIFA', 0, 14], ['Guadalajara', 0, 9], ['Mexico City Airport', 0, 4], ['Altamira', 2, 2], ['Toluca', 0, 1], ['Ciudad Juárez', 0, 1]] },
+  'liebherr': { listed: 275, den: 275, list: [['Manzanillo', 0, 132], ['Altamira', 70, 70], ['Colombia', 0, 29], ['Monterrey Airport', 0, 19], ['Nuevo Laredo', 0, 17], ['Monterrey', 0, 6], ['Puebla', 0, 2]] },
+  'enerpres': { listed: 386, den: 386, list: [['Nuevo Laredo', 329, 329], ['Matamoros', 0, 57]] },
+  'lincoln': { listed: 1070, den: 1114, list: [['Colombia', 387, 393], ['Nuevo Laredo', 39, 313], ['MTY Airport', 0, 271], ['Manzanillo', 0, 74], ['Altamira', 0, 19]] },
+  'siete-leguas': { listed: 330, den: 330, list: [['Monterrey Airport', 0, 151], ['Colombia, NL', 58, 61], ['Altamira', 17, 55], ['AIFA', 0, 35], ['AICM', 0, 14], ['Manzanillo', 0, 9], ['Nuevo Laredo', 0, 5]] },
+  'woco-tech': { listed: 1244, den: 1244, list: [['Nuevo Laredo', 73, 297], ['Queretaro', 0, 293], ['Manzanillo', 0, 168], ['Veracruz', 0, 147], ['Mexico City Airport', 0, 94], ['Guanajuato / Silao', 0, 83], ['AIFA', 0, 43], ['Colombia', 0, 43], ['Altamira', 0, 33], ['Piedras Negras', 0, 26], ['Puebla', 0, 11], ['Monterrey / Escobedo', 0, 5], ['Toluca', 0, 1]] },
+  'cemm': { listed: 2579, den: 2664, list: [['Nuevo Laredo', 66, 680], ['Mariano Escobedo Airport', 0, 666], ['Monterrey', 0, 421], ['Colombia', 241, 289], ['Altamira', 0, 264], ['Puebla', 0, 146], ['Manzanillo', 0, 113]] },
+  'grupo-essex': { listed: 22, den: 22, list: [['Reynosa, Tamaulipas', 0, 10], ['Colombia, Nuevo León', 8, 8], ['Monterrey, Nuevo León', 0, 4]] },
+  'doga': { listed: 79, den: 79, list: [['Colombia, Nuevo León', 32, 32], ['Mexico City International Airport', 0, 19], ['Manzanillo', 0, 15], ['Altamira', 7, 7], ['Querétaro', 0, 3], ['Nuevo Laredo', 0, 3]] },
+  'brahm': { listed: 198, den: 198, list: [['Colombia', 80, 80], ['Mariano Escobedo Airport', 0, 50], ['Altamira', 19, 45], ['Nuevo Laredo', 3, 16], ['Felipe Angeles Airport', 0, 3], ['Manzanillo', 0, 2], ['Mexico City International Airport', 0, 2]] },
+  'busman': { listed: 16, den: 16, list: [['Guadalajara', 0, 12], ['Altamira', 3, 3], ['Nuevo Laredo', 1, 1]] },
+  'mekra': { listed: 1207, den: 1263, list: [['Nuevo Laredo', 0, 600], ['Monterrey / General Mariano Escobedo', 0, 244], ['Colombia, Nuevo León', 126, 160], ['Manzanillo', 0, 103], ['Aeropuerto Internacional General Mariano Escobedo', 0, 60], ['Altamira', 40, 40]] }
+};
+
+var ARCATEK_LOGISTICS_WALLET = {
+  pipsa:    { num: 2, den: 2770, p: 'Akzent Jan–Aug 2026 vs PJ Jan 2 – Jul 31, 2026' },
+  liebherr: { num: 0, den: 275,  p: '2026 YTD through Jul 31' },
+  brahm:    { num: 4, den: 198,  p: 'Jan 1 – Aug 27, 2026' },
+  busman:   { num: 4, den: 16,   p: 'Current YTD · Imports to Jun 20, Exports to Jul 13' },
+  mekra:    { num: 8, den: 210,  p: '20 May – 24 Jun 2026' }
+};
+
+var ARCATEK_REFERENCE = {
+  on: true,
+  months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+  values: { ceCur: 18, cePrev: 16, ceYtd: 129, ceSeries: [10, 12, 13, 13, 15, 16, 16, 16, 18],
+            fees: 8450, gpPrev: 6980, lastOp: '28 Sep 2026' },
+  period: { ceCur: 'Sep 2026', cePrev: 'Aug 2026', ceYtd: 'Jan–Sep 2026', ceSeries: 'Jan–Sep 2026', fees: 'Sep 2026', gpPrev: 'Aug 2026' },
+  gateways: [['Nuevo Laredo', 1], ['Colombia', 1], ['Veracruz', 1], ['Manzanillo', 0], ['AICM', 0]]
+};
+
 (function () {
   'use strict';
 
   var VIEW_ID = 'view-arcatek';
   var FLAG_TEXT = '⚑ Double-click and review';
   var ST = {
-    PR: { label: 'Pending receipt',  cls: 'pr', ico: '…', desc: 'Expected from internal operational, financial or commercial data; not present in this file.' },
+    PR: { label: 'Pending',          cls: 'pr', ico: '…', desc: 'Expected from internal operational, financial or commercial data; not present in this file.' },
     NO: { label: 'Not yet obtained', cls: 'no', ico: '○', desc: 'The metric or its required source has not been obtained or defined yet.' },
     NA: { label: 'Not applicable',   cls: 'na', ico: '—', desc: 'The source explicitly establishes that this field does not apply.' }
   };
@@ -119593,24 +119725,6 @@ var ARCATEK_REGISTRY = [
     RC:  { label: 'Pending reconciliation', cls: 'rc', ico: '⟳' }
   };
   var SVC = { CC: 'Confirmed Client', CNC: 'Confirmed Not Captured', NV: 'Not Validated' };
-  var FIELDS = [
-    { g: 'Identification', k: 'kam',       l: 'Salesperson / KAM',                    d: 'PR' },
-    { g: 'Activity',       k: 'ceCur',     l: 'Current-month customs entries',        d: 'PR' },
-    { g: 'Activity',       k: 'cePrev',    l: 'Previous-month customs entries',       d: 'PR' },
-    { g: 'Activity',       k: 'ceVar',     l: 'Monthly variation %',                  d: 'NO' },
-    { g: 'Activity',       k: 'ceYtd',     l: 'Year-to-date customs entries',         d: 'PR' },
-    { g: 'Economic',       k: 'fees',      l: 'Current-month fees',                   d: 'PR' },
-    { g: 'Economic',       k: 'gp',        l: 'Current-month gross profit',           d: 'PR' },
-    { g: 'Coverage',       k: 'offActive', l: 'Active customs offices',               d: 'PR' },
-    { g: 'Coverage',       k: 'offOper',   l: 'Customs offices currently in operation', d: 'PR' },
-    { g: 'Potential',      k: 'wallet',    l: 'Share of Wallet',                      d: 'NO' },
-    { g: 'Cross-selling',  k: 'services',  l: 'Current Akzent Group services',        d: 'NO' },
-    { g: 'Control',        k: 'status',    l: 'Account status',                       d: 'PR' },
-    { g: 'Control',        k: 'lastOp',    l: 'Last operation',                       d: 'PR' },
-    { g: 'Control',        k: 'incidents', l: 'Relevant incidents',                   d: 'PR' },
-    { g: 'Action',         k: 'lastVisit', l: 'Last visit',                           d: 'PR' },
-    { g: 'Action',         k: 'next',      l: 'Next action / follow-up date',         d: 'PR' }
-  ];
   var FILTERS = [
     { k: 'all',       l: 'All clients' },
     { k: 'processed', l: 'AIOS processed' },
@@ -119846,32 +119960,204 @@ var ARCATEK_REGISTRY = [
     }).join('');
   }
 
-  /* ── render: account detail ── */
-  function fieldValue(r, fd) {
-    var e = r.e, v = val(e, fd.k);
-    if (fd.k === 'wallet') {
-      var w = r.wallet;
-      if (!w || w.missing) return { st: 'NO' };
-      return { html: esc(w.v) + ' <span class="sub">' + esc(w.type) + ' · ' + esc(w.period) + '<br>' + fmt(w.num) + ' / ' + fmt(w.den) + ' · ' + esc(w.basis) +
-                     (w.denPeriod ? '<br>Denominator period: ' + esc(w.denPeriod) : '') + '<br>Source: ' + esc(w.srcLabel) + '</span>' };
-    }
-    if (fd.k === 'services') {
-      var f = facts(e);
-      var cus = f && f.cus ? SVC[f.cus.s] : (r.rel.s === 'RC' ? REL.RC.label : null);
-      var log = f && f.log ? SVC[f.log.s] + (f.log.b === 'rule' ? ' (AIOS rule: Captured Logistics > 0)' : '') : null;
-      if (!cus && !log) return { st: 'NO' };
-      return { html: 'Arcatek Customs · ' + esc(cus || ST.NO.label) + '<br>Akzent Logistics · ' + esc(log || ST.NO.label) +
-                     '<span class="sub">Source: ' + esc(e.view) + ' · D2_FACTS cus / log</span>' };
-    }
-    if (fd.k === 'ceVar') {
-      var c = val(e, 'ceCur'), p = val(e, 'cePrev');
-      if (c && p && isFinite(c.v) && isFinite(p.v) && Number(p.v) !== 0)
-        return { html: ((c.v - p.v) / p.v * 100).toFixed(1) + '% <span class="sub">(current − previous) ÷ previous month customs entries</span>' };
-      return { st: 'NO' };
-    }
-    if (v) return { html: esc(v.v) + '<span class="sub">' + esc([v.period, v.src && 'Source: ' + v.src].filter(Boolean).join(' · ')) + '</span>' };
-    return { st: fd.d };
+  /* ── render: account detail · executive cockpit ──
+     Every value is in one of three states:
+       REAL       registry `values`, D2_FACTS, ARCATEK_GATEWAYS, ARCATEK_LOGISTICS_WALLET
+       PENDING    source not integrated yet → "Pending"
+       REFERENCE  ARCATEK_REFERENCE, only while the real value is missing; the
+                  value is styled .is-ref and its card carries a REFERENCE tag. */
+  var PENDING = '<span class="arc-pend">Pending</span>';
+  var REF_TIP = 'Illustrative value, shown until the real source is integrated. It is not account data.';
+  var TREND = {
+    up:   { l: 'Growing',  ico: '↑', cls: 'up' },
+    flat: { l: 'Stable',   ico: '→', cls: 'flat' },
+    down: { l: 'At risk',  ico: '↓', cls: 'down' },
+    off:  { l: 'Inactive', ico: '○', cls: 'off' },
+    few:  { l: 'Insufficient history', ico: '…', cls: 'off' }
+  };
+  var REL_STATUS = {
+    GROUP: { l: 'Group client', cls: 'group', ico: '✓✓' },
+    ARC:   { l: 'Arcatek only', cls: 'arc',   ico: '✓' },
+    AKZ:   { l: 'Akzent only',  cls: 'arc',   ico: '✓' },
+    PEND:  { l: 'Pending',      cls: 'pend',  ico: '…' }
+  };
+  var FLAG_CARD = { kam: 'id', kamArc: 'id', kamAkz: 'id', ceCur: 'act', cePrev: 'act', ceVar: 'act', ceYtd: 'act',
+                    fees: 'eco', gp: 'eco', gpPrev: 'eco', wallet: 'cov', gateways: 'cov', lw: 'pot', services: 'xs',
+                    status: 'ctl', lastOp: 'ctl', incidents: 'ctl', lastVisit: 'act2', next: 'act2' };
+
+  function refOn() { return typeof ARCATEK_REFERENCE !== 'undefined' && !!ARCATEK_REFERENCE.on; }
+  /* Real value first; the reference value only when no real value exists. */
+  function pick(e, k) {
+    var v = val(e, k);
+    if (v) return { v: v.v, period: v.period, src: v.src, months: v.months, ref: false };
+    if (refOn() && ARCATEK_REFERENCE.values[k] != null)
+      return { v: ARCATEK_REFERENCE.values[k], period: ARCATEK_REFERENCE.period[k], months: ARCATEK_REFERENCE.months, ref: true };
+    return null;
   }
+  function money(x) { return typeof x === 'number' ? '$' + fmt(x) : String(x); }
+  function mean(a) { return a.reduce(function (s, x) { return s + x; }, 0) / a.length; }
+
+  /* Account health from the monthly customs-entry series (oldest → newest).
+     INACTIVE: the last 2 months have no entries. Otherwise at least 6 months are
+     needed: recent = mean of the last 3 months, baseline = mean of the earlier
+     months; ≥ +15% GROWING · ≤ −15% AT RISK · otherwise STABLE. A single month
+     never decides the status. */
+  function classify(series) {
+    var s = (series || []).map(Number).filter(function (x) { return isFinite(x); });
+    if (s.length >= 2 && s[s.length - 1] === 0 && s[s.length - 2] === 0) return { k: 'off' };
+    if (s.length < 6) return { k: 'few' };
+    var rec = mean(s.slice(-3)), base = mean(s.slice(0, -3));
+    if (base === 0) return { k: rec > 0 ? 'up' : 'off' };
+    var ch = (rec - base) / base;
+    return { k: ch >= 0.15 ? 'up' : ch <= -0.15 ? 'down' : 'flat', ch: ch };
+  }
+
+  /* Cross-selling: Arcatek = D2_FACTS cus Confirmed Client; Akzent Logistics =
+     AIOS Captured Logistics rule (captured Logistics Shipments > 0). */
+  function crossSell(r) {
+    var f = facts(r.e), cus = f && f.cus ? f.cus.s : (r.rel && r.rel.s !== 'RC' ? r.rel.s : null);
+    var arc = cus === 'CC' ? 'yes' : (cus === 'CNC' ? 'no' : 'pend');
+    var akz = (f && f.c26 && f.c26.v === true) || (f && f.log && f.log.s === 'CC') ? 'yes' : 'no';
+    var st = arc === 'yes' ? (akz === 'yes' ? 'GROUP' : 'ARC') : (arc === 'no' && akz === 'yes' ? 'AKZ' : 'PEND');
+    return { arc: arc, akz: akz, st: st, f: f };
+  }
+  function relStatusBadge(cs) {
+    var m = REL_STATUS[cs.st];
+    return '<span class="arc-rel ' + m.cls + '"><span aria-hidden="true">' + m.ico + '</span>' + esc(m.l) + '</span>';
+  }
+
+  function card(id, title, bodyHtml, isRef, flags) {
+    return '<div class="arc-group arc-cp" data-arc-card="' + id + '"><div class="arc-cp-h"><span class="arc-group-t">' + esc(title) + '</span>' +
+      (isRef ? '<span class="arc-ref" title="' + esc(REF_TIP) + '">Reference</span>' : '') + '</div>' + bodyHtml +
+      (flags || []).map(flagHtml).join('') + '</div>';
+  }
+  function kv(label, valueHtml, sub, isRef) {
+    return '<div class="arc-kv"><span class="arc-kv-l">' + esc(label) + '</span><span class="arc-kv-v' + (isRef ? ' is-ref' : '') + '">' + valueHtml + '</span>' +
+      (sub ? '<span class="arc-kv-s">' + esc(sub) + '</span>' : '') + '</div>';
+  }
+  function pv(p, fmtFn) { return p ? esc(fmtFn ? fmtFn(p.v) : p.v) : PENDING; }
+
+  function spark(series, months, isRef) {
+    var s = series.map(Number), n = s.length, W = 240, H = 54, pad = 5;
+    var max = Math.max.apply(null, s.concat([1])), min = 0;
+    var x = function (i) { return pad + (n === 1 ? 0 : i * (W - 2 * pad) / (n - 1)); };
+    var y = function (v) { return H - pad - (v - min) / (max - min) * (H - 2 * pad); };
+    var pts = s.map(function (v, i) { return x(i).toFixed(1) + ',' + y(v).toFixed(1); });
+    var label = 'Monthly customs entries' + (isRef ? ' (reference)' : '') + ': ' + s.map(function (v, i) { return (months[i] || ('M' + (i + 1))) + ' ' + v; }).join(', ');
+    return '<svg class="arc-spark' + (isRef ? ' is-ref' : '') + '" viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="none" role="img" aria-label="' + esc(label) + '">' +
+      '<polygon class="a" points="' + x(0).toFixed(1) + ',' + (H - pad) + ' ' + pts.join(' ') + ' ' + x(n - 1).toFixed(1) + ',' + (H - pad) + '"/>' +
+      '<polyline class="l" points="' + pts.join(' ') + '"/>' +
+      '<circle class="d" cx="' + x(n - 1).toFixed(1) + '" cy="' + y(s[n - 1]).toFixed(1) + '" r="3.5"/>' +
+      s.map(function (v, i) {
+        return '<circle class="h" cx="' + x(i).toFixed(1) + '" cy="' + y(v).toFixed(1) + '" r="9"><title>' + esc((months[i] || '') + ': ' + v + ' customs entries' + (isRef ? ' · reference' : '')) + '</title></circle>';
+      }).join('') + '</svg>' +
+      '<div class="arc-spark-x"><span>' + esc(months[0] || '') + '</span><span>' + esc(months[n - 1] || '') + '</span></div>';
+  }
+
+  function cardIdentification(e, fl) {
+    var a = pick(e, 'kamArc'), k = pick(e, 'kamAkz');
+    return card('id', 'Identification',
+      '<div class="arc-kv-row">' +
+      kv('Arcatek KAM', pv(a), a && !a.ref && a.src ? 'Source: ' + a.src : '', a && a.ref) +
+      kv('Akzent KAM', pv(k), k && !k.ref && k.src ? 'Source: ' + k.src : '', k && k.ref) + '</div>',
+      (a && a.ref) || (k && k.ref), fl);
+  }
+  function cardActivity(e, fl) {
+    var c = pick(e, 'ceCur'), p = pick(e, 'cePrev'), y = pick(e, 'ceYtd'), varHtml = PENDING, varRef = false, cls = '';
+    if (c && p && c.ref === p.ref && isFinite(c.v) && isFinite(p.v) && Number(p.v) !== 0) {
+      var d = (c.v - p.v) / p.v * 100;
+      varHtml = (d > 0 ? '+' : '') + d.toFixed(1) + '%'; varRef = c.ref; cls = d > 0 ? ' up' : d < 0 ? ' down' : '';
+    }
+    return card('act', 'Activity',
+      '<div class="arc-kv-grid">' +
+      kv('Current month', pv(c), c && c.period, c && c.ref) +
+      kv('Previous month', pv(p), p && p.period, p && p.ref) +
+      kv('MoM', '<span class="arc-delta' + cls + '">' + varHtml + '</span>', '', varRef) +
+      kv('YTD', pv(y), y && y.period, y && y.ref) + '</div>' +
+      '<span class="arc-cp-foot">Arcatek customs entries</span>',
+      [c, p, y].some(function (x) { return x && x.ref; }), fl);
+  }
+  function cardEconomic(e, fl) {
+    var f = pick(e, 'fees'), g = pick(e, 'gpPrev');
+    return card('eco', 'Economic',
+      '<div class="arc-kv-row">' +
+      kv('Current-month fees', pv(f, money), f && f.period, f && f.ref) +
+      kv('Previous-month GP', pv(g, money), g && g.period, g && g.ref) + '</div>' +
+      '<span class="arc-cp-foot">Arcatek financial data</span>',
+      (f && f.ref) || (g && g.ref), fl);
+  }
+  function cardCoverage(r, fl) {
+    var e = r.e, real = typeof ARCATEK_GATEWAYS !== 'undefined' && ARCATEK_GATEWAYS[e.key], list, isRef = false;
+    if (real) list = real.list.map(function (g) { return { n: g[0], arc: g[1], tot: g[2] }; });
+    else if (refOn()) { isRef = true; list = ARCATEK_REFERENCE.gateways.map(function (g) { return { n: g[0], arc: g[1] ? 1 : 0, tot: null }; }); }
+    if (!list) return card('cov', 'Coverage', '<div class="arc-cp-big">' + PENDING + '</div><span class="arc-cp-foot">Customer gateways vs Arcatek presence</span>', false, fl);
+    var yes = list.filter(function (g) { return g.arc > 0; }).length, pct = Math.round(yes / list.length * 100);
+    var white = list.filter(function (g) { return !(g.arc > 0); });
+    var whiteShip = real ? white.reduce(function (s, g) { return s + g.tot; }, 0) : null;
+    function li(g) {
+      var on = g.arc > 0;
+      return '<li class="' + (on ? 'on' : 'off') + '"><span class="arc-gw-i" aria-hidden="true">' + (on ? '✓' : '✕') + '</span>' +
+        '<span class="arc-gw-n">' + esc(g.n) + '<span class="arc-sr">' + (on ? ' — Arcatek participates' : ' — no Arcatek participation') + '</span></span>' +
+        (g.tot != null ? '<span class="arc-gw-c" title="' + esc(fmt(g.arc) + ' Arcatek-patent / ' + fmt(g.tot) + ' visible Shipments') + '">' + (on ? fmt(g.arc) + ' / ' : '') + fmt(g.tot) + '</span>' : '') + '</li>';
+    }
+    var SHOW = 6, head = list.slice(0, SHOW), rest = list.slice(SHOW);
+    var w = r.wallet, tip = 'Gateways where the customer has visible customs Shipments (Panjiva) and whether Arcatek patents 3468 / 1930 appear there. ' +
+      'Counts: Arcatek-patent / visible Shipments.' + (real ? ' Source: ' + e.view + ' · Customs Wallet by Gateway' + (w && w.cutoff ? ' · current YTD through ' + w.cutoff : '') +
+      (real.listed < real.den ? ' · material gateways as listed in the AIOS (' + fmt(real.listed) + ' of ' + fmt(real.den) + ' Shipments)' : '') : '');
+    var html = '<div class="arc-cp-big' + (isRef ? ' is-ref' : '') + '">' + yes + ' / ' + list.length + ' <small>gateways</small></div>' +
+      '<div class="arc-cp-sub"><span class="' + (isRef ? 'is-ref' : '') + '">' + pct + '% gateway coverage</span>' +
+      (white.length ? ' · <b class="' + (isRef ? 'is-ref' : '') + '">' + white.length + ' whitespace</b>' + (whiteShip != null ? ' · ' + fmt(whiteShip) + ' Shipments' : '') : '') +
+      ' <span class="arc-info" tabindex="0" role="note" title="' + esc(tip) + '" aria-label="' + esc(tip) + '">ⓘ</span></div>' +
+      '<ul class="arc-gw' + (isRef ? ' is-ref' : '') + '">' + head.map(li).join('') + '</ul>' +
+      (rest.length ? '<details class="arc-gw-more"><summary>+' + rest.length + ' more gateway' + (rest.length > 1 ? 's' : '') + '</summary><ul class="arc-gw">' + rest.map(li).join('') + '</ul></details>' : '') +
+      (w && !w.missing ? '<span class="arc-cp-foot">Arcatek customs share <b>' + esc(w.v) + '</b> · ' + fmt(w.num) + ' / ' + fmt(w.den) + ' Shipments</span>' : '');
+    return card('cov', 'Coverage', html, isRef, fl);
+  }
+  function cardPotential(r, fl) {
+    var e = r.e, f = facts(e), lw = f && f.lw, m = typeof ARCATEK_LOGISTICS_WALLET !== 'undefined' && ARCATEK_LOGISTICS_WALLET[e.key];
+    var tip = 'Akzent Logistics Share of Wallet, existing AIOS methodology: Akzent captured Shipments ÷ Panjiva-visible Shipments in the analysis period. ' +
+      (lw ? 'AIOS: ' + lw.q + ' · ' + lw.p : '') + ' Source: ' + e.view + ' · D2_FACTS lw. Open full AIOS for the method.';
+    var info = ' <span class="arc-info" tabindex="0" role="note" title="' + esc(tip) + '" aria-label="' + esc(tip) + '">ⓘ</span>';
+    var html;
+    if (!lw) html = '<div class="arc-cp-big">' + PENDING + '</div>';
+    else if (!m) html = '<div class="arc-cp-big is-na">' + esc(lw.v === 'Not Calculable' ? 'Not calculable' : lw.v) + info + '</div><span class="arc-cp-sub">' + esc(lw.p) + '</span>';
+    else html = '<div class="arc-cp-big">' + esc(lw.v) + info + '</div>' +
+      '<div class="arc-cp-sub"><b>' + fmt(m.num) + ' / ' + fmt(m.den) + '</b> Shipments' + (lw.st ? ' <span class="arc-chip">' + esc(lw.st) + '</span>' : '') + '</div>' +
+      '<span class="arc-cp-sub">' + esc(m.p) + '</span>';
+    return card('pot', 'Potential · Share of Wallet', html + '<span class="arc-cp-foot">Akzent captured / Panjiva visible</span>', false, fl);
+  }
+  function cardCross(cs, fl) {
+    function line(state, label, sub) {
+      var ico = state === 'yes' ? '✓' : state === 'pend' ? '…' : '';
+      return '<li class="' + state + '"><span class="arc-cx-i" aria-hidden="true">' + ico + '</span><span>' + esc(label) +
+        (state === 'pend' ? ' · <span class="arc-pend">Pending</span>' : '') + (sub ? '<span class="arc-kv-s">' + esc(sub) + '</span>' : '') +
+        '<span class="arc-sr">' + (state === 'yes' ? ' — confirmed' : state === 'pend' ? '' : ' — not confirmed') + '</span></span></li>';
+    }
+    var html = '<ul class="arc-cx">' +
+      line(cs.arc, 'Arcatek Client', cs.arc === 'pend' ? 'Arcatek Customs not validated in the AIOS' : '') +
+      line(cs.akz, 'Akzent Logistics Client', cs.akz === 'yes' ? 'Captured Logistics > 0' : 'No captured logistics in the AIOS') + '</ul>' +
+      '<div class="arc-cx-st">' + relStatusBadge(cs) + '</div>';
+    return card('xs', 'Cross-selling', html, false, fl);
+  }
+  function cardControl(e, fl) {
+    var ser = pick(e, 'ceSeries'), last = pick(e, 'lastOp'), inc = val(e, 'incidents'), html = '';
+    if (ser) {
+      var c = classify(ser.v), t = TREND[c.k];
+      html += '<div class="arc-trend ' + t.cls + (ser.ref ? ' is-ref' : '') + '"' + (c.ch != null ? ' title="Last 3 months vs earlier months: ' + (c.ch > 0 ? '+' : '') + (c.ch * 100).toFixed(1) + '%"' : '') + '>' +
+        '<span aria-hidden="true">' + t.ico + '</span>' + esc(t.l) + '</div>' + spark(ser.v, ser.months || [], ser.ref) +
+        '<span class="arc-cp-foot">YTD activity trend · monthly customs entries' + (ser.period ? ' · ' + esc(ser.period) : '') + '</span>';
+    } else html += '<div class="arc-trend off">' + PENDING + '</div><span class="arc-cp-foot">YTD activity trend · monthly customs entries</span>';
+    html += '<div class="arc-kv-row">' + kv('Last Arcatek operation', pv(last), last && !last.ref && last.src ? 'Source: ' + last.src : '', last && last.ref) +
+      kv('Relevant incidents', inc ? esc(inc.v) : PENDING, inc && inc.src ? 'Source: ' + inc.src : '', false) + '</div>';
+    return card('ctl', 'Control', html, (ser && ser.ref) || (last && last.ref), fl);
+  }
+  function cardAction(e, fl) {
+    var lv = pick(e, 'lastVisit'), nx = pick(e, 'next');
+    return card('act2', 'Action',
+      '<div class="arc-kv-row">' + kv('Last visit', pv(lv), lv && lv.period, lv && lv.ref) + kv('Next follow-up', pv(nx), nx && nx.period, nx && nx.ref) + '</div>' +
+      '<span class="arc-cp-foot">CRM / HubSpot</span>', (lv && lv.ref) || (nx && nx.ref), fl);
+  }
+
   function supportTiles(r) {
     var e = r.e, f = facts(e), w = r.wallet, out = [];
     if (e.support) return e.support.map(function (t) { return t; });
@@ -119902,37 +120188,35 @@ var ARCATEK_REGISTRY = [
     var r = null;
     for (var i = 0; i < ROWS.length; i++) if (ROWS[i].e.key === state.sel) r = ROWS[i];
     if (!r) { body.innerHTML = '<p class="arc-placeholder">Select an account from the search or the portfolio list.</p>'; return; }
-    var e = r.e, byField = {}, acctFlags = [];
-    r.flags.forEach(function (fl) {
-      if (fl.f === 'entity' || fl.f === 'rel') acctFlags.push(fl);
-      else (byField[fl.f] = byField[fl.f] || []).push(fl);
-    });
-    var groups = [], gmap = {};
-    FIELDS.forEach(function (fd) {
-      if (!gmap[fd.g]) { gmap[fd.g] = []; groups.push(fd.g); }
-      gmap[fd.g].push(fd);
+    var e = r.e, byCard = {}, acctFlags = [], cs = crossSell(r);
+    var lwm = typeof ARCATEK_LOGISTICS_WALLET !== 'undefined' && ARCATEK_LOGISTICS_WALLET[e.key], lwf = cs.f && cs.f.lw;
+    var flags = r.flags.slice();
+    if (lwm && lwf && !walletReproduces({ v: lwf.v, num: lwm.num, den: lwm.den }))
+      flags.push({ f: 'lw', why: 'Reasonableness check failed: ' + fmt(lwm.num) + ' / ' + fmt(lwm.den) + ' does not reproduce the stated ' + lwf.v + '.', src: e.view + ' · D2_FACTS lw vs ARCATEK_LOGISTICS_WALLET' });
+    flags.forEach(function (fl) {
+      var c = FLAG_CARD[fl.f];
+      if (!c) acctFlags.push(fl);
+      else (byCard[c] = byCard[c] || []).push(fl);
     });
     var html = '<div class="arc-detail-head"><div style="min-width:0;">' +
       '<h3>' + esc(e.legal) + '</h3>' +
       '<div class="arc-detail-meta">' + (r.acc ? 'AIOS account: ' + esc(decode(r.acc.name)) + ' · ' : '') + (e.view ? esc(e.view) : 'No AIOS view yet') + '</div>' +
-      '<div class="arc-detail-badges">' + aiosBadge(e) + relBadge(r.rel, 'Arcatek relationship · ') + '</div>' +
+      '<div class="arc-detail-badges">' + aiosBadge(e) + relStatusBadge(cs) + '</div>' +
       '</div>' +
       (e.view && viewExists(e) ? '<button type="button" class="arc-open" data-arc-view="' + esc(e.view) + '">Open full AIOS →</button>' : '') +
       '</div>';
     if (acctFlags.length) html += '<div class="arc-acct-flags">' + acctFlags.map(flagHtml).join('') + '</div>';
-    html += '<div class="arc-groups">' + groups.map(function (g) {
-      return '<div class="arc-group"><div class="arc-group-t">' + esc(g) + '</div>' + gmap[g].map(function (fd) {
-        var fv = fieldValue(r, fd);
-        return '<div class="arc-field"><span class="arc-field-l">' + esc(fd.l) + '</span><div class="arc-field-v">' +
-          (fv.st ? stHtml(fv.st) : fv.html) + '</div>' + (byField[fd.k] || []).map(flagHtml).join('') + '</div>';
-      }).join('') + '</div>';
-    }).join('') + '</div>';
+    html += '<div class="arc-legend"><span><b>Value</b> real, from a confirmed source</span><span>' + PENDING + ' source not integrated yet</span>' +
+      '<span><span class="arc-ref" title="' + esc(REF_TIP) + '">Reference</span> <span class="is-ref">illustrative</span>, replaced automatically by real data</span></div>';
+    html += '<div class="arc-groups arc-cockpit">' +
+      cardIdentification(e, byCard.id) + cardActivity(e, byCard.act) + cardEconomic(e, byCard.eco) + cardControl(e, byCard.ctl) +
+      cardCoverage(r, byCard.cov) + cardPotential(r, byCard.pot) + cardCross(cs, byCard.xs) + cardAction(e, byCard.act2) + '</div>';
     var tiles = supportTiles(r);
-    html += '<div class="arc-support"><h4>Supporting AIOS information</h4>' +
-      '<p class="arc-note" style="margin:0;">Metric names are kept exactly as in the AIOS. PJ Shipments, Arcatek Patent Shipments and Akzent Captured Shipments are <b>not customs entries</b>. Previous full year and current YTD stay separate; YTD is never annualized.</p>' +
+    html += '<details class="arc-support"><summary><h4>Supporting AIOS information</h4></summary>' +
+      '<p class="arc-note" style="margin:8px 0 0;">Metric names are kept exactly as in the AIOS. PJ Shipments, Arcatek Patent Shipments and Akzent Captured Shipments are <b>not customs entries</b>. Previous full year and current YTD stay separate; YTD is never annualized.</p>' +
       '<div class="arc-support-grid">' + tiles.map(function (t) {
         return '<div class="arc-sup"><span class="arc-sup-l">' + esc(t.l) + '</span><span class="arc-sup-v">' + esc(t.v) + '</span><span class="arc-sup-p">' + esc(t.p) + '<br>Source: ' + esc(t.src) + '</span></div>';
-      }).join('') + walletTable(r.wallet) + '</div></div>';
+      }).join('') + walletTable(r.wallet) + '</div></details>';
     body.innerHTML = html;
   }
 
