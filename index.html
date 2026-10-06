@@ -34033,7 +34033,7 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
   <div class="sidebar-logo">
     <div class="logo-mark" role="img" aria-label="Akzent"></div>
     <div class="logo-sub">Intelligence OS</div>
-    <div class="aios-build" id="aios-build" title="Build 174 · last updated 2026-10-06 14:46 (Mexico City)"><b>v2.174</b> · Updated 06 Oct 2026, 14:46</div>
+    <div class="aios-build" id="aios-build" title="Build 175 · last updated 2026-10-06 14:50 (Mexico City)"><b>v2.175</b> · Updated 06 Oct 2026, 14:50</div>
     <div class="aios-logo-glyph" aria-hidden="true"></div>
     <button type="button" id="aios-sb-toggle" class="aios-sb-toggle" onclick="aiosToggleSidebar()" aria-label="Collapse sidebar" aria-controls="aios-sidebar" aria-expanded="true" title="Collapse sidebar">
       <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false"><path d="M10 3.5 5.5 8 10 12.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -119681,8 +119681,6 @@ var ARCATEK_REGISTRY = [
                       same cutoff as the Customs Shared Wallet). Arcatek totals
                       reconcile exactly to wallet.num for all 17; listed < den
                       means the AIOS lists only material gateways.
-   ARCATEK_LOGISTICS_WALLET  real · numerator / denominator / period of the
-                      D2_FACTS Logistics Shared Wallet, as printed in each view.
    ARCATEK_REFERENCE  illustrative only · shown while the real Arcatek source
                       is missing and `on` is true, always tagged REFERENCE.
                       Never used when a real value exists. */
@@ -119706,21 +119704,14 @@ var ARCATEK_GATEWAYS = {
   'mekra': { listed: 1207, den: 1263, list: [['Nuevo Laredo', 0, 600], ['Monterrey / General Mariano Escobedo', 0, 244], ['Colombia, Nuevo León', 126, 160], ['Manzanillo', 0, 103], ['Aeropuerto Internacional General Mariano Escobedo', 0, 60], ['Altamira', 40, 40]] }
 };
 
-var ARCATEK_LOGISTICS_WALLET = {
-  pipsa:    { num: 2, den: 2770, p: 'Akzent Jan–Aug 2026 vs PJ Jan 2 – Jul 31, 2026' },
-  liebherr: { num: 0, den: 275,  p: '2026 YTD through Jul 31' },
-  brahm:    { num: 4, den: 198,  p: 'Jan 1 – Aug 27, 2026' },
-  busman:   { num: 4, den: 16,   p: 'Current YTD · Imports to Jun 20, Exports to Jul 13' },
-  mekra:    { num: 8, den: 210,  p: '20 May – 24 Jun 2026' }
-};
-
 var ARCATEK_REFERENCE = {
   on: true,
   months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
   values: { ceCur: 18, cePrev: 16, ceYtd: 129, ceSeries: [10, 12, 13, 13, 15, 16, 16, 16, 18],
             fees: 8450, gpPrev: 6980, lastOp: '28 Sep 2026' },
   period: { ceCur: 'Sep 2026', cePrev: 'Aug 2026', ceYtd: 'Jan–Sep 2026', ceSeries: 'Jan–Sep 2026', fees: 'Sep 2026', gpPrev: 'Aug 2026' },
-  gateways: [['Nuevo Laredo', 1], ['Colombia', 1], ['Veracruz', 1], ['Manzanillo', 0], ['AICM', 0]]
+  gateways: [['Nuevo Laredo', 1], ['Colombia', 1], ['Veracruz', 1], ['Manzanillo', 0], ['AICM', 0]],
+  wallet: { v: '12.4%', num: 27, den: 218, p: 'Jan–Sep 2026' }
 };
 
 (function () {
@@ -119977,7 +119968,7 @@ var ARCATEK_REFERENCE = {
 
   /* ── render: account detail · executive cockpit ──
      Every value is in one of three states:
-       REAL       registry `values`, D2_FACTS, ARCATEK_GATEWAYS, ARCATEK_LOGISTICS_WALLET
+       REAL       registry `values`, D2_FACTS, ARCATEK_GATEWAYS
        PENDING    source not integrated yet → "Pending"
        REFERENCE  ARCATEK_REFERENCE, only while the real value is missing; the
                   value is styled .is-ref and its card carries a REFERENCE tag. */
@@ -119997,7 +119988,7 @@ var ARCATEK_REFERENCE = {
     PEND:  { l: 'Pending',      cls: 'pend',  ico: '…' }
   };
   var FLAG_CARD = { kam: 'id', kamArc: 'id', kamAkz: 'id', ceCur: 'act', cePrev: 'act', ceVar: 'act', ceYtd: 'act',
-                    fees: 'eco', gp: 'eco', gpPrev: 'eco', wallet: 'cov', gateways: 'cov', lw: 'pot', services: 'xs',
+                    fees: 'eco', gp: 'eco', gpPrev: 'eco', wallet: 'pot', gateways: 'cov', services: 'xs',
                     status: 'ctl', lastOp: 'ctl', incidents: 'ctl', lastVisit: 'act2', next: 'act2' };
 
   function refOn() { return typeof ARCATEK_REFERENCE !== 'undefined' && !!ARCATEK_REFERENCE.on; }
@@ -120124,22 +120115,41 @@ var ARCATEK_REFERENCE = {
       (white.length ? ' · <b class="' + (isRef ? 'is-ref' : '') + '">' + white.length + ' whitespace</b>' + (whiteShip != null ? ' · ' + fmt(whiteShip) + ' Shipments' : '') : '') +
       ' <span class="arc-info" tabindex="0" role="note" title="' + esc(tip) + '" aria-label="' + esc(tip) + '">ⓘ</span></div>' +
       '<ul class="arc-gw' + (isRef ? ' is-ref' : '') + '">' + head.map(li).join('') + '</ul>' +
-      (rest.length ? '<details class="arc-gw-more"><summary>+' + rest.length + ' more gateway' + (rest.length > 1 ? 's' : '') + '</summary><ul class="arc-gw">' + rest.map(li).join('') + '</ul></details>' : '') +
-      (w && !w.missing ? '<span class="arc-cp-foot">Arcatek customs share <b>' + esc(w.v) + '</b> · ' + fmt(w.num) + ' / ' + fmt(w.den) + ' Shipments</span>' : '');
+      (rest.length ? '<details class="arc-gw-more"><summary>+' + rest.length + ' more gateway' + (rest.length > 1 ? 's' : '') + '</summary><ul class="arc-gw">' + rest.map(li).join('') + '</ul></details>' : '');
     return card('cov', 'Coverage', html, isRef, fl);
   }
+  /* "2026-07-31" → "2026 YTD through Jul 31, 2026"; split cutoffs stay per direction. */
+  var MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  function periodLabel(cut) {
+    var d = function (x, yr) { var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(x); return m ? MON[+m[2] - 1] + ' ' + (+m[3]) + (yr ? ', ' + m[1] : '') : x; };
+    var c = String(cut || '').trim(), parts = c.split(' · ');
+    if (/^\d{4}-\d{2}-\d{2}$/.test(c)) return c.slice(0, 4) + ' YTD through ' + d(c, true);
+    if (parts.length > 1 && parts.every(function (p) { return /^(Imports|Exports) \d{4}-\d{2}-\d{2}$/.test(p); }))
+      return parts[0].slice(-10, -6) + ' YTD · ' + parts.map(function (p) { var k = p.split(' '); return k[0] + ' through ' + d(k[1]); }).join(' · ');
+    return c;
+  }
+  /* Arcatek Share of Wallet = Arcatek captured customs activity ÷ total comparable
+     visible customs activity, same period, same unit. Both terms come from the
+     same Panjiva universe (AIOS Customs Shared Wallet): numerator = visible
+     Shipments filed under Arcatek-owned patents 3468 / 1930, denominator = all
+     visible customs Shipments of the entity — so period and unit match by
+     construction. Akzent Logistics data is never used here. */
   function cardPotential(r, fl) {
-    var e = r.e, f = facts(e), lw = f && f.lw, m = typeof ARCATEK_LOGISTICS_WALLET !== 'undefined' && ARCATEK_LOGISTICS_WALLET[e.key];
-    var tip = 'Akzent Logistics Share of Wallet, existing AIOS methodology: Akzent captured Shipments ÷ Panjiva-visible Shipments in the analysis period. ' +
-      (lw ? 'AIOS: ' + lw.q + ' · ' + lw.p : '') + ' Source: ' + e.view + ' · D2_FACTS lw. Open full AIOS for the method.';
+    var w = r.wallet, html, isRef = false;
+    var tip = 'Arcatek captured customs activity / total comparable visible customs activity, same period, Shipments in both terms. ' +
+      'Arcatek = Panjiva-visible Shipments filed under Arcatek-owned patents 3468 / 1930 (AIOS Customs Shared Wallet). No Akzent Logistics data is used.' +
+      (w && !w.missing ? ' Basis: ' + w.basis + '. Source: ' + w.srcLabel + '.' : '') + ' Full method in Open full AIOS.';
     var info = ' <span class="arc-info" tabindex="0" role="note" title="' + esc(tip) + '" aria-label="' + esc(tip) + '">ⓘ</span>';
-    var html;
-    if (!lw) html = '<div class="arc-cp-big">' + PENDING + '</div>';
-    else if (!m) html = '<div class="arc-cp-big is-na">' + esc(lw.v === 'Not Calculable' ? 'Not calculable' : lw.v) + info + '</div><span class="arc-cp-sub">' + esc(lw.p) + '</span>';
-    else html = '<div class="arc-cp-big">' + esc(lw.v) + info + '</div>' +
-      '<div class="arc-cp-sub"><b>' + fmt(m.num) + ' / ' + fmt(m.den) + '</b> Shipments' + (lw.st ? ' <span class="arc-chip">' + esc(lw.st) + '</span>' : '') + '</div>' +
-      '<span class="arc-cp-sub">' + esc(m.p) + '</span>';
-    return card('pot', 'Potential · Share of Wallet', html + '<span class="arc-cp-foot">Akzent captured / Panjiva visible</span>', false, fl);
+    if (w && !w.missing && w.num != null && w.den) {
+      html = '<div class="arc-cp-big">' + esc(w.v) + info + '</div>' +
+        '<div class="arc-cp-sub"><b>' + fmt(w.num) + ' / ' + fmt(w.den) + '</b> Shipments</div>' +
+        '<span class="arc-cp-sub">' + esc(periodLabel(w.cutoff) || w.period) + '</span>';
+    } else if (refOn() && ARCATEK_REFERENCE.wallet) {
+      var rw = ARCATEK_REFERENCE.wallet; isRef = true;
+      html = '<div class="arc-cp-big is-ref">' + esc(rw.v) + info + '</div>' +
+        '<div class="arc-cp-sub is-ref"><b>' + fmt(rw.num) + ' / ' + fmt(rw.den) + '</b> Shipments</div><span class="arc-cp-sub">' + esc(rw.p) + '</span>';
+    } else html = '<div class="arc-cp-big">' + PENDING + info + '</div>';
+    return card('pot', 'Potential · Arcatek Share of Wallet', html + '<span class="arc-cp-foot">Arcatek captured / Panjiva visible</span>', isRef, fl);
   }
   function cardCross(cs, fl) {
     function line(state, label, sub) {
@@ -120204,11 +120214,7 @@ var ARCATEK_REFERENCE = {
     for (var i = 0; i < ROWS.length; i++) if (ROWS[i].e.key === state.sel) r = ROWS[i];
     if (!r) { body.innerHTML = '<p class="arc-placeholder">Select an account from the search or the portfolio list.</p>'; return; }
     var e = r.e, byCard = {}, acctFlags = [], cs = crossSell(r);
-    var lwm = typeof ARCATEK_LOGISTICS_WALLET !== 'undefined' && ARCATEK_LOGISTICS_WALLET[e.key], lwf = cs.f && cs.f.lw;
-    var flags = r.flags.slice();
-    if (lwm && lwf && !walletReproduces({ v: lwf.v, num: lwm.num, den: lwm.den }))
-      flags.push({ f: 'lw', why: 'Reasonableness check failed: ' + fmt(lwm.num) + ' / ' + fmt(lwm.den) + ' does not reproduce the stated ' + lwf.v + '.', src: e.view + ' · D2_FACTS lw vs ARCATEK_LOGISTICS_WALLET' });
-    flags.forEach(function (fl) {
+    r.flags.forEach(function (fl) {
       var c = FLAG_CARD[fl.f];
       if (!c) acctFlags.push(fl);
       else (byCard[c] = byCard[c] || []).push(fl);
