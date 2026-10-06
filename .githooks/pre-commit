@@ -1,0 +1,17 @@
+#!/bin/sh
+# Stamps the AIOS version + last-update line (#aios-build in index.html) on every
+# commit that includes index.html. Version = v2.<commit number>; time = Mexico City.
+# Only the staged blob and that single line of the working tree are touched, so
+# unstaged edits from other sessions are never swept into the commit.
+git diff --cached --quiet -- index.html && exit 0
+
+n=$(( $(git rev-list --count HEAD 2>/dev/null || echo 0) + 1 ))
+iso=$(TZ=America/Mexico_City date '+%Y-%m-%d %H:%M')
+human=$(TZ=America/Mexico_City date '+%d %b %Y, %H:%M')
+export AIOS_STAMP="    <div class=\"aios-build\" id=\"aios-build\" title=\"Build $n · last updated $iso (Mexico City)\"><b>v2.$n</b> · Updated $human</div>"
+fix='s{^\s*<div class="aios-build" id="aios-build".*$}{$ENV{AIOS_STAMP}}'
+
+blob=$(git show :index.html | perl -pe "$fix" | git hash-object -w --stdin) || exit 1
+git update-index --cacheinfo "100644,$blob,index.html" || exit 1
+perl -i -pe "$fix" index.html
+exit 0
