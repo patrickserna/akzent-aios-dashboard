@@ -34033,7 +34033,7 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
   <div class="sidebar-logo">
     <div class="logo-mark" role="img" aria-label="Akzent"></div>
     <div class="logo-sub">Intelligence OS</div>
-    <div class="aios-build" id="aios-build" title="Build 175 · last updated 2026-10-06 14:50 (Mexico City)"><b>v2.175</b> · Updated 06 Oct 2026, 14:50</div>
+    <div class="aios-build" id="aios-build" title="Build 176 · last updated 2026-10-06 14:56 (Mexico City)"><b>v2.176</b> · Updated 06 Oct 2026, 14:56</div>
     <div class="aios-logo-glyph" aria-hidden="true"></div>
     <button type="button" id="aios-sb-toggle" class="aios-sb-toggle" onclick="aiosToggleSidebar()" aria-label="Collapse sidebar" aria-controls="aios-sidebar" aria-expanded="true" title="Collapse sidebar">
       <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false"><path d="M10 3.5 5.5 8 10 12.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -119601,8 +119601,8 @@ var D2_FACTS = {"view-finezac":{"pj":{"v":14,"p":"PJ Visible Imports — 2026 YT
      rel      only when D2_FACTS has no Arcatek Customs status
      flags    [{ f: field key | 'entity' | 'rel', why, src }]
      values   future internal data, keyed by field
-              (e.g. kamArc, kamAkz, ceCur, cePrev, ceYtd, ceSeries
-              {v:[monthly entries], months:[labels]}, fees, gpPrev,
+              (e.g. kamArc, kamAkz, ceSeries {v:[monthly Arcatek
+              customs entries], start:'YYYY-MM', months:[labels]}, fees, gpPrev,
               status, lastOp, incidents, lastVisit, next):
               { v, period, src }. Absent = Pending (or REFERENCE in the
               Account Detail while ARCATEK_REFERENCE.on).
@@ -119707,9 +119707,10 @@ var ARCATEK_GATEWAYS = {
 var ARCATEK_REFERENCE = {
   on: true,
   months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
-  values: { ceCur: 18, cePrev: 16, ceYtd: 129, ceSeries: [10, 12, 13, 13, 15, 16, 16, 16, 18],
+  start: '2026-01',
+  values: { ceSeries: [10, 11, 12, 13, 15, 16, 18, 16, 18],
             fees: 8450, gpPrev: 6980, lastOp: '28 Sep 2026' },
-  period: { ceCur: 'Sep 2026', cePrev: 'Aug 2026', ceYtd: 'Jan–Sep 2026', ceSeries: 'Jan–Sep 2026', fees: 'Sep 2026', gpPrev: 'Aug 2026' },
+  period: { ceSeries: 'Jan–Sep 2026', fees: 'Sep 2026', gpPrev: 'Aug 2026' },
   gateways: [['Nuevo Laredo', 1], ['Colombia', 1], ['Veracruz', 1], ['Manzanillo', 0], ['AICM', 0]],
   wallet: { v: '12.4%', num: 27, den: 218, p: 'Jan–Sep 2026' }
 };
@@ -119995,9 +119996,9 @@ var ARCATEK_REFERENCE = {
   /* Real value first; the reference value only when no real value exists. */
   function pick(e, k) {
     var v = val(e, k);
-    if (v) return { v: v.v, period: v.period, src: v.src, months: v.months, ref: false };
+    if (v) return { v: v.v, period: v.period, src: v.src, months: v.months, start: v.start, ref: false };
     if (refOn() && ARCATEK_REFERENCE.values[k] != null)
-      return { v: ARCATEK_REFERENCE.values[k], period: ARCATEK_REFERENCE.period[k], months: ARCATEK_REFERENCE.months, ref: true };
+      return { v: ARCATEK_REFERENCE.values[k], period: ARCATEK_REFERENCE.period[k], months: ARCATEK_REFERENCE.months, start: ARCATEK_REFERENCE.start, ref: true };
     return null;
   }
   function money(x) { return typeof x === 'number' ? '$' + fmt(x) : String(x); }
@@ -120068,20 +120069,41 @@ var ARCATEK_REFERENCE = {
       kv('Akzent KAM', pv(k), k && !k.ref && k.src ? 'Source: ' + k.src : '', k && k.ref) + '</div>',
       (a && a.ref) || (k && k.ref), fl);
   }
+  /* Activity = Arcatek operational volume only (no trend reading — that is Control).
+     All four metrics use completed calendar months from the monthly Arcatek
+     customs-entry series: Last full month = the month before today's month (for
+     REFERENCE data, the last month of the illustrative series); Previous month =
+     the one before; 3M Avg. = mean of the last 3 completed months; YTD = Jan 1
+     through the end of the Last full month. A metric whose months are not all in
+     the series shows Pending. */
   function cardActivity(e, fl) {
-    var c = pick(e, 'ceCur'), p = pick(e, 'cePrev'), y = pick(e, 'ceYtd'), varHtml = PENDING, varRef = false, cls = '';
-    if (c && p && c.ref === p.ref && isFinite(c.v) && isFinite(p.v) && Number(p.v) !== 0) {
-      var d = (c.v - p.v) / p.v * 100;
-      varHtml = (d > 0 ? '+' : '') + d.toFixed(1) + '%'; varRef = c.ref; cls = d > 0 ? ' up' : d < 0 ? ' down' : '';
+    var ser = pick(e, 'ceSeries'), MO = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    var last = null, prev = null, avg = null, ytd = null, isRef = !!(ser && ser.ref);
+    var m = ser && /^(\d{4})-(\d{2})$/.exec(String(ser.start || ''));
+    if (m && Array.isArray(ser.v)) {
+      var y0 = +m[1], m0 = +m[2] - 1;
+      var at = function (i) { var t = y0 * 12 + m0 + i; return { y: Math.floor(t / 12), m: t % 12, n: Number(ser.v[i]) }; };
+      var idx;
+      if (ser.ref) idx = ser.v.length - 1;
+      else { var now = new Date(), lf = now.getFullYear() * 12 + now.getMonth() - 1; idx = lf - (y0 * 12 + m0); }
+      var ok = function (i) { return i >= 0 && i < ser.v.length && isFinite(ser.v[i]) && ser.v[i] !== null && ser.v[i] !== ''; };
+      var lab = function (x) { return MO[x.m] + ' ' + x.y; };
+      if (ok(idx)) { var L = at(idx); last = { v: fmt(L.n), p: lab(L) };
+        if (ok(idx - 1)) { var P = at(idx - 1); prev = { v: fmt(P.n), p: lab(P) }; }
+        if (ok(idx - 1) && ok(idx - 2)) { var A = at(idx - 2);
+          avg = { v: ((L.n + at(idx - 1).n + A.n) / 3).toFixed(1), p: (A.y === L.y ? MO[A.m] : lab(A)) + '–' + lab(L) }; }
+        var jan = idx - L.m, sum = 0, full = jan >= 0;
+        for (var i = jan; full && i <= idx; i++) { if (!ok(i)) full = false; else sum += Number(ser.v[i]); }
+        if (full) ytd = { v: fmt(sum), p: (L.m === 0 ? '' : 'Jan–') + lab(L) };
+      }
     }
+    function cell(label, x) { return kv(label, x ? esc(x.v) : PENDING, x && x.p, !!x && isRef); }
     return card('act', 'Activity',
       '<div class="arc-kv-grid">' +
-      kv('Current month', pv(c), c && c.period, c && c.ref) +
-      kv('Previous month', pv(p), p && p.period, p && p.ref) +
-      kv('MoM', '<span class="arc-delta' + cls + '">' + varHtml + '</span>', '', varRef) +
-      kv('YTD', pv(y), y && y.period, y && y.ref) + '</div>' +
+      cell('Last full month', last) + cell('Previous month', prev) +
+      cell('3M Avg. / month', avg) + cell('YTD', ytd) + '</div>' +
       '<span class="arc-cp-foot">Arcatek customs entries</span>',
-      [c, p, y].some(function (x) { return x && x.ref; }), fl);
+      isRef && !!(last || prev || avg || ytd), fl);
   }
   function cardEconomic(e, fl) {
     var f = pick(e, 'fees'), g = pick(e, 'gpPrev');
