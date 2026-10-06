@@ -32653,6 +32653,189 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
   #view-dashboard2 .d2-t tr { break-inside: avoid; }
 }
 </style>
+<style id="arc-style">
+/* ═══════════════════════════════════════════════════════════════
+   ARCATEK DASHBOARD · CURRENT-CLIENT PORTFOLIO
+   Every rule is scoped to #view-arcatek, so no existing view, account
+   report or export is affected. Tokens mirror Dashboard 2.0.
+═══════════════════════════════════════════════════════════════ */
+#view-arcatek {
+  --arc-ink: #0A1A38;
+  --arc-navy: #0D2B5E;
+  --arc-cyan: #00B4D8;
+  --arc-cyan-ink: #007A93;
+  --arc-cyan-soft: #E3F6FA;
+  --arc-bg: #F2F4F8;
+  --arc-surface: #FFFFFF;
+  --arc-line: #E1E6EE;
+  --arc-line-2: #C9D2E0;
+  --arc-text: #0F1B2D;
+  --arc-muted: #556175;
+  --arc-faint: #8590A3;
+  --arc-ok-bg: #E6F4EA;
+  --arc-ok-ink: #1E6B34;
+  --arc-nv-bg: #FFF7E6;
+  --arc-nv-ink: #8A5A00;
+  --arc-nv-line: #E3B55C;
+  --arc-flag-bg: #FDECEA;
+  --arc-flag-ink: #A3261B;
+  --arc-flag-line: #F0A39B;
+  --arc-radius: 10px;
+  background: var(--arc-bg);
+  color: var(--arc-text);
+  min-height: 100vh;
+  font-variant-numeric: tabular-nums;
+}
+#view-arcatek *, #view-arcatek *::before, #view-arcatek *::after { box-sizing: border-box; }
+#view-arcatek button, #view-arcatek input, #view-arcatek select { font: inherit; color: inherit; }
+#view-arcatek :focus-visible { outline: 2px solid var(--arc-cyan); outline-offset: 2px; border-radius: 4px; }
+#view-arcatek .arc-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ── Hero ── */
+#view-arcatek .arc-hero { background: radial-gradient(120% 140% at 100% 0%, #173F80 0%, var(--arc-navy) 42%, var(--arc-ink) 100%); color: #fff; padding: 20px 36px 22px; }
+#view-arcatek .arc-hero-top { display: flex; align-items: center; justify-content: space-between; gap: 10px 20px; flex-wrap: wrap; }
+#view-arcatek .arc-brand { display: flex; align-items: center; gap: 14px; }
+#view-arcatek .arc-logo { display: block; width: 120px; aspect-ratio: 790 / 174; background: var(--d2-logo-dark) no-repeat left center / contain; }
+#view-arcatek .arc-brand-os { font-size: 9.5px; font-weight: 700; letter-spacing: 2.2px; text-transform: uppercase; color: rgba(255,255,255,0.55); padding-left: 14px; border-left: 1px solid rgba(255,255,255,0.18); line-height: 1.5; }
+#view-arcatek .arc-tag { font-size: 9.5px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--arc-cyan); border: 1px solid rgba(0,180,216,0.45); border-radius: 999px; padding: 4px 10px; }
+#view-arcatek .arc-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--arc-cyan); margin-top: 20px; }
+#view-arcatek .arc-hero h1 { font-size: 28px; line-height: 1.15; font-weight: 300; letter-spacing: -0.4px; margin: 6px 0 6px; color: #fff; }
+#view-arcatek .arc-hero h1 b { font-weight: 700; }
+#view-arcatek .arc-hero-sub { font-size: 12px; line-height: 1.6; color: rgba(255,255,255,0.65); max-width: 760px; margin: 0; }
+
+/* ── Body / cards ── */
+#view-arcatek .arc-body { padding: 18px 36px 36px; display: grid; gap: 16px; }
+#view-arcatek .arc-card { background: var(--arc-surface); border: 1px solid var(--arc-line); border-radius: var(--arc-radius); padding: 16px 18px; min-width: 0; }
+#view-arcatek .arc-card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 6px 14px; flex-wrap: wrap; margin-bottom: 12px; }
+#view-arcatek .arc-step { font-size: 9.5px; font-weight: 800; letter-spacing: 1.6px; text-transform: uppercase; color: var(--arc-cyan-ink); }
+#view-arcatek .arc-card h2 { font-size: 15px; font-weight: 700; color: var(--arc-navy); margin: 3px 0 0; }
+#view-arcatek .arc-note { font-size: 10.5px; line-height: 1.55; color: var(--arc-muted); }
+#view-arcatek .arc-note b { color: var(--arc-text); }
+
+/* ── KPI strip ── */
+#view-arcatek .arc-kpis { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+#view-arcatek .arc-kpi { display: block; width: 100%; text-align: left; background: var(--arc-bg); border: 1px solid var(--arc-line); border-radius: 8px; padding: 10px 12px; min-width: 0; }
+#view-arcatek button.arc-kpi { cursor: pointer; }
+#view-arcatek button.arc-kpi:hover { border-color: var(--arc-line-2); background: #fff; }
+#view-arcatek button.arc-kpi[aria-pressed="true"] { border-color: var(--arc-cyan-ink); background: var(--arc-cyan-soft); }
+#view-arcatek .arc-kpi-l { display: block; font-size: 9.5px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--arc-muted); line-height: 1.35; }
+#view-arcatek .arc-kpi-v { display: block; font-size: 26px; font-weight: 300; line-height: 1.1; margin-top: 4px; color: var(--arc-navy); }
+#view-arcatek .arc-kpi-v.is-status { font-size: 12px; font-weight: 700; margin-top: 8px; line-height: 1.3; }
+#view-arcatek .arc-kpi-p { display: block; font-size: 10.5px; color: var(--arc-muted); margin-top: 3px; line-height: 1.4; }
+#view-arcatek .arc-kpi-wide { grid-column: span 2; }
+
+/* ── Search (combobox) ── */
+#view-arcatek .arc-search-wrap { position: relative; }
+#view-arcatek .arc-search { display: flex; align-items: center; gap: 10px; border: 2px solid var(--arc-navy); border-radius: 9px; background: #fff; padding: 0 12px; }
+#view-arcatek .arc-search-ico { font-size: 17px; color: var(--arc-navy); }
+#view-arcatek .arc-search input { flex: 1; min-width: 0; border: 0; outline: 0; padding: 12px 0; font-size: 14px; background: transparent; }
+#view-arcatek .arc-search:focus-within { box-shadow: 0 0 0 3px rgba(0,180,216,0.28); }
+#view-arcatek .arc-search-clear { border: 0; background: var(--arc-bg); border-radius: 6px; padding: 4px 9px; font-size: 11px; font-weight: 700; cursor: pointer; color: var(--arc-muted); }
+#view-arcatek .arc-listbox { position: absolute; left: 0; right: 0; top: calc(100% + 4px); z-index: 40; background: #fff; border: 1px solid var(--arc-line-2); border-radius: 9px; box-shadow: 0 10px 28px rgba(13,43,94,0.16); max-height: 340px; overflow-y: auto; margin: 0; padding: 4px; list-style: none; }
+#view-arcatek .arc-opt { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 8px 10px; border-radius: 6px; cursor: pointer; font-size: 12.5px; }
+#view-arcatek .arc-opt[aria-selected="true"], #view-arcatek .arc-opt:hover { background: var(--arc-cyan-soft); }
+#view-arcatek .arc-opt-name { font-weight: 700; color: var(--arc-text); min-width: 0; overflow-wrap: anywhere; }
+#view-arcatek .arc-opt-alias { display: block; font-size: 10.5px; font-weight: 400; color: var(--arc-muted); }
+#view-arcatek .arc-opt-empty { padding: 10px; font-size: 12px; color: var(--arc-muted); }
+
+/* ── Filters ── */
+#view-arcatek .arc-filters { display: flex; align-items: center; gap: 8px 12px; flex-wrap: wrap; }
+#view-arcatek .arc-seg { display: inline-flex; flex-wrap: wrap; background: var(--arc-bg); border: 1px solid var(--arc-line); border-radius: 7px; padding: 2px; gap: 2px; }
+#view-arcatek .arc-seg button { border: 0; background: none; border-radius: 5px; padding: 5px 10px; font-size: 11px; font-weight: 600; color: var(--arc-muted); cursor: pointer; white-space: nowrap; }
+#view-arcatek .arc-seg button[aria-pressed="true"] { background: #fff; color: var(--arc-navy); box-shadow: 0 1px 2px rgba(13,43,94,0.14); }
+#view-arcatek .arc-sel { display: inline-flex; align-items: center; gap: 6px; font-size: 10px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--arc-faint); }
+#view-arcatek .arc-sel select { font-size: 11.5px; font-weight: 600; text-transform: none; letter-spacing: 0; color: var(--arc-text); border: 1px solid var(--arc-line-2); border-radius: 6px; padding: 5px 8px; background: #fff; max-width: 220px; }
+#view-arcatek .arc-sel select:disabled { color: var(--arc-faint); background: var(--arc-bg); }
+#view-arcatek .arc-count { font-size: 11.5px; color: var(--arc-muted); margin-left: auto; white-space: nowrap; }
+#view-arcatek .arc-count b { color: var(--arc-text); }
+
+/* ── Portfolio table ── */
+#view-arcatek .arc-table-wrap { margin-top: 12px; border: 1px solid var(--arc-line); border-radius: 8px; overflow: hidden; }
+#view-arcatek table.arc-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+#view-arcatek .arc-table th { text-align: left; font-size: 9.5px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--arc-muted); background: var(--arc-bg); padding: 8px 10px; border-bottom: 1px solid var(--arc-line); }
+#view-arcatek .arc-table td { padding: 8px 10px; border-bottom: 1px solid var(--arc-line); vertical-align: middle; }
+#view-arcatek .arc-table tr:last-child td { border-bottom: 0; }
+#view-arcatek .arc-table tr.is-sel td { background: var(--arc-cyan-soft); }
+#view-arcatek .arc-table tbody tr:hover td { background: #F7F9FC; }
+#view-arcatek .arc-table tbody tr.is-sel:hover td { background: var(--arc-cyan-soft); }
+#view-arcatek .arc-name-btn { border: 0; background: none; padding: 0; text-align: left; font-weight: 700; color: var(--arc-navy); cursor: pointer; overflow-wrap: anywhere; }
+#view-arcatek .arc-name-btn:hover { text-decoration: underline; }
+#view-arcatek .arc-wv { font-weight: 700; }
+#view-arcatek .arc-wp { display: block; font-size: 10px; color: var(--arc-muted); }
+#view-arcatek .arc-empty-row { padding: 16px; text-align: center; color: var(--arc-muted); font-size: 12px; }
+
+/* ── Badges (icon + text, never color alone) ── */
+#view-arcatek .arc-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 10.5px; font-weight: 700; border-radius: 999px; padding: 2px 9px; border: 1px solid transparent; white-space: nowrap; }
+#view-arcatek .arc-badge.ok { background: var(--arc-ok-bg); color: var(--arc-ok-ink); border-color: #A9D8B6; }
+#view-arcatek .arc-badge.nv { background: var(--arc-nv-bg); color: var(--arc-nv-ink); border-color: var(--arc-nv-line); }
+#view-arcatek .arc-badge.rc { background: #F1ECFB; color: #5B3A9B; border-color: #CDBDEB; }
+#view-arcatek .arc-badge.pd { background: var(--arc-bg); color: var(--arc-muted); border-color: var(--arc-line-2); }
+#view-arcatek .arc-badge.info { background: var(--arc-cyan-soft); color: var(--arc-cyan-ink); border-color: rgba(0,122,147,0.3); }
+#view-arcatek .arc-flagcount { display: inline-flex; align-items: center; gap: 4px; font-size: 10.5px; font-weight: 800; color: var(--arc-flag-ink); background: var(--arc-flag-bg); border: 1px solid var(--arc-flag-line); border-radius: 999px; padding: 2px 8px; white-space: nowrap; }
+#view-arcatek .arc-none { font-size: 10.5px; color: var(--arc-faint); }
+
+/* ── Missing-information status ── */
+#view-arcatek .arc-st { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 700; border-radius: 5px; padding: 2px 8px; border: 1px dashed var(--arc-line-2); color: var(--arc-muted); background: var(--arc-bg); }
+#view-arcatek .arc-st.no { border-color: var(--arc-nv-line); color: var(--arc-nv-ink); background: var(--arc-nv-bg); }
+#view-arcatek .arc-st.na { border-style: solid; }
+
+/* ── Review flag ── */
+#view-arcatek .arc-flag { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; font-weight: 800; color: var(--arc-flag-ink); background: var(--arc-flag-bg); border: 1px solid var(--arc-flag-line); border-radius: 6px; padding: 3px 9px; cursor: pointer; }
+#view-arcatek .arc-flag:hover { background: #FBDCD8; }
+#view-arcatek .arc-flag-body { margin-top: 6px; font-size: 11px; line-height: 1.5; color: var(--arc-text); background: #FFF8F7; border: 1px solid var(--arc-flag-line); border-left: 3px solid var(--arc-flag-ink); border-radius: 6px; padding: 8px 10px; }
+#view-arcatek .arc-flag-body .src { display: block; margin-top: 4px; font-size: 10px; color: var(--arc-muted); overflow-wrap: anywhere; }
+#view-arcatek .arc-flag-body[hidden] { display: none; }
+
+/* ── Account detail ── */
+#view-arcatek .arc-detail-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px 16px; flex-wrap: wrap; padding-bottom: 12px; border-bottom: 1px solid var(--arc-line); margin-bottom: 12px; }
+#view-arcatek .arc-detail-head h3 { font-size: 18px; font-weight: 700; color: var(--arc-navy); margin: 2px 0 4px; overflow-wrap: anywhere; }
+#view-arcatek .arc-detail-meta { font-size: 11px; color: var(--arc-muted); line-height: 1.6; }
+#view-arcatek .arc-detail-badges { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
+#view-arcatek .arc-open { background: var(--arc-navy); color: #fff; border: 0; border-radius: 6px; padding: 8px 14px; font-size: 11.5px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+#view-arcatek .arc-open:hover { background: #16397A; }
+#view-arcatek .arc-acct-flags { display: grid; gap: 8px; margin-bottom: 12px; }
+#view-arcatek .arc-groups { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; }
+#view-arcatek .arc-group { border: 1px solid var(--arc-line); border-radius: 8px; padding: 10px 12px; min-width: 0; }
+#view-arcatek .arc-group-t { font-size: 9.5px; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; color: var(--arc-cyan-ink); margin-bottom: 4px; }
+#view-arcatek .arc-field { padding: 7px 0; border-top: 1px dashed var(--arc-line); }
+#view-arcatek .arc-field:first-of-type { border-top: 0; }
+#view-arcatek .arc-field-l { display: block; font-size: 10.5px; font-weight: 700; color: var(--arc-muted); margin-bottom: 3px; }
+#view-arcatek .arc-field-v { font-size: 12.5px; font-weight: 700; color: var(--arc-text); overflow-wrap: anywhere; }
+#view-arcatek .arc-field-v .sub { display: block; font-size: 10.5px; font-weight: 400; color: var(--arc-muted); margin-top: 2px; }
+#view-arcatek .arc-field .arc-flag { margin-top: 6px; }
+#view-arcatek .arc-support { margin-top: 14px; border: 1px solid var(--arc-line); border-radius: 8px; background: var(--arc-bg); padding: 12px 14px; }
+#view-arcatek .arc-support h4 { font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--arc-navy); margin: 0 0 2px; }
+#view-arcatek .arc-support-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 8px; margin-top: 10px; }
+#view-arcatek .arc-sup { background: #fff; border: 1px solid var(--arc-line); border-radius: 7px; padding: 9px 11px; min-width: 0; }
+#view-arcatek .arc-sup-l { display: block; font-size: 10px; font-weight: 800; letter-spacing: .6px; text-transform: uppercase; color: var(--arc-muted); }
+#view-arcatek .arc-sup-v { display: block; font-size: 15px; font-weight: 700; color: var(--arc-navy); margin-top: 3px; overflow-wrap: anywhere; }
+#view-arcatek .arc-sup-p { display: block; font-size: 10.5px; color: var(--arc-muted); margin-top: 2px; line-height: 1.45; overflow-wrap: anywhere; }
+#view-arcatek table.arc-mini { width: 100%; border-collapse: collapse; font-size: 11px; margin-top: 6px; }
+#view-arcatek .arc-mini th, #view-arcatek .arc-mini td { text-align: left; padding: 4px 6px; border-bottom: 1px solid var(--arc-line); vertical-align: top; }
+#view-arcatek .arc-mini th { font-size: 9.5px; font-weight: 800; letter-spacing: .6px; text-transform: uppercase; color: var(--arc-muted); }
+#view-arcatek .arc-placeholder { font-size: 12px; color: var(--arc-muted); padding: 18px 4px; text-align: center; }
+
+/* ── Smaller screens ── */
+@media (max-width: 900px) {
+  #view-arcatek .arc-hero { padding: 18px 18px 18px; }
+  #view-arcatek .arc-body { padding: 14px 16px 28px; }
+  #view-arcatek .arc-kpi-wide { grid-column: auto; }
+  #view-arcatek .arc-count { margin-left: 0; }
+}
+@media (max-width: 640px) {
+  #view-arcatek .arc-hero h1 { font-size: 22px; }
+  #view-arcatek .arc-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #view-arcatek .arc-kpi-v { font-size: 22px; }
+  #view-arcatek .arc-table thead { display: none; }
+  #view-arcatek .arc-table, #view-arcatek .arc-table tbody, #view-arcatek .arc-table tr, #view-arcatek .arc-table td { display: block; width: 100%; }
+  #view-arcatek .arc-table tr { border-bottom: 1px solid var(--arc-line); padding: 6px 0; }
+  #view-arcatek .arc-table td { border: 0; padding: 3px 12px; }
+  #view-arcatek .arc-table td[data-l]::before { content: attr(data-l); display: block; font-size: 9px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; color: var(--arc-faint); }
+  #view-arcatek .arc-groups { grid-template-columns: minmax(0, 1fr); }
+  #view-arcatek .arc-badge { white-space: normal; }
+  #view-arcatek .arc-sel select { max-width: 100%; }
+}
+</style>
 <script>
 /* AIOS · Sidebar state — applied before first paint so a collapsed rail never flashes open. */
 (function () {
@@ -32669,7 +32852,7 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
   <div class="sidebar-logo">
     <div class="logo-mark" role="img" aria-label="Akzent"></div>
     <div class="logo-sub">Intelligence OS</div>
-    <div class="aios-build" id="aios-build" title="Build 170 · last updated 2026-10-06 13:30 (Mexico City)"><b>v2.170</b> · Updated 06 Oct 2026, 13:30</div>
+    <div class="aios-build" id="aios-build" title="Build 171 · last updated 2026-10-06 14:10 (Mexico City)"><b>v2.171</b> · Updated 06 Oct 2026, 14:10</div>
     <div class="aios-logo-glyph" aria-hidden="true"></div>
     <button type="button" id="aios-sb-toggle" class="aios-sb-toggle" onclick="aiosToggleSidebar()" aria-label="Collapse sidebar" aria-controls="aios-sidebar" aria-expanded="true" title="Collapse sidebar">
       <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false"><path d="M10 3.5 5.5 8 10 12.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -32689,6 +32872,10 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
     </div>
     <div class="nav-item" onclick="showView('view-dashboard2', this)">
       <span>◇</span> <span style="flex:1;">Dashboard 2.0</span>
+      <span class="d2-nav-new">NEW</span>
+    </div>
+    <div class="nav-item" onclick="showView('view-arcatek', this)">
+      <span>▣</span> <span style="flex:1;">Arcatek Dashboard</span>
       <span class="d2-nav-new">NEW</span>
     </div>
     <div class="nav-item" onclick="showView('view-network', this)">
@@ -36499,6 +36686,74 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
   </footer>
 
   <div class="d2-tip" id="d2-tip" role="tooltip" aria-hidden="true"></div>
+</div>
+
+<!-- ══ ARCATEK DASHBOARD · CURRENT-CLIENT PORTFOLIO (rendered from ARCATEK_REGISTRY; no account facts in this markup) ══ -->
+<div id="view-arcatek" class="view" aria-labelledby="arc-title">
+  <header class="arc-hero">
+    <div class="arc-hero-top">
+      <div class="arc-brand">
+        <span class="arc-logo" role="img" aria-label="Akzent"></span>
+        <span class="arc-brand-os">Intelligence OS<br>Arcatek Dashboard</span>
+      </div>
+      <span class="arc-tag">Arcatek · Current clients</span>
+    </div>
+    <div class="arc-eyebrow">Customs agency portfolio</div>
+    <h1 id="arc-title"><b>Arcatek</b> Dashboard</h1>
+    <p class="arc-hero-sub" id="arc-hero-sub">Arcatek current-client portfolio. Every figure is read from the individual AIOS views in this file.</p>
+  </header>
+
+  <div class="arc-body">
+    <section class="arc-card" aria-labelledby="arc-ov-h">
+      <div class="arc-card-head">
+        <div><div class="arc-step">01 · Executive overview</div><h2 id="arc-ov-h">Portfolio at a glance</h2></div>
+        <span class="arc-note" id="arc-ov-note"></span>
+      </div>
+      <div class="arc-kpis" id="arc-kpis"></div>
+    </section>
+
+    <section class="arc-card" aria-labelledby="arc-search-h">
+      <div class="arc-card-head">
+        <div><div class="arc-step">02 · Find an account</div><h2 id="arc-search-h">Search by client or legal entity</h2></div>
+      </div>
+      <div class="arc-search-wrap">
+        <div class="arc-search">
+          <span class="arc-search-ico" aria-hidden="true">⌕</span>
+          <label class="arc-sr" for="arc-q">Search Arcatek clients by name or legal entity</label>
+          <input id="arc-q" type="text" autocomplete="off" spellcheck="false" placeholder="Type a client name or legal entity…"
+                 role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="arc-listbox">
+          <button type="button" class="arc-search-clear" id="arc-q-clear" hidden>Clear</button>
+        </div>
+        <ul class="arc-listbox" id="arc-listbox" role="listbox" aria-label="Matching Arcatek clients" hidden></ul>
+      </div>
+      <p class="arc-note" id="arc-search-note" style="margin:8px 0 0;"></p>
+    </section>
+
+    <section class="arc-card" aria-labelledby="arc-list-h">
+      <div class="arc-card-head">
+        <div><div class="arc-step">03 · Portfolio</div><h2 id="arc-list-h">Arcatek clients</h2></div>
+      </div>
+      <div class="arc-filters" id="arc-filters">
+        <div class="arc-seg" role="group" aria-label="Portfolio filter" id="arc-seg"></div>
+        <label class="arc-sel">Account status <select id="arc-f-status"></select></label>
+        <label class="arc-sel">KAM <select id="arc-f-kam"></select></label>
+        <span class="arc-count" id="arc-count" aria-live="polite"></span>
+      </div>
+      <div class="arc-table-wrap">
+        <table class="arc-table">
+          <thead><tr><th scope="col">Legal entity</th><th scope="col">AIOS</th><th scope="col">Arcatek relationship</th><th scope="col">Share of Wallet</th><th scope="col">Review</th></tr></thead>
+          <tbody id="arc-rows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="arc-card" id="arc-detail" aria-labelledby="arc-detail-h" tabindex="-1">
+      <div class="arc-card-head">
+        <div><div class="arc-step">04 · Account detail</div><h2 id="arc-detail-h">Account detail</h2></div>
+      </div>
+      <div id="arc-detail-body"><p class="arc-placeholder">Select an account from the search or the portfolio list.</p></div>
+    </section>
+  </div>
 </div>
 
 <!-- ══ LIEBHERR VIEW — AIOS CLIENT · 8-chapter seller report (Executive · Network · Core Routes · Lane Intelligence · Customs · Historical · Commercial · Discovery) ══ -->
@@ -116936,6 +117191,7 @@ const ACCOUNTS = [
 ];
 const MODULES = [
   { id:'view-dashboard2',  name:'Dashboard 2.0',        sub:'Executive Portfolio Intelligence · management view' },
+  { id:'view-arcatek',     name:'Arcatek Dashboard',    sub:'Arcatek current-client portfolio · customs agency' },
   { id:'view-network',     name:'Network Intelligence', sub:'Cross-account analysis · Lane overlap' },
   { id:'view-methodology', name:'Methodology',          sub:'AIOS intelligence workflow'            },
   { id:'view-scoring',     name:'Scoring Model',        sub:'AAA / AA / A classification framework' },
@@ -118403,6 +118659,618 @@ var D2_FACTS = {"view-finezac":{"pj":{"v":14,"p":"PJ Visible Imports — 2026 YT
     new MutationObserver(onShow).observe(root, { attributes: true, attributeFilter: ['class'] });
     if (root.classList.contains('active')) onShow();
   });
+})();
+</script>
+
+<script>
+/* ═══════════════════════════════════════════════════════════════
+   ARCATEK DASHBOARD · CURRENT-CLIENT PORTFOLIO
+   ARCATEK_REGISTRY is the single source for the overview, counts,
+   search, filters, AIOS status, account detail, missing-data statuses
+   and review flags. Nothing below hardcodes a total.
+
+   Values are NOT copied here when D2_FACTS already holds them: the
+   wallet value / period, PJ Visible Shipments, Arcatek Customs and
+   Akzent Logistics status are read live from D2_FACTS[view]. The
+   registry only adds what D2_FACTS lacks, each item verified against
+   the account's own AIOS view text (06-Oct-2026):
+     legal    exact Arcatek legal name (displayed as-is, never normalized)
+     view     AIOS view id · aios: 'processed' | 'pending'
+     wallet   { src:'D2_FACTS.cw', num, den, basis, cutoff }
+              num/den are the wallet's own numerator/denominator as
+              printed in the AIOS; they are checked against the stated
+              % and against D2_FACTS pj at render time (no recalculation
+              is displayed). Or a fully sourced in-registry wallet
+              { src:'registry', type, v, period, num, den, ... }.
+     rel      only when D2_FACTS has no Arcatek Customs status
+     flags    [{ f: field key | 'entity' | 'rel', why, src }]
+     values   future internal data, keyed by field
+              (e.g. kam, ceCur, cePrev, ceYtd, fees, gp, offActive,
+              offOper, status, lastOp, incidents, lastVisit, next):
+              { v, period, src }. Absent = missing-information status.
+     support  optional supporting tiles replacing the D2-derived ones
+   To add an account: append one entry (aios:'pending' and no view when
+   its AIOS is not processed yet). Totals, search and filters follow.
+═══════════════════════════════════════════════════════════════ */
+var ARCATEK_REGISTRY = [
+  { key: 'pipsa', legal: 'CORPORACION PIPSA, S.A. DE C.V.', view: 'view-pipsa', aios: 'processed',
+    wallet: { src: 'D2_FACTS.cw', num: 2516, den: 2770, basis: 'Shipments using Akzent patents 3468 + 1930', cutoff: '2026-07-31' } },
+
+  { key: 'borgwarner', legal: 'BORGWARNER TTS PDS IRAPUATO S DE RL CV', view: 'view-borgwarner', aios: 'processed',
+    wallet: { src: 'D2_FACTS.cw', num: 428, den: 1240, basis: 'Shipments on Arcatek Patent 3468', cutoff: '2026-07-31' },
+    flags: [{ f: 'entity', why: 'The Arcatek legal name includes "TTS". The entity in this AIOS is "Borgwarner Pds Irapuato S De Rl De Cv", with no "TTS". Confirm that both names refer to the same legal entity before relying on its values.',
+              src: 'view-borgwarner · PJ entity in the Core Route tables' }] },
+
+  { key: 'haldex', legal: 'HALDEX PRODUCTS DE MEXICO S.A', view: 'view-haldex', aios: 'processed',
+    wallet: { src: 'D2_FACTS.cw', num: 318, den: 416, basis: 'Shipments on Arcatek-owned Patents 3468 + 1930', cutoff: 'Imports 2026-07-31 · Exports 2026-07-30' } },
+
+  { key: 'kitchen', legal: 'KITCHEN EQUIPMENT DE SAN LUIS', view: 'view-kitchen', aios: 'processed',
+    wallet: { src: 'D2_FACTS.cw', num: 731, den: 1458, basis: 'Shipments on Arcatek Patent 3468', cutoff: '2026-07-31' } },
+
+  { key: 'phinia', legal: 'PHINIA COMPONENTES MEXICO S DE RL DE CV', view: 'view-phinia', aios: 'processed',
+    wallet: { src: 'D2_FACTS.cw', num: 17, den: 107, basis: 'Shipments on Arcatek Patent 3468', cutoff: '2026-07-21' } },
+
+  { key: 'woco-aps', legal: 'WOCO AUTOMOTIVE POLYMER SYSTEMS DE MEXIC', view: 'view-woco-aps', aios: 'processed',
+    wallet: { src: 'D2_FACTS.cw', num: 250, den: 487, basis: 'Shipments on Arcatek Patent 3468', cutoff: '2026-07-31' } },
+
+  { key: 'liebherr', legal: 'LIEBHERR MONTERREY, S DE RL DE CV', view: 'view-liebherr', aios: 'processed',
+    wallet: { src: 'D2_FACTS.cw', num: 70, den: 275, basis: 'Visible customs Shipments handled by Akzent Patent 3468', cutoff: '2026-07-31' } },
+
+  { key: 'enerpres', legal: 'PETROLIFEROS ENERPRES, S.A. DE C.V.', view: 'view-enerpres', aios: 'processed',
+    wallet: { src: 'D2_FACTS.cw', num: 329, den: 386, basis: 'Arcatek-Patent Shipments / supported visible customs Shipments', cutoff: '2026-07-29' } },
+
+  { key: 'lincoln', legal: 'LINCOLN ELECTRIC MAQUINAS S DE RL', view: 'view-lincoln-electric', aios: 'processed',
+    wallet: { src: 'D2_FACTS.cw', num: 426, den: 1114, basis: 'Shipments on Arcatek Patent 3468', cutoff: '2026-07-31' } },
+
+  { key: 'siete-leguas', legal: 'SIETE LEGUAS AUTOMOTIVE, SA DE CV', view: 'view-siete-leguas', aios: 'processed',
+    wallet: { src: 'D2_FACTS.cw', num: 75, den: 330, basis: 'Arcatek-Patent Shipments / supported visible customs Shipments', cutoff: 'Imports 2026-07-30 · Exports 2026-07-31' } },
+
+  { key: 'woco-tech', legal: 'WOCO TECH DE MEXICO, S.A. DE C.V.', view: 'view-woco', aios: 'processed',
+    wallet: { src: 'D2_FACTS.cw', num: 73, den: 1244, basis: 'Shipments on Arcatek Patent 3468', cutoff: '2026-07-31' },
+    flags: [{ f: 'services', why: 'Akzent Logistics is shown as Confirmed Client on the basis of 1 captured Shipment (June 2026). The internal record for that Shipment names WOCO AUTOMOTIVE POLYMER SYSTEMS DE MEXICO SA DE CV, a different legal entity. The AIOS itself states that the PJ and internal legal-entity names differ.',
+              src: 'view-woco · Ch01 Account Governance and captured Shipment record IT06-00434-2026 · D2_FACTS["view-woco"].log / finNote' }] },
+
+  { key: 'cemm', legal: 'CEMM MEX, S.A. DE C.V.', view: 'view-cemm', aios: 'processed',
+    wallet: { src: 'D2_FACTS.cw', num: 307, den: 2664, basis: 'Arcatek-Patent Shipments / supported PJ Shipments', cutoff: '2026-07-31' } },
+
+  { key: 'grupo-essex', legal: 'GRUPO ESSEX SOLUTIONS TORREON, S DE RL', view: 'view-grupo-essex', aios: 'processed',
+    wallet: { src: 'D2_FACTS.cw', num: 8, den: 22, basis: 'Arcatek-patent Shipments / supported PJ Visible Shipments', cutoff: '2026-07-27' },
+    flags: [{ f: 'wallet', why: 'The wallet denominator may not be limited to this legal entity. The Current YTD Import Core Route runs from "Grupo Essex Solutions Torreon S. De R.L. De C.V." to "Grupo Essex De Mexico S De Rl De Cv", which is a separate legal entity. The account header also reads "Relationship Not Fully Validated". Confirm the entity scope of the 22 PJ Shipments.',
+              src: 'view-grupo-essex · Ch01 header and Ch03 Current YTD Import Core Route #1' }] },
+
+  { key: 'doga', legal: 'DOGA MEXICO COMPONENTES, S.A. DE C.V.', view: 'view-doga', aios: 'processed',
+    wallet: { src: 'D2_FACTS.cw', num: 39, den: 79, basis: 'Arcatek Patent Shipments / supported PJ Shipments', cutoff: '2026-07-29' } },
+
+  { key: 'brahm', legal: 'BRAHM PRECISION PRODUCTS CORP. MEXICO SA', view: 'view-brahm', aios: 'processed',
+    rel: { s: 'RC', why: 'The AIOS states Relationship Status CLIENT ("Active Akzent account"), but it contains no Arcatek Customs service status and no Arcatek patent evidence. The Arcatek relationship and the reading of its wallet are pending reconciliation until validation is supplied.',
+           src: 'view-brahm · Ch01 Account Intelligence Snapshot · D2_FACTS["view-brahm"] has no cus / cw' },
+    wallet: { src: 'registry', type: 'Coverage · Akzent Captured vs Panjiva Visible Shipments', v: '1.8%', period: '2026 YTD · cutoff date not stated in the AIOS',
+              num: 4, den: 218, basis: 'Akzent Captured Shipments / Panjiva Visible Shipments', cutoff: null,
+              srcLabel: 'view-brahm · Ch01 "2026 YTD Coverage 1.8%" and Ch09 Coverage / Wallet / Penetration',
+              all: [ { v: '1.8%', p: '2026 YTD', sc: 'Total', n: '4 / 218' },  { v: '3.2%', p: '2026 YTD', sc: 'Imports', n: '4 / 124' },
+                     { v: '0.0%', p: '2026 YTD', sc: 'Exports', n: '0 / 94' }, { v: '2.4%', p: '2025', sc: 'Total', n: '11 / 462' },
+                     { v: '3.8%', p: '2025', sc: 'Imports', n: '9 / 235' },   { v: '0.9%', p: '2025', sc: 'Exports', n: '2 / 227' } ] },
+    support: [
+      { l: 'Panjiva Visible Shipments · 2026 YTD', v: '218', p: '124 Imports · 94 Exports · cutoff date not stated', src: 'view-brahm · Ch03' },
+      { l: 'Panjiva Visible Shipments · 2025 full year', v: '462', p: '235 Imports · 227 Exports · previous full calendar year, not compared with YTD', src: 'view-brahm · Ch03' },
+      { l: 'Akzent Captured Shipments · 2026 YTD', v: '4', p: '4 Imports · 0 Exports · Akzent (logistics) capture, not customs entries', src: 'view-brahm · Ch09' },
+      { l: 'Akzent Captured Shipments · 2025 full year', v: '11', p: '9 Imports · 2 Exports', src: 'view-brahm · Ch09' }
+    ],
+    flags: [{ f: 'wallet', why: 'The only wallet in this AIOS is "Coverage": Akzent Captured Shipments vs Panjiva Visible Shipments (4 / 218 = 1.8%, 2026 YTD). It measures Akzent (logistics) capture. It is not a Customs Shared Wallet and is shown under its own name. The 2026 YTD cutoff date is not stated.',
+              src: 'view-brahm · Ch01 Snapshot and Ch09 Coverage / Wallet / Penetration' }] },
+
+  { key: 'busman', legal: 'BUSMAN PI, S.A. DE C.V.', view: 'view-busman', aios: 'processed',
+    wallet: { src: 'D2_FACTS.cw', num: 4, den: 16, basis: 'Arcatek Patent Shipments / supported Shipments', cutoff: 'Imports 2026-06-20 · Exports 2026-07-13' },
+    flags: [{ f: 'wallet', why: 'The 16-Shipment denominator mixes two cutoffs (Imports through Jun 20, Exports through Jul 13, 2026), so the period is not uniform. The base is also small.',
+              src: 'view-busman · D2_FACTS["view-busman"].pj.p' }] },
+
+  { key: 'mekra', legal: 'MEKRA LANG MEXICO S DE RL DE CV', view: 'view-mekra', aios: 'processed',
+    wallet: { src: 'D2_FACTS.cw', num: 166, den: 1263, basis: 'Arcatek Patent Shipments / supported Shipments', cutoff: '2026-07-31' } }
+];
+
+(function () {
+  'use strict';
+
+  var VIEW_ID = 'view-arcatek';
+  var FLAG_TEXT = '⚑ Double-click and review';
+  var ST = {
+    PR: { label: 'Pending receipt',  cls: 'pr', ico: '…', desc: 'Expected from internal operational, financial or commercial data; not present in this file.' },
+    NO: { label: 'Not yet obtained', cls: 'no', ico: '○', desc: 'The metric or its required source has not been obtained or defined yet.' },
+    NA: { label: 'Not applicable',   cls: 'na', ico: '—', desc: 'The source explicitly establishes that this field does not apply.' }
+  };
+  var REL = {
+    CC:  { label: 'Confirmed',              cls: 'ok', ico: '✓' },
+    NV:  { label: 'Not Validated',          cls: 'nv', ico: '◐' },
+    CNC: { label: 'Confirmed Not Captured', cls: 'pd', ico: '○' },
+    RC:  { label: 'Pending reconciliation', cls: 'rc', ico: '⟳' }
+  };
+  var SVC = { CC: 'Confirmed Client', CNC: 'Confirmed Not Captured', NV: 'Not Validated' };
+  var FIELDS = [
+    { g: 'Identification', k: 'kam',       l: 'Salesperson / KAM',                    d: 'PR' },
+    { g: 'Activity',       k: 'ceCur',     l: 'Current-month customs entries',        d: 'PR' },
+    { g: 'Activity',       k: 'cePrev',    l: 'Previous-month customs entries',       d: 'PR' },
+    { g: 'Activity',       k: 'ceVar',     l: 'Monthly variation %',                  d: 'NO' },
+    { g: 'Activity',       k: 'ceYtd',     l: 'Year-to-date customs entries',         d: 'PR' },
+    { g: 'Economic',       k: 'fees',      l: 'Current-month fees',                   d: 'PR' },
+    { g: 'Economic',       k: 'gp',        l: 'Current-month gross profit',           d: 'PR' },
+    { g: 'Coverage',       k: 'offActive', l: 'Active customs offices',               d: 'PR' },
+    { g: 'Coverage',       k: 'offOper',   l: 'Customs offices currently in operation', d: 'PR' },
+    { g: 'Potential',      k: 'wallet',    l: 'Share of Wallet',                      d: 'NO' },
+    { g: 'Cross-selling',  k: 'services',  l: 'Current Akzent Group services',        d: 'NO' },
+    { g: 'Control',        k: 'status',    l: 'Account status',                       d: 'PR' },
+    { g: 'Control',        k: 'lastOp',    l: 'Last operation',                       d: 'PR' },
+    { g: 'Control',        k: 'incidents', l: 'Relevant incidents',                   d: 'PR' },
+    { g: 'Action',         k: 'lastVisit', l: 'Last visit',                           d: 'PR' },
+    { g: 'Action',         k: 'next',      l: 'Next action / follow-up date',         d: 'PR' }
+  ];
+  var FILTERS = [
+    { k: 'all',       l: 'All clients' },
+    { k: 'processed', l: 'AIOS processed' },
+    { k: 'pending',   l: 'AIOS pending' },
+    { k: 'confirmed', l: 'Confirmed relationship' },
+    { k: 'pendval',   l: 'Pending validation' },
+    { k: 'review',    l: 'Requires review' }
+  ];
+  var SUFFIX = { s: 1, a: 1, sa: 1, de: 1, cv: 1, c: 1, v: 1, rl: 1, r: 1, l: 1, srl: 1, sapi: 1, p: 1, i: 1 };
+
+  var state = { filter: 'all', status: '', kam: '', sel: null, opts: [], active: -1 };
+  var ROWS = [];
+
+  /* ── helpers ── */
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+  function decode(s) { var t = document.createElement('textarea'); t.innerHTML = String(s); return t.value; }
+  function facts(e) { return (e.view && typeof D2_FACTS !== 'undefined' && D2_FACTS[e.view]) || null; }
+  function account(e) {
+    if (!e.view || typeof ACCOUNTS === 'undefined') return null;
+    for (var i = 0; i < ACCOUNTS.length; i++) if (ACCOUNTS[i].id === e.view) return ACCOUNTS[i];
+    return null;
+  }
+  function fmt(n) { return Number(n).toLocaleString('en-US'); }
+
+  /* Search key: accents, case, punctuation and repeated spaces ignored;
+     trailing legal-form tokens (S.A., DE C.V., S DE RL, SAPI…) dropped.
+     The key is never displayed and never merges entries. */
+  function norm(s, keepSuffix) {
+    var t = String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
+      .replace(/[.,']/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
+    var tok = t ? t.split(' ') : [];
+    if (!keepSuffix) while (tok.length > 1 && SUFFIX[tok[tok.length - 1]]) tok.pop();
+    return tok.join(' ');
+  }
+
+  /* ── resolution (registry + D2_FACTS) ── */
+  function relOf(e) {
+    if (e.rel) return e.rel;
+    var f = facts(e), c = f && f.cus;
+    if (!c) return { s: 'RC', why: 'No Arcatek Customs service status was found for this account.', src: (e.view || 'registry') + ' · D2_FACTS cus' };
+    return { s: c.s, q: c.q, src: e.view + ' · D2_FACTS["' + e.view + '"].cus' };
+  }
+  function walletOf(e) {
+    var w = e.wallet;
+    if (!w) return null;
+    if (w.src === 'D2_FACTS.cw') {
+      var f = facts(e), cw = f && f.cw;
+      if (!cw) return { missing: true, src: e.view + ' · D2_FACTS cw' };
+      return { type: 'Customs Shared Wallet', v: cw.v, period: cw.p, q: cw.q, num: w.num, den: w.den, basis: w.basis,
+               cutoff: w.cutoff, denPeriod: f.pj && f.pj.p, pjv: f.pj && f.pj.v, all: cw.all || [],
+               srcLabel: e.view + ' · D2_FACTS["' + e.view + '"].cw' };
+    }
+    return { type: w.type, v: w.v, period: w.period, num: w.num, den: w.den, basis: w.basis, cutoff: w.cutoff,
+             all: w.all || [], srcLabel: w.srcLabel, registry: true };
+  }
+  /* Reasonableness: the stated % must equal num / den at the precision printed. */
+  function walletReproduces(w) {
+    var m = /^(-?\d+(?:\.(\d+))?)%$/.exec(String(w.v).trim());
+    if (!m || !w.den) return false;
+    var dp = m[2] ? m[2].length : 0;
+    return (w.num / w.den * 100).toFixed(dp) === Number(m[1]).toFixed(dp);
+  }
+  function flagsOf(e) {
+    var out = (e.flags || []).slice();
+    var r = relOf(e), w = walletOf(e);
+    if (e.rel && e.rel.why) out.unshift({ f: 'rel', why: e.rel.why, src: e.rel.src });
+    if (e.aios === 'processed' && !viewExists(e)) out.push({ f: 'entity', why: 'The AIOS is marked processed, but its view (' + e.view + ') was not found in this file.', src: 'ARCATEK_REGISTRY · ' + e.key });
+    if (w && w.missing) out.push({ f: 'wallet', why: 'The registry expects a Customs Shared Wallet, but D2_FACTS has none for this view.', src: w.src });
+    if (w && !w.missing) {
+      if (r.s === 'NV') out.push({ f: 'wallet', why: 'A ' + w.type + ' is calculated (' + w.v + '), but this AIOS classifies the Arcatek Customs relationship as Not Validated. A calculated wallet does not confirm the relationship.',
+                                   src: r.src + (r.q ? ' · "' + r.q + '"' : '') });
+      if (!walletReproduces(w)) out.push({ f: 'wallet', why: 'Reasonableness check failed: ' + fmt(w.num) + ' / ' + fmt(w.den) + ' does not reproduce the stated ' + w.v + '.', src: w.srcLabel });
+      if (w.pjv != null && w.pjv !== w.den) out.push({ f: 'wallet', why: 'Source conflict: the wallet denominator (' + fmt(w.den) + ') differs from the headline PJ Visible Shipments (' + fmt(w.pjv) + ').', src: w.srcLabel + ' vs D2_FACTS pj' });
+    }
+    return out;
+  }
+  function viewExists(e) { var el = e.view && document.getElementById(e.view); return !!(el && el.classList.contains('view')); }
+  function val(e, k) { return e.values && e.values[k] && e.values[k].v != null && e.values[k].v !== '' ? e.values[k] : null; }
+
+  function buildRows() {
+    ROWS = ARCATEK_REGISTRY.map(function (e) {
+      var acc = account(e);
+      var aliases = [];
+      if (acc) aliases.push({ a: decode(acc.name), why: 'AIOS account name of ' + e.view });
+      (e.aliases || []).forEach(function (x) { aliases.push(x); });
+      var row = { e: e, rel: relOf(e), wallet: walletOf(e), flags: flagsOf(e), acc: acc, aliases: aliases,
+                  nkey: norm(e.legal), nfull: norm(e.legal, true) };
+      row.akeys = aliases.map(function (x) { return norm(x.a); });
+      return row;
+    });
+  }
+
+  /* ── filters ── */
+  function inFilter(r, k) {
+    switch (k) {
+      case 'processed': return r.e.aios === 'processed';
+      case 'pending':   return r.e.aios !== 'processed';
+      case 'confirmed': return r.rel.s === 'CC';
+      case 'pendval':   return r.rel.s === 'NV' || r.rel.s === 'RC';
+      case 'review':    return r.flags.length > 0;
+      default:          return true;
+    }
+  }
+  function visibleRows() {
+    return ROWS.filter(function (r) {
+      if (!inFilter(r, state.filter)) return false;
+      if (state.status && (!val(r.e, 'status') || String(val(r.e, 'status').v) !== state.status)) return false;
+      if (state.kam && (!val(r.e, 'kam') || String(val(r.e, 'kam').v) !== state.kam)) return false;
+      return true;
+    });
+  }
+  function count(k) { return ROWS.filter(function (r) { return inFilter(r, k); }).length; }
+
+  /* ── portfolio wallet: only if every wallet is the same metric with the same cutoff ── */
+  function portfolioWallet() {
+    var ws = ROWS.map(function (r) { return r.wallet; });
+    var types = {}, cuts = {}, missing = 0;
+    ws.forEach(function (w) {
+      if (!w || w.missing || w.num == null || !w.den) { missing++; return; }
+      types[w.type] = 1; cuts[w.cutoff || 'cutoff not stated'] = 1;
+    });
+    var nt = Object.keys(types), nc = Object.keys(cuts), why = [];
+    if (missing) why.push(missing + ' account' + (missing > 1 ? 's' : '') + ' without a numerator and denominator');
+    if (nt.length > 1) why.push(nt.length + ' different metric types (' + nt.join('; ') + ')');
+    if (nc.length > 1) why.push(nc.length + ' different period cutoffs');
+    if (why.length) return { ok: false, why: why };
+    var n = 0, d = 0;
+    ws.forEach(function (w) { n += w.num; d += w.den; });
+    return { ok: true, v: (n / d * 100).toFixed(1) + '%', n: n, d: d, cut: nc[0] };
+  }
+
+  /* ── render: status / flag atoms ── */
+  function stHtml(code) {
+    var s = ST[code];
+    return '<span class="arc-st ' + s.cls + '" title="' + esc(s.desc) + '"><span aria-hidden="true">' + s.ico + '</span>' + esc(s.label) + '</span>';
+  }
+  var flagSeq = 0;
+  function flagHtml(fl) {
+    var id = 'arc-flag-' + (++flagSeq);
+    return '<div class="arc-flag-wrap"><button type="button" class="arc-flag" aria-expanded="false" aria-controls="' + id + '" data-arc-flag>' + esc(FLAG_TEXT) + '</button>' +
+           '<div class="arc-flag-body" id="' + id + '" hidden>' + esc(fl.why) + '<span class="src">Source: ' + esc(fl.src) + '</span></div></div>';
+  }
+  function relBadge(r, prefix) {
+    var m = REL[r.s] || REL.RC;
+    return '<span class="arc-badge ' + m.cls + '"><span aria-hidden="true">' + m.ico + '</span>' + esc((prefix || '') + m.label) + '</span>';
+  }
+  function aiosBadge(e) {
+    return e.aios === 'processed'
+      ? '<span class="arc-badge info"><span aria-hidden="true">✓</span>AIOS processed</span>'
+      : '<span class="arc-badge pd"><span aria-hidden="true">…</span>AIOS pending</span>';
+  }
+
+  /* ── render: overview ── */
+  function renderKpis() {
+    var total = ROWS.length;
+    var nv = ROWS.filter(function (r) { return r.rel.s === 'NV'; }).length;
+    var rc = ROWS.filter(function (r) { return r.rel.s === 'RC'; }).length;
+    var curAvail = ROWS.filter(function (r) { return val(r.e, 'ceCur'); }).length;
+    var pw = portfolioWallet();
+    var tiles = [
+      { l: 'Current Arcatek clients', v: total, p: 'Legal entities in the registry' },
+      { k: 'processed', l: 'AIOS processed', v: count('processed'), p: 'Resolve to an AIOS view in this file' },
+      { k: 'pending',   l: 'AIOS pending',   v: count('pending'),   p: 'Listed, AIOS not processed yet' },
+      { k: 'confirmed', l: 'Arcatek relationship confirmed', v: count('confirmed'), p: 'Arcatek Customs · Confirmed Client' },
+      { k: 'pendval',   l: 'Pending validation', v: count('pendval'), p: 'Not Validated ' + nv + ' · Reconciliation ' + rc },
+      { k: 'review',    l: 'Accounts requiring review', v: count('review'), p: 'Carry ' + FLAG_TEXT.charAt(0) + ' flag' },
+      { l: 'Current-month activity available', v: curAvail, p: 'Customs entries received' },
+      { l: 'Current-month activity pending', v: total - curAvail, p: 'Customs entries ' + ST.PR.label.toLowerCase() }
+    ];
+    var html = tiles.map(function (t) {
+      var inner = '<span class="arc-kpi-l">' + esc(t.l) + '</span><span class="arc-kpi-v">' + esc(t.v) + '</span><span class="arc-kpi-p">' + esc(t.p) + '</span>';
+      return t.k ? '<button type="button" class="arc-kpi" data-arc-filter="' + t.k + '" aria-pressed="' + (state.filter === t.k) + '">' + inner + '</button>'
+                 : '<div class="arc-kpi">' + inner + '</div>';
+    }).join('');
+    html += '<div class="arc-kpi arc-kpi-wide"><span class="arc-kpi-l">Portfolio Share of Wallet</span>' +
+      (pw.ok ? '<span class="arc-kpi-v">' + esc(pw.v) + '</span><span class="arc-kpi-p">Weighted: ' + fmt(pw.n) + ' / ' + fmt(pw.d) + ' Shipments · cutoff ' + esc(pw.cut) + '</span>'
+             : '<span class="arc-kpi-v is-status">' + stHtml('NO') + '</span><span class="arc-kpi-p">Not comparable: ' + esc(pw.why.join(' · ')) + '. Client percentages are never averaged.</span>') +
+      '</div>';
+    document.getElementById('arc-kpis').innerHTML = html;
+
+    var ads = {}, noAd = 0;
+    ROWS.forEach(function (r) { var f = facts(r.e); if (f && f.ad) ads[f.ad] = 1; else noAd++; });
+    document.getElementById('arc-ov-note').innerHTML = 'AIOS analysis dates: <b>' + esc(Object.keys(ads).sort().join(', ') || 'not stated') + '</b>' +
+      (noAd ? ' · ' + noAd + ' without a stated date' : '');
+  }
+
+  /* ── render: filters + table ── */
+  function renderFilters() {
+    document.getElementById('arc-seg').innerHTML = FILTERS.map(function (f) {
+      return '<button type="button" data-arc-filter="' + f.k + '" aria-pressed="' + (state.filter === f.k) + '">' + esc(f.l) + ' <span aria-hidden="true">·</span> ' + count(f.k) + '</button>';
+    }).join('');
+    fillSelect('arc-f-status', 'status', 'Account status');
+    fillSelect('arc-f-kam', 'kam', 'KAM');
+  }
+  function fillSelect(id, k, label) {
+    var sel = document.getElementById(id), vals = {};
+    ROWS.forEach(function (r) { var v = val(r.e, k); if (v) vals[String(v.v)] = 1; });
+    var keys = Object.keys(vals).sort();
+    if (!keys.length) {
+      sel.innerHTML = '<option value="">' + esc(ST.PR.label) + ' for every account</option>';
+      sel.disabled = true;
+      sel.title = label + ' is not available in this file yet.';
+      return;
+    }
+    sel.disabled = false;
+    sel.innerHTML = '<option value="">All</option>' + keys.map(function (v) {
+      return '<option value="' + esc(v) + '"' + (state[k] === v ? ' selected' : '') + '>' + esc(v) + '</option>';
+    }).join('');
+  }
+  function walletCell(r) {
+    var w = r.wallet;
+    if (!w || w.missing) return stHtml('NO');
+    var short = w.type === 'Customs Shared Wallet' ? 'Customs Shared Wallet' : w.type.split(' · ')[0];
+    return '<span class="arc-wv">' + esc(w.v) + '</span><span class="arc-wp">' + esc(short) + ' · ' + esc(w.period) + '</span>';
+  }
+  function renderTable() {
+    var rows = visibleRows();
+    document.getElementById('arc-count').innerHTML = '<b>' + rows.length + '</b> of ' + ROWS.length + ' clients';
+    var tb = document.getElementById('arc-rows');
+    if (!rows.length) { tb.innerHTML = '<tr><td colspan="5" class="arc-empty-row">No client matches this filter.</td></tr>'; return; }
+    tb.innerHTML = rows.map(function (r) {
+      return '<tr class="' + (state.sel === r.e.key ? 'is-sel' : '') + '">' +
+        '<td data-l="Legal entity"><button type="button" class="arc-name-btn" data-arc-open="' + esc(r.e.key) + '">' + esc(r.e.legal) + '</button></td>' +
+        '<td data-l="AIOS">' + aiosBadge(r.e) + '</td>' +
+        '<td data-l="Arcatek relationship">' + relBadge(r.rel) + '</td>' +
+        '<td data-l="Share of Wallet">' + walletCell(r) + '</td>' +
+        '<td data-l="Review">' + (r.flags.length ? '<span class="arc-flagcount" title="' + r.flags.length + ' review flag(s)">⚑ ' + r.flags.length + '</span>' : '<span class="arc-none">None</span>') + '</td>' +
+      '</tr>';
+    }).join('');
+  }
+
+  /* ── render: account detail ── */
+  function fieldValue(r, fd) {
+    var e = r.e, v = val(e, fd.k);
+    if (fd.k === 'wallet') {
+      var w = r.wallet;
+      if (!w || w.missing) return { st: 'NO' };
+      return { html: esc(w.v) + ' <span class="sub">' + esc(w.type) + ' · ' + esc(w.period) + '<br>' + fmt(w.num) + ' / ' + fmt(w.den) + ' · ' + esc(w.basis) +
+                     (w.denPeriod ? '<br>Denominator period: ' + esc(w.denPeriod) : '') + '<br>Source: ' + esc(w.srcLabel) + '</span>' };
+    }
+    if (fd.k === 'services') {
+      var f = facts(e);
+      var cus = f && f.cus ? SVC[f.cus.s] : (r.rel.s === 'RC' ? REL.RC.label : null);
+      var log = f && f.log ? SVC[f.log.s] + (f.log.b === 'rule' ? ' (AIOS rule: Captured Logistics > 0)' : '') : null;
+      if (!cus && !log) return { st: 'NO' };
+      return { html: 'Arcatek Customs · ' + esc(cus || ST.NO.label) + '<br>Akzent Logistics · ' + esc(log || ST.NO.label) +
+                     '<span class="sub">Source: ' + esc(e.view) + ' · D2_FACTS cus / log</span>' };
+    }
+    if (fd.k === 'ceVar') {
+      var c = val(e, 'ceCur'), p = val(e, 'cePrev');
+      if (c && p && isFinite(c.v) && isFinite(p.v) && Number(p.v) !== 0)
+        return { html: ((c.v - p.v) / p.v * 100).toFixed(1) + '% <span class="sub">(current − previous) ÷ previous month customs entries</span>' };
+      return { st: 'NO' };
+    }
+    if (v) return { html: esc(v.v) + '<span class="sub">' + esc([v.period, v.src && 'Source: ' + v.src].filter(Boolean).join(' · ')) + '</span>' };
+    return { st: fd.d };
+  }
+  function supportTiles(r) {
+    var e = r.e, f = facts(e), w = r.wallet, out = [];
+    if (e.support) return e.support.map(function (t) { return t; });
+    if (f && f.pj) out.push({ l: 'PJ Visible Shipments', v: fmt(f.pj.v), p: f.pj.p + ' · Panjiva visible universe, not customs entries', src: e.view + ' · D2_FACTS pj' });
+    if (w && !w.missing && w.type === 'Customs Shared Wallet')
+      out.push({ l: 'Arcatek Patent Shipments', v: fmt(w.num), p: 'of ' + fmt(w.den) + ' PJ Shipments · ' + w.basis + ' · ' + w.period, src: w.srcLabel });
+    if (f && f.lw) out.push({ l: 'Akzent Logistics Shared Wallet', v: f.lw.v, p: (f.lw.st && f.lw.st !== f.lw.v ? f.lw.st + ' · ' : '') + f.lw.p + ' · Akzent Logistics, not Arcatek', src: e.view + ' · D2_FACTS lw' });
+    out.push({ l: 'AIOS analysis date', v: (f && f.ad) || 'Not stated in D2_FACTS', p: 'Each metric keeps its own cutoff', src: e.view });
+    return out;
+  }
+  function walletTable(w) {
+    if (!w || w.missing || !w.all.length) return '';
+    var isPrev = function (x) { return /2025|FY/i.test(x.p) && !/2026/.test(x.p); };
+    var cur = w.all.filter(function (x) { return !isPrev(x); }), prev = w.all.filter(isPrev);
+    function rows(list) {
+      return list.map(function (x) {
+        return '<tr><td>' + esc(x.sc) + '</td><td>' + esc(x.v) + (x.st ? ' · ' + esc(x.st) : '') + (x.n ? ' <span class="arc-none">(' + esc(x.n) + ')</span>' : '') + '</td><td>' + esc(x.p) + '</td></tr>';
+      }).join('');
+    }
+    return '<div class="arc-sup" style="grid-column:1/-1;"><span class="arc-sup-l">' + esc(w.type) + ' · as reported, by flow</span>' +
+      '<table class="arc-mini"><thead><tr><th>Scope</th><th>Value</th><th>Period as labelled</th></tr></thead><tbody>' +
+      (cur.length ? '<tr><th colspan="3">Current period</th></tr>' + rows(cur) : '') +
+      (prev.length ? '<tr><th colspan="3">Previous year · reference only, not compared with YTD</th></tr>' + rows(prev) : '') +
+      '</tbody></table><span class="arc-sup-p">Source: ' + esc(w.srcLabel) + '</span></div>';
+  }
+  function renderDetail() {
+    var body = document.getElementById('arc-detail-body');
+    var r = null;
+    for (var i = 0; i < ROWS.length; i++) if (ROWS[i].e.key === state.sel) r = ROWS[i];
+    if (!r) { body.innerHTML = '<p class="arc-placeholder">Select an account from the search or the portfolio list.</p>'; return; }
+    var e = r.e, byField = {}, acctFlags = [];
+    r.flags.forEach(function (fl) {
+      if (fl.f === 'entity' || fl.f === 'rel') acctFlags.push(fl);
+      else (byField[fl.f] = byField[fl.f] || []).push(fl);
+    });
+    var groups = [], gmap = {};
+    FIELDS.forEach(function (fd) {
+      if (!gmap[fd.g]) { gmap[fd.g] = []; groups.push(fd.g); }
+      gmap[fd.g].push(fd);
+    });
+    var html = '<div class="arc-detail-head"><div style="min-width:0;">' +
+      '<h3>' + esc(e.legal) + '</h3>' +
+      '<div class="arc-detail-meta">' + (r.acc ? 'AIOS account: ' + esc(decode(r.acc.name)) + ' · ' : '') + (e.view ? esc(e.view) : 'No AIOS view yet') + '</div>' +
+      '<div class="arc-detail-badges">' + aiosBadge(e) + relBadge(r.rel, 'Arcatek relationship · ') + '</div>' +
+      '</div>' +
+      (e.view && viewExists(e) ? '<button type="button" class="arc-open" data-arc-view="' + esc(e.view) + '">Open full AIOS →</button>' : '') +
+      '</div>';
+    if (acctFlags.length) html += '<div class="arc-acct-flags">' + acctFlags.map(flagHtml).join('') + '</div>';
+    html += '<div class="arc-groups">' + groups.map(function (g) {
+      return '<div class="arc-group"><div class="arc-group-t">' + esc(g) + '</div>' + gmap[g].map(function (fd) {
+        var fv = fieldValue(r, fd);
+        return '<div class="arc-field"><span class="arc-field-l">' + esc(fd.l) + '</span><div class="arc-field-v">' +
+          (fv.st ? stHtml(fv.st) : fv.html) + '</div>' + (byField[fd.k] || []).map(flagHtml).join('') + '</div>';
+      }).join('') + '</div>';
+    }).join('') + '</div>';
+    var tiles = supportTiles(r);
+    html += '<div class="arc-support"><h4>Supporting AIOS information</h4>' +
+      '<p class="arc-note" style="margin:0;">Metric names are kept exactly as in the AIOS. PJ Shipments, Arcatek Patent Shipments and Akzent Captured Shipments are <b>not customs entries</b>. Previous full year and current YTD stay separate; YTD is never annualized.</p>' +
+      '<div class="arc-support-grid">' + tiles.map(function (t) {
+        return '<div class="arc-sup"><span class="arc-sup-l">' + esc(t.l) + '</span><span class="arc-sup-v">' + esc(t.v) + '</span><span class="arc-sup-p">' + esc(t.p) + '<br>Source: ' + esc(t.src) + '</span></div>';
+      }).join('') + walletTable(r.wallet) + '</div></div>';
+    body.innerHTML = html;
+  }
+
+  /* ── search (combobox) ── */
+  function tokMatch(qt, keyTokens) {
+    return qt.every(function (q) {
+      return keyTokens.some(function (k) { return k.indexOf(q) === 0 || (k.length >= 4 && q.indexOf(k) === 0); });
+    });
+  }
+  function search(q) {
+    var nq = norm(q), raw = norm(q, true);
+    if (!nq) nq = raw;
+    if (!nq) return ROWS.map(function (r) { return { r: r, rank: 9 }; });
+    var qt = nq.split(' ');
+    var out = [];
+    ROWS.forEach(function (r) {
+      var rank = -1, via = null;
+      if (r.nkey === nq || r.nfull === raw) rank = 0;
+      else if (r.nkey.indexOf(nq) === 0) rank = 1;
+      else if (r.nkey.indexOf(nq) > -1 || tokMatch(qt, r.nkey.split(' '))) rank = 2;
+      else r.akeys.forEach(function (k, i) {
+        if (rank < 0 && (k.indexOf(nq) > -1 || tokMatch(qt, k.split(' ')))) { rank = 3; via = r.aliases[i]; }
+      });
+      if (rank >= 0) out.push({ r: r, rank: rank, via: via });
+    });
+    return out.sort(function (a, b) { return a.rank - b.rank || a.r.e.legal.localeCompare(b.r.e.legal); });
+  }
+  function renderOptions(q) {
+    var lb = document.getElementById('arc-listbox'), inp = document.getElementById('arc-q');
+    state.opts = search(q);
+    state.active = state.opts.length ? 0 : -1;
+    lb.innerHTML = state.opts.length ? state.opts.map(function (o, i) {
+      return '<li class="arc-opt" role="option" id="arc-opt-' + i + '" data-arc-opt="' + i + '" aria-selected="' + (i === state.active) + '">' +
+        '<span class="arc-opt-name">' + esc(o.r.e.legal) + (o.via ? '<span class="arc-opt-alias">Matched alias: ' + esc(o.via.a) + ' (' + esc(o.via.why) + ')</span>' : '') + '</span>' +
+        aiosBadge(o.r.e) + '</li>';
+    }).join('') : '<li class="arc-opt-empty" role="presentation">No current Arcatek client matches “' + esc(q) + '”.</li>';
+    lb.hidden = false;
+    inp.setAttribute('aria-expanded', 'true');
+    syncActive();
+    document.getElementById('arc-search-note').textContent = state.opts.length + ' of ' + ROWS.length + ' clients match' + (q ? '' : ' (all clients, including AIOS pending)');
+  }
+  function syncActive() {
+    var inp = document.getElementById('arc-q');
+    Array.prototype.forEach.call(document.querySelectorAll('#arc-listbox .arc-opt'), function (li, i) {
+      li.setAttribute('aria-selected', String(i === state.active));
+      if (i === state.active) li.scrollIntoView({ block: 'nearest' });
+    });
+    if (state.active >= 0) inp.setAttribute('aria-activedescendant', 'arc-opt-' + state.active);
+    else inp.removeAttribute('aria-activedescendant');
+  }
+  function closeOptions() {
+    document.getElementById('arc-listbox').hidden = true;
+    var inp = document.getElementById('arc-q');
+    inp.setAttribute('aria-expanded', 'false');
+    inp.removeAttribute('aria-activedescendant');
+  }
+  function select(key, focusDetail) {
+    state.sel = key;
+    var r = null;
+    for (var i = 0; i < ROWS.length; i++) if (ROWS[i].e.key === key) r = ROWS[i];
+    if (r) {
+      document.getElementById('arc-q').value = r.e.legal;
+      document.getElementById('arc-q-clear').hidden = false;
+    }
+    closeOptions();
+    renderTable();
+    renderDetail();
+    if (focusDetail) {
+      var d = document.getElementById('arc-detail');
+      d.scrollIntoView({ block: 'start', behavior: 'smooth' });
+      d.focus({ preventScroll: true });
+    }
+  }
+  function setFilter(k) {
+    state.filter = k;
+    renderFilters();
+    renderKpis();
+    renderTable();
+  }
+
+  /* ── wiring ── */
+  function wire() {
+    var root = document.getElementById(VIEW_ID), inp = document.getElementById('arc-q');
+    inp.addEventListener('input', function () {
+      document.getElementById('arc-q-clear').hidden = !inp.value;
+      renderOptions(inp.value);
+    });
+    inp.addEventListener('focus', function () { renderOptions(inp.value === (state.sel && selectedLegal()) ? '' : inp.value); });
+    inp.addEventListener('keydown', function (e) {
+      var open = !document.getElementById('arc-listbox').hidden;
+      if (e.key === 'ArrowDown') { e.preventDefault(); if (!open) renderOptions(inp.value); else if (state.opts.length) { state.active = (state.active + 1) % state.opts.length; syncActive(); } }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); if (open && state.opts.length) { state.active = (state.active - 1 + state.opts.length) % state.opts.length; syncActive(); } }
+      else if (e.key === 'Enter') { if (open && state.active >= 0) { e.preventDefault(); select(state.opts[state.active].r.e.key, true); } }
+      else if (e.key === 'Escape') { if (open) { e.preventDefault(); e.stopPropagation(); closeOptions(); } }
+    });
+    document.getElementById('arc-q-clear').addEventListener('click', function () {
+      inp.value = ''; this.hidden = true; inp.focus(); renderOptions('');
+    });
+    document.addEventListener('mousedown', function (e) {
+      if (!e.target.closest || !e.target.closest('#view-arcatek .arc-search-wrap')) closeOptions();
+    });
+    document.getElementById('arc-f-status').addEventListener('change', function () { state.status = this.value; renderTable(); });
+    document.getElementById('arc-f-kam').addEventListener('change', function () { state.kam = this.value; renderTable(); });
+
+    root.addEventListener('mousedown', function (e) {
+      var opt = e.target.closest('[data-arc-opt]');
+      if (opt) { e.preventDefault(); select(state.opts[+opt.getAttribute('data-arc-opt')].r.e.key, true); }
+    });
+    root.addEventListener('click', function (e) {
+      var t;
+      if ((t = e.target.closest('[data-arc-filter]'))) { setFilter(t.getAttribute('data-arc-filter')); return; }
+      if ((t = e.target.closest('[data-arc-open]'))) { select(t.getAttribute('data-arc-open'), true); return; }
+      if ((t = e.target.closest('[data-arc-view]'))) { showViewById(t.getAttribute('data-arc-view')); return; }
+      if ((t = e.target.closest('[data-arc-flag]'))) {
+        /* A double-click opens (and keeps open) the explanation; a single click or Enter toggles it. */
+        if (e.detail > 1) return;
+        var body = document.getElementById(t.getAttribute('aria-controls'));
+        var open = t.getAttribute('aria-expanded') === 'true';
+        t.setAttribute('aria-expanded', String(!open));
+        body.hidden = open;
+      }
+    });
+  }
+  function selectedLegal() {
+    for (var i = 0; i < ROWS.length; i++) if (ROWS[i].e.key === state.sel) return ROWS[i].e.legal;
+    return null;
+  }
+
+  function init() {
+    if (!document.getElementById(VIEW_ID)) return;
+    buildRows();
+    var keys = {};
+    ROWS.forEach(function (r) {
+      if (keys[r.e.key]) console.error('[Arcatek] Duplicate registry key:', r.e.key);
+      keys[r.e.key] = 1;
+      if (r.e.aios === 'processed' && !viewExists(r.e)) console.error('[Arcatek] AIOS view not found:', r.e.view);
+    });
+    renderKpis();
+    renderFilters();
+    renderTable();
+    renderDetail();
+    wire();
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
 })();
 </script>
 
