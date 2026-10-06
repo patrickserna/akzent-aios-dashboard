@@ -33908,6 +33908,16 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
 #view-arcatek .arc-mini th { font-size: 9.5px; font-weight: 800; letter-spacing: .6px; text-transform: uppercase; color: var(--arc-muted); }
 #view-arcatek .arc-placeholder { font-size: 12px; color: var(--arc-muted); padding: 18px 4px; text-align: center; }
 
+/* ── Portfolio collapse ── */
+#view-arcatek .arc-collapse { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--arc-line-2); background: #fff; border-radius: 7px; padding: 5px 10px; font-size: 11px; font-weight: 700; color: var(--arc-navy); cursor: pointer; white-space: nowrap; }
+#view-arcatek .arc-collapse:hover { background: var(--arc-bg); }
+#view-arcatek .arc-collapse-sum { font-weight: 600; color: var(--arc-muted); }
+#view-arcatek .arc-collapse-sum:empty { display: none; }
+#view-arcatek .arc-collapse-i { display: inline-block; transition: transform .15s; }
+#view-arcatek .arc-collapse[aria-expanded="false"] .arc-collapse-i { transform: rotate(-90deg); }
+#view-arcatek #arc-list-body[hidden] { display: none; }
+#view-arcatek .arc-card.is-collapsed .arc-card-head { margin-bottom: 0; }
+
 /* ── Account detail · executive cockpit ── */
 #view-arcatek .arc-cockpit { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); align-items: start; }
 #view-arcatek .arc-cp { display: flex; flex-direction: column; gap: 8px; }
@@ -34023,7 +34033,7 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
   <div class="sidebar-logo">
     <div class="logo-mark" role="img" aria-label="Akzent"></div>
     <div class="logo-sub">Intelligence OS</div>
-    <div class="aios-build" id="aios-build" title="Build 173 · last updated 2026-10-06 14:40 (Mexico City)"><b>v2.173</b> · Updated 06 Oct 2026, 14:40</div>
+    <div class="aios-build" id="aios-build" title="Build 174 · last updated 2026-10-06 14:46 (Mexico City)"><b>v2.174</b> · Updated 06 Oct 2026, 14:46</div>
     <div class="aios-logo-glyph" aria-hidden="true"></div>
     <button type="button" id="aios-sb-toggle" class="aios-sb-toggle" onclick="aiosToggleSidebar()" aria-label="Collapse sidebar" aria-controls="aios-sidebar" aria-expanded="true" title="Collapse sidebar">
       <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false"><path d="M10 3.5 5.5 8 10 12.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -37907,7 +37917,11 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
     <section class="arc-card" aria-labelledby="arc-list-h">
       <div class="arc-card-head">
         <div><div class="arc-step">03 · Portfolio</div><h2 id="arc-list-h">Arcatek clients</h2></div>
+        <button type="button" class="arc-collapse" id="arc-list-toggle" aria-expanded="true" aria-controls="arc-list-body">
+          <span class="arc-collapse-sum" id="arc-list-sum"></span><span class="arc-collapse-l">Collapse</span><span class="arc-collapse-i" aria-hidden="true">▾</span>
+        </button>
       </div>
+      <div id="arc-list-body">
       <div class="arc-filters" id="arc-filters">
         <div class="arc-seg" role="group" aria-label="Portfolio filter" id="arc-seg"></div>
         <label class="arc-sel">Account status <select id="arc-f-status"></select></label>
@@ -37919,6 +37933,7 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
           <thead><tr><th scope="col">Legal entity</th><th scope="col">AIOS</th><th scope="col">Arcatek relationship</th><th scope="col">Share of Wallet</th><th scope="col">Review</th></tr></thead>
           <tbody id="arc-rows"></tbody>
         </table>
+      </div>
       </div>
     </section>
 
@@ -120290,7 +120305,22 @@ var ARCATEK_REFERENCE = {
       d.focus({ preventScroll: true });
     }
   }
+  /* Portfolio list: collapsible; the choice is remembered per viewer (convenience only). */
+  var LIST_KEY = 'aios-arc-portfolio-collapsed';
+  function setListOpen(open, remember) {
+    var btn = document.getElementById('arc-list-toggle'), body = document.getElementById('arc-list-body');
+    if (!btn || !body) return;
+    body.hidden = !open;
+    btn.setAttribute('aria-expanded', String(open));
+    btn.querySelector('.arc-collapse-l').textContent = open ? 'Collapse' : 'Expand';
+    btn.closest('.arc-card').classList.toggle('is-collapsed', !open);
+    var shown = visibleRows().length;
+    document.getElementById('arc-list-sum').textContent = open ? '' : shown + ' of ' + ROWS.length + ' clients';
+    if (remember) { try { localStorage.setItem(LIST_KEY, open ? '0' : '1'); } catch (e) {} }
+  }
+  function listOpen() { return document.getElementById('arc-list-toggle').getAttribute('aria-expanded') === 'true'; }
   function setFilter(k) {
+    if (!listOpen()) setListOpen(true, true);
     state.filter = k;
     renderFilters();
     renderKpis();
@@ -120318,6 +120348,7 @@ var ARCATEK_REFERENCE = {
     document.addEventListener('mousedown', function (e) {
       if (!e.target.closest || !e.target.closest('#view-arcatek .arc-search-wrap')) closeOptions();
     });
+    document.getElementById('arc-list-toggle').addEventListener('click', function () { setListOpen(!listOpen(), true); });
     document.getElementById('arc-f-status').addEventListener('change', function () { state.status = this.value; renderTable(); });
     document.getElementById('arc-f-kam').addEventListener('change', function () { state.kam = this.value; renderTable(); });
 
@@ -120359,6 +120390,9 @@ var ARCATEK_REFERENCE = {
     renderTable();
     renderDetail();
     wire();
+    var collapsed = false;
+    try { collapsed = localStorage.getItem(LIST_KEY) === '1'; } catch (e) {}
+    setListOpen(!collapsed, false);
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
