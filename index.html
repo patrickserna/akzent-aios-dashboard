@@ -33996,6 +33996,38 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
 #view-arcatek details.arc-support[open] > summary::before { transform: rotate(90deg); }
 #view-arcatek details.arc-support > summary h4 { margin: 0; }
 
+/* ── Account detail · validation layer ── */
+#view-arcatek .arc-head-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: flex-start; }
+#view-arcatek .arc-refresh { background: #fff; color: var(--arc-navy); border: 1px solid var(--arc-line-2); border-radius: 6px; padding: 7px 12px; font-size: 11.5px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+#view-arcatek .arc-refresh:hover { background: var(--arc-bg); }
+#view-arcatek .arc-refresh:disabled { opacity: .55; cursor: progress; }
+#view-arcatek .arc-validated { font-size: 10.5px; color: var(--arc-muted); margin-top: 6px; }
+#view-arcatek .arc-validated b.ok { color: var(--arc-ok-ink); }
+#view-arcatek .arc-validated b.warn { color: var(--arc-nv-ink); }
+#view-arcatek .arc-badge.flagged { background: var(--arc-flag-bg); color: var(--arc-flag-ink); border-color: var(--arc-flag-line); }
+#view-arcatek button.arc-badge { cursor: pointer; font-family: inherit; }
+#view-arcatek .arc-src { flex-basis: 100%; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px 18px; border: 1px solid var(--arc-line); background: var(--arc-bg); border-radius: 8px; padding: 10px 12px; }
+#view-arcatek .arc-src[hidden] { display: none; }
+#view-arcatek .arc-src ul { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 4px; }
+#view-arcatek .arc-src li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 8px; font-size: 11px; color: var(--arc-text); }
+#view-arcatek .arc-src li b { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .6px; }
+#view-arcatek .arc-src li b.ok { color: var(--arc-ok-ink); }
+#view-arcatek .arc-src li b.pd { color: var(--arc-muted); }
+#view-arcatek .arc-src li .arc-kv-s { flex-basis: 100%; }
+#view-arcatek .arc-cp-tools { display: inline-flex; align-items: center; gap: 6px; }
+#view-arcatek .arc-lin-btn { border: 1px solid var(--arc-line-2); background: #fff; color: var(--arc-cyan-ink); border-radius: 999px; width: 20px; height: 20px; font-size: 11px; font-weight: 800; line-height: 1; cursor: pointer; padding: 0; }
+#view-arcatek .arc-lin-btn[aria-expanded="true"] { background: var(--arc-cyan-soft); border-color: var(--arc-cyan-ink); }
+#view-arcatek .arc-iss { font-size: 9px; font-weight: 800; letter-spacing: .6px; text-transform: uppercase; color: var(--arc-flag-ink); background: var(--arc-flag-bg); border: 1px solid var(--arc-flag-line); border-radius: 4px; padding: 1px 6px; white-space: nowrap; }
+#view-arcatek .arc-stale { font-size: 10px; color: var(--arc-nv-ink); }
+#view-arcatek .arc-lin { border-top: 1px dashed var(--arc-line-2); padding-top: 8px; display: grid; gap: 8px; }
+#view-arcatek .arc-lin[hidden] { display: none; }
+#view-arcatek .arc-lin-t { font-size: 9px; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; color: var(--arc-navy); }
+#view-arcatek dl.arc-lin-m { display: grid; grid-template-columns: minmax(84px, max-content) minmax(0, 1fr); gap: 2px 10px; margin: 0; font-size: 10.5px; background: var(--arc-bg); border-radius: 6px; padding: 7px 9px; }
+#view-arcatek .arc-lin-m dt { color: var(--arc-muted); font-weight: 700; }
+#view-arcatek .arc-lin-m dd { margin: 0; color: var(--arc-text); overflow-wrap: anywhere; }
+#view-arcatek .arc-cx li.issue .arc-cx-i { background: var(--arc-flag-bg); border-color: var(--arc-flag-line); color: var(--arc-flag-ink); }
+#view-arcatek .arc-cx li.issue { color: var(--arc-flag-ink); }
+
 /* ── Smaller screens ── */
 @media (max-width: 900px) {
   #view-arcatek .arc-hero { padding: 18px 18px 18px; }
@@ -34033,7 +34065,7 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
   <div class="sidebar-logo">
     <div class="logo-mark" role="img" aria-label="Akzent"></div>
     <div class="logo-sub">Intelligence OS</div>
-    <div class="aios-build" id="aios-build" title="Build 176 · last updated 2026-10-06 14:56 (Mexico City)"><b>v2.176</b> · Updated 06 Oct 2026, 14:56</div>
+    <div class="aios-build" id="aios-build" title="Build 177 · last updated 2026-10-06 15:08 (Mexico City)"><b>v2.177</b> · Updated 06 Oct 2026, 15:08</div>
     <div class="aios-logo-glyph" aria-hidden="true"></div>
     <button type="button" id="aios-sb-toggle" class="aios-sb-toggle" onclick="aiosToggleSidebar()" aria-label="Collapse sidebar" aria-controls="aios-sidebar" aria-expanded="true" title="Collapse sidebar">
       <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false"><path d="M10 3.5 5.5 8 10 12.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -119655,7 +119687,7 @@ var ARCATEK_REGISTRY = [
   { key: 'grupo-essex', legal: 'GRUPO ESSEX SOLUTIONS TORREON, S DE RL', view: 'view-grupo-essex', aios: 'processed',
     wallet: { src: 'D2_FACTS.cw', num: 8, den: 22, basis: 'Arcatek-patent Shipments / supported PJ Visible Shipments', cutoff: '2026-07-27' },
     flags: [{ f: 'wallet', why: 'The wallet denominator may not be limited to this legal entity. The Current YTD Import Core Route runs from "Grupo Essex Solutions Torreon S. De R.L. De C.V." to "Grupo Essex De Mexico S De Rl De Cv", which is a separate legal entity. The account header also reads "Relationship Not Fully Validated". Confirm the entity scope of the 22 PJ Shipments.',
-              src: 'view-grupo-essex · Ch01 header and Ch03 Current YTD Import Core Route #1' }] },
+              src: 'view-grupo-essex · Ch01 header and Ch03 Current YTD Import Core Route #1', id: true }] },
 
   { key: 'doga', legal: 'DOGA MEXICO COMPONENTES, S.A. DE C.V.', view: 'view-doga', aios: 'processed',
     wallet: { src: 'D2_FACTS.cw', num: 39, den: 79, basis: 'Arcatek Patent Shipments / supported PJ Shipments', cutoff: '2026-07-29' } },
@@ -119681,9 +119713,8 @@ var ARCATEK_REGISTRY = [
                       same cutoff as the Customs Shared Wallet). Arcatek totals
                       reconcile exactly to wallet.num for all 17; listed < den
                       means the AIOS lists only material gateways.
-   ARCATEK_REFERENCE  illustrative only · shown while the real Arcatek source
-                      is missing and `on` is true, always tagged REFERENCE.
-                      Never used when a real value exists. */
+   ARCATEK_REFERENCE  illustrative only · used ONLY when ARCATEK_MODE is 'demo',
+                      always tagged REFERENCE, never over a real value. */
 var ARCATEK_GATEWAYS = {
   'pipsa': { listed: 2770, den: 2770, list: [['Colombia, Nuevo León', 2449, 2516], ['Nuevo Laredo, Tamaulipas', 67, 250], ['Manzanillo, Colima', 0, 4]] },
   'borgwarner': { listed: 1240, den: 1240, list: [['Nuevo Laredo', 407, 538], ['Puebla', 0, 205], ['Querétaro', 0, 195], ['Manzanillo', 0, 127], ['Colombia, Nuevo León', 0, 50], ['Piedras Negras', 0, 23], ['Altamira', 21, 21], ['Tijuana', 0, 21], ['Felipe Ángeles Airport (AIFA)', 0, 18], ['Guadalajara (Tlajomulco)', 0, 15], ['Toluca (San Cayetano Morelos)', 0, 14], ['Mexico City Airport (AICM)', 0, 13]] },
@@ -119704,8 +119735,11 @@ var ARCATEK_GATEWAYS = {
   'mekra': { listed: 1207, den: 1263, list: [['Nuevo Laredo', 0, 600], ['Monterrey / General Mariano Escobedo', 0, 244], ['Colombia, Nuevo León', 126, 160], ['Manzanillo', 0, 103], ['Aeropuerto Internacional General Mariano Escobedo', 0, 60], ['Altamira', 40, 40]] }
 };
 
+/* Production by default. 'demo' is the only mode that shows REFERENCE values;
+   it must be set explicitly and never activates on its own. */
+var ARCATEK_MODE = 'production';
+
 var ARCATEK_REFERENCE = {
-  on: true,
   months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
   start: '2026-01',
   values: { ceSeries: [10, 11, 12, 13, 15, 16, 18, 16, 18],
@@ -119967,14 +120001,27 @@ var ARCATEK_REFERENCE = {
     }).join('');
   }
 
-  /* ── render: account detail · executive cockpit ──
-     Every value is in one of three states:
-       REAL       registry `values`, D2_FACTS, ARCATEK_GATEWAYS
-       PENDING    source not integrated yet → "Pending"
-       REFERENCE  ARCATEK_REFERENCE, only while the real value is missing; the
-                  value is styled .is-ref and its card carries a REFERENCE tag. */
+  /* ═══ Account Detail · validated snapshot pipeline ═══
+     FIND → VALIDATE → RECONCILE → CALCULATE → AUDIT → DISPLAY.
+     Data boundary: only data already in this file — ARCATEK_REGISTRY (incl.
+     `values` supplied for an account), D2_FACTS, ARCATEK_GATEWAYS and the
+     account's own AIOS view. No connector, CRM, Arcatek/Akzent system or
+     external API is ever queried; a field whose source is not in the file is
+     PENDING, with its expected source named in the lineage.
+     Production states: CONFIRMED (value read from a validated source) ·
+     CALCULATED (derived only from validated records) · PENDING.
+     REFERENCE exists only when ARCATEK_MODE === 'demo' (never automatic).
+     Every metric carries lineage; the card ⓘ shows it. Snapshots are kept per
+     account in ARCATEK_SNAPSHOTS; ↻ Refresh AIOS re-runs the whole pipeline on
+     the in-file data and never discards a previously validated value. */
+  var DEMO = typeof ARCATEK_MODE !== 'undefined' && ARCATEK_MODE === 'demo';
+  var SNAP = window.ARCATEK_SNAPSHOTS = {};
+  var UI = { refreshing: null, refreshMsg: {}, open: {} };
   var PENDING = '<span class="arc-pend">Pending</span>';
-  var REF_TIP = 'Illustrative value, shown until the real source is integrated. It is not account data.';
+  var REF_TIP = 'Demo mode · illustrative value, not account data.';
+  var MO = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  var DAY = 864e5;
+  var CYCLE = { aios: 60, arcOps: 35 };   // expected update cycle (days) before a freshness warning
   var TREND = {
     up:   { l: 'Growing',  ico: '↑', cls: 'up' },
     flat: { l: 'Stable',   ico: '→', cls: 'flat' },
@@ -119988,29 +120035,67 @@ var ARCATEK_REFERENCE = {
     AKZ:   { l: 'Akzent only',  cls: 'arc',   ico: '✓' },
     PEND:  { l: 'Pending',      cls: 'pend',  ico: '…' }
   };
-  var FLAG_CARD = { kam: 'id', kamArc: 'id', kamAkz: 'id', ceCur: 'act', cePrev: 'act', ceVar: 'act', ceYtd: 'act',
-                    fees: 'eco', gp: 'eco', gpPrev: 'eco', wallet: 'pot', gateways: 'cov', services: 'xs',
+  /* Sources: "available" = present in this file for the account. */
+  var SOURCES = [
+    { k: 'aios',    l: 'AIOS processed account',   exp: 'AIOS account view in this file' },
+    { k: 'panjiva', l: 'Panjiva dataset',          exp: 'Panjiva, as processed in the AIOS view' },
+    { k: 'akzLog',  l: 'Akzent internal activity', exp: 'Akzent captured logistics status in the AIOS' },
+    { k: 'akzCom',  l: 'Akzent commercial · KAM',  exp: 'Akzent internal account ownership' },
+    { k: 'arcOps',  l: 'Arcatek operations',       exp: 'Arcatek customs operational records' },
+    { k: 'arcCom',  l: 'Arcatek commercial · KAM', exp: 'Arcatek commercial / account ownership data' },
+    { k: 'arcFin',  l: 'Arcatek economic data',    exp: 'Arcatek financial / accounting data' },
+    { k: 'arcInc',  l: 'Arcatek incidents',        exp: 'Arcatek incident source' },
+    { k: 'crm',     l: 'CRM visits / follow-up',   exp: 'CRM / HubSpot — only data already incorporated into AIOS; never queried' }
+  ];
+  var CARD_OF = { kamArc: 'id', kamAkz: 'id', actLast: 'act', actPrev: 'act', actAvg: 'act', actYtd: 'act',
+                  fees: 'eco', gpPrev: 'eco', ctlStatus: 'ctl', ctlLastOp: 'ctl', ctlInc: 'ctl', cov: 'cov', pot: 'pot',
+                  xsArc: 'xs', xsAkz: 'xs', xsStatus: 'xs', lastVisit: 'act2', next: 'act2' };
+  /* Registry flags → the card that carries them. */
+  var FLAG_CARD = { kamArc: 'id', kamAkz: 'id', fees: 'eco', gpPrev: 'eco', wallet: 'pot', gateways: 'cov', services: 'xs',
                     status: 'ctl', lastOp: 'ctl', incidents: 'ctl', lastVisit: 'act2', next: 'act2' };
 
-  function refOn() { return typeof ARCATEK_REFERENCE !== 'undefined' && !!ARCATEK_REFERENCE.on; }
-  /* Real value first; the reference value only when no real value exists. */
-  function pick(e, k) {
-    var v = val(e, k);
-    if (v) return { v: v.v, period: v.period, src: v.src, months: v.months, start: v.start, ref: false };
-    if (refOn() && ARCATEK_REFERENCE.values[k] != null)
-      return { v: ARCATEK_REFERENCE.values[k], period: ARCATEK_REFERENCE.period[k], months: ARCATEK_REFERENCE.months, start: ARCATEK_REFERENCE.start, ref: true };
-    return null;
-  }
+  /* ── small helpers ── */
   function money(x) { return typeof x === 'number' ? '$' + fmt(x) : String(x); }
   function mean(a) { return a.reduce(function (s, x) { return s + x; }, 0) / a.length; }
+  function pad2(n) { return (n < 10 ? '0' : '') + n; }
+  function fmtTs(d) {
+    var h = d.getHours(), ap = h >= 12 ? 'PM' : 'AM';
+    return MO[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear() + ' · ' + ((h % 12) || 12) + ':' + pad2(d.getMinutes()) + ' ' + ap;
+  }
+  function fmtDay(s) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(s || ''));
+    return m ? MO[+m[2] - 1] + ' ' + (+m[3]) + ', ' + m[1] : (s || '—');
+  }
+  function iso(y, m, d) { return y + '-' + pad2(m + 1) + '-' + pad2(d); }
+  function lastDay(y, m) { return new Date(y, m + 1, 0).getDate(); }
+  /* "18-Sep-2026" / "2026-10-06" → Date */
+  function parseDay(s) {
+    var t = String(s || '').trim(), m;
+    if ((m = /^(\d{4})-(\d{2})-(\d{2})/.exec(t))) return new Date(+m[1], +m[2] - 1, +m[3]);
+    if ((m = /^(\d{1,2})-([A-Za-z]{3})-(\d{4})$/.exec(t))) { var i = MO.indexOf(m[2].charAt(0).toUpperCase() + m[2].slice(1).toLowerCase()); if (i > -1) return new Date(+m[3], i, +m[1]); }
+    return null;
+  }
+  function sameEntity(a, b) { return norm(a, true) === norm(b, true); }
+  /* "2026-07-31" → "2026 YTD through Jul 31, 2026"; split cutoffs stay per direction. */
+  function periodLabel(cut) {
+    var d = function (x, yr) { var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(x); return m ? MO[+m[2] - 1] + ' ' + (+m[3]) + (yr ? ', ' + m[1] : '') : x; };
+    var c = String(cut || '').trim(), parts = c.split(' · ');
+    if (/^\d{4}-\d{2}-\d{2}$/.test(c)) return c.slice(0, 4) + ' YTD through ' + d(c, true);
+    if (parts.length > 1 && parts.every(function (p) { return /^(Imports|Exports) \d{4}-\d{2}-\d{2}$/.test(p); }))
+      return parts[0].slice(-10, -6) + ' YTD · ' + parts.map(function (p) { var k = p.split(' '); return k[0] + ' through ' + d(k[1]); }).join(' · ');
+    return c;
+  }
+  function cutEnd(cut) { var all = String(cut || '').match(/\d{4}-\d{2}-\d{2}/g); return all ? all.sort().pop() : null; }
+  function viewText(e) {
+    var el = e.view && document.getElementById(e.view);
+    return el ? el.textContent.replace(/\s+/g, ' ') : '';
+  }
 
-  /* Account health from the monthly customs-entry series (oldest → newest).
-     INACTIVE: the last 2 months have no entries. Otherwise at least 6 months are
-     needed: recent = mean of the last 3 months, baseline = mean of the earlier
-     months; ≥ +15% GROWING · ≤ −15% AT RISK · otherwise STABLE. A single month
-     never decides the status. */
-  function classify(series) {
-    var s = (series || []).map(Number).filter(function (x) { return isFinite(x); });
+  /* Account health from monthly customs entries (completed months only).
+     INACTIVE: the last 2 completed months have no entries. Otherwise ≥ 6 months
+     are needed: recent = mean of the last 3, baseline = mean of the earlier
+     months; ≥ +15% GROWING · ≤ −15% AT RISK · otherwise STABLE. */
+  function classify(s) {
     if (s.length >= 2 && s[s.length - 1] === 0 && s[s.length - 2] === 0) return { k: 'off' };
     if (s.length < 6) return { k: 'few' };
     var rec = mean(s.slice(-3)), base = mean(s.slice(0, -3));
@@ -120019,190 +120104,420 @@ var ARCATEK_REFERENCE = {
     return { k: ch >= 0.15 ? 'up' : ch <= -0.15 ? 'down' : 'flat', ch: ch };
   }
 
-  /* Cross-selling: Arcatek = D2_FACTS cus Confirmed Client; Akzent Logistics =
-     AIOS Captured Logistics rule (captured Logistics Shipments > 0). */
-  function crossSell(r) {
-    var f = facts(r.e), cus = f && f.cus ? f.cus.s : (r.rel && r.rel.s !== 'RC' ? r.rel.s : null);
-    var arc = cus === 'CC' ? 'yes' : (cus === 'CNC' ? 'no' : 'pend');
-    var akz = (f && f.c26 && f.c26.v === true) || (f && f.log && f.log.s === 'CC') ? 'yes' : 'no';
-    var st = arc === 'yes' ? (akz === 'yes' ? 'GROUP' : 'ARC') : (arc === 'no' && akz === 'yes' ? 'AKZ' : 'PEND');
-    return { arc: arc, akz: akz, st: st, f: f };
+  /* ════ STEP 1–6 · resolve one account into a validated snapshot ════ */
+  function resolve(r, prev) {
+    var e = r.e, f = facts(e), now = new Date(), nowTs = fmtTs(now), vt = viewText(e);
+    var M = {}, ad = f && f.ad ? parseDay(f.ad) : null;
+    var aiosUpd = ad ? iso(ad.getFullYear(), ad.getMonth(), ad.getDate()) : null;
+    var idFlags = r.flags.filter(function (fl) { return fl.f === 'entity' || fl.id; });
+    function metric(k, o) {
+      var m = { metric_name: '', value: null, display: null, data_status: 'PENDING', source_system: '', source_dataset: '',
+                source_record_count: null, account_entity: e.legal, period_start: null, period_end: null, operational_unit: '',
+                calculation_method: '', calculation_inputs: '', last_source_update: null, last_validated_at: nowTs,
+                validation_result: 'Not run', validation_notes: [], expected_source: '', stale: null };
+      for (var p in o) m[p] = o[p];
+      M[k] = m; return m;
+    }
+    function pend(k, name, src, why, extra) {
+      var m = metric(k, { metric_name: name, expected_source: src, validation_result: 'Not run — source not in AIOS', validation_notes: [why || ('No ' + src + ' is present in the AIOS data for this account.')] });
+      for (var p in (extra || {})) m[p] = extra[p];
+      return m;
+    }
+    function stale(m, cycleKey, upd) {
+      var d = parseDay(upd);
+      if (d && (now - d) / DAY > CYCLE[cycleKey]) m.stale = 'Source last updated ' + fmtDay(upd);
+    }
+    /* direct (CONFIRMED) value from the registry `values` */
+    function direct(k, name, srcName, unit) {
+      var v = val(e, k);
+      if (!v) return pend(k, name, srcName);
+      var m = metric(k, { metric_name: name, value: v.v, display: String(v.v), data_status: 'CONFIRMED', source_system: v.src ? v.src.split(' · ')[0] : srcName,
+        source_dataset: v.src || srcName, source_record_count: 1, operational_unit: unit || '', period_start: v.periodStart || null, period_end: v.periodEnd || null,
+        calculation_method: 'Read directly from the source; no calculation', last_source_update: v.updated || null, validation_result: 'Passed' });
+      if (v.entity && !sameEntity(v.entity, e.legal)) { m.validation_result = 'Issue — entity mismatch'; m.validation_notes.push('Source entity "' + v.entity + '" ≠ "' + e.legal + '". Not shown as confirmed.'); m.data_status = 'PENDING'; m.display = null; }
+      if (v.period) m.period_label = v.period;
+      return m;
+    }
+
+    /* ── sources available in AIOS (this file) ── */
+    var hasOps = !!(val(e, 'ceRecords') || val(e, 'ceSeries'));
+    var src = {
+      aios: viewExists(e), panjiva: !!(f && f.pj), akzLog: !!(f && f.log),
+      akzCom: !!val(e, 'kamAkz'), arcOps: hasOps, arcCom: !!val(e, 'kamArc'),
+      arcFin: !!(val(e, 'fees') || val(e, 'gpPrev')), arcInc: !!val(e, 'incidents'), crm: !!(val(e, 'lastVisit') || val(e, 'next'))
+    };
+
+    /* ── Identification ── */
+    direct('kamArc', 'Arcatek KAM', 'Arcatek commercial / account ownership data');
+    direct('kamAkz', 'Akzent KAM', 'Akzent internal account ownership');
+
+    /* ── Arcatek operations → monthly series (records first, summary second) ── */
+    var ops = null, recV = val(e, 'ceRecords'), serV = val(e, 'ceSeries');
+    if (recV || serV) {
+      ops = { months: {}, notes: [], issue: null, records: 0, dataset: '', updated: (recV && recV.updated) || (serV && serV.updated) || null, lastOp: null };
+      if (recV) {
+        var seen = {}, dup = 0, foreign = 0, bad = 0;
+        (recV.v || []).forEach(function (x) {
+          var id = x && (x.id != null ? String(x.id) : null), d = x && /^(\d{4})-(\d{2})-(\d{2})$/.exec(x.date || '');
+          if (!d) { bad++; return; }
+          if (x.entity && !sameEntity(x.entity, e.legal)) { foreign++; return; }
+          if (id && seen[id]) { dup++; return; }
+          if (id) seen[id] = 1;
+          var ym = d[1] + '-' + d[2];
+          ops.months[ym] = (ops.months[ym] || 0) + 1; ops.records++;
+          if (!ops.lastOp || x.date > ops.lastOp) ops.lastOp = x.date;
+        });
+        ops.dataset = recV.src || 'Arcatek customs operational records';
+        if (dup) ops.notes.push(dup + ' duplicate record' + (dup > 1 ? 's' : '') + ' removed (same id).');
+        if (bad) ops.notes.push(bad + ' record' + (bad > 1 ? 's' : '') + ' without a valid date excluded.');
+        if (foreign) { ops.notes.push(foreign + ' record' + (foreign > 1 ? 's' : '') + ' of another legal entity excluded — entities are never merged.'); ops.issue = 'Records of another legal entity found in the dataset'; }
+        if (recV.entity && !sameEntity(recV.entity, e.legal)) { ops.issue = 'Dataset entity "' + recV.entity + '" ≠ "' + e.legal + '"'; ops.months = {}; ops.records = 0; }
+      }
+      if (serV && /^\d{4}-\d{2}$/.test(serV.start || '') && Array.isArray(serV.v)) {
+        var sy = +serV.start.slice(0, 4), sm = +serV.start.slice(5) - 1, summ = {};
+        serV.v.forEach(function (n, i) { if (n === null || n === '' || !isFinite(n)) return; var t = sy * 12 + sm + i; summ[Math.floor(t / 12) + '-' + pad2(t % 12 + 1)] = Number(n); });
+        if (serV.entity && !sameEntity(serV.entity, e.legal)) { ops.issue = 'Monthly summary entity "' + serV.entity + '" ≠ "' + e.legal + '"'; summ = {}; }
+        if (recV) {
+          var diffs = Object.keys(summ).filter(function (ym) { return (ops.months[ym] || 0) !== summ[ym]; });
+          if (diffs.length) { ops.issue = 'Operational records and monthly summary disagree'; ops.notes.push('Records vs monthly summary differ in ' + diffs.map(function (ym) { return ym + ' (' + (ops.months[ym] || 0) + ' vs ' + summ[ym] + ')'; }).join(', ') + '. Records are used; requires reconciliation.'); }
+        } else {
+          ops.months = summ; ops.dataset = serV.src || 'Arcatek monthly customs-entry summary';
+          ops.records = Object.keys(summ).reduce(function (s, k) { return s + summ[k]; }, 0);
+        }
+      }
+    }
+    /* completed months only: last full month = month before today's month */
+    var lfT = now.getFullYear() * 12 + now.getMonth() - 1;
+    function ymOf(t) { return Math.floor(t / 12) + '-' + pad2(t % 12 + 1); }
+    function has(t) { return ops && Object.prototype.hasOwnProperty.call(ops.months, ymOf(t)); }
+    function cnt(t) { return ops.months[ymOf(t)]; }
+    function labT(t) { return MO[t % 12] + ' ' + Math.floor(t / 12); }
+    function opsMetric(k, name, ts, method, valueFn, labelFn) {
+      var ok = ops && ts.every(has);
+      if (!ok) return pend(k, name, 'Arcatek customs operational records',
+        ops ? 'The Arcatek dataset in AIOS does not cover ' + ts.filter(function (t) { return !has(t); }).map(labT).join(', ') + '.' : null,
+        ops ? { source_dataset: ops.dataset } : null);
+      var y0 = Math.floor(ts[0] / 12), m0 = ts[0] % 12, y1 = Math.floor(ts[ts.length - 1] / 12), m1 = ts[ts.length - 1] % 12;
+      var vals = ts.map(cnt), sum = vals.reduce(function (s, x) { return s + x; }, 0), v = valueFn(vals, sum);
+      var m = metric(k, { metric_name: name, value: v, display: labelFn ? labelFn(v) : fmt(v), data_status: 'CALCULATED',
+        source_system: 'Arcatek Operations', source_dataset: ops.dataset, source_record_count: sum, operational_unit: 'Customs entries',
+        period_start: iso(y0, m0, 1), period_end: iso(y1, m1, lastDay(y1, m1)), calculation_method: method,
+        calculation_inputs: ts.map(function (t, i) { return labT(t) + ' = ' + vals[i]; }).join(' · '),
+        last_source_update: ops.updated, validation_result: ops.issue ? 'Issue — ' + ops.issue : (ops.notes.length ? 'Passed with notes' : 'Passed'),
+        validation_notes: ops.notes.slice() });
+      m.period_label = ts.length === 1 ? labT(ts[0]) : (y0 === y1 ? MO[m0] : labT(ts[0])) + '–' + labT(ts[ts.length - 1]);
+      stale(m, 'arcOps', ops.updated);
+      return m;
+    }
+    var ytdTs = []; for (var t = lfT - (lfT % 12); t <= lfT; t++) ytdTs.push(t);
+    opsMetric('actLast', 'Last full month · Arcatek customs entries', [lfT], 'Count of validated Arcatek customs entries in the latest completed calendar month', function (v) { return v[0]; });
+    opsMetric('actPrev', 'Previous month · Arcatek customs entries', [lfT - 1], 'Count of validated Arcatek customs entries in the month before the last full month', function (v) { return v[0]; });
+    opsMetric('actAvg', '3M Avg. / month · Arcatek customs entries', [lfT - 2, lfT - 1, lfT], 'Sum of validated entries in the last 3 completed months ÷ 3', function (v, s) { return Math.round(s / 3 * 10) / 10; }, function (x) { return x.toFixed(1); });
+    var ytd = opsMetric('actYtd', 'YTD · Arcatek customs entries', ytdTs, 'Count of validated Arcatek customs entries, Jan 1 through the end of the last full month', function (v, s) { return s; });
+    if (ytd.data_status === 'CALCULATED') ytd.calculation_inputs = 'Monthly: ' + ytd.calculation_inputs;
+
+    /* ── Control ── */
+    var trendTs = ytdTs.filter(has);
+    if (ops && trendTs.length === ytdTs.length && ytdTs.length) {
+      var series = ytdTs.map(cnt), c = classify(series), tr = TREND[c.k];
+      metric('ctlStatus', { metric_name: 'Account health · YTD activity trend', value: c.k, display: tr.l, data_status: c.k === 'few' ? 'PENDING' : 'CALCULATED',
+        source_system: 'Arcatek Operations', source_dataset: ops.dataset, source_record_count: series.reduce(function (s, x) { return s + x; }, 0), operational_unit: 'Customs entries per month',
+        period_start: iso(Math.floor(ytdTs[0] / 12), 0, 1), period_end: iso(Math.floor(lfT / 12), lfT % 12, lastDay(Math.floor(lfT / 12), lfT % 12)),
+        calculation_method: 'Recent 3 completed months vs earlier-month baseline; ≥ +15% Growing, ≤ −15% At risk, else Stable; 2 empty months = Inactive; < 6 months = Insufficient history',
+        calculation_inputs: series.join(' · ') + (c.ch != null ? ' → change ' + (c.ch > 0 ? '+' : '') + (c.ch * 100).toFixed(1) + '%' : ''),
+        last_source_update: ops.updated, validation_result: ops.issue ? 'Issue — ' + ops.issue : (c.k === 'few' ? 'Insufficient history' : 'Passed'),
+        validation_notes: ops.notes.slice(), series: series, months: ytdTs.map(function (t) { return MO[t % 12]; }), period_label: (ytdTs.length > 1 ? MO[ytdTs[0] % 12] + '–' : '') + labT(lfT) });
+      stale(M.ctlStatus, 'arcOps', ops.updated);
+    } else pend('ctlStatus', 'Account health · YTD activity trend', 'Arcatek monthly customs activity', ops ? 'The Arcatek dataset does not cover every completed month of the year.' : null);
+    if (ops && ops.lastOp) {
+      metric('ctlLastOp', { metric_name: 'Last Arcatek operation', value: ops.lastOp, display: fmtDay(ops.lastOp), data_status: 'CALCULATED', source_system: 'Arcatek Operations',
+        source_dataset: ops.dataset, source_record_count: ops.records, operational_unit: 'Customs entry date', calculation_method: 'Latest date among validated records',
+        last_source_update: ops.updated, validation_result: ops.issue ? 'Issue — ' + ops.issue : 'Passed', validation_notes: ops.notes.slice() });
+    } else { direct('lastOp', 'Last Arcatek operation', 'Arcatek customs operational records'); M.ctlLastOp = M.lastOp; delete M.lastOp; }
+    direct('incidents', 'Relevant incidents', 'Arcatek incident source'); M.ctlInc = M.incidents; delete M.incidents;
+
+    /* ── Economic ── */
+    direct('fees', 'Current-month fees', 'Arcatek financial / accounting data', 'Currency');
+    direct('gpPrev', 'Previous-month gross profit', 'Arcatek financial / accounting data', 'Currency');
+
+    /* ── shared Arcatek-side validation (Coverage + Potential) ── */
+    var cus = f && f.cus ? f.cus.s : null, w = r.wallet;
+    var arcBlock = [];
+    if (idFlags.length) arcBlock.push('Account identity not validated: ' + idFlags.map(function (fl) { return fl.why; }).join(' '));
+    if (cus !== 'CC') arcBlock.push(cus === 'NV' ? 'The AIOS classifies Arcatek Customs as Not Validated ("' + (f.cus.q || '') + '"); Arcatek participation cannot be confirmed.' : 'No confirmed Arcatek Customs status in the AIOS.');
+    var cutoff = w && w.cutoff, pEnd = cutEnd(cutoff);
+
+    /* ── Coverage ── */
+    var gw = typeof ARCATEK_GATEWAYS !== 'undefined' && ARCATEK_GATEWAYS[e.key];
+    if (!gw) pend('cov', 'Coverage · customer gateways vs Arcatek presence', 'Gateway × patent table of the AIOS view');
+    else {
+      var list = gw.list.map(function (g) { return { n: g[0], arc: g[1], tot: g[2] }; });
+      var arcSum = list.reduce(function (s, g) { return s + g.arc; }, 0), totSum = list.reduce(function (s, g) { return s + g.tot; }, 0);
+      var missing = list.filter(function (g) { return vt.indexOf(g.n) < 0; }).map(function (g) { return g.n; });
+      var notes = [], issue = null;
+      if (w && !w.missing && arcSum !== w.num) issue = 'Arcatek gateway total ' + fmt(arcSum) + ' ≠ Customs Shared Wallet numerator ' + fmt(w.num);
+      else notes.push('Reconciled: Arcatek gateway total ' + fmt(arcSum) + ' = Customs Shared Wallet numerator.');
+      if (missing.length) issue = (issue ? issue + '; ' : '') + 'gateway label(s) not found in ' + e.view + ': ' + missing.join(', ');
+      if (gw.listed < gw.den) notes.push('The AIOS lists material gateways only: ' + fmt(gw.listed) + ' of ' + fmt(gw.den) + ' visible Shipments. Unlisted gateways are not inferred.');
+      if (arcBlock.length) pend('cov', 'Coverage · customer gateways vs Arcatek presence', 'Validated customer identity and Arcatek participation', arcBlock.join(' '));
+      else {
+        var yes = list.filter(function (g) { return g.arc > 0; }).length;
+        metric('cov', { metric_name: 'Coverage · customer gateways vs Arcatek presence', value: yes + ' / ' + list.length, display: yes + ' / ' + list.length, data_status: 'CALCULATED',
+          source_system: 'Panjiva (via AIOS) + Akzent Fact patent ownership', source_dataset: e.view + ' · Customs Wallet by Gateway (gateway × patent)', source_record_count: totSum,
+          operational_unit: 'Gateways (Shipments as supporting count)', period_start: null, period_end: pEnd, period_label: periodLabel(cutoff),
+          calculation_method: 'Gateway counted ✓ when Shipments under Arcatek-owned patents 3468 / 1930 > 0; denominator = gateways with visible customer Shipments',
+          calculation_inputs: list.map(function (g) { return g.n + ' ' + g.arc + '/' + g.tot; }).join(' · '),
+          last_source_update: aiosUpd, validation_result: issue ? 'Issue — ' + issue : (notes.length > 1 ? 'Passed with notes' : 'Passed'), validation_notes: notes, list: list });
+        stale(M.cov, 'aios', aiosUpd);
+      }
+    }
+
+    /* ── Potential · Arcatek Share of Wallet ── */
+    if (!w || w.missing || w.num == null || !w.den) pend('pot', 'Arcatek Share of Wallet', 'AIOS Customs Shared Wallet (Arcatek patents ÷ Panjiva visible)');
+    else {
+      var pn = [], pIssue = null;
+      if (!walletReproduces(w)) pIssue = fmt(w.num) + ' / ' + fmt(w.den) + ' does not reproduce the stated ' + w.v;
+      if (w.pjv != null && w.pjv !== w.den) pIssue = (pIssue ? pIssue + '; ' : '') + 'denominator ' + fmt(w.den) + ' ≠ PJ visible Shipments ' + fmt(w.pjv);
+      if (w.num > w.den) pIssue = (pIssue ? pIssue + '; ' : '') + 'numerator exceeds denominator';
+      if (vt && (vt.indexOf(fmt(w.num)) < 0 || vt.indexOf(fmt(w.den)) < 0)) pIssue = (pIssue ? pIssue + '; ' : '') + 'numerator / denominator not found in ' + e.view;
+      pn.push('Numerator and denominator come from the same Panjiva universe, so period and unit match by construction. No Akzent Logistics data is used.');
+      if (/Imports .*Exports/.test(cutoff || '')) pn.push('Cutoff differs by direction (' + cutoff + '); each direction is aligned within itself.');
+      if (arcBlock.length || pIssue) {
+        pend('pot', 'Arcatek Share of Wallet', 'Validated Arcatek numerator and comparable Panjiva denominator',
+          (pIssue ? 'Validation issue: ' + pIssue + '. ' : '') + arcBlock.join(' '));
+        if (pIssue) M.pot.validation_result = 'Issue — ' + pIssue;
+      } else {
+        metric('pot', { metric_name: 'Arcatek Share of Wallet', value: w.v, display: w.v, data_status: 'CALCULATED',
+          source_system: 'Panjiva (via AIOS) + Akzent Fact patent ownership', source_dataset: w.srcLabel + ' · ' + w.basis, source_record_count: w.den,
+          operational_unit: 'Shipments', period_start: null, period_end: pEnd, period_label: periodLabel(cutoff) || w.period,
+          calculation_method: 'Shipments filed under Arcatek-owned patents 3468 / 1930 ÷ all Panjiva-visible customs Shipments of the entity (AIOS Customs Shared Wallet)',
+          calculation_inputs: fmt(w.num) + ' / ' + fmt(w.den), num: w.num, den: w.den,
+          last_source_update: aiosUpd, validation_result: pn.length > 1 ? 'Passed with notes' : 'Passed', validation_notes: pn });
+        stale(M.pot, 'aios', aiosUpd);
+      }
+    }
+
+    /* ── Cross-selling (AIOS service statuses; Akzent rule: Captured Logistics > 0) ── */
+    var arcS = cus === 'CC' ? 'yes' : (cus === 'CNC' ? 'no' : 'pend');
+    metric('xsArc', { metric_name: 'Arcatek Client', value: arcS, display: arcS === 'yes' ? 'Confirmed' : arcS === 'no' ? 'Not a client' : 'Pending',
+      data_status: arcS === 'pend' ? 'PENDING' : 'CONFIRMED', source_system: 'AIOS', source_dataset: e.view + ' · D2_FACTS cus', source_record_count: 1,
+      operational_unit: 'Service status', calculation_method: 'Arcatek Customs service status as stated in the AIOS', calculation_inputs: f && f.cus ? f.cus.s + ' · "' + f.cus.q + '"' : 'none',
+      last_source_update: aiosUpd, validation_result: arcS === 'pend' ? 'Not validated in the AIOS' : 'Passed', expected_source: 'Arcatek Customs status in the AIOS' });
+    var svcFlags = r.flags.filter(function (fl) { return fl.f === 'services'; });
+    var akzYes = !!((f && f.c26 && f.c26.v === true) || (f && f.log && f.log.s === 'CC'));
+    var akzS = svcFlags.length ? 'issue' : (akzYes ? 'yes' : 'no');
+    metric('xsAkz', { metric_name: 'Akzent Logistics Client', value: akzS, display: akzS === 'yes' ? 'Confirmed' : akzS === 'issue' ? 'Validation issue' : '0 confirmed captured operations',
+      data_status: akzS === 'issue' ? 'PENDING' : 'CONFIRMED', source_system: 'Akzent internal activity (via AIOS)', source_dataset: e.view + ' · D2_FACTS log / c26', source_record_count: null,
+      operational_unit: 'Captured Logistics Shipments', calculation_method: 'AIOS rule: Captured Logistics > 0 ⇒ Akzent Logistics Client',
+      calculation_inputs: f && f.log ? 'log ' + f.log.s + ' · "' + f.log.q + '"' + (f.c26 ? ' · c26 ' + f.c26.v : '') : 'none',
+      last_source_update: aiosUpd, validation_result: akzS === 'issue' ? 'Issue — captured record belongs to another legal entity' : 'Passed',
+      validation_notes: svcFlags.map(function (fl) { return fl.why; }).concat(akzS === 'no' && f && f.log && f.log.s === 'NV' ? ['The AIOS holds no authorized Akzent captured dataset for this entity (Akzent Logistics Not Validated); confirmed captured operations = 0.'] : []) });
+    var st = arcS === 'yes' ? (akzS === 'yes' ? 'GROUP' : akzS === 'no' ? 'ARC' : 'PEND') : (arcS === 'no' && akzS === 'yes' ? 'AKZ' : 'PEND');
+    metric('xsStatus', { metric_name: 'Group relationship status', value: st, display: REL_STATUS[st].l, data_status: st === 'PEND' ? 'PENDING' : 'CALCULATED', source_system: 'AIOS',
+      source_dataset: 'xsArc + xsAkz', operational_unit: 'Relationship status', calculation_method: 'Arcatek ✓ + Akzent ✓ = Group client · Arcatek ✓ only = Arcatek only · Akzent ✓ only = Akzent only · otherwise Pending',
+      calculation_inputs: 'Arcatek ' + arcS + ' · Akzent ' + akzS, last_source_update: aiosUpd, validation_result: st === 'PEND' ? 'Pending — a side is not validated' : 'Passed' });
+
+    /* ── Action (CRM data only if already incorporated into AIOS) ── */
+    direct('lastVisit', 'Last visit', 'CRM / HubSpot (not queried)');
+    direct('next', 'Next action / follow-up date', 'CRM / HubSpot (not queried)');
+
+    /* ── Refresh safety: never drop a previously validated value ── */
+    var kept = [];
+    if (prev) Object.keys(prev.metrics).forEach(function (k) {
+      var o = prev.metrics[k], n = M[k];
+      if (o && n && (o.data_status === 'CONFIRMED' || o.data_status === 'CALCULATED') && n.data_status === 'PENDING' && !/^Issue/.test(n.validation_result)) {
+        var c2 = {}; for (var p in o) c2[p] = o[p];
+        c2.validation_notes = (o.validation_notes || []).concat(['Kept from the validated snapshot of ' + prev.validatedAt + '; the source was unavailable during this refresh.']);
+        c2.from_snapshot = prev.validatedAt; M[k] = c2; kept.push(k);
+      }
+    });
+
+    /* ── Demo mode only: illustrative values for metrics that are still Pending ── */
+    if (DEMO && typeof ARCATEK_REFERENCE !== 'undefined') demoFill(M);
+
+    var pendSrc = SOURCES.filter(function (s) { return !src[s.k]; });
+    var issues = Object.keys(M).filter(function (k) { return M[k] && /^Issue/.test(M[k].validation_result); });
+    return { key: e.key, account_entity: e.legal, view: e.view, validatedAt: nowTs, validatedAtIso: now.toISOString(),
+             source_versions: { aios_analysis_date: f && f.ad || null, panjiva_cutoff: cutoff || null, arcatek_ops_updated: ops && ops.updated || null },
+             sources: src, pendingSources: pendSrc, issues: issues, kept: kept, metrics: M, mode: DEMO ? 'demo' : 'production' };
   }
-  function relStatusBadge(cs) {
-    var m = REL_STATUS[cs.st];
+
+  function demoFill(M) {
+    var R = ARCATEK_REFERENCE, s = R.values.ceSeries || [], n = s.length;
+    function ref(k, display, extra) {
+      if (!M[k] || M[k].data_status !== 'PENDING') return;
+      M[k].data_status = 'REFERENCE'; M[k].display = display; M[k].validation_result = 'Demo mode · illustrative';
+      for (var p in (extra || {})) M[k][p] = extra[p];
+    }
+    if (n >= 3) {
+      ref('actLast', fmt(s[n - 1]), { period_label: R.months[n - 1] + ' 2026' });
+      ref('actPrev', fmt(s[n - 2]), { period_label: R.months[n - 2] + ' 2026' });
+      ref('actAvg', ((s[n - 1] + s[n - 2] + s[n - 3]) / 3).toFixed(1), { period_label: R.months[n - 3] + '–' + R.months[n - 1] + ' 2026' });
+      ref('actYtd', fmt(s.reduce(function (a, b) { return a + b; }, 0)), { period_label: 'Jan–' + R.months[n - 1] + ' 2026' });
+      var c = classify(s); ref('ctlStatus', TREND[c.k].l, { value: c.k, series: s, months: R.months, period_label: R.period.ceSeries });
+    }
+    ref('ctlLastOp', R.values.lastOp);
+    ref('fees', money(R.values.fees), { period_label: R.period.fees });
+    ref('gpPrev', money(R.values.gpPrev), { period_label: R.period.gpPrev });
+    if (R.wallet) ref('pot', R.wallet.v, { num: R.wallet.num, den: R.wallet.den, period_label: R.wallet.p });
+    if (R.gateways) ref('cov', null, { list: R.gateways.map(function (g) { return { n: g[0], arc: g[1] ? 1 : 0, tot: null }; }) });
+  }
+
+  function snapshotOf(r) { return SNAP[r.e.key] || (SNAP[r.e.key] = resolve(r, null)); }
+
+  /* ════ STEP 7 · display (reads the snapshot only) ════ */
+  function isRefM(m) { return !!m && m.data_status === 'REFERENCE'; }
+  function shown(m) { return !!m && (m.data_status === 'CONFIRMED' || m.data_status === 'CALCULATED' || m.data_status === 'REFERENCE') && m.display != null; }
+  function cardIssues(S, id) { return Object.keys(S.metrics).filter(function (k) { return CARD_OF[k] === id && S.metrics[k] && /^Issue/.test(S.metrics[k].validation_result); }).length; }
+  function card(S, id, title, bodyHtml, flags) {
+    var keys = Object.keys(S.metrics).filter(function (k) { return CARD_OF[k] === id; });
+    var anyRef = keys.some(function (k) { return isRefM(S.metrics[k]); }), nIss = cardIssues(S, id), open = UI.open[S.key + ':' + id];
+    var stale = keys.map(function (k) { return S.metrics[k] && S.metrics[k].stale; }).filter(Boolean);
+    return '<div class="arc-group arc-cp" data-arc-card="' + id + '"><div class="arc-cp-h"><span class="arc-group-t">' + esc(title) + '</span><span class="arc-cp-tools">' +
+      (nIss ? '<span class="arc-iss" title="Validation issue — open ⓘ for details">⚠ Validation issue</span>' : '') +
+      (anyRef ? '<span class="arc-ref" title="' + esc(REF_TIP) + '">Reference</span>' : '') +
+      '<button type="button" class="arc-lin-btn" data-arc-lineage="' + id + '" aria-expanded="' + !!open + '" aria-controls="arc-lin-' + id + '" title="Data validation · where does this number come from?">ⓘ<span class="arc-sr"> Data validation for ' + esc(title) + '</span></button></span></div>' +
+      bodyHtml + (stale.length ? '<span class="arc-stale">⚠ ' + esc(stale[0]) + '</span>' : '') +
+      (flags || []).map(flagHtml).join('') +
+      '<div class="arc-lin" id="arc-lin-' + id + '"' + (open ? '' : ' hidden') + '>' + lineageHtml(S, keys) + '</div></div>';
+  }
+  function lineageHtml(S, keys) {
+    return '<div class="arc-lin-t">Data validation</div>' + keys.map(function (k) {
+      var m = S.metrics[k]; if (!m) return '';
+      var rows = [['Metric', m.metric_name], ['Value', m.display != null ? m.display : 'Pending'], ['Status', m.data_status]];
+      if (m.data_status === 'PENDING') rows.push(['Expected source', m.expected_source || '—']);
+      else {
+        rows.push(['Source', m.source_system], ['Dataset', m.source_dataset]);
+        if (m.source_record_count != null) rows.push(['Records used', fmt(m.source_record_count)]);
+        rows.push(['Entity', m.account_entity]);
+        rows.push(['Period', m.period_start ? fmtDay(m.period_start) + ' – ' + fmtDay(m.period_end) : (m.period_label || (m.period_end ? 'through ' + fmtDay(m.period_end) : '—'))]);
+        rows.push(['Unit', m.operational_unit || '—'], ['Calculation', m.calculation_method || '—']);
+        if (m.calculation_inputs) rows.push(['Inputs', m.calculation_inputs]);
+        rows.push(['Last source update', m.last_source_update ? fmtDay(m.last_source_update) : 'Not stated in the source']);
+      }
+      rows.push(['Last validated', m.last_validated_at], ['Validation', m.validation_result]);
+      return '<dl class="arc-lin-m">' + rows.map(function (x) { return '<dt>' + esc(x[0]) + '</dt><dd>' + esc(x[1] == null ? '—' : x[1]) + '</dd>'; }).join('') +
+        (m.validation_notes && m.validation_notes.length ? '<dt>Notes</dt><dd>' + m.validation_notes.map(esc).join('<br>') + '</dd>' : '') + '</dl>';
+    }).join('');
+  }
+  function kv(label, m, fmtFn) {
+    var ok = shown(m), ref = isRefM(m);
+    return '<div class="arc-kv"><span class="arc-kv-l">' + esc(label) + '</span><span class="arc-kv-v' + (ref ? ' is-ref' : '') + '">' +
+      (ok ? esc(fmtFn ? fmtFn(m.value, m) : m.display) : PENDING) + '</span>' +
+      (ok && m.period_label ? '<span class="arc-kv-s">' + esc(m.period_label) + '</span>' : '') + '</div>';
+  }
+  function relStatusBadge(S) {
+    var m = REL_STATUS[S.metrics.xsStatus.value];
     return '<span class="arc-rel ' + m.cls + '"><span aria-hidden="true">' + m.ico + '</span>' + esc(m.l) + '</span>';
   }
-
-  function card(id, title, bodyHtml, isRef, flags) {
-    return '<div class="arc-group arc-cp" data-arc-card="' + id + '"><div class="arc-cp-h"><span class="arc-group-t">' + esc(title) + '</span>' +
-      (isRef ? '<span class="arc-ref" title="' + esc(REF_TIP) + '">Reference</span>' : '') + '</div>' + bodyHtml +
-      (flags || []).map(flagHtml).join('') + '</div>';
-  }
-  function kv(label, valueHtml, sub, isRef) {
-    return '<div class="arc-kv"><span class="arc-kv-l">' + esc(label) + '</span><span class="arc-kv-v' + (isRef ? ' is-ref' : '') + '">' + valueHtml + '</span>' +
-      (sub ? '<span class="arc-kv-s">' + esc(sub) + '</span>' : '') + '</div>';
-  }
-  function pv(p, fmtFn) { return p ? esc(fmtFn ? fmtFn(p.v) : p.v) : PENDING; }
-
   function spark(series, months, isRef) {
     var s = series.map(Number), n = s.length, W = 240, H = 54, pad = 5;
-    var max = Math.max.apply(null, s.concat([1])), min = 0;
+    var max = Math.max.apply(null, s.concat([1]));
     var x = function (i) { return pad + (n === 1 ? 0 : i * (W - 2 * pad) / (n - 1)); };
-    var y = function (v) { return H - pad - (v - min) / (max - min) * (H - 2 * pad); };
+    var y = function (v) { return H - pad - v / max * (H - 2 * pad); };
     var pts = s.map(function (v, i) { return x(i).toFixed(1) + ',' + y(v).toFixed(1); });
-    var label = 'Monthly customs entries' + (isRef ? ' (reference)' : '') + ': ' + s.map(function (v, i) { return (months[i] || ('M' + (i + 1))) + ' ' + v; }).join(', ');
+    var label = 'Monthly Arcatek customs entries' + (isRef ? ' (demo reference)' : '') + ': ' + s.map(function (v, i) { return (months[i] || '') + ' ' + v; }).join(', ');
     return '<svg class="arc-spark' + (isRef ? ' is-ref' : '') + '" viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="none" role="img" aria-label="' + esc(label) + '">' +
       '<polygon class="a" points="' + x(0).toFixed(1) + ',' + (H - pad) + ' ' + pts.join(' ') + ' ' + x(n - 1).toFixed(1) + ',' + (H - pad) + '"/>' +
       '<polyline class="l" points="' + pts.join(' ') + '"/>' +
       '<circle class="d" cx="' + x(n - 1).toFixed(1) + '" cy="' + y(s[n - 1]).toFixed(1) + '" r="3.5"/>' +
-      s.map(function (v, i) {
-        return '<circle class="h" cx="' + x(i).toFixed(1) + '" cy="' + y(v).toFixed(1) + '" r="9"><title>' + esc((months[i] || '') + ': ' + v + ' customs entries' + (isRef ? ' · reference' : '')) + '</title></circle>';
-      }).join('') + '</svg>' +
-      '<div class="arc-spark-x"><span>' + esc(months[0] || '') + '</span><span>' + esc(months[n - 1] || '') + '</span></div>';
+      s.map(function (v, i) { return '<circle class="h" cx="' + x(i).toFixed(1) + '" cy="' + y(v).toFixed(1) + '" r="9"><title>' + esc((months[i] || '') + ': ' + v + ' customs entries') + '</title></circle>'; }).join('') +
+      '</svg><div class="arc-spark-x"><span>' + esc(months[0] || '') + '</span><span>' + esc(months[n - 1] || '') + '</span></div>';
   }
 
-  function cardIdentification(e, fl) {
-    var a = pick(e, 'kamArc'), k = pick(e, 'kamAkz');
-    return card('id', 'Identification',
-      '<div class="arc-kv-row">' +
-      kv('Arcatek KAM', pv(a), a && !a.ref && a.src ? 'Source: ' + a.src : '', a && a.ref) +
-      kv('Akzent KAM', pv(k), k && !k.ref && k.src ? 'Source: ' + k.src : '', k && k.ref) + '</div>',
-      (a && a.ref) || (k && k.ref), fl);
+  function cardIdentification(S, fl) {
+    return card(S, 'id', 'Identification', '<div class="arc-kv-row">' + kv('Arcatek KAM', S.metrics.kamArc) + kv('Akzent KAM', S.metrics.kamAkz) + '</div>', fl);
   }
-  /* Activity = Arcatek operational volume only (no trend reading — that is Control).
-     All four metrics use completed calendar months from the monthly Arcatek
-     customs-entry series: Last full month = the month before today's month (for
-     REFERENCE data, the last month of the illustrative series); Previous month =
-     the one before; 3M Avg. = mean of the last 3 completed months; YTD = Jan 1
-     through the end of the Last full month. A metric whose months are not all in
-     the series shows Pending. */
-  function cardActivity(e, fl) {
-    var ser = pick(e, 'ceSeries'), MO = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    var last = null, prev = null, avg = null, ytd = null, isRef = !!(ser && ser.ref);
-    var m = ser && /^(\d{4})-(\d{2})$/.exec(String(ser.start || ''));
-    if (m && Array.isArray(ser.v)) {
-      var y0 = +m[1], m0 = +m[2] - 1;
-      var at = function (i) { var t = y0 * 12 + m0 + i; return { y: Math.floor(t / 12), m: t % 12, n: Number(ser.v[i]) }; };
-      var idx;
-      if (ser.ref) idx = ser.v.length - 1;
-      else { var now = new Date(), lf = now.getFullYear() * 12 + now.getMonth() - 1; idx = lf - (y0 * 12 + m0); }
-      var ok = function (i) { return i >= 0 && i < ser.v.length && isFinite(ser.v[i]) && ser.v[i] !== null && ser.v[i] !== ''; };
-      var lab = function (x) { return MO[x.m] + ' ' + x.y; };
-      if (ok(idx)) { var L = at(idx); last = { v: fmt(L.n), p: lab(L) };
-        if (ok(idx - 1)) { var P = at(idx - 1); prev = { v: fmt(P.n), p: lab(P) }; }
-        if (ok(idx - 1) && ok(idx - 2)) { var A = at(idx - 2);
-          avg = { v: ((L.n + at(idx - 1).n + A.n) / 3).toFixed(1), p: (A.y === L.y ? MO[A.m] : lab(A)) + '–' + lab(L) }; }
-        var jan = idx - L.m, sum = 0, full = jan >= 0;
-        for (var i = jan; full && i <= idx; i++) { if (!ok(i)) full = false; else sum += Number(ser.v[i]); }
-        if (full) ytd = { v: fmt(sum), p: (L.m === 0 ? '' : 'Jan–') + lab(L) };
-      }
-    }
-    function cell(label, x) { return kv(label, x ? esc(x.v) : PENDING, x && x.p, !!x && isRef); }
-    return card('act', 'Activity',
-      '<div class="arc-kv-grid">' +
-      cell('Last full month', last) + cell('Previous month', prev) +
-      cell('3M Avg. / month', avg) + cell('YTD', ytd) + '</div>' +
-      '<span class="arc-cp-foot">Arcatek customs entries</span>',
-      isRef && !!(last || prev || avg || ytd), fl);
+  function cardActivity(S, fl) {
+    var m = S.metrics;
+    return card(S, 'act', 'Activity', '<div class="arc-kv-grid">' + kv('Last full month', m.actLast) + kv('Previous month', m.actPrev) +
+      kv('3M Avg. / month', m.actAvg) + kv('YTD', m.actYtd) + '</div><span class="arc-cp-foot">Arcatek customs entries</span>', fl);
   }
-  function cardEconomic(e, fl) {
-    var f = pick(e, 'fees'), g = pick(e, 'gpPrev');
-    return card('eco', 'Economic',
-      '<div class="arc-kv-row">' +
-      kv('Current-month fees', pv(f, money), f && f.period, f && f.ref) +
-      kv('Previous-month GP', pv(g, money), g && g.period, g && g.ref) + '</div>' +
-      '<span class="arc-cp-foot">Arcatek financial data</span>',
-      (f && f.ref) || (g && g.ref), fl);
+  function cardEconomic(S, fl) {
+    var m = S.metrics;
+    return card(S, 'eco', 'Economic', '<div class="arc-kv-row">' + kv('Current-month fees', m.fees, money) + kv('Previous-month GP', m.gpPrev, money) +
+      '</div><span class="arc-cp-foot">Arcatek financial data</span>', fl);
   }
-  function cardCoverage(r, fl) {
-    var e = r.e, real = typeof ARCATEK_GATEWAYS !== 'undefined' && ARCATEK_GATEWAYS[e.key], list, isRef = false;
-    if (real) list = real.list.map(function (g) { return { n: g[0], arc: g[1], tot: g[2] }; });
-    else if (refOn()) { isRef = true; list = ARCATEK_REFERENCE.gateways.map(function (g) { return { n: g[0], arc: g[1] ? 1 : 0, tot: null }; }); }
-    if (!list) return card('cov', 'Coverage', '<div class="arc-cp-big">' + PENDING + '</div><span class="arc-cp-foot">Customer gateways vs Arcatek presence</span>', false, fl);
-    var yes = list.filter(function (g) { return g.arc > 0; }).length, pct = Math.round(yes / list.length * 100);
+  function cardControl(S, fl) {
+    var m = S.metrics.ctlStatus, html;
+    if (shown(m)) {
+      var t = TREND[m.value], ref = isRefM(m);
+      html = '<div class="arc-trend ' + t.cls + (ref ? ' is-ref' : '') + '"><span aria-hidden="true">' + t.ico + '</span>' + esc(t.l) + '</div>' +
+        spark(m.series, m.months, ref) + '<span class="arc-cp-foot">YTD activity trend · monthly customs entries · ' + esc(m.period_label || '') + '</span>';
+    } else if (m.validation_result === 'Insufficient history') {
+      html = '<div class="arc-trend off"><span aria-hidden="true">…</span>Insufficient history</div><span class="arc-cp-foot">YTD activity trend · monthly customs entries</span>';
+    } else html = '<div class="arc-trend off">' + PENDING + '</div><span class="arc-cp-foot">YTD activity trend · monthly customs entries</span>';
+    html += '<div class="arc-kv-row">' + kv('Last Arcatek operation', S.metrics.ctlLastOp) + kv('Relevant incidents', S.metrics.ctlInc) + '</div>';
+    return card(S, 'ctl', 'Control', html, fl);
+  }
+  function cardCoverage(S, fl) {
+    var m = S.metrics.cov;
+    if (!m || !m.list || !(m.data_status === 'CALCULATED' || m.data_status === 'REFERENCE'))
+      return card(S, 'cov', 'Coverage', '<div class="arc-cp-big">' + PENDING + '</div><span class="arc-cp-foot">Customer gateways vs Arcatek presence</span>', fl);
+    var ref = isRefM(m), list = m.list, yes = list.filter(function (g) { return g.arc > 0; }).length, pct = Math.round(yes / list.length * 100);
     var white = list.filter(function (g) { return !(g.arc > 0); });
-    var whiteShip = real ? white.reduce(function (s, g) { return s + g.tot; }, 0) : null;
+    var whiteShip = ref ? null : white.reduce(function (s, g) { return s + g.tot; }, 0);
     function li(g) {
       var on = g.arc > 0;
       return '<li class="' + (on ? 'on' : 'off') + '"><span class="arc-gw-i" aria-hidden="true">' + (on ? '✓' : '✕') + '</span>' +
         '<span class="arc-gw-n">' + esc(g.n) + '<span class="arc-sr">' + (on ? ' — Arcatek participates' : ' — no Arcatek participation') + '</span></span>' +
         (g.tot != null ? '<span class="arc-gw-c" title="' + esc(fmt(g.arc) + ' Arcatek-patent / ' + fmt(g.tot) + ' visible Shipments') + '">' + (on ? fmt(g.arc) + ' / ' : '') + fmt(g.tot) + '</span>' : '') + '</li>';
     }
-    var SHOW = 6, head = list.slice(0, SHOW), rest = list.slice(SHOW);
-    var w = r.wallet, tip = 'Gateways where the customer has visible customs Shipments (Panjiva) and whether Arcatek patents 3468 / 1930 appear there. ' +
-      'Counts: Arcatek-patent / visible Shipments.' + (real ? ' Source: ' + e.view + ' · Customs Wallet by Gateway' + (w && w.cutoff ? ' · current YTD through ' + w.cutoff : '') +
-      (real.listed < real.den ? ' · material gateways as listed in the AIOS (' + fmt(real.listed) + ' of ' + fmt(real.den) + ' Shipments)' : '') : '');
-    var html = '<div class="arc-cp-big' + (isRef ? ' is-ref' : '') + '">' + yes + ' / ' + list.length + ' <small>gateways</small></div>' +
-      '<div class="arc-cp-sub"><span class="' + (isRef ? 'is-ref' : '') + '">' + pct + '% gateway coverage</span>' +
-      (white.length ? ' · <b class="' + (isRef ? 'is-ref' : '') + '">' + white.length + ' whitespace</b>' + (whiteShip != null ? ' · ' + fmt(whiteShip) + ' Shipments' : '') : '') +
-      ' <span class="arc-info" tabindex="0" role="note" title="' + esc(tip) + '" aria-label="' + esc(tip) + '">ⓘ</span></div>' +
-      '<ul class="arc-gw' + (isRef ? ' is-ref' : '') + '">' + head.map(li).join('') + '</ul>' +
-      (rest.length ? '<details class="arc-gw-more"><summary>+' + rest.length + ' more gateway' + (rest.length > 1 ? 's' : '') + '</summary><ul class="arc-gw">' + rest.map(li).join('') + '</ul></details>' : '');
-    return card('cov', 'Coverage', html, isRef, fl);
+    var head = list.slice(0, 6), rest = list.slice(6);
+    var html = '<div class="arc-cp-big' + (ref ? ' is-ref' : '') + '">' + yes + ' / ' + list.length + ' <small>gateways</small></div>' +
+      '<div class="arc-cp-sub"><span class="' + (ref ? 'is-ref' : '') + '">' + pct + '% gateway coverage</span>' +
+      (white.length ? ' · <b class="' + (ref ? 'is-ref' : '') + '">' + white.length + ' whitespace</b>' + (whiteShip != null ? ' · ' + fmt(whiteShip) + ' Shipments' : '') : '') + '</div>' +
+      '<ul class="arc-gw' + (ref ? ' is-ref' : '') + '">' + head.map(li).join('') + '</ul>' +
+      (rest.length ? '<details class="arc-gw-more"><summary>+' + rest.length + ' more gateway' + (rest.length > 1 ? 's' : '') + '</summary><ul class="arc-gw">' + rest.map(li).join('') + '</ul></details>' : '') +
+      (m.period_label ? '<span class="arc-cp-foot">' + esc(m.period_label) + '</span>' : '');
+    return card(S, 'cov', 'Coverage', html, fl);
   }
-  /* "2026-07-31" → "2026 YTD through Jul 31, 2026"; split cutoffs stay per direction. */
-  var MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  function periodLabel(cut) {
-    var d = function (x, yr) { var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(x); return m ? MON[+m[2] - 1] + ' ' + (+m[3]) + (yr ? ', ' + m[1] : '') : x; };
-    var c = String(cut || '').trim(), parts = c.split(' · ');
-    if (/^\d{4}-\d{2}-\d{2}$/.test(c)) return c.slice(0, 4) + ' YTD through ' + d(c, true);
-    if (parts.length > 1 && parts.every(function (p) { return /^(Imports|Exports) \d{4}-\d{2}-\d{2}$/.test(p); }))
-      return parts[0].slice(-10, -6) + ' YTD · ' + parts.map(function (p) { var k = p.split(' '); return k[0] + ' through ' + d(k[1]); }).join(' · ');
-    return c;
+  function cardPotential(S, fl) {
+    var m = S.metrics.pot, html;
+    if (shown(m)) {
+      var ref = isRefM(m);
+      html = '<div class="arc-cp-big' + (ref ? ' is-ref' : '') + '">' + esc(m.display) + '</div>' +
+        '<div class="arc-cp-sub' + (ref ? ' is-ref' : '') + '"><b>' + fmt(m.num) + ' / ' + fmt(m.den) + '</b> Shipments</div>' +
+        '<span class="arc-cp-sub">' + esc(m.period_label || '') + '</span>';
+    } else html = '<div class="arc-cp-big">' + PENDING + '</div>';
+    return card(S, 'pot', 'Potential · Arcatek Share of Wallet', html + '<span class="arc-cp-foot">Arcatek captured / Panjiva visible</span>', fl);
   }
-  /* Arcatek Share of Wallet = Arcatek captured customs activity ÷ total comparable
-     visible customs activity, same period, same unit. Both terms come from the
-     same Panjiva universe (AIOS Customs Shared Wallet): numerator = visible
-     Shipments filed under Arcatek-owned patents 3468 / 1930, denominator = all
-     visible customs Shipments of the entity — so period and unit match by
-     construction. Akzent Logistics data is never used here. */
-  function cardPotential(r, fl) {
-    var w = r.wallet, html, isRef = false;
-    var tip = 'Arcatek captured customs activity / total comparable visible customs activity, same period, Shipments in both terms. ' +
-      'Arcatek = Panjiva-visible Shipments filed under Arcatek-owned patents 3468 / 1930 (AIOS Customs Shared Wallet). No Akzent Logistics data is used.' +
-      (w && !w.missing ? ' Basis: ' + w.basis + '. Source: ' + w.srcLabel + '.' : '') + ' Full method in Open full AIOS.';
-    var info = ' <span class="arc-info" tabindex="0" role="note" title="' + esc(tip) + '" aria-label="' + esc(tip) + '">ⓘ</span>';
-    if (w && !w.missing && w.num != null && w.den) {
-      html = '<div class="arc-cp-big">' + esc(w.v) + info + '</div>' +
-        '<div class="arc-cp-sub"><b>' + fmt(w.num) + ' / ' + fmt(w.den) + '</b> Shipments</div>' +
-        '<span class="arc-cp-sub">' + esc(periodLabel(w.cutoff) || w.period) + '</span>';
-    } else if (refOn() && ARCATEK_REFERENCE.wallet) {
-      var rw = ARCATEK_REFERENCE.wallet; isRef = true;
-      html = '<div class="arc-cp-big is-ref">' + esc(rw.v) + info + '</div>' +
-        '<div class="arc-cp-sub is-ref"><b>' + fmt(rw.num) + ' / ' + fmt(rw.den) + '</b> Shipments</div><span class="arc-cp-sub">' + esc(rw.p) + '</span>';
-    } else html = '<div class="arc-cp-big">' + PENDING + info + '</div>';
-    return card('pot', 'Potential · Arcatek Share of Wallet', html + '<span class="arc-cp-foot">Arcatek captured / Panjiva visible</span>', isRef, fl);
-  }
-  function cardCross(cs, fl) {
+  function cardCross(S, fl) {
+    var a = S.metrics.xsArc.value, z = S.metrics.xsAkz.value;
     function line(state, label, sub) {
-      var ico = state === 'yes' ? '✓' : state === 'pend' ? '…' : '';
+      var ico = state === 'yes' ? '✓' : state === 'pend' ? '…' : state === 'issue' ? '!' : '';
       return '<li class="' + state + '"><span class="arc-cx-i" aria-hidden="true">' + ico + '</span><span>' + esc(label) +
         (state === 'pend' ? ' · <span class="arc-pend">Pending</span>' : '') + (sub ? '<span class="arc-kv-s">' + esc(sub) + '</span>' : '') +
-        '<span class="arc-sr">' + (state === 'yes' ? ' — confirmed' : state === 'pend' ? '' : ' — not confirmed') + '</span></span></li>';
+        '<span class="arc-sr">' + (state === 'yes' ? ' — confirmed' : state === 'no' ? ' — not confirmed' : '') + '</span></span></li>';
     }
-    var html = '<ul class="arc-cx">' +
-      line(cs.arc, 'Arcatek Client', cs.arc === 'pend' ? 'Arcatek Customs not validated in the AIOS' : '') +
-      line(cs.akz, 'Akzent Logistics Client', cs.akz === 'yes' ? 'Captured Logistics > 0' : 'No captured logistics in the AIOS') + '</ul>' +
-      '<div class="arc-cx-st">' + relStatusBadge(cs) + '</div>';
-    return card('xs', 'Cross-selling', html, false, fl);
+    return card(S, 'xs', 'Cross-selling', '<ul class="arc-cx">' +
+      line(a, 'Arcatek Client', a === 'pend' ? 'Arcatek Customs not validated in the AIOS' : '') +
+      line(z, 'Akzent Logistics Client', z === 'yes' ? 'Captured Logistics > 0' : z === 'issue' ? 'Captured record belongs to another legal entity' : 'No confirmed captured logistics') +
+      '</ul><div class="arc-cx-st">' + relStatusBadge(S) + '</div>', fl);
   }
-  function cardControl(e, fl) {
-    var ser = pick(e, 'ceSeries'), last = pick(e, 'lastOp'), inc = val(e, 'incidents'), html = '';
-    if (ser) {
-      var c = classify(ser.v), t = TREND[c.k];
-      html += '<div class="arc-trend ' + t.cls + (ser.ref ? ' is-ref' : '') + '"' + (c.ch != null ? ' title="Last 3 months vs earlier months: ' + (c.ch > 0 ? '+' : '') + (c.ch * 100).toFixed(1) + '%"' : '') + '>' +
-        '<span aria-hidden="true">' + t.ico + '</span>' + esc(t.l) + '</div>' + spark(ser.v, ser.months || [], ser.ref) +
-        '<span class="arc-cp-foot">YTD activity trend · monthly customs entries' + (ser.period ? ' · ' + esc(ser.period) : '') + '</span>';
-    } else html += '<div class="arc-trend off">' + PENDING + '</div><span class="arc-cp-foot">YTD activity trend · monthly customs entries</span>';
-    html += '<div class="arc-kv-row">' + kv('Last Arcatek operation', pv(last), last && !last.ref && last.src ? 'Source: ' + last.src : '', last && last.ref) +
-      kv('Relevant incidents', inc ? esc(inc.v) : PENDING, inc && inc.src ? 'Source: ' + inc.src : '', false) + '</div>';
-    return card('ctl', 'Control', html, (ser && ser.ref) || (last && last.ref), fl);
+  function cardAction(S, fl) {
+    return card(S, 'act2', 'Action', '<div class="arc-kv-row">' + kv('Last visit', S.metrics.lastVisit) + kv('Next follow-up', S.metrics.next) +
+      '</div><span class="arc-cp-foot">CRM / HubSpot</span>', fl);
   }
-  function cardAction(e, fl) {
-    var lv = pick(e, 'lastVisit'), nx = pick(e, 'next');
-    return card('act2', 'Action',
-      '<div class="arc-kv-row">' + kv('Last visit', pv(lv), lv && lv.period, lv && lv.ref) + kv('Next follow-up', pv(nx), nx && nx.period, nx && nx.ref) + '</div>' +
-      '<span class="arc-cp-foot">CRM / HubSpot</span>', (lv && lv.ref) || (nx && nx.ref), fl);
+
+  function headerStatus(S, e) {
+    var nP = S.pendingSources.length, nI = S.issues.length, msg = UI.refreshMsg[S.key], busy = UI.refreshing === S.key;
+    var v = nI ? '<span class="arc-badge flagged"><span aria-hidden="true">⚠</span>Validation issue · ' + nI + '</span>'
+          : nP ? '' : '<span class="arc-badge ok"><span aria-hidden="true">✓</span>Data validated</span>';
+    var p = nP ? '<button type="button" class="arc-badge nv arc-src-btn" data-arc-sources aria-expanded="' + !!UI.open[S.key + ':src'] + '" aria-controls="arc-src-panel"><span aria-hidden="true">⚠</span>Partial data · ' + nP + ' pending source' + (nP > 1 ? 's' : '') + '</button>'
+          : '<button type="button" class="arc-badge info arc-src-btn" data-arc-sources aria-expanded="' + !!UI.open[S.key + ':src'] + '" aria-controls="arc-src-panel">Sources</button>';
+    return '<div class="arc-detail-badges">' + aiosBadge(e) + v + p + relStatusBadge(S) +
+      (S.mode === 'demo' ? '<span class="arc-ref" title="' + esc(REF_TIP) + '">Demo mode</span>' : '') + '</div>' +
+      '<div class="arc-validated" aria-live="polite">' + (busy ? '<b>Validating sources…</b>' :
+        (msg ? '<b class="' + (msg.partial ? 'warn' : 'ok') + '">' + esc(msg.text) + '</b> · ' : '') + 'Last validated: ' + esc(S.validatedAt)) + '</div>';
+  }
+  function sourcesPanel(S) {
+    var av = SOURCES.filter(function (s) { return S.sources[s.k]; }), na = S.pendingSources;
+    function li(s, ok) { return '<li><span>' + esc(s.l) + '</span><b class="' + (ok ? 'ok' : 'pd') + '">' + (ok ? 'Available' : 'Pending') + '</b>' + (ok ? '' : '<span class="arc-kv-s">Expected: ' + esc(s.exp) + '</span>') + '</li>'; }
+    return '<div class="arc-src" id="arc-src-panel"' + (UI.open[S.key + ':src'] ? '' : ' hidden') + '>' +
+      '<div><div class="arc-lin-t">Not available in AIOS</div><ul>' + (na.length ? na.map(function (s) { return li(s, false); }).join('') : '<li><span>None</span></li>') + '</ul></div>' +
+      '<div><div class="arc-lin-t">Available in AIOS</div><ul>' + av.map(function (s) { return li(s, true); }).join('') + '</ul></div>' +
+      '<p class="arc-note" style="grid-column:1/-1;margin:0;">Availability describes the data already in AIOS. Pending sources are never queried automatically; external retrieval needs an explicit instruction.</p></div>';
   }
 
   function supportTiles(r) {
@@ -120230,30 +120545,26 @@ var ARCATEK_REFERENCE = {
       (prev.length ? '<tr><th colspan="3">Previous year · reference only, not compared with YTD</th></tr>' + rows(prev) : '') +
       '</tbody></table><span class="arc-sup-p">Source: ' + esc(w.srcLabel) + '</span></div>';
   }
+  function selectedRow() { for (var i = 0; i < ROWS.length; i++) if (ROWS[i].e.key === state.sel) return ROWS[i]; return null; }
   function renderDetail() {
-    var body = document.getElementById('arc-detail-body');
-    var r = null;
-    for (var i = 0; i < ROWS.length; i++) if (ROWS[i].e.key === state.sel) r = ROWS[i];
+    var body = document.getElementById('arc-detail-body'), r = selectedRow();
     if (!r) { body.innerHTML = '<p class="arc-placeholder">Select an account from the search or the portfolio list.</p>'; return; }
-    var e = r.e, byCard = {}, acctFlags = [], cs = crossSell(r);
+    var e = r.e, S = snapshotOf(r), byCard = {}, acctFlags = [];
     r.flags.forEach(function (fl) {
       var c = FLAG_CARD[fl.f];
-      if (!c) acctFlags.push(fl);
-      else (byCard[c] = byCard[c] || []).push(fl);
+      if (!c) acctFlags.push(fl); else (byCard[c] = byCard[c] || []).push(fl);
     });
     var html = '<div class="arc-detail-head"><div style="min-width:0;">' +
       '<h3>' + esc(e.legal) + '</h3>' +
       '<div class="arc-detail-meta">' + (r.acc ? 'AIOS account: ' + esc(decode(r.acc.name)) + ' · ' : '') + (e.view ? esc(e.view) : 'No AIOS view yet') + '</div>' +
-      '<div class="arc-detail-badges">' + aiosBadge(e) + relStatusBadge(cs) + '</div>' +
-      '</div>' +
+      headerStatus(S, e) + '</div><div class="arc-head-actions">' +
+      '<button type="button" class="arc-refresh" data-arc-refresh' + (UI.refreshing ? ' disabled' : '') + ' title="Re-run validation, reconciliation and calculation on the data already in AIOS. No external system is queried.">↻ Refresh AIOS</button>' +
       (e.view && viewExists(e) ? '<button type="button" class="arc-open" data-arc-view="' + esc(e.view) + '">Open full AIOS →</button>' : '') +
-      '</div>';
+      '</div>' + sourcesPanel(S) + '</div>';
     if (acctFlags.length) html += '<div class="arc-acct-flags">' + acctFlags.map(flagHtml).join('') + '</div>';
-    html += '<div class="arc-legend"><span><b>Value</b> real, from a confirmed source</span><span>' + PENDING + ' source not integrated yet</span>' +
-      '<span><span class="arc-ref" title="' + esc(REF_TIP) + '">Reference</span> <span class="is-ref">illustrative</span>, replaced automatically by real data</span></div>';
     html += '<div class="arc-groups arc-cockpit">' +
-      cardIdentification(e, byCard.id) + cardActivity(e, byCard.act) + cardEconomic(e, byCard.eco) + cardControl(e, byCard.ctl) +
-      cardCoverage(r, byCard.cov) + cardPotential(r, byCard.pot) + cardCross(cs, byCard.xs) + cardAction(e, byCard.act2) + '</div>';
+      cardIdentification(S, byCard.id) + cardActivity(S, byCard.act) + cardEconomic(S, byCard.eco) + cardControl(S, byCard.ctl) +
+      cardCoverage(S, byCard.cov) + cardPotential(S, byCard.pot) + cardCross(S, byCard.xs) + cardAction(S, byCard.act2) + '</div>';
     var tiles = supportTiles(r);
     html += '<details class="arc-support"><summary><h4>Supporting AIOS information</h4></summary>' +
       '<p class="arc-note" style="margin:8px 0 0;">Metric names are kept exactly as in the AIOS. PJ Shipments, Arcatek Patent Shipments and Akzent Captured Shipments are <b>not customs entries</b>. Previous full year and current YTD stay separate; YTD is never annualized.</p>' +
@@ -120261,6 +120572,48 @@ var ARCATEK_REFERENCE = {
         return '<div class="arc-sup"><span class="arc-sup-l">' + esc(t.l) + '</span><span class="arc-sup-v">' + esc(t.v) + '</span><span class="arc-sup-p">' + esc(t.p) + '<br>Source: ' + esc(t.src) + '</span></div>';
       }).join('') + walletTable(r.wallet) + '</div></details>';
     body.innerHTML = html;
+  }
+
+  /* ↻ Refresh AIOS: a real re-run of FIND → … → AUDIT over the in-file data
+     (registry, D2_FACTS, gateway tables, the account view). Rows are rebuilt so
+     registry / D2_FACTS changes are picked up; a source that disappears never
+     wipes a previously validated value. No external system is queried. */
+  function refreshAccount() {
+    var r0 = selectedRow(); if (!r0 || UI.refreshing) return;
+    var key = r0.e.key, prevSnap = SNAP[key] || null;
+    UI.refreshing = key; delete UI.refreshMsg[key]; renderDetail();
+    setTimeout(function () {
+      try {
+        buildRows();
+        var r = selectedRow();
+        var S = resolve(r, prevSnap);
+        SNAP[key] = S;
+        var lost = prevSnap ? SOURCES.filter(function (s) { return prevSnap.sources[s.k] && !S.sources[s.k]; }) : [];
+        UI.refreshMsg[key] = (lost.length || S.kept.length)
+          ? { partial: true, text: '⚠ Partial refresh · unavailable: ' + (lost.map(function (s) { return s.l; }).join(', ') || 'a source') }
+          : { partial: false, text: '✓ AIOS refreshed' };
+      } catch (err) {
+        UI.refreshMsg[key] = { partial: true, text: '⚠ Refresh failed · the previous validated snapshot is kept' };
+        if (prevSnap) SNAP[key] = prevSnap;
+        console.error('[Arcatek] Refresh AIOS failed', err);
+      }
+      UI.refreshing = null;
+      renderKpis(); renderFilters(); renderTable(); renderDetail();
+    }, 60);
+  }
+  function wireDetail() {
+    document.getElementById('arc-detail-body').addEventListener('click', function (ev) {
+      var t, r = selectedRow(); if (!r) return;
+      if ((t = ev.target.closest('[data-arc-refresh]'))) { refreshAccount(); return; }
+      if ((t = ev.target.closest('[data-arc-lineage]'))) {
+        var k = r.e.key + ':' + t.getAttribute('data-arc-lineage'), p = document.getElementById(t.getAttribute('aria-controls'));
+        UI.open[k] = !UI.open[k]; t.setAttribute('aria-expanded', String(UI.open[k])); if (p) p.hidden = !UI.open[k]; return;
+      }
+      if ((t = ev.target.closest('[data-arc-sources]'))) {
+        var ks = r.e.key + ':src', ps = document.getElementById('arc-src-panel');
+        UI.open[ks] = !UI.open[ks]; t.setAttribute('aria-expanded', String(UI.open[ks])); if (ps) ps.hidden = !UI.open[ks];
+      }
+    });
   }
 
   /* ── search (combobox) ── */
@@ -120418,6 +120771,7 @@ var ARCATEK_REFERENCE = {
     renderTable();
     renderDetail();
     wire();
+    wireDetail();
     var collapsed = false;
     try { collapsed = localStorage.getItem(LIST_KEY) === '1'; } catch (e) {}
     setListOpen(!collapsed, false);
