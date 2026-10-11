@@ -9,9 +9,10 @@ Established 2026-10-10 at the user's request. This standard governs future work 
 - **Repository:** `/Users/patriciojacobsernagarza/Documents/GitHub/akzent-aios-dashboard`
 - **Dashboard file:** `index.html`, the multi-account dashboard at the repository root.
 - **Approved reference commit:** `230fdf80b1a3acdbdf90945450de84f98690ea42`, "Aptar Querétaro — exported file keeps the network filter selection", committed 2026-10-11 00:06 −06:00 with the user's approval.
-  - It equals the original approved version `6b556fc` (2026-10-10) plus one line in the network script, which reads the saved filter selection when an exported file opens. There is no visual or data change.
-  - When this was recorded, the commit existed locally and was **not yet pushed**. Pushes from Claude sessions fail, so the user pushes manually.
+  - It equals the original approved version `6b556fc` (2026-10-10) plus one line in the network script, which reads the saved filter selection when an exported file opens. There is no visual or data change. Verified 2026-10-11: the Aptar CSS is byte-identical to `6b556fc`, and the Aptar view differs from it by exactly that line.
+  - Pushed: `origin/main` contained it at `5ddb2c3` (verified 2026-10-11). Pushes from Claude sessions fail, so the user pushes manually.
   - Read the reference with `git show 230fdf8:index.html`.
+  - Use this reference until the user explicitly replaces it.
 - **Locating Aptar inside `index.html`.** Line numbers drift, so search for these markers instead:
   - **Scoped CSS:** the block starting `/* Aptar Querétaro — Account Brief 2.0 (#view-aptar only).`, which ends right before `/* BRAHM Precision Products Corporation Mexico — scoped view components`. Every rule is prefixed `#view-aptar` and uses `.ap2-` classes.
   - **View markup:** from `<!-- ══ APTAR QUERÉTARO VIEW` to the next `<!-- ══ FÁBRICA DE MERMELADAS VIEW ══ -->`. The root element is `<div id="view-aptar" class="view" data-ap2-mode="seller">`.
@@ -75,9 +76,13 @@ Never carry over any of these Aptar-specific items:
 
 Use AIOS-supplied country × gateway × mode × direction × period cross-tabs for linked filtering.
 
-Deterministic filtering, summation and display-percentage calculations are permitted when supported by the supplied data and defined denominators.
+Deterministic filtering, summation and display-percentage calculations are permitted when supported by the supplied data and defined denominators. Keep them narrowly scoped to the network filters and display formatting; do not extend them into new business analysis.
+
+AIOS supplies the finalized business values, interpretations, classifications and individual HS descriptions. Claude implements presentation and functionality only.
 
 Do not infer missing relationships, estimate unsupported figures, generate account classifications or create new business interpretations.
+
+Keep narrative, charts, tables, source notes, embedded datasets and the Account Matrix consistent with one another. When a value changes, correct the canonical field everywhere: the view, the Account Matrix, `D2_FACTS`, the home card, the portfolio row and the `ACCOUNTS` entry. Never leave a stale value with an override footnote.
 
 Maintain separate Import and Export populations. Do not imply linkage between Import origins and Export destinations.
 
@@ -93,7 +98,7 @@ Preserve the AIOS source distinctions:
 - AIOS-Enriched Data
 - Discovery Validation
 
-Use "Shipments" consistently. English is the default business-facing language for all LEAD dashboards, following the approved Aptar template. Use Spanish only when the user explicitly requests it. Do not ask the user to choose a language for each LEAD.
+Use "Shipments" consistently. English is the default business-facing language for all LEAD and CLIENT dashboards and reports, following the approved Aptar and Doga templates. Use Spanish only when the user explicitly requests it. Do not ask the user to choose a language for each account. Write future Claude implementation prompts in English.
 
 ### 4. Missing or unsupported intelligence
 
@@ -119,7 +124,16 @@ Account classification, commercial relationship and service relationship remain 
 
 ### 6. Exceptional improvement proposals
 
-The approved Aptar template remains the default.
+The approved Aptar template remains the default for LEADs, and the Doga template for CLIENTs.
+
+Flag immediately, with location and consequence:
+
+- Evident data contradictions.
+- Misleading presentation.
+- Missing intelligence.
+- Functional defects.
+
+Routine fixes within the authorized scope may proceed. Materially changing the permanent architecture or analytical scope requires approval first.
 
 You may recommend an exceptional design or interaction improvement only when it offers a substantial, concrete benefit to at least one of:
 
@@ -134,16 +148,17 @@ Complete the requested work using the approved template first. Present optional 
 
 Each proposal must briefly state:
 
-- The specific change.
+- The specific change, kept to the smallest necessary.
 - The concrete benefit compared with the approved template.
 - The affected components.
+- The data it requires.
 - Any meaningful tradeoff.
 
 Provide a small mockup or preview when practical. Keep it separate from the working `index.html`.
 
 Do not implement the proposed deviation before explicit user approval.
 
-Approval for one account applies only to that account. Do not extend it to all LEADs or change the permanent template unless the user explicitly approves that broader scope.
+Approval for one account applies only to that account. Do not extend it to all LEADs or CLIENTs, or change a permanent template, unless the user explicitly approves that broader scope. After an approval, state which parts are reusable standard changes and which are account-specific adaptations.
 
 If no substantial improvement is identified, omit proposals entirely.
 
@@ -163,7 +178,7 @@ Compare the completed target account against the approved Aptar reference. Verif
 
 Actually test implemented controls before claiming they work.
 
-Report unresolved failures clearly. Do not claim implementation is complete while required checks remain unresolved.
+Report unresolved failures clearly. Do not claim implementation is complete while required checks remain unresolved. Distinguish executed checks from unverified claims. Never record an unapproved or unaudited candidate as a permanent reference.
 
 ### 8. Instruction precedence
 
@@ -178,8 +193,10 @@ Established 2026-10-11 at the user's request. It governs accounts **explicitly d
 ### Approved reference
 
 - **Approved reference commit:** `04bd7267e15d80c432342babdcda05be9f35b491`, "DOGA CLIENT reference — wallet hierarchy, Matrix fields, $ only, provenance; view-aware export", committed 2026-10-11 00:01 −06:00.
-  - When this was recorded, the commit existed locally and was **not yet pushed**: `origin/main` was at `4c146e3`. The user pushes manually.
+  - Approved by the user on 2026-10-11 after review of the full-dashboard preview.
+  - Pushed: `origin/main` contained it at `5ddb2c3` (verified 2026-10-11). The Doga view, its scoped CSS and the shared export function in `index.html` were byte-identical to `04bd726` at that point. The only later change, `230fdf8`, touched Aptar.
   - Read the reference with `git show 04bd726:index.html`.
+  - Use this reference until the user explicitly replaces it. Earlier Doga production versions (`674fd14`, `9853cdb` through `4c146e3`) and the preview files are not references.
 - **Audit status when recorded:** passed.
   - Lead / Client View leak audit on the exported file (text, attributes and scripts): no commercial values, fields, internal blocks or "PJ".
   - Protected 2025 record byte-identical.
@@ -200,7 +217,8 @@ Established 2026-10-11 at the user's request. It governs accounts **explicitly d
 For every future account **explicitly designated as CLIENT**:
 
 - Apply the same work rules as LEAD section 1: existing `index.html`, target account only, replace obsolete content rather than duplicating it, no standalone dashboard unless requested.
-- Use the Doga implementation as the structural and visual template: the Aptar sections 01–06 and their components, the network and its filters, typography, responsive and print behavior.
+- Use the Doga implementation as the structural and visual template. Preserve its section order, navigation, typography, components, network visualization, filters, progressive disclosure (expandable details), responsive behavior and print behavior.
+- Adapt to the target account's supported information. Never copy reference-account facts, and never omit required AIOS intelligence.
 - LEAD sections 2, 3, 4, 6 and 8 apply unchanged.
   - Read "Aptar-specific items" in section 3 as "Doga-specific items" as well.
   - The network keeps period, direction, mode, country and gateway filters for the previous full calendar year and the current YTD, with separate directional denominators.
@@ -219,6 +237,7 @@ For every future account **explicitly designated as CLIENT**:
   - Logistics and Customs Wallets per service, and their whitespace;
   - commercial hypotheses, the Seller Discovery Guide and the Account Matrix.
 - Every commercial element sits inside `.ap2-internal`: cards, tables, charts, tooltips (`<title>`), expandable details, lane clauses and navigation links. Nothing commercial may sit in shared markup, attributes or scripts.
+- The separation also holds in print and in exports.
 - The views are presentation, not access control.
 - Doga remains a CLIENT in both views; the views never change classification.
 
@@ -229,7 +248,10 @@ For every future account **explicitly designated as CLIENT**:
   - a same-window comparison of captured Shipments and Profit against the prior year;
   - the cumulative current-year Profit against the prior-year total, as a context line, not a growth rate;
   - monthly reported Profit;
-  - monthly captured Shipments as a line over a shaded area of PJ visible records.
+  - monthly captured Shipments as a line over a shaded area of PJ visible records, with the cumulative directional wallet.
+- **Only what AIOS supplies.** Include monthly and cumulative Shipments, Profit, directional wallets and equivalent-period comparisons only when AIOS supplies them.
+  - Keep their source cutoffs, denominators, Provisional statuses, missing-data gaps and above-100% warnings.
+  - If a component's data is missing, follow LEAD section 4. Never derive a series or show a placeholder.
 - **Short amber "Internal" notes** inside the shared sections where a commercial fact belongs next to the operating fact.
 - **Section 07 Captured business:** windows, modality, internal code lanes, the wallet references, Logistics and Customs whitespace kept separate, and the preserved prior-year record.
 - **Section 08 Seller desk:** commercial direction, Discovery Guide, guardrails, source scope, unsupported modules and the Account Matrix.
@@ -238,8 +260,9 @@ For every future account **explicitly designated as CLIENT**:
 ### 4. Protected history
 
 - Existing prior-year information, both PJ and AKZENT, stays exactly as it is: records, figures, metrics, descriptions and presentation. Doga's 2025 card is carried byte-for-byte and asserted by the build.
-- Add the current year alongside it. Replace a current-year value only when AIOS explicitly supersedes it.
-- A preserved total may serve as a contextual reference line. Say so plainly, together with the fact that the record was not recalculated or modified.
+- Add authorized new-year intelligence separately, alongside it. Replace an existing value only when the latest AIOS package explicitly supersedes it and the user's preservation instructions permit it.
+- Growth comparisons require equivalent periods. A previous full-year total may serve as a clearly labelled contextual benchmark, never as the base of a growth rate against an incomplete YTD.
+- When a preserved total is used that way, say so plainly, together with the fact that the record was not recalculated or modified.
 - State the provenance of every comparison: which AIOS package and date supplied it.
 
 ### 5. Wallets, figures and currency
@@ -257,18 +280,23 @@ For every future account **explicitly designated as CLIENT**:
 
 ### 6. Shareable export (both templates)
 
-- "Export This Account" exports the account and the view on screen, and carries the active network filters and the open country tab.
-- From Lead / Client View the file is generated without any `.ap2-internal` content, "PJ" label or view toggle, with the suffix `_Lead-Client-View.html`.
+- "Export This Account" exports only the active account in the selected view. It carries the active network filters and the open country tab, and the file must work standalone.
+- From Lead / Client View, the file physically excludes every `.ap2-internal` element, the "PJ" labels and the Seller View switch from its markup, attributes and scripts. The filename gets the suffix `_Lead-Client-View.html`.
+- From Seller View, the file retains the authorized Seller content.
 - Before handing a shareable file over, audit it: text, attributes and scripts must hold no commercial values or fields.
+- Any change to the shared export code requires regression checks: Aptar in both views, plus at least one account without a view selector (for example BRAHM).
 - Both reference scripts (Aptar `230fdf8`, Doga `04bd726`) restore the saved network selection. Every new account built on either template must keep that line in its network script.
 
 ### 7. Final verification for every CLIENT
 
 Before reporting completion, verify:
 
-- **Consistency:** header, status band, charts, tables, notes and Account Matrix all agree.
+- **Values:** source values, periods, cutoffs and denominators match the AIOS package.
+- **Consistency:** header, status band, charts, tables, notes, datasets and Account Matrix all agree.
 - **Two views:** Lead / Client View and the exported shareable file contain no commercial information, including tooltips, details and print.
-- **Filters:** periods and directional denominators are correct.
+- **Interface:** filters and directional denominators are correct; navigation, responsive behavior and print work.
+- **Export:** the file opens standalone and keeps the selection.
 - **History:** the preserved prior-year record is unchanged.
 - **Scope:** unrelated accounts and shared functionality are preserved; export works for at least one other account with and without a view selector.
+- **Reporting:** state which checks were executed and which remain unverified. Never record an unapproved or unaudited candidate as the reference.
 - **Prototype first:** substantial changes to the standard go to a prototype or preview outside production first, with user approval before production and before this file changes.
