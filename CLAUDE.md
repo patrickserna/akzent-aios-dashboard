@@ -93,7 +93,7 @@ Preserve the AIOS source distinctions:
 - AIOS-Enriched Data
 - Discovery Validation
 
-Use "Shipments" consistently. Preserve Spanish as the default business-facing language unless the user explicitly requests another language. Template reuse does not authorize translating existing content. *(See Open conflicts.)*
+Use "Shipments" consistently. English is the default business-facing language for all LEAD dashboards, following the approved Aptar template. Use Spanish only when the user explicitly requests it. Do not ask the user to choose a language for each LEAD.
 
 ### 4. Missing or unsupported intelligence
 
@@ -170,7 +170,3 @@ Report unresolved failures clearly. Do not claim implementation is complete whil
 Explicit user instructions may override this standard for a specified task.
 
 A task-specific exception does not permanently change the standard unless the user explicitly requests that change.
-
-### Open conflicts (recorded 2026-10-10, pending user resolution)
-
-- **Business-facing language.** Section 3 makes Spanish the default. However, the approved Aptar reference is written in English, and the user has repeatedly asked for English deliverables even when AIOS briefs demanded Spanish. Until the user resolves this, ask which language to use before building a LEAD.
