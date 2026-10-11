@@ -10359,6 +10359,9 @@ main {
 #view-doga .ap2-play p.ap2-internal { background:rgba(245,158,11,.08); border-left:3px solid #f59e0b; padding:6px 8px; border-radius:0 6px 6px 0; }
 #view-doga .ap2-routes .rt small.ad { display:block; font-size:10px; font-weight:600; color:var(--text-muted); line-height:1.3; }
 #view-doga .ap2-keep > .card { margin:0 0 14px; }
+#view-doga .ap2-capcmp { border-top:3px solid #10b981; }
+#view-doga .ap2-capcmp .ap2-chg .hd .k { font-size:22px; }
+#view-doga .ap2-capcmp .ap2-cr { grid-template-columns:96px minmax(0,1fr) auto; }
 /* DOGA MEXICO COMPONENTES — legacy dga- components (#view-doga only), kept for the preserved Akzent 2025 historical card (#dga-h25). */
 #view-doga .dga-src.ar { color:#0e7490; background:rgba(14,116,144,0.10); }
 #view-doga .dga-src.en { color:#6d28d9; background:rgba(109,40,217,0.09); }
@@ -34728,7 +34731,7 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
   <div class="sidebar-logo">
     <div class="logo-mark" role="img" aria-label="Akzent"></div>
     <div class="logo-sub">Intelligence OS</div>
-    <div class="aios-build" id="aios-build" title="Build 192 · last updated 2026-10-10 22:46 (Mexico City)"><b>v2.192</b> · Updated 10 Oct 2026, 22:46</div>
+    <div class="aios-build" id="aios-build" title="Build 193 · last updated 2026-10-10 22:50 (Mexico City)"><b>v2.193</b> · Updated 10 Oct 2026, 22:50</div>
     <div class="aios-logo-glyph" aria-hidden="true"></div>
     <button type="button" id="aios-sb-toggle" class="aios-sb-toggle" onclick="aiosToggleSidebar()" aria-label="Collapse sidebar" aria-controls="aios-sidebar" aria-expanded="true" title="Collapse sidebar">
       <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false"><path d="M10 3.5 5.5 8 10 12.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -65080,10 +65083,30 @@ html.aios-sb-collapsed .aios-sb-foot-text { display: none; }
     <div><span class="k">Akzent Logistics</span><span class="s cc">Confirmed Client</span><small>38 internal positions · Jan 5 – Sep 28, 2026 · all Imports</small></div>
     <div><span class="k">Arcatek Customs</span><span class="s cc">Confirmed Client</span><small>Patent 3468 visible on 44 / 87 Shipments · 1930 not observed · Akzent governance rule: patent 3468 / 1930 visible ⇒ Arcatek Customs Confirmed Client</small></div>
     <div><span class="k">AIOS Classification</span><span class="s nc">Not Calculable</span><small>No authorized classification decision rules · Expansion Type: Dual-Service Wallet Expansion</small></div>
-    <div><span class="k">Captured Business</span><span class="s cc">38 Shipments</span><small>Jan–Sep 2026 · Jan–Aug: 37 · export capture unknown, never zero · <a href="#dg2-s7">Section 07</a></small></div>
-    <div><span class="k">Captured Profit</span><span class="s cc">45,506.43</span><small>Currency not stated — requires validation · not converted to USD · no Revenue or Margin</small></div>
+    <div><span class="k">Captured Business</span><span class="s cc">38 Shipments</span><small>Jan–Sep 2026 · Jan–Aug: 37 · same window vs 2025: 12 → 33 (+175.0%) · export capture unknown, never zero</small></div>
+    <div><span class="k">Captured Profit</span><span class="s cc">45,506.43</span><small>Currency not stated — requires validation · same window vs 2025: +480.9% · no Revenue or Margin</small></div>
     <div><span class="k">Logistics Shared Wallet</span><span class="s lead">43.68% · Provisional</span><small>38 internal / 87 visible · cutoffs and record units differ · never Exact</small></div>
     <div><span class="k">Customs Shared Wallet</span><span class="s cus">50.57%</span><small>44 / 87 under patent 3468 · Imports 19.51% · Exports 78.26% · <a href="#dg2-s5">Section 05</a></small></div>
+  </div>
+  <div class="ap2-card ap2-capcmp">
+    <h3 class="ap2-ct">Captured business · 2025 vs 2026 · same window <span>January 1 – July 29 · <span class="ap2-tag ak">Akzent Facts</span> <span class="ap2-tag ca">AIOS Calculation</span></span></h3>
+    <div class="ap2-legend"><span><i class="a"></i>Jan 1 – Jul 29, 2025</span><span><i class="b"></i>Jan 1 – Jul 29, 2026</span></div>
+    <div class="ap2-two">
+      <div class="ap2-chg"><div class="hd"><span class="dir">Captured Shipments</span><div class="k">12 <em>→</em> <b>33</b></div><span class="d up">+175.0%</span></div>
+        <h5>By mode</h5>
+        <div class="ap2-cr up"><span class="l">Maritime</span><span class="bars"><i class="a" style="width:50.0%"></i><i class="b" style="width:100.0%"></i></span><span class="v">9 <em>→</em> <b>18</b></span></div>
+        <div class="ap2-cr up"><span class="l">Air</span><span class="bars"><i class="a" style="width:16.7%"></i><i class="b" style="width:77.8%"></i></span><span class="v">3 <em>→</em> <b>14</b></span></div>
+        <div class="ap2-cr up"><span class="l">Terrestrial</span><span class="bars"><i class="a" style="width:0.0%"></i><i class="b" style="width:5.6%"></i></span><span class="v">0 <em>→</em> <b>1</b></span></div>
+      </div>
+      <div class="ap2-chg"><div class="hd"><span class="dir">Captured Profit final</span><div class="k">$6,908.89 <em>→</em> <b>$40,136.96</b></div><span class="d up">+480.9%</span></div>
+        <h5>Profit</h5>
+        <div class="ap2-cr up"><span class="l">Profit final</span><span class="bars"><i class="a" style="width:17.2%"></i><i class="b" style="width:100.0%"></i></span><span class="v">$6,908.89 <em>→</em> <b>$40,136.96</b></span></div>
+        <div class="ap2-cr up"><span class="l">Per Shipment</span><span class="bars"><i class="a" style="width:47.3%"></i><i class="b" style="width:100.0%"></i></span><span class="v">$575.74 <em>→</em> <b>$1,216.27</b></span></div>
+        <p class="ap2-foot" style="margin:6px 0 0;">Profit final per captured Shipment <b>+111.3%</b>.</p>
+      </div>
+    </div>
+    <p class="ap2-foot"><span class="ap2-tag pj" style="background:rgba(13,43,94,.06);">Observed Operational Signal</span> Akzent Captured Logistics Business increased materially in the equivalent current period in both Shipment scale and Profit final. <span class="ap2-tag ai">AIOS Interpretation</span> Akzent's existing DOGA logistics relationship has materially expanded in the comparable period, with Profit final growing faster than captured Shipment count. This does not establish cause or future growth.</p>
+    <p class="ap2-foot">Same-window comparison as published in the 19-Sep-2026 AIOS package — values, currency symbol and changes unchanged, not recalculated. The 10-Oct-2026 package does not state a currency for 2026 internal profit; validate before external use. Context only, not a growth rate: 2025 Full Year 23 captured Shipments · $17,959.72 (preserved record, <a href="#dg2-s7">Section 07</a>) · 2026 Jan–Sep 38 · 45,506.43 — 2026 YTD already exceeds the full-year 2025 Shipment count.</p>
   </div>
 </div>
 <header class="ap2-sh" id="dg2-s1"><span class="ap2-sn">01</span><div><h2>The network at a glance</h2><p>Where Shipments come from, where they cross, and where they go · Imports and Exports keep separate denominators</p></div></header>
