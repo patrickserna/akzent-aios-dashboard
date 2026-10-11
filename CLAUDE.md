@@ -8,10 +8,10 @@ Established 2026-10-10 at the user's request. This standard governs future work 
 
 - **Repository:** `/Users/patriciojacobsernagarza/Documents/GitHub/akzent-aios-dashboard`
 - **Dashboard file:** `index.html`, the multi-account dashboard at the repository root.
-- **Approved reference commit:** `6b556fc6a0b64fae6e7ab30f5c0a6c844fd67bbc`, "Aptar Querétaro — period button label "2026 YTD"", committed 2026-10-10 19:53 −06:00.
-  - The working tree matched this commit exactly when it was recorded.
-  - When this was recorded, the commit existed locally and was **not yet pushed**: `origin/main` was at `f0b683b`. Pushes from Claude sessions fail, so the user pushes manually.
-  - Read the reference with `git show 6b556fc:index.html`.
+- **Approved reference commit:** `230fdf80b1a3acdbdf90945450de84f98690ea42`, "Aptar Querétaro — exported file keeps the network filter selection", committed 2026-10-11 00:06 −06:00 with the user's approval.
+  - It equals the original approved version `6b556fc` (2026-10-10) plus one line in the network script, which reads the saved filter selection when an exported file opens. There is no visual or data change.
+  - When this was recorded, the commit existed locally and was **not yet pushed**. Pushes from Claude sessions fail, so the user pushes manually.
+  - Read the reference with `git show 230fdf8:index.html`.
 - **Locating Aptar inside `index.html`.** Line numbers drift, so search for these markers instead:
   - **Scoped CSS:** the block starting `/* Aptar Querétaro — Account Brief 2.0 (#view-aptar only).`, which ends right before `/* BRAHM Precision Products Corporation Mexico — scoped view components`. Every rule is prefixed `#view-aptar` and uses `.ap2-` classes.
   - **View markup:** from `<!-- ══ APTAR QUERÉTARO VIEW` to the next `<!-- ══ FÁBRICA DE MERMELADAS VIEW ══ -->`. The root element is `<div id="view-aptar" class="view" data-ap2-mode="seller">`.
@@ -260,7 +260,7 @@ For every future account **explicitly designated as CLIENT**:
 - "Export This Account" exports the account and the view on screen, and carries the active network filters and the open country tab.
 - From Lead / Client View the file is generated without any `.ap2-internal` content, "PJ" label or view toggle, with the suffix `_Lead-Client-View.html`.
 - Before handing a shareable file over, audit it: text, attributes and scripts must hold no commercial values or fields.
-- Known gap when recorded: the approved Aptar script (`6b556fc`) does not read the saved network selection, so an Aptar export opens on the default filters. Changing it touches the LEAD reference and needs user approval.
+- Both reference scripts (Aptar `230fdf8`, Doga `04bd726`) restore the saved network selection. Every new account built on either template must keep that line in its network script.
 
 ### 7. Final verification for every CLIENT
 
