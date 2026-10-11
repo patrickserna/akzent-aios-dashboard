@@ -113,7 +113,7 @@ Confirmed zero activity and unavailable data must remain distinguishable.
 
 Apply this standard only to accounts explicitly designated as LEAD.
 
-Do not reclassify CLIENT accounts or apply this template to them automatically. A separate CLIENT template will be approved later.
+Do not reclassify CLIENT accounts. CLIENT accounts follow the separate **Permanent CLIENT Template** below (Doga México Componentes reference), which shares this visual architecture.
 
 Account classification, commercial relationship and service relationship remain distinct concepts. Missing internal data does not establish zero captured business.
 
@@ -170,3 +170,105 @@ Report unresolved failures clearly. Do not claim implementation is complete whil
 Explicit user instructions may override this standard for a specified task.
 
 A task-specific exception does not permanently change the standard unless the user explicitly requests that change.
+
+## Permanent CLIENT Template (Doga México Componentes reference)
+
+Established 2026-10-11 at the user's request. It governs accounts **explicitly designated as CLIENT** in this repository. LEAD accounts keep the Aptar template above. Both templates share one visual architecture; the CLIENT template adds a commercial layer that appears only in Seller View.
+
+### Approved reference
+
+- **Approved reference commit:** `04bd7267e15d80c432342babdcda05be9f35b491`, "DOGA CLIENT reference — wallet hierarchy, Matrix fields, $ only, provenance; view-aware export", committed 2026-10-11 00:01 −06:00.
+  - When this was recorded, the commit existed locally and was **not yet pushed**: `origin/main` was at `4c146e3`. The user pushes manually.
+  - Read the reference with `git show 04bd726:index.html`.
+- **Audit status when recorded:** passed.
+  - Lead / Client View leak audit on the exported file (text, attributes and scripts): no commercial values, fields, internal blocks or "PJ".
+  - Protected 2025 record byte-identical.
+  - Unrelated accounts and the Aptar reference byte-identical.
+  - Export tested standalone for Doga (both views), Aptar (both views) and BRAHM (no view selector).
+  - No console errors; 375 px and print checked.
+- **Locating Doga inside `index.html`:**
+  - **Scoped CSS:** the block starting `/* DOGA MEXICO COMPONENTES — Account Brief 2.0 (#view-doga only).`. It is a re-scoped copy of the Aptar CSS (`#view-doga`, `.ap2-` classes) plus the CLIENT chart rules, and ends right before `/* DOGA MEXICO COMPONENTES — legacy dga- components`. The legacy block is kept only for the preserved 2025 card.
+  - **View markup:** from `<!-- ══ DOGA MEXICO COMPONENTES VIEW · Account Brief 2.0` to the next `<!-- ══ SERVICIOS AGREGADOS DE ENERGÍA VIEW ══ -->`. The root element is `<div id="view-doga" class="view" data-ap2-mode="seller">`.
+  - **IDs:** element IDs use the account prefix `dg2-` (`#dg2-net`, `#dg2-s1` … `#dg2-s8`). Aptar's view uses `ap2-` IDs in the same document, so every CLIENT built on this template needs its own unique ID prefix; classes stay `ap2-`.
+  - **Sections:**
+    - Shared: `#dg2-s1` Network, `#dg2-s2` Profile, `#dg2-s3` Core corridors, `#dg2-s4` What changed, `#dg2-s5` Customs footprint, `#dg2-s6` Where coordination matters.
+    - Seller View only: `#dg2-s7` Captured business, `#dg2-s8` Seller desk.
+  - **Other surfaces:** home account card (`<!-- DOGA Mexico Componentes SA de CV -->`), portfolio table row, `ACCOUNTS` entry (`id:'view-doga'`), `D2_FACTS["view-doga"]` and the `ARCATEK_REGISTRY` wallet entry.
+
+### 1. Mandatory template for CLIENTs
+
+For every future account **explicitly designated as CLIENT**:
+
+- Apply the same work rules as LEAD section 1: existing `index.html`, target account only, replace obsolete content rather than duplicating it, no standalone dashboard unless requested.
+- Use the Doga implementation as the structural and visual template: the Aptar sections 01–06 and their components, the network and its filters, typography, responsive and print behavior.
+- LEAD sections 2, 3, 4, 6 and 8 apply unchanged.
+  - Read "Aptar-specific items" in section 3 as "Doga-specific items" as well.
+  - The network keeps period, direction, mode, country and gateway filters for the previous full calendar year and the current YTD, with separate directional denominators.
+
+**Store architecture and rules, never values.** Doga's figures, dates, periods, wallets, relationship statuses and its currency presentation are Doga intelligence, not defaults for other CLIENTs.
+
+### 2. Two presentation views
+
+- **Lead / Client View** (`data-ap2-mode="prospect"`) keeps the complete operating intelligence: network, countries, gateways, modes, Trading Partners and facilities, complete Core Routes, HS with AIOS-authorized descriptions, observed patents and regimes, historical intelligence and Exact-Route Persistence, operational AIOS Interpretations, and the material source limitations in each section's footnotes.
+  - It shows no "PJ": the label is "Trade Records" (or "TR" where space is tight).
+- **Seller View** adds the commercial layer, and only Seller View shows it:
+  - service relationships;
+  - Captured Business, Shipments and reported Profit;
+  - monthly and cumulative performance;
+  - supported historical comparisons;
+  - Logistics and Customs Wallets per service, and their whitespace;
+  - commercial hypotheses, the Seller Discovery Guide and the Account Matrix.
+- Every commercial element sits inside `.ap2-internal`: cards, tables, charts, tooltips (`<title>`), expandable details, lane clauses and navigation links. Nothing commercial may sit in shared markup, attributes or scripts.
+- The views are presentation, not access control.
+- Doga remains a CLIENT in both views; the views never change classification.
+
+### 3. CLIENT commercial layer (placement)
+
+- **First Seller block, under the hero:**
+  - an 8-card status band: relationship, each service, classification, Captured Business, Profit, Logistics Wallet, Customs Wallet;
+  - a same-window comparison of captured Shipments and Profit against the prior year;
+  - the cumulative current-year Profit against the prior-year total, as a context line, not a growth rate;
+  - monthly reported Profit;
+  - monthly captured Shipments as a line over a shaded area of PJ visible records.
+- **Short amber "Internal" notes** inside the shared sections where a commercial fact belongs next to the operating fact.
+- **Section 07 Captured business:** windows, modality, internal code lanes, the wallet references, Logistics and Customs whitespace kept separate, and the preserved prior-year record.
+- **Section 08 Seller desk:** commercial direction, Discovery Guide, guardrails, source scope, unsupported modules and the Account Matrix.
+- Each commercial figure has one primary home. The hero band summarizes and links to it.
+
+### 4. Protected history
+
+- Existing prior-year information, both PJ and AKZENT, stays exactly as it is: records, figures, metrics, descriptions and presentation. Doga's 2025 card is carried byte-for-byte and asserted by the build.
+- Add the current year alongside it. Replace a current-year value only when AIOS explicitly supersedes it.
+- A preserved total may serve as a contextual reference line. Say so plainly, together with the fact that the record was not recalculated or modified.
+- State the provenance of every comparison: which AIOS package and date supplied it.
+
+### 5. Wallets, figures and currency
+
+- Show finalized AIOS values. Percentages are rounded once from the supplied numerator and denominator (44 / 87 → 50.57%), never re-rounded from a value AIOS already rounded.
+- Keep wallet definitions explicit and separate:
+  - A primary Logistics Wallet must name its scope and period; at Doga that is Imports January–August, 37 / 41.
+  - Any aggregate reference must state its own periods and units; at Doga that is 38 internal operations January–September / 87 PJ records with August cutoffs.
+  - The Customs Shared Wallet is a separate measure.
+- Label Provisional wallets as Provisional. Flag source-count references above 100%; never cap them. Show no point where the denominator is unavailable.
+- Currency presentation follows what the user confirms for each account (Doga: "$", confirmed 2026-10-10, written without "USD"). Remove contradictory currency states.
+- Service relationships follow the latest authorized source.
+  - Patent 3468 / 1930 visible ⇒ Arcatek Customs Confirmed Client, per the Akzent rule of 2026-09-19.
+  - Correct the Account Matrix fields themselves; "superseded" notes are not enough.
+
+### 6. Shareable export (both templates)
+
+- "Export This Account" exports the account and the view on screen, and carries the active network filters and the open country tab.
+- From Lead / Client View the file is generated without any `.ap2-internal` content, "PJ" label or view toggle, with the suffix `_Lead-Client-View.html`.
+- Before handing a shareable file over, audit it: text, attributes and scripts must hold no commercial values or fields.
+- Known gap when recorded: the approved Aptar script (`6b556fc`) does not read the saved network selection, so an Aptar export opens on the default filters. Changing it touches the LEAD reference and needs user approval.
+
+### 7. Final verification for every CLIENT
+
+Before reporting completion, verify:
+
+- **Consistency:** header, status band, charts, tables, notes and Account Matrix all agree.
+- **Two views:** Lead / Client View and the exported shareable file contain no commercial information, including tooltips, details and print.
+- **Filters:** periods and directional denominators are correct.
+- **History:** the preserved prior-year record is unchanged.
+- **Scope:** unrelated accounts and shared functionality are preserved; export works for at least one other account with and without a view selector.
+- **Prototype first:** substantial changes to the standard go to a prototype or preview outside production first, with user approval before production and before this file changes.
