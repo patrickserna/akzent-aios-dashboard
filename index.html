@@ -36565,6 +36565,9 @@ table.ateu-t { width: 100%; border-collapse: collapse; font-size: 11.5px; }
 #view-arcatek-mockup .arm-reset { border: 1px solid var(--arc-line-2); background: #fff; border-radius: 6px; padding: 5px 10px; font-size: 11px; font-weight: 700; cursor: pointer; color: var(--arc-navy); }
 #view-arcatek-mockup .arm-scope { font-size: 10.5px; color: var(--arc-muted); }
 #view-arcatek-mockup .arm-kpis { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 8px; margin-top: 12px; }
+#view-arcatek-mockup .arm-kpis .arc-kpi-v { font-size: 22px; overflow-wrap: anywhere; }
+#view-arcatek-mockup .arm-kpis .arc-kpi-v.is-status { font-size: 12px; }
+#view-arcatek-mockup .arm-kpis .arm-pend { white-space: normal; }
 #view-arcatek-mockup .arm-flag-area { display: inline-block; min-width: 130px; font-size: 10px; font-weight: 800; letter-spacing: .6px; text-transform: uppercase; color: var(--arc-muted); margin-right: 8px; }
 
 /* portfolio table */
@@ -36688,7 +36691,7 @@ table.ateu-t { width: 100%; border-collapse: collapse; font-size: 11.5px; }
   <div class="sidebar-logo">
     <div class="logo-mark" role="img" aria-label="Akzent"></div>
     <div class="logo-sub">Intelligence OS</div>
-    <div class="aios-build" id="aios-build" title="Build 211 · last updated 2026-10-13 08:18 (Mexico City)"><b>v2.211</b> · Updated 13 Oct 2026, 08:18</div>
+    <div class="aios-build" id="aios-build" title="Build 212 · last updated 2026-10-13 08:20 (Mexico City)"><b>v2.212</b> · Updated 13 Oct 2026, 08:20</div>
     <div class="aios-logo-glyph" aria-hidden="true"></div>
     <button type="button" id="aios-sb-toggle" class="aios-sb-toggle" onclick="aiosToggleSidebar()" aria-label="Collapse sidebar" aria-controls="aios-sidebar" aria-expanded="true" title="Collapse sidebar">
       <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false"><path d="M10 3.5 5.5 8 10 12.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -40752,13 +40755,18 @@ table.ateu-t { width: 100%; border-collapse: collapse; font-size: 11.5px; }
       <section class="arc-card" data-arm-sec="table" aria-labelledby="arm-t-h">
         <div class="arc-card-head">
           <div><div class="arc-step" data-arm-step="table"></div><h2 id="arm-t-h">Arcatek clients</h2></div>
-          <span class="arc-note">Select a row to open its detail below. The complete AIOS opens from the detail.</span>
+          <button type="button" class="arc-collapse" id="arm-list-toggle" aria-expanded="true" aria-controls="arm-list-body">
+            <span class="arc-collapse-sum" id="arm-list-sum"></span><span class="arc-collapse-l">Collapse</span><span class="arc-collapse-i" aria-hidden="true">▾</span>
+          </button>
         </div>
+        <div id="arm-list-body">
+        <p class="arc-note" style="margin:0 0 8px;">Select a row to open its detail below. The complete AIOS opens from the detail.</p>
         <div class="arc-table-wrap">
           <table class="arc-table arm-table">
             <thead><tr><th scope="col">Legal entity · KAM</th><th scope="col">Status</th><th scope="col">Current activity</th><th scope="col">Share of Wallet</th><th scope="col">TEU</th><th scope="col">Financials</th><th scope="col">Review</th><th scope="col"><span class="arc-sr">Action</span></th></tr></thead>
             <tbody id="arm-rows"></tbody>
           </table>
+        </div>
         </div>
       </section>
 
@@ -125115,7 +125123,20 @@ var ARCATEK_REFERENCE = {
     if (focus) { var d = document.getElementById('arm-detail'); d.scrollIntoView({ block: 'start', behavior: 'smooth' }); d.focus({ preventScroll: true }); }
   }
 
-  function renderAll() { var ms = visible(); renderKpis(ms); renderTable(ms); renderAttention(ms); renderDetail(); }
+  /* Portfolio table: collapsible; the choice is remembered per viewer (convenience only). */
+  var LKEY = 'aios-arm-portfolio-collapsed';
+  function listOpen() { return document.getElementById('arm-list-toggle').getAttribute('aria-expanded') === 'true'; }
+  function setListOpen(open, remember) {
+    var btn = document.getElementById('arm-list-toggle');
+    document.getElementById('arm-list-body').hidden = !open;
+    btn.setAttribute('aria-expanded', String(open));
+    btn.querySelector('.arc-collapse-l').textContent = open ? 'Collapse' : 'Expand';
+    btn.closest('.arc-card').classList.toggle('is-collapsed', !open);
+    listSum();
+    if (remember) { try { localStorage.setItem(LKEY, open ? '0' : '1'); } catch (x) {} }
+  }
+  function listSum() { document.getElementById('arm-list-sum').textContent = listOpen() ? '' : visible().length + ' of ' + ROWS.length + ' accounts'; }
+  function renderAll() { var ms = visible(); renderKpis(ms); renderTable(ms); renderAttention(ms); renderDetail(); listSum(); }
   function wire() {
     var root = document.getElementById(VIEW_ID), inp = document.getElementById('arm-q');
     inp.addEventListener('input', function () { document.getElementById('arm-q-clear').hidden = !inp.value; renderOptions(inp.value); });
@@ -125142,6 +125163,7 @@ var ARCATEK_REFERENCE = {
     root.addEventListener('click', function (e) {
       var t;
       if ((t = e.target.closest('[data-arm-concept]'))) { state.concept = t.getAttribute('data-arm-concept'); try { localStorage.setItem(CKEY, state.concept); } catch (x) {} applyConcept(); return; }
+      if ((t = e.target.closest('#arm-list-toggle'))) { setListOpen(!listOpen(), true); return; }
       if ((t = e.target.closest('[data-arm-open]'))) { select(t.getAttribute('data-arm-open'), true); return; }
       if ((t = e.target.closest('[data-arm-view]'))) { showViewById(t.getAttribute('data-arm-view')); return; }
       if ((t = e.target.closest('[data-arm-teu]'))) { var p = t.getAttribute('data-arm-teu').split('|'); showViewById(p[0]); var a = document.getElementById(p[1]); if (a) a.scrollIntoView({ block: 'start' }); return; }
@@ -125163,6 +125185,8 @@ var ARCATEK_REFERENCE = {
     build();
     try { var c = localStorage.getItem(CKEY); if (CONCEPTS[c]) state.concept = c; } catch (x) {}
     applyConcept(); fillSelects(); renderExec(); renderAll(); renderDetail(); wire();
+    var collapsed = false; try { collapsed = localStorage.getItem(LKEY) === '1'; } catch (x) {}
+    setListOpen(!collapsed, false);
     window.ARCATEK_MOCKUP = { model: M, state: state, rerender: function () { build(); fillSelects(); renderExec(); renderAll(); renderDetail(); } };
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
