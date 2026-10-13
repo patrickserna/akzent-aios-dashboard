@@ -36612,6 +36612,14 @@ table.ateu-t { width: 100%; border-collapse: collapse; font-size: 11.5px; }
 #view-arcatek-mockup .arm-row b { white-space: nowrap; }
 #view-arcatek-mockup .arm-kicker { font-size: 9.5px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; color: var(--arc-cyan-ink); margin: 10px 0 2px; }
 #view-arcatek-mockup .arm-kicker:first-child { margin-top: 0; }
+#view-arcatek-mockup .arm-wh { display: flex; justify-content: space-between; align-items: baseline; gap: 4px 12px; flex-wrap: wrap; }
+#view-arcatek-mockup .arm-wh h3 { margin: 0; }
+#view-arcatek-mockup .arm-wtop { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr) minmax(0, .9fr); gap: 0; margin: 10px 0 4px; }
+#view-arcatek-mockup .arm-wtop > div { padding: 0 18px; border-left: 1px solid var(--arc-line); min-width: 0; }
+#view-arcatek-mockup .arm-wtop > div:first-child { padding-left: 0; border-left: 0; }
+#view-arcatek-mockup .arm-wdir + .arm-wdir { margin-top: 8px; }
+#view-arcatek-mockup .arm-wdir .arm-row { margin-top: 2px; }
+#view-arcatek-mockup .arm-wdir .arm-row b { font-size: 15px; }
 #view-arcatek-mockup .arm-gw { width: 100%; border-collapse: collapse; font-size: 11.5px; margin-top: 8px; }
 #view-arcatek-mockup .arm-gw th { text-align: left; font-size: 9px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; color: var(--arc-muted); border-bottom: 1px solid var(--arc-line); padding: 5px 6px; }
 #view-arcatek-mockup .arm-gw td { border-bottom: 1px solid var(--arc-line); padding: 6px; vertical-align: top; }
@@ -36650,11 +36658,15 @@ table.ateu-t { width: 100%; border-collapse: collapse; font-size: 11.5px; }
   #view-arcatek-mockup .arm-modes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   #view-arcatek-mockup .arm-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   #view-arcatek-mockup .arm-filters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #view-arcatek-mockup .arm-wtop { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  #view-arcatek-mockup .arm-wtop > div { padding: 0; border-left: 0; }
   #view-arcatek-mockup .arm-gw thead { display: none; }
   #view-arcatek-mockup .arm-gw tr { display: block; border-bottom: 1px solid var(--arc-line); padding: 4px 0; }
   #view-arcatek-mockup .arm-gw td { display: flex; justify-content: space-between; border: 0; padding: 2px 4px; }
   #view-arcatek-mockup .arm-gw td[data-l]::before { content: attr(data-l); font-size: 9px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; color: var(--arc-faint); }
   #view-arcatek-mockup .arm-gw .num { text-align: left; }
+  #view-arcatek-mockup .arm-gw td[data-l="Gateway"] { flex-wrap: wrap; }
+  #view-arcatek-mockup .arm-gw td[data-l="Gateway"] .arm-dirs { flex-basis: 100%; text-align: right; }
 }
 @media print {
   #view-arcatek-mockup .arm-proto, #view-arcatek-mockup .arm-concepts, #view-arcatek-mockup .arm-filters, #view-arcatek-mockup .arm-fbar, #view-arcatek-mockup .arc-search-wrap { display: none !important; }
@@ -36676,7 +36688,7 @@ table.ateu-t { width: 100%; border-collapse: collapse; font-size: 11.5px; }
   <div class="sidebar-logo">
     <div class="logo-mark" role="img" aria-label="Akzent"></div>
     <div class="logo-sub">Intelligence OS</div>
-    <div class="aios-build" id="aios-build" title="Build 210 · last updated 2026-10-13 08:05 (Mexico City)"><b>v2.210</b> · Updated 13 Oct 2026, 08:05</div>
+    <div class="aios-build" id="aios-build" title="Build 211 · last updated 2026-10-13 08:18 (Mexico City)"><b>v2.211</b> · Updated 13 Oct 2026, 08:18</div>
     <div class="aios-logo-glyph" aria-hidden="true"></div>
     <button type="button" id="aios-sb-toggle" class="aios-sb-toggle" onclick="aiosToggleSidebar()" aria-label="Collapse sidebar" aria-controls="aios-sidebar" aria-expanded="true" title="Collapse sidebar">
       <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false"><path d="M10 3.5 5.5 8 10 12.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -124961,50 +124973,57 @@ var ARCATEK_REFERENCE = {
   }
 
   /* ── render: account detail ── */
-  function cardSow(m) {
-    var W = m.W; if (!W) return '<div class="arm-dcard"><h3>Share of Wallet</h3>' + pend('NO') + '</div>';
-    var c = W.cur.T, r25 = W.fy25.T;
-    function dirLine(per, d) { var x = W[per][d]; return '<div class="arm-row"><span>' + dirName(d) + '</span><b>' + (x && x.v ? esc(x.v) + (x.n != null ? ' <span class="arm-sub" style="display:inline">' + fmt(x.n) + ' / ' + fmt(x.N) + '</span>' : '') : m.A.cy[d] === 'DIR' ? 'Source not supplied' : 'Not printed') + '</b></div>'; }
-    return '<div class="arm-dcard"><h3>Share of Wallet · Arcatek customs</h3>' +
-      '<div class="arm-hero">' + esc(c.v) + '</div><span class="arm-sub"><b>' + fmt(c.n) + ' / ' + fmt(c.N) + '</b> Shipments · ' + esc(periodText(W.period)) + '</span>' +
-      '<span class="arm-ref">2025: ' + (r25 && r25.v ? '<b>' + esc(r25.v) + '</b>' + (r25.n != null ? ' <span class="arm-sub" style="display:inline">' + fmt(r25.n) + ' / ' + fmt(r25.N) + '</span>' : '') : 'not supplied by the AIOS') + '</span>' +
-      (W.pp.T ? ppChip(W.pp.T, 'comparable') + '<span class="arm-sub">vs ' + esc(W.cmpWindow) + (W.cmp.T && W.cmp.T.v ? ' (' + esc(W.cmp.T.v) + ')' : '') + '</span>' : '<span class="arm-sub">Comparable change: not calculated. The AIOS supplies no comparable 2025 window; 2025 is a reference only.</span>') +
-      '<div class="arm-kicker">By direction · ' + CY + ' YTD</div>' + dirLine('cur', 'I') + dirLine('cur', 'E') +
-      (W.fy25.I || W.fy25.E ? '<div class="arm-kicker">By direction · 2025</div>' + dirLine('fy25', 'I') + dirLine('fy25', 'E') : '') +
-      '<p class="arm-disc">' + esc(W.basis) + '.</p></div>';
-  }
   function periodText(cut) {
     var ds = String(cut || '').match(/(Imports|Exports)?\s*(\d{4}-\d{2}-\d{2})/g) || [];
     if (!ds.length) return String(cut || '');
     if (ds.length === 1) return CY + ' YTD through ' + day(ds[0].trim());
     return CY + ' YTD · ' + ds.map(function (x) { var p = x.trim().split(/\s+/); return p.length > 1 ? p[0] + ' through ' + day(p[1]) : day(p[0]); }).join(' · ');
   }
+  function bar(v, cls) { return '<div class="arm-bar ' + (cls || '') + '"><i style="width:' + Math.max(0, Math.min(100, v)) + '%"></i></div>'; }
   function cardMix(m) {
-    var W = m.W, a = m.A.cy;
-    function bar(v, cls) { return '<div class="arm-bar ' + (cls || '') + '"><i style="width:' + Math.max(0, Math.min(100, v)) + '%"></i></div>'; }
-    var sowH = ['I', 'E'].map(function (d) { var x = W && W.cur[d]; var p = x && parsePct(x.v);
-      return '<div class="arm-row"><span>' + dirName(d) + '</span><b>' + (x && x.v ? esc(x.v) : a[d] === 'DIR' ? 'Source not supplied' : 'Not printed') + '</b></div>' + (p ? bar(p.x) : ''); }).join('');
+    var a = m.A.cy;
     var mixH = (a.I === 'DIR' || a.E === 'DIR') ? '<div class="arm-row"><span>Mix</span><b>' + pend('DIR') + '</b></div><span class="arm-sub">' + (a.I === 'DIR' ? 'Imports' : 'Exports') + ' file not supplied: a mix needs both directions.</span>'
       : ['I', 'E'].map(function (d) { return '<div class="arm-row"><span>' + dirName(d) + '</span><b>' + pct(a[d], a.T) + ' <span class="arm-sub" style="display:inline">' + fmt(a[d]) + '</span></b></div>' + bar(a[d] / a.T * 100, 'mix'); }).join('') + '<span class="arm-sub">Base: ' + fmt(a.T) + ' PJ Shipments · ' + esc(a.src) + '</span>';
-    return '<div class="arm-dcard"><h3>Directional wallet vs activity mix</h3><div class="arm-split">' +
-      '<div><div class="arm-kicker">Share of Wallet by direction</div><span class="arm-sub">Arcatek share of each direction’s visible Shipments</span>' + sowH + '</div>' +
-      '<div><div class="arm-kicker">Activity mix</div><span class="arm-sub">How the account’s visible Shipments split</span>' + mixH + '</div></div></div>';
+    return '<div class="arm-dcard"><h3>Activity mix · ' + CY + ' YTD</h3><span class="arm-sub">How the account’s visible Shipments split. Not a share of wallet.</span>' + mixH + '</div>';
   }
-  function cardGateways(m) {
-    var G = m.G; if (!G) return '<div class="arm-dcard wide"><h3>Gateway coverage</h3>' + pend('NO') + '</div>';
-    var withA = G.list.filter(function (g) { return (g.I && g.I.a) || (g.E && g.E.a); }).length;
-    var rows = G.list.map(function (g) {
-      var a = (g.I ? g.I.a : 0) + (g.E ? g.E.a : 0), t = (g.I ? g.I.t : 0) + (g.E ? g.E.t : 0);
-      var dir = g.I && g.E ? 'Bidirectional' : g.I ? 'Imports' : 'Exports';
-      var st = a === 0 ? ['ws', '○ Visible whitespace'] : a === t ? ['cap', '✓ Captured'] : ['par', '◐ Partial'];
-      var split = g.I && g.E ? '<span class="arm-dirs">Imports ' + fmt(g.I.a) + ' / ' + fmt(g.I.t) + ' · Exports ' + fmt(g.E.a) + ' / ' + fmt(g.E.t) + '</span>' : '';
-      return '<tr><td data-l="Gateway"><b>' + esc(g.n) + '</b>' + split + '</td><td data-l="Direction">' + dir + '</td><td class="num" data-l="Arcatek / visible">' + fmt(a) + ' / ' + fmt(t) + '</td><td class="num" data-l="Captured">' + pct(a, t) + '</td><td data-l="Status"><span class="arm-gst ' + st[0] + '">' + st[1] + '</span></td></tr>';
-    }).join('');
-    return '<div class="arm-dcard wide"><h3>Gateway coverage</h3><div class="arm-split">' +
-      '<div><div class="arm-kicker">Gateway presence</div><div class="arm-hero">' + withA + ' of ' + G.list.length + '</div><span class="arm-sub">Gateways with Arcatek activity. A count of gateways, not volume coverage.</span></div>' +
-      '<div><div class="arm-kicker">Volume capture across listed gateways</div><div class="arm-hero">' + pct(G.arc, G.tot) + '</div><span class="arm-sub">' + fmt(G.arc) + ' / ' + fmt(G.tot) + ' Shipments' + (G.unassigned > 0 ? ' · the AIOS assigns ' + fmt(G.unassigned) + ' further Shipments to no gateway' : '') + '</span></div></div>' +
-      '<table class="arm-gw"><thead><tr><th>Gateway</th><th>Direction</th><th class="num">Arcatek / visible</th><th class="num">Captured</th><th>Status</th></tr></thead><tbody>' + rows + '</tbody></table>' +
-      '<p class="arm-disc">Captured = every visible Shipment at the gateway uses an Arcatek patent (3468 / 1930); Partial = some; Visible whitespace = none. Source: ' + esc(G.src) + '.</p></div>';
+  /* One card: Share of Wallet (total + by direction, 2025 below each) and where it happens (gateways). */
+  function cardWallet(m) {
+    var W = m.W, G = m.G;
+    if (!W) return '<div class="arm-dcard full"><h3>Share of Wallet by gateway</h3>' + pend('NO') + '</div>';
+    var c = W.cur.T, r25 = W.fy25.T;
+    function nN(x) { return x && x.n != null ? fmt(x.n) + ' / ' + fmt(x.N) : ''; }
+    var total = '<div><div class="arm-kicker">Total</div><div class="arm-hero">' + esc(c.v) + '</div>' +
+      '<span class="arm-sub"><b>' + nN(c) + '</b> Shipments</span>' +
+      '<span class="arm-ref">2025: ' + (r25 && r25.v ? '<b>' + esc(r25.v) + '</b> <span class="arm-sub" style="display:inline">' + nN(r25) + '</span>' : 'not supplied') + '</span>' +
+      (W.pp.T ? ppChip(W.pp.T, 'vs ' + W.cmpWindow) : '<span class="arm-sub" title="The AIOS supplies no comparable 2025 window, so no change is calculated against the full year.">2025 is a reference · no comparable window</span>') + '</div>';
+    var dirs = '<div><div class="arm-kicker">By direction</div>' + ['I', 'E'].map(function (d) {
+      var x = W.cur[d], y = W.fy25[d], p = x && parsePct(x.v);
+      if (m.A.cy[d] === 'DIR') return '<div class="arm-wdir"><div class="arm-row"><span>' + dirName(d) + '</span><b>' + pend('DIR') + '</b></div></div>';
+      if (!(x && x.v) && m.A.cy[d === 'I' ? 'E' : 'I'] === 'DIR') {   /* single-direction universe: the total is this direction */
+        var pt = parsePct(c.v);
+        return '<div class="arm-wdir"><div class="arm-row"><span>' + dirName(d) + '</span><b>' + esc(c.v) + '</b></div>' + (pt ? bar(pt.x) : '') + '<span class="arm-sub">' + nN(c) + ' · ' + dirName(d) + '-only universe, same as Total</span></div>';
+      }
+      return '<div class="arm-wdir"><div class="arm-row"><span>' + dirName(d) + '</span><b>' + (x && x.v ? esc(x.v) : 'Not printed') + '</b></div>' + (p ? bar(p.x) : '') +
+        '<span class="arm-sub">' + (nN(x) ? nN(x) + ' · ' : '') + '2025: ' + (y && y.v ? '<b>' + esc(y.v) + '</b>' : 'not supplied') + (W.pp[d] ? ' · ' + ppChip(W.pp[d]) : '') + '</span></div>';
+    }).join('') + '</div>';
+    var withA = G ? G.list.filter(function (g) { return (g.I && g.I.a) || (g.E && g.E.a); }).length : null;
+    var pres = '<div><div class="arm-kicker">Gateway presence</div>' + (G ? '<div class="arm-hero">' + withA + ' of ' + G.list.length + '</div><span class="arm-sub">gateways with Arcatek activity · a count, not volume</span>' : pend('NO')) + '</div>';
+    var table = '';
+    if (G) {
+      var rows = G.list.map(function (g) {
+        var a = (g.I ? g.I.a : 0) + (g.E ? g.E.a : 0), t = (g.I ? g.I.t : 0) + (g.E ? g.E.t : 0);
+        var dir = g.I && g.E ? 'Bidirectional' : g.I ? 'Imports' : 'Exports';
+        var st = a === 0 ? ['ws', '○ Visible whitespace'] : a === t ? ['cap', '✓ Captured'] : ['par', '◐ Partial'];
+        var split = g.I && g.E ? '<span class="arm-dirs">Imports ' + fmt(g.I.a) + ' / ' + fmt(g.I.t) + ' · Exports ' + fmt(g.E.a) + ' / ' + fmt(g.E.t) + '</span>' : '';
+        return '<tr><td data-l="Gateway"><b>' + esc(g.n) + '</b>' + split + '</td><td data-l="Direction">' + dir + '</td><td class="num" data-l="Arcatek / visible">' + fmt(a) + ' / ' + fmt(t) + '</td><td class="num" data-l="Captured">' + pct(a, t) + '</td><td data-l="Status"><span class="arm-gst ' + st[0] + '">' + st[1] + '</span></td></tr>';
+      }).join('');
+      table = '<table class="arm-gw"><thead><tr><th>Gateway</th><th>Direction</th><th class="num">Arcatek / visible</th><th class="num">Captured</th><th>Status</th></tr></thead><tbody>' + rows + '</tbody></table>' +
+        (G.unassigned > 0 ? '<p class="arm-disc">The listed gateways hold ' + fmt(G.tot) + ' of ' + fmt(c.N) + ' Shipments; the AIOS assigns ' + fmt(G.unassigned) + ' to no gateway.</p>' : '');
+    }
+    return '<div class="arm-dcard full"><div class="arm-wh"><h3>Share of Wallet by gateway · Arcatek customs</h3><span class="arm-sub">' + esc(periodText(W.period)) + '</span></div>' +
+      '<div class="arm-wtop">' + total + dirs + pres + '</div>' + table +
+      '<details class="arm-why"><summary>Definitions and source</summary><ul><li>' + esc(W.basis) + '.</li><li>Captured = every visible Shipment at the gateway uses an Arcatek patent (3468 / 1930) · Partial = some · Visible whitespace = none.</li>' +
+      (G ? '<li>Source: ' + esc(G.src) + '.</li>' : '') + '</ul></details></div>';
   }
   function cardTeu(m) {
     var t = m.T; if (!t) return '<div class="arm-dcard"><h3>Visible TEU</h3>' + pend('PR') + refViz('bar') + '</div>';
@@ -125055,7 +125074,7 @@ var ARCATEK_REFERENCE = {
       '<span>KAM · ' + (kam ? esc(kam.v) : 'Pending receipt') + '</span></div></div>' +
       (e.view ? '<button type="button" class="arm-go" data-arm-view="' + esc(e.view) + '">Open complete AIOS →</button>' : '') + '</div>' +
       (m.flags.length ? '<div class="arm-flags">' + m.flags.map(flagHtml).join('') + '</div>' : '') +
-      '<div class="arm-dgrid">' + cardSow(m) + cardMix(m) + cardFin(m) + cardGateways(m) + cardProxy(m) + cardTeu(m) + '</div>';
+      '<div class="arm-dgrid">' + cardWallet(m) + cardMix(m) + cardProxy(m) + cardFin(m) + cardTeu(m) + '</div>';
   }
 
   /* ── layout concepts ── */
