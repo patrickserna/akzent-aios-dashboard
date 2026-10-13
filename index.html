@@ -35887,7 +35887,10 @@ table.ateu-t { width: 100%; border-collapse: collapse; font-size: 11.5px; }
 #view-arcatek *, #view-arcatek *::before, #view-arcatek *::after { box-sizing: border-box; }
 #view-arcatek button, #view-arcatek input, #view-arcatek select { font: inherit; color: inherit; }
 #view-arcatek :focus-visible { outline: 2px solid var(--arc-cyan); outline-offset: 2px; border-radius: 4px; }
-#view-arcatek .arc-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+/* Screen-reader-only text stays inside the view: without a positioned ancestor it was placed against the page
+   and stretched the document, so scrollIntoView scrolled the whole window and the app slid up. */
+#view-arcatek { position: relative; }
+#view-arcatek .arc-sr { position: absolute; top: 0; left: 0; width: 1px; height: 1px; margin: -1px; padding: 0; border: 0; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
 
 /* ── Hero ── */
 #view-arcatek .arc-hero { background: radial-gradient(120% 140% at 100% 0%, #173F80 0%, var(--arc-navy) 42%, var(--arc-ink) 100%); color: #fff; padding: 20px 36px 22px; }
@@ -36201,7 +36204,7 @@ table.ateu-t { width: 100%; border-collapse: collapse; font-size: 11.5px; }
   <div class="sidebar-logo">
     <div class="logo-mark" role="img" aria-label="Akzent"></div>
     <div class="logo-sub">Intelligence OS</div>
-    <div class="aios-build" id="aios-build" title="Build 208 · last updated 2026-10-13 07:43 (Mexico City)"><b>v2.208</b> · Updated 13 Oct 2026, 07:43</div>
+    <div class="aios-build" id="aios-build" title="Build 209 · last updated 2026-10-13 07:47 (Mexico City)"><b>v2.209</b> · Updated 13 Oct 2026, 07:47</div>
     <div class="aios-logo-glyph" aria-hidden="true"></div>
     <button type="button" id="aios-sb-toggle" class="aios-sb-toggle" onclick="aiosToggleSidebar()" aria-label="Collapse sidebar" aria-controls="aios-sidebar" aria-expanded="true" title="Collapse sidebar">
       <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false"><path d="M10 3.5 5.5 8 10 12.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
