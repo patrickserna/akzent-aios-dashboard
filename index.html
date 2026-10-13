@@ -36188,6 +36188,478 @@ table.ateu-t { width: 100%; border-collapse: collapse; font-size: 11.5px; }
   #view-arcatek .arc-teu-modes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 </style>
+<style id="arm-style">
+/* ═══════════════════════════════════════════════════════════════
+   DASHBOARD ARCATEK MOCKUP · re-scoped copy of #view-arcatek rules (production untouched)
+   Every rule is scoped to #view-arcatek-mockup, so no existing view, account
+   report or export is affected. Tokens mirror Dashboard 2.0.
+═══════════════════════════════════════════════════════════════ */
+#view-arcatek-mockup {
+  --arc-ink: #0A1A38;
+  --arc-navy: #0D2B5E;
+  --arc-cyan: #00B4D8;
+  --arc-cyan-ink: #007A93;
+  --arc-cyan-soft: #E3F6FA;
+  --arc-bg: #F2F4F8;
+  --arc-surface: #FFFFFF;
+  --arc-line: #E1E6EE;
+  --arc-line-2: #C9D2E0;
+  --arc-text: #0F1B2D;
+  --arc-muted: #556175;
+  --arc-faint: #8590A3;
+  --arc-ok-bg: #E6F4EA;
+  --arc-ok-ink: #1E6B34;
+  --arc-nv-bg: #FFF7E6;
+  --arc-nv-ink: #8A5A00;
+  --arc-nv-line: #E3B55C;
+  --arc-flag-bg: #FDECEA;
+  --arc-flag-ink: #A3261B;
+  --arc-flag-line: #F0A39B;
+  --arc-radius: 10px;
+  background: var(--arc-bg);
+  color: var(--arc-text);
+  min-height: 100vh;
+  font-variant-numeric: tabular-nums;
+}
+#view-arcatek-mockup *, #view-arcatek-mockup *::before, #view-arcatek-mockup *::after { box-sizing: border-box; }
+#view-arcatek-mockup button, #view-arcatek-mockup input, #view-arcatek-mockup select { font: inherit; color: inherit; }
+#view-arcatek-mockup :focus-visible { outline: 2px solid var(--arc-cyan); outline-offset: 2px; border-radius: 4px; }
+/* Screen-reader-only text stays inside the view: without a positioned ancestor it was placed against the page
+   and stretched the document, so scrollIntoView scrolled the whole window and the app slid up. */
+#view-arcatek-mockup { position: relative; }
+#view-arcatek-mockup .arc-sr { position: absolute; top: 0; left: 0; width: 1px; height: 1px; margin: -1px; padding: 0; border: 0; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+
+/* ── Hero ── */
+#view-arcatek-mockup .arc-hero { background: radial-gradient(120% 140% at 100% 0%, #173F80 0%, var(--arc-navy) 42%, var(--arc-ink) 100%); color: #fff; padding: 20px 36px 22px; }
+#view-arcatek-mockup .arc-hero-top { display: flex; align-items: center; justify-content: space-between; gap: 10px 20px; flex-wrap: wrap; }
+#view-arcatek-mockup .arc-brand { display: flex; align-items: center; gap: 14px; }
+#view-arcatek-mockup .arc-logo { display: block; width: 120px; aspect-ratio: 790 / 174; background: var(--d2-logo-dark) no-repeat left center / contain; }
+#view-arcatek-mockup .arc-brand-os { font-size: 9.5px; font-weight: 700; letter-spacing: 2.2px; text-transform: uppercase; color: rgba(255,255,255,0.55); padding-left: 14px; border-left: 1px solid rgba(255,255,255,0.18); line-height: 1.5; }
+#view-arcatek-mockup .arc-tag { font-size: 9.5px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--arc-cyan); border: 1px solid rgba(0,180,216,0.45); border-radius: 999px; padding: 4px 10px; }
+#view-arcatek-mockup .arc-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--arc-cyan); margin-top: 20px; }
+#view-arcatek-mockup .arc-hero h1 { font-size: 28px; line-height: 1.15; font-weight: 300; letter-spacing: -0.4px; margin: 6px 0 6px; color: #fff; }
+#view-arcatek-mockup .arc-hero h1 b { font-weight: 700; }
+#view-arcatek-mockup .arc-hero-sub { font-size: 12px; line-height: 1.6; color: rgba(255,255,255,0.65); max-width: 760px; margin: 0; }
+
+/* ── Body / cards ── */
+#view-arcatek-mockup .arc-body { padding: 18px 36px 36px; display: grid; gap: 16px; }
+#view-arcatek-mockup .arc-card { background: var(--arc-surface); border: 1px solid var(--arc-line); border-radius: var(--arc-radius); padding: 16px 18px; min-width: 0; }
+#view-arcatek-mockup .arc-card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 6px 14px; flex-wrap: wrap; margin-bottom: 12px; }
+#view-arcatek-mockup .arc-step { font-size: 9.5px; font-weight: 800; letter-spacing: 1.6px; text-transform: uppercase; color: var(--arc-cyan-ink); }
+#view-arcatek-mockup .arc-card h2 { font-size: 15px; font-weight: 700; color: var(--arc-navy); margin: 3px 0 0; }
+#view-arcatek-mockup .arc-note { font-size: 10.5px; line-height: 1.55; color: var(--arc-muted); }
+#view-arcatek-mockup .arc-note b { color: var(--arc-text); }
+
+/* ── KPI strip ── */
+#view-arcatek-mockup .arc-kpis { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+#view-arcatek-mockup .arc-kpi { display: block; width: 100%; text-align: left; background: var(--arc-bg); border: 1px solid var(--arc-line); border-radius: 8px; padding: 10px 12px; min-width: 0; }
+#view-arcatek-mockup button.arc-kpi { cursor: pointer; }
+#view-arcatek-mockup button.arc-kpi:hover { border-color: var(--arc-line-2); background: #fff; }
+#view-arcatek-mockup button.arc-kpi[aria-pressed="true"] { border-color: var(--arc-cyan-ink); background: var(--arc-cyan-soft); }
+#view-arcatek-mockup .arc-kpi-l { display: block; font-size: 9.5px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--arc-muted); line-height: 1.35; }
+#view-arcatek-mockup .arc-kpi-v { display: block; font-size: 26px; font-weight: 300; line-height: 1.1; margin-top: 4px; color: var(--arc-navy); }
+#view-arcatek-mockup .arc-kpi-v.is-status { font-size: 12px; font-weight: 700; margin-top: 8px; line-height: 1.3; }
+#view-arcatek-mockup .arc-kpi-p { display: block; font-size: 10.5px; color: var(--arc-muted); margin-top: 3px; line-height: 1.4; }
+#view-arcatek-mockup .arc-kpi-wide { grid-column: span 2; }
+
+/* ── Search (combobox) ── */
+#view-arcatek-mockup .arc-search-wrap { position: relative; }
+#view-arcatek-mockup .arc-search { display: flex; align-items: center; gap: 10px; border: 2px solid var(--arc-navy); border-radius: 9px; background: #fff; padding: 0 12px; }
+#view-arcatek-mockup .arc-search-ico { font-size: 17px; color: var(--arc-navy); }
+#view-arcatek-mockup .arc-search input { flex: 1; min-width: 0; border: 0; outline: 0; padding: 12px 0; font-size: 14px; background: transparent; }
+#view-arcatek-mockup .arc-search:focus-within { box-shadow: 0 0 0 3px rgba(0,180,216,0.28); }
+#view-arcatek-mockup .arc-search-clear { border: 0; background: var(--arc-bg); border-radius: 6px; padding: 4px 9px; font-size: 11px; font-weight: 700; cursor: pointer; color: var(--arc-muted); }
+#view-arcatek-mockup .arc-listbox { position: absolute; left: 0; right: 0; top: calc(100% + 4px); z-index: 40; background: #fff; border: 1px solid var(--arc-line-2); border-radius: 9px; box-shadow: 0 10px 28px rgba(13,43,94,0.16); max-height: 340px; overflow-y: auto; margin: 0; padding: 4px; list-style: none; }
+#view-arcatek-mockup .arc-opt { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 8px 10px; border-radius: 6px; cursor: pointer; font-size: 12.5px; }
+#view-arcatek-mockup .arc-opt[aria-selected="true"], #view-arcatek-mockup .arc-opt:hover { background: var(--arc-cyan-soft); }
+#view-arcatek-mockup .arc-opt-name { font-weight: 700; color: var(--arc-text); min-width: 0; overflow-wrap: anywhere; }
+#view-arcatek-mockup .arc-opt-alias { display: block; font-size: 10.5px; font-weight: 400; color: var(--arc-muted); }
+#view-arcatek-mockup .arc-opt-empty { padding: 10px; font-size: 12px; color: var(--arc-muted); }
+
+/* ── Filters ── */
+#view-arcatek-mockup .arc-filters { display: flex; align-items: center; gap: 8px 12px; flex-wrap: wrap; }
+#view-arcatek-mockup .arc-seg { display: inline-flex; flex-wrap: wrap; background: var(--arc-bg); border: 1px solid var(--arc-line); border-radius: 7px; padding: 2px; gap: 2px; }
+#view-arcatek-mockup .arc-seg button { border: 0; background: none; border-radius: 5px; padding: 5px 10px; font-size: 11px; font-weight: 600; color: var(--arc-muted); cursor: pointer; white-space: nowrap; }
+#view-arcatek-mockup .arc-seg button[aria-pressed="true"] { background: #fff; color: var(--arc-navy); box-shadow: 0 1px 2px rgba(13,43,94,0.14); }
+#view-arcatek-mockup .arc-sel { display: inline-flex; align-items: center; gap: 6px; font-size: 10px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--arc-faint); }
+#view-arcatek-mockup .arc-sel select { font-size: 11.5px; font-weight: 600; text-transform: none; letter-spacing: 0; color: var(--arc-text); border: 1px solid var(--arc-line-2); border-radius: 6px; padding: 5px 8px; background: #fff; max-width: 220px; }
+#view-arcatek-mockup .arc-sel select:disabled { color: var(--arc-faint); background: var(--arc-bg); }
+#view-arcatek-mockup .arc-count { font-size: 11.5px; color: var(--arc-muted); margin-left: auto; white-space: nowrap; }
+#view-arcatek-mockup .arc-count b { color: var(--arc-text); }
+
+/* ── Portfolio table ── */
+#view-arcatek-mockup .arc-table-wrap { margin-top: 12px; border: 1px solid var(--arc-line); border-radius: 8px; overflow: hidden; }
+#view-arcatek-mockup table.arc-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+#view-arcatek-mockup .arc-table th { text-align: left; font-size: 9.5px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--arc-muted); background: var(--arc-bg); padding: 8px 10px; border-bottom: 1px solid var(--arc-line); }
+#view-arcatek-mockup .arc-table td { padding: 8px 10px; border-bottom: 1px solid var(--arc-line); vertical-align: middle; }
+#view-arcatek-mockup .arc-table tr:last-child td { border-bottom: 0; }
+#view-arcatek-mockup .arc-table tr.is-sel td { background: var(--arc-cyan-soft); }
+#view-arcatek-mockup .arc-table tbody tr:hover td { background: #F7F9FC; }
+#view-arcatek-mockup .arc-table tbody tr.is-sel:hover td { background: var(--arc-cyan-soft); }
+#view-arcatek-mockup .arc-name-btn { border: 0; background: none; padding: 0; text-align: left; font-weight: 700; color: var(--arc-navy); cursor: pointer; overflow-wrap: anywhere; }
+#view-arcatek-mockup .arc-name-btn:hover { text-decoration: underline; }
+#view-arcatek-mockup .arc-wv { font-weight: 700; }
+#view-arcatek-mockup .arc-wp { display: block; font-size: 10px; color: var(--arc-muted); }
+#view-arcatek-mockup .arc-empty-row { padding: 16px; text-align: center; color: var(--arc-muted); font-size: 12px; }
+
+/* ── Badges (icon + text, never color alone) ── */
+#view-arcatek-mockup .arc-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 10.5px; font-weight: 700; border-radius: 999px; padding: 2px 9px; border: 1px solid transparent; white-space: nowrap; }
+#view-arcatek-mockup .arc-badge.ok { background: var(--arc-ok-bg); color: var(--arc-ok-ink); border-color: #A9D8B6; }
+#view-arcatek-mockup .arc-badge.nv { background: var(--arc-nv-bg); color: var(--arc-nv-ink); border-color: var(--arc-nv-line); }
+#view-arcatek-mockup .arc-badge.rc { background: #F1ECFB; color: #5B3A9B; border-color: #CDBDEB; }
+#view-arcatek-mockup .arc-badge.pd { background: var(--arc-bg); color: var(--arc-muted); border-color: var(--arc-line-2); }
+#view-arcatek-mockup .arc-badge.info { background: var(--arc-cyan-soft); color: var(--arc-cyan-ink); border-color: rgba(0,122,147,0.3); }
+#view-arcatek-mockup .arc-flagcount { display: inline-flex; align-items: center; gap: 4px; font-size: 10.5px; font-weight: 800; color: var(--arc-flag-ink); background: var(--arc-flag-bg); border: 1px solid var(--arc-flag-line); border-radius: 999px; padding: 2px 8px; white-space: nowrap; }
+#view-arcatek-mockup .arc-none { font-size: 10.5px; color: var(--arc-faint); }
+
+/* ── Missing-information status ── */
+#view-arcatek-mockup .arc-st { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 700; border-radius: 5px; padding: 2px 8px; border: 1px dashed var(--arc-line-2); color: var(--arc-muted); background: var(--arc-bg); }
+#view-arcatek-mockup .arc-st.no { border-color: var(--arc-nv-line); color: var(--arc-nv-ink); background: var(--arc-nv-bg); }
+#view-arcatek-mockup .arc-st.na { border-style: solid; }
+
+/* ── Review flag ── */
+#view-arcatek-mockup .arc-flag { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; font-weight: 800; color: var(--arc-flag-ink); background: var(--arc-flag-bg); border: 1px solid var(--arc-flag-line); border-radius: 6px; padding: 3px 9px; cursor: pointer; }
+#view-arcatek-mockup .arc-flag:hover { background: #FBDCD8; }
+#view-arcatek-mockup .arc-flag-body { margin-top: 6px; font-size: 11px; line-height: 1.5; color: var(--arc-text); background: #FFF8F7; border: 1px solid var(--arc-flag-line); border-left: 3px solid var(--arc-flag-ink); border-radius: 6px; padding: 8px 10px; }
+#view-arcatek-mockup .arc-flag-body .src { display: block; margin-top: 4px; font-size: 10px; color: var(--arc-muted); overflow-wrap: anywhere; }
+#view-arcatek-mockup .arc-flag-body[hidden] { display: none; }
+
+/* ── Account detail ── */
+#view-arcatek-mockup .arc-detail-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px 16px; flex-wrap: wrap; padding-bottom: 12px; border-bottom: 1px solid var(--arc-line); margin-bottom: 12px; }
+#view-arcatek-mockup .arc-detail-head h3 { font-size: 18px; font-weight: 700; color: var(--arc-navy); margin: 2px 0 4px; overflow-wrap: anywhere; }
+#view-arcatek-mockup .arc-detail-meta { font-size: 11px; color: var(--arc-muted); line-height: 1.6; }
+#view-arcatek-mockup .arc-detail-badges { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
+#view-arcatek-mockup .arc-open { background: var(--arc-navy); color: #fff; border: 0; border-radius: 6px; padding: 8px 14px; font-size: 11.5px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+#view-arcatek-mockup .arc-open:hover { background: #16397A; }
+#view-arcatek-mockup .arc-acct-flags { display: grid; gap: 8px; margin-bottom: 12px; }
+#view-arcatek-mockup .arc-groups { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; }
+#view-arcatek-mockup .arc-group { border: 1px solid var(--arc-line); border-radius: 8px; padding: 10px 12px; min-width: 0; }
+#view-arcatek-mockup .arc-group-t { font-size: 9.5px; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; color: var(--arc-cyan-ink); margin-bottom: 4px; }
+#view-arcatek-mockup .arc-field { padding: 7px 0; border-top: 1px dashed var(--arc-line); }
+#view-arcatek-mockup .arc-field:first-of-type { border-top: 0; }
+#view-arcatek-mockup .arc-field-l { display: block; font-size: 10.5px; font-weight: 700; color: var(--arc-muted); margin-bottom: 3px; }
+#view-arcatek-mockup .arc-field-v { font-size: 12.5px; font-weight: 700; color: var(--arc-text); overflow-wrap: anywhere; }
+#view-arcatek-mockup .arc-field-v .sub { display: block; font-size: 10.5px; font-weight: 400; color: var(--arc-muted); margin-top: 2px; }
+#view-arcatek-mockup .arc-field .arc-flag { margin-top: 6px; }
+#view-arcatek-mockup .arc-support { margin-top: 14px; border: 1px solid var(--arc-line); border-radius: 8px; background: var(--arc-bg); padding: 12px 14px; }
+#view-arcatek-mockup .arc-support h4 { font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--arc-navy); margin: 0 0 2px; }
+#view-arcatek-mockup .arc-support-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 8px; margin-top: 10px; }
+#view-arcatek-mockup .arc-sup { background: #fff; border: 1px solid var(--arc-line); border-radius: 7px; padding: 9px 11px; min-width: 0; }
+#view-arcatek-mockup .arc-sup-l { display: block; font-size: 10px; font-weight: 800; letter-spacing: .6px; text-transform: uppercase; color: var(--arc-muted); }
+#view-arcatek-mockup .arc-sup-v { display: block; font-size: 15px; font-weight: 700; color: var(--arc-navy); margin-top: 3px; overflow-wrap: anywhere; }
+#view-arcatek-mockup .arc-sup-p { display: block; font-size: 10.5px; color: var(--arc-muted); margin-top: 2px; line-height: 1.45; overflow-wrap: anywhere; }
+#view-arcatek-mockup table.arc-mini { width: 100%; border-collapse: collapse; font-size: 11px; margin-top: 6px; }
+#view-arcatek-mockup .arc-mini th, #view-arcatek-mockup .arc-mini td { text-align: left; padding: 4px 6px; border-bottom: 1px solid var(--arc-line); vertical-align: top; }
+#view-arcatek-mockup .arc-mini th { font-size: 9.5px; font-weight: 800; letter-spacing: .6px; text-transform: uppercase; color: var(--arc-muted); }
+#view-arcatek-mockup .arc-placeholder { font-size: 12px; color: var(--arc-muted); padding: 18px 4px; text-align: center; }
+
+/* ── Portfolio collapse ── */
+#view-arcatek-mockup .arc-collapse { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--arc-line-2); background: #fff; border-radius: 7px; padding: 5px 10px; font-size: 11px; font-weight: 700; color: var(--arc-navy); cursor: pointer; white-space: nowrap; }
+#view-arcatek-mockup .arc-collapse:hover { background: var(--arc-bg); }
+#view-arcatek-mockup .arc-collapse-sum { font-weight: 600; color: var(--arc-muted); }
+#view-arcatek-mockup .arc-collapse-sum:empty { display: none; }
+#view-arcatek-mockup .arc-collapse-i { display: inline-block; transition: transform .15s; }
+#view-arcatek-mockup .arc-collapse[aria-expanded="false"] .arc-collapse-i { transform: rotate(-90deg); }
+#view-arcatek-mockup #arc-list-body[hidden] { display: none; }
+#view-arcatek-mockup .arc-card.is-collapsed .arc-card-head { margin-bottom: 0; }
+
+/* ── Account detail · executive cockpit ── */
+#view-arcatek-mockup .arc-cockpit { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); align-items: start; }
+#view-arcatek-mockup .arc-cp { display: flex; flex-direction: column; gap: 8px; }
+#view-arcatek-mockup .arc-cp-h { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+#view-arcatek-mockup .arc-cp-h .arc-group-t { margin-bottom: 0; }
+#view-arcatek-mockup .arc-cp-big { font-size: 26px; font-weight: 300; line-height: 1.1; color: var(--arc-navy); }
+#view-arcatek-mockup .arc-cp-big small { font-size: 12px; font-weight: 600; color: var(--arc-muted); }
+#view-arcatek-mockup .arc-cp-big.is-na { font-size: 16px; font-weight: 700; color: var(--arc-muted); }
+#view-arcatek-mockup .arc-cp-big .arc-pend { font-size: 13px; }
+#view-arcatek-mockup .arc-cp-sub { font-size: 11px; color: var(--arc-muted); line-height: 1.45; overflow-wrap: anywhere; }
+#view-arcatek-mockup .arc-cp-sub b { color: var(--arc-text); }
+#view-arcatek-mockup .arc-cp-foot { font-size: 10px; color: var(--arc-faint); line-height: 1.4; }
+#view-arcatek-mockup .arc-cp-foot b { color: var(--arc-muted); }
+#view-arcatek-mockup .arc-kv-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 12px; }
+#view-arcatek-mockup .arc-kv-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 12px; }
+#view-arcatek-mockup .arc-kv { min-width: 0; }
+#view-arcatek-mockup .arc-kv-l { display: block; font-size: 10px; font-weight: 700; color: var(--arc-muted); margin-bottom: 2px; }
+#view-arcatek-mockup .arc-kv-v { display: block; font-size: 15px; font-weight: 700; color: var(--arc-navy); overflow-wrap: anywhere; }
+#view-arcatek-mockup .arc-kv-s { display: block; font-size: 10px; font-weight: 400; color: var(--arc-faint); margin-top: 1px; overflow-wrap: anywhere; }
+#view-arcatek-mockup .arc-pend { display: inline-block; font-size: 11px; font-weight: 700; color: var(--arc-muted); background: var(--arc-bg); border: 1px dashed var(--arc-line-2); border-radius: 5px; padding: 1px 7px; }
+#view-arcatek-mockup .arc-delta.up { color: var(--arc-ok-ink); }
+#view-arcatek-mockup .arc-delta.down { color: var(--arc-flag-ink); }
+#view-arcatek-mockup .is-ref .arc-delta { color: inherit; }
+/* REFERENCE: illustrative values — muted and dotted-underlined, never styled like real data */
+#view-arcatek-mockup .arc-ref { display: inline-flex; align-items: center; font-size: 8.5px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; color: #7A6A9E; background: repeating-linear-gradient(135deg, #F5F2FB 0 4px, #EEE9F8 4px 8px); border: 1px solid #D9D0EC; border-radius: 4px; padding: 1px 6px; white-space: nowrap; cursor: help; }
+#view-arcatek-mockup .is-ref { color: #7A6A9E !important; text-decoration: underline dotted rgba(122,106,158,0.55); text-underline-offset: 3px; }
+#view-arcatek-mockup .arc-legend { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 10.5px; color: var(--arc-muted); margin: 0 0 10px; }
+#view-arcatek-mockup .arc-legend > span { display: inline-flex; align-items: center; gap: 5px; }
+#view-arcatek-mockup .arc-legend b { color: var(--arc-navy); }
+#view-arcatek-mockup .arc-info { display: inline-block; font-size: 12px; font-weight: 700; color: var(--arc-cyan-ink); cursor: help; vertical-align: middle; }
+#view-arcatek-mockup .arc-chip { display: inline-block; font-size: 9.5px; font-weight: 700; color: var(--arc-muted); border: 1px solid var(--arc-line-2); border-radius: 999px; padding: 0 6px; margin-left: 4px; }
+/* Coverage gateway list */
+#view-arcatek-mockup ul.arc-gw { list-style: none; margin: 0; padding: 0; display: grid; gap: 3px; }
+#view-arcatek-mockup .arc-gw li { display: flex; align-items: center; gap: 7px; font-size: 11.5px; min-width: 0; }
+#view-arcatek-mockup .arc-gw-i { flex: none; display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; border-radius: 4px; font-size: 10px; font-weight: 800; }
+#view-arcatek-mockup .arc-gw li.on .arc-gw-i { background: var(--arc-ok-bg); color: var(--arc-ok-ink); border: 1px solid #A9D8B6; }
+#view-arcatek-mockup .arc-gw li.off .arc-gw-i { background: var(--arc-flag-bg); color: var(--arc-flag-ink); border: 1px solid var(--arc-flag-line); }
+#view-arcatek-mockup .arc-gw-n { flex: 1; min-width: 0; font-weight: 600; color: var(--arc-text); overflow-wrap: anywhere; }
+#view-arcatek-mockup .arc-gw li.off .arc-gw-n { color: var(--arc-muted); }
+#view-arcatek-mockup .arc-gw-c { flex: none; font-size: 10px; color: var(--arc-faint); }
+#view-arcatek-mockup .arc-gw.is-ref .arc-gw-n { color: #7A6A9E; }
+#view-arcatek-mockup .arc-gw-more summary { font-size: 10.5px; font-weight: 700; color: var(--arc-cyan-ink); cursor: pointer; margin-bottom: 3px; }
+/* Cross-selling */
+#view-arcatek-mockup ul.arc-cx { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+#view-arcatek-mockup .arc-cx li { display: flex; align-items: flex-start; gap: 8px; font-size: 12.5px; font-weight: 700; color: var(--arc-text); }
+#view-arcatek-mockup .arc-cx-i { flex: none; display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 4px; font-size: 11px; font-weight: 800; border: 1.5px solid var(--arc-line-2); color: var(--arc-muted); background: #fff; }
+#view-arcatek-mockup .arc-cx li.yes .arc-cx-i { background: var(--arc-ok-bg); border-color: #A9D8B6; color: var(--arc-ok-ink); }
+#view-arcatek-mockup .arc-cx li.no { color: var(--arc-muted); }
+#view-arcatek-mockup .arc-cx-st { margin-top: 2px; }
+#view-arcatek-mockup .arc-rel { display: inline-flex; align-items: center; gap: 6px; font-size: 10.5px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; border-radius: 6px; padding: 4px 10px; border: 1px solid transparent; white-space: nowrap; }
+#view-arcatek-mockup .arc-rel.group { background: var(--arc-navy); color: #fff; }
+#view-arcatek-mockup .arc-rel.group span { color: var(--arc-cyan); }
+#view-arcatek-mockup .arc-rel.arc { background: var(--arc-cyan-soft); color: var(--arc-cyan-ink); border-color: rgba(0,122,147,0.3); }
+#view-arcatek-mockup .arc-rel.pend { background: var(--arc-bg); color: var(--arc-muted); border: 1px dashed var(--arc-line-2); }
+/* Control */
+#view-arcatek-mockup .arc-trend { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; }
+#view-arcatek-mockup .arc-trend.up { color: var(--arc-ok-ink); }
+#view-arcatek-mockup .arc-trend.flat { color: var(--arc-cyan-ink); }
+#view-arcatek-mockup .arc-trend.down { color: var(--arc-flag-ink); }
+#view-arcatek-mockup .arc-trend.off { color: var(--arc-muted); }
+#view-arcatek-mockup .arc-trend.is-ref { text-decoration: none; }
+#view-arcatek-mockup svg.arc-spark { display: block; width: 100%; height: 54px; overflow: visible; }
+#view-arcatek-mockup .arc-spark .a { fill: var(--arc-cyan-soft); }
+#view-arcatek-mockup .arc-spark .l { fill: none; stroke: var(--arc-navy); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+#view-arcatek-mockup .arc-spark .d { fill: var(--arc-navy); stroke: #fff; stroke-width: 2; vector-effect: non-scaling-stroke; }
+#view-arcatek-mockup .arc-spark .h { fill: transparent; }
+#view-arcatek-mockup .arc-spark .h:hover { fill: rgba(0,180,216,0.18); }
+#view-arcatek-mockup .arc-spark.is-ref .a { fill: #F3F0FA; }
+#view-arcatek-mockup .arc-spark.is-ref .l { stroke: #9A8CBF; stroke-dasharray: 5 3; }
+#view-arcatek-mockup .arc-spark.is-ref .d { fill: #9A8CBF; }
+#view-arcatek-mockup .arc-spark-x { display: flex; justify-content: space-between; font-size: 9.5px; color: var(--arc-faint); margin-top: -4px; }
+/* Supporting information, collapsed */
+#view-arcatek-mockup details.arc-support > summary { cursor: pointer; list-style: none; display: flex; align-items: center; gap: 8px; }
+#view-arcatek-mockup details.arc-support > summary::-webkit-details-marker { display: none; }
+#view-arcatek-mockup details.arc-support > summary::before { content: '▸'; font-size: 11px; color: var(--arc-navy); transition: transform .15s; }
+#view-arcatek-mockup details.arc-support[open] > summary::before { transform: rotate(90deg); }
+#view-arcatek-mockup details.arc-support > summary h4 { margin: 0; }
+
+/* ── Account detail · validation layer ── */
+#view-arcatek-mockup .arc-head-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: flex-start; }
+#view-arcatek-mockup .arc-refresh { background: #fff; color: var(--arc-navy); border: 1px solid var(--arc-line-2); border-radius: 6px; padding: 7px 12px; font-size: 11.5px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+#view-arcatek-mockup .arc-refresh:hover { background: var(--arc-bg); }
+#view-arcatek-mockup .arc-refresh:disabled { opacity: .55; cursor: progress; }
+#view-arcatek-mockup .arc-validated { font-size: 10.5px; color: var(--arc-muted); margin-top: 6px; }
+#view-arcatek-mockup .arc-validated b.ok { color: var(--arc-ok-ink); }
+#view-arcatek-mockup .arc-validated b.warn { color: var(--arc-nv-ink); }
+#view-arcatek-mockup .arc-badge.flagged { background: var(--arc-flag-bg); color: var(--arc-flag-ink); border-color: var(--arc-flag-line); }
+#view-arcatek-mockup button.arc-badge { cursor: pointer; font-family: inherit; }
+#view-arcatek-mockup .arc-src { flex-basis: 100%; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px 18px; border: 1px solid var(--arc-line); background: var(--arc-bg); border-radius: 8px; padding: 10px 12px; }
+#view-arcatek-mockup .arc-src[hidden] { display: none; }
+#view-arcatek-mockup .arc-src ul { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 4px; }
+#view-arcatek-mockup .arc-src li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 8px; font-size: 11px; color: var(--arc-text); }
+#view-arcatek-mockup .arc-src li b { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .6px; }
+#view-arcatek-mockup .arc-src li b.ok { color: var(--arc-ok-ink); }
+#view-arcatek-mockup .arc-src li b.pd { color: var(--arc-muted); }
+#view-arcatek-mockup .arc-src li .arc-kv-s { flex-basis: 100%; }
+#view-arcatek-mockup .arc-cp-tools { display: inline-flex; align-items: center; gap: 6px; }
+#view-arcatek-mockup .arc-lin-btn { border: 1px solid var(--arc-line-2); background: #fff; color: var(--arc-cyan-ink); border-radius: 999px; width: 20px; height: 20px; font-size: 11px; font-weight: 800; line-height: 1; cursor: pointer; padding: 0; }
+#view-arcatek-mockup .arc-lin-btn[aria-expanded="true"] { background: var(--arc-cyan-soft); border-color: var(--arc-cyan-ink); }
+#view-arcatek-mockup .arc-iss { font-size: 9px; font-weight: 800; letter-spacing: .6px; text-transform: uppercase; color: var(--arc-flag-ink); background: var(--arc-flag-bg); border: 1px solid var(--arc-flag-line); border-radius: 4px; padding: 1px 6px; white-space: nowrap; }
+#view-arcatek-mockup .arc-stale { font-size: 10px; color: var(--arc-nv-ink); }
+#view-arcatek-mockup .arc-lin { border-top: 1px dashed var(--arc-line-2); padding-top: 8px; display: grid; gap: 8px; }
+#view-arcatek-mockup .arc-lin[hidden] { display: none; }
+#view-arcatek-mockup .arc-lin-t { font-size: 9px; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; color: var(--arc-navy); }
+#view-arcatek-mockup dl.arc-lin-m { display: grid; grid-template-columns: minmax(84px, max-content) minmax(0, 1fr); gap: 2px 10px; margin: 0; font-size: 10.5px; background: var(--arc-bg); border-radius: 6px; padding: 7px 9px; }
+#view-arcatek-mockup .arc-lin-m dt { color: var(--arc-muted); font-weight: 700; }
+#view-arcatek-mockup .arc-lin-m dd { margin: 0; color: var(--arc-text); overflow-wrap: anywhere; }
+#view-arcatek-mockup .arc-cx li.issue .arc-cx-i { background: var(--arc-flag-bg); border-color: var(--arc-flag-line); color: var(--arc-flag-ink); }
+#view-arcatek-mockup .arc-cx li.issue { color: var(--arc-flag-ink); }
+
+/* ── Smaller screens ── */
+@media (max-width: 900px) {
+  #view-arcatek-mockup .arc-hero { padding: 18px 18px 18px; }
+  #view-arcatek-mockup .arc-body { padding: 14px 16px 28px; }
+  #view-arcatek-mockup .arc-kpi-wide { grid-column: auto; }
+  #view-arcatek-mockup .arc-count { margin-left: 0; }
+}
+@media (max-width: 640px) {
+  #view-arcatek-mockup .arc-hero h1 { font-size: 22px; }
+  #view-arcatek-mockup .arc-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #view-arcatek-mockup .arc-kpi-v { font-size: 22px; }
+  #view-arcatek-mockup .arc-table thead { display: none; }
+  #view-arcatek-mockup .arc-table, #view-arcatek-mockup .arc-table tbody, #view-arcatek-mockup .arc-table tr, #view-arcatek-mockup .arc-table td { display: block; width: 100%; }
+  #view-arcatek-mockup .arc-table tr { border-bottom: 1px solid var(--arc-line); padding: 6px 0; }
+  #view-arcatek-mockup .arc-table td { border: 0; padding: 3px 12px; }
+  #view-arcatek-mockup .arc-table td[data-l]::before { content: attr(data-l); display: block; font-size: 9px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; color: var(--arc-faint); }
+  #view-arcatek-mockup .arc-groups { grid-template-columns: minmax(0, 1fr); }
+  #view-arcatek-mockup .arc-badge { white-space: normal; }
+  #view-arcatek-mockup .arc-sel select { max-width: 100%; }
+}
+/* ── Arcatek Dashboard · Visible Panjiva volume (TEU) panel (reads AIOS_TEU) ── */
+#view-arcatek-mockup .arc-kpi-sec { grid-column: 1 / -1; font-size: 9.5px; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; color: var(--arc-cyan-ink); margin-top: 6px; }
+#view-arcatek-mockup .arc-teu-pf { margin-top: 6px; font-size: 10.5px; color: var(--arc-muted); }
+#view-arcatek-mockup .arc-teu-pf summary { cursor: pointer; font-weight: 700; color: var(--arc-navy); }
+#view-arcatek-mockup .arc-teu-pf ul { margin: 6px 0 0 16px; line-height: 1.5; }
+#view-arcatek-mockup .arc-teu { grid-column: 1 / -1; margin-top: 10px; border: 1px solid var(--arc-line); border-left: 3px solid var(--arc-cyan); border-radius: 8px; padding: 12px 14px; background: #fff; min-width: 0; }
+#view-arcatek-mockup .arc-teu-h { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px 14px; flex-wrap: wrap; margin-bottom: 10px; }
+#view-arcatek-mockup .arc-teu-def { display: block; font-size: 10.5px; color: var(--arc-muted); margin-top: 2px; }
+#view-arcatek-mockup .arc-teu-tools { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+#view-arcatek-mockup .arc-teu-link { padding: 6px 11px; font-size: 11px; }
+#view-arcatek-mockup .arc-teu-kpis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+#view-arcatek-mockup .arc-teu-k { background: var(--arc-bg); border: 1px solid var(--arc-line); border-radius: 7px; padding: 9px 11px; min-width: 0; }
+#view-arcatek-mockup .arc-teu-k.is-ins { border-style: dashed; border-color: var(--arc-nv-line); }
+#view-arcatek-mockup .arc-teu-k .l, #view-arcatek-mockup .arc-teu-modes .l { display: block; font-size: 9.5px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--arc-muted); }
+#view-arcatek-mockup .arc-teu-k .v { display: block; font-size: 22px; font-weight: 300; color: var(--arc-navy); margin-top: 3px; line-height: 1.15; }
+#view-arcatek-mockup .arc-teu-k.is-main .v { font-weight: 600; }
+#view-arcatek-mockup .arc-teu-k .v.is-st { font-size: 13px; font-weight: 700; color: var(--arc-nv-ink); margin-top: 6px; }
+#view-arcatek-mockup .arc-teu-k .p { display: block; font-size: 10.5px; color: var(--arc-muted); margin-top: 3px; line-height: 1.4; overflow-wrap: anywhere; }
+#view-arcatek-mockup .arc-teu-modes { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 8px; }
+#view-arcatek-mockup .arc-teu-modes > div { border: 1px solid var(--arc-line); border-radius: 7px; padding: 7px 10px; min-width: 0; }
+#view-arcatek-mockup .arc-teu-modes .v { display: block; font-size: 14px; font-weight: 700; color: var(--arc-navy); margin-top: 2px; }
+#view-arcatek-mockup .arc-teu .arc-flag-wrap { margin-top: 8px; }
+#view-arcatek-mockup .arc-teu-ref { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 8px; opacity: .55; }
+#view-arcatek-mockup .arc-teu-ref .sk { display: block; height: 58px; border-radius: 7px; background: repeating-linear-gradient(135deg, var(--arc-bg) 0 8px, #E9EDF3 8px 16px); border: 1px dashed var(--arc-line-2); }
+#view-arcatek-mockup .arc-teu-ref .sk-bar { grid-column: 1 / -1; display: flex; height: 10px; border-radius: 3px; overflow: hidden; gap: 2px; }
+#view-arcatek-mockup .arc-teu-ref .sk-bar i { flex: 1; background: #DDE3EC; }
+#view-arcatek-mockup .arc-teu-act { font-size: 11px; color: var(--arc-muted); margin: 10px 0 0; }
+@media (max-width: 640px) {
+  #view-arcatek-mockup .arc-teu-kpis { grid-template-columns: minmax(0, 1fr); }
+  #view-arcatek-mockup .arc-teu-modes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* ── Dashboard Arcatek Mockup · additions (.arm-*) on top of the re-scoped arc- rules ── */
+#view-arcatek-mockup .arm-proto { display: flex; align-items: center; gap: 8px 12px; flex-wrap: wrap; background: var(--arc-nv-bg); border: 1px solid var(--arc-nv-line); border-radius: 8px; padding: 8px 12px; font-size: 11.5px; color: var(--arc-nv-ink); }
+#view-arcatek-mockup .arm-proto b { font-weight: 800; }
+#view-arcatek-mockup .arm-concepts { display: flex; align-items: center; gap: 8px 12px; flex-wrap: wrap; }
+#view-arcatek-mockup .arm-concepts .arc-seg button { padding: 6px 12px; font-size: 11.5px; }
+#view-arcatek-mockup .arm-concept-d { font-size: 11px; color: var(--arc-muted); }
+#view-arcatek-mockup .arm-flow { display: flex; flex-direction: column; gap: 16px; }
+#view-arcatek-mockup .arm-flow > [data-arm-sec] { order: 50; }
+
+/* executive summary groups */
+#view-arcatek-mockup .arm-groups { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+#view-arcatek-mockup .arm-group { background: var(--arc-bg); border: 1px solid var(--arc-line); border-radius: 8px; padding: 10px 12px; min-width: 0; }
+#view-arcatek-mockup .arm-group-h { font-size: 9.5px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--arc-muted); }
+#view-arcatek-mockup .arm-big { display: block; font-size: 24px; font-weight: 300; line-height: 1.15; color: var(--arc-navy); margin-top: 4px; }
+#view-arcatek-mockup .arm-big.is-st { font-size: 12px; font-weight: 700; margin-top: 8px; }
+#view-arcatek-mockup .arm-sub { display: block; font-size: 10.5px; color: var(--arc-muted); line-height: 1.45; margin-top: 2px; }
+#view-arcatek-mockup .arm-sub b { color: var(--arc-text); }
+#view-arcatek-mockup .arm-ref { display: block; font-size: 11.5px; color: var(--arc-text); margin-top: 6px; padding-top: 6px; border-top: 1px dashed var(--arc-line-2); }
+#view-arcatek-mockup .arm-pp { display: inline-block; font-size: 11px; font-weight: 800; border-radius: 5px; padding: 1px 6px; margin-top: 4px; }
+#view-arcatek-mockup .arm-pp.up { background: var(--arc-ok-bg); color: var(--arc-ok-ink); }
+#view-arcatek-mockup .arm-pp.dn { background: var(--arc-flag-bg); color: var(--arc-flag-ink); }
+#view-arcatek-mockup .arm-pp.eq { background: var(--arc-bg); color: var(--arc-muted); border: 1px solid var(--arc-line); }
+#view-arcatek-mockup .arm-pp.ar::before { content: none; }
+#view-arcatek-mockup .arm-mini { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 10px; margin-top: 6px; font-size: 11px; }
+#view-arcatek-mockup .arm-mini span { color: var(--arc-muted); }
+#view-arcatek-mockup .arm-mini b { display: block; color: var(--arc-text); font-size: 12.5px; }
+#view-arcatek-mockup details.arm-why { margin-top: 6px; font-size: 10.5px; color: var(--arc-muted); }
+#view-arcatek-mockup details.arm-why summary { cursor: pointer; font-weight: 700; color: var(--arc-navy); }
+#view-arcatek-mockup details.arm-why ul { margin: 4px 0 0 16px; padding: 0; line-height: 1.5; }
+
+/* filters */
+#view-arcatek-mockup .arm-filters { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px 10px; }
+#view-arcatek-mockup .arm-filters .arc-sel { display: flex; flex-direction: column; align-items: stretch; gap: 3px; }
+#view-arcatek-mockup .arm-filters .arc-sel select { width: 100%; }
+#view-arcatek-mockup .arm-chk { display: flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 600; color: var(--arc-text); padding-top: 14px; }
+#view-arcatek-mockup .arm-chk input { width: 15px; height: 15px; accent-color: var(--arc-navy); }
+#view-arcatek-mockup .arm-fbar { display: flex; align-items: center; gap: 8px 12px; flex-wrap: wrap; margin-top: 10px; }
+#view-arcatek-mockup .arm-reset { border: 1px solid var(--arc-line-2); background: #fff; border-radius: 6px; padding: 5px 10px; font-size: 11px; font-weight: 700; cursor: pointer; color: var(--arc-navy); }
+#view-arcatek-mockup .arm-scope { font-size: 10.5px; color: var(--arc-muted); }
+#view-arcatek-mockup .arm-kpis { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 8px; margin-top: 12px; }
+#view-arcatek-mockup .arm-flag-area { display: inline-block; min-width: 130px; font-size: 10px; font-weight: 800; letter-spacing: .6px; text-transform: uppercase; color: var(--arc-muted); margin-right: 8px; }
+
+/* portfolio table */
+#view-arcatek-mockup .arm-table td { vertical-align: top; }
+#view-arcatek-mockup .arm-kam { display: block; font-size: 10px; color: var(--arc-muted); margin-top: 2px; }
+#view-arcatek-mockup .arm-cellv { font-weight: 700; display: block; }
+#view-arcatek-mockup .arm-cellp { display: block; font-size: 10px; color: var(--arc-muted); line-height: 1.4; }
+#view-arcatek-mockup .arm-open { border: 1px solid var(--arc-navy); background: #fff; color: var(--arc-navy); border-radius: 6px; padding: 4px 9px; font-size: 11px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+#view-arcatek-mockup .arm-open:hover, #view-arcatek-mockup .arm-open[aria-pressed="true"] { background: var(--arc-navy); color: #fff; }
+#view-arcatek-mockup .arm-pend { display: inline-flex; align-items: center; gap: 4px; font-size: 10.5px; font-weight: 700; color: var(--arc-muted); border: 1px dashed var(--arc-line-2); border-radius: 5px; padding: 1px 7px; background: var(--arc-bg); white-space: nowrap; }
+#view-arcatek-mockup .arm-pend.no { color: var(--arc-nv-ink); border-color: var(--arc-nv-line); background: var(--arc-nv-bg); }
+#view-arcatek-mockup .arm-pend.dir { color: #5B3A9B; border-color: #CDBDEB; background: #F5F1FC; }
+#view-arcatek-mockup .arm-pend.ins { color: var(--arc-nv-ink); border-color: var(--arc-nv-line); background: #fff; }
+
+/* attention (concept C) */
+#view-arcatek-mockup .arm-att { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; }
+#view-arcatek-mockup .arm-att-col { border: 1px solid var(--arc-line); border-radius: 8px; padding: 10px 12px; min-width: 0; background: #fff; }
+#view-arcatek-mockup .arm-att-col h3 { font-size: 11px; font-weight: 800; letter-spacing: .6px; text-transform: uppercase; color: var(--arc-navy); margin: 0 0 2px; }
+#view-arcatek-mockup .arm-att-col p { font-size: 10.5px; color: var(--arc-muted); margin: 0 0 8px; line-height: 1.45; }
+#view-arcatek-mockup .arm-att-col ol { margin: 0; padding: 0; list-style: none; display: grid; gap: 4px; }
+#view-arcatek-mockup .arm-att-col li button { width: 100%; display: flex; justify-content: space-between; gap: 8px; border: 0; background: var(--arc-bg); border-radius: 6px; padding: 5px 8px; font-size: 11px; text-align: left; cursor: pointer; color: var(--arc-text); }
+#view-arcatek-mockup .arm-att-col li button:hover { background: var(--arc-cyan-soft); }
+#view-arcatek-mockup .arm-att-col li b { white-space: nowrap; }
+#view-arcatek-mockup .arm-att-col .arm-empty { font-size: 11px; color: var(--arc-muted); }
+
+/* account detail */
+#view-arcatek-mockup .arm-dhead { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px 16px; flex-wrap: wrap; }
+#view-arcatek-mockup .arm-dname { font-size: 17px; font-weight: 700; color: var(--arc-navy); margin: 0; overflow-wrap: anywhere; }
+#view-arcatek-mockup .arm-dmeta { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; align-items: center; font-size: 11px; color: var(--arc-muted); }
+#view-arcatek-mockup .arm-go { border: 0; background: var(--arc-navy); color: #fff; border-radius: 7px; padding: 8px 14px; font-size: 12px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+#view-arcatek-mockup .arm-go:hover { background: var(--arc-ink); }
+#view-arcatek-mockup .arm-dgrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 12px; }
+#view-arcatek-mockup .arm-dcard { border: 1px solid var(--arc-line); border-radius: 8px; padding: 12px 14px; background: #fff; min-width: 0; }
+#view-arcatek-mockup .arm-dcard.wide { grid-column: span 2; }
+#view-arcatek-mockup .arm-dcard.full { grid-column: 1 / -1; }
+#view-arcatek-mockup .arm-dcard h3 { font-size: 10px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--arc-muted); margin: 0 0 6px; }
+#view-arcatek-mockup .arm-hero { font-size: 28px; font-weight: 300; color: var(--arc-navy); line-height: 1.1; }
+#view-arcatek-mockup .arm-split { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+#view-arcatek-mockup .arm-split > div { min-width: 0; }
+#view-arcatek-mockup .arm-bar { height: 7px; background: var(--arc-line); border-radius: 4px; overflow: hidden; margin-top: 4px; }
+#view-arcatek-mockup .arm-bar i { display: block; height: 100%; background: var(--arc-cyan-ink); }
+#view-arcatek-mockup .arm-bar.mix i { background: var(--arc-navy); }
+#view-arcatek-mockup .arm-row { display: flex; justify-content: space-between; gap: 8px; font-size: 12px; margin-top: 6px; }
+#view-arcatek-mockup .arm-row span { color: var(--arc-muted); }
+#view-arcatek-mockup .arm-row b { white-space: nowrap; }
+#view-arcatek-mockup .arm-kicker { font-size: 9.5px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; color: var(--arc-cyan-ink); margin: 10px 0 2px; }
+#view-arcatek-mockup .arm-kicker:first-child { margin-top: 0; }
+#view-arcatek-mockup .arm-gw { width: 100%; border-collapse: collapse; font-size: 11.5px; margin-top: 8px; }
+#view-arcatek-mockup .arm-gw th { text-align: left; font-size: 9px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; color: var(--arc-muted); border-bottom: 1px solid var(--arc-line); padding: 5px 6px; }
+#view-arcatek-mockup .arm-gw td { border-bottom: 1px solid var(--arc-line); padding: 6px; vertical-align: top; }
+#view-arcatek-mockup .arm-gw tr:last-child td { border-bottom: 0; }
+#view-arcatek-mockup .arm-gw .num { text-align: right; white-space: nowrap; }
+#view-arcatek-mockup .arm-gst { display: inline-flex; align-items: center; gap: 4px; font-size: 10px; font-weight: 800; border-radius: 999px; padding: 1px 8px; white-space: nowrap; border: 1px solid transparent; }
+#view-arcatek-mockup .arm-gst.cap { background: var(--arc-ok-bg); color: var(--arc-ok-ink); border-color: #A9D8B6; }
+#view-arcatek-mockup .arm-gst.par { background: var(--arc-cyan-soft); color: var(--arc-cyan-ink); border-color: rgba(0,122,147,0.3); }
+#view-arcatek-mockup .arm-gst.ws { background: var(--arc-nv-bg); color: var(--arc-nv-ink); border-color: var(--arc-nv-line); }
+#view-arcatek-mockup .arm-dirs { display: block; font-size: 10px; color: var(--arc-muted); }
+#view-arcatek-mockup .arm-modes { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; margin-top: 8px; }
+#view-arcatek-mockup .arm-modes div { background: var(--arc-bg); border-radius: 6px; padding: 6px 8px; font-size: 10px; color: var(--arc-muted); min-width: 0; }
+#view-arcatek-mockup .arm-modes b { display: block; font-size: 12.5px; color: var(--arc-text); }
+#view-arcatek-mockup .arm-link { border: 0; background: none; padding: 0; color: var(--arc-cyan-ink); font-weight: 700; font-size: 11.5px; cursor: pointer; text-decoration: underline; margin-top: 8px; }
+#view-arcatek-mockup .arm-disc { font-size: 10.5px; color: var(--arc-muted); line-height: 1.5; margin-top: 8px; }
+#view-arcatek-mockup .arm-disc b { color: var(--arc-text); }
+#view-arcatek-mockup .arm-flags { display: grid; gap: 6px; margin-top: 8px; }
+
+/* reference illustration for data that has not been received (no values) */
+#view-arcatek-mockup .arm-refviz { position: relative; border: 1px dashed var(--arc-line-2); border-radius: 8px; padding: 10px 12px; background: repeating-linear-gradient(135deg, #fff 0 10px, #F7F9FC 10px 20px); }
+#view-arcatek-mockup .arm-refviz svg { display: block; width: 100%; height: 64px; }
+#view-arcatek-mockup .arm-refviz .tag { position: absolute; top: 8px; right: 10px; font-size: 9px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--arc-faint); }
+#view-arcatek-mockup .arm-fin { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+#view-arcatek-mockup .arm-fin > div { min-width: 0; }
+#view-arcatek-mockup .arm-fin .l { display: block; font-size: 9.5px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--arc-muted); }
+#view-arcatek-mockup .arm-fin .v { display: block; font-size: 20px; font-weight: 300; color: var(--arc-navy); margin-top: 3px; }
+
+@media (max-width: 1100px) {
+  #view-arcatek-mockup .arm-kpis { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  #view-arcatek-mockup .arm-groups { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #view-arcatek-mockup .arm-dgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #view-arcatek-mockup .arm-dcard.wide { grid-column: 1 / -1; }
+}
+@media (max-width: 640px) {
+  #view-arcatek-mockup .arm-groups, #view-arcatek-mockup .arm-dgrid, #view-arcatek-mockup .arm-fin, #view-arcatek-mockup .arm-split { grid-template-columns: minmax(0, 1fr); }
+  #view-arcatek-mockup .arm-modes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #view-arcatek-mockup .arm-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #view-arcatek-mockup .arm-filters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #view-arcatek-mockup .arm-gw thead { display: none; }
+  #view-arcatek-mockup .arm-gw tr { display: block; border-bottom: 1px solid var(--arc-line); padding: 4px 0; }
+  #view-arcatek-mockup .arm-gw td { display: flex; justify-content: space-between; border: 0; padding: 2px 4px; }
+  #view-arcatek-mockup .arm-gw td[data-l]::before { content: attr(data-l); font-size: 9px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; color: var(--arc-faint); }
+  #view-arcatek-mockup .arm-gw .num { text-align: left; }
+}
+@media print {
+  #view-arcatek-mockup .arm-proto, #view-arcatek-mockup .arm-concepts, #view-arcatek-mockup .arm-filters, #view-arcatek-mockup .arm-fbar, #view-arcatek-mockup .arc-search-wrap { display: none !important; }
+}
+</style>
 <script>
 /* AIOS · Sidebar state — applied before first paint so a collapsed rail never flashes open. */
 (function () {
@@ -36204,7 +36676,7 @@ table.ateu-t { width: 100%; border-collapse: collapse; font-size: 11.5px; }
   <div class="sidebar-logo">
     <div class="logo-mark" role="img" aria-label="Akzent"></div>
     <div class="logo-sub">Intelligence OS</div>
-    <div class="aios-build" id="aios-build" title="Build 209 · last updated 2026-10-13 07:47 (Mexico City)"><b>v2.209</b> · Updated 13 Oct 2026, 07:47</div>
+    <div class="aios-build" id="aios-build" title="Build 210 · last updated 2026-10-13 08:05 (Mexico City)"><b>v2.210</b> · Updated 13 Oct 2026, 08:05</div>
     <div class="aios-logo-glyph" aria-hidden="true"></div>
     <button type="button" id="aios-sb-toggle" class="aios-sb-toggle" onclick="aiosToggleSidebar()" aria-label="Collapse sidebar" aria-controls="aios-sidebar" aria-expanded="true" title="Collapse sidebar">
       <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false"><path d="M10 3.5 5.5 8 10 12.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -36229,6 +36701,10 @@ table.ateu-t { width: 100%; border-collapse: collapse; font-size: 11.5px; }
     <div class="nav-item" onclick="showView('view-arcatek', this)">
       <span>▣</span> <span style="flex:1;">Arcatek Dashboard</span>
       <span class="d2-nav-new">NEW</span>
+    </div>
+    <div class="nav-item" onclick="showView('view-arcatek-mockup', this)">
+      <span>▤</span> <span style="flex:1;">Dashboard Arcatek Mockup</span>
+      <span class="d2-nav-new">MOCKUP</span>
     </div>
     <div class="nav-item" onclick="showView('view-network', this)">
       <span>◈</span> Network Intelligence
@@ -40180,6 +40656,107 @@ table.ateu-t { width: 100%; border-collapse: collapse; font-size: 11.5px; }
       </div>
       <div id="arc-detail-body"><p class="arc-placeholder">Select an account from the search or the portfolio list.</p></div>
     </section>
+  </div>
+</div>
+
+<!-- ══ DASHBOARD ARCATEK MOCKUP · design proposal for review (parallel view; the production Arcatek Dashboard above is untouched) ══ -->
+<div id="view-arcatek-mockup" class="view" aria-labelledby="arm-title">
+  <header class="arc-hero">
+    <div class="arc-hero-top">
+      <div class="arc-brand">
+        <span class="arc-logo" role="img" aria-label="Akzent"></span>
+        <span class="arc-brand-os">Intelligence OS<br>Dashboard Arcatek Mockup</span>
+      </div>
+      <span class="arc-tag">Mockup · for review</span>
+    </div>
+    <div class="arc-eyebrow">Customs agency portfolio · design proposal</div>
+    <h1 id="arm-title"><b>Dashboard Arcatek</b> Mockup</h1>
+    <p class="arc-hero-sub" id="arm-hero-sub">The same Arcatek registry, AIOS facts and TEU records as the production Arcatek Dashboard, with an expanded layout. Nothing on this page is calculated separately.</p>
+  </header>
+
+  <div class="arc-body">
+    <div class="arm-proto" role="note"><b>Mockup for review.</b> The production <button type="button" class="arm-link" style="margin:0;" data-arm-view="view-arcatek">Arcatek Dashboard</button> stays in place and is unchanged. This page will not replace it without your approval.</div>
+
+    <section class="arc-card" aria-labelledby="arm-concept-h">
+      <div class="arc-card-head">
+        <div><div class="arc-step">Design concept</div><h2 id="arm-concept-h">Choose a layout to review</h2></div>
+      </div>
+      <div class="arm-concepts">
+        <div class="arc-seg" role="group" aria-label="Design concept" id="arm-concepts"></div>
+        <span class="arm-concept-d" id="arm-concept-d" aria-live="polite"></span>
+      </div>
+    </section>
+
+    <div class="arm-flow" id="arm-flow">
+      <section class="arc-card" data-arm-sec="exec" aria-labelledby="arm-exec-h">
+        <div class="arc-card-head">
+          <div><div class="arc-step" data-arm-step="exec"></div><h2 id="arm-exec-h">Executive summary</h2></div>
+          <span class="arc-note" id="arm-exec-note"></span>
+        </div>
+        <div class="arm-groups" id="arm-exec"></div>
+      </section>
+
+      <section class="arc-card" data-arm-sec="attention" aria-labelledby="arm-att-h" hidden>
+        <div class="arc-card-head">
+          <div><div class="arc-step" data-arm-step="attention"></div><h2 id="arm-att-h">Accounts requiring attention</h2></div>
+          <span class="arc-note">Follows the active filters.</span>
+        </div>
+        <div class="arm-att" id="arm-att"></div>
+      </section>
+
+      <section class="arc-card" data-arm-sec="filters" aria-labelledby="arm-f-h">
+        <div class="arc-card-head">
+          <div><div class="arc-step" data-arm-step="filters"></div><h2 id="arm-f-h">Find an account, filter the portfolio</h2></div>
+        </div>
+        <div class="arc-search-wrap">
+          <div class="arc-search">
+            <span class="arc-search-ico" aria-hidden="true">⌕</span>
+            <label class="arc-sr" for="arm-q">Search Arcatek clients by name or legal entity</label>
+            <input id="arm-q" type="text" autocomplete="off" spellcheck="false" placeholder="Type a client name or legal entity…"
+                   role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="arm-listbox">
+            <button type="button" class="arc-search-clear" id="arm-q-clear" hidden>Clear</button>
+          </div>
+          <ul class="arc-listbox" id="arm-listbox" role="listbox" aria-label="Matching Arcatek clients" hidden></ul>
+        </div>
+        <p class="arc-note" id="arm-search-note" style="margin:8px 0 12px;"></p>
+        <div class="arm-filters" id="arm-filters">
+          <label class="arc-sel">Seller / KAM <select id="arm-f-kam"></select></label>
+          <label class="arc-sel">Year <select id="arm-f-year"></select></label>
+          <label class="arc-sel">Month / period <select id="arm-f-per"></select></label>
+          <label class="arc-sel">Account status <select id="arm-f-rel"></select></label>
+          <label class="arc-sel">Imports / Exports <select id="arm-f-dir"></select></label>
+          <label class="arc-sel">Financial data <select id="arm-f-fin"></select></label>
+          <label class="arc-sel">TEU status <select id="arm-f-teu"></select></label>
+          <label class="arm-chk"><input type="checkbox" id="arm-f-flag"> Only accounts with review flags</label>
+        </div>
+        <div class="arm-fbar">
+          <button type="button" class="arm-reset" id="arm-reset">Reset filters</button>
+          <span class="arm-scope" id="arm-scope"></span>
+          <span class="arc-count" id="arm-count" aria-live="polite"></span>
+        </div>
+        <div class="arm-kpis" id="arm-kpis"></div>
+      </section>
+
+      <section class="arc-card" data-arm-sec="table" aria-labelledby="arm-t-h">
+        <div class="arc-card-head">
+          <div><div class="arc-step" data-arm-step="table"></div><h2 id="arm-t-h">Arcatek clients</h2></div>
+          <span class="arc-note">Select a row to open its detail below. The complete AIOS opens from the detail.</span>
+        </div>
+        <div class="arc-table-wrap">
+          <table class="arc-table arm-table">
+            <thead><tr><th scope="col">Legal entity · KAM</th><th scope="col">Status</th><th scope="col">Current activity</th><th scope="col">Share of Wallet</th><th scope="col">TEU</th><th scope="col">Financials</th><th scope="col">Review</th><th scope="col"><span class="arc-sr">Action</span></th></tr></thead>
+            <tbody id="arm-rows"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="arc-card" data-arm-sec="detail" id="arm-detail" aria-labelledby="arm-d-h" tabindex="-1">
+        <div class="arc-card-head">
+          <div><div class="arc-step" data-arm-step="detail"></div><h2 id="arm-d-h">Account detail</h2></div>
+        </div>
+        <div id="arm-detail-body"><p class="arc-placeholder">Select an account from the search, the table or the attention lists.</p></div>
+      </section>
+    </div>
   </div>
 </div>
 
@@ -121049,6 +121626,7 @@ const ACCOUNTS = [
 const MODULES = [
   { id:'view-dashboard2',  name:'Dashboard 2.0',        sub:'Executive Portfolio Intelligence · management view' },
   { id:'view-arcatek',     name:'Arcatek Dashboard',    sub:'Arcatek current-client portfolio · customs agency' },
+  { id:'view-arcatek-mockup', name:'Dashboard Arcatek Mockup', sub:'Design proposal for review · Arcatek portfolio' },
   { id:'view-network',     name:'Network Intelligence', sub:'Cross-account analysis · Lane overlap' },
   { id:'view-methodology', name:'Methodology',          sub:'AIOS intelligence workflow'            },
   { id:'view-scoring',     name:'Scoring Model',        sub:'AAA / AA / A classification framework' },
@@ -122753,6 +123331,59 @@ var ARCATEK_GATEWAYS = {
   'mekra': { listed: 1207, den: 1263, list: [['Nuevo Laredo', 0, 600], ['Monterrey / General Mariano Escobedo', 0, 244], ['Colombia, Nuevo León', 126, 160], ['Manzanillo', 0, 103], ['Aeropuerto Internacional General Mariano Escobedo', 0, 60], ['Altamira', 40, 40]] }
 };
 
+/* ── Share of Wallet numerators / denominators as printed by each AIOS view (13-Oct-2026 read) ──
+   Read by the Dashboard Arcatek Mockup. The percentages stay in D2_FACTS[view].cw;
+   these are only the n / N each AIOS prints beside them, checked at load against
+   that %. cur = 2026 YTD by direction · fy25 = 2025 calendar year · cmp = the
+   AIOS comparable 2025 window (window as printed). [n, N] or { v } when the AIOS
+   prints a % without n / N. Absent = the AIOS does not print it.
+   Two N values are read from the same AIOS outside the wallet line: woco-tech
+   cmp I/E (Jan–Jul 2025 universe table) and doga fy25 I/E (2025 patent charts). */
+var ARCATEK_WALLET_SCOPES = {
+  'pipsa': { cur: {I: [1665, 1736], E: [851, 1034]}, fy25: {T: [4115, 4821], I: [2751, 3190], E: [1364, 1631]} },
+  'borgwarner': { cur: {I: [325, 888], E: [103, 352]}, fy25: {T: [736, 2479]} },
+  'haldex': { cur: {I: [245, 287], E: [73, 129]}, fy25: {T: [1334, 1835]}, cmp: {T: [759, 1073], window: "Equivalent Jan–Jul 2025"} },
+  'kitchen': { cur: {I: [79, 401], E: [652, 1057]}, fy25: {T: [1192, 2612], I: [138, 709], E: [1054, 1903]}, cmp: {T: [750, 1600], I: [84, 438], E: [666, 1162], window: "Jan–Jul 2025"} },
+  'phinia': { cur: {I: [17, 23], E: [0, 84]}, fy25: {T: [25, 225], I: [25, 39], E: [0, 186]} },
+  'woco-aps': { cur: {I: [59, 126], E: [191, 361]}, fy25: {T: [624, 1060]}, cmp: {T: [376, 639], window: "Jan–Jul 2025 · comparable period"} },
+  'liebherr': { cur: {I: [30, 199], E: [40, 76]}, fy25: {T: [120, 632], I: [35, 465], E: [85, 167]} },
+  'enerpres': { fy25: {T: [555, 571]} },
+  'lincoln': { cur: {I: [281, 630], E: [145, 484]}, fy25: {T: [763, 1863], I: [511, 1126], E: [252, 737]} },
+  'siete-leguas': { cur: {I: [40, 239], E: [35, 91]}, fy25: {T: [103, 515], I: {v: "12.8%"}, E: {v: "36.8%"}} },
+  'woco-tech': { cur: {I: [53, 626], E: [20, 618]}, fy25: {T: [154, 1791]}, cmp: {T: [81, 986], I: [43, 506], E: [38, 480], window: "Jan–Jul 2025 · comparable period"} },
+  'cemm': { cur: {I: [183, 1551], E: [124, 1113]}, cmp: {T: [311, 2262], window: "Equivalent Jan–Jul 2025"} },
+  'grupo-essex': { cur: {I: [8, 9], E: [0, 13]}, fy25: {T: [15, 43]} },
+  'doga': { cur: {I: [8, 41], E: [36, 46]}, fy25: {T: [49, 92], I: [9, 34], E: [40, 58]} },
+  'brahm': { cur: {I: [18, 69], E: [84, 129]}, fy25: {T: [220, 308], I: [26, 81], E: [194, 227]}, cmp: {T: [147, 202], I: [19, 53], E: [128, 149], window: "Like-for-like 2025 · Jan 1–Aug 27"} },
+  'busman': { cur: {I: [4, 9], E: [0, 7]}, fy25: {T: [16, 38], I: [16, 26], E: [0, 12]} },
+  'mekra': { cur: {I: [23, 444], E: [143, 819]}, fy25: {T: [183, 2095], I: [0, 865], E: [183, 1230]} }
+};
+
+/* ── Gateway × direction rows (13-Oct-2026 read of each AIOS "Customs Wallet by Gateway") ──
+   [gateway as labelled by the AIOS, 'I' | 'E', Arcatek-patent Shipments (3468 + 1930),
+   all visible PJ Shipments], current YTD, same universe as the Customs Shared Wallet.
+   Arcatek sums equal wallet.num for all 17. Read by the Dashboard Arcatek Mockup;
+   the production dashboard keeps reading ARCATEK_GATEWAYS. */
+var ARCATEK_GATEWAY_DIRS = {
+  'pipsa': { src: "view-pipsa · Ch.15 Customs Wallet by Gateway — Import / Export Customs Wallet by Gateway tables (cross-checked with Gateway conditions · Current YTD cards and Patent × Gateway evidence table)", rows: [["Colombia, Nuevo León", "I", 1665, 1732], ["Colombia, Nuevo León", "E", 784, 784], ["Nuevo Laredo, Tamaulipas", "E", 67, 250], ["Manzanillo, Colima", "I", 0, 4]] },
+  'borgwarner': { src: "view-borgwarner · Customs Wallet by Gateway — all gateways (Imports / Exports groups)", rows: [["Nuevo Laredo", "I", 304, 327], ["Puebla", "I", 0, 204], ["Querétaro", "I", 0, 167], ["Manzanillo", "I", 0, 127], ["Altamira", "I", 21, 21], ["Felipe Ángeles Airport (AIFA)", "I", 0, 17], ["Guadalajara (Tlajomulco)", "I", 0, 14], ["Mexico City Airport (AICM)", "I", 0, 11], ["Nuevo Laredo", "E", 103, 211], ["Colombia, Nuevo León", "E", 0, 50], ["Querétaro", "E", 0, 28], ["Piedras Negras", "E", 0, 23], ["Tijuana", "E", 0, 21], ["Toluca (San Cayetano Morelos)", "E", 0, 14], ["Mexico City Airport (AICM)", "E", 0, 2], ["Felipe Ángeles Airport (AIFA)", "E", 0, 1], ["Guadalajara (Tlajomulco)", "E", 0, 1], ["Puebla", "E", 0, 1]] },
+  'haldex': { src: "view-haldex · Ch.05 Customs Wallet by Gateway (Imports — 287 / Exports — 129)", rows: [["Colombia", "I", 155, 155], ["Nuevo Laredo", "I", 90, 90], ["Mariano Escobedo Airport", "I", 0, 27], ["Puebla", "I", 0, 7], ["Lazaro Cardenas", "I", 0, 5], ["Manzanillo", "I", 0, 3], ["Nuevo Laredo", "E", 33, 36], ["Colombia", "E", 28, 28], ["Mariano Escobedo Airport", "E", 0, 22], ["Monterrey", "E", 0, 22], ["Altamira", "E", 12, 12], ["Manzanillo", "E", 0, 6], ["Mexicali", "E", 0, 2], ["AIFA", "E", 0, 1]] },
+  'kitchen': { src: "view-kitchen · Ch.05 Customs Wallet by Gateway — material rows (Exports / Imports groups)", rows: [["Nuevo Laredo, Tamaulipas", "E", 652, 652], ["Colombia, Nuevo León", "E", 0, 109], ["Querétaro", "E", 0, 61], ["Guadalajara (Tlajomulco)", "E", 0, 45], ["Altamira", "E", 0, 33], ["Manzanillo", "E", 0, 33], ["Felipe Ángeles Airport (AIFA)", "E", 0, 32], ["Veracruz", "E", 0, 27], ["Mexico City Airport (AICM)", "E", 0, 21], ["Monterrey (Gral. Mariano Escobedo)", "E", 0, 16], ["Ciudad Hidalgo, Chiapas", "E", 0, 11], ["Ciudad Reynosa", "E", 0, 7], ["Puebla", "E", 0, 7], ["Colombia, Nuevo León", "I", 79, 284], ["Nuevo Laredo, Tamaulipas", "I", 0, 54], ["Mexico City Airport (AICM)", "I", 0, 22], ["Manzanillo", "I", 0, 12], ["Querétaro", "I", 0, 9], ["Altamira", "I", 0, 9], ["Felipe Ángeles Airport (AIFA)", "I", 0, 9]], issues: ["The AIOS shows two current-YTD gateway tables that disagree (Customs Wallet by Gateway vs Patent × Direction × Gateway, e.g. Colombia 393 vs 390). These rows follow Customs Wallet by Gateway, which assigns 1,453 of 1,458 Shipments; the production Arcatek Dashboard gateway list follows the other table."] },
+  'phinia': { src: "view-phinia · Customs Wallet by Gateway — all gateways", rows: [["Colombia", "I", 17, 17], ["Monterrey / General Mariano Escobedo", "I", 0, 6], ["Colombia", "E", 0, 25], ["Monterrey", "E", 0, 12], ["Nuevo Laredo", "E", 0, 12], ["Ciudad Juárez", "E", 0, 11], ["Nogales", "E", 0, 9], ["Ciudad de México", "E", 0, 7], ["San Luis Potosí", "E", 0, 6], ["Toluca", "E", 0, 2]] },
+  'woco-aps': { src: "view-woco-aps · Customs Wallet by Gateway / Direction · 2026 YTD (all 20 gateway-direction rows)", rows: [["Colombia", "E", 126, 126], ["Colombia", "I", 2, 2], ["Nuevo Laredo", "E", 64, 113], ["Nuevo Laredo", "I", 56, 56], ["Ciudad Hidalgo", "E", 0, 49], ["Manzanillo", "E", 0, 20], ["Manzanillo", "I", 0, 20], ["Queretaro", "I", 0, 17], ["Queretaro", "E", 0, 12], ["Zaragoza-Isleta · Cd. Juárez", "E", 0, 27], ["Veracruz", "I", 0, 14], ["AIFA", "I", 0, 10], ["AIFA", "E", 0, 4], ["Guadalajara", "E", 0, 8], ["Guadalajara", "I", 0, 1], ["Mexico City Airport", "I", 0, 4], ["Altamira", "E", 1, 1], ["Altamira", "I", 1, 1], ["Toluca", "E", 0, 1], ["Ciudad Juárez", "I", 0, 1]] },
+  'liebherr': { src: "view-liebherr · Ch05 'Customs Wallet by Gateway — definitive table' (2026 YTD through Jul 31), grouped Imports/Exports", rows: [["Manzanillo", "I", 0, 132], ["Altamira", "I", 30, 30], ["Monterrey Airport", "I", 0, 19], ["Nuevo Laredo", "I", 0, 16], ["Puebla", "I", 0, 2], ["Altamira", "E", 40, 40], ["Colombia", "E", 0, 29], ["Monterrey", "E", 0, 6], ["Nuevo Laredo", "E", 0, 1]] },
+  'enerpres': { src: "view-enerpres · Ch05 'Customs Wallet by Gateway · Current YTD' (Gateway × Direction table)", rows: [["Nuevo Laredo", "I", 329, 329], ["Matamoros", "I", 0, 57]] },
+  'lincoln': { src: "view-lincoln-electric · 'Customs Wallet by Gateway' table (Gateway / Direction rows) under Material Patent Portfolio · 2026 YTD", rows: [["Colombia", "I", 281, 287], ["Colombia", "E", 106, 106], ["Nuevo Laredo", "I", 0, 247], ["Nuevo Laredo", "E", 39, 66], ["MTY Airport", "E", 0, 271], ["Manzanillo", "I", 0, 74], ["Altamira", "I", 0, 19]] },
+  'siete-leguas': { src: "view-siete-leguas · Ch05 'Customs Wallet by Gateway · Current YTD' (Gateway × Direction table)", rows: [["Monterrey Airport", "I", 0, 129], ["Altamira", "I", 16, 54], ["Colombia, NL", "I", 24, 27], ["AICM", "I", 0, 14], ["Manzanillo", "I", 0, 9], ["Nuevo Laredo", "I", 0, 5], ["AIFA", "I", 0, 1], ["Colombia, NL", "E", 34, 34], ["AIFA", "E", 0, 34], ["Monterrey Airport", "E", 0, 22], ["Altamira", "E", 1, 1]] },
+  'woco-tech': { src: "view-woco · 'Customs Wallet by Gateway · 2026 YTD' (Imports · 626 / Exports · 618 sub-tables)", rows: [["Queretaro", "I", 0, 153], ["Manzanillo", "I", 0, 92], ["Mexico City Airport", "I", 0, 88], ["Veracruz", "I", 0, 83], ["Guanajuato / Silao", "I", 0, 77], ["Nuevo Laredo", "I", 53, 72], ["AIFA", "I", 0, 39], ["Altamira", "I", 0, 15], ["Puebla", "I", 0, 7], ["Nuevo Laredo", "E", 20, 225], ["Queretaro", "E", 0, 140], ["Manzanillo", "E", 0, 76], ["Veracruz", "E", 0, 64], ["Colombia", "E", 0, 43], ["Piedras Negras", "E", 0, 26], ["Altamira", "E", 0, 18], ["Mexico City Airport", "E", 0, 6], ["Guanajuato / Silao", "E", 0, 6], ["Monterrey / Escobedo", "E", 0, 5], ["AIFA", "E", 0, 4], ["Puebla", "E", 0, 4], ["Toluca", "E", 0, 1]] },
+  'cemm': { src: "view-cemm · Ch05 'Customs Wallet by Gateway · Current YTD' (Imports / Exports sub-tables, Arcatek / Total)", rows: [["Colombia", "I", 117, 117], ["Nuevo Laredo", "I", 66, 373], ["Mariano Escobedo Airport", "I", 0, 426], ["Altamira", "I", 0, 215], ["Monterrey", "I", 0, 152], ["Puebla", "I", 0, 146], ["Manzanillo", "I", 0, 79], ["Colombia", "E", 124, 172], ["Nuevo Laredo", "E", 0, 307], ["Monterrey", "E", 0, 269], ["Mariano Escobedo Airport", "E", 0, 240], ["Altamira", "E", 0, 49], ["Manzanillo", "E", 0, 34]] },
+  'grupo-essex': { src: "view-grupo-essex · Customs Wallet by Gateway · Current YTD (cross-checked with Patent × Direction × Gateway · Current YTD)", rows: [["Colombia, Nuevo León", "I", 8, 8], ["Monterrey, Nuevo León", "I", 0, 1], ["Reynosa, Tamaulipas", "E", 0, 10], ["Monterrey, Nuevo León", "E", 0, 3]] },
+  'doga': { src: "view-doga · #dg2-s5 Customs footprint · Seller View table \"Customs Wallet by gateway and Other-Patent route evidence\" (2026 Imports/Exports · gateway)", rows: [["Mexico City International Airport", "I", 0, 19], ["Altamira", "I", 8, 8], ["Manzanillo", "I", 0, 11], ["Querétaro", "I", 0, 3], ["Altamira", "E", 1, 1], ["Colombia, Nuevo León", "E", 33, 33], ["Manzanillo", "E", 0, 7], ["Nuevo Laredo", "E", 2, 5]], issues: ["The production Arcatek Dashboard gateway list (ARCATEK_GATEWAYS.doga, 39 / 79) still reflects the 19-Sep-2026 AIOS universe through Jul 29. These rows follow the current AIOS (44 / 87, Imports through Aug 31, Exports through Aug 21)."] },
+  'brahm': { src: "view-brahm · Chapter 05 · Current Customs Wallet by Gateway · 2026 YTD (cross-checked with Current Patent × Direction × Gateway cross-tab, 15 rows · 198)", rows: [["Mariano Escobedo Airport", "I", 0, 46], ["Colombia", "I", 18, 18], ["Felipe Angeles Airport", "I", 0, 3], ["Manzanillo", "I", 0, 2], ["Colombia", "E", 62, 62], ["Altamira", "E", 19, 45], ["Nuevo Laredo", "E", 3, 16], ["Mariano Escobedo Airport", "E", 0, 4], ["Mexico City International Airport", "E", 0, 2]] },
+  'busman': { src: "view-busman · Customs Wallet by Gateway · Current YTD (cross-checked with Patent × Direction × Gateway cross-tab · 4 rows)", rows: [["Altamira", "I", 3, 3], ["Nuevo Laredo", "I", 1, 1], ["Guadalajara", "I", 0, 5], ["Guadalajara", "E", 0, 7]] },
+  'mekra': { src: "view-mekra · Customs Wallet by Gateway · Current YTD · material Gateway × Direction positions", rows: [["Nuevo Laredo", "E", 0, 499], ["Nuevo Laredo", "I", 0, 101], ["Monterrey / General Mariano Escobedo", "I", 0, 177], ["Monterrey / General Mariano Escobedo", "E", 0, 67], ["Colombia, Nuevo León", "E", 103, 123], ["Colombia, Nuevo León", "I", 23, 37], ["Manzanillo", "I", 0, 103], ["Altamira", "E", 40, 40], ["Aeropuerto Internacional General Mariano Escobedo", "E", 0, 37], ["Aeropuerto Internacional General Mariano Escobedo", "I", 0, 23]] }
+};
+
 /* Production by default. 'demo' is the only mode that shows REFERENCE values;
    it must be set explicitly and never activates on its own. */
 var ARCATEK_MODE = 'production';
@@ -123875,8 +124506,647 @@ var ARCATEK_REFERENCE = {
     setListOpen(!collapsed, false);
   }
 
+  /* Read-only access for the Dashboard Arcatek Mockup: the same rows, search,
+     flags and labels this dashboard uses, so the mockup never re-implements them. */
+  window.ARCATEK_CORE = {
+    rows: function () { if (!ROWS.length) buildRows(); return ROWS; },
+    search: function (q) { if (!ROWS.length) buildRows(); return search(q); },
+    teuFlags: teuFlags, norm: norm, REL: REL, FLAG_TEXT: FLAG_TEXT
+  };
+
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();
+})();
+</script>
+
+<script>
+/* ═══════════════════════════════════════════════════════════════
+   DASHBOARD ARCATEK MOCKUP · design proposal (view-arcatek-mockup)
+   A parallel review view. It reads the SAME sources as the production
+   Arcatek Dashboard and never stores or recalculates its own copy:
+     ARCATEK_CORE           production resolution layer (registry rows,
+                            relationship, wallet, flags, TEU flags, search)
+     D2_FACTS[view].cw      Share of Wallet values as printed by each AIOS
+     ARCATEK_WALLET_SCOPES  numerators / denominators the AIOS prints
+     ARCATEK_GATEWAY_DIRS   gateway × direction rows from each AIOS
+     AIOS_TEU.record(view)  the TEU record embedded in each AIOS view
+     registry values        internal data (KAM, fin, incidents, next…);
+                            absent = "Pending receipt", never zero
+   Display-only arithmetic: n / N rounded once; sums of compatible
+   numerators and denominators; differences in percentage points.
+   Financial data schema (registry values.fin), when supplied:
+     { cur: 'USD', src: '…', months: { 'YYYY-MM': { rev, cost } } }
+═══════════════════════════════════════════════════════════════ */
+(function () {
+  'use strict';
+  var VIEW_ID = 'view-arcatek-mockup';
+  var CY = 2026, PY = 2025;
+  var LBL = {
+    PR:  { t: 'Pending receipt',                 c: '',    d: 'Expected from an internal Arcatek or Akzent source that has not been received.' },
+    NO:  { t: 'Not yet obtained',                c: 'no',  d: 'No valid source has been identified for this value yet.' },
+    DIR: { t: 'Directional source not supplied', c: 'dir', d: 'The Panjiva file for this direction was not supplied.' },
+    INS: { t: 'Insufficient coverage to total',  c: 'ins', d: 'Source coverage is too incomplete to present a total.' }
+  };
+  var CONCEPTS = {
+    A: { l: 'A · Executive Control Tower', rec: true, d: 'Executive KPIs first, then filters, the portfolio table and the selected account.',
+         order: ['exec', 'filters', 'table', 'detail'] },
+    B: { l: 'B · Portfolio Table First', d: 'Search, filters and the account table first; executive KPIs follow.',
+         order: ['filters', 'table', 'detail', 'exec'] },
+    C: { l: 'C · Commercial Action', d: 'Accounts that need attention first, then the portfolio KPIs and the complete table.',
+         order: ['attention', 'filters', 'table', 'detail', 'exec'] }
+  };
+  var STEP = { exec: 'Executive summary', attention: 'Commercial action', filters: 'Filters and portfolio KPIs', table: 'Account portfolio', detail: 'Account detail' };
+  var MO = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  var DEF = { kam: '', year: String(CY), per: 'ytd', rel: '', dir: 'both', fin: '', teu: '', flag: false };
+  var state = { concept: 'A', f: JSON.parse(JSON.stringify(DEF)), sel: null, opts: [], active: -1 };
+  var CORE, ROWS = [], M = {};
+
+  /* ── helpers ── */
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  function fmt(n) { return Number(n).toLocaleString('en-US'); }
+  function pct(n, N, dp) { return (n / N * 100).toFixed(dp == null ? 1 : dp) + '%'; }
+  function parsePct(s) { var m = /^(-?\d+(?:\.(\d+))?)%$/.exec(String(s || '').trim()); return m ? { x: +m[1], dp: m[2] ? m[2].length : 0 } : null; }
+  function day(iso) { var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || ''); return m ? MO[+m[2] - 1] + ' ' + (+m[3]) + ', ' + m[1] : iso; }
+  function money(v, cur) { return esc(cur) + ' $' + Number(v).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 }); }
+  function pend(k, extra) { var l = LBL[k]; return '<span class="arm-pend ' + l.c + '" title="' + esc(l.d + (extra ? ' ' + extra : '')) + '">' + esc(l.t) + '</span>'; }
+  /* TEU display: a value with no populated rows reads "No TEU data", never 0.00 */
+  function tv(x) { return x == null ? 'No TEU data' : AIOS_TEU.t2(x); }
+  function observed(p) { var any = false, sum = ['imports', 'exports'].reduce(function (s, k) { var d = p.directions[k]; if (d.supplied && d.teuRows && d.total != null) { any = true; return s + d.total; } return s; }, 0); return any ? sum : null; }
+  function val(e, k) { return e.values && e.values[k] && e.values[k].v != null && e.values[k].v !== '' ? e.values[k] : null; }
+  function dirName(d) { return d === 'I' ? 'Imports' : d === 'E' ? 'Exports' : 'Total'; }
+  var flagSeq = 0;
+  function flagHtml(fl) {
+    var id = 'arm-flag-' + (++flagSeq);
+    var area = fl.metric || { entity: 'Legal entity', wallet: 'Share of Wallet', services: 'Service relationship', rel: 'Relationship', teu: 'TEU', gateways: 'Gateway coverage', activity: 'Activity mix' }[fl.f] || 'Review';
+    return '<div class="arc-flag-wrap"><span class="arm-flag-area">' + esc(area) + '</span><button type="button" class="arc-flag" aria-expanded="false" aria-controls="' + id + '" data-arm-flag>' + esc(CORE.FLAG_TEXT) + '</button>' +
+      '<div class="arc-flag-body" id="' + id + '" hidden>' + esc(fl.why) + '<span class="src">Source: ' + esc(fl.src) + '</span></div></div>';
+  }
+  function ppChip(pp, label) {
+    if (pp == null) return '';
+    var c = pp.x > 0 ? 'up' : pp.x < 0 ? 'dn' : 'eq', ico = pp.x > 0 ? '▲' : pp.x < 0 ? '▼' : '■';
+    return '<span class="arm-pp ' + c + '" title="' + esc(pp.why) + '"><span aria-hidden="true">' + ico + ' </span>' + (pp.x > 0 ? '+' : '') + pp.x.toFixed(pp.dp) + ' pp' + (label ? ' · ' + esc(label) : '') + '</span>';
+  }
+
+  /* ── account model (built once from the shared sources) ── */
+  function cutKey(cut) { var ds = String(cut || '').match(/\d{4}-\d{2}-\d{2}/g) || []; var u = ds.filter(function (d, i) { return ds.indexOf(d) === i; }); return u.length === 1 ? u[0] : null; }
+  function walletModel(r, out) {
+    var w = r.wallet; if (!w || w.missing) return null;
+    var S = (typeof ARCATEK_WALLET_SCOPES !== 'undefined' && ARCATEK_WALLET_SCOPES[r.e.key]) || {};
+    var hp = parsePct(w.v), dp = hp ? Math.max(1, hp.dp) : 1;
+    var W = { cur: { T: { v: w.v, n: w.num, N: w.den } }, fy25: {}, cmp: {}, cmpWindow: null, period: w.cutoff, cut: cutKey(w.cutoff), dp: dp, basis: w.basis, src: w.srcLabel };
+    (w.all || []).forEach(function (a) {
+      var sc = a.sc === 'Imports' ? 'I' : a.sc === 'Exports' ? 'E' : a.sc === 'Total' ? 'T' : null;
+      if (!sc) return;
+      var per = /2025/.test(a.p) ? (/full|fy2025|calendar year/i.test(a.p) ? 'fy25' : 'cmp') : 'cur';
+      if (per === 'cur' && sc === 'T') return;
+      if (!W[per][sc]) W[per][sc] = { v: a.v };
+      if (per === 'cmp') W.cmpWindow = a.p;
+    });
+    ['cur', 'fy25', 'cmp'].forEach(function (per) {
+      var src = S[per] || {};
+      Object.keys(src).forEach(function (sc) {
+        if (sc === 'window') { if (per === 'cmp') W.cmpWindow = W.cmpWindow || src.window; return; }
+        var nN = src[sc], cell = W[per][sc] || (W[per][sc] = {});
+        if (nN && !Array.isArray(nN)) { if (!cell.v && nN.v) cell.v = nN.v; return; }   /* printed % without n / N */
+        if (!nN || nN[0] == null || !nN[1]) return;
+        if (cell.n != null && (cell.n !== nN[0] || cell.N !== nN[1]))
+          out.push({ f: 'wallet', metric: 'Share of Wallet · ' + dirName(sc), why: 'Two numerator / denominator pairs exist for the same scope: ' + cell.n + ' / ' + cell.N + ' and ' + nN[0] + ' / ' + nN[1] + '.', src: r.e.view + ' · ARCATEK_WALLET_SCOPES vs registry' });
+        cell.n = nN[0]; cell.N = nN[1];
+        if (cell.v) {
+          var p = parsePct(cell.v);
+          if (p && pct(cell.n, cell.N, p.dp) !== p.x.toFixed(p.dp) + '%')
+            out.push({ f: 'wallet', metric: 'Share of Wallet · ' + dirName(sc) + ' · ' + per, why: cell.n + ' / ' + cell.N + ' does not reproduce the printed ' + cell.v + '.', src: r.e.view + ' · D2_FACTS cw vs AIOS n / N' });
+        } else cell.v = pct(cell.n, cell.N, dp);
+      });
+    });
+    /* comparable change in pp: only against an AIOS comparable window, never against 2025 full year */
+    W.pp = {};
+    ['T', 'I', 'E'].forEach(function (sc) {
+      var a = W.cur[sc], b = W.cmp[sc];
+      if (!a || !b || !a.v || !b.v) return;
+      if (a.n != null && b.n != null) { W.pp[sc] = { x: +((a.n / a.N - b.n / b.N) * 100).toFixed(1), dp: 1, why: 'Calculated once from ' + a.n + ' / ' + a.N + ' and ' + b.n + ' / ' + b.N + ' (' + W.cmpWindow + ').' }; return; }
+      var pa = parsePct(a.v), pb = parsePct(b.v); if (!pa || !pb) return;
+      var d = Math.max(pa.dp, pb.dp);
+      W.pp[sc] = { x: +(pa.x - pb.x).toFixed(d), dp: d, why: 'Difference of the AIOS-printed values ' + a.v + ' and ' + b.v + ' (' + W.cmpWindow + ').' };
+    });
+    return W;
+  }
+  function gatewayModel(r, W, out) {
+    var src = typeof ARCATEK_GATEWAY_DIRS !== 'undefined' && ARCATEK_GATEWAY_DIRS[r.e.key];
+    if (!src) return null;
+    var by = {}, order = [];
+    src.rows.forEach(function (x) {
+      var g = by[x[0]] || (by[x[0]] = { n: x[0], I: null, E: null }); if (order.indexOf(x[0]) < 0) order.push(x[0]);
+      g[x[1]] = { a: x[2], t: x[3] };
+    });
+    var list = order.map(function (k) { return by[k]; });
+    var arc = 0, tot = 0, dirT = { I: 0, E: 0 }, dirA = { I: 0, E: 0 };
+    src.rows.forEach(function (x) { arc += x[2]; tot += x[3]; dirT[x[1]] += x[3]; dirA[x[1]] += x[2]; });
+    if (W && arc !== W.cur.T.n) out.push({ f: 'gateways', metric: 'Gateway coverage', why: 'The gateway rows add up to ' + arc + ' Arcatek Shipments; the wallet numerator is ' + W.cur.T.n + '.', src: src.src });
+    (src.issues || []).forEach(function (s) { out.push({ f: 'gateways', metric: 'Gateway coverage', why: s, src: src.src }); });
+    return { list: list, arc: arc, tot: tot, dirT: dirT, dirA: dirA, unassigned: W ? W.cur.T.N - tot : null, src: src.src };
+  }
+  function activityModel(r, W, rec, out) {
+    /* Directional PJ Shipment universe: the AIOS wallet denominators first (same universe as Share of Wallet), else the TEU record rows. */
+    function forYear(y) {
+      var per = y === CY ? 'cur' : 'fy25', key = y === CY ? 'ytd2026' : 'fy2025', o = { I: null, E: null, src: null };
+      ['I', 'E'].forEach(function (d) {
+        var c = W && W[per][d];
+        if (c && c.N) { o[d] = c.N; o.src = 'AIOS wallet denominators'; }
+      });
+      if ((o.I == null || o.E == null) && rec) {
+        var dd = rec.periods[key].directions;
+        ['I', 'E'].forEach(function (d) {
+          var x = dd[d === 'I' ? 'imports' : 'exports'];
+          if (o[d] == null) o[d] = x.supplied ? x.rows : 'DIR';
+        });
+        o.src = o.src ? o.src + ' + TEU record rows' : 'PJ Shipment rows in the TEU record';
+      }
+      o.T = (typeof o.I === 'number' ? o.I : 0) + (typeof o.E === 'number' ? o.E : 0);
+      return o;
+    }
+    var A = { cy: forYear(CY), py: forYear(PY) };
+    if (W && typeof A.cy.I === 'number' && typeof A.cy.E === 'number' && A.cy.T !== W.cur.T.N)
+      out.push({ f: 'activity', metric: 'Activity mix', why: 'The directional Shipment counts (' + A.cy.I + ' Imports + ' + A.cy.E + ' Exports = ' + A.cy.T + ') come from a universe that differs from the Share of Wallet denominator (' + W.cur.T.N + '). The mix is shown with its own base.', src: A.cy.src });
+    return A;
+  }
+  function finModel(e) {
+    var f = val(e, 'fin') ? e.values.fin : (e.values && e.values.fin && e.values.fin.months ? e.values.fin : null);
+    return f && f.months && f.cur ? f : null;
+  }
+  function build() {
+    CORE = window.ARCATEK_CORE;
+    ROWS = CORE.rows();
+    ROWS.forEach(function (r) {
+      var extra = [], W = walletModel(r, extra), rec = r.teu;
+      var G = gatewayModel(r, W, extra), A = activityModel(r, W, rec, extra);
+      var flags = r.flags.concat(CORE.teuFlags(r)).concat(extra);
+      M[r.e.key] = { r: r, W: W, G: G, A: A, T: rec, F: finModel(r.e), flags: flags };
+    });
+  }
+
+  /* ── period / financial resolution ── */
+  function monthsOf(y, per, fin) {
+    var all = []; for (var i = 1; i <= 12; i++) all.push(y + '-' + (i < 10 ? '0' : '') + i);
+    if (per === 'ytd') {
+      if (!fin) return null;
+      var have = all.filter(function (k) { return fin.months[k]; }); if (!have.length) return null;
+      return all.slice(0, all.indexOf(have[have.length - 1]) + 1);
+    }
+    if (per === 'year') return all;
+    if (/^q[1-4]$/.test(per)) { var q = +per[1]; return all.slice((q - 1) * 3, q * 3); }
+    return [y + '-' + per];
+  }
+  function finSum(fin, months) {
+    if (!fin || !months) return null;
+    var rev = 0, cost = 0, ok = months.every(function (k) { var m = fin.months[k]; return m && typeof m.rev === 'number' && typeof m.cost === 'number'; });
+    if (!ok) return null;
+    months.forEach(function (k) { rev += fin.months[k].rev; cost += fin.months[k].cost; });
+    return { rev: rev, cost: cost, gp: rev - cost, gm: rev ? (rev - cost) / rev : null };
+  }
+  function finFor(m) {
+    var y = +state.f.year, per = state.f.per, fin = m.F;
+    var months = monthsOf(y, per, fin), cur = finSum(fin, months);
+    var prev = months ? finSum(fin, months.map(function (k) { return (+k.slice(0, 4) - 1) + k.slice(4); })) : null;
+    var ref = finSum(fin, monthsOf(PY, 'year', fin));
+    return { fin: fin, cur: cur, prev: prev, ref: ref, months: months, chg: cur && prev && prev.rev ? cur.rev / prev.rev - 1 : null };
+  }
+  function perLabel() {
+    var y = state.f.year, p = state.f.per;
+    if (p === 'ytd') return y + ' YTD';
+    if (p === 'year') return y;
+    if (/^q/.test(p)) return p.toUpperCase() + ' ' + y;
+    return MO[+p - 1] + ' ' + y;
+  }
+
+  /* ── filters ── */
+  function relKey(m) { return m.r.rel.s; }
+  function finAvail(m) { return finFor(m).cur ? 'yes' : 'no'; }
+  function visible() {
+    var f = state.f;
+    return ROWS.map(function (r) { return M[r.e.key]; }).filter(function (m) {
+      if (f.kam && (val(m.r.e, 'kamArc') ? String(val(m.r.e, 'kamArc').v) : '__none') !== f.kam) return false;
+      if (f.rel && relKey(m) !== f.rel) return false;
+      if (f.fin && finAvail(m) !== f.fin) return false;
+      if (f.teu && (m.T ? m.T.status : 'pending') !== f.teu) return false;
+      if (f.flag && !m.flags.length) return false;
+      if (f.dir !== 'both') {
+        var a = m.A[state.f.year === String(CY) ? 'cy' : 'py'], d = f.dir === 'imports' ? 'I' : 'E';
+        if (a[d] === 0) return false;   /* confirmed zero only; an unsupplied direction stays listed as such */
+      }
+      return true;
+    });
+  }
+  function dirKey() { return state.f.dir === 'imports' ? 'I' : state.f.dir === 'exports' ? 'E' : 'T'; }
+  function isCY() { return state.f.year === String(CY); }
+
+  /* Share of Wallet for the active year + direction (one scope, never averaged) */
+  function sowOf(m) {
+    if (!m.W) return null;
+    var sc = dirKey();
+    return isCY() ? m.W.cur[sc] || null : m.W.fy25[sc] || null;
+  }
+  /* Portfolio wallet: Σ numerators / Σ denominators of accounts sharing one window. */
+  function portfolioSow(ms) {
+    var sc = dirKey(), inc = [], exc = [], cuts = {};
+    if (isCY()) ms.forEach(function (m) { if (m.W && m.W.cut) cuts[m.W.cut] = (cuts[m.W.cut] || 0) + 1; });
+    var ref = Object.keys(cuts).sort(function (a, b) { return cuts[b] - cuts[a] || (a < b ? 1 : -1); })[0];
+    ms.forEach(function (m) {
+      var c = sowOf(m), name = m.r.e.legal;
+      var idf = m.r.flags.some(function (f) { return f.f === 'entity' || f.id; });
+      if (!c || c.n == null || !c.N) exc.push({ l: name, why: (c && c.v ? c.v + ' printed without numerator / denominator' : 'No ' + (isCY() ? 'current' : '2025') + ' ' + dirName(sc) + ' value') });
+      else if (idf) exc.push({ l: name, why: 'Legal-entity scope under review' });
+      else if (isCY() && m.W.cut !== ref) exc.push({ l: name, why: m.W.cut ? 'Cutoff ' + day(m.W.cut) : 'Mixed directional cutoffs' });
+      else inc.push({ m: m, n: c.n, N: c.N });
+    });
+    var n = 0, N = 0; inc.forEach(function (i) { n += i.n; N += i.N; });
+    var out = { inc: inc, exc: exc, n: n, N: N, v: N ? pct(n, N) : null, window: isCY() ? (ref ? '2026 YTD through ' + day(ref) : null) : '2025 calendar year' };
+    /* the 2025 reference and comparable change for the SAME included accounts */
+    if (isCY() && inc.length) {
+      var all25 = inc.every(function (i) { var c = i.m.W.fy25[sc]; return c && c.n != null; });
+      if (all25) { var a = 0, b = 0; inc.forEach(function (i) { a += i.m.W.fy25[sc].n; b += i.m.W.fy25[sc].N; }); out.ref = { v: pct(a, b), n: a, N: b }; }
+      else out.refWhy = inc.filter(function (i) { var c = i.m.W.fy25[sc]; return !(c && c.n != null); }).length + ' of ' + inc.length + ' included accounts lack a 2025 numerator / denominator';
+      var allC = inc.every(function (i) { var c = i.m.W.cmp[sc]; return c && c.n != null; });
+      out.ppWhy = allC ? null : inc.filter(function (i) { var c = i.m.W.cmp[sc]; return !(c && c.n != null); }).length + ' of ' + inc.length + ' included accounts lack an AIOS comparable 2025 window';
+      if (allC) { var c1 = 0, c2 = 0; inc.forEach(function (i) { c1 += i.m.W.cmp[sc].n; c2 += i.m.W.cmp[sc].N; }); out.pp = { x: +((n / N - c1 / c2) * 100).toFixed(1), dp: 1, why: 'Σ current vs Σ comparable 2025 for the same accounts.' }; }
+    }
+    return out;
+  }
+  function portfolioTeu(ms) {
+    if (!isCY()) return { na: '2025 portfolio TEU is not aggregated: the portfolio TEU rule covers the current YTD only.' };
+    var pf = AIOS_TEU.portfolio(ms.map(function (m) { return { legal: m.r.e.legal, rec: m.T }; }));
+    var d = state.f.dir === 'imports' ? 'Imports' : state.f.dir === 'exports' ? 'Exports' : null;
+    if (d) {
+      var inc = pf.included.filter(function (i) { return i.dir === d; });
+      pf = { total: inc.length ? inc.reduce(function (s, i) { return s + i.teu; }, 0) : null, included: inc, excluded: pf.excluded.filter(function (x) { return x.dir === d || x.dir === 'Both'; }), window: pf.window,
+             accounts: inc.length };
+    }
+    return pf;
+  }
+  function portfolioFin(ms) {
+    var cur = { rev: 0, cost: 0 }, prev = { rev: 0 }, ref = { rev: 0 }, have = 0, havePrev = 0, haveRef = 0, curs = {};
+    ms.forEach(function (m) {
+      var x = finFor(m); if (!x.cur) return;
+      have++; curs[x.fin.cur] = 1; cur.rev += x.cur.rev; cur.cost += x.cur.cost;
+      if (x.prev) { havePrev++; prev.rev += x.prev.rev; }
+      if (x.ref) { haveRef++; ref.rev += x.ref.rev; }
+    });
+    var cs = Object.keys(curs);
+    return { have: have, of: ms.length, mixed: cs.length > 1, cur: cs[0], rev: cur.rev, gp: cur.rev - cur.cost, gm: cur.rev ? (cur.rev - cur.cost) / cur.rev : null,
+             complete: have === ms.length && have > 0, chg: havePrev === have && have && prev.rev ? cur.rev / prev.rev - 1 : null, ref: haveRef === have && have ? ref.rev : null };
+  }
+
+  /* reference illustration: layout only, no values */
+  function refViz(kind) {
+    var bars = [18, 26, 22, 30, 28, 34, 31, 38, 36, 42, 40, 46];
+    var svg = kind === 'line'
+      ? '<polyline points="' + bars.map(function (b, i) { return (i * 26 + 6) + ',' + (60 - b); }).join(' ') + '" fill="none" stroke="#C9D2E0" stroke-width="2.5" stroke-dasharray="5 4"/>'
+      : bars.map(function (b, i) { return '<rect x="' + (i * 26 + 4) + '" y="' + (62 - b) + '" width="16" height="' + b + '" rx="2" fill="#E1E6EE"/>'; }).join('');
+    return '<div class="arm-refviz" aria-hidden="true"><span class="tag">Reference layout · no values</span><svg viewBox="0 0 312 64" preserveAspectRatio="none">' + svg + '</svg></div>';
+  }
+
+  /* ── render: executive summary (whole portfolio, current year, unaffected by filters) ── */
+  function renderExec() {
+    var all = ROWS.map(function (r) { return M[r.e.key]; });
+    var saved = state.f; state.f = JSON.parse(JSON.stringify(DEF));
+    var P = portfolioSow(all), T = portfolioTeu(all), F = portfolioFin(all);
+    var mixI = 0, mixE = 0; P.inc.forEach(function (i) { mixI += i.m.W.cur.I && i.m.W.cur.I.N || 0; mixE += i.m.W.cur.E && i.m.W.cur.E.N || 0; });
+    var mixOk = P.inc.every(function (i) { return i.m.W.cur.I && i.m.W.cur.I.N != null && i.m.W.cur.E && i.m.W.cur.E.N != null; });
+    state.f = saved;
+    var review = all.filter(function (m) { return m.flags.length; }).length, proc = all.filter(function (m) { return m.r.e.aios === 'processed'; }).length;
+    var why = function (list) { return '<details class="arm-why"><summary>Included and excluded accounts</summary><ul><li><b>Included</b>: ' + esc(list.inc.map(function (i) { return i.m ? i.m.r.e.legal : i.legal + ' · ' + i.dir; }).join('; ') || 'none') + '</li>' +
+      list.exc.map(function (x) { return '<li>' + esc((x.l || x.legal) + (x.dir ? ' · ' + x.dir : '') + ': ' + x.why) + '</li>'; }).join('') + '</ul></details>'; };
+    var html =
+      '<div class="arm-group"><div class="arm-group-h">Portfolio</div><span class="arm-big">' + all.length + '</span><span class="arm-sub">Arcatek accounts (legal entities)</span>' +
+        '<div class="arm-mini"><div><span>AIOS processed</span><b>' + proc + ' of ' + all.length + '</b></div><div><span>Require review</span><b>' + review + '</b></div></div></div>' +
+      '<div class="arm-group"><div class="arm-group-h">Share of Wallet · common window</div>' +
+        (P.v ? '<span class="arm-big">' + P.v + '</span><span class="arm-sub"><b>' + fmt(P.n) + ' / ' + fmt(P.N) + '</b> Shipments · ' + P.inc.length + ' accounts · ' + esc(P.window) + '</span>' : '<span class="arm-big is-st">' + pend('NO') + '</span>') +
+        '<span class="arm-ref">2025: ' + (P.ref ? '<b>' + P.ref.v + '</b> <span class="arm-sub" style="display:inline">' + fmt(P.ref.n) + ' / ' + fmt(P.ref.N) + '</span>' : pend('NO', P.refWhy) + '<span class="arm-sub">' + esc(P.refWhy || '') + '</span>') + '</span>' +
+        (P.pp ? ppChip(P.pp, 'comparable') : '<span class="arm-sub">Comparable change: not calculated · ' + esc(P.ppWhy || '') + '</span>') + why(P) + '</div>' +
+      '<div class="arm-group"><div class="arm-group-h">Volume and activity</div>' +
+        (T.total != null ? '<span class="arm-big">' + tv(T.total) + ' <span style="font-size:13px">TEU</span></span><span class="arm-sub">Visible TEU · ' + T.accounts + ' accounts · ' + T.included.length + ' account-directions</span>' : '<span class="arm-big is-st">' + pend('NO') + '</span>') +
+        '<div class="arm-mini"><div><span>PJ Shipments (proxy)</span><b>' + (P.N ? fmt(P.N) : '—') + '</b></div><div><span>Activity mix</span><b>' + (mixOk && P.N ? 'I ' + pct(mixI, P.N) + ' · E ' + pct(mixE, P.N) : pend('NO')) + '</b></div></div>' +
+        '<span class="arm-sub">Shipments and mix: the same ' + P.inc.length + ' accounts as the wallet window.</span>' +
+        '<details class="arm-why"><summary>TEU accounts included and excluded</summary><ul><li><b>Included</b>: ' + esc((T.included || []).map(function (i) { return i.legal + ' · ' + i.dir; }).join('; ') || 'none') + '</li>' + (T.excluded || []).map(function (x) { return '<li>' + esc(x.legal + ' · ' + x.dir + ': ' + x.why) + '</li>'; }).join('') + '</ul></details></div>' +
+      '<div class="arm-group"><div class="arm-group-h">Financials · Arcatek</div>' + finExecHtml(F) + '</div>';
+    document.getElementById('arm-exec').innerHTML = html;
+    var latest = null; all.forEach(function (m) { if (m.T) ['imports', 'exports'].forEach(function (d) { var c = m.T.cutoffs[d]; if (c && (!latest || c > latest)) latest = c; }); });
+    var ads = {}; all.forEach(function (m) { var f = typeof D2_FACTS !== 'undefined' && D2_FACTS[m.r.e.view]; if (f && f.ad) ads[f.ad] = 1; });
+    document.getElementById('arm-exec-note').innerHTML = 'Data update · AIOS analysis dates <b>' + esc(Object.keys(ads).sort(function (a, b) { return new Date(a) - new Date(b); }).filter(function (x, i, a) { return i === 0 || i === a.length - 1; }).join(' – ')) + '</b> · latest visible PJ Shipment <b>' + esc(day(latest)) + '</b>';
+  }
+  function finExecHtml(F) {
+    if (!F.have) return '<span class="arm-big is-st">' + pend('PR') + '</span><span class="arm-sub">Revenue, 2025 Revenue, comparable change, Gross Profit and Gross Margin need internal Arcatek financial data (Revenue and Direct Cost).</span>' + refViz('bar');
+    if (F.mixed) return '<span class="arm-big is-st">' + pend('NO') + '</span><span class="arm-sub">Accounts report different currencies; no authorized conversion was supplied.</span>';
+    return '<span class="arm-big">' + money(F.rev, F.cur) + '</span><span class="arm-sub">Revenue · ' + esc(perLabel()) + (F.complete ? '' : ' · ' + F.have + ' of ' + F.of + ' accounts') + '</span>' +
+      '<span class="arm-ref">2025: ' + (F.ref != null ? '<b>' + money(F.ref, F.cur) + '</b>' : pend('PR')) + '</span>' +
+      (F.chg != null ? '<span class="arm-sub">Comparable change: <b>' + (F.chg >= 0 ? '+' : '') + (F.chg * 100).toFixed(1) + '%</b></span>' : '') +
+      '<div class="arm-mini"><div><span>Gross Profit</span><b>' + money(F.gp, F.cur) + '</b></div><div><span>Gross Margin</span><b>' + (F.gm != null ? (F.gm * 100).toFixed(1) + '%' : '—') + '</b></div></div>';
+  }
+
+  /* ── render: filters + filtered KPIs ── */
+  function fillSelects() {
+    function opts(id, list, cur) { document.getElementById(id).innerHTML = list.map(function (o) { return '<option value="' + esc(o[0]) + '"' + (o[0] === cur ? ' selected' : '') + '>' + esc(o[1]) + '</option>'; }).join(''); }
+    var kams = {}, noKam = 0;
+    ROWS.forEach(function (r) { var v = val(r.e, 'kamArc'); if (v) kams[String(v.v)] = 1; else noKam++; });
+    opts('arm-f-kam', [['', 'All']].concat(Object.keys(kams).sort().map(function (k) { return [k, k]; })).concat(noKam ? [['__none', 'KAM pending receipt (' + noKam + ')']] : []), state.f.kam);
+    opts('arm-f-year', [[String(CY), String(CY)], [String(PY), String(PY)]], state.f.year);
+    var per = [[isCY() ? 'ytd' : 'year', isCY() ? CY + ' YTD' : PY + ' · complete year'], ['q1', 'Q1'], ['q2', 'Q2'], ['q3', 'Q3'], ['q4', 'Q4']].concat(MO.map(function (m, i) { return [(i < 9 ? '0' : '') + (i + 1), m]; }));
+    opts('arm-f-per', per, state.f.per);
+    var rels = {}; ROWS.forEach(function (r) { rels[r.rel.s] = 1; });
+    opts('arm-f-rel', [['', 'All']].concat(Object.keys(rels).map(function (k) { return [k, (CORE.REL[k] || CORE.REL.RC).label + ' relationship']; })), state.f.rel);
+    opts('arm-f-dir', [['both', 'Both directions'], ['imports', 'Imports'], ['exports', 'Exports']], state.f.dir);
+    opts('arm-f-fin', [['', 'All'], ['yes', 'Available'], ['no', 'Pending receipt']], state.f.fin);
+    var ts = {}; ROWS.forEach(function (r) { ts[M[r.e.key].T ? M[r.e.key].T.status : 'pending'] = 1; });
+    opts('arm-f-teu', [['', 'All']].concat(Object.keys(ts).map(function (k) { return [k, (AIOS_TEU.STATUS[k] || AIOS_TEU.STATUS.pending).label]; })), state.f.teu);
+    document.getElementById('arm-f-flag').checked = state.f.flag;
+  }
+  function kpi(l, v, p, isSt) { return '<div class="arc-kpi"><span class="arc-kpi-l">' + esc(l) + '</span><span class="arc-kpi-v' + (isSt ? ' is-status' : '') + '">' + v + '</span>' + (p ? '<span class="arc-kpi-p">' + p + '</span>' : '') + '</div>'; }
+  function renderKpis(ms) {
+    var P = portfolioSow(ms), T = portfolioTeu(ms), F = portfolioFin(ms), dn = dirName(dirKey());
+    var finV = function (x) { return F.have && !F.mixed ? x : null; };
+    var h = kpi('Accounts', ms.length, 'of ' + ROWS.length + ' Arcatek accounts') +
+      kpi('Revenue', finV(money(F.rev, F.cur)) || pend('PR'), finV(esc(perLabel()) + (F.complete ? '' : ' · ' + F.have + ' of ' + F.of + ' accounts')) || 'Internal Arcatek financial data required', !finV(1)) +
+      kpi('Gross Profit', finV(money(F.gp, F.cur)) || pend('PR'), finV('Revenue − Direct Cost') || 'Revenue − Direct Cost', !finV(1)) +
+      kpi('Gross Margin', finV(F.gm != null ? (F.gm * 100).toFixed(1) + '%' : '—') || pend('PR'), 'Gross Profit ÷ Revenue', !finV(1)) +
+      kpi('PJ Shipment proxy', P.N ? fmt(P.N) : pend('NO'), (P.N ? esc(dn) + ' · ' + P.inc.length + (P.inc.length === 1 ? ' account · ' : ' accounts · ') + esc(P.window || '') : '') + '<br>Embarques PJ used as a 1:1 proxy of pedimentos', !P.N) +
+      kpi('TEU', T.na ? pend('NO', T.na) : T.total != null ? tv(T.total) : pend('NO'), T.na ? esc(T.na) : T.total != null ? 'Visible · ' + T.included.length + ' account-directions' : 'No comparable account-direction', !!(T.na || T.total == null)) +
+      kpi('Share of Wallet', P.v || pend('NO'), P.v ? fmt(P.n) + ' / ' + fmt(P.N) + ' · ' + esc(dn) + ' · ' + esc(P.window) : 'No compatible numerators', !P.v) +
+      kpi(isCY() ? '2025 comparison' : 'Comparable change', isCY() ? (P.ref ? P.ref.v : pend('NO', P.refWhy)) : pend('NO'), isCY() ? (P.ref ? '2025 · same ' + P.inc.length + ' accounts' + (P.pp ? ' · ' + ppChip(P.pp) : ' · comparable change not calculated') : esc(P.refWhy || '')) : 'Shown for the current year only', isCY() ? !P.ref : true);
+    document.getElementById('arm-kpis').innerHTML = h;
+    var dirNote = state.f.dir === 'both' ? '' : ' · ' + dn + ' values only';
+    document.getElementById('arm-scope').innerHTML = 'Financials follow <b>' + esc(perLabel()) + '</b>. Share of Wallet, PJ Shipments and TEU follow each AIOS window (' + (isCY() ? CY + ' YTD' : PY) + ')' + esc(dirNote) + '.' +
+      (/^q|^\d/.test(state.f.per) ? ' The AIOS facts have no monthly or quarterly breakdown, so the month / period filter applies to financials only.' : '');
+  }
+
+  /* ── render: table ── */
+  function sowCell(m) {
+    var c = sowOf(m), sc = dirKey();
+    if (!m.W) return pend('NO');
+    if (!c || !c.v) return sc === 'T' ? pend('NO') : pend('NO', 'The AIOS prints no ' + dirName(sc) + ' value for this year.');
+    var out = '<span class="arm-cellv">' + esc(c.v) + '</span><span class="arm-cellp">' + (c.n != null ? fmt(c.n) + ' / ' + fmt(c.N) : 'n / N not printed') + '</span>';
+    if (isCY()) {
+      var r25 = m.W.fy25[sc];
+      out += '<span class="arm-cellp">2025: ' + (r25 && r25.v ? '<b>' + esc(r25.v) + '</b>' : 'not supplied') + '</span>' + (m.W.pp[sc] ? ppChip(m.W.pp[sc], 'comparable') : '');
+    }
+    return out;
+  }
+  function actCell(m) {
+    var a = m.A[isCY() ? 'cy' : 'py'], sc = dirKey(), v = sc === 'T' ? a.T : a[sc];
+    if (v === 'DIR') return pend('DIR');
+    var dirs = (a.I === 'DIR' || a.E === 'DIR') && sc === 'T' ? ' · ' + (a.I === 'DIR' ? 'Exports' : 'Imports') + ' only' : '';
+    var last = m.T ? [m.T.cutoffs.imports, m.T.cutoffs.exports].filter(Boolean).sort().pop() : null;
+    return '<span class="arm-cellv">' + fmt(v) + '</span><span class="arm-cellp">PJ Shipments · ' + (isCY() ? CY + ' YTD' : PY) + esc(dirs) + '</span>' +
+      '<span class="arm-cellp" title="The AIOS comparable Shipment trend is not in the centralized facts. TEU-record row counts are not substituted: they can differ from the AIOS figures.">Change · not yet obtained</span>' +
+      (last && isCY() ? '<span class="arm-cellp">Last PJ Shipment ' + esc(day(last)) + '</span>' : '');
+  }
+  function teuCell(m) {
+    var t = m.T; if (!t) return pend('PR', 'TEU record not embedded.');
+    var p = t.periods[isCY() ? 'ytd2026' : 'fy2025'], sc = state.f.dir;
+    if (sc !== 'both') {
+      var d = p.directions[sc];
+      if (!d.supplied) return pend('DIR');
+      if (d.status === 'insufficient') return pend('INS') + '<span class="arm-cellp">' + tv(d.total) + ' in populated rows</span>';
+      return '<span class="arm-cellv">' + tv(d.total) + '</span><span class="arm-cellp">' + esc((AIOS_TEU.STATUS[d.status] || {}).label || '') + '</span>';
+    }
+    if (p.total == null) {
+      var obs = observed(p);
+      return (p.status === 'missing_direction' ? pend('DIR') : pend('INS')) + '<span class="arm-cellp">' + tv(obs) + (observed(p) == null ? '' : ' TEU observed in populated rows') + ' · not a total</span>';
+    }
+    return '<span class="arm-cellv">' + tv(p.total) + '</span><span class="arm-cellp">' + esc(AIOS_TEU.STATUS[p.status].label) + '</span>';
+  }
+  function finCell(m) {
+    var x = finFor(m);
+    if (!x.cur) return pend('PR', 'Internal Arcatek Revenue and Direct Cost are required.');
+    return '<span class="arm-cellv">' + money(x.cur.rev, x.fin.cur) + '</span><span class="arm-cellp">GP ' + money(x.cur.gp, x.fin.cur) + ' · GM ' + (x.cur.gm != null ? (x.cur.gm * 100).toFixed(1) + '%' : '—') + '</span>';
+  }
+  function renderTable(ms) {
+    document.getElementById('arm-count').innerHTML = '<b>' + ms.length + '</b> of ' + ROWS.length + ' accounts';
+    var tb = document.getElementById('arm-rows');
+    if (!ms.length) { tb.innerHTML = '<tr><td colspan="8" class="arc-empty-row">No account matches these filters. <button type="button" class="arm-link" data-arm-reset>Reset filters</button></td></tr>'; return; }
+    tb.innerHTML = ms.map(function (m) {
+      var e = m.r.e, kam = val(e, 'kamArc'), sel = state.sel === e.key;
+      return '<tr class="' + (sel ? 'is-sel' : '') + '">' +
+        '<td data-l="Legal entity"><button type="button" class="arc-name-btn" data-arm-open="' + esc(e.key) + '">' + esc(e.legal) + '</button><span class="arm-kam">KAM · ' + (kam ? esc(kam.v) : 'Pending receipt') + '</span></td>' +
+        '<td data-l="Status">' + relBadge(m.r.rel) + '</td>' +
+        '<td data-l="Current activity">' + actCell(m) + '</td>' +
+        '<td data-l="Share of Wallet">' + sowCell(m) + '</td>' +
+        '<td data-l="TEU">' + teuCell(m) + '</td>' +
+        '<td data-l="Financials">' + finCell(m) + '</td>' +
+        '<td data-l="Review">' + (m.flags.length ? '<span class="arc-flagcount" title="' + m.flags.length + ' review flag(s)">⚑ ' + m.flags.length + '</span>' : '<span class="arc-none">None</span>') + '</td>' +
+        '<td><button type="button" class="arm-open" data-arm-open="' + esc(e.key) + '" aria-pressed="' + sel + '">Detail</button></td></tr>';
+    }).join('');
+  }
+  function relBadge(rel) { var m = CORE.REL[rel.s] || CORE.REL.RC; return '<span class="arc-badge ' + m.cls + '"><span aria-hidden="true">' + m.ico + '</span>' + esc(m.label) + '</span>'; }
+
+  /* ── render: attention (concept C) ── */
+  function renderAttention(ms) {
+    function col(title, desc, items, more) {
+      return '<div class="arm-att-col"><h3>' + esc(title) + '</h3><p>' + desc + '</p>' + (items.length ? '<ol>' + items.map(function (i) {
+        return '<li><button type="button" data-arm-open="' + esc(i.m.r.e.key) + '"><span>' + esc(i.m.r.e.legal) + '</span><b>' + i.v + '</b></button></li>'; }).join('') + '</ol>' : '<span class="arm-empty">None in the current filter.</span>') + (more || '') + '</div>';
+    }
+    var fl = ms.filter(function (m) { return m.flags.length; }).sort(function (a, b) { return b.flags.length - a.flags.length; }).map(function (m) { return { m: m, v: '⚑ ' + m.flags.length }; });
+    var sc = dirKey();
+    var dec = ms.filter(function (m) { return m.W && m.W.pp[sc] && m.W.pp[sc].x < 0; }).sort(function (a, b) { return a.W.pp[sc].x - b.W.pp[sc].x; }).map(function (m) { return { m: m, v: m.W.pp[sc].x.toFixed(m.W.pp[sc].dp) + ' pp' }; });
+    var noCmp = ms.filter(function (m) { return !(m.W && m.W.pp[sc]); }).length;
+    var cov = ms.filter(function (m) { return m.G; }).map(function (m) { var w = m.G.list.filter(function (g) { return (g.I && g.I.a) || (g.E && g.E.a); }).length; return { m: m, r: w / m.G.list.length, v: w + ' of ' + m.G.list.length + ' gateways' }; })
+      .sort(function (a, b) { return a.r - b.r; }).slice(0, 6);
+    var noFin = ms.filter(function (m) { return !finFor(m).cur; });
+    var noNext = ms.filter(function (m) { return !val(m.r.e, 'next'); });
+    document.getElementById('arm-att').innerHTML =
+      col('Review flags', 'Open the account and double-click a flag to read it.', fl.slice(0, 6), fl.length > 6 ? '<span class="arm-empty">+' + (fl.length - 6) + ' more in the table</span>' : '') +
+      col('Wallet decline', 'Comparable-window change in pp. ' + noCmp + ' account' + (noCmp === 1 ? '' : 's') + ' have no AIOS comparable window.', dec) +
+      col('Lowest gateway presence', 'Gateways with Arcatek activity out of the gateways the AIOS lists. Not volume coverage.', cov) +
+      col('Missing financial data', noFin.length + ' of ' + ms.length + ' accounts lack internal Arcatek Revenue and Direct Cost.', noFin.slice(0, 4).map(function (m) { return { m: m, v: 'Pending receipt' }; }), noFin.length > 4 ? '<span class="arm-empty">+' + (noFin.length - 4) + ' more</span>' : '') +
+      col('Next action', noNext.length + ' of ' + ms.length + ' accounts have no next action recorded.', noNext.slice(0, 4).map(function (m) { return { m: m, v: 'Pending receipt' }; }), noNext.length > 4 ? '<span class="arm-empty">+' + (noNext.length - 4) + ' more</span>' : '');
+  }
+
+  /* ── render: account detail ── */
+  function cardSow(m) {
+    var W = m.W; if (!W) return '<div class="arm-dcard"><h3>Share of Wallet</h3>' + pend('NO') + '</div>';
+    var c = W.cur.T, r25 = W.fy25.T;
+    function dirLine(per, d) { var x = W[per][d]; return '<div class="arm-row"><span>' + dirName(d) + '</span><b>' + (x && x.v ? esc(x.v) + (x.n != null ? ' <span class="arm-sub" style="display:inline">' + fmt(x.n) + ' / ' + fmt(x.N) + '</span>' : '') : m.A.cy[d] === 'DIR' ? 'Source not supplied' : 'Not printed') + '</b></div>'; }
+    return '<div class="arm-dcard"><h3>Share of Wallet · Arcatek customs</h3>' +
+      '<div class="arm-hero">' + esc(c.v) + '</div><span class="arm-sub"><b>' + fmt(c.n) + ' / ' + fmt(c.N) + '</b> Shipments · ' + esc(periodText(W.period)) + '</span>' +
+      '<span class="arm-ref">2025: ' + (r25 && r25.v ? '<b>' + esc(r25.v) + '</b>' + (r25.n != null ? ' <span class="arm-sub" style="display:inline">' + fmt(r25.n) + ' / ' + fmt(r25.N) + '</span>' : '') : 'not supplied by the AIOS') + '</span>' +
+      (W.pp.T ? ppChip(W.pp.T, 'comparable') + '<span class="arm-sub">vs ' + esc(W.cmpWindow) + (W.cmp.T && W.cmp.T.v ? ' (' + esc(W.cmp.T.v) + ')' : '') + '</span>' : '<span class="arm-sub">Comparable change: not calculated. The AIOS supplies no comparable 2025 window; 2025 is a reference only.</span>') +
+      '<div class="arm-kicker">By direction · ' + CY + ' YTD</div>' + dirLine('cur', 'I') + dirLine('cur', 'E') +
+      (W.fy25.I || W.fy25.E ? '<div class="arm-kicker">By direction · 2025</div>' + dirLine('fy25', 'I') + dirLine('fy25', 'E') : '') +
+      '<p class="arm-disc">' + esc(W.basis) + '.</p></div>';
+  }
+  function periodText(cut) {
+    var ds = String(cut || '').match(/(Imports|Exports)?\s*(\d{4}-\d{2}-\d{2})/g) || [];
+    if (!ds.length) return String(cut || '');
+    if (ds.length === 1) return CY + ' YTD through ' + day(ds[0].trim());
+    return CY + ' YTD · ' + ds.map(function (x) { var p = x.trim().split(/\s+/); return p.length > 1 ? p[0] + ' through ' + day(p[1]) : day(p[0]); }).join(' · ');
+  }
+  function cardMix(m) {
+    var W = m.W, a = m.A.cy;
+    function bar(v, cls) { return '<div class="arm-bar ' + (cls || '') + '"><i style="width:' + Math.max(0, Math.min(100, v)) + '%"></i></div>'; }
+    var sowH = ['I', 'E'].map(function (d) { var x = W && W.cur[d]; var p = x && parsePct(x.v);
+      return '<div class="arm-row"><span>' + dirName(d) + '</span><b>' + (x && x.v ? esc(x.v) : a[d] === 'DIR' ? 'Source not supplied' : 'Not printed') + '</b></div>' + (p ? bar(p.x) : ''); }).join('');
+    var mixH = (a.I === 'DIR' || a.E === 'DIR') ? '<div class="arm-row"><span>Mix</span><b>' + pend('DIR') + '</b></div><span class="arm-sub">' + (a.I === 'DIR' ? 'Imports' : 'Exports') + ' file not supplied: a mix needs both directions.</span>'
+      : ['I', 'E'].map(function (d) { return '<div class="arm-row"><span>' + dirName(d) + '</span><b>' + pct(a[d], a.T) + ' <span class="arm-sub" style="display:inline">' + fmt(a[d]) + '</span></b></div>' + bar(a[d] / a.T * 100, 'mix'); }).join('') + '<span class="arm-sub">Base: ' + fmt(a.T) + ' PJ Shipments · ' + esc(a.src) + '</span>';
+    return '<div class="arm-dcard"><h3>Directional wallet vs activity mix</h3><div class="arm-split">' +
+      '<div><div class="arm-kicker">Share of Wallet by direction</div><span class="arm-sub">Arcatek share of each direction’s visible Shipments</span>' + sowH + '</div>' +
+      '<div><div class="arm-kicker">Activity mix</div><span class="arm-sub">How the account’s visible Shipments split</span>' + mixH + '</div></div></div>';
+  }
+  function cardGateways(m) {
+    var G = m.G; if (!G) return '<div class="arm-dcard wide"><h3>Gateway coverage</h3>' + pend('NO') + '</div>';
+    var withA = G.list.filter(function (g) { return (g.I && g.I.a) || (g.E && g.E.a); }).length;
+    var rows = G.list.map(function (g) {
+      var a = (g.I ? g.I.a : 0) + (g.E ? g.E.a : 0), t = (g.I ? g.I.t : 0) + (g.E ? g.E.t : 0);
+      var dir = g.I && g.E ? 'Bidirectional' : g.I ? 'Imports' : 'Exports';
+      var st = a === 0 ? ['ws', '○ Visible whitespace'] : a === t ? ['cap', '✓ Captured'] : ['par', '◐ Partial'];
+      var split = g.I && g.E ? '<span class="arm-dirs">Imports ' + fmt(g.I.a) + ' / ' + fmt(g.I.t) + ' · Exports ' + fmt(g.E.a) + ' / ' + fmt(g.E.t) + '</span>' : '';
+      return '<tr><td data-l="Gateway"><b>' + esc(g.n) + '</b>' + split + '</td><td data-l="Direction">' + dir + '</td><td class="num" data-l="Arcatek / visible">' + fmt(a) + ' / ' + fmt(t) + '</td><td class="num" data-l="Captured">' + pct(a, t) + '</td><td data-l="Status"><span class="arm-gst ' + st[0] + '">' + st[1] + '</span></td></tr>';
+    }).join('');
+    return '<div class="arm-dcard wide"><h3>Gateway coverage</h3><div class="arm-split">' +
+      '<div><div class="arm-kicker">Gateway presence</div><div class="arm-hero">' + withA + ' of ' + G.list.length + '</div><span class="arm-sub">Gateways with Arcatek activity. A count of gateways, not volume coverage.</span></div>' +
+      '<div><div class="arm-kicker">Volume capture across listed gateways</div><div class="arm-hero">' + pct(G.arc, G.tot) + '</div><span class="arm-sub">' + fmt(G.arc) + ' / ' + fmt(G.tot) + ' Shipments' + (G.unassigned > 0 ? ' · the AIOS assigns ' + fmt(G.unassigned) + ' further Shipments to no gateway' : '') + '</span></div></div>' +
+      '<table class="arm-gw"><thead><tr><th>Gateway</th><th>Direction</th><th class="num">Arcatek / visible</th><th class="num">Captured</th><th>Status</th></tr></thead><tbody>' + rows + '</tbody></table>' +
+      '<p class="arm-disc">Captured = every visible Shipment at the gateway uses an Arcatek patent (3468 / 1930); Partial = some; Visible whitespace = none. Source: ' + esc(G.src) + '.</p></div>';
+  }
+  function cardTeu(m) {
+    var t = m.T; if (!t) return '<div class="arm-dcard"><h3>Visible TEU</h3>' + pend('PR') + refViz('bar') + '</div>';
+    var y = t.periods.ytd2026, f = t.periods.fy2025, c = t.periods.comparable2025, st = AIOS_TEU.STATUS[t.status] || AIOS_TEU.STATUS.pending;
+    function dirTile(d) {
+      var x = y.directions[d];
+      if (!x.supplied) return '<div class="arm-row"><span>' + AIOS_TEU.DIR[d] + '</span><b>' + pend('DIR') + '</b></div>';
+      return '<div class="arm-row"><span>' + AIOS_TEU.DIR[d] + '</span><b>' + tv(x.total) + (x.status === 'insufficient' ? ' · ' + pend('INS') : '') + '</b></div>' +
+        '<span class="arm-sub">TEU on ' + fmt(x.teuRows) + ' / ' + fmt(x.rows) + ' rows (' + AIOS_TEU.p1(x.pct) + ')' + (x.missing ? ' · ' + fmt(x.missing) + ' rows without TEU; may understate the visible universe' : '') + ' · through ' + esc(AIOS_TEU.day(t.cutoffs[d])) + '</span>';
+    }
+    var modes = ['maritime', 'air', 'truck', 'rail', 'dsr', 'unknown', 'other'].map(function (k) { return '<div>' + AIOS_TEU.MODE[k] + '<b>' + tv(y.modes[k]) + '</b></div>'; }).join('') + '<div>Land total<b>' + tv(y.land) + '</b></div>';
+    var sid = AIOS_TEU.shortId(m.r.e.view);
+    return '<div class="arm-dcard full"><h3>Visible Panjiva TEU · ' + CY + ' YTD</h3><span class="arc-badge ' + st.cls + '">' + esc(st.label) + '</span>' +
+      '<div class="arm-split" style="margin-top:8px"><div><div class="arm-hero">' + (y.total != null ? tv(y.total) : '<span style="font-size:14px">Not totaled</span>') + '</div>' +
+      '<span class="arm-sub">' + (y.total != null ? 'Visible TEU' : (observed(y) == null ? 'No TEU data in the supplied rows' : tv(observed(y)) + ' TEU observed in populated rows') + ' · not an account total') + '</span>' +
+      '<span class="arm-ref">2025: ' + (f.total != null ? '<b>' + tv(f.total) + '</b>' : 'Not totaled · ' + esc((AIOS_TEU.STATUS[f.status] || {}).label || '')) + ' · comparable 2025 window: ' + (c.total != null ? '<b>' + tv(c.total) + '</b>' : 'not totaled') + '</span></div>' +
+      '<div>' + dirTile('imports') + dirTile('exports') + '</div></div>' +
+      '<div class="arm-modes">' + modes + '</div>' +
+      '<span class="arm-sub">Reconciliation: ' + esc(y.recon && y.recon.status === 'pass' ? 'passed' : 'failed') + ' · Field: Panjiva Volume (TEU), not Shipments or containers.</span>' +
+      '<button type="button" class="arm-link" data-arm-teu="' + esc(m.r.e.view) + '|ateu-' + esc(sid) + '-sum">Open the complete TEU analysis in the AIOS →</button></div>';
+  }
+  function cardFin(m) {
+    var x = finFor(m);
+    if (!x.cur) return '<div class="arm-dcard"><h3>Financials · Arcatek · ' + esc(perLabel()) + '</h3>' +
+      '<div class="arm-fin"><div><span class="l">Revenue</span>' + pend('PR') + '</div><div><span class="l">Gross Profit</span>' + pend('PR') + '</div><div><span class="l">Gross Margin</span>' + pend('PR') + '</div></div>' +
+      refViz('line') + '<p class="arm-disc">Internal Arcatek financial information is required: Revenue and Direct Cost, with currency. Gross Profit = Revenue − Direct Cost; Gross Margin = Gross Profit ÷ Revenue. Panjiva CIF, freight, merchandise, insurance or shipment values are never used as Revenue. Akzent Logistics profit is a separate service and is not shown here.</p></div>';
+    return '<div class="arm-dcard"><h3>Financials · Arcatek · ' + esc(perLabel()) + '</h3>' +
+      '<div class="arm-fin"><div><span class="l">Revenue</span><span class="v">' + money(x.cur.rev, x.fin.cur) + '</span>' + (isCY() ? '<span class="arm-sub">2025: ' + (x.ref ? money(x.ref.rev, x.fin.cur) : 'Pending receipt') + '</span>' : '') +
+      (x.chg != null ? '<span class="arm-sub">Comparable change: <b>' + (x.chg >= 0 ? '+' : '') + (x.chg * 100).toFixed(1) + '%</b></span>' : '<span class="arm-sub">Comparable change: no comparable ' + (+state.f.year - 1) + ' period</span>') + '</div>' +
+      '<div><span class="l">Gross Profit</span><span class="v">' + money(x.cur.gp, x.fin.cur) + '</span></div>' +
+      '<div><span class="l">Gross Margin</span><span class="v">' + (x.cur.gm != null ? (x.cur.gm * 100).toFixed(1) + '%' : '—') + '</span></div></div>' +
+      '<p class="arm-disc">Source: ' + esc(x.fin.src || 'registry values.fin') + '.</p></div>';
+  }
+  function cardProxy(m) {
+    var a = m.A.cy;
+    return '<div class="arm-dcard"><h3>Embarques PJ · proxy of pedimentos</h3>' +
+      '<div class="arm-hero">' + fmt(a.T) + '</div><span class="arm-sub">PJ Shipments used as a 1:1 proxy of customs entries (pedimentos) · ' + CY + ' YTD</span>' +
+      '<p class="arm-disc"><b>Operational proxy.</b> This is not a validated count of customs entries. Arcatek customs-entry records, when supplied, will appear as a separate metric.</p>' +
+      '<div class="arm-kicker">Follow-up</div>' +
+      ['incidents', 'lastVisit', 'next'].map(function (k) { var v = val(m.r.e, k); return '<div class="arm-row"><span>' + { incidents: 'Incidents', lastVisit: 'Last visit', next: 'Next action' }[k] + '</span><b>' + (v ? esc(v.v) : pend('PR')) + '</b></div>'; }).join('') + '</div>';
+  }
+  function renderDetail() {
+    var body = document.getElementById('arm-detail-body'), m = state.sel && M[state.sel];
+    if (!m) { body.innerHTML = '<p class="arc-placeholder">Select an account from the search, the table or the attention lists.</p>'; return; }
+    var e = m.r.e, kam = val(e, 'kamArc');
+    body.innerHTML = '<div class="arm-dhead"><div><h3 class="arm-dname">' + esc(e.legal) + '</h3><div class="arm-dmeta">' + relBadge(m.r.rel) +
+      (e.aios === 'processed' ? '<span class="arc-badge info"><span aria-hidden="true">✓</span>AIOS processed</span>' : '<span class="arc-badge pd">AIOS pending</span>') +
+      '<span>KAM · ' + (kam ? esc(kam.v) : 'Pending receipt') + '</span></div></div>' +
+      (e.view ? '<button type="button" class="arm-go" data-arm-view="' + esc(e.view) + '">Open complete AIOS →</button>' : '') + '</div>' +
+      (m.flags.length ? '<div class="arm-flags">' + m.flags.map(flagHtml).join('') + '</div>' : '') +
+      '<div class="arm-dgrid">' + cardSow(m) + cardMix(m) + cardFin(m) + cardGateways(m) + cardProxy(m) + cardTeu(m) + '</div>';
+  }
+
+  /* ── layout concepts ── */
+  var CKEY = 'aios-arm-concept';
+  function applyConcept() {
+    var c = CONCEPTS[state.concept];
+    document.getElementById('arm-concepts').innerHTML = Object.keys(CONCEPTS).map(function (k) {
+      return '<button type="button" data-arm-concept="' + k + '" aria-pressed="' + (k === state.concept) + '">' + esc(CONCEPTS[k].l) + (CONCEPTS[k].rec ? ' · recommended' : '') + '</button>'; }).join('');
+    document.getElementById('arm-concept-d').textContent = c.d;
+    Array.prototype.forEach.call(document.querySelectorAll('#arm-flow > [data-arm-sec]'), function (s) {
+      var k = s.getAttribute('data-arm-sec'), i = c.order.indexOf(k);
+      s.hidden = i < 0; s.style.order = i < 0 ? 99 : i;
+      var st = s.querySelector('[data-arm-step]'); if (st) st.textContent = (i < 9 ? '0' : '') + (i + 1) + ' · ' + STEP[k];
+    });
+  }
+
+  /* ── search (production combobox behavior, production matching) ── */
+  function renderOptions(q) {
+    var lb = document.getElementById('arm-listbox'), inp = document.getElementById('arm-q');
+    state.opts = CORE.search(q); state.active = state.opts.length ? 0 : -1;
+    lb.innerHTML = state.opts.length ? state.opts.map(function (o, i) {
+      return '<li class="arc-opt" role="option" id="arm-opt-' + i + '" data-arm-opt="' + i + '" aria-selected="' + (i === state.active) + '"><span class="arc-opt-name">' + esc(o.r.e.legal) +
+        (o.via ? '<span class="arc-opt-alias">Matched alias: ' + esc(o.via.a) + ' (' + esc(o.via.why) + ')</span>' : '') + '</span></li>'; }).join('')
+      : '<li class="arc-opt-empty" role="presentation">No current Arcatek client matches “' + esc(q) + '”.</li>';
+    lb.hidden = false; inp.setAttribute('aria-expanded', 'true'); syncActive();
+    document.getElementById('arm-search-note').textContent = state.opts.length + ' of ' + ROWS.length + ' clients match';
+  }
+  function syncActive() {
+    var inp = document.getElementById('arm-q');
+    Array.prototype.forEach.call(document.querySelectorAll('#arm-listbox .arc-opt'), function (li, i) { li.setAttribute('aria-selected', String(i === state.active)); if (i === state.active) li.scrollIntoView({ block: 'nearest' }); });
+    if (state.active >= 0) inp.setAttribute('aria-activedescendant', 'arm-opt-' + state.active); else inp.removeAttribute('aria-activedescendant');
+  }
+  function closeOptions() { document.getElementById('arm-listbox').hidden = true; var i = document.getElementById('arm-q'); i.setAttribute('aria-expanded', 'false'); i.removeAttribute('aria-activedescendant'); }
+  function select(key, focus) {
+    state.sel = key; var m = M[key];
+    if (m) { document.getElementById('arm-q').value = m.r.e.legal; document.getElementById('arm-q-clear').hidden = false; }
+    closeOptions(); renderTable(visible()); renderDetail();
+    if (focus) { var d = document.getElementById('arm-detail'); d.scrollIntoView({ block: 'start', behavior: 'smooth' }); d.focus({ preventScroll: true }); }
+  }
+
+  function renderAll() { var ms = visible(); renderKpis(ms); renderTable(ms); renderAttention(ms); renderDetail(); }
+  function wire() {
+    var root = document.getElementById(VIEW_ID), inp = document.getElementById('arm-q');
+    inp.addEventListener('input', function () { document.getElementById('arm-q-clear').hidden = !inp.value; renderOptions(inp.value); });
+    inp.addEventListener('focus', function () { renderOptions(state.sel && M[state.sel] && inp.value === M[state.sel].r.e.legal ? '' : inp.value); });
+    inp.addEventListener('keydown', function (e) {
+      var open = !document.getElementById('arm-listbox').hidden;
+      if (e.key === 'ArrowDown') { e.preventDefault(); if (!open) renderOptions(inp.value); else if (state.opts.length) { state.active = (state.active + 1) % state.opts.length; syncActive(); } }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); if (open && state.opts.length) { state.active = (state.active - 1 + state.opts.length) % state.opts.length; syncActive(); } }
+      else if (e.key === 'Enter') { if (open && state.active >= 0) { e.preventDefault(); select(state.opts[state.active].r.e.key, true); } }
+      else if (e.key === 'Escape') { if (open) { e.preventDefault(); e.stopPropagation(); closeOptions(); } }
+    });
+    document.getElementById('arm-q-clear').addEventListener('click', function () { inp.value = ''; this.hidden = true; inp.focus(); renderOptions(''); });
+    document.addEventListener('mousedown', function (e) { if (!e.target.closest || !e.target.closest('#' + VIEW_ID + ' .arc-search-wrap')) closeOptions(); });
+    root.addEventListener('change', function (e) {
+      var id = e.target.id, f = state.f;
+      if (id === 'arm-f-kam') f.kam = e.target.value; else if (id === 'arm-f-rel') f.rel = e.target.value;
+      else if (id === 'arm-f-year') { f.year = e.target.value; f.per = isCY() ? 'ytd' : 'year'; fillSelects(); }
+      else if (id === 'arm-f-per') f.per = e.target.value; else if (id === 'arm-f-dir') f.dir = e.target.value;
+      else if (id === 'arm-f-fin') f.fin = e.target.value; else if (id === 'arm-f-teu') f.teu = e.target.value;
+      else if (id === 'arm-f-flag') f.flag = e.target.checked; else return;
+      renderAll();
+    });
+    root.addEventListener('mousedown', function (e) { var o = e.target.closest('[data-arm-opt]'); if (o) { e.preventDefault(); select(state.opts[+o.getAttribute('data-arm-opt')].r.e.key, true); } });
+    root.addEventListener('click', function (e) {
+      var t;
+      if ((t = e.target.closest('[data-arm-concept]'))) { state.concept = t.getAttribute('data-arm-concept'); try { localStorage.setItem(CKEY, state.concept); } catch (x) {} applyConcept(); return; }
+      if ((t = e.target.closest('[data-arm-open]'))) { select(t.getAttribute('data-arm-open'), true); return; }
+      if ((t = e.target.closest('[data-arm-view]'))) { showViewById(t.getAttribute('data-arm-view')); return; }
+      if ((t = e.target.closest('[data-arm-teu]'))) { var p = t.getAttribute('data-arm-teu').split('|'); showViewById(p[0]); var a = document.getElementById(p[1]); if (a) a.scrollIntoView({ block: 'start' }); return; }
+      if ((t = e.target.closest('#arm-reset, [data-arm-reset]'))) { state.f = JSON.parse(JSON.stringify(DEF)); fillSelects(); renderAll(); return; }
+      if ((t = e.target.closest('[data-arm-flag]'))) {
+        if (e.detail > 1) return;   /* double-click opens and keeps open; single click / Enter toggles */
+        var b = document.getElementById(t.getAttribute('aria-controls')), open = t.getAttribute('aria-expanded') === 'true';
+        t.setAttribute('aria-expanded', String(!open)); b.hidden = open;
+      }
+    });
+    root.addEventListener('dblclick', function (e) {
+      var t = e.target.closest('[data-arm-flag]'); if (!t) return;
+      t.setAttribute('aria-expanded', 'true'); document.getElementById(t.getAttribute('aria-controls')).hidden = false;
+    });
+  }
+
+  function init() {
+    if (!document.getElementById(VIEW_ID) || !window.ARCATEK_CORE) { if (document.getElementById(VIEW_ID)) console.error('[Arcatek mockup] ARCATEK_CORE unavailable'); return; }
+    build();
+    try { var c = localStorage.getItem(CKEY); if (CONCEPTS[c]) state.concept = c; } catch (x) {}
+    applyConcept(); fillSelects(); renderExec(); renderAll(); renderDetail(); wire();
+    window.ARCATEK_MOCKUP = { model: M, state: state, rerender: function () { build(); fillSelects(); renderExec(); renderAll(); renderDetail(); } };
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
 </script>
 
