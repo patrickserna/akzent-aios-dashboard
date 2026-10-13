@@ -36615,6 +36615,8 @@ table.ateu-t { width: 100%; border-collapse: collapse; font-size: 11.5px; }
 #view-arcatek-mockup .arm-row b { white-space: nowrap; }
 #view-arcatek-mockup .arm-kicker { font-size: 9.5px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; color: var(--arc-cyan-ink); margin: 10px 0 2px; }
 #view-arcatek-mockup .arm-kicker:first-child { margin-top: 0; }
+#view-arcatek-mockup .arm-arcteu { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: 18px; margin: 10px 0 12px; padding: 12px 14px; background: var(--arc-cyan-soft); border: 1px solid rgba(0,122,147,0.25); border-radius: 8px; }
+#view-arcatek-mockup .arm-arcteu > div { min-width: 0; }
 #view-arcatek-mockup .arm-wh { display: flex; justify-content: space-between; align-items: baseline; gap: 4px 12px; flex-wrap: wrap; }
 #view-arcatek-mockup .arm-wh h3 { margin: 0; }
 #view-arcatek-mockup .arm-wtop { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr) minmax(0, .9fr); gap: 0; margin: 10px 0 4px; }
@@ -36662,6 +36664,7 @@ table.ateu-t { width: 100%; border-collapse: collapse; font-size: 11.5px; }
   #view-arcatek-mockup .arm-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   #view-arcatek-mockup .arm-filters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   #view-arcatek-mockup .arm-wtop { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  #view-arcatek-mockup .arm-arcteu { grid-template-columns: minmax(0, 1fr); gap: 10px; }
   #view-arcatek-mockup .arm-wtop > div { padding: 0; border-left: 0; }
   #view-arcatek-mockup .arm-gw thead { display: none; }
   #view-arcatek-mockup .arm-gw tr { display: block; border-bottom: 1px solid var(--arc-line); padding: 4px 0; }
@@ -36691,7 +36694,7 @@ table.ateu-t { width: 100%; border-collapse: collapse; font-size: 11.5px; }
   <div class="sidebar-logo">
     <div class="logo-mark" role="img" aria-label="Akzent"></div>
     <div class="logo-sub">Intelligence OS</div>
-    <div class="aios-build" id="aios-build" title="Build 212 · last updated 2026-10-13 08:20 (Mexico City)"><b>v2.212</b> · Updated 13 Oct 2026, 08:20</div>
+    <div class="aios-build" id="aios-build" title="Build 213 · last updated 2026-10-13 08:25 (Mexico City)"><b>v2.213</b> · Updated 13 Oct 2026, 08:25</div>
     <div class="aios-logo-glyph" aria-hidden="true"></div>
     <button type="button" id="aios-sb-toggle" class="aios-sb-toggle" onclick="aiosToggleSidebar()" aria-label="Collapse sidebar" aria-controls="aios-sidebar" aria-expanded="true" title="Collapse sidebar">
       <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false"><path d="M10 3.5 5.5 8 10 12.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -123379,6 +123382,33 @@ var ARCATEK_WALLET_SCOPES = {
   'mekra': { cur: {I: [23, 444], E: [143, 819]}, fy25: {T: [183, 2095], I: [0, 865], E: [183, 1230]} }
 };
 
+/* ── Arcatek share of visible TEU (13-Oct-2026, calculated from PJ records · pending AIOS confirmation) ──
+   [Arcatek TEU, all visible TEU, Arcatek TEU rows, TEU-populated rows], 2026 YTD, per direction.
+   Arcatek = Panjiva "Customs Agent" 3468 or 1930; TEU = the original "Volume (TEU)" field.
+   Calculated on the exact retained universe of each account's TEU record (rows, TEU rows and TEU
+   reproduce the record) and only kept where the Arcatek row count reproduces the AIOS wallet
+   numerator. A fifth item names the failed check ('universe' | 'numerator'); null = no source file.
+   Read by the Dashboard Arcatek Mockup only. */
+var ARCATEK_TEU_SHARE = {
+  'liebherr': { I: [25.33309, 351.178641, 29, 198], E: [140.296455, 314.781864, 40, 76] },
+  'lincoln': { I: [195.027785, 302.156472, 281, 624], E: [308.632258, 367.379591, 145, 484] },
+  'woco-tech': { I: [25.802259, 89.413522, 53, 626], E: [12.974214, 480.184245, 20, 618] },
+  'woco-aps': { I: [97.941176, 110.58626, 59, 126], E: [483.362748, 503.46204, 191, 361] },
+  'pipsa': { I: [0.0, 12.831909, 0, 4], E: [1481.185266, 1802.752909, 851, 1034] },
+  'borgwarner': { I: [944.714679, 1776.278361, 324, 887], E: [832.000798, 1363.192101, 103, 352] },
+  'haldex': { I: [620.223747, 648.130664, 245, 287], E: [624.709593, 670.390825, 73, 129] },
+  'kitchen': { I: [36.252299, 250.679891, 76, 388], E: [215.692376, 419.318827, 651, 1038] },
+  'phinia': { I: [73.431173, 75.350313, 17, 23], E: [0.0, 156.026539, 0, 84] },
+  'brahm': { I: [9.511661, 10.173622, 16, 59, 'numerator'], E: [8.920026, 10.242001, 74, 108, 'numerator'] },
+  'doga': { I: [7.002747, 10.766793, 8, 41], E: [4.99222, 5.142893, 36, 46] },
+  'mekra': { I: [12.851123, 618.360043, 23, 443], E: [5.970531, 914.782982, 143, 819] },
+  'busman': { I: [1.415289, 2.796505, 4, 9], E: [0.0, 5.298884, 0, 7] },
+  'cemm': { I: [84.264155, 396.317599, 180, 1535], E: [35.551796, 501.074536, 124, 1112] },
+  'enerpres': { I: [0.0, 0.0, 0, 0], E: null },
+  'siete-leguas': { I: [40.096619, 87.363918, 40, 235], E: [265.663881, 268.653524, 35, 90] },
+  'grupo-essex': { I: [10.102666, 12.795074, 8, 9], E: [0.0, 8.871049, 0, 13] }
+};
+
 /* ── Gateway × direction rows (13-Oct-2026 read of each AIOS "Customs Wallet by Gateway") ──
    [gateway as labelled by the AIOS, 'I' | 'E', Arcatek-patent Shipments (3468 + 1930),
    all visible PJ Shipments], current YTD, same universe as the Customs Shared Wallet.
@@ -124988,11 +125018,11 @@ var ARCATEK_REFERENCE = {
     return CY + ' YTD · ' + ds.map(function (x) { var p = x.trim().split(/\s+/); return p.length > 1 ? p[0] + ' through ' + day(p[1]) : day(p[0]); }).join(' · ');
   }
   function bar(v, cls) { return '<div class="arm-bar ' + (cls || '') + '"><i style="width:' + Math.max(0, Math.min(100, v)) + '%"></i></div>'; }
-  function cardMix(m) {
+  /* The account's own Imports / Exports split (all visible PJ Shipments, not Arcatek). */
+  function splitLine(m) {
     var a = m.A.cy;
-    var mixH = (a.I === 'DIR' || a.E === 'DIR') ? '<div class="arm-row"><span>Mix</span><b>' + pend('DIR') + '</b></div><span class="arm-sub">' + (a.I === 'DIR' ? 'Imports' : 'Exports') + ' file not supplied: a mix needs both directions.</span>'
-      : ['I', 'E'].map(function (d) { return '<div class="arm-row"><span>' + dirName(d) + '</span><b>' + pct(a[d], a.T) + ' <span class="arm-sub" style="display:inline">' + fmt(a[d]) + '</span></b></div>' + bar(a[d] / a.T * 100, 'mix'); }).join('') + '<span class="arm-sub">Base: ' + fmt(a.T) + ' PJ Shipments · ' + esc(a.src) + '</span>';
-    return '<div class="arm-dcard"><h3>Activity mix · ' + CY + ' YTD</h3><span class="arm-sub">How the account’s visible Shipments split. Not a share of wallet.</span>' + mixH + '</div>';
+    if (typeof a.I !== 'number' || typeof a.E !== 'number' || !a.T) return '';
+    return '<span class="arm-sub" style="margin-top:8px" title="Share of all ' + fmt(a.T) + ' visible PJ Shipments. Not an Arcatek measure.">Account split · Imports <b>' + pct(a.I, a.T) + '</b> · Exports <b>' + pct(a.E, a.T) + '</b></span>';
   }
   /* One card: Share of Wallet (total + by direction, 2025 below each) and where it happens (gateways). */
   function cardWallet(m) {
@@ -125013,7 +125043,7 @@ var ARCATEK_REFERENCE = {
       }
       return '<div class="arm-wdir"><div class="arm-row"><span>' + dirName(d) + '</span><b>' + (x && x.v ? esc(x.v) : 'Not printed') + '</b></div>' + (p ? bar(p.x) : '') +
         '<span class="arm-sub">' + (nN(x) ? nN(x) + ' · ' : '') + '2025: ' + (y && y.v ? '<b>' + esc(y.v) + '</b>' : 'not supplied') + (W.pp[d] ? ' · ' + ppChip(W.pp[d]) : '') + '</span></div>';
-    }).join('') + '</div>';
+    }).join('') + splitLine(m) + '</div>';
     var withA = G ? G.list.filter(function (g) { return (g.I && g.I.a) || (g.E && g.E.a); }).length : null;
     var pres = '<div><div class="arm-kicker">Gateway presence</div>' + (G ? '<div class="arm-hero">' + withA + ' of ' + G.list.length + '</div><span class="arm-sub">gateways with Arcatek activity · a count, not volume</span>' : pend('NO')) + '</div>';
     var table = '';
@@ -125033,6 +125063,38 @@ var ARCATEK_REFERENCE = {
       '<details class="arm-why"><summary>Definitions and source</summary><ul><li>' + esc(W.basis) + '.</li><li>Captured = every visible Shipment at the gateway uses an Arcatek patent (3468 / 1930) · Partial = some · Visible whitespace = none.</li>' +
       (G ? '<li>Source: ' + esc(G.src) + '.</li>' : '') + '</ul></details></div>';
   }
+  /* Arcatek share of visible TEU (ARCATEK_TEU_SHARE): shown per direction only where the PJ
+     calculation reproduced the AIOS and TEU coverage is at least 95%; the total also needs both
+     directions and no mirrored Import/Export pairs. */
+  function arcTeuBand(m) {
+    var S = typeof ARCATEK_TEU_SHARE !== 'undefined' && ARCATEK_TEU_SHARE[m.r.e.key], t = m.T;
+    if (!S || !t) return '';
+    var y = t.periods.ytd2026.directions, ok = {}, why = {};
+    ['I', 'E'].forEach(function (d) {
+      var x = S[d], dd = y[d === 'I' ? 'imports' : 'exports'];
+      if (!x || !dd.supplied) why[d] = LBL.DIR.t;
+      else if (x[4]) why[d] = 'Not calculated · the TEU universe does not reproduce the AIOS wallet';
+      else if (!x[1] || dd.pct < 95) why[d] = 'Not calculated · TEU coverage ' + AIOS_TEU.p1(dd.pct);
+      else ok[d] = x;
+    });
+    var mirrored = (t.flags || []).some(function (f) { return f.code === 'MIRRORED_PAIRS'; });
+    var tot = null, totWhy = null;
+    if (ok.I && ok.E && !mirrored) tot = [ok.I[0] + ok.E[0], ok.I[1] + ok.E[1]];
+    else totWhy = mirrored ? 'Not totaled · Imports and Exports may repeat the same volume' : 'Not totaled · needs both directions';
+    function sh(x) { return x[0] / x[1] * 100; }
+    function line(d) {
+      var x = ok[d];
+      if (!x) return '<div class="arm-row"><span>' + dirName(d) + '</span><b class="arm-sub" style="display:inline;font-weight:600">' + esc(why[d]) + '</b></div>';
+      var dd = y[d === 'I' ? 'imports' : 'exports'];
+      return '<div class="arm-row"><span>' + dirName(d) + '</span><b>' + sh(x).toFixed(1) + '%</b></div>' + bar(sh(x)) +
+        '<span class="arm-sub">' + tv(x[0]) + ' / ' + tv(x[1]) + ' TEU' + (x[3] < dd.rows ? ' · TEU on ' + fmt(x[3]) + ' of ' + fmt(dd.rows) + ' rows' : '') + '</span>';
+    }
+    return '<div class="arm-arcteu"><div><div class="arm-kicker">Arcatek share of visible TEU</div>' +
+      (tot ? '<div class="arm-hero">' + (tot[0] / tot[1] * 100).toFixed(1) + '%</div><span class="arm-sub">' + tv(tot[0]) + ' / ' + tv(tot[1]) + ' TEU</span>'
+           : '<div class="arm-hero" style="font-size:15px;font-weight:600">' + esc(totWhy) + '</div>') +
+      '<span class="arm-sub">Calculated from PJ records · pending AIOS confirmation</span></div>' +
+      '<div>' + line('I') + line('E') + '</div></div>';
+  }
   function cardTeu(m) {
     var t = m.T; if (!t) return '<div class="arm-dcard"><h3>Visible TEU</h3>' + pend('PR') + refViz('bar') + '</div>';
     var y = t.periods.ytd2026, f = t.periods.fy2025, c = t.periods.comparable2025, st = AIOS_TEU.STATUS[t.status] || AIOS_TEU.STATUS.pending;
@@ -125045,6 +125107,7 @@ var ARCATEK_REFERENCE = {
     var modes = ['maritime', 'air', 'truck', 'rail', 'dsr', 'unknown', 'other'].map(function (k) { return '<div>' + AIOS_TEU.MODE[k] + '<b>' + tv(y.modes[k]) + '</b></div>'; }).join('') + '<div>Land total<b>' + tv(y.land) + '</b></div>';
     var sid = AIOS_TEU.shortId(m.r.e.view);
     return '<div class="arm-dcard full"><h3>Visible Panjiva TEU · ' + CY + ' YTD</h3><span class="arc-badge ' + st.cls + '">' + esc(st.label) + '</span>' +
+      arcTeuBand(m) +
       '<div class="arm-split" style="margin-top:8px"><div><div class="arm-hero">' + (y.total != null ? tv(y.total) : '<span style="font-size:14px">Not totaled</span>') + '</div>' +
       '<span class="arm-sub">' + (y.total != null ? 'Visible TEU' : (observed(y) == null ? 'No TEU data in the supplied rows' : tv(observed(y)) + ' TEU observed in populated rows') + ' · not an account total') + '</span>' +
       '<span class="arm-ref">2025: ' + (f.total != null ? '<b>' + tv(f.total) + '</b>' : 'Not totaled · ' + esc((AIOS_TEU.STATUS[f.status] || {}).label || '')) + ' · comparable 2025 window: ' + (c.total != null ? '<b>' + tv(c.total) + '</b>' : 'not totaled') + '</span></div>' +
@@ -125055,23 +125118,15 @@ var ARCATEK_REFERENCE = {
   }
   function cardFin(m) {
     var x = finFor(m);
-    if (!x.cur) return '<div class="arm-dcard"><h3>Financials · Arcatek · ' + esc(perLabel()) + '</h3>' +
+    if (!x.cur) return '<div class="arm-dcard full"><h3>Financials · Arcatek · ' + esc(perLabel()) + '</h3>' +
       '<div class="arm-fin"><div><span class="l">Revenue</span>' + pend('PR') + '</div><div><span class="l">Gross Profit</span>' + pend('PR') + '</div><div><span class="l">Gross Margin</span>' + pend('PR') + '</div></div>' +
       refViz('line') + '<p class="arm-disc">Internal Arcatek financial information is required: Revenue and Direct Cost, with currency. Gross Profit = Revenue − Direct Cost; Gross Margin = Gross Profit ÷ Revenue. Panjiva CIF, freight, merchandise, insurance or shipment values are never used as Revenue. Akzent Logistics profit is a separate service and is not shown here.</p></div>';
-    return '<div class="arm-dcard"><h3>Financials · Arcatek · ' + esc(perLabel()) + '</h3>' +
+    return '<div class="arm-dcard full"><h3>Financials · Arcatek · ' + esc(perLabel()) + '</h3>' +
       '<div class="arm-fin"><div><span class="l">Revenue</span><span class="v">' + money(x.cur.rev, x.fin.cur) + '</span>' + (isCY() ? '<span class="arm-sub">2025: ' + (x.ref ? money(x.ref.rev, x.fin.cur) : 'Pending receipt') + '</span>' : '') +
       (x.chg != null ? '<span class="arm-sub">Comparable change: <b>' + (x.chg >= 0 ? '+' : '') + (x.chg * 100).toFixed(1) + '%</b></span>' : '<span class="arm-sub">Comparable change: no comparable ' + (+state.f.year - 1) + ' period</span>') + '</div>' +
       '<div><span class="l">Gross Profit</span><span class="v">' + money(x.cur.gp, x.fin.cur) + '</span></div>' +
       '<div><span class="l">Gross Margin</span><span class="v">' + (x.cur.gm != null ? (x.cur.gm * 100).toFixed(1) + '%' : '—') + '</span></div></div>' +
       '<p class="arm-disc">Source: ' + esc(x.fin.src || 'registry values.fin') + '.</p></div>';
-  }
-  function cardProxy(m) {
-    var a = m.A.cy;
-    return '<div class="arm-dcard"><h3>Embarques PJ · proxy of pedimentos</h3>' +
-      '<div class="arm-hero">' + fmt(a.T) + '</div><span class="arm-sub">PJ Shipments used as a 1:1 proxy of customs entries (pedimentos) · ' + CY + ' YTD</span>' +
-      '<p class="arm-disc"><b>Operational proxy.</b> This is not a validated count of customs entries. Arcatek customs-entry records, when supplied, will appear as a separate metric.</p>' +
-      '<div class="arm-kicker">Follow-up</div>' +
-      ['incidents', 'lastVisit', 'next'].map(function (k) { var v = val(m.r.e, k); return '<div class="arm-row"><span>' + { incidents: 'Incidents', lastVisit: 'Last visit', next: 'Next action' }[k] + '</span><b>' + (v ? esc(v.v) : pend('PR')) + '</b></div>'; }).join('') + '</div>';
   }
   function renderDetail() {
     var body = document.getElementById('arm-detail-body'), m = state.sel && M[state.sel];
@@ -125082,7 +125137,7 @@ var ARCATEK_REFERENCE = {
       '<span>KAM · ' + (kam ? esc(kam.v) : 'Pending receipt') + '</span></div></div>' +
       (e.view ? '<button type="button" class="arm-go" data-arm-view="' + esc(e.view) + '">Open complete AIOS →</button>' : '') + '</div>' +
       (m.flags.length ? '<div class="arm-flags">' + m.flags.map(flagHtml).join('') + '</div>' : '') +
-      '<div class="arm-dgrid">' + cardWallet(m) + cardMix(m) + cardProxy(m) + cardFin(m) + cardTeu(m) + '</div>';
+      '<div class="arm-dgrid">' + cardWallet(m) + cardFin(m) + cardTeu(m) + '</div>';
   }
 
   /* ── layout concepts ── */
