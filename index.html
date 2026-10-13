@@ -36694,7 +36694,7 @@ table.ateu-t { width: 100%; border-collapse: collapse; font-size: 11.5px; }
   <div class="sidebar-logo">
     <div class="logo-mark" role="img" aria-label="Akzent"></div>
     <div class="logo-sub">Intelligence OS</div>
-    <div class="aios-build" id="aios-build" title="Build 213 · last updated 2026-10-13 08:25 (Mexico City)"><b>v2.213</b> · Updated 13 Oct 2026, 08:25</div>
+    <div class="aios-build" id="aios-build" title="Build 214 · last updated 2026-10-13 08:33 (Mexico City)"><b>v2.214</b> · Updated 13 Oct 2026, 08:33</div>
     <div class="aios-logo-glyph" aria-hidden="true"></div>
     <button type="button" id="aios-sb-toggle" class="aios-sb-toggle" onclick="aiosToggleSidebar()" aria-label="Collapse sidebar" aria-controls="aios-sidebar" aria-expanded="true" title="Collapse sidebar">
       <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false"><path d="M10 3.5 5.5 8 10 12.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -40689,7 +40689,7 @@ table.ateu-t { width: 100%; border-collapse: collapse; font-size: 11.5px; }
     </div>
     <div class="arc-eyebrow">Customs agency portfolio · design proposal</div>
     <h1 id="arm-title"><b>Dashboard Arcatek</b> Mockup</h1>
-    <p class="arc-hero-sub" id="arm-hero-sub">The same Arcatek registry, AIOS facts and TEU records as the production Arcatek Dashboard, with an expanded layout. Nothing on this page is calculated separately.</p>
+    <p class="arc-hero-sub" id="arm-hero-sub">Design proposal on the same data as the Arcatek Dashboard.</p>
   </header>
 
   <div class="arc-body">
@@ -40763,7 +40763,6 @@ table.ateu-t { width: 100%; border-collapse: collapse; font-size: 11.5px; }
           </button>
         </div>
         <div id="arm-list-body">
-        <p class="arc-note" style="margin:0 0 8px;">Select a row to open its detail below. The complete AIOS opens from the detail.</p>
         <div class="arc-table-wrap">
           <table class="arc-table arm-table">
             <thead><tr><th scope="col">Legal entity · KAM</th><th scope="col">Status</th><th scope="col">Current activity</th><th scope="col">Share of Wallet</th><th scope="col">TEU</th><th scope="col">Financials</th><th scope="col">Review</th><th scope="col"><span class="arc-sr">Action</span></th></tr></thead>
@@ -124876,7 +124875,6 @@ var ARCATEK_REFERENCE = {
       '<div class="arm-group"><div class="arm-group-h">Volume and activity</div>' +
         (T.total != null ? '<span class="arm-big">' + tv(T.total) + ' <span style="font-size:13px">TEU</span></span><span class="arm-sub">Visible TEU · ' + T.accounts + ' accounts · ' + T.included.length + ' account-directions</span>' : '<span class="arm-big is-st">' + pend('NO') + '</span>') +
         '<div class="arm-mini"><div><span>PJ Shipments (proxy)</span><b>' + (P.N ? fmt(P.N) : '—') + '</b></div><div><span>Activity mix</span><b>' + (mixOk && P.N ? 'I ' + pct(mixI, P.N) + ' · E ' + pct(mixE, P.N) : pend('NO')) + '</b></div></div>' +
-        '<span class="arm-sub">Shipments and mix: the same ' + P.inc.length + ' accounts as the wallet window.</span>' +
         '<details class="arm-why"><summary>TEU accounts included and excluded</summary><ul><li><b>Included</b>: ' + esc((T.included || []).map(function (i) { return i.legal + ' · ' + i.dir; }).join('; ') || 'none') + '</li>' + (T.excluded || []).map(function (x) { return '<li>' + esc(x.legal + ' · ' + x.dir + ': ' + x.why) + '</li>'; }).join('') + '</ul></details></div>' +
       '<div class="arm-group"><div class="arm-group-h">Financials · Arcatek</div>' + finExecHtml(F) + '</div>';
     document.getElementById('arm-exec').innerHTML = html;
@@ -124885,7 +124883,7 @@ var ARCATEK_REFERENCE = {
     document.getElementById('arm-exec-note').innerHTML = 'Data update · AIOS analysis dates <b>' + esc(Object.keys(ads).sort(function (a, b) { return new Date(a) - new Date(b); }).filter(function (x, i, a) { return i === 0 || i === a.length - 1; }).join(' – ')) + '</b> · latest visible PJ Shipment <b>' + esc(day(latest)) + '</b>';
   }
   function finExecHtml(F) {
-    if (!F.have) return '<span class="arm-big is-st">' + pend('PR') + '</span><span class="arm-sub">Revenue, 2025 Revenue, comparable change, Gross Profit and Gross Margin need internal Arcatek financial data (Revenue and Direct Cost).</span>' + refViz('bar');
+    if (!F.have) return '<span class="arm-big is-st">' + pend('PR') + '</span><span class="arm-sub">Requires Arcatek Revenue and Direct Cost.</span>' + refViz('bar');
     if (F.mixed) return '<span class="arm-big is-st">' + pend('NO') + '</span><span class="arm-sub">Accounts report different currencies; no authorized conversion was supplied.</span>';
     return '<span class="arm-big">' + money(F.rev, F.cur) + '</span><span class="arm-sub">Revenue · ' + esc(perLabel()) + (F.complete ? '' : ' · ' + F.have + ' of ' + F.of + ' accounts') + '</span>' +
       '<span class="arm-ref">2025: ' + (F.ref != null ? '<b>' + money(F.ref, F.cur) + '</b>' : pend('PR')) + '</span>' +
@@ -124915,17 +124913,16 @@ var ARCATEK_REFERENCE = {
     var P = portfolioSow(ms), T = portfolioTeu(ms), F = portfolioFin(ms), dn = dirName(dirKey());
     var finV = function (x) { return F.have && !F.mixed ? x : null; };
     var h = kpi('Accounts', ms.length, 'of ' + ROWS.length + ' Arcatek accounts') +
-      kpi('Revenue', finV(money(F.rev, F.cur)) || pend('PR'), finV(esc(perLabel()) + (F.complete ? '' : ' · ' + F.have + ' of ' + F.of + ' accounts')) || 'Internal Arcatek financial data required', !finV(1)) +
-      kpi('Gross Profit', finV(money(F.gp, F.cur)) || pend('PR'), finV('Revenue − Direct Cost') || 'Revenue − Direct Cost', !finV(1)) +
-      kpi('Gross Margin', finV(F.gm != null ? (F.gm * 100).toFixed(1) + '%' : '—') || pend('PR'), 'Gross Profit ÷ Revenue', !finV(1)) +
-      kpi('PJ Shipment proxy', P.N ? fmt(P.N) : pend('NO'), (P.N ? esc(dn) + ' · ' + P.inc.length + (P.inc.length === 1 ? ' account · ' : ' accounts · ') + esc(P.window || '') : '') + '<br>Embarques PJ used as a 1:1 proxy of pedimentos', !P.N) +
+      kpi('Revenue', finV(money(F.rev, F.cur)) || pend('PR'), finV(esc(perLabel()) + (F.complete ? '' : ' · ' + F.have + ' of ' + F.of + ' accounts')) || '', !finV(1)) +
+      kpi('Gross Profit', finV(money(F.gp, F.cur)) || pend('PR'), '', !finV(1)) +
+      kpi('Gross Margin', finV(F.gm != null ? (F.gm * 100).toFixed(1) + '%' : '—') || pend('PR'), '', !finV(1)) +
+      kpi('PJ Shipment proxy', P.N ? fmt(P.N) : pend('NO'), (P.N ? P.inc.length + (P.inc.length === 1 ? ' account · ' : ' accounts · ') + esc(P.window || '') : '') + '<br>1:1 proxy of pedimentos', !P.N) +
       kpi('TEU', T.na ? pend('NO', T.na) : T.total != null ? tv(T.total) : pend('NO'), T.na ? esc(T.na) : T.total != null ? 'Visible · ' + T.included.length + ' account-directions' : 'No comparable account-direction', !!(T.na || T.total == null)) +
       kpi('Share of Wallet', P.v || pend('NO'), P.v ? fmt(P.n) + ' / ' + fmt(P.N) + ' · ' + esc(dn) + ' · ' + esc(P.window) : 'No compatible numerators', !P.v) +
-      kpi(isCY() ? '2025 comparison' : 'Comparable change', isCY() ? (P.ref ? P.ref.v : pend('NO', P.refWhy)) : pend('NO'), isCY() ? (P.ref ? '2025 · same ' + P.inc.length + ' accounts' + (P.pp ? ' · ' + ppChip(P.pp) : ' · comparable change not calculated') : esc(P.refWhy || '')) : 'Shown for the current year only', isCY() ? !P.ref : true);
+      kpi(isCY() ? '2025 comparison' : 'Comparable change', isCY() ? (P.ref ? P.ref.v : pend('NO', P.refWhy)) : pend('NO'), isCY() ? (P.ref ? '2025 · same ' + P.inc.length + ' accounts' + (P.pp ? ' · ' + ppChip(P.pp) : '') : '') : '', isCY() ? !P.ref : true);
     document.getElementById('arm-kpis').innerHTML = h;
     var dirNote = state.f.dir === 'both' ? '' : ' · ' + dn + ' values only';
-    document.getElementById('arm-scope').innerHTML = 'Financials follow <b>' + esc(perLabel()) + '</b>. Share of Wallet, PJ Shipments and TEU follow each AIOS window (' + (isCY() ? CY + ' YTD' : PY) + ')' + esc(dirNote) + '.' +
-      (/^q|^\d/.test(state.f.per) ? ' The AIOS facts have no monthly or quarterly breakdown, so the month / period filter applies to financials only.' : '');
+    document.getElementById('arm-scope').innerHTML = 'Month / period applies to financials only.' + esc(dirNote);
   }
 
   /* ── render: table ── */
@@ -124946,7 +124943,6 @@ var ARCATEK_REFERENCE = {
     var dirs = (a.I === 'DIR' || a.E === 'DIR') && sc === 'T' ? ' · ' + (a.I === 'DIR' ? 'Exports' : 'Imports') + ' only' : '';
     var last = m.T ? [m.T.cutoffs.imports, m.T.cutoffs.exports].filter(Boolean).sort().pop() : null;
     return '<span class="arm-cellv">' + fmt(v) + '</span><span class="arm-cellp">PJ Shipments · ' + (isCY() ? CY + ' YTD' : PY) + esc(dirs) + '</span>' +
-      '<span class="arm-cellp" title="The AIOS comparable Shipment trend is not in the centralized facts. TEU-record row counts are not substituted: they can differ from the AIOS figures.">Change · not yet obtained</span>' +
       (last && isCY() ? '<span class="arm-cellp">Last PJ Shipment ' + esc(day(last)) + '</span>' : '');
   }
   function teuCell(m) {
@@ -124960,7 +124956,7 @@ var ARCATEK_REFERENCE = {
     }
     if (p.total == null) {
       var obs = observed(p);
-      return (p.status === 'missing_direction' ? pend('DIR') : pend('INS')) + '<span class="arm-cellp">' + tv(obs) + (observed(p) == null ? '' : ' TEU observed in populated rows') + ' · not a total</span>';
+      return (p.status === 'missing_direction' ? pend('DIR') : pend('INS')) + '<span class="arm-cellp">' + tv(obs) + (observed(p) == null ? '' : ' TEU in rows with data') + '</span>';
     }
     return '<span class="arm-cellv">' + tv(p.total) + '</span><span class="arm-cellp">' + esc(AIOS_TEU.STATUS[p.status].label) + '</span>';
   }
@@ -124991,7 +124987,7 @@ var ARCATEK_REFERENCE = {
   /* ── render: attention (concept C) ── */
   function renderAttention(ms) {
     function col(title, desc, items, more) {
-      return '<div class="arm-att-col"><h3>' + esc(title) + '</h3><p>' + desc + '</p>' + (items.length ? '<ol>' + items.map(function (i) {
+      return '<div class="arm-att-col"><h3>' + esc(title) + '</h3>' + (desc ? '<p>' + desc + '</p>' : '') + (items.length ? '<ol>' + items.map(function (i) {
         return '<li><button type="button" data-arm-open="' + esc(i.m.r.e.key) + '"><span>' + esc(i.m.r.e.legal) + '</span><b>' + i.v + '</b></button></li>'; }).join('') + '</ol>' : '<span class="arm-empty">None in the current filter.</span>') + (more || '') + '</div>';
     }
     var fl = ms.filter(function (m) { return m.flags.length; }).sort(function (a, b) { return b.flags.length - a.flags.length; }).map(function (m) { return { m: m, v: '⚑ ' + m.flags.length }; });
@@ -125003,11 +124999,11 @@ var ARCATEK_REFERENCE = {
     var noFin = ms.filter(function (m) { return !finFor(m).cur; });
     var noNext = ms.filter(function (m) { return !val(m.r.e, 'next'); });
     document.getElementById('arm-att').innerHTML =
-      col('Review flags', 'Open the account and double-click a flag to read it.', fl.slice(0, 6), fl.length > 6 ? '<span class="arm-empty">+' + (fl.length - 6) + ' more in the table</span>' : '') +
-      col('Wallet decline', 'Comparable-window change in pp. ' + noCmp + ' account' + (noCmp === 1 ? '' : 's') + ' have no AIOS comparable window.', dec) +
-      col('Lowest gateway presence', 'Gateways with Arcatek activity out of the gateways the AIOS lists. Not volume coverage.', cov) +
-      col('Missing financial data', noFin.length + ' of ' + ms.length + ' accounts lack internal Arcatek Revenue and Direct Cost.', noFin.slice(0, 4).map(function (m) { return { m: m, v: 'Pending receipt' }; }), noFin.length > 4 ? '<span class="arm-empty">+' + (noFin.length - 4) + ' more</span>' : '') +
-      col('Next action', noNext.length + ' of ' + ms.length + ' accounts have no next action recorded.', noNext.slice(0, 4).map(function (m) { return { m: m, v: 'Pending receipt' }; }), noNext.length > 4 ? '<span class="arm-empty">+' + (noNext.length - 4) + ' more</span>' : '');
+      col('Review flags', '', fl.slice(0, 6), fl.length > 6 ? '<span class="arm-empty">+' + (fl.length - 6) + ' more in the table</span>' : '') +
+      col('Wallet decline', 'Comparable change, pp', dec) +
+      col('Lowest gateway presence', '', cov) +
+      col('Missing financial data', noFin.length + ' of ' + ms.length + ' accounts', noFin.slice(0, 4).map(function (m) { return { m: m, v: 'Pending receipt' }; }), noFin.length > 4 ? '<span class="arm-empty">+' + (noFin.length - 4) + ' more</span>' : '') +
+      col('Next action', noNext.length + ' of ' + ms.length + ' accounts', noNext.slice(0, 4).map(function (m) { return { m: m, v: 'Pending receipt' }; }), noNext.length > 4 ? '<span class="arm-empty">+' + (noNext.length - 4) + ' more</span>' : '');
   }
 
   /* ── render: account detail ── */
@@ -125033,7 +125029,7 @@ var ARCATEK_REFERENCE = {
     var total = '<div><div class="arm-kicker">Total</div><div class="arm-hero">' + esc(c.v) + '</div>' +
       '<span class="arm-sub"><b>' + nN(c) + '</b> Shipments</span>' +
       '<span class="arm-ref">2025: ' + (r25 && r25.v ? '<b>' + esc(r25.v) + '</b> <span class="arm-sub" style="display:inline">' + nN(r25) + '</span>' : 'not supplied') + '</span>' +
-      (W.pp.T ? ppChip(W.pp.T, 'vs ' + W.cmpWindow) : '<span class="arm-sub" title="The AIOS supplies no comparable 2025 window, so no change is calculated against the full year.">2025 is a reference · no comparable window</span>') + '</div>';
+      (W.pp.T ? ppChip(W.pp.T, 'vs ' + W.cmpWindow) : '') + '</div>';
     var dirs = '<div><div class="arm-kicker">By direction</div>' + ['I', 'E'].map(function (d) {
       var x = W.cur[d], y = W.fy25[d], p = x && parsePct(x.v);
       if (m.A.cy[d] === 'DIR') return '<div class="arm-wdir"><div class="arm-row"><span>' + dirName(d) + '</span><b>' + pend('DIR') + '</b></div></div>';
@@ -125045,7 +125041,7 @@ var ARCATEK_REFERENCE = {
         '<span class="arm-sub">' + (nN(x) ? nN(x) + ' · ' : '') + '2025: ' + (y && y.v ? '<b>' + esc(y.v) + '</b>' : 'not supplied') + (W.pp[d] ? ' · ' + ppChip(W.pp[d]) : '') + '</span></div>';
     }).join('') + splitLine(m) + '</div>';
     var withA = G ? G.list.filter(function (g) { return (g.I && g.I.a) || (g.E && g.E.a); }).length : null;
-    var pres = '<div><div class="arm-kicker">Gateway presence</div>' + (G ? '<div class="arm-hero">' + withA + ' of ' + G.list.length + '</div><span class="arm-sub">gateways with Arcatek activity · a count, not volume</span>' : pend('NO')) + '</div>';
+    var pres = '<div><div class="arm-kicker">Gateway presence</div>' + (G ? '<div class="arm-hero">' + withA + ' of ' + G.list.length + '</div><span class="arm-sub">gateways with Arcatek activity</span>' : pend('NO')) + '</div>';
     var table = '';
     if (G) {
       var rows = G.list.map(function (g) {
@@ -125102,25 +125098,24 @@ var ARCATEK_REFERENCE = {
       var x = y.directions[d];
       if (!x.supplied) return '<div class="arm-row"><span>' + AIOS_TEU.DIR[d] + '</span><b>' + pend('DIR') + '</b></div>';
       return '<div class="arm-row"><span>' + AIOS_TEU.DIR[d] + '</span><b>' + tv(x.total) + (x.status === 'insufficient' ? ' · ' + pend('INS') : '') + '</b></div>' +
-        '<span class="arm-sub">TEU on ' + fmt(x.teuRows) + ' / ' + fmt(x.rows) + ' rows (' + AIOS_TEU.p1(x.pct) + ')' + (x.missing ? ' · ' + fmt(x.missing) + ' rows without TEU; may understate the visible universe' : '') + ' · through ' + esc(AIOS_TEU.day(t.cutoffs[d])) + '</span>';
+        '<span class="arm-sub">TEU on ' + fmt(x.teuRows) + ' / ' + fmt(x.rows) + ' rows (' + AIOS_TEU.p1(x.pct) + ')' + '' + ' · through ' + esc(AIOS_TEU.day(t.cutoffs[d])) + '</span>';
     }
     var modes = ['maritime', 'air', 'truck', 'rail', 'dsr', 'unknown', 'other'].map(function (k) { return '<div>' + AIOS_TEU.MODE[k] + '<b>' + tv(y.modes[k]) + '</b></div>'; }).join('') + '<div>Land total<b>' + tv(y.land) + '</b></div>';
     var sid = AIOS_TEU.shortId(m.r.e.view);
     return '<div class="arm-dcard full"><h3>Visible Panjiva TEU · ' + CY + ' YTD</h3><span class="arc-badge ' + st.cls + '">' + esc(st.label) + '</span>' +
       arcTeuBand(m) +
       '<div class="arm-split" style="margin-top:8px"><div><div class="arm-hero">' + (y.total != null ? tv(y.total) : '<span style="font-size:14px">Not totaled</span>') + '</div>' +
-      '<span class="arm-sub">' + (y.total != null ? 'Visible TEU' : (observed(y) == null ? 'No TEU data in the supplied rows' : tv(observed(y)) + ' TEU observed in populated rows') + ' · not an account total') + '</span>' +
-      '<span class="arm-ref">2025: ' + (f.total != null ? '<b>' + tv(f.total) + '</b>' : 'Not totaled · ' + esc((AIOS_TEU.STATUS[f.status] || {}).label || '')) + ' · comparable 2025 window: ' + (c.total != null ? '<b>' + tv(c.total) + '</b>' : 'not totaled') + '</span></div>' +
+      '<span class="arm-sub">' + (y.total != null ? 'Visible TEU' : (observed(y) == null ? 'No TEU data' : tv(observed(y)) + ' TEU in rows with data')) + '</span>' +
+      '<span class="arm-ref">2025: ' + (f.total != null ? '<b>' + tv(f.total) + '</b>' : 'Not totaled') + '</span></div>' +
       '<div>' + dirTile('imports') + dirTile('exports') + '</div></div>' +
       '<div class="arm-modes">' + modes + '</div>' +
-      '<span class="arm-sub">Reconciliation: ' + esc(y.recon && y.recon.status === 'pass' ? 'passed' : 'failed') + ' · Field: Panjiva Volume (TEU), not Shipments or containers.</span>' +
       '<button type="button" class="arm-link" data-arm-teu="' + esc(m.r.e.view) + '|ateu-' + esc(sid) + '-sum">Open the complete TEU analysis in the AIOS →</button></div>';
   }
   function cardFin(m) {
     var x = finFor(m);
     if (!x.cur) return '<div class="arm-dcard full"><h3>Financials · Arcatek · ' + esc(perLabel()) + '</h3>' +
       '<div class="arm-fin"><div><span class="l">Revenue</span>' + pend('PR') + '</div><div><span class="l">Gross Profit</span>' + pend('PR') + '</div><div><span class="l">Gross Margin</span>' + pend('PR') + '</div></div>' +
-      refViz('line') + '<p class="arm-disc">Internal Arcatek financial information is required: Revenue and Direct Cost, with currency. Gross Profit = Revenue − Direct Cost; Gross Margin = Gross Profit ÷ Revenue. Panjiva CIF, freight, merchandise, insurance or shipment values are never used as Revenue. Akzent Logistics profit is a separate service and is not shown here.</p></div>';
+      refViz('line') + '<p class="arm-disc">Requires Arcatek Revenue and Direct Cost.</p></div>';
     return '<div class="arm-dcard full"><h3>Financials · Arcatek · ' + esc(perLabel()) + '</h3>' +
       '<div class="arm-fin"><div><span class="l">Revenue</span><span class="v">' + money(x.cur.rev, x.fin.cur) + '</span>' + (isCY() ? '<span class="arm-sub">2025: ' + (x.ref ? money(x.ref.rev, x.fin.cur) : 'Pending receipt') + '</span>' : '') +
       (x.chg != null ? '<span class="arm-sub">Comparable change: <b>' + (x.chg >= 0 ? '+' : '') + (x.chg * 100).toFixed(1) + '%</b></span>' : '<span class="arm-sub">Comparable change: no comparable ' + (+state.f.year - 1) + ' period</span>') + '</div>' +
