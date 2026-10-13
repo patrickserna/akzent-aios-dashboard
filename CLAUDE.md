@@ -371,3 +371,79 @@ When a package lacks any of these, ask the user to add the standard request bloc
 - the monthly series.
 
 The block was given to the user on 2026-10-12.
+
+## Visible Panjiva Volume (TEU) standard (all accounts)
+
+Established 2026-10-13 at the user's request. It applies to every Arcatek account, every future LEAD and CLIENT, and every refresh. TEU is mandatory in **both** the individual account view and the Arcatek Dashboard.
+
+### Source and calculation
+
+- **Field:** sum the original Panjiva column `Volume (TEU)` over retained source rows. Never derive TEU from Shipments, weight, customs entries, freight value, quantity, container counts, modal percentages, narrative text or another account.
+- **Precision:** a blank cell is missing, never zero. Keep full source precision and round to 2 decimals only for display.
+- **Universe:** the retained universe must equal the current AIOS universe for that account.
+  - Verify it by reproducing the AIOS Shipment counts per direction and period.
+  - Apply an account-specific exclusion only when it reproduces the AIOS counts (2026-10-13: Siete Leguas Exports drop the 20 Brp Queretaro shipper rows; BRAHM keeps only BRAHM-as-consignee/shipper rows).
+  - Report every exclusion.
+  - Never merge affiliates or name variants.
+  - Never add an older file version to a newer one.
+- **Direction:** take it from the file itself (`Mexico Imports Shipments` / `Mexico Exports Shipments`).
+- **Periods:** use `Shipment Date`, never the file-generation date.
+  - Compute FY (previous calendar year), current YTD (per-direction cutoff = latest Shipment Date), a comparable prior-year YTD (same day-month as each direction's cutoff), and the complete universe (methodology only).
+  - Never annualize. Never compare FY with YTD as growth.
+- **Modes:** keep the original `Transport Method`, then normalize.
+  - Mapping: Maritime/Ocean → Maritime; Air → Air; Truck/Road → Truck; Rail → Rail; Double Stack Rail → Double Stack Rail; blank/Unknown → Unknown; anything else → Other.
+  - Land = Truck + Rail + Double Stack Rail, with the sub-breakdown kept.
+  - Unknown and Other are never redistributed.
+  - A mode whose rows are all blank reads "No TEU data", not 0.00.
+- **Reconciliation:** at full precision, check four things:
+  - each direction's modes equal its total;
+  - Imports + Exports equal the account sum;
+  - the combined modes equal the account sum;
+  - Land equals Truck + Rail + Double Stack Rail.
+  - FY + YTD must equal the universe.
+
+### Status (per direction, headline = current YTD)
+
+- **Available:** both directions supplied, 100% of rows populated.
+- **Available · partial coverage:** some rows are blank. Show the populated / total rows and disclose the missing count.
+- **Insufficient coverage to total:** coverage is below 50%.
+  - Show the value only as "Visible TEU in populated rows".
+  - Show no account total.
+- **Directional source not supplied:** no file for that direction. It is never zero, and there is no account total.
+
+### Review flags
+
+The visible text is "⚑ Double-click and review", and each flag states the issue, scope, period, source and whether the value stays usable.
+
+Raise a flag for any of these:
+
+- **Coverage:** below 95%, or a direction not supplied.
+- **Cutoff gap:** the Import and Export YTD cutoffs differ by more than 7 days.
+- **Unknown / Other share:** 20% or more of YTD TEU.
+- **Entity scope:** 10% or more of a direction's rows name the account only as the counterparty.
+- **Mirrored pairs:** Import and Export rows share the same date and identical TEU, and they make up 5% or more of YTD TEU.
+- **Concentration:** a single record is 25% or more of a direction-period, or 100 TEU or more.
+- **Source versions:** newer and older source versions exist.
+- **Reconciliation:** any reconciliation failure.
+- **Relationship:** the Arcatek relationship is not Confirmed. The dashboard derives this flag live from the registry.
+
+Missing data uses the pending statuses, never a flag.
+
+### Architecture
+
+- **Record:** one TEU record per account, schema `aios-teu/1`, embedded in the account view as `<script type="application/json" class="ateu-record" data-view="view-…">`.
+  - It is the single TEU source.
+  - It travels with exports.
+  - In ap2 views it sits inside `.ap2-internal`.
+- **View blocks:** four blocks are generated from the record and inserted between chapters.
+  - `#ateu-<id>-sum` sits after the Executive chapter, `-modes` after Network, `-hist` after Historical, `-src` after Historical (BRAHM: after Data Quality).
+  - Their figures carry `data-ateu` paths. `AIOS_TEU.verify()` checks every displayed figure against the record on load and logs `console.error` on any mismatch.
+- **Dashboard:** the Arcatek Dashboard reads `AIOS_TEU.record(view)`, which provides the detail panel, the TEU overview tiles and `AIOS_TEU.portfolio()`.
+  - `portfolio()` produces the additive current-YTD total.
+  - It includes only account-directions that are supplied, have 95% or more coverage, reconcile, carry no entity-scope / mirrored-pair / source-version flag, and have a cutoff within 7 days before the most common cutoff.
+  - It lists every excluded account-direction with its reason.
+- **Styling:** the shared CSS (`.ateu-*`) sits at the end of the first `<style>`, so single-account exports carry it.
+- **Pending accounts:** an account without a record shows the reference preview (no figures), "Pending", and the activation requirement.
+- **Language:** English labels, per the language rule above.
+
+The 2026-10-13 build scripts (engine, block generator, splice) were kept in that session's scratchpad. Reproduce them from this specification when adding a new account.
