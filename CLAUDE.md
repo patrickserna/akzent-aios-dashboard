@@ -447,3 +447,20 @@ Missing data uses the pending statuses, never a flag.
 - **Language:** English labels, per the language rule above.
 
 The 2026-10-13 build scripts (engine, block generator, splice) were kept in that session's scratchpad. Reproduce them from this specification when adding a new account.
+
+## Arcatek TEU Share standard (all Arcatek accounts)
+
+Established 2026-10-13 at the user's request. It applies to every Arcatek account AIOS, the Arcatek Dashboard and the Mockup, and to every future account and refresh.
+
+- **Card content:** every AIOS TEU card shows Visible TEU, Arcatek TEU, Arcatek share and TEU coverage (populated rows / total rows). Arcatek Shipment Share appears as a separate, separately labelled line and never as a TEU share.
+- **Arcatek:** identified only by PJ `Customs Agent` patents **3468** and **1930**. Akzent activity is never an Arcatek numerator.
+- **Scope:** numerator and denominator always share the same account, period, direction, mode and `Volume (TEU)` field.
+- **Direction × Mode:** values are retained for every direction and mode. Imports and Exports stay independently visible (expandable by mode). A missing direction reads `NOT SUPPLIED`, never zero.
+- **Modes:** Land Total = Truck + Rail + Double Stack Rail. Unknown stays separate, is never reassigned, and carries its unresolved-mode note.
+- **States:** Calculated · Observed · partial coverage · Pending TEU source data · Not calculable · N/A · no visible activity.
+  - A blank TEU is missing, never zero.
+  - 0.0% is valid only with visible activity and a positive TEU denominator.
+  - A combined result is not published when any part has no TEU.
+- **Diagnostics:** partial or unavailable TEU requires a visible, account-specific source diagnostic next to the result, in the AIOS and the dashboard alike. AIOS-supplied diagnostic text is stored in the TEU record (`arcatek.diagnostics`) and shown verbatim.
+- **Values:** Claude presents only AIOS-finalized values and never calculates, estimates or repairs them. Display arithmetic is limited to rounding the stored numerator over the stored denominator once. When a supplied dataset conflicts with the account's current AIOS universe, flag it and ask before using it.
+- **Architecture:** the values live in each account's TEU record (`arcatek` section). `AIOS_TEU.arcatek / arcatekHtml` render the block (`#ateu-<id>-arc`, `data-aios-live`), and the export carries it as rendered. In ap2 views it sits inside `.ap2-internal`.
