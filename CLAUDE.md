@@ -245,8 +245,8 @@ For every future account **explicitly designated as CLIENT**:
 
 - **First Seller block, under the hero:**
   - an 8-card status band: relationship, each service, classification, Captured Business, Profit, Logistics Wallet, Customs Wallet;
-  - a same-window comparison of captured Shipments and Profit against the prior year;
-  - the cumulative current-year Profit against the prior-year total, as a context line, not a growth rate;
+  - a same-window comparison of captured Shipments and Profit against the prior year, always headlined by the full current-YTD values (see **Template v2 design standard** below);
+  - the cumulative current-year Profit chart against the prior-year total line, with no caption narrative;
   - monthly reported Profit;
   - monthly captured Shipments as a line over a shaded area of PJ visible records, with the cumulative directional wallet.
 - **Only what AIOS supplies.** Include monthly and cumulative Shipments, Profit, directional wallets and equivalent-period comparisons only when AIOS supplies them.
@@ -262,8 +262,8 @@ For every future account **explicitly designated as CLIENT**:
 - Existing prior-year information, both PJ and AKZENT, stays exactly as it is: records, figures, metrics, descriptions and presentation. Doga's 2025 card is carried byte-for-byte and asserted by the build.
 - Add authorized new-year intelligence separately, alongside it. Replace an existing value only when the latest AIOS package explicitly supersedes it and the user's preservation instructions permit it.
 - Growth comparisons require equivalent periods. A previous full-year total may serve as a clearly labelled contextual benchmark, never as the base of a growth rate against an incomplete YTD.
-- When a preserved total is used that way, say so plainly, together with the fact that the record was not recalculated or modified.
-- State the provenance of every comparison: which AIOS package and date supplied it.
+- When a preserved total is used that way, the chart label names it ("2025 full year"); no explanatory paragraph is added.
+- Record the provenance of every comparison (AIOS package and date, or the PJ calculation) in the commit and the build notes. On the page, a one-line source tag appears only for values not supplied by AIOS. Provenance paragraphs were removed at the user's request on 2026-10-12.
 
 ### 5. Wallets, figures and currency
 
@@ -300,3 +300,74 @@ Before reporting completion, verify:
 - **Scope:** unrelated accounts and shared functionality are preserved; export works for at least one other account with and without a view selector.
 - **Reporting:** state which checks were executed and which remain unverified. Never record an unapproved or unaudited candidate as the reference.
 - **Prototype first:** substantial changes to the standard go to a prototype or preview outside production first, with user approval before production and before this file changes.
+
+## Template v2 Design Standard (all LEAD and CLIENT accounts)
+
+Approved by the user on 2026-10-12 ("every dashboard must always carry this"). It applies to every future LEAD and CLIENT account built on either template, and to existing accounts when they are rebuilt or refreshed. Where it conflicts with the Aptar or Doga reference, this section wins.
+
+### Design reference
+
+- **Reference:** the "Doga 2 (New)" view in `index.html` at commit `8d1341d` (`#view-doga2`, IDs `dg3-`). Read it with `git show 8d1341d:index.html`.
+- The Doga 2 CSS is the block starting `/* ══ DOGA 2 (NEW) — design-comparison copy`, at the end of the main `<style>`.
+- The original `#view-doga` remains the 04bd726 version until the user approves replacing it. The change log is `prototypes/client-template-v2-CHANGES.md`, which is local and git-excluded.
+
+### Structure and design rules
+
+1. **No narrative paragraphs** under charts or comparison cards. Keep one Observed Operational Signal + AIOS Interpretation line where AIOS supplies it.
+2. **Captured-business comparison card (CLIENT, Seller View):**
+   - It always headlines the **full current-YTD** values: Shipments by modality, Profit final, Profit per Shipment.
+   - The prior-year side must use the same cutoff, supplied by AIOS.
+   - If that side is missing, show "<prior year> same window · pending AIOS", grey, with no rate.
+   - Never show a current-year Profit with an older cutoff in the same section, and never repeat a headline value as a bar row.
+3. **Core corridors (section 03):**
+   - Coverage tiles, then the collapsible frequency tables only: `details.ap2-more` with `table.ap2-t.routes`. No route-card lists.
+   - Current-YTD tables are open by default; prior-year tables are collapsed.
+4. **Customs footprint (section 05):**
+   - **Seller-only summary band** (`.ap2-cxsum.ap2-internal`) between the section header and the charts, with three cards:
+     - Customs Shared Wallet, current YTD (n / N, by direction);
+     - comparable same-window change in pp (prior-year % → current %, own-patent Shipments n → n with % change, by direction);
+     - Other-Patent Shipments, current YTD, with the AIOS overlap value.
+   - **Patent charts** (`.ap2-cx`): one stacked bar of patent totals, a legend with count and %, and one stacked bar per gateway.
+     - Generate them from the gateway × patent cross-tab and assert that the column sums equal the supplied totals.
+     - Lead / Client View uses neutral navy shades.
+     - Seller View shows own patents (3468 / 1930, class `ar`) in teal `#0e7490` and other patents in grey, plus an `.ap2-internal` "Arcatek" legend chip and an "Arcatek 3468 · n / N · %" header pill per direction.
+   - **Comparable customs change:** if AIOS does not supply it, compute it from the account's PJ files with own patents {3468, 1930} and the current per-direction cutoffs, applied to both years.
+     - Do this only after the same method reproduces AIOS's current-YTD and prior-full-year wallet values exactly.
+     - Label it "Calculated from PJ records · pending AIOS confirmation".
+     - Captured Profit comparisons cannot be computed from PJ: they stay pending AIOS.
+5. **Where coordination matters (section 06):** one corridor board (`.ap2-board`), grouped Imports / Exports, with one collapsible row per corridor.
+   - **Row columns:**
+     - Volume;
+     - Corridor (mode + key gateway or partner);
+     - Patent chips (own patents in teal in Seller View only);
+     - Akzent today (Seller only, amber, no Profit; Profit's home is section 07);
+     - Validate-with-the-client chips (Seller-only questions in amber).
+   - **Expanded row:** the AIOS paragraphs verbatim.
+   - **No repetition:** Discovery Validation appears once, as chips, and source tags appear only inside the expanded row.
+
+### Commercial-layer gating (all accounts)
+
+- If the user supplies **no Akzent internal data** and the package shows **no Arcatek evidence** (no own patent 3468 / 1930 visible, no Arcatek registry entry), the account carries **no CLIENT or commercial layer**. That means no:
+  - CLIENT or relationship labels;
+  - status band;
+  - Captured Business or Profit;
+  - Logistics or Customs Wallets;
+  - section 07, Arcatek pills or highlights, or the customs summary band;
+  - "Akzent today" column.
+- Build it on the operational sections only.
+- Each commercial element appears only when its own source exists:
+  - Akzent internal data → logistics capture, Profit and the Logistics Wallet;
+  - Arcatek / own-patent evidence → the customs wallet and the own-patent highlights.
+- Missing data still never means zero captured business, and the relationship-governance rule (own patent visible ⇒ Arcatek Customs Confirmed Client) still applies.
+
+### Data to request from AIOS
+
+When a package lacks any of these, ask the user to add the standard request block to the AIOS prompt:
+
+- the captured-business same-window comparison;
+- the Customs Shared Wallet same-window comparison;
+- the gateway × patent cross-tab for both periods;
+- structured corridor records (short Discovery items, a one-sentence interpretation);
+- the monthly series.
+
+The block was given to the user on 2026-10-12.
