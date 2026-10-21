@@ -186,6 +186,16 @@ Explicit user instructions may override this standard for a specified task.
 
 A task-specific exception does not permanently change the standard unless the user explicitly requests that change.
 
+### Implementation instances (not references)
+
+These accounts were built on the Aptar template. They are not reusable templates; Aptar `230fdf8` remains the LEAD reference.
+
+- **Lambi SA de CV** (`view-lambi`, IDs `lb2-`), 2026-10-21, AIOS package of the same date. Aptar reference verified first: its view and CSS were byte-identical to `230fdf8`.
+  - Task-specific exceptions requested in the brief:
+    - Discovery Validation is Seller View only (`.ap2-internal` chips on the section 06 board).
+    - A shared section 07, Source scope and data quality, sits before the Seller desk (08).
+  - The missing-country source bucket "NOT AVAILABLE IN PJ" reaches the network script as a `§` placeholder. Its label comes from a markup span, so Lead exports carry no "PJ".
+
 ## Permanent CLIENT Template (Doga México Componentes reference)
 
 Established 2026-10-11 at the user's request. It governs accounts **explicitly designated as CLIENT** in this repository. LEAD accounts keep the Aptar template above. Both templates share one visual architecture; the CLIENT template adds a commercial layer that appears only in Seller View.
